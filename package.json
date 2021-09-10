@@ -1,0 +1,15 @@
+{
+  "name": "germanseperableverbs",
+  "version": "0.1.0",
+  "description": "practice app for german seperable verbs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "german",
+    "verbs"
+  ],
+  "author": "",
+  "license": "ISC"
+}
