@@ -1,3 +1,4 @@
+// tslint:disable: no-bitwise
 export enum GrammaticalPerson {
   None = 0 << 0,  // 0
   First = 1 << 0, // 1
@@ -6,21 +7,21 @@ export enum GrammaticalPerson {
 };
 
 export enum GrammaticalNumber {
-  None = 1 << 3,  // 8
-  Singular = 1 << 4, // 16
-  Plural = 1 << 5, // 32
+  None = 0 << 0,  // 0
+  Singular = 1 << 3, // 8
+  Plural = 1 << 4, // 16
 };
 
 export enum GrammaticalFormal {
-  None = 0 << 6,  // 64
-  Formal = 1 << 7, // 128
-  Informal = 1 << 8, // 256
+  None = 0 << 0,  // 0
+  Formal = 1 << 5, // 32
+  Informal = 1 << 6, // 64
 };
 
 export enum GrammaticalGender {
-  None = 0 << 9,  // 516
-  Feminine = 1 << 10, // 1032
-  Masculine = 1 << 11, // 2064
-  Neuter = 1 << 12, // 4128
+  None = 0 << 0,  // 0
+  Feminine = 1 << 7, // 128
+  Masculine = 1 << 8, // 256
+  Neuter = 1 << 9, // 512
 };
-
+// tslint:enable: no-bitwise

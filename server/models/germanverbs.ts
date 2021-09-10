@@ -2,6 +2,7 @@ import fs from 'fs';
 import yaml from 'js-yaml';
 
 import { GermanTenses } from './germanEnums';
+import { GermanVerb } from './germanTypes';
 // tslint:disable: no-console
 
 const newJsonObj = {

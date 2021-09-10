@@ -1,6 +1,10 @@
-import { GrammaticalFormal, GrammaticalGender, GrammaticalNumber, GrammaticalPerson } from "./languageTypes"
+import {
+  GrammaticalFormal,
+  GrammaticalNumber,
+  GrammaticalPerson
+} from "./languageTypes"
 
-declare type GermanVerb = {
+export type GermanVerb = {
   drop: boolean;
   hilfsverb: string;
   infinitive: string;
@@ -10,7 +14,7 @@ declare type GermanVerb = {
   strong: [string: boolean] | boolean;
 }
 
-declare type GermanStems = {
+export type GermanStems = {
   duEs?: string;
   präteritum?: string;
   partizip?: string;
@@ -18,19 +22,21 @@ declare type GermanStems = {
   k2präsens?: string;
 }
 
-declare type GermanIrregular = {
+export type GermanIrregular = {
   präteritum: string;
   partizip: string;
 }
 
-declare enum GermanCase {
-  Nominative,
-  Accusative,
-  Dative,
-  Genative
+// tslint:disable: no-bitwise
+export enum GermanCase {
+  Nominative = 1 << 10,  // 1024
+  Accusative = 1 << 11, // 2048
+  Dative = 1 << 12, // 4096
+  Genative = 1 << 13 // 8192
 }
+// tslint:enable: no-bitwise
 
-declare type GermanPronoun = {
+export type GermanPronoun = {
   grammaticalPerson: GrammaticalPerson,
   grammaticalNumber: GrammaticalNumber,
   grammaticalFormal: GrammaticalFormal,
