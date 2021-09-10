@@ -38,7 +38,7 @@ const pronounArray: [string, number][] = [
   ['Sie', GrammaticalPerson.Second + GrammaticalFormal.Formal + GermanCase.Nominative + GrammaticalNumber.Plural],
   ['Sie', GrammaticalPerson.Second + GrammaticalFormal.Formal + GermanCase.Accusative + GrammaticalNumber.Plural],
   ['Ihnen', GrammaticalPerson.Second + GrammaticalFormal.Formal + GermanCase.Dative + GrammaticalNumber.Plural],
-
+  ['Ihrer', GrammaticalPerson.Second + GrammaticalFormal.Formal + GermanCase.Dative + GrammaticalNumber.Plural],
 ]
 
 for (const tuple of pronounArray) {
