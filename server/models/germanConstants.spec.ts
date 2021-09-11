@@ -38,14 +38,15 @@ const pronounArray: [string, number][] = [
   ['Sie', GrammaticalPerson.Second + GrammaticalFormal.Formal + GermanCase.Nominative + GrammaticalNumber.Plural],
   ['Sie', GrammaticalPerson.Second + GrammaticalFormal.Formal + GermanCase.Accusative + GrammaticalNumber.Plural],
   ['Ihnen', GrammaticalPerson.Second + GrammaticalFormal.Formal + GermanCase.Dative + GrammaticalNumber.Plural],
-  ['Ihrer', GrammaticalPerson.Second + GrammaticalFormal.Formal + GermanCase.Dative + GrammaticalNumber.Plural],
-]
+  ['Ihrer', GrammaticalPerson.Second + GrammaticalFormal.Formal + GermanCase.Genative + GrammaticalNumber.Plural],
+  ['Man', GrammaticalFormal.Formal + GrammaticalNumber.Plural + GrammaticalPerson.First]
+];
 
 for (const tuple of pronounArray) {
-  const [result, value] = tuple;
+  const [testValue, value] = tuple;
 
-  it(`A correct grammatical description of ${result} returns the correct pronoun`, () => {
-    const testValue = GermanPronoun(value);
+  it(`A correct grammatical description of ${testValue} returns the correct pronoun`, () => {
+    const result = GermanPronoun(value);
     expect(testValue).toBe(result);
   });
 }

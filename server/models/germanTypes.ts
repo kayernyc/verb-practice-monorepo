@@ -1,15 +1,21 @@
 import {
   GrammaticalFormal,
+  GrammaticalGender,
   GrammaticalNumber,
   GrammaticalPerson
 } from "./languageTypes"
+
+export interface LanguageMap {
+  en?: string
+  fr?: string
+}
 
 export type GermanVerb = {
   drop: boolean;
   hilfsverb: string;
   infinitive: string;
-  irregular?: [GermanTenses: [GermanPronoun: string]];
-  languages: string[];
+  irregular?: { GermanTenses?: [GermanPronounKeys: string] };
+  languages: LanguageMap;
   stems?: GermanStems;
   strong: [string: boolean] | boolean;
 }
@@ -40,6 +46,14 @@ export type GermanPronoun = {
   grammaticalPerson: GrammaticalPerson,
   grammaticalNumber: GrammaticalNumber,
   grammaticalFormal: GrammaticalFormal,
-  pronoun: [GermanCase: string]
+  case: GermanCase
+}
+
+export const GermanPronounKeys = {
+  'ich': (GrammaticalPerson.First + GrammaticalNumber.Singular + GermanCase.Nominative),
+  'du': (GrammaticalPerson.Second + GrammaticalNumber.Singular + GrammaticalFormal.Informal + GermanCase.Nominative),
+  'es': (GrammaticalPerson.Third + GrammaticalNumber.Singular + GermanCase.Nominative + GrammaticalGender.Neuter),
+  'wir': (GrammaticalPerson.First + GrammaticalNumber.Plural + GermanCase.Nominative),
+  'ihr': (GrammaticalPerson.Second + GrammaticalNumber.Plural + GrammaticalFormal.Informal + GermanCase.Nominative)
 }
 

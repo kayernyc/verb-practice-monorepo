@@ -4,6 +4,7 @@ import cors from 'cors';
 const port = 3000;
 
 import { germanVerbData } from './models/germanverbs';
+import { hydrateFromInfinitive } from './models/hydrateGermanVerb';
 
 // We are using our packages here
 app.use(express.json()); // to support JSON-encoded bodies
@@ -22,6 +23,10 @@ app.get('/', (req, res) => {
   germanVerbData();
 });
 
+app.get('/:verb', (req, res) => {
+  const result = hydrateFromInfinitive(req.params.verb)
+  res.send(`this is your verb: ${JSON.stringify(req.params.verb)}`);
+});
 
 app.listen(port, () => {
   // tslint:disable-next-line: no-console
