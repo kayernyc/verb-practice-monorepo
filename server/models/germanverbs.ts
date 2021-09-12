@@ -5,10 +5,6 @@ import { GermanTenses } from './germanEnums';
 import { LanguageMap, GermanVerb, GermanPronounKeys } from './germanTypes';
 // tslint:disable: no-console
 
-const newJsonObj = {
-  date: Date.now(),
-}
-
 const germanStemsDictionary = {
   'präsens du/es': 'duEs',
   'präteritum': 'präteritum',
@@ -89,6 +85,9 @@ const pollSeperableParticles = (pipes: string[]) => {
 }
 
 const processVerbs = (data) => {
+  const newJsonObj: { [keyName: string]: GermanVerb | number | undefined } = {
+    date: Date.now(),
+  }
   const hilfsverb = [];
   const modal = [];
   const pipes = []
@@ -103,15 +102,22 @@ const processVerbs = (data) => {
     }
   }
 
-  console.log(pipes)
-  pollSeperableParticles(pipes)
+  // tslint:disable-next-line: no-string-literal
+  newJsonObj['date'] = Date.now();
+
+  return newJsonObj;
+}
+
+const writeJson = (newJsonObj: { [keyName: string]: GermanVerb | number | undefined }) => {
+  const data: string = JSON.stringify(newJsonObj);
+  fs.writeFileSync('./data/germanVerbsUnhydrated.json', data);
 }
 
 export function germanVerbData() {
   try {
     const fileContents = fs.readFileSync('./data/germanverbs.yaml', 'utf8');
     const data = yaml.load(fileContents);
-    processVerbs(data);
+    writeJson(processVerbs(data))
   } catch (err) {
     console.log(`Error in germanverbs model: ${err}`);
   }

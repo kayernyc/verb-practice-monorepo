@@ -6,6 +6,8 @@ const port = 3000;
 import { germanVerbData } from './models/germanverbs';
 import { hydrateFromInfinitive } from './models/hydrateGermanVerb';
 
+germanVerbData();
+
 // We are using our packages here
 app.use(express.json()); // to support JSON-encoded bodies
 
@@ -20,7 +22,7 @@ app.use(cors());
 
 app.get('/', (req, res) => {
   res.send('Welcome to your server');
-  germanVerbData();
+
 });
 
 app.get('/:verb', (req, res) => {
