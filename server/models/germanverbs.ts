@@ -1,8 +1,7 @@
 import fs from 'fs';
 import yaml from 'js-yaml';
 
-import { GermanTenses } from './germanEnums';
-import { LanguageMap, GermanVerb, GermanPronounKeys } from './germanTypes';
+import { GermanTenses, GermanVerb, GermanPronounKeys, LanguageMap } from './germanTypes';
 // tslint:disable: no-console
 
 const germanStemsDictionary = {

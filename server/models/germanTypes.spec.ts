@@ -11,5 +11,4 @@ describe('German prounoun keys are valid formulas for pronouns', () => {
       expect(testValue).toBe(pronounKey);
     });
   }
-})
-
+});

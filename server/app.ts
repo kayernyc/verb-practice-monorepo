@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
 
 app.get('/:verb', (req, res) => {
   const result = hydrateFromInfinitive(req.params.verb)
-  res.send(`this is your verb: ${JSON.stringify(req.params.verb)}`);
+  res.send(`this is your verb: ${result}`);
 });
 
 app.listen(port, () => {

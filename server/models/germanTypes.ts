@@ -10,6 +10,12 @@ export interface LanguageMap {
   fr?: string
 }
 
+export type GermanVerbHydrated = {
+  [key in GermanTenses]?: { [person: string]: string };
+} & {
+  partizip: string
+}
+
 export type GermanVerb = {
   drop: boolean;
   hilfsverb: string;
@@ -17,7 +23,7 @@ export type GermanVerb = {
   irregular?: { GermanTenses?: [GermanPronounKeys: string] };
   languages: LanguageMap;
   stems?: GermanStems;
-  strong: [string: boolean] | boolean;
+  strong?: [string: boolean] | boolean;
 }
 
 export type GermanStems = {
@@ -41,6 +47,16 @@ export enum GermanCase {
   Genative = 1 << 13 // 8192
 }
 // tslint:enable: no-bitwise
+
+export enum GermanTenses {
+  präsens = "präsens", // present
+  präteritum = "präteritum", // past
+  futur = "futur", // compound and futre
+  perfekt = "perfekt", // compound
+  konjunktiv = 'konjunktiv',
+  k2präsens = "k2präsens", // subjunctive and imperitive
+  k2präteritum = "k2präteritum"
+}
 
 export type GermanPronoun = {
   grammaticalPerson: GrammaticalPerson,
