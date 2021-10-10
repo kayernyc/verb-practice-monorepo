@@ -1,4 +1,5 @@
 import fs from 'fs';
+import path from 'path';
 import yaml from 'js-yaml';
 
 import { GermanStems, GermanTenses, GermanVerb, GermanPronounKeys, LanguageMap } from './germanTypes';
@@ -122,16 +123,17 @@ const processVerbs = (data) => {
 
 const writeJson = (newJsonObj: { [keyName: string]: GermanVerb | number | undefined }) => {
   const data: string = JSON.stringify(newJsonObj);
-  fs.writeFileSync('./data/germanVerbsUnhydrated.json', data);
+  fs.writeFileSync(path.resolve(__dirname, '../../', 'data/germanVerbsUnhydrated.json'), data);
 }
 
 export function germanVerbData() {
+
   try {
-    const fileContents = fs.readFileSync('./data/germanverbs.yaml', 'utf8');
+    const fileContents = fs.readFileSync(path.resolve(__dirname, '../../', 'data/germanverbs.yaml'), 'utf8');
     const data = yaml.load(fileContents);
     writeJson(processVerbs(data))
   } catch (err) {
-    console.log(`Error in germanverbs model: ${err}`);
+    console.log(`Error in germanverbs model: ${err} ${__dirname}`);
   }
 }
 

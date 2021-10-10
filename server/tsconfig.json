@@ -1,12 +1,14 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "allowJs": true,
+    "baseUrl": "./src",
     "esModuleInterop": true,
     "module": "commonjs",
     "moduleResolution": "node",
     "outDir": "./dist",
     "paths": {
-      "german/*": ["src/models/german/*"]
+      "german/*": ["models/german/*"],
+      "data/*": ["data/*"]
     },
     "resolveJsonModule": true,
     "rootDir": "./src",
@@ -14,5 +16,6 @@
     "target": "es6"
   },
   "lib": ["es6"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "coverage"],
+  "include": ["src"]
 }
