@@ -2,8 +2,8 @@ import { GermanStems, GermanTenses, GermanVerb, GermanVerbHydrated } from "./ger
 import germanVerbs from "../../data/germanVerbsUnhydrated.json";
 
 export const hydrateFromInfinitive = (infinitive: string) => {
-
   const verbConfiguration = germanVerbs[infinitive];
+
   if (verbConfiguration && verbConfiguration as GermanVerb) {
     return JSON.stringify(hydrateVerb(verbConfiguration))
     // return JSON.stringify(verbConfiguration);
