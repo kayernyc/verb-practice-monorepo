@@ -22,10 +22,10 @@ app.use(cors());
 
 app.get('/', (req, res) => {
   res.send('Welcome to your server');
-
 });
 
 app.get('/:verb', (req, res) => {
+  const verb = req.params.verb.toLowerCase();
   const result = hydrateFromInfinitive(req.params.verb)
   res.send(`this is your verb: ${result}`);
 });
