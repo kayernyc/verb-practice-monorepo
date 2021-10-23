@@ -5,8 +5,9 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "start": "sh scripts/build.sh && tsc && node dist/app.js",
-    "dev:server": "sh scripts/build.sh && tsc-watch --p ./tsconfig.json --outDir ./dist --onSuccess \"node dist/app.js\"",
+    "start": "sh scripts/build.sh && tsc && tsc-alias -p tsconfig.json && node dist/app.js",
+    "dev:build": "sh scripts/build.sh && tsc && tsc-alias",
+    "dev:server": "tsc -w & tsc-alias -w & node dist/app.js",
     "test": "jest --coverage"
   },
   "keywords": [],
@@ -27,12 +28,13 @@
     "supertest": "^6.1.6",
     "ts-jest": "^27.0.5",
     "ts-node": "^10.2.1",
+    "tsc-alias": "^1.3.10",
     "tsc-watch": "^4.5.0",
     "tslint": "^6.1.3",
     "typescript": "^4.4.2"
   },
   "_moduleAliases": {
-    "german": "dist/models/german/",
-    "data": "dist/data"
+    "@german": "dist/models/german/",
+    "@data": "dist/data"
   }
 }

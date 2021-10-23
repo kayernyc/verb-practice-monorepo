@@ -7,8 +7,8 @@
     "moduleResolution": "node",
     "outDir": "./dist",
     "paths": {
-      "german/*": ["models/german/*"],
-      "data/*": ["data/*"]
+      "@german/*": ["./models/german/*"],
+      "@data/*": ["./data/*"]
     },
     "resolveJsonModule": true,
     "rootDir": "./src",
