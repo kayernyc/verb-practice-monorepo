@@ -1,5 +1,23 @@
-import { GermanStems, GermanVerb } from "./germanTypes";
-import { hydrateVerb } from "./hydrateGermanVerb";
+import { GermanVerb } from "./germanTypes";
+import { hydrateFromInfinitive, hydrateVerb } from "./hydrateGermanVerb";
+
+describe('hydrateFromInfinitive returns correctly', () => {
+  const germanData = {
+    "date": 1633815078298,
+    "bedeuten": { "drop": false, "hilfsverb": "haben", "infinitive": "bedeuten", "languages": { "en": "to mean" }, "strong": false },
+    "ein­at­men": { "drop": false, "hilfsverb": "haben", "infinitive": "ein­at­men" }
+  }
+
+  it(`returns the infitive if there is no data`, () => {
+    const result = hydrateFromInfinitive('bobben', germanData);
+    expect(result).toStrictEqual(JSON.stringify('bobben'));
+  });
+
+  it(`returns a json if there is data`, () => {
+    const result = hydrateFromInfinitive('bedeuten', germanData);
+    expect(result).not.toBeNull();
+  });
+});
 
 describe('Weak verb conjugates correctly', () => {
   const expected = { "partizip": "schaut", "präsens": { "ich": "schaue", "du": "schaust", "es": "schaut", "wir": "schauen", "ihr": "schaut" }, "präteritum": { "ich": "schaute", "du": "schautest", "es": "schaute", "wir": "schauten", "ihr": "schautet" }, "konjunktiv": { "ich": "schaue", "du": "schauest", "es": "schaue", "wir": "schauen", "ihr": "schauet" } };
