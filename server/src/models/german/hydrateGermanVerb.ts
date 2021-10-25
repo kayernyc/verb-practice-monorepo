@@ -35,8 +35,8 @@ export function kranton(stem: string): boolean {
   return false;
 }
 
-export const hydrateFromInfinitive = (infinitive: string) => {
-  const verbConfiguration = germanVerbs[infinitive];
+export const hydrateFromInfinitive = (infinitive: string, _germanVerbs: any = germanVerbs) => {
+  const verbConfiguration = _germanVerbs[infinitive];
 
   if (verbConfiguration && verbConfiguration as GermanVerb) {
     return JSON.stringify(hydrateVerb(verbConfiguration))
