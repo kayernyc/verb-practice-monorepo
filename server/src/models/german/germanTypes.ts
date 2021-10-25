@@ -22,7 +22,7 @@ export type GermanVerb = {
   infinitive: string;
   irregular?: { GermanTenses?: [GermanPronounKeys: string] };
   languages: LanguageMap;
-  stems?: GermanStems;
+  stems?: { [key in GermanStems]?: string };
   strong?: [string: boolean] | boolean;
 }
 
