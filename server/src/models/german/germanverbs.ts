@@ -49,11 +49,14 @@ const createIrregular = (dataObj) => {
 
 const createStems = (dataObj) => {
   const objectKeys = Object.keys(dataObj.stems);
-  const stemsObj: { GermanStems?: string } = {};
+  const stemsObj: { [key in GermanStems]?: string } = {};
 
   objectKeys.forEach((key: string) => {
-    console.log('createStems lbi', GermanStems[key], key)
+    const enumKey: GermanStems = germanStemsDictionary[key];
+    stemsObj[enumKey] = dataObj.stems[key];
   })
+
+  return stemsObj;
 };
 
 // let germanVerbsDictionary;
@@ -74,7 +77,7 @@ const createVerb = (_infinitive: string, dataObj: DataObj) => {
   }
 
   if (dataObj.stems) {
-    createStems(dataObj);
+    newVerb.stems = createStems(dataObj);
   }
 
   return newVerb;

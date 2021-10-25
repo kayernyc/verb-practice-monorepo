@@ -6,6 +6,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "sh scripts/build.sh && tsc && tsc-alias -p tsconfig.json && node dist/app.js",
+    "testbuild": "tsc && node -e 'require(\"./dist/models/german/germanverbs.js\").germanVerbData()'",
     "dev:build": "sh scripts/build.sh && tsc && tsc-alias",
     "dev:server": "tsc -w & tsc-alias -w & node dist/app.js",
     "test": "jest --coverage"
