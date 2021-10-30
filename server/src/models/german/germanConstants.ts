@@ -2,8 +2,9 @@ import { GrammaticalFormal, GrammaticalNumber, GrammaticalPerson, GrammaticalGen
 import { GermanCase } from "./germanTypes";
 // tslint:disable: no-bitwise
 
-// taken from http://www.dartmouth.edu/~deutsch/Grammatik/Wortbildung/Separables.html
+export const inseperableRegex = /^(?<prefix>be|emp|ent|er|ge|miß|ver|zer)(.*)/;
 
+// taken from http://www.dartmouth.edu/~deutsch/Grammatik/Wortbildung/Separables.html
 export const GermanParticleRules = {
   'ab': `The prefix ‚ab’ usually - but not always - carries the notion of "away from". ‚ab’ means starting from a time in the future, and as a temporal preposition, it is dative.`,
   'an': `The prefix ‚an’ usually carries the meanings "at," "begin," "on," "onward," "to," or "toward". ‚an’ can mean to or on,onward, and can be accusative or dative.`,
