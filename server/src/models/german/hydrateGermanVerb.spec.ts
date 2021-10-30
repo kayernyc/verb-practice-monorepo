@@ -1,5 +1,44 @@
 import { GermanVerb } from "./germanTypes";
-import { hydrateFromInfinitive, hydrateVerb } from "./hydrateGermanVerb";
+import { hydrateFromInfinitive, hydrateVerb, kranton } from "./hydrateGermanVerb";
+
+describe('kranton returns true', () => {
+  it(`returns true for a stem ending in d`, () => {
+    const result = kranton('cadd');
+    expect(result).toBeTruthy();
+  });
+
+  it(`returns true for a stem ending in t`, () => {
+    const result = kranton('catt');
+    expect(result).toBeTruthy();
+  });
+
+  it(`returns true for a stem ending in vnn`, () => {
+    const result = kranton('cann');
+    expect(result).toBeTruthy();
+  });
+
+  it(`returns true for a stem ending in vmm`, () => {
+    const result = kranton('camm');
+    expect(result).toBeTruthy();
+  });
+
+  it(`returns true for a stem ending in v(lrh)(mn)`, () => {
+    const result = kranton('calm');
+    expect(result).toBeTruthy();
+  });
+});
+
+describe('kranton returns false', () => {
+  it(`returns false for a stem ending in vtn`, () => {
+    const result = kranton('catn');
+    expect(result).toBeFalsy();
+  });
+
+  it(`returns false for a stem not ending in d, t, vn(n), vm(m) or v(lrh)(mn)`, () => {
+    const result = kranton('bobb');
+    expect(result).toBeFalsy();
+  });
+});
 
 describe('hydrateFromInfinitive returns correctly', () => {
   const germanData = {
@@ -32,7 +71,7 @@ describe('Weak verb conjugates correctly', () => {
 
 describe('Fallen conjugates correctly', () => {
   const expected = {
-    "partizip": "fallen",
+    "partizip": "gefallen",
     "präsens": {
       "ich": "falle",
       "du": "fällst",
@@ -61,6 +100,13 @@ describe('Fallen conjugates correctly', () => {
   const config: GermanVerb = { "drop": false, "strong": true, "hilfsverb": "sein", "infinitive": "fallen", "languages": { "en": "to fall" }, "stems": { "duEs": "ä", "präteritum": "iel", "k2präsens": "iel" } };
   const result = hydrateVerb(config);
 
+  it(`Fallen conjugates partizip correctly from minimal config`, () => {
+    const { partizip: partizipExpect } = expected;
+    const { partizip: partizipResult } = result;
+
+    expect(partizipResult).toStrictEqual(partizipExpect);
+  });
+
   it(`Fallen conjugates präsens correctly from minimal config`, () => {
     const { präsens: präsensExpect } = expected;
     const { präsens: präsensResult } = result;
@@ -68,7 +114,7 @@ describe('Fallen conjugates correctly', () => {
     expect(präsensResult).toStrictEqual(präsensExpect);
   });
 
-  it(`Fallen conjugates präsens correctly from minimal config`, () => {
+  it(`Fallen conjugates präteritum correctly from minimal config`, () => {
     const { präteritum: präteritumExpect } = expected;
     const { präteritum: präteritumResult } = result;
 
