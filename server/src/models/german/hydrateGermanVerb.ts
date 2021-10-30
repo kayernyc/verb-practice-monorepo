@@ -1,5 +1,6 @@
 import { GermanPronounKeys, GermanStems, GermanTenses, GermanVerb, GermanVerbHydrated } from "./germanTypes";
 import germanVerbs from "../../data/germanVerbsUnhydrated.json";
+import verbIsInseparable from "./testFunctions/inseparable";
 // tslint:disable: no-console
 
 const consonents = [
@@ -114,6 +115,10 @@ function konjunktivConjugation(stem, k2präsens) {
 }
 
 function partizipConjugation(stem, partizip, infinitive) {
+  if (verbIsInseparable(infinitive)) {
+    return `${stem}`
+  }
+
   if (!partizip && infinitive) {
     return `ge${infinitive}`;
   }
