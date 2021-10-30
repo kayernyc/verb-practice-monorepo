@@ -29,8 +29,7 @@ const consonents = [
 
 export function kranton(stem: string): boolean {
   if (stem.endsWith('d') || stem.endsWith('t')) return true;
-  if (/\b[a-zß]+[aeiouäöü][m|n]{1,2}\b/.test(stem) || /\b[a-zß]+[aeiouäöü][l|r|h][m|n]\b/.test(stem)) return false; // ends with vowel (m|n), or vowel (mm | nn), or vowel {l | r | h} {m | n}
-  if (stem.endsWith('m') || stem.endsWith('n')) return true;
+  if (/\b[a-zß]+[aeiouäöü][m|n]{1,2}\b/.test(stem) || /\b[a-zß]+[aeiouäöü][l|r|h][m|n]\b/.test(stem)) return true; // ends with vowel (m|n), or vowel (mm | nn), or vowel {l | r | h} {m | n}
 
   return false;
 }
@@ -124,16 +123,12 @@ function standardHydration(verbConfiguration: GermanVerb): GermanVerbHydrated {
     returnObject,
     infinitive: verbConfiguration.infinitive,
     infinitiveStem
-  })
+  });
 
   if (verbConfiguration.stems) {
     // verb is strong
     const { stems } = verbConfiguration;
     const { partizip, duEs: duEsStem, präteritum, k2präsens } = stems;
-    // const partizip = stems[GermanStems.partizip];
-    // const duEsStem = stems[GermanStems.duEs];
-    // const präteritum = stems[GermanStems.präteritum];
-    // const k2präsens = stems[GermanStems.k2präsens]
 
     if (duEsStem) {
       const [newDu, newEs] = duEsConjugation({
