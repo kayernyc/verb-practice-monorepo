@@ -59,7 +59,7 @@ describe('hydrateFromInfinitive returns correctly', () => {
 });
 
 describe('Weak verb conjugates correctly', () => {
-  const expected = { "partizip": "schaut", "präsens": { "ich": "schaue", "du": "schaust", "es": "schaut", "wir": "schauen", "ihr": "schaut" }, "präteritum": { "ich": "schaute", "du": "schautest", "es": "schaute", "wir": "schauten", "ihr": "schautet" }, "konjunktiv": { "ich": "schaue", "du": "schauest", "es": "schaue", "wir": "schauen", "ihr": "schauet" } };
+  const expected = { "partizip": "geschaut", "präsens": { "ich": "schaue", "du": "schaust", "es": "schaut", "wir": "schauen", "ihr": "schaut" }, "präteritum": { "ich": "schaute", "du": "schautest", "es": "schaute", "wir": "schauten", "ihr": "schautet" }, "konjunktiv": { "ich": "schaue", "du": "schauest", "es": "schaue", "wir": "schauen", "ihr": "schauet" } };
   const config: GermanVerb = { "drop": false, "hilfsverb": "haben", "infinitive": "schauen", "languages": { "en": "to look, to see" } };
 
   it(`Schauen conjugates correctly from minimal config`, () => {

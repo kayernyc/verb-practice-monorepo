@@ -27,6 +27,8 @@ const consonents = [
   "ß"
 ];
 
+const firstVowelGroupRegex = /\b([bcdfghjklmnpqrstvwxyzß]+)([aeiouäöü]+)([bcdfghjklmnpqrstvwxyzß][a-zß]+)\b/;
+
 export function kranton(stem: string): boolean {
   if (stem.endsWith('d') || stem.endsWith('t')) return true;
   if (/\b[a-zß]+[aeiouäöü][m|n]{1,2}\b/.test(stem) || /\b[a-zß]+[aeiouäöü][l|r|h][m|n]\b/.test(stem)) return true; // ends with vowel (m|n), or vowel (mm | nn), or vowel {l | r | h} {m | n}
@@ -76,10 +78,9 @@ function createStandardConjugation({ returnObject, infinitive, infinitiveStem }:
 }
 
 function duEsConjugation({ returnObject, duEsStem }: { returnObject: GermanVerbHydrated, duEsStem: string }): [string, string] {
-  const regex = /\b([bcdfghjklmnpqrstvwxyzß]+)([aeiouäöü]+)([bcdfghjklmnpqrstvwxyzß][a-zß]+)\b/;
   const { präsens: { du, es } } = returnObject;
 
-  return [du.replace(regex, `$1${duEsStem}$3`), es.replace(regex, `$1${duEsStem}$3`)];
+  return [du.replace(firstVowelGroupRegex, `$1${duEsStem}$3`), es.replace(firstVowelGroupRegex, `$1${duEsStem}$3`)];
 }
 
 function präteritumConjugation(stem, präteritum) {
@@ -112,16 +113,25 @@ function konjunktivConjugation(stem, k2präsens) {
   }
 }
 
+function partizipConjugation(stem, partizip, infinitive) {
+  if (!partizip && infinitive) {
+    return `ge${infinitive}`;
+  }
+
+  return infinitive.replace(firstVowelGroupRegex, stem);
+}
+
 function standardHydration(verbConfiguration: GermanVerb): GermanVerbHydrated {
   // find stem
-  const infinitiveStem = verbConfiguration.infinitive.slice(0, -2);
+  const { infinitive } = verbConfiguration;
+  const infinitiveStem = infinitive.slice(0, -2);
   const returnObject: GermanVerbHydrated = {
-    partizip: `${infinitiveStem}t`,
+    partizip: `ge${infinitiveStem}t`,
   };
 
   createStandardConjugation({
     returnObject,
-    infinitive: verbConfiguration.infinitive,
+    infinitive,
     infinitiveStem
   });
 
@@ -141,13 +151,14 @@ function standardHydration(verbConfiguration: GermanVerb): GermanVerbHydrated {
       returnObject[GermanTenses.präsens]['es'] = newEs;
       // tslint:enable no-string-literal
 
+      if (partizip || verbConfiguration.strong) {
+        returnObject.partizip = partizipConjugation(infinitiveStem, partizip, infinitive)
+      }
     }
 
     returnObject[GermanTenses.präteritum] = präteritumConjugation(infinitiveStem, präteritum);
     returnObject[GermanTenses.konjunktiv] = konjunktivConjugation(infinitiveStem, k2präsens);
   }
-
-
 
   return returnObject
 }
