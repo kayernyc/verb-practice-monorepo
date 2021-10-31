@@ -1,6 +1,6 @@
 import { Router } from "express";
 
-import { germanVerbData } from "@german/germanverbs";
+import { germanVerbData } from "@german/germanVerbs";
 import { hydrateFromInfinitive } from '@german/hydrateGermanVerb';
 
 germanVerbData();
