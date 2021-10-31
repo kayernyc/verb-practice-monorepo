@@ -3,31 +3,6 @@ import germanVerbs from "../../data/germanVerbsUnhydrated.json";
 import verbIsInseparable from "./testFunctions/inseparable";
 // tslint:disable: no-console
 
-const consonents = [
-  "b",
-  "c",
-  "d",
-  "f",
-  "g",
-  "h",
-  "j",
-  "k",
-  "l",
-  "m",
-  "n",
-  "p",
-  "q",
-  "r",
-  "s",
-  "t",
-  "v",
-  "w",
-  "x",
-  "y",
-  "z",
-  "ß"
-];
-
 const firstVowelGroupRegex = /\b([bcdfghjklmnpqrstvwxyzß]+)([aeiouäöü]+)([bcdfghjklmnpqrstvwxyzß][a-zß]+)\b/;
 
 export function kranton(stem: string): boolean {

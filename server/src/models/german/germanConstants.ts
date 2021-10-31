@@ -3,6 +3,31 @@ import { GermanCase } from "./germanTypes";
 // tslint:disable: no-bitwise
 
 export const inseperableRegex = /^(?<prefix>be|emp|ent|er|ge|miß|ver|zer)(.*)/;
+export const consonents = [
+  'b',
+  'c',
+  'd',
+  'f',
+  'g',
+  'h',
+  'j',
+  'k',
+  'l',
+  'm',
+  'n',
+  'p',
+  'q',
+  'r',
+  's',
+  't',
+  'v',
+  'w',
+  'x',
+  'y',
+  'z',
+  'ß',
+];
+export const vowels = ['a', 'e', 'i', 'o', 'u', 'ä', 'ë', 'ü'];
 
 // taken from http://www.dartmouth.edu/~deutsch/Grammatik/Wortbildung/Separables.html
 export const GermanParticleRules = {
