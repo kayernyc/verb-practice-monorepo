@@ -13,13 +13,14 @@ const germanStemsDictionary = {
   'k2präsens': 'k2präsens'
 }
 
-type DataObj = {
+export type DataObj = {
   en: string;
   tags?: string[],
   hilfsverb?: string,
+  partizip?: string,
   strong?: [string: boolean] | boolean,
-  stems?: [string: string],
-  irregular?: [string: [string: string]]
+  stems?: { [characterName: string]: string },
+  irregular?: { [key: string]: { [person: string]: string } },
   "drop ich/es pr\u00e4sens endings"?: boolean
 }
 
@@ -60,7 +61,7 @@ const createStems = (dataObj) => {
 };
 
 // let germanVerbsDictionary;
-const createVerb = (_infinitive: string, dataObj: DataObj) => {
+export const createVerb = (_infinitive: string, dataObj: DataObj) => {
   const languages: LanguageMap = {};
   languages.en = dataObj.en;
 
@@ -104,17 +105,10 @@ const processVerbs = (data) => {
   const newJsonObj: { [keyName: string]: GermanVerb | number | undefined } = {
     date: Date.now(),
   }
-  const hilfsverb = [];
-  const modal = [];
-  const pipes = []
 
   for (const keyString in data) {
     if (data.hasOwnProperty(keyString) && keyString !== 'date') {
-      const hydratedVerb = createVerb(keyString, data[keyString]);
-      if (keyString.includes('|')) {
-        pipes.push(keyString)
-      }
-      newJsonObj[keyString] = hydratedVerb;
+      newJsonObj[keyString] = createVerb(keyString, data[keyString]);
     }
   }
 
