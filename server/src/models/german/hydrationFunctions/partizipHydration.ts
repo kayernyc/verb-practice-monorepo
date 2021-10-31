@@ -1,7 +1,7 @@
-import verbIsInseparable from "@german/testFunctions/inseparable";
+import verbIsInseparable from "../testFunctions/inseparable";
 import { firstVowelGroupRegex } from '@german/germanConstants';
 
-export function partizipConjugation(stem, partizip, infinitive) {
+export default function partizipConjugation(stem, partizip, infinitive) {
   if (verbIsInseparable(infinitive)) {
     return `${stem}`
   }
