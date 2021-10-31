@@ -1,9 +1,8 @@
 import { GermanPronounKeys, GermanStems, GermanTenses, GermanVerb, GermanVerbHydrated } from "./germanTypes";
+import { firstVowelGroupRegex } from './germanConstants';
 import germanVerbs from "../../data/germanVerbsUnhydrated.json";
 import verbIsInseparable from "./testFunctions/inseparable";
 // tslint:disable: no-console
-
-const firstVowelGroupRegex = /\b([bcdfghjklmnpqrstvwxyzß]+)([aeiouäöü]+)([bcdfghjklmnpqrstvwxyzß][a-zß]+)\b/;
 
 export function kranton(stem: string): boolean {
   if (stem.endsWith('d') || stem.endsWith('t')) return true;
