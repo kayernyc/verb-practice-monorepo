@@ -1,15 +1,23 @@
 import verbIsInseparable from "../testFunctions/inseparable";
 import { firstVowelGroupRegex } from '@german/germanConstants';
 
-export default function partizipConjugation({ stem, partizip, infinitive, weakEndings }: { stem: string, partizip: string, infinitive: string, weakEndings?: boolean }) {
+export default function partizipConjugation({ stem, partizip, präteritum, infinitive, weakEndings }: { stem: string, partizip?: string, präteritum?: string, infinitive: string, weakEndings?: boolean }) {
   if (verbIsInseparable(infinitive)) {
-    return `${stem}`
+    return `${stem}t`
   }
-  // tslint:disable-next-line: no-console
-  if (!partizip && infinitive) {
+
+  if (!partizip && !weakEndings && !präteritum && infinitive) {
     return `ge${infinitive}`;
   }
 
-  const builtStem = stem.replace(firstVowelGroupRegex, `ge$1${partizip}$3`);
+  if (weakEndings && präteritum && !partizip) {
+    return stem.replace(firstVowelGroupRegex, `ge$1${präteritum}t`);
+  }
+
+  let builtStem = stem;
+  if (partizip) {
+    builtStem = stem.replace(firstVowelGroupRegex, `ge$1${partizip}$3`);
+  }
+
   return `${builtStem}${weakEndings ? 'en' : 't'}`;
 }

@@ -143,6 +143,10 @@ function standardHydration(verbConfiguration: GermanVerb): GermanVerbHydrated {
 
       if (partizip || verbConfiguration.strong) {
         const config = { stem: infinitiveStem, partizip, infinitive, weakEndings };
+
+        if (!partizip && (präteritum && weakEndings)) {
+          config.partizip = präteritum;
+        }
         returnObject.partizip = partizipConjugation(config)
       }
     }
