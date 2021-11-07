@@ -84,8 +84,7 @@ describe('createVerb', () => {
       'infinitive': 'beraten',
       'languages': {
         'en': 'to advise, to discuss'
-      },
-      'strong': false,
+      }
     };
     expect(result).toEqual(expected);
   });

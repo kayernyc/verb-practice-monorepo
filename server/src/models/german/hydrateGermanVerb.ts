@@ -1,7 +1,23 @@
+import fs from 'fs';
+import path from 'path';
+import yaml from 'js-yaml';
+
 import { GermanPronounKeys, GermanStems, GermanTenses, GermanVerb, GermanVerbHydrated } from "./germanTypes";
-import germanVerbs from "../../data/germanVerbsUnhydrated.json";
+import { germanVerbData } from './germanVerbs';
 import verbIsInseparable from "./testFunctions/inseparable";
 // tslint:disable: no-console
+
+async function importJsonData() {
+  try {
+    const jsonPath = path.resolve(__dirname, '..', '..', './data/germanVerbsUnhydrated.json');
+    const data = fs.readFileSync(jsonPath, 'utf8');
+    return JSON.parse(data);
+  } catch (err) {
+    return await germanVerbData();
+  }
+}
+
+const germanVerbs = importJsonData();
 
 const consonents = [
   "b",
@@ -37,14 +53,20 @@ export function kranton(stem: string): boolean {
   return false;
 }
 
-export const hydrateFromInfinitive = (infinitive: string, _germanVerbs: any = germanVerbs) => {
-  const verbConfiguration = _germanVerbs[infinitive];
+export const hydrateFromInfinitive = async (infinitive: string, _germanVerbs?: any) => {
+  let germanVerbDictionary;
+
+  if (_germanVerbs) {
+    germanVerbDictionary = _germanVerbs;
+  } else {
+    germanVerbDictionary = await germanVerbs;
+  }
+
+  const verbConfiguration = germanVerbDictionary[infinitive];
 
   if (verbConfiguration && verbConfiguration as GermanVerb) {
     return JSON.stringify(hydrateVerb(verbConfiguration))
-    // return JSON.stringify(verbConfiguration);
   }
-
   return JSON.stringify(infinitive);
 }
 

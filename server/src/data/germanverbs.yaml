@@ -5,7 +5,7 @@ haben:
   tags:
     - hilfsverb
   strong:
-    weak endings: true
+  weak endings: true
   stems:
     präsens du/es: ha
     präteritum: t
@@ -50,7 +50,7 @@ können:
   tags:
     - modal
   strong:
-    weak endings: true
+  weak endings: true
   stems:
     präsens singular: a
     präteritum: o
@@ -61,7 +61,7 @@ müssen:
   tags:
     - modal
   strong:
-    weak endings: true
+  weak endings: true
   stems:
     präteritum: u
     präsens singular: u
@@ -86,7 +86,7 @@ dürfen:
   tags:
     - modal
   strong:
-    weak endings: true
+  weak endings: true
   stems:
     präsens singular: arf
     präteritum: u
@@ -98,7 +98,7 @@ mögen:
   tags:
     - modal
   strong:
-    weak endings: true
+  weak endings: true
   stems:
     präsens singular: ag
     präteritum: och
@@ -107,7 +107,7 @@ mögen:
 wissen:
   en: to know
   strong:
-    weak endings: true
+  weak endings: true
   stems:
     präsens singular: eiß
     präteritum: u
@@ -885,7 +885,7 @@ zwingen:
 brennen:
   en: to burn, to shine, to distil
   strong:
-    weak endings: true
+  weak endings: true
   stems:
     präteritum: a
     k2präsens: e
@@ -894,7 +894,7 @@ brennen:
 kennen:
   en: to know
   strong:
-    weak endings: true
+  weak endings: true
   stems:
     präteritum: a
     k2präsens: e
@@ -903,14 +903,14 @@ kennen:
 denken:
   en: to think, to guess
   strong:
-    weak endings: true
+  weak endings: true
   stems:
     präteritum: ach
 
 bringen:
   en: to bring, to take
   strong:
-    weak endings: true
+  weak endings: true
   stems:
     präteritum: ach
 
