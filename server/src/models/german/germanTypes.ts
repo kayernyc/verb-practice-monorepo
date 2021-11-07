@@ -24,6 +24,7 @@ export type GermanVerb = {
   languages: LanguageMap;
   stems?: { [key in GermanStems]?: string };
   strong?: [string: boolean] | boolean;
+  weakEndings?: boolean;
 }
 
 export enum GermanStems {

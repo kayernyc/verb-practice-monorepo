@@ -47,13 +47,13 @@ describe('hydrateFromInfinitive returns correctly', () => {
     "ein­at­men": { "drop": false, "hilfsverb": "haben", "infinitive": "ein­at­men" }
   }
 
-  it(`returns the infitive if there is no data`, () => {
-    const result = hydrateFromInfinitive('bobben', germanData);
+  it(`returns the infitive if there is no data`, async () => {
+    const result = await hydrateFromInfinitive('bobben', germanData);
     expect(result).toStrictEqual(JSON.stringify('bobben'));
   });
 
-  it(`returns a json if there is data`, () => {
-    const result = hydrateFromInfinitive('bedeuten', germanData);
+  it(`returns a json if there is data`, async () => {
+    const result = await hydrateFromInfinitive('bedeuten', germanData);
     expect(result).not.toBeNull();
   });
 });

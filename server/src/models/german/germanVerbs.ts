@@ -21,6 +21,7 @@ export type DataObj = {
   strong?: [string: boolean] | boolean,
   stems?: { [characterName: string]: string },
   irregular?: { [key: string]: { [person: string]: string } },
+  "weak endings"?: boolean,
   "drop ich/es pr\u00e4sens endings"?: boolean
 }
 
@@ -66,11 +67,18 @@ export const createVerb = (_infinitive: string, dataObj: DataObj) => {
   languages.en = dataObj.en;
 
   const newVerb: GermanVerb = {
-    drop: dataObj["drop ich/es pr\u00e4sens endings"] || false,
+    drop: dataObj['drop ich/es pr\u00e4sens endings'] || false,
     hilfsverb: dataObj.hilfsverb || 'haben',
     infinitive: _infinitive,
     languages,
-    strong: dataObj.strong || false
+  }
+
+  if (dataObj.strong || dataObj['weak endings'] || dataObj.irregular || dataObj.stems) {
+    newVerb.strong = true;
+  }
+
+  if (dataObj['weak endings']) {
+    newVerb.weakEndings = true;
   }
 
   if (dataObj.irregular) {
@@ -79,26 +87,10 @@ export const createVerb = (_infinitive: string, dataObj: DataObj) => {
 
   if (dataObj.stems) {
     newVerb.stems = createStems(dataObj);
+    newVerb.strong = true;
   }
 
   return newVerb;
-}
-
-const pollSeperableParticles = (pipes: string[]) => {
-  const dictionary: { string?: number } = {}
-
-  for (const pipeword of pipes) {
-    const particle = pipeword.slice(0, pipeword.indexOf('|'));
-    let record = dictionary[particle];
-    if (record) {
-      record++
-    } else {
-      record = 1
-    }
-    dictionary[particle] = record
-  }
-
-  console.log('pollSeparable Particles', Object.keys(dictionary))
 }
 
 const processVerbs = (data) => {
@@ -128,7 +120,9 @@ export function germanVerbData() {
   try {
     const fileContents = fs.readFileSync(path.resolve(__dirname, '../../', 'data/germanverbs.yaml'), 'utf8');
     const data = yaml.load(fileContents);
-    writeJson(processVerbs(data))
+    const processedVerbs = processVerbs(data)
+    writeJson(processedVerbs);
+    return processedVerbs;
   } catch (err) {
     console.log(`Error in germanverbs model: ${err} ${__dirname}`);
   }
