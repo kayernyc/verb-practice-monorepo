@@ -5,10 +5,12 @@ export default function partizipConjugation(stem, partizip, infinitive) {
   if (verbIsInseparable(infinitive)) {
     return `${stem}`
   }
+  // tslint:disable-next-line: no-console
+  console.log(partizip);
 
   if (!partizip && infinitive) {
     return `ge${infinitive}`;
   }
 
-  return infinitive.replace(firstVowelGroupRegex, stem);
+  return stem.replace(firstVowelGroupRegex, `ge$1${partizip}$3t`);
 }
