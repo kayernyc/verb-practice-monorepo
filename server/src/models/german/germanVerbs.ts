@@ -78,7 +78,7 @@ export const createVerb = (_infinitive: string, dataObj: DataObj) => {
   }
 
   if (dataObj['weak endings']) {
-    newVerb.weekEndings = true;
+    newVerb.weakEndings = true;
   }
 
   if (dataObj.irregular) {
@@ -91,23 +91,6 @@ export const createVerb = (_infinitive: string, dataObj: DataObj) => {
   }
 
   return newVerb;
-}
-
-const pollSeperableParticles = (pipes: string[]) => {
-  const dictionary: { string?: number } = {}
-
-  for (const pipeword of pipes) {
-    const particle = pipeword.slice(0, pipeword.indexOf('|'));
-    let record = dictionary[particle];
-    if (record) {
-      record++
-    } else {
-      record = 1
-    }
-    dictionary[particle] = record
-  }
-
-  console.log('pollSeparable Particles', Object.keys(dictionary))
 }
 
 const processVerbs = (data) => {

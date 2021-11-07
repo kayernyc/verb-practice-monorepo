@@ -4,7 +4,9 @@ import yaml from 'js-yaml';
 
 import { GermanPronounKeys, GermanStems, GermanTenses, GermanVerb, GermanVerbHydrated } from "./germanTypes";
 import { germanVerbData } from './germanVerbs';
-import verbIsInseparable from "./testFunctions/inseparable";
+import { firstVowelGroupRegex } from './germanConstants';
+import verbIsInseparable from './testFunctions/inseparable';
+import partizipConjugation from './hydrationFunctions/partizipHydration';
 // tslint:disable: no-console
 
 async function importJsonData() {
@@ -18,33 +20,6 @@ async function importJsonData() {
 }
 
 const germanVerbs = importJsonData();
-
-const consonents = [
-  "b",
-  "c",
-  "d",
-  "f",
-  "g",
-  "h",
-  "j",
-  "k",
-  "l",
-  "m",
-  "n",
-  "p",
-  "q",
-  "r",
-  "s",
-  "t",
-  "v",
-  "w",
-  "x",
-  "y",
-  "z",
-  "ß"
-];
-
-const firstVowelGroupRegex = /\b([bcdfghjklmnpqrstvwxyzß]+)([aeiouäöü]+)([bcdfghjklmnpqrstvwxyzß][a-zß]+)\b/;
 
 export function kranton(stem: string): boolean {
   if (stem.endsWith('d') || stem.endsWith('t')) return true;
@@ -136,18 +111,6 @@ function konjunktivConjugation(stem, k2präsens) {
   }
 }
 
-function partizipConjugation(stem, partizip, infinitive) {
-  if (verbIsInseparable(infinitive)) {
-    return `${stem}`
-  }
-
-  if (!partizip && infinitive) {
-    return `ge${infinitive}`;
-  }
-
-  return infinitive.replace(firstVowelGroupRegex, stem);
-}
-
 function standardHydration(verbConfiguration: GermanVerb): GermanVerbHydrated {
   // find stem
   const { infinitive } = verbConfiguration;
@@ -164,7 +127,7 @@ function standardHydration(verbConfiguration: GermanVerb): GermanVerbHydrated {
 
   if (verbConfiguration.stems) {
     // verb is strong
-    const { stems } = verbConfiguration;
+    const { stems, weakEndings } = verbConfiguration;
     const { partizip, duEs: duEsStem, präteritum, k2präsens } = stems;
 
     if (duEsStem) {
@@ -179,7 +142,8 @@ function standardHydration(verbConfiguration: GermanVerb): GermanVerbHydrated {
       // tslint:enable no-string-literal
 
       if (partizip || verbConfiguration.strong) {
-        returnObject.partizip = partizipConjugation(infinitiveStem, partizip, infinitive)
+        const config = { stem: infinitiveStem, partizip, infinitive, weakEndings };
+        returnObject.partizip = partizipConjugation(config)
       }
     }
 
