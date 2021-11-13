@@ -6,7 +6,7 @@ import { GermanPronounKeys, GermanStems, GermanTenses, GermanVerb, GermanVerbHyd
 import { germanVerbData } from './germanVerbs';
 import { firstVowelGroupRegex } from './germanConstants';
 import verbIsInseparable from './testFunctions/inseparable';
-import partizipConjugation from './hydrationFunctions/partizipHydration';
+import irregularPartizipConjugation from './hydrationFunctions/irregularPartizipConjugation';
 // tslint:disable: no-console
 
 async function importJsonData() {
@@ -147,7 +147,7 @@ function standardHydration(verbConfiguration: GermanVerb): GermanVerbHydrated {
         if (!partizip && (präteritum && weakEndings)) {
           config.partizip = präteritum;
         }
-        returnObject.partizip = partizipConjugation(config)
+        returnObject.partizip = irregularPartizipConjugation(config)
       }
     }
 
