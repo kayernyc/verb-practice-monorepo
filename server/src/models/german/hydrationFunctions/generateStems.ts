@@ -5,12 +5,6 @@ import { inseperableRegex } from '../germanConstants';
 
 export default function generateStems({ infinitive }: GermanVerb): string {
   let regularStem = infinitive
-  // remove prefix if it exists
-  // if (verbIsInseparable(infinitive)) {
-  //   // remove "inseparable prefix" and return stem
-  //   const [, , stem] = infinitive.match(inseperableRegex)
-  //   regularStem = stem;
-  // }
 
   if (regularStem.includes('|')) {
     regularStem = regularStem.slice(regularStem.indexOf('|') + 1);
