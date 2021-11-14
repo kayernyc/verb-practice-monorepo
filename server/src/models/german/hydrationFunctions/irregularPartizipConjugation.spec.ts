@@ -54,4 +54,4 @@ describe('irregularPartizipConjugation handles irregulars', () => {
     const partizip = irregularPartizipConjugation({ stem, partizip: 'a', infinitive: 'verkaufen' })
     expect(partizip).toEqual('verkauft');
   });
-})
+});
