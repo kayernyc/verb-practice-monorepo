@@ -33,6 +33,9 @@ function duEsConjugation({ returnObject, duEsStem }: {
   returnObject: GermanVerbHydrated,
   duEsStem: string
 }): [string, string] {
+  if (!returnObject.präsens) {
+    throw "NO PRÄSENS"
+  }
   const { präsens: { du, es } } = returnObject;
 
   return [du.replace(firstVowelGroupRegex, `$1${duEsStem}$3`), es.replace(firstVowelGroupRegex, `$1${duEsStem}$3`)];
@@ -75,8 +78,9 @@ function createStandardConjugation({ returnObject, infinitive, infinitiveStem }:
     returnObject: GermanVerbHydrated,
     infinitive: string,
     infinitiveStem: string
-  }) {
-  const newReturnObject: GermanVerbHydrated = { ...returnObject };
+  }): GermanVerbHydrated {
+  let newReturnObject: GermanVerbHydrated = { ...returnObject };
+
   newReturnObject[GermanTenses.präsens] = {
     ich: `${infinitiveStem}e`,
     du: `${infinitiveStem}st`,
@@ -92,6 +96,7 @@ function createStandardConjugation({ returnObject, infinitive, infinitiveStem }:
     wir: infinitive,
     ihr: `${infinitiveStem}et`,
   };
+
   newReturnObject[GermanTenses.präteritum] = {
     ich: `${infinitiveStem}te`,
     du: `${infinitiveStem}test`,
@@ -99,6 +104,7 @@ function createStandardConjugation({ returnObject, infinitive, infinitiveStem }:
     wir: `${infinitiveStem}ten`,
     ihr: `${infinitiveStem}tet`,
   };
+
   return newReturnObject;
 }
 
@@ -106,11 +112,11 @@ function standardHydration(verbConfiguration: GermanVerb): GermanVerbHydrated {
   // find stem
   const { infinitive } = verbConfiguration;
   const infinitiveStem = infinitive.slice(0, -2);
-  const returnObject: GermanVerbHydrated = {
+  let returnObject: GermanVerbHydrated = {
     partizip: `ge${infinitiveStem}t`,
   };
 
-  createStandardConjugation({
+  returnObject = createStandardConjugation({
     returnObject,
     infinitive,
     infinitiveStem,

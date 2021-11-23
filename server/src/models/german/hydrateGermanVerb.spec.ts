@@ -47,7 +47,7 @@ describe('hydrateFromInfinitive returns correctly', () => {
     bedeuten: {
       drop: false, hilfsverb: 'haben', infinitive: 'bedeuten', languages: { en: 'to mean' }, strong: false,
     },
-    'ein­at­men': { drop: false, hilfsverb: 'haben', infinitive: 'ein­at­men' },
+    'ein­at­men': { drop: false, hilfsverb: 'haben', infinitive: 'ein­at­men', languages: { en: 'to be meaningless' } },
   };
 
   it('returns the infitive if there is no data', () => {
@@ -116,6 +116,7 @@ describe('Fallen conjugates correctly', () => {
   const config: GermanVerb = {
     drop: false, strong: true, hilfsverb: 'sein', infinitive: 'fallen', languages: { en: 'to fall' }, stems: { duEs: 'ä', präteritum: 'iel', k2präsens: 'iel' },
   };
+
   const result = hydrateVerb(config);
 
   it('Fallen conjugates partizip correctly from minimal config', () => {
