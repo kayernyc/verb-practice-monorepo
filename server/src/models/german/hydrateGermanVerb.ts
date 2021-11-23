@@ -1,21 +1,22 @@
 import fs from 'fs';
 import path from 'path';
-import yaml from 'js-yaml';
 
-import { GermanPronounKeys, GermanStems, GermanTenses, GermanVerb, GermanVerbHydrated } from "./germanTypes";
-import { germanVerbData } from './germanVerbs';
+import {
+  GermanTenses, GermanVerb, GermanVerbHydrated,
+} from './germanTypes';
+import { germanVerbData, JSON_DATA } from './germanVerbs';
 import { firstVowelGroupRegex } from './germanConstants';
-import verbIsInseparable from './testFunctions/inseparable';
 import irregularPartizipConjugation from './hydrationFunctions/irregularPartizipConjugation';
 // tslint:disable: no-console
 
-async function importJsonData() {
+function importJsonData(): JSON_DATA {
   try {
     const jsonPath = path.resolve(__dirname, '..', '..', './data/germanVerbsUnhydrated.json');
-    const data = fs.readFileSync(jsonPath, 'utf8');
-    return JSON.parse(data);
+    const data: string = fs.readFileSync(jsonPath, 'utf8');
+    const parsedData: JSON_DATA = JSON.parse(data) as JSON_DATA;
+    return parsedData;
   } catch (err) {
-    return await germanVerbData();
+    return germanVerbData();
   }
 }
 
@@ -28,87 +29,77 @@ export function kranton(stem: string): boolean {
   return false;
 }
 
-export const hydrateFromInfinitive = async (infinitive: string, _germanVerbs?: any) => {
-  let germanVerbDictionary;
-
-  if (_germanVerbs) {
-    germanVerbDictionary = _germanVerbs;
-  } else {
-    germanVerbDictionary = await germanVerbs;
-  }
-
-  const verbConfiguration = germanVerbDictionary[infinitive];
-
-  if (verbConfiguration && verbConfiguration as GermanVerb) {
-    return JSON.stringify(hydrateVerb(verbConfiguration))
-  }
-  return JSON.stringify(infinitive);
-}
-
-export function hydrateVerb(verbConfiguration: GermanVerb) {
-  return standardHydration(verbConfiguration);
-}
-
-function createStandardConjugation({ returnObject, infinitive, infinitiveStem }: { returnObject: GermanVerbHydrated, infinitive: string, infinitiveStem: string }) {
-  returnObject[GermanTenses.präsens] = {
-    'ich': `${infinitiveStem}e`,
-    'du': `${infinitiveStem}st`,
-    'es': `${infinitiveStem}t`,
-    'wir': infinitive,
-    'ihr': `${infinitiveStem}t`
-  }
-
-  returnObject[GermanTenses.konjunktiv] = {
-    'ich': `${infinitiveStem}e`,
-    'du': `${infinitiveStem}est`,
-    'es': `${infinitiveStem}e`,
-    'wir': infinitive,
-    'ihr': `${infinitiveStem}et`
-  }
-  returnObject[GermanTenses.präteritum] = {
-    'ich': `${infinitiveStem}te`,
-    'du': `${infinitiveStem}test`,
-    'es': `${infinitiveStem}te`,
-    'wir': `${infinitiveStem}ten`,
-    'ihr': `${infinitiveStem}tet`
-  }
-  return returnObject;
-}
-
-function duEsConjugation({ returnObject, duEsStem }: { returnObject: GermanVerbHydrated, duEsStem: string }): [string, string] {
+function duEsConjugation({ returnObject, duEsStem }: {
+  returnObject: GermanVerbHydrated,
+  duEsStem: string
+}): [string, string] {
   const { präsens: { du, es } } = returnObject;
 
   return [du.replace(firstVowelGroupRegex, `$1${duEsStem}$3`), es.replace(firstVowelGroupRegex, `$1${duEsStem}$3`)];
 }
 
-function präteritumConjugation(stem, präteritum) {
+function präteritumConjugation(stem: string, präteritum: string): { [key: string]: string } {
+  let modifiableStem = stem;
   if (präteritum) {
     const regex = /\b([bcdfghjklmnpqrstvwxyzß]+)([a-zß]+)\b/;
-    stem = stem.replace(regex, `$1${präteritum}`);
+    modifiableStem = modifiableStem.replace(regex, `$1${präteritum}`);
   }
 
   return {
-    'ich': `${stem}`,
-    'du': `${stem}st`,
-    'es': `${stem}`,
-    'wir': `${stem}en`,
-    'ihr': `${stem}t`
-  }
+    ich: `${modifiableStem}`,
+    du: `${modifiableStem}st`,
+    es: `${modifiableStem}`,
+    wir: `${modifiableStem}en`,
+    ihr: `${modifiableStem}t`,
+  };
 }
 
-function konjunktivConjugation(stem, k2präsens) {
+function konjunktivConjugation(stem: string, k2präsens: string): { [key: string]: string } {
+  let modifiableStem = stem;
   if (k2präsens) {
     const regex = /\b([bcdfghjklmnpqrstvwxyzß]+)([a-zß]+)\b/;
-    stem = stem.replace(regex, `$1${k2präsens}`);
+    modifiableStem = modifiableStem.replace(regex, `$1${k2präsens}`);
   }
 
   return {
-    'ich': `${stem}e`,
-    'du': `${stem}est`,
-    'es': `${stem}e`,
-    'wir': `${stem}en`,
-    'ihr': `${stem}et`
-  }
+    ich: `${modifiableStem}e`,
+    du: `${modifiableStem}est`,
+    es: `${modifiableStem}e`,
+    wir: `${modifiableStem}en`,
+    ihr: `${modifiableStem}et`,
+  };
+}
+
+function createStandardConjugation({ returnObject, infinitive, infinitiveStem }:
+  {
+    returnObject: GermanVerbHydrated,
+    infinitive: string,
+    infinitiveStem: string
+  }) {
+  const newReturnObject: GermanVerbHydrated = { ...returnObject };
+  newReturnObject[GermanTenses.präsens] = {
+    ich: `${infinitiveStem}e`,
+    du: `${infinitiveStem}st`,
+    es: `${infinitiveStem}t`,
+    wir: infinitive,
+    ihr: `${infinitiveStem}t`,
+  };
+
+  newReturnObject[GermanTenses.konjunktiv] = {
+    ich: `${infinitiveStem}e`,
+    du: `${infinitiveStem}est`,
+    es: `${infinitiveStem}e`,
+    wir: infinitive,
+    ihr: `${infinitiveStem}et`,
+  };
+  newReturnObject[GermanTenses.präteritum] = {
+    ich: `${infinitiveStem}te`,
+    du: `${infinitiveStem}test`,
+    es: `${infinitiveStem}te`,
+    wir: `${infinitiveStem}ten`,
+    ihr: `${infinitiveStem}tet`,
+  };
+  return newReturnObject;
 }
 
 function standardHydration(verbConfiguration: GermanVerb): GermanVerbHydrated {
@@ -122,32 +113,36 @@ function standardHydration(verbConfiguration: GermanVerb): GermanVerbHydrated {
   createStandardConjugation({
     returnObject,
     infinitive,
-    infinitiveStem
+    infinitiveStem,
   });
 
   if (verbConfiguration.stems) {
     // verb is strong
     const { stems, weakEndings } = verbConfiguration;
-    const { partizip, duEs: duEsStem, präteritum, k2präsens } = stems;
+    const {
+      partizip, duEs: duEsStem, präteritum, k2präsens,
+    } = stems;
 
     if (duEsStem) {
       const [newDu, newEs] = duEsConjugation({
         returnObject,
-        duEsStem
+        duEsStem,
       });
 
       // tslint:disable no-string-literal
-      returnObject[GermanTenses.präsens]['du'] = newDu;
-      returnObject[GermanTenses.präsens]['es'] = newEs;
+      returnObject[GermanTenses.präsens].du = newDu;
+      returnObject[GermanTenses.präsens].es = newEs;
       // tslint:enable no-string-literal
 
       if (partizip || verbConfiguration.strong) {
-        const config = { stem: infinitiveStem, partizip, infinitive, weakEndings };
+        const config = {
+          stem: infinitiveStem, partizip, infinitive, weakEndings,
+        };
 
         if (!partizip && (präteritum && weakEndings)) {
           config.partizip = präteritum;
         }
-        returnObject.partizip = irregularPartizipConjugation(config)
+        returnObject.partizip = irregularPartizipConjugation(config);
       }
     }
 
@@ -155,5 +150,26 @@ function standardHydration(verbConfiguration: GermanVerb): GermanVerbHydrated {
     returnObject[GermanTenses.konjunktiv] = konjunktivConjugation(infinitiveStem, k2präsens);
   }
 
-  return returnObject
+  return returnObject;
 }
+
+export function hydrateVerb(verbConfiguration: GermanVerb) {
+  return standardHydration(verbConfiguration);
+}
+
+export const hydrateFromInfinitive = (infinitive: string, _germanVerbs?: JSON_DATA): string => {
+  let germanVerbDictionary: JSON_DATA;
+
+  if (_germanVerbs) {
+    germanVerbDictionary = _germanVerbs;
+  } else {
+    germanVerbDictionary = germanVerbs;
+  }
+
+  const verbConfiguration: GermanVerb = germanVerbDictionary[infinitive] as GermanVerb;
+
+  if (verbConfiguration) {
+    return JSON.stringify(hydrateVerb(verbConfiguration));
+  }
+  return JSON.stringify(infinitive);
+};

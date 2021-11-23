@@ -1,7 +1,7 @@
-import verbIsInseparable from "../testFunctions/inseparable";
-import { firstVowelGroupRegex } from '@german/germanConstants';
-
-export default function regularPartizipConjugation(infinitive: string, infinitiveStem: string): string {
+export default function regularPartizipConjugation(
+  infinitive: string,
+  infinitiveStem: string,
+): string {
   if (infinitive.length > 5 && infinitive.slice(-5) === 'ieren') {
     return `${infinitiveStem}t`;
   }

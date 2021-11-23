@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 
-import { deutschRouter } from './routes/deutsch'
+import deutschRouter from './routes/deutsch';
 
 const app = express();
 const port = 3000;
@@ -12,7 +12,7 @@ app.use(
   express.urlencoded({
     // to support URL-encoded bodies
     extended: true,
-  })
+  }),
 );
 app.use(cors());
 
@@ -23,6 +23,7 @@ app.get('/', (req, res) => {
 app.use('/de', deutschRouter);
 
 app.listen(port, () => {
-  // tslint:disable-next-line: no-console
+  /* eslint-disable */
   console.log(`Server is runing on port ${port}`);
+  /* eslint-enable */
 });

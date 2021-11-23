@@ -1,4 +1,4 @@
-import verbIsInseparable from "./inseparable";
+import verbIsInseparable from './inseparable';
 
 describe('verbIsInseparable correctly determines the state of the verb', () => {
   it('flags fallen as not inseparable', () => {

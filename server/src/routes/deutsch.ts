@@ -1,14 +1,17 @@
-import { Router } from "express";
+import { RequestHandler, Router } from 'express';
 
-import { germanVerbData } from "@german/germanVerbs";
+import { germanVerbData } from '@german/germanVerbs';
 import { hydrateFromInfinitive } from '@german/hydrateGermanVerb';
 
-
 germanVerbData();
-export const deutschRouter = Router();
+const deutschRouter: Router = Router();
 
-deutschRouter.get('/:verb', async (req, res) => {
+deutschRouter.get('/:verb', (req, res): Promise<void> => {
   const verb = req.params.verb.toLowerCase();
-  const result = await hydrateFromInfinitive(req.params.verb)
-  res.send(`this is your verb: ${result}`);
-});
+  const result = hydrateFromInfinitive(verb);
+  res
+    .status(200)
+    .send(`this is your verb: ${result}`);
+}) as RequestHandler;
+
+export default deutschRouter;
