@@ -1,0 +1,3 @@
+{
+  "*.{jsx, js}": ["eslint — max-warnings 0"]
+}
