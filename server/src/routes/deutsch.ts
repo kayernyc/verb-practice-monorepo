@@ -6,7 +6,7 @@ import { hydrateFromInfinitive } from '@german/hydrateGermanVerb';
 germanVerbData();
 const deutschRouter: Router = Router();
 
-deutschRouter.get('/:verb', (req, res): Promise<void> => {
+deutschRouter.get('/:verb', (req, res) => {
   const verb = req.params.verb.toLowerCase();
   const result = hydrateFromInfinitive(verb);
   res
