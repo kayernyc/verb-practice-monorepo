@@ -1,0 +1,8 @@
+# dist
+/dist/**/*
+
+# config
+**.js
+
+# folders
+/coverage

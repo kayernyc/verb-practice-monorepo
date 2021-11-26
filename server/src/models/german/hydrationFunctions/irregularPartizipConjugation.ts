@@ -1,9 +1,17 @@
-import verbIsInseparable from "../testFunctions/inseparable";
 import { firstVowelGroupRegex } from '@german/germanConstants';
+import verbIsInseparable from '../testFunctions/inseparable';
 
-export default function irregularPartizipConjugation({ stem, partizip, präteritum, infinitive, weakEndings }: { stem: string, partizip?: string, präteritum?: string, infinitive: string, weakEndings?: boolean }) {
+export default function irregularPartizipConjugation({
+  stem, partizip, präteritum, infinitive, weakEndings,
+}: {
+  stem: string,
+  partizip?: string,
+  präteritum?: string,
+  infinitive: string,
+  weakEndings?: boolean
+}) {
   if (verbIsInseparable(infinitive)) {
-    return `${stem}t`
+    return `${stem}t`;
   }
 
   if (!partizip && !weakEndings && !präteritum && infinitive) {

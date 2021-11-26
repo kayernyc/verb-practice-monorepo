@@ -2,12 +2,30 @@ import {
   GrammaticalFormal,
   GrammaticalGender,
   GrammaticalNumber,
-  GrammaticalPerson
-} from "../languageTypes"
+  GrammaticalPerson,
+} from '../languageTypes';
 
 export interface LanguageMap {
   en?: string
   fr?: string
+}
+
+export enum GermanTenses {
+  präsens = 'präsens', // present
+  präteritum = 'präteritum', // past
+  futur = 'futur', // compound and futre
+  perfekt = 'perfekt', // compound
+  konjunktiv = 'konjunktiv',
+  k2präsens = 'k2präsens', // subjunctive and imperitive
+  k2präteritum = 'k2präteritum'
+}
+
+export enum GermanStems {
+  duEs = 'duEs',
+  präteritum = 'präteritum',
+  partizip = 'partizip',
+  präsensSingular = 'präsensSingular',
+  k2präsens = 'k2präsens'
 }
 
 export type GermanVerbHydrated = {
@@ -27,14 +45,6 @@ export type GermanVerb = {
   weakEndings?: boolean;
 }
 
-export enum GermanStems {
-  duEs = 'duEs',
-  präteritum = 'präteritum',
-  partizip = 'partizip',
-  präsensSingular = 'präsensSingular',
-  k2präsens = 'k2präsens'
-}
-
 export type GermanIrregular = {
   präteritum: string;
   partizip: string;
@@ -42,22 +52,12 @@ export type GermanIrregular = {
 
 // tslint:disable: no-bitwise
 export enum GermanCase {
-  Nominative = 1 << 10,  // 1024
+  Nominative = 1 << 10, // 1024
   Accusative = 1 << 11, // 2048
   Dative = 1 << 12, // 4096
   Genative = 1 << 13 // 8192
 }
 // tslint:enable: no-bitwise
-
-export enum GermanTenses {
-  präsens = "präsens", // present
-  präteritum = "präteritum", // past
-  futur = "futur", // compound and futre
-  perfekt = "perfekt", // compound
-  konjunktiv = 'konjunktiv',
-  k2präsens = "k2präsens", // subjunctive and imperitive
-  k2präteritum = "k2präteritum"
-}
 
 export type GermanPronoun = {
   grammaticalPerson: GrammaticalPerson,
@@ -66,11 +66,23 @@ export type GermanPronoun = {
   case: GermanCase
 }
 
-export const GermanPronounKeys = {
-  'ich': (GrammaticalPerson.First + GrammaticalNumber.Singular + GermanCase.Nominative),
-  'du': (GrammaticalPerson.Second + GrammaticalNumber.Singular + GrammaticalFormal.Informal + GermanCase.Nominative),
-  'es': (GrammaticalPerson.Third + GrammaticalNumber.Singular + GermanCase.Nominative + GrammaticalGender.Neuter),
-  'wir': (GrammaticalPerson.First + GrammaticalNumber.Plural + GermanCase.Nominative),
-  'ihr': (GrammaticalPerson.Second + GrammaticalNumber.Plural + GrammaticalFormal.Informal + GermanCase.Nominative)
-}
-
+export const GermanPronounKeys: { [key: string]: number } = {
+  ich: (GrammaticalPerson.First.valueOf()
+    + GrammaticalNumber.Singular.valueOf()
+    + GermanCase.Nominative.valueOf()),
+  du: (GrammaticalPerson.Second.valueOf()
+    + GrammaticalNumber.Singular.valueOf()
+    + GrammaticalFormal.Informal.valueOf()
+    + GermanCase.Nominative.valueOf()),
+  es: (GrammaticalPerson.Third.valueOf()
+    + GrammaticalNumber.Singular.valueOf()
+    + GermanCase.Nominative.valueOf()
+    + GrammaticalGender.Neuter.valueOf()),
+  wir: (GrammaticalPerson.First.valueOf()
+    + GrammaticalNumber.Plural.valueOf()
+    + GermanCase.Nominative.valueOf()),
+  ihr: (GrammaticalPerson.Second.valueOf()
+    + GrammaticalNumber.Plural.valueOf()
+    + GrammaticalFormal.Informal.valueOf()
+    + GermanCase.Nominative.valueOf()),
+};

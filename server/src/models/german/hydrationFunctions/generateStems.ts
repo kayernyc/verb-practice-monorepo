@@ -1,10 +1,8 @@
 // tslint:disable: no-console
 import { GermanVerb } from '../germanTypes';
-import verbIsInseparable from '../testFunctions/inseparable';
-import { inseperableRegex } from '../germanConstants';
 
 export default function generateStems({ infinitive }: GermanVerb): string {
-  let regularStem = infinitive
+  let regularStem = infinitive;
 
   if (regularStem.includes('|')) {
     regularStem = regularStem.slice(regularStem.indexOf('|') + 1);

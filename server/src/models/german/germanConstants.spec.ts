@@ -1,7 +1,10 @@
-import { GrammaticalFormal, GrammaticalPerson, GrammaticalGender, GrammaticalNumber } from '../languageTypes';
+import {
+  GrammaticalFormal, GrammaticalPerson, GrammaticalGender, GrammaticalNumber,
+} from '../languageTypes';
 import { GermanPronoun } from './germanConstants';
 import { GermanCase } from './germanTypes';
 
+/* eslint-disable */
 const pronounArray: [string, number][] = [
   ['ich', GrammaticalPerson.First + GrammaticalNumber.Singular + GermanCase.Nominative],
   ['mich', GrammaticalPerson.First + GrammaticalNumber.Singular + GermanCase.Accusative],
@@ -39,7 +42,7 @@ const pronounArray: [string, number][] = [
   ['Sie', GrammaticalPerson.Second + GrammaticalFormal.Formal + GermanCase.Accusative + GrammaticalNumber.Plural],
   ['Ihnen', GrammaticalPerson.Second + GrammaticalFormal.Formal + GermanCase.Dative + GrammaticalNumber.Plural],
   ['Ihrer', GrammaticalPerson.Second + GrammaticalFormal.Formal + GermanCase.Genative + GrammaticalNumber.Plural],
-  ['Man', GrammaticalFormal.Formal + GrammaticalNumber.Plural + GrammaticalPerson.First]
+  ['Man', GrammaticalFormal.Formal + GrammaticalNumber.Plural + GrammaticalPerson.First],
 ];
 
 for (const tuple of pronounArray) {
@@ -50,5 +53,4 @@ for (const tuple of pronounArray) {
     expect(testValue).toBe(result);
   });
 }
-
-
+/* eslint-enable */

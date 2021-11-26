@@ -4,12 +4,33 @@
   "description": "practice app for german seperable verbs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cz": "cz",
+    "test": "cd server && npm run test",
+    "prepare": "husky install",
+    "test-echo": "echo hi"
   },
   "keywords": [
     "german",
     "verbs"
   ],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "15.0.0",
+    "@commitlint/config-conventional": "15.0.0",
+    "commitizen": "4.2.4",
+    "cz-conventional-changelog": "3.2.0",
+    "husky": "7.0.4",
+    "lint-staged": "12.1.2"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
 }
