@@ -4,7 +4,7 @@
   "description": "practice app for german seperable verbs",
   "main": "index.js",
   "scripts": {
-    "commitizen": "cz",
+    "cz": "cz",
     "test": "cd server && npm run test",
     "prepare": "husky install"
   },
@@ -30,6 +30,11 @@
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
   }
 }
