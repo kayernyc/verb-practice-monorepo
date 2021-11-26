@@ -6,7 +6,8 @@
   "scripts": {
     "cz": "cz",
     "test": "cd server && npm run test",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test-echo": "echo hi"
   },
   "keywords": [
     "german",
@@ -30,11 +31,6 @@
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
-    }
-  },
-  "husky": {
-    "hooks": {
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
   }
 }
