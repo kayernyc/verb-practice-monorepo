@@ -4,6 +4,7 @@
   "description": "practice app for german seperable verbs",
   "main": "index.js",
   "scripts": {
+    "commitizen": "cz",
     "test": "exit 0",
     "prepare": "husky install"
   },
@@ -21,9 +22,14 @@
     "husky": "7.0.4",
     "lint-staged": "12.1.2"
   },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "cz-conventional-changelog"
     }
   }
 }
