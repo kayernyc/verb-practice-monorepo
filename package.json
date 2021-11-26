@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "commitizen": "cz",
-    "test": "exit 0",
+    "test": "cd server && npm run test",
     "prepare": "husky install"
   },
   "keywords": [
