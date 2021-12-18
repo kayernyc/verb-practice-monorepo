@@ -4,24 +4,41 @@ import generateStems from './generateStems';
 describe('irregularPartizipConjugation handles irregulars', () => {
   it('conjugates schwimmen partizip correctly', () => {
     const config = {
-      drop: false, hilfsverb: 'sein', infinitive: 'schwimmen', languages: { en: 'to swim' }, stems: { partizip: 'o', präteritum: 'a' }, strong: true,
+      drop: false,
+      hilfsverb: 'sein',
+      infinitive: 'schwimmen',
+      languages: { en: 'to swim' },
+      stems: { partizip: 'o', präteritum: 'a' },
+      strong: true,
     };
     const stem = generateStems(config);
 
     const partizip = irregularPartizipConjugation({
-      stem, partizip: 'o', infinitive: 'schwimmen', weakEndings: true,
+      stem,
+      partizip: 'o',
+      infinitive: 'schwimmen',
+      weakEndings: true,
     });
     expect(partizip).toEqual('geschwommen');
   });
 
   it('conjugates bringen partizip correctly', () => {
     const config = {
-      drop: false, weekEndings: true, hilfsverb: 'haben', infinitive: 'bringen', languages: { en: 'to bring, to take' }, strong: true, stems: { präteritum: 'ach' },
+      drop: false,
+      weekEndings: true,
+      hilfsverb: 'haben',
+      infinitive: 'bringen',
+      languages: { en: 'to bring, to take' },
+      strong: true,
+      stems: { präteritum: 'ach' },
     };
     const stem = generateStems(config);
 
     const partizip = irregularPartizipConjugation({
-      stem, infinitive: 'bringen', präteritum: 'ach', weakEndings: true,
+      stem,
+      infinitive: 'bringen',
+      präteritum: 'ach',
+      weakEndings: true,
     });
     expect(partizip).toEqual('gebracht');
   });
@@ -39,14 +56,22 @@ describe('irregularPartizipConjugation handles irregulars', () => {
     const stem = generateStems(config);
 
     const partizip = irregularPartizipConjugation({
-      stem, infinitive: 'denken', präteritum: 'ach', weakEndings: true,
+      stem,
+      infinitive: 'denken',
+      präteritum: 'ach',
+      weakEndings: true,
     });
     expect(partizip).toEqual('gedacht');
   });
 
   it('conjugates brennen partizip correctly', () => {
     const config = {
-      drop: false, hilfsverb: 'haben', infinitive: 'brennen', languages: { en: 'to burn, to shine, to distil' }, strong: true, stems: { präteritum: 'a', k2präsens: 'e', partizip: 'a' },
+      drop: false,
+      hilfsverb: 'haben',
+      infinitive: 'brennen',
+      languages: { en: 'to burn, to shine, to distil' },
+      strong: true,
+      stems: { präteritum: 'a', k2präsens: 'e', partizip: 'a' },
     };
     const stem = generateStems(config);
 

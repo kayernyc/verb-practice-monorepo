@@ -45,7 +45,11 @@ describe('hydrateFromInfinitive returns correctly', () => {
   const germanData = {
     date: 1633815078298,
     bedeuten: {
-      drop: false, hilfsverb: 'haben', infinitive: 'bedeuten', languages: { en: 'to mean' }, strong: false,
+      drop: false,
+      hilfsverb: 'haben',
+      infinitive: 'bedeuten',
+      languages: { en: 'to mean' },
+      strong: false,
     },
     'ein­at­men': { drop: false, hilfsverb: 'haben', infinitive: 'ein­at­men', languages: { en: 'to be meaningless' } },
   };
@@ -65,17 +69,32 @@ describe('Weak verb conjugates correctly', () => {
   const expected = {
     partizip: 'geschaut',
     präsens: {
-      ich: 'schaue', du: 'schaust', es: 'schaut', wir: 'schauen', ihr: 'schaut',
+      ich: 'schaue',
+      du: 'schaust',
+      es: 'schaut',
+      wir: 'schauen',
+      ihr: 'schaut',
     },
     präteritum: {
-      ich: 'schaute', du: 'schautest', es: 'schaute', wir: 'schauten', ihr: 'schautet',
+      ich: 'schaute',
+      du: 'schautest',
+      es: 'schaute',
+      wir: 'schauten',
+      ihr: 'schautet',
     },
     konjunktiv: {
-      ich: 'schaue', du: 'schauest', es: 'schaue', wir: 'schauen', ihr: 'schauet',
+      ich: 'schaue',
+      du: 'schauest',
+      es: 'schaue',
+      wir: 'schauen',
+      ihr: 'schauet',
     },
   };
   const config: GermanVerb = {
-    drop: false, hilfsverb: 'haben', infinitive: 'schauen', languages: { en: 'to look, to see' },
+    drop: false,
+    hilfsverb: 'haben',
+    infinitive: 'schauen',
+    languages: { en: 'to look, to see' },
   };
 
   it('Schauen conjugates correctly from minimal config', () => {
@@ -95,16 +114,14 @@ describe('Fallen conjugates correctly', () => {
       wir: 'fallen',
       ihr: 'fallt',
     },
-    präteritum:
-    {
+    präteritum: {
       ich: 'fiel',
       du: 'fielst',
       es: 'fiel',
       wir: 'fielen',
       ihr: 'fielt',
     },
-    konjunktiv:
-    {
+    konjunktiv: {
       ich: 'fiele',
       du: 'fielest',
       es: 'fiele',
@@ -114,7 +131,12 @@ describe('Fallen conjugates correctly', () => {
   };
 
   const config: GermanVerb = {
-    drop: false, strong: true, hilfsverb: 'sein', infinitive: 'fallen', languages: { en: 'to fall' }, stems: { duEs: 'ä', präteritum: 'iel', k2präsens: 'iel' },
+    drop: false,
+    strong: true,
+    hilfsverb: 'sein',
+    infinitive: 'fallen',
+    languages: { en: 'to fall' },
+    stems: { duEs: 'ä', präteritum: 'iel', k2präsens: 'iel' },
   };
 
   const result = hydrateVerb(config);

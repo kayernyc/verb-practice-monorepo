@@ -43,7 +43,10 @@ describe('createVerb', () => {
 
   it('populates fallen correctly', () => {
     const dataObj: DataObj = {
-      en: 'to fall', strong: true, hilfsverb: 'sein', stems: { 'präsens du/es': 'ä', k2präsens: 'iel' },
+      en: 'to fall',
+      strong: true,
+      hilfsverb: 'sein',
+      stems: { 'präsens du/es': 'ä', k2präsens: 'iel' },
     };
     const result = createVerb('fallen', dataObj);
     const expected = {
@@ -62,7 +65,10 @@ describe('createVerb', () => {
 
   it('populates schwimmen correctly', () => {
     const dataObj: DataObj = {
-      en: 'to swim', hilfsverb: 'sein', strong: true, stems: { partizip: 'o', präteritum: 'a' },
+      en: 'to swim',
+      hilfsverb: 'sein',
+      strong: true,
+      stems: { partizip: 'o', präteritum: 'a' },
     };
     const result = createVerb('schwimmen', dataObj);
     const expected = {

@@ -1,6 +1,4 @@
-import {
-  GrammaticalFormal, GrammaticalPerson, GrammaticalGender, GrammaticalNumber,
-} from '../languageTypes';
+import { GrammaticalFormal, GrammaticalPerson, GrammaticalGender, GrammaticalNumber } from '../languageTypes';
 import { GermanPronoun } from './germanConstants';
 import { GermanCase } from './germanTypes';
 
