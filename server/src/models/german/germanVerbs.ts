@@ -2,7 +2,9 @@ import fs from 'fs';
 import path from 'path';
 import yaml from 'js-yaml';
 
-import { GermanStems, GermanTenses, GermanVerb, GermanPronounKeys, LanguageMap } from './germanTypes';
+import {
+  GermanStems, GermanTenses, GermanVerb, GermanPronounKeys, LanguageMap,
+} from './germanTypes';
 
 export type JSON_DATA = { [keyName: string]: GermanVerb | number | undefined };
 

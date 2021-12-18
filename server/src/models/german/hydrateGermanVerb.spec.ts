@@ -51,7 +51,9 @@ describe('hydrateFromInfinitive returns correctly', () => {
       languages: { en: 'to mean' },
       strong: false,
     },
-    'ein­at­men': { drop: false, hilfsverb: 'haben', infinitive: 'ein­at­men', languages: { en: 'to be meaningless' } },
+    'ein­at­men': {
+      drop: false, hilfsverb: 'haben', infinitive: 'ein­at­men', languages: { en: 'to be meaningless' },
+    },
   };
 
   it('returns the infitive if there is no data', () => {

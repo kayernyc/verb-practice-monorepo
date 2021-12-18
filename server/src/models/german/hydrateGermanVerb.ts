@@ -35,7 +35,7 @@ function duEsConjugation({
   duEsStem: string;
 }): [string, string] {
   if (!returnObject.präsens) {
-    throw 'NO PRÄSENS';
+    throw new Error('NO PRÄSENS');
   }
   const {
     präsens: { du, es },
@@ -85,7 +85,7 @@ function createStandardConjugation({
   infinitive: string;
   infinitiveStem: string;
 }): GermanVerbHydrated {
-  let newReturnObject: GermanVerbHydrated = { ...returnObject };
+  const newReturnObject: GermanVerbHydrated = { ...returnObject };
 
   newReturnObject[GermanTenses.präsens] = {
     ich: `${infinitiveStem}e`,
@@ -131,7 +131,9 @@ function standardHydration(verbConfiguration: GermanVerb): GermanVerbHydrated {
   if (verbConfiguration.stems) {
     // verb is strong
     const { stems, weakEndings } = verbConfiguration;
-    const { partizip, duEs: duEsStem, präteritum, k2präsens } = stems;
+    const {
+      partizip, duEs: duEsStem, präteritum, k2präsens,
+    } = stems;
 
     if (duEsStem) {
       const [newDu, newEs] = duEsConjugation({

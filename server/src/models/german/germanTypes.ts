@@ -1,4 +1,6 @@
-import { GrammaticalFormal, GrammaticalGender, GrammaticalNumber, GrammaticalPerson } from '../languageTypes';
+import {
+  GrammaticalFormal, GrammaticalGender, GrammaticalNumber, GrammaticalPerson,
+} from '../languageTypes';
 
 export interface LanguageMap {
   en?: string;
@@ -62,21 +64,23 @@ export type GermanPronoun = {
 };
 
 export const GermanPronounKeys: { [key: string]: number } = {
-  ich: GrammaticalPerson.First.valueOf() + GrammaticalNumber.Singular.valueOf() + GermanCase.Nominative.valueOf(),
+  ich: GrammaticalPerson.First.valueOf() + GrammaticalNumber.Singular.valueOf()
+    + GermanCase.Nominative.valueOf(),
   du:
-    GrammaticalPerson.Second.valueOf() +
-    GrammaticalNumber.Singular.valueOf() +
-    GrammaticalFormal.Informal.valueOf() +
-    GermanCase.Nominative.valueOf(),
+    GrammaticalPerson.Second.valueOf()
+    + GrammaticalNumber.Singular.valueOf()
+    + GrammaticalFormal.Informal.valueOf()
+    + GermanCase.Nominative.valueOf(),
   es:
-    GrammaticalPerson.Third.valueOf() +
-    GrammaticalNumber.Singular.valueOf() +
-    GermanCase.Nominative.valueOf() +
-    GrammaticalGender.Neuter.valueOf(),
-  wir: GrammaticalPerson.First.valueOf() + GrammaticalNumber.Plural.valueOf() + GermanCase.Nominative.valueOf(),
+    GrammaticalPerson.Third.valueOf()
+    + GrammaticalNumber.Singular.valueOf()
+    + GermanCase.Nominative.valueOf()
+    + GrammaticalGender.Neuter.valueOf(),
+  wir: GrammaticalPerson.First.valueOf() + GrammaticalNumber.Plural.valueOf()
+    + GermanCase.Nominative.valueOf(),
   ihr:
-    GrammaticalPerson.Second.valueOf() +
-    GrammaticalNumber.Plural.valueOf() +
-    GrammaticalFormal.Informal.valueOf() +
-    GermanCase.Nominative.valueOf(),
+    GrammaticalPerson.Second.valueOf()
+    + GrammaticalNumber.Plural.valueOf()
+    + GrammaticalFormal.Informal.valueOf()
+    + GermanCase.Nominative.valueOf(),
 };
