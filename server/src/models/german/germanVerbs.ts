@@ -18,15 +18,15 @@ const germanStemsDictionary = {
 
 export type DataObj = {
   en: string;
-  tags?: string[],
-  hilfsverb?: string,
-  partizip?: string,
-  strong?: [string: boolean] | boolean,
-  stems?: { [characterName: string]: string },
-  irregular?: { [key: string]: { [person: string]: string } },
-  'weak endings'?: boolean,
-  'drop ich/es pr\u00e4sens endings'?: boolean
-}
+  tags?: string[];
+  hilfsverb?: string;
+  partizip?: string;
+  strong?: [string: boolean] | boolean;
+  stems?: { [characterName: string]: string };
+  irregular?: { [key: string]: { [person: string]: string } };
+  'weak endings'?: boolean;
+  'drop ich/es pr\u00e4sens endings'?: boolean;
+};
 
 const createIrregular = (dataObj: DataObj) => {
   const objectKeys = Object.keys(dataObj.irregular);
@@ -97,7 +97,7 @@ export const createVerb = (_infinitive: string, dataObj: DataObj): GermanVerb =>
   return newVerb;
 };
 
-const processVerbs = (data: { [x: string]: DataObj; }) => {
+const processVerbs = (data: { [x: string]: DataObj }) => {
   const newJsonObj: JSON_DATA = {
     date: Date.now(),
   };
@@ -122,7 +122,7 @@ const writeJson = (newJsonObj: JSON_DATA) => {
 export function germanVerbData() {
   try {
     const fileContents = fs.readFileSync(path.resolve(__dirname, '../../', 'data/germanverbs.yaml'), 'utf8');
-    const data = yaml.load(fileContents) as { [x: string]: DataObj; };
+    const data = yaml.load(fileContents) as { [x: string]: DataObj };
     const processedVerbs = processVerbs(data);
     writeJson(processedVerbs);
     return processedVerbs;

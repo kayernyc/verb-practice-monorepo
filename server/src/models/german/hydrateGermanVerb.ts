@@ -1,9 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-import {
-  GermanTenses, GermanVerb, GermanVerbHydrated,
-} from './germanTypes';
+import { GermanTenses, GermanVerb, GermanVerbHydrated } from './germanTypes';
 import { germanVerbData, JSON_DATA } from './germanVerbs';
 import { firstVowelGroupRegex } from './germanConstants';
 import irregularPartizipConjugation from './hydrationFunctions/irregularPartizipConjugation';
@@ -29,14 +27,19 @@ export function kranton(stem: string): boolean {
   return false;
 }
 
-function duEsConjugation({ returnObject, duEsStem }: {
-  returnObject: GermanVerbHydrated,
-  duEsStem: string
+function duEsConjugation({
+  returnObject,
+  duEsStem,
+}: {
+  returnObject: GermanVerbHydrated;
+  duEsStem: string;
 }): [string, string] {
   if (!returnObject.präsens) {
-    throw "NO PRÄSENS"
+    throw new Error('NO PRÄSENS');
   }
-  const { präsens: { du, es } } = returnObject;
+  const {
+    präsens: { du, es },
+  } = returnObject;
 
   return [du.replace(firstVowelGroupRegex, `$1${duEsStem}$3`), es.replace(firstVowelGroupRegex, `$1${duEsStem}$3`)];
 }
@@ -73,13 +76,16 @@ function konjunktivConjugation(stem: string, k2präsens: string): { [key: string
   };
 }
 
-function createStandardConjugation({ returnObject, infinitive, infinitiveStem }:
-  {
-    returnObject: GermanVerbHydrated,
-    infinitive: string,
-    infinitiveStem: string
-  }): GermanVerbHydrated {
-  let newReturnObject: GermanVerbHydrated = { ...returnObject };
+function createStandardConjugation({
+  returnObject,
+  infinitive,
+  infinitiveStem,
+}: {
+  returnObject: GermanVerbHydrated;
+  infinitive: string;
+  infinitiveStem: string;
+}): GermanVerbHydrated {
+  const newReturnObject: GermanVerbHydrated = { ...returnObject };
 
   newReturnObject[GermanTenses.präsens] = {
     ich: `${infinitiveStem}e`,
@@ -142,10 +148,13 @@ function standardHydration(verbConfiguration: GermanVerb): GermanVerbHydrated {
 
       if (partizip || verbConfiguration.strong) {
         const config = {
-          stem: infinitiveStem, partizip, infinitive, weakEndings,
+          stem: infinitiveStem,
+          partizip,
+          infinitive,
+          weakEndings,
         };
 
-        if (!partizip && (präteritum && weakEndings)) {
+        if (!partizip && präteritum && weakEndings) {
           config.partizip = präteritum;
         }
         returnObject.partizip = irregularPartizipConjugation(config);
