@@ -1,7 +1,7 @@
 import { createVerb, DataObj } from './germanVerbs';
 
 describe('createVerb', () => {
-  it('populates fallen correctly', () => {
+  it('populates sein correctly', () => {
     const dataObj: DataObj = {
       en: 'to be',
       tags: ['hilfsverb'],
@@ -37,6 +37,7 @@ describe('createVerb', () => {
           1548: 'ist',
         },
       },
+      partizip: 'gewesen',
     };
     expect(result).toEqual(expected);
   });

@@ -5,7 +5,7 @@ module.exports = {
   },
   extends: [
     'airbnb-base',
-    'eslint:recommended',
+
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
   ],
@@ -14,7 +14,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 13,
     sourceType: 'module',
-    project: './tsconfig.json',
+    project: 'tsconfig.json',
     tsconfigRootDir: './',
   },
   plugins: ['@typescript-eslint', 'import'],
@@ -31,6 +31,7 @@ module.exports = {
       },
     ],
     'no-shadow': 'off',
+    'no-param-reassign': ['error', { props: false }],
     '@typescript-eslint/no-shadow': 'error',
     '@typescript-eslint/no-misused-promises': [
       'error',

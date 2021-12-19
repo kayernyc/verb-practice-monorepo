@@ -17,6 +17,9 @@ export enum GermanTenses {
   k2präteritum = 'k2präteritum',
 }
 
+export type GermanIrregularSet = { GermanPronounKeys?: string };
+export type GermanIrregularObject = { [key in GermanTenses]?: GermanIrregularSet };
+
 export enum GermanStems {
   duEs = 'duEs',
   präteritum = 'präteritum',
@@ -29,17 +32,6 @@ export type GermanVerbHydrated = {
   [key in GermanTenses]?: { [person: string]: string };
 } & {
   partizip: string;
-};
-
-export type GermanVerb = {
-  drop: boolean;
-  hilfsverb: string;
-  infinitive: string;
-  irregular?: { GermanTenses?: [GermanPronounKeys: string] };
-  languages: LanguageMap;
-  stems?: { [key in GermanStems]?: string };
-  strong?: [string: boolean] | boolean;
-  weakEndings?: boolean;
 };
 
 export type GermanIrregular = {
@@ -83,4 +75,16 @@ export const GermanPronounKeys: { [key: string]: number } = {
     + GrammaticalNumber.Plural.valueOf()
     + GrammaticalFormal.Informal.valueOf()
     + GermanCase.Nominative.valueOf(),
+};
+
+export type GermanVerb = {
+  drop: boolean;
+  hilfsverb: string;
+  infinitive: string;
+  irregular?: GermanIrregularObject;
+  languages: LanguageMap;
+  partizip?: string;
+  stems?: { [key in GermanStems]?: string };
+  strong?: [string: boolean] | boolean;
+  weakEndings?: boolean;
 };
