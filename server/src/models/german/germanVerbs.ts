@@ -3,18 +3,13 @@ import path from 'path';
 import yaml from 'js-yaml';
 
 import {
-  GermanStems, GermanTenses, GermanVerb, GermanPronounKeys, LanguageMap,
+  GermanVerb, LanguageMap,
 } from './germanTypes';
 
-export type JSON_DATA = { [keyName: string]: GermanVerb | number | undefined };
+import verbIsIrregular from './testFunctions/verbIsIrregular';
+import createIrregularVerbFeatures from './translateYtoJFunctions/createIrregularVerbFeatures';
 
-const germanStemsDictionary = {
-  'präsens du/es': 'duEs',
-  präteritum: 'präteritum',
-  partizip: 'partizip',
-  'präsens singular': 'präsensSingular',
-  k2präsens: 'k2präsens',
-};
+export type JSON_DATA = { [keyName: string]: GermanVerb | number | undefined };
 
 export type DataObj = {
   en: string;
@@ -28,70 +23,20 @@ export type DataObj = {
   'drop ich/es pr\u00e4sens endings'?: boolean;
 };
 
-const createIrregular = (dataObj: DataObj) => {
-  const objectKeys = Object.keys(dataObj.irregular);
-  const irregularObj: { GermanTenses?: [GermanPronounKeys: string] } = {};
-
-  objectKeys.forEach((key: string) => {
-    const newKey: GermanTenses = GermanTenses[key] as GermanTenses;
-    const newDataObj = dataObj.irregular[key];
-
-    if (newDataObj) {
-      irregularObj[newKey] = <{ GermanTenses?: [GermanPronounKeys: string] }>{};
-      const irregularRule: GermanTenses = irregularObj[newKey] as GermanTenses;
-      for (const pronounKey in newDataObj) {
-        if (Object.prototype.hasOwnProperty.call(newDataObj, pronounKey)) {
-          const pronoun: number = GermanPronounKeys[pronounKey];
-          irregularRule[pronoun.toString()] = newDataObj[pronounKey];
-        }
-      }
-
-      irregularObj[newKey] = irregularRule;
-    }
-  });
-
-  return irregularObj;
-};
-
-const createStems = (dataObj: DataObj) => {
-  const objectKeys = Object.keys(dataObj.stems);
-  const stemsObj: { [key in GermanStems]?: string } = {};
-
-  objectKeys.forEach((key: string) => {
-    const enumKey: GermanStems = germanStemsDictionary[key] as GermanStems;
-    stemsObj[enumKey] = dataObj.stems[key];
-  });
-
-  return stemsObj;
-};
-
 // let germanVerbsDictionary;
 export const createVerb = (_infinitive: string, dataObj: DataObj): GermanVerb => {
   const languages: LanguageMap = {};
   languages.en = dataObj.en;
 
-  const newVerb: GermanVerb = {
+  let newVerb: GermanVerb = {
     drop: dataObj['drop ich/es pr\u00e4sens endings'] || false,
     hilfsverb: dataObj.hilfsverb || 'haben',
     infinitive: _infinitive,
     languages,
   };
 
-  if (dataObj.strong || dataObj['weak endings'] || dataObj.irregular || dataObj.stems) {
-    newVerb.strong = true;
-  }
-
-  if (dataObj['weak endings']) {
-    newVerb.weakEndings = true;
-  }
-
-  if (dataObj.irregular) {
-    newVerb.irregular = createIrregular(dataObj);
-  }
-
-  if (dataObj.stems) {
-    newVerb.stems = createStems(dataObj);
-    newVerb.strong = true;
+  if (verbIsIrregular(dataObj)) {
+    newVerb = createIrregularVerbFeatures({ newVerb, dataObj });
   }
 
   return newVerb;
