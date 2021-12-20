@@ -176,3 +176,6 @@ describe('Fallen conjugates correctly', () => {
   });
 });
 /* eslint-enable @typescript-eslint/restrict-plus-operands */
+
+// eslint-disable-next-line max-len
+// node node_modules/jest/bin/jest.js -i src/models/german/hydrateGermanVerb.spec.ts -t "Fallen conjugates correctly"
