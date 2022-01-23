@@ -1,4 +1,3 @@
-// tslint:disable: no-console
 import { GermanVerb } from '../germanTypes';
 
 export default function generateStems({ infinitive }: GermanVerb): string {

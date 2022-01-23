@@ -1,59 +1,75 @@
-import { GermanTenses, GermanVerb, GermanVerbHydrated } from '@german/germanTypes';
+/* eslint-disable no-console */
+import {
+  GermanPronounKeys, GermanTenses, GermanVerb, GermanVerbHydrated,
+} from '@german/germanTypes';
 import irregularPartizipConjugation from './irregularPartizipConjugation';
 
-import { firstVowelGroupRegex } from '../germanConstants';
-
-function duEsConjugation({
-  returnObject,
-  duEsStem,
-}: {
-  returnObject: GermanVerbHydrated;
-  duEsStem: string;
-}): [string, string] {
-  if (!returnObject.präsens) {
-    throw new Error('NO PRÄSENS');
-  }
-  const {
-    präsens: { du, es },
-  } = returnObject;
-
-  return [du.replace(firstVowelGroupRegex, `$1${duEsStem}$3`), es.replace(firstVowelGroupRegex, `$1${duEsStem}$3`)];
-}
+import duEsConjugation from './hydrateDuEsConjugation';
+import modifiedStem from './modifiedStem';
 
 function präteritumConjugation(
-  { stem, präteritum }: { stem: string, präteritum: string },
+  { stem, präteritum, strong }: { stem: string, präteritum: string, strong: boolean },
 ): { [key: string]: string } {
-  let modifiableStem = stem;
-  if (präteritum) {
-    const regex = /\b([bcdfghjklmnpqrstvwxyzß]+)([a-zß]+)\b/;
-    modifiableStem = modifiableStem.replace(regex, `$1${präteritum}`);
-  }
-
+  const newStem = modifiedStem({ stem, irregularStem: präteritum });
   return {
-    ich: `${modifiableStem}`,
-    du: `${modifiableStem}st`,
-    es: `${modifiableStem}`,
-    wir: `${modifiableStem}en`,
-    ihr: `${modifiableStem}t`,
+    [GermanPronounKeys.ich]: `${newStem}${strong ? 'te' : ''}`,
+    [GermanPronounKeys.du]: `${newStem}${strong ? 'te' : ''}st`,
+    [GermanPronounKeys.es]: `${newStem}${strong ? 'te' : ''}`,
+    [GermanPronounKeys.wir]: `${newStem}${strong ? 't' : ''}en`,
+    [GermanPronounKeys.ihr]: `${newStem}${strong ? 'te' : ''}t`,
   };
 }
 
 function konjunktivConjugation(
   { stem, k2präsens }: { stem: string, k2präsens: string },
 ): { [key: string]: string } {
-  let modifiableStem = stem;
-  if (k2präsens) {
-    const regex = /\b([bcdfghjklmnpqrstvwxyzß]+)([a-zß]+)\b/;
-    modifiableStem = modifiableStem.replace(regex, `$1${k2präsens}`);
-  }
+  const newStem = modifiedStem({ stem, irregularStem: k2präsens });
 
   return {
-    ich: `${modifiableStem}e`,
-    du: `${modifiableStem}est`,
-    es: `${modifiableStem}e`,
-    wir: `${modifiableStem}en`,
-    ihr: `${modifiableStem}et`,
+    [GermanPronounKeys.ich]: `${newStem}e`,
+    [GermanPronounKeys.du]: `${newStem}est`,
+    [GermanPronounKeys.es]: `${newStem}e`,
+    [GermanPronounKeys.wir]: `${newStem}en`,
+    [GermanPronounKeys.ihr]: `${newStem}et`,
   };
+}
+
+type PartizipConjugationType = {
+  infinitiveStem: string;
+  infinitive: string;
+  partizip: string;
+  präteritum: string;
+  stemPartizip: string;
+  weakEndings: boolean;
+};
+
+function partizipConjugation(
+  {
+    infinitiveStem, infinitive, partizip, präteritum, stemPartizip, weakEndings,
+  }:
+    PartizipConjugationType,
+): string {
+  if (partizip) {
+    // even if there is a stem version, only accept the top level partizip
+    return partizip;
+  }
+
+  if (stemPartizip) {
+    const config = {
+      stem: infinitiveStem,
+      stemPartizip,
+      infinitive,
+      weakEndings,
+    };
+
+    if (!stemPartizip && präteritum && weakEndings) {
+      return präteritum;
+    }
+
+    return irregularPartizipConjugation(config);
+  }
+
+  return `ge${infinitive}`;
 }
 
 export default function hydrateIrregularStems(
@@ -73,8 +89,8 @@ export default function hydrateIrregularStems(
     });
 
     // tslint:disable no-string-literal
-    returnObject[GermanTenses.präsens].du = newDu;
-    returnObject[GermanTenses.präsens].es = newEs;
+    returnObject[GermanTenses.präsens][GermanPronounKeys.du] = newDu;
+    returnObject[GermanTenses.präsens][GermanPronounKeys.es] = newEs;
   }
 
   if (k2präsens) {
@@ -85,25 +101,13 @@ export default function hydrateIrregularStems(
 
   if (präteritum) {
     returnObject[GermanTenses.präteritum] = präteritumConjugation(
-      { stem: infinitiveStem, präteritum },
+      { stem: infinitiveStem, präteritum, strong: weakEndings },
     );
   }
 
-  // tslint:enable no-string-literal
-  if (stemPartizip || verbConfiguration.strong) {
-    const config = {
-      stem: infinitiveStem,
-      stemPartizip,
-      infinitive,
-      weakEndings,
-    };
-
-    returnObject.partizip = irregularPartizipConjugation(config);
-
-    if (!stemPartizip && präteritum && weakEndings) {
-      config.stemPartizip = präteritum;
-    }
-  }
+  returnObject.partizip = partizipConjugation({
+    infinitiveStem, infinitive, partizip, präteritum, stemPartizip, weakEndings,
+  });
 
   return returnObject;
 }

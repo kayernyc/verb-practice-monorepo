@@ -1,11 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 
-import { GermanTenses, GermanVerb, GermanVerbHydrated } from './germanTypes';
+import {
+  GermanPronounKeys, GermanTenses, GermanVerb, GermanVerbHydrated,
+} from './germanTypes';
 import { germanVerbData, JSON_DATA } from './germanVerbs';
 import hydrateIrregularStems from './hydrationFunctions/hydrateIrregularStems';
-
-// tslint:disable: no-console
 
 function importJsonData(): JSON_DATA {
   try {
@@ -39,27 +39,27 @@ function createStandardConjugation({
   const newReturnObject: GermanVerbHydrated = { ...returnObject };
 
   newReturnObject[GermanTenses.präsens] = {
-    ich: `${infinitiveStem}e`,
-    du: `${infinitiveStem}st`,
-    es: `${infinitiveStem}t`,
-    wir: infinitive,
-    ihr: `${infinitiveStem}t`,
+    [GermanPronounKeys.ich]: `${infinitiveStem}e`,
+    [GermanPronounKeys.du]: `${infinitiveStem}st`,
+    [GermanPronounKeys.es]: `${infinitiveStem}t`,
+    [GermanPronounKeys.wir]: infinitive,
+    [GermanPronounKeys.ihr]: `${infinitiveStem}t`,
   };
 
   newReturnObject[GermanTenses.konjunktiv] = {
-    ich: `${infinitiveStem}e`,
-    du: `${infinitiveStem}est`,
-    es: `${infinitiveStem}e`,
-    wir: infinitive,
-    ihr: `${infinitiveStem}et`,
+    [GermanPronounKeys.ich]: `${infinitiveStem}e`,
+    [GermanPronounKeys.du]: `${infinitiveStem}est`,
+    [GermanPronounKeys.es]: `${infinitiveStem}e`,
+    [GermanPronounKeys.wir]: infinitive,
+    [GermanPronounKeys.ihr]: `${infinitiveStem}et`,
   };
 
   newReturnObject[GermanTenses.präteritum] = {
-    ich: `${infinitiveStem}te`,
-    du: `${infinitiveStem}test`,
-    es: `${infinitiveStem}te`,
-    wir: `${infinitiveStem}ten`,
-    ihr: `${infinitiveStem}tet`,
+    [GermanPronounKeys.ich]: `${infinitiveStem}te`,
+    [GermanPronounKeys.du]: `${infinitiveStem}test`,
+    [GermanPronounKeys.es]: `${infinitiveStem}te`,
+    [GermanPronounKeys.wir]: `${infinitiveStem}ten`,
+    [GermanPronounKeys.ihr]: `${infinitiveStem}tet`,
   };
 
   return newReturnObject;
@@ -81,8 +81,6 @@ function addStrongFeatures(
   if (stems) {
     hydrateIrregularStems({ infinitiveStem, returnObject, verbConfiguration });
   }
-
-  console.log(returnObject, verbConfiguration);
 }
 
 function standardHydration(verbConfiguration: GermanVerb): GermanVerbHydrated {

@@ -1,4 +1,4 @@
-import regularPartizipConjugation from './regularPartizipConjugation';
+import regularPartizipConjugation from '../regularPartizipConjugation';
 
 describe('Regular Partizip Conjugation', () => {
   it('conjugates the partizip of lernen correctly.', () => {

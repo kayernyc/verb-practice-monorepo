@@ -35,6 +35,13 @@ describe('modifies stems correctly', () => {
 
     expect(result).toEqual(expected);
   });
+
+  it('replaces the second consonants irregular stem is consonants with no vowels', () => {
+    const result = modifiedStem({ stem: 'blot', irregularStem: 'p' });
+    const expected = 'blop';
+
+    expect(result).toEqual(expected);
+  });
 });
 
 // eslint-disable-next-line max-len

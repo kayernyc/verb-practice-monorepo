@@ -1,4 +1,4 @@
-import { GermanVerb } from './germanTypes';
+import { GermanVerb, GermanPronounKeys } from './germanTypes';
 import { hydrateFromInfinitive, hydrateVerb, kranton } from './hydrateGermanVerb';
 
 /* eslint-disable @typescript-eslint/restrict-plus-operands */
@@ -51,8 +51,11 @@ describe('hydrateFromInfinitive returns correctly', () => {
       languages: { en: 'to mean' },
       strong: false,
     },
-    'ein­at­men': {
-      drop: false, hilfsverb: 'haben', infinitive: 'ein­at­men', languages: { en: 'to be meaningless' },
+    einatmen: {
+      drop: false,
+      hilfsverb: 'haben',
+      infinitive: 'einatmen',
+      languages: { en: 'to be meaningless' },
     },
   };
 
@@ -71,25 +74,25 @@ describe('Weak verb conjugates correctly', () => {
   const expected = {
     partizip: 'geschaut',
     präsens: {
-      ich: 'schaue',
-      du: 'schaust',
-      es: 'schaut',
-      wir: 'schauen',
-      ihr: 'schaut',
+      [GermanPronounKeys.ich]: 'schaue',
+      [GermanPronounKeys.du]: 'schaust',
+      [GermanPronounKeys.es]: 'schaut',
+      [GermanPronounKeys.wir]: 'schauen',
+      [GermanPronounKeys.ihr]: 'schaut',
     },
     präteritum: {
-      ich: 'schaute',
-      du: 'schautest',
-      es: 'schaute',
-      wir: 'schauten',
-      ihr: 'schautet',
+      [GermanPronounKeys.ich]: 'schaute',
+      [GermanPronounKeys.du]: 'schautest',
+      [GermanPronounKeys.es]: 'schaute',
+      [GermanPronounKeys.wir]: 'schauten',
+      [GermanPronounKeys.ihr]: 'schautet',
     },
     konjunktiv: {
-      ich: 'schaue',
-      du: 'schauest',
-      es: 'schaue',
-      wir: 'schauen',
-      ihr: 'schauet',
+      [GermanPronounKeys.ich]: 'schaue',
+      [GermanPronounKeys.du]: 'schauest',
+      [GermanPronounKeys.es]: 'schaue',
+      [GermanPronounKeys.wir]: 'schauen',
+      [GermanPronounKeys.ihr]: 'schauet',
     },
   };
   const config: GermanVerb = {
@@ -110,25 +113,25 @@ describe('Fallen conjugates correctly', () => {
   const expected = {
     partizip: 'gefallen',
     präsens: {
-      ich: 'falle',
-      du: 'fällst',
-      es: 'fällt',
-      wir: 'fallen',
-      ihr: 'fallt',
+      [GermanPronounKeys.ich]: 'falle',
+      [GermanPronounKeys.du]: 'fällst',
+      [GermanPronounKeys.es]: 'fällt',
+      [GermanPronounKeys.wir]: 'fallen',
+      [GermanPronounKeys.ihr]: 'fallt',
     },
     präteritum: {
-      ich: 'fiel',
-      du: 'fielst',
-      es: 'fiel',
-      wir: 'fielen',
-      ihr: 'fielt',
+      [GermanPronounKeys.ich]: 'fiel',
+      [GermanPronounKeys.du]: 'fielst',
+      [GermanPronounKeys.es]: 'fiel',
+      [GermanPronounKeys.wir]: 'fielen',
+      [GermanPronounKeys.ihr]: 'fielt',
     },
     konjunktiv: {
-      ich: 'fiele',
-      du: 'fielest',
-      es: 'fiele',
-      wir: 'fielen',
-      ihr: 'fielet',
+      [GermanPronounKeys.ich]: 'fiele',
+      [GermanPronounKeys.du]: 'fielest',
+      [GermanPronounKeys.es]: 'fiele',
+      [GermanPronounKeys.wir]: 'fielen',
+      [GermanPronounKeys.ihr]: 'fielet',
     },
   };
 
@@ -178,4 +181,4 @@ describe('Fallen conjugates correctly', () => {
 /* eslint-enable @typescript-eslint/restrict-plus-operands */
 
 // eslint-disable-next-line max-len
-// node node_modules/jest/bin/jest.js -i src/models/german/hydrateGermanVerb.spec.ts -t "Fallen conjugates correctly"
+// node node_modules/jest/bin/jest.js -i src/models/german/hydrateGermanVerb.spec.ts -t "Fallen conjugates partizip correctly from minimal config"
