@@ -1,5 +1,5 @@
-import verbIsIrregular from './verbIsIrregular';
-import { DataObj } from '../germanVerbs';
+import verbIsIrregular from '../verbIsIrregular';
+import { DataObj } from '../../germanVerbs';
 
 describe('verbIsIrregular correctly determines the state of the verb', () => {
   it('flags fallen as not irregular', () => {
@@ -32,4 +32,4 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
 });
 
 // eslint-disable-next-line max-len
-// node node_modules/jest/bin/jest.js -i src/models/german/testFunctions/verbIsIrregular.spec.ts -t "verbIsIrregular correctly determines the state of the verb"
+// node node_modules/jest/bin/jest.js -i server/src/models/german/testFunctions/spec/verbIsIrregular.spec.ts -t "verbIsIrregular correctly determines the state of the verb"

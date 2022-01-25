@@ -17,5 +17,12 @@
   },
   "lib": ["es6"],
   "exclude": ["node_modules", "coverage", "**.spec.ts"],
-  "include": ["src"]
+  "include": ["src"],
+  "max-line-length": [
+    true,
+   {
+       "limit": 100,
+       "ignore-pattern": "^import |^export {(.*?)}"
+   }
+],
 }

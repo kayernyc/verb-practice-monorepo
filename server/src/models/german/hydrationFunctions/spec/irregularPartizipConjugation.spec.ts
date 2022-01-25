@@ -1,5 +1,5 @@
-import irregularPartizipConjugation from './irregularPartizipConjugation';
-import generateStems from './generateStems';
+import irregularPartizipConjugation from '../irregularPartizipConjugation';
+import generateStems from '../generateStems';
 
 describe('irregularPartizipConjugation handles irregulars', () => {
   it('conjugates schwimmen partizip correctly', () => {
