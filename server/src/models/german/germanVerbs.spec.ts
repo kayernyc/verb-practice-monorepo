@@ -100,3 +100,6 @@ describe('createVerb', () => {
     expect(result).toEqual(expected);
   });
 });
+
+// eslint-disable-next-line max-len
+// node node_modules/jest/bin/jest.js -i src/models/german/germanVerbs.spec.ts
