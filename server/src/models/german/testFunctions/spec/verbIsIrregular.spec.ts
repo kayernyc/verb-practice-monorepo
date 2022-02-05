@@ -1,5 +1,5 @@
+import { DataObj } from '@german/germanVerbs';
 import verbIsIrregular from '../verbIsIrregular';
-import { DataObj } from '../../germanVerbs';
 
 describe('verbIsIrregular correctly determines the state of the verb', () => {
   it('flags fallen as not irregular', () => {

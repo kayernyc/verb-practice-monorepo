@@ -5,7 +5,6 @@ module.exports = {
   },
   extends: [
     'airbnb-base',
-
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
   ],
@@ -43,6 +42,10 @@ module.exports = {
   },
   settings: {
     'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        moduleDirectory: ['node_modules', 'src/'],
+      },
       typescript: {},
     },
   },

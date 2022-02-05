@@ -1,5 +1,5 @@
+import { GermanVerb } from '@german/germanTypes';
 import generateStems from '../generateStems';
-import { GermanVerb } from '../../germanTypes';
 
 describe('generateStems creates the correct stem', () => {
   const testConfig: { config: GermanVerb; expected: string }[] = [
