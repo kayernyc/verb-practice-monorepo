@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import fs from 'fs';
 import path from 'path';
 
@@ -69,14 +70,8 @@ function addStrongFeatures(
   { infinitiveStem, returnObject, verbConfiguration }:
     { infinitiveStem: string, returnObject: GermanVerbHydrated, verbConfiguration: GermanVerb },
 ) {
-  const {
-    infinitive,
-    irregular,
-    languages,
-    partizip,
-    stems,
-    weakEndings,
-  } = verbConfiguration;
+  console.log({ returnObject });
+  const { stems } = verbConfiguration;
 
   if (stems) {
     hydrateIrregularStems({ infinitiveStem, returnObject, verbConfiguration });

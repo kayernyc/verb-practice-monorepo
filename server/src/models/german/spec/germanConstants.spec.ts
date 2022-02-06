@@ -1,8 +1,8 @@
 import {
   GrammaticalFormal, GrammaticalPerson, GrammaticalGender, GrammaticalNumber,
-} from '../languageTypes';
-import { GermanPronoun } from './germanConstants';
-import { GermanCase } from './germanTypes';
+} from '../../languageTypes';
+import { GermanPronoun } from '../germanConstants';
+import { GermanCase } from '../germanTypes';
 
 /* eslint-disable */
 const pronounArray: [string, number][] = [

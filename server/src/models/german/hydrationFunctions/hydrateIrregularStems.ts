@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import {
   GermanPronounKeys, GermanTenses, GermanVerb, GermanVerbHydrated,
 } from '@german/germanTypes';

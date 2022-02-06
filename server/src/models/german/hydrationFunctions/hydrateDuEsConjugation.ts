@@ -1,5 +1,7 @@
 import { GermanPronounKeys, GermanVerbHydrated } from '@german/germanTypes';
-import { firstVowelGroupRegex } from '../germanConstants';
+
+const irregularStemRegex = /(?<firstConst>[bcdfghjklmnpqrstvwxyzß]*)(?<vowelGroup>[aeiouäöü]*)(?<secondConst>[bcdfghjklmnpqrstvwxyzß]*)/;
+const regularStemRegex = /(?<firstConst>[bcdfghjklmnpqrstvwxyzß]*)(?<vowelGroup>[aeiouäöü]*)(?<secondConst>[a-zß]*)/;
 
 export default function duEsConjugation({
   returnObject,
@@ -9,12 +11,40 @@ export default function duEsConjugation({
   duEsStem: string;
 }): [string, string] {
   if (!returnObject.präsens) {
-    throw new Error('NO PRÄSENS');
+    throw Error('NO PRÄSENS');
   }
 
   const {
     präsens: { [GermanPronounKeys.du]: du, [GermanPronounKeys.es]: es },
   } = returnObject;
 
-  return [du.replace(firstVowelGroupRegex, `$1${duEsStem}$3`), es.replace(firstVowelGroupRegex, `$1${duEsStem}$3`)];
+  const {
+    groups: {
+      firstConst: irregularStemFirstConst,
+      vowelGroup: irregularStemVowelGroup,
+      secondConst: irregularStemSecondGroup,
+    },
+  } = irregularStemRegex.exec(duEsStem);
+
+  function processStem({ regularStem, ending }: { regularStem: string, ending: string }) {
+    const {
+      groups: {
+        firstConst,
+        vowelGroup,
+        secondConst,
+      },
+    } = regularStemRegex.exec(regularStem);
+
+    if (irregularStemFirstConst && !irregularStemSecondGroup) {
+      return `${irregularStemFirstConst}${irregularStemVowelGroup || vowelGroup}${ending}`;
+    }
+
+    if (!irregularStemFirstConst && irregularStemSecondGroup) {
+      return `${firstConst}${irregularStemVowelGroup}${irregularStemSecondGroup}${ending}`;
+    }
+
+    return `${irregularStemFirstConst || firstConst}${irregularStemVowelGroup || vowelGroup}${irregularStemSecondGroup || secondConst}`;
+  }
+
+  return [processStem({ regularStem: du, ending: 'st' }), processStem({ regularStem: es, ending: 't' })];
 }
