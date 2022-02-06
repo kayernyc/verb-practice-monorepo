@@ -69,14 +69,7 @@ function addStrongFeatures(
   { infinitiveStem, returnObject, verbConfiguration }:
     { infinitiveStem: string, returnObject: GermanVerbHydrated, verbConfiguration: GermanVerb },
 ) {
-  const {
-    infinitive,
-    irregular,
-    languages,
-    partizip,
-    stems,
-    weakEndings,
-  } = verbConfiguration;
+  const { stems } = verbConfiguration;
 
   if (stems) {
     hydrateIrregularStems({ infinitiveStem, returnObject, verbConfiguration });

@@ -1,4 +1,4 @@
-import { createVerb, DataObj } from './germanVerbs';
+import { createVerb, DataObj } from '../germanVerbs';
 
 describe('createVerb', () => {
   it('populates sein correctly', () => {

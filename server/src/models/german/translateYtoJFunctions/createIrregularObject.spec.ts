@@ -1,4 +1,4 @@
-import createIrregularObject from './createIrregularObjet';
+import createIrregularObject from './createIrregularObject';
 import { DataObj } from '../germanVerbs';
 
 describe('createIrregularObject correctly modifies the object', () => {
