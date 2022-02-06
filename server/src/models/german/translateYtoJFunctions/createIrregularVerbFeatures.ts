@@ -1,6 +1,6 @@
 import { GermanVerb } from '@german/germanTypes';
 import { DataObj } from '../germanVerbs';
-import createIrregularObject from './createIrregularObjet';
+import createIrregularObject from './createIrregularObject';
 import createStems from './createStems';
 
 export default function createIrregularVerbFeatures(
