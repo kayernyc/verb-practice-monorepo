@@ -101,7 +101,6 @@ describe('hydrate irregular duEs creates correct du and es for präsens', () => 
     expect(result).toEqual(['stiehlst', 'stiehlt']);
   });
 
-
   it('throws if no präsens is present', () => {
     // this is a semi-processed return object
     const returnObject = {
