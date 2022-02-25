@@ -1,0 +1,41 @@
+---
+// Component imports and setup JavaScript go here!
+import { bob } from '../app/index.js';
+const thisWorks: string = bob();
+console.log('This runs at build-time, is visible in the CLI output', thisWorks);
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Verb Practice</title>
+		<style lang="scss">
+			.settings-header {
+				margin: 0 auto;
+				max-width: 15em;
+
+				button {
+					background-color: black;
+					border: none;
+					color: #efdfdf;
+					margin: .25em 0;
+					padding: .75em;
+				}
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href='/src/css/index.scss' />
+	</head>
+
+	<body>
+		<h1>Welcome to Verb Practice {thisWorks}</h1>
+		<section class="settings-header">
+			<h2 >settings</h2>
+
+			<button>english to german</button>
+			<button>german to english</button>
+			<option-select>bob</option-select>
+		</section>
+	</body>
+
+</html>

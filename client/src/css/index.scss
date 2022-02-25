@@ -1,0 +1,25 @@
+@import url(reset.scss);
+
+@font-face {
+  font-family: 'CooperHewitt-Heavy';
+  src: url('/fonts/CooperHewitt-Heavy.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'CooperHewitt-Light';
+  src: url('/fonts/CooperHewitt-Light.woff') format('woff');
+}
+
+html, body {
+  font-family: 'CooperHewitt-Light', serif;
+}
+
+h1, h2, h3, h4, h5 {
+  border-bottom: black 1px solid;
+  color: #221212;
+  font-family:'CooperHewitt-Heavy', serif;
+}
+
+h1 {
+  text-transform: uppercase;
+}
