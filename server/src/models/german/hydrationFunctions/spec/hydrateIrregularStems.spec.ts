@@ -7,11 +7,14 @@ import {
   habenGermanVerb,
   habenReturnObject,
   habenPräteritumExpected,
-} from './specConstants';
+  werdenGermanVerb,
+  werdenReturnObject,
+  werdenPräteritumExpected,
+} from '../../specConstants';
 
 describe('hydrateIrregularStems creates correct präteritum stem objects', () => {
   it('creates correct partizip for sein', () => {
-    const result = hydrateIrregularStems({ infinitiveStem: 'sein', returnObject: seinReturnObject, verbConfiguration: seinGermanVerb });
+    const result = hydrateIrregularStems({ infinitiveStem: 'war', returnObject: seinReturnObject, verbConfiguration: seinGermanVerb });
     const präteritumResult = result.präteritum || {};
     expect(präteritumResult).toEqual(seinPräteritumExpected);
   });
@@ -20,6 +23,13 @@ describe('hydrateIrregularStems creates correct präteritum stem objects', () =>
     const result = hydrateIrregularStems({ infinitiveStem: 'hab', returnObject: habenReturnObject, verbConfiguration: habenGermanVerb });
     const präteritumResult = result.präteritum || {};
     expect(präteritumResult).toEqual(habenPräteritumExpected);
+  });
+
+  it('creates correct partizip for werden', () => {
+    const result = hydrateIrregularStems({ infinitiveStem: 'werd', returnObject: werdenReturnObject, verbConfiguration: werdenGermanVerb });
+    const präteritumResult = result.präteritum || {};
+
+    expect(präteritumResult).toEqual(werdenPräteritumExpected);
   });
 });
 

@@ -17,7 +17,6 @@ describe('irregularPartizipConjugation handles irregulars', () => {
       stem,
       partizip: 'o',
       infinitive: 'schwimmen',
-      weakEndings: true,
     });
     expect(partizip).toEqual('geschwommen');
   });
@@ -68,6 +67,7 @@ describe('irregularPartizipConjugation handles irregulars', () => {
     const config = {
       drop: false,
       hilfsverb: 'haben',
+      weakEndings: true,
       infinitive: 'brennen',
       languages: { en: 'to burn, to shine, to distil' },
       strong: true,
@@ -75,7 +75,7 @@ describe('irregularPartizipConjugation handles irregulars', () => {
     };
     const stem = generateStems(config);
 
-    const partizip = irregularPartizipConjugation({ stem, partizip: 'a', infinitive: 'brennen' });
+    const partizip = irregularPartizipConjugation({ stem, partizip: 'a', infinitive: 'brennen', weakEndings: true });
     expect(partizip).toEqual('gebrannt');
   });
 
@@ -92,3 +92,6 @@ describe('irregularPartizipConjugation handles irregulars', () => {
     expect(partizip).toEqual('verkauft');
   });
 });
+
+// eslint-disable-next-line max-len
+// node node_modules/jest/bin/jest.js -i src/models/german/hydrationFunctions/spec/irregularPartizipConjugation.spec.ts

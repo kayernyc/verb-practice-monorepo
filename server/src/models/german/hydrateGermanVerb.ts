@@ -38,12 +38,14 @@ function createStandardConjugation({
 }): GermanVerbHydrated {
   const newReturnObject: GermanVerbHydrated = { ...returnObject };
 
+  const defaultEnding = kranton(infinitiveStem) ? 'e' : '';
+
   newReturnObject[GermanTenses.präsens] = {
     [GermanPronounKeys.ich]: `${infinitiveStem}e`,
-    [GermanPronounKeys.du]: `${infinitiveStem}st`,
-    [GermanPronounKeys.es]: `${infinitiveStem}t`,
+    [GermanPronounKeys.du]: `${infinitiveStem}${defaultEnding}st`,
+    [GermanPronounKeys.es]: `${infinitiveStem}${defaultEnding}t`,
     [GermanPronounKeys.wir]: infinitive,
-    [GermanPronounKeys.ihr]: `${infinitiveStem}t`,
+    [GermanPronounKeys.ihr]: `${infinitiveStem}${defaultEnding}t`,
   };
 
   newReturnObject[GermanTenses.konjunktiv] = {
@@ -69,10 +71,20 @@ function addStrongFeatures(
   { infinitiveStem, returnObject, verbConfiguration }:
     { infinitiveStem: string, returnObject: GermanVerbHydrated, verbConfiguration: GermanVerb },
 ) {
-  const { stems } = verbConfiguration;
+  const { irregular, stems } = verbConfiguration;
 
   if (stems) {
     hydrateIrregularStems({ infinitiveStem, returnObject, verbConfiguration });
+  }
+
+  if (irregular) {
+    console.warn('----------IRREGULAR!!!!', { irregular });
+
+    Object.keys(irregular).forEach((key: string) => {
+      console.log('--- return object', returnObject[key], '---irreg', irregular[key]);
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      returnObject[key] = { ...returnObject[key], ...irregular[key] };
+    });
   }
 }
 

@@ -15,7 +15,7 @@ describe('haben is correctly conjugated', () => {
   };
 
   const returnObject = {
-    partizip: 'gehabt',
+    partizip: 'habt',
     präsens: {
       1033: 'habe',
       1041: 'haben',
@@ -43,7 +43,7 @@ describe('haben is correctly conjugated', () => {
     konjunktiv: {
       1033: 'habe', 1041: 'haben', 1098: 'habest', 1106: 'habet', 1548: 'habe',
     },
-    partizip: 'haben',
+    partizip: 'habt',
     präsens: {
       1033: 'habe', 1041: 'haben', 1098: 'hast', 1106: 'habt', 1548: 'hat',
     },

@@ -39,6 +39,11 @@ describe('kranton returns false', () => {
     const result = kranton('bobb');
     expect(result).toBeFalsy();
   });
+
+  it('returns false for a stem ending in r', () => {
+    const result = kranton('war');
+    expect(result).toBeFalsy();
+  });
 });
 
 describe('hydrateFromInfinitive returns correctly', () => {
@@ -181,4 +186,4 @@ describe('Fallen conjugates correctly', () => {
 /* eslint-enable @typescript-eslint/restrict-plus-operands */
 
 // eslint-disable-next-line max-len
-// node node_modules/jest/bin/jest.js -i src/models/german/hydrateGermanVerb.spec.ts -t "Fallen conjugates partizip correctly from minimal config"
+// node node_modules/jest/bin/jest.js -i src/models/german/spec/hydrateGermanVerb.spec.ts -t "Fallen conjugates partizip correctly from minimal config"

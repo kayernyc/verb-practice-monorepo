@@ -97,3 +97,56 @@ export const habenPräteritumExpected = {
   [GermanPronounKeys.ihr]: 'hattet',
   [GermanPronounKeys.es]: 'hatte',
 };
+
+export const werdenGermanVerb: GermanVerb = {
+  drop: false,
+  hilfsverb: 'sein',
+  infinitive: 'werden',
+  irregular: {
+    [GermanTenses.präsens]: {
+      [GermanPronounKeys.du]: 'wirst',
+      [GermanPronounKeys.es]: 'wird',
+    },
+    [GermanTenses.präteritum]: {
+      [GermanPronounKeys.ich]: 'wurde',
+      [GermanPronounKeys.es]: 'wurde',
+    },
+  },
+  languages: { en: 'to become, to grow' },
+  stems: { [GermanStems.präteritum]: 'u', [GermanStems.partizip]: 'o' },
+  strong: true,
+  weakEndings: false,
+};
+
+export const werdenReturnObject = {
+  partizip: 'geworden',
+  präsens: {
+    [GermanPronounKeys.ich]: 'werde',
+    [GermanPronounKeys.wir]: 'werden',
+    [GermanPronounKeys.du]: 'wirst',
+    [GermanPronounKeys.ihr]: 'werdet',
+    [GermanPronounKeys.es]: 'wird',
+  },
+  präteritum: {
+    [GermanPronounKeys.ich]: 'wurde',
+    [GermanPronounKeys.wir]: 'wurden',
+    [GermanPronounKeys.du]: 'wurdest',
+    [GermanPronounKeys.ihr]: 'wurdet',
+    [GermanPronounKeys.es]: 'wurde',
+  },
+  konjunktiv: {
+    [GermanPronounKeys.ich]: 'werde',
+    [GermanPronounKeys.wir]: 'werden',
+    [GermanPronounKeys.du]: 'werdest',
+    [GermanPronounKeys.ihr]: 'werdet',
+    [GermanPronounKeys.es]: 'werde',
+  },
+};
+
+export const werdenPräteritumExpected = {
+  [GermanPronounKeys.ich]: 'wurde',
+  [GermanPronounKeys.wir]: 'wurden',
+  [GermanPronounKeys.du]: 'wurdest',
+  [GermanPronounKeys.ihr]: 'wurdet',
+  [GermanPronounKeys.es]: 'wurde',
+};

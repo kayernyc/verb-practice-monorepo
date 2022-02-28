@@ -87,7 +87,6 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
     expect(result).toEqual(expected);
   });
 
-
   it('populates sollen correctly', () => {
     const english = 'to be expected to';
 
@@ -114,6 +113,52 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
     };
 
     const result = createIrregularVerbFeatures({ newVerb, dataObj: sollenObj });
+    expect(result).toEqual(expected);
+  });
+
+  it('populates werden correctly', () => {
+    const english = 'to become, to grow';
+
+    const newVerb: GermanVerb = {
+      drop: false,
+      hilfsverb: 'sein',
+      infinitive: 'werden',
+      languages: { en: english },
+    };
+
+    const verbObj: DataObj = {
+      en: english,
+      tags: ['hilfsverb'],
+      hilfsverb: 'sein',
+      partizip: 'o',
+      strong: true,
+      stems: { präteritum: 'u', partizip: 'o' },
+      irregular: {
+        präsens: {
+          du: 'wirst',
+          es: 'wird',
+        },
+      },
+    };
+
+    const expected: GermanVerb = {
+      drop: false,
+      hilfsverb: 'sein',
+      infinitive: 'werden',
+      languages: { en: english },
+      partizip: 'o',
+      strong: true,
+      stems: { partizip: 'o', präteritum: 'u' },
+      irregular: {
+        [GermanTenses.präsens]: {
+          [GermanPronounKeys.du]: 'wirst',
+          [GermanPronounKeys.es]: 'wird',
+        },
+      }
+      ,
+    };
+
+    const result = createIrregularVerbFeatures({ newVerb, dataObj: verbObj });
     expect(result).toEqual(expected);
   });
 });
