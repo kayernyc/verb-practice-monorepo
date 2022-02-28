@@ -1,21 +1,26 @@
+/* eslint-disable no-console */
 import {
   GermanPronounKeys, GermanTenses, GermanVerb, GermanVerbHydrated,
 } from '@german/germanTypes';
 import irregularPartizipConjugation from './irregularPartizipConjugation';
+import { kranton } from '../hydrateGermanVerb';
 
 import duEsConjugation from './hydrateDuEsConjugation';
 import modifiedStem from './modifiedStem';
 
 function präteritumConjugation(
-  { stem, präteritum, strong }: { stem: string, präteritum: string, strong: boolean },
+  { stem, präteritum, weakEndings }: { stem: string, präteritum: string, weakEndings: boolean },
 ): { [key: string]: string } {
   const newStem = modifiedStem({ stem, irregularStem: präteritum });
+  // is it Kranton?
+  const defaultEnding = kranton(stem) ? 'e' : '';
+
   return {
-    [GermanPronounKeys.ich]: `${newStem}${strong ? 'te' : ''}`,
-    [GermanPronounKeys.du]: `${newStem}${strong ? 'te' : ''}st`,
-    [GermanPronounKeys.es]: `${newStem}${strong ? 'te' : ''}`,
-    [GermanPronounKeys.wir]: `${newStem}${strong ? 't' : ''}en`,
-    [GermanPronounKeys.ihr]: `${newStem}${strong ? 'te' : ''}t`,
+    [GermanPronounKeys.ich]: `${newStem}${weakEndings ? 'te' : defaultEnding}`,
+    [GermanPronounKeys.du]: `${newStem}${weakEndings ? 'te' : defaultEnding}st`,
+    [GermanPronounKeys.es]: `${newStem}${weakEndings ? 'te' : defaultEnding}`,
+    [GermanPronounKeys.wir]: `${newStem}${weakEndings ? 't' : ''}en`,
+    [GermanPronounKeys.ihr]: `${newStem}${weakEndings ? 'te' : defaultEnding}t`,
   };
 }
 
@@ -56,7 +61,7 @@ function partizipConjugation(
   if (stemPartizip) {
     const config = {
       stem: infinitiveStem,
-      stemPartizip,
+      partizip: stemPartizip,
       infinitive,
       weakEndings,
     };
@@ -100,7 +105,7 @@ export default function hydrateIrregularStems(
 
   if (präteritum) {
     returnObject[GermanTenses.präteritum] = präteritumConjugation(
-      { stem: infinitiveStem, präteritum, strong: weakEndings },
+      { stem: infinitiveStem, präteritum, weakEndings },
     );
   }
 
