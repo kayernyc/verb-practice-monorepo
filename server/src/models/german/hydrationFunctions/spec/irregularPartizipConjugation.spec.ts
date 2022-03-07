@@ -2,6 +2,28 @@ import irregularPartizipConjugation from '../irregularPartizipConjugation';
 import generateStems from '../generateStems';
 
 describe('irregularPartizipConjugation handles irregulars', () => {
+  it('conjugates haben partizip correctly', () => {
+    const config = {
+      drop: false,
+      weekEndings: true,
+      hilfsverb: 'haben',
+      infinitive: 'haben',
+      languages: { en: 'to have' },
+      stems: { duEs: 'ha', präteritum: 't', partizip: 'b' },
+      strong: true,
+    };
+    const stem = generateStems(config);
+    // infinitiveStem, infinitive, partizip, präteritum, stemPartizip, weakEndings,
+    const partizip = irregularPartizipConjugation({
+      stem,
+      infinitive: 'haben',
+      präteritum: 't',
+      partizip: 'b',
+      weakEndings: true,
+    });
+    expect(partizip).toEqual('gehabt');
+  });
+
   it('conjugates schwimmen partizip correctly', () => {
     const config = {
       drop: false,

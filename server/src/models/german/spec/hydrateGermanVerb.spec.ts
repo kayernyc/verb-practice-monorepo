@@ -1,4 +1,4 @@
-import { GermanVerb, GermanPronounKeys } from '../germanTypes';
+import { GermanVerb, GermanPronounKeys, GermanTenses } from '../germanTypes';
 import { hydrateFromInfinitive, hydrateVerb, kranton } from '../hydrateGermanVerb';
 
 /* eslint-disable @typescript-eslint/restrict-plus-operands */
@@ -78,26 +78,33 @@ describe('hydrateFromInfinitive returns correctly', () => {
 describe('Weak verb conjugates correctly', () => {
   const expected = {
     partizip: 'geschaut',
-    präsens: {
+    [GermanTenses.präsens]: {
       [GermanPronounKeys.ich]: 'schaue',
       [GermanPronounKeys.du]: 'schaust',
       [GermanPronounKeys.es]: 'schaut',
       [GermanPronounKeys.wir]: 'schauen',
       [GermanPronounKeys.ihr]: 'schaut',
     },
-    präteritum: {
+    [GermanTenses.präteritum]: {
       [GermanPronounKeys.ich]: 'schaute',
       [GermanPronounKeys.du]: 'schautest',
       [GermanPronounKeys.es]: 'schaute',
       [GermanPronounKeys.wir]: 'schauten',
       [GermanPronounKeys.ihr]: 'schautet',
     },
-    konjunktiv: {
+    [GermanTenses.konjunktiv]: {
       [GermanPronounKeys.ich]: 'schaue',
       [GermanPronounKeys.du]: 'schauest',
       [GermanPronounKeys.es]: 'schaue',
       [GermanPronounKeys.wir]: 'schauen',
       [GermanPronounKeys.ihr]: 'schauet',
+    },
+    [GermanTenses.k2präsens]: {
+      [GermanPronounKeys.ich]: 'schaute',
+      [GermanPronounKeys.du]: 'schautest',
+      [GermanPronounKeys.es]: 'schaute',
+      [GermanPronounKeys.wir]: 'schauten',
+      [GermanPronounKeys.ihr]: 'schautet',
     },
   };
   const config: GermanVerb = {
@@ -117,21 +124,28 @@ describe('Weak verb conjugates correctly', () => {
 describe('Fallen conjugates correctly', () => {
   const expected = {
     partizip: 'gefallen',
-    präsens: {
+    [GermanTenses.präsens]: {
       [GermanPronounKeys.ich]: 'falle',
       [GermanPronounKeys.du]: 'fällst',
       [GermanPronounKeys.es]: 'fällt',
       [GermanPronounKeys.wir]: 'fallen',
       [GermanPronounKeys.ihr]: 'fallt',
     },
-    präteritum: {
+    [GermanTenses.präteritum]: {
       [GermanPronounKeys.ich]: 'fiel',
       [GermanPronounKeys.du]: 'fielst',
       [GermanPronounKeys.es]: 'fiel',
       [GermanPronounKeys.wir]: 'fielen',
       [GermanPronounKeys.ihr]: 'fielt',
     },
-    konjunktiv: {
+    [GermanTenses.konjunktiv]: {
+      [GermanPronounKeys.ich]: 'falle',
+      [GermanPronounKeys.du]: 'fallest',
+      [GermanPronounKeys.es]: 'falle',
+      [GermanPronounKeys.wir]: 'fallen',
+      [GermanPronounKeys.ihr]: 'fallet',
+    },
+    [GermanTenses.k2präsens]: {
       [GermanPronounKeys.ich]: 'fiele',
       [GermanPronounKeys.du]: 'fielest',
       [GermanPronounKeys.es]: 'fiele',
