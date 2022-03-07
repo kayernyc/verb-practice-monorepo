@@ -98,7 +98,6 @@ function partizipConjugation(
   }:
     PartizipConjugationType,
 ): string {
-  console.log('Boom', infinitiveStem, partizip);
   if (partizip) {
     // even if there is a stem version, only accept the top level partizip
     return partizip;
