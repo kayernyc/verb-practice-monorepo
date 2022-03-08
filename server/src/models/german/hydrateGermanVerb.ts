@@ -64,6 +64,14 @@ function createStandardConjugation({
     [GermanPronounKeys.ihr]: `${infinitiveStem}tet`,
   };
 
+  newReturnObject[GermanTenses.k2präsens] = {
+    [GermanPronounKeys.ich]: `${infinitiveStem}te`,
+    [GermanPronounKeys.du]: `${infinitiveStem}test`,
+    [GermanPronounKeys.es]: `${infinitiveStem}te`,
+    [GermanPronounKeys.wir]: `${infinitiveStem}ten`,
+    [GermanPronounKeys.ihr]: `${infinitiveStem}tet`,
+  };
+
   return newReturnObject;
 }
 
@@ -78,10 +86,7 @@ function addStrongFeatures(
   }
 
   if (irregular) {
-    console.warn('----------IRREGULAR!!!!', { irregular });
-
     Object.keys(irregular).forEach((key: string) => {
-      console.log('--- return object', returnObject[key], '---irreg', irregular[key]);
       // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       returnObject[key] = { ...returnObject[key], ...irregular[key] };
     });

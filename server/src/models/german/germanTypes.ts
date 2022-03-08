@@ -22,10 +22,11 @@ export type GermanIrregularObject = { [key in GermanTenses]?: GermanIrregularSet
 
 export enum GermanStems {
   duEs = 'duEs',
-  präteritum = 'präteritum',
+  k2präsens = 'k2präsens',
+  konjunktiv = 'konjunktiv',
   partizip = 'partizip',
   präsensSingular = 'präsensSingular',
-  k2präsens = 'k2präsens',
+  präteritum = 'präteritum',
 }
 
 export type GermanVerbHydrated = {

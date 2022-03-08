@@ -8,6 +8,22 @@ import { kranton } from '../hydrateGermanVerb';
 import duEsConjugation from './hydrateDuEsConjugation';
 import modifiedStem from './modifiedStem';
 
+const singleVowelNoUmlaut = /(?<firstConst>[bcdfghjklmnpqrstvwxyzß]*)(?<vowel>(?<![aou])[aou](?![aou]))(?<rest>[bcdfghjklmnpqrstvwxyzß]+[a-zß]*)/;
+const umlautVersions: { [key: string]: string } = {
+  a: 'ä',
+  o: 'ö',
+  u: 'ü',
+};
+
+type PartizipConjugationType = {
+  infinitiveStem: string;
+  infinitive: string;
+  partizip: string;
+  präteritum: string;
+  stemPartizip: string;
+  weakEndings: boolean;
+};
+
 function präteritumConjugation(
   { stem, präteritum, weakEndings }: { stem: string, präteritum: string, weakEndings: boolean },
 ): { [key: string]: string } {
@@ -25,27 +41,56 @@ function präteritumConjugation(
 }
 
 function konjunktivConjugation(
-  { stem, k2präsens }: { stem: string, k2präsens: string },
+  { stem, konjunktiv }: { stem: string, konjunktiv: string },
 ): { [key: string]: string } {
-  const newStem = modifiedStem({ stem, irregularStem: k2präsens });
+  const newStem = modifiedStem({ stem, irregularStem: konjunktiv });
+  let defaultEnding = 'e';
+  if (konjunktiv === 'sei') {
+    defaultEnding = '';
+  }
 
   return {
-    [GermanPronounKeys.ich]: `${newStem}e`,
-    [GermanPronounKeys.du]: `${newStem}est`,
-    [GermanPronounKeys.es]: `${newStem}e`,
+    [GermanPronounKeys.ich]: `${newStem}${defaultEnding}`,
+    [GermanPronounKeys.du]: `${newStem}${defaultEnding}st`,
+    [GermanPronounKeys.es]: `${newStem}${defaultEnding}`,
     [GermanPronounKeys.wir]: `${newStem}en`,
     [GermanPronounKeys.ihr]: `${newStem}et`,
   };
 }
 
-type PartizipConjugationType = {
-  infinitiveStem: string;
-  infinitive: string;
-  partizip: string;
-  präteritum: string;
-  stemPartizip: string;
-  weakEndings: boolean;
-};
+function konjunktiv2Conjugation(
+  { stem, irregularStem, weakEndings }:
+    { stem: string, irregularStem: string, weakEndings: boolean },
+): { [key: string]: string } {
+  let newStem = modifiedStem({ stem, irregularStem });
+  let defaultEnding = 'e';
+  /*
+  A completely regular strong verb will form
+  its K2 stem by applying an umlaut to the vowels
+  in past stem if the vowels are capable of
+  taking an umlaut, or using the past stem
+  unchanged otherwise (RULE2).
+  */
+  const match = singleVowelNoUmlaut.exec(newStem);
+  if (match?.groups) {
+    const { groups: { firstConst, vowel, rest } } = match;
+    if (vowel && umlautVersions[vowel]) {
+      newStem = `${firstConst}${umlautVersions[vowel]}${rest || ''}`;
+    }
+  }
+
+  if (weakEndings) { // does new have a single vowel that can take an umlaut?
+    defaultEnding = 'te';
+  }
+
+  return {
+    [GermanPronounKeys.ich]: `${newStem}${defaultEnding}`,
+    [GermanPronounKeys.du]: `${newStem}${defaultEnding}st`,
+    [GermanPronounKeys.es]: `${newStem}${defaultEnding}`,
+    [GermanPronounKeys.wir]: `${newStem}${defaultEnding}n`,
+    [GermanPronounKeys.ihr]: `${newStem}${defaultEnding}t`,
+  };
+}
 
 function partizipConjugation(
   {
@@ -82,7 +127,7 @@ export default function hydrateIrregularStems(
 ) {
   const {
     infinitive, partizip, stems: {
-      partizip: stemPartizip, duEs: duEsStem, präteritum, k2präsens,
+      partizip: stemPartizip, duEs: duEsStem, präteritum, k2präsens, konjunktiv,
     }, weakEndings,
   } = verbConfiguration;
 
@@ -97,9 +142,13 @@ export default function hydrateIrregularStems(
     returnObject[GermanTenses.präsens][GermanPronounKeys.es] = newEs;
   }
 
-  if (k2präsens) {
-    returnObject[GermanTenses.konjunktiv] = konjunktivConjugation(
-      { stem: infinitiveStem, k2präsens },
+  returnObject[GermanTenses.konjunktiv] = konjunktivConjugation(
+    { stem: infinitiveStem, konjunktiv },
+  );
+
+  if (k2präsens || präteritum || weakEndings) {
+    returnObject[GermanTenses.k2präsens] = konjunktiv2Conjugation(
+      { stem: infinitiveStem, irregularStem: (k2präsens || präteritum), weakEndings },
     );
   }
 

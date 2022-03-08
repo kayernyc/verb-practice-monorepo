@@ -28,7 +28,8 @@ export default function irregularPartizipConjugation({
 
   let builtStem = stem;
   if (partizip) {
-    builtStem = stem.replace(firstVowelGroupRegex, `ge$1${partizip}$3`);
+    builtStem = stem.replace(firstVowelGroupRegex, `$1${partizip}$3`);
+    builtStem = `ge${builtStem}`;
   }
 
   return `${builtStem}${weakEndings ? 't' : 'en'}`;
