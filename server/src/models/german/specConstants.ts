@@ -54,13 +54,7 @@ export const seinReturnObject = {
   },
 };
 
-export const seinPräteritumExpected = {
-  [GermanPronounKeys.ich]: 'war',
-  [GermanPronounKeys.wir]: 'waren',
-  [GermanPronounKeys.du]: 'warst',
-  [GermanPronounKeys.ihr]: 'wart',
-  [GermanPronounKeys.es]: 'war',
-};
+export const seinPräteritumExpected = seinReturnObject['präteritum'];
 
 export const habenGermanVerb: GermanVerb = {
   drop: false,
