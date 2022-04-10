@@ -1,5 +1,6 @@
 import { GermanVerb, GermanPronounKeys, GermanTenses } from '../germanTypes';
-import { hydrateFromInfinitive, hydrateVerb, kranton } from '../hydrateGermanVerb';
+import { hydrateFromInfinitive, hydrateVerb } from '../hydrateGermanVerb';
+import kranton from '../propertyTestFunction/kranton';
 
 /* eslint-disable @typescript-eslint/restrict-plus-operands */
 describe('kranton returns true', () => {

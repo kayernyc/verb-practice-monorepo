@@ -1,5 +1,5 @@
 import { firstVowelGroupRegex } from '@german/germanConstants';
-import verbIsInseparable from '../testFunctions/inseparable';
+import verbIsInseparable from '../propertyTestFunction/inseparable';
 
 export default function irregularPartizipConjugation({
   stem,

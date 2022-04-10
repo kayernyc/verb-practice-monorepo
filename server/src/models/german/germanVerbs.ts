@@ -6,7 +6,7 @@ import {
   GermanVerb, LanguageMap,
 } from './germanTypes';
 
-import verbIsIrregular from './testFunctions/verbIsIrregular';
+import verbIsIrregular from './propertyTestFunction/verbIsIrregular';
 import createIrregularVerbFeatures from './translateYtoJFunctions/createIrregularVerbFeatures';
 
 export type JSON_DATA = { [keyName: string]: GermanVerb | number | undefined };

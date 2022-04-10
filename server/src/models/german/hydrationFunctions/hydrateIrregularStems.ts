@@ -3,7 +3,7 @@ import {
   GermanPronounKeys, GermanTenses, GermanVerb, GermanVerbHydrated,
 } from '@german/germanTypes';
 import irregularPartizipConjugation from './irregularPartizipConjugation';
-import { kranton } from '../hydrateGermanVerb';
+import kranton from '../propertyTestFunction/kranton';
 
 import duEsConjugation from './hydrateDuEsConjugation';
 import modifiedStem from './modifiedStem';
