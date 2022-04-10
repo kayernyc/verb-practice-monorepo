@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-import kranton from '@german/propertyTestFunction/kranton';
+import kranton from '@german/propertyTestFunctions/kranton';
 import {
   GermanPronounKeys, GermanTenses, GermanVerb, GermanVerbHydrated,
 } from './germanTypes';
