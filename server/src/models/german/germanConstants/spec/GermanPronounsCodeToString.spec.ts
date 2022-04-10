@@ -1,8 +1,8 @@
 import {
   GrammaticalFormal, GrammaticalPerson, GrammaticalGender, GrammaticalNumber,
-} from '../../languageTypes';
-import { GermanPronoun } from '../germanConstants';
-import { GermanCase } from '../germanTypes';
+} from '../../../languageTypes';
+import GermanPronounsCodeToString from '../GermanPronounsCodeToString';
+import { GermanCase } from '../../germanTypes';
 
 /* eslint-disable */
 const pronounArray: [string, number][] = [
@@ -49,7 +49,7 @@ for (const tuple of pronounArray) {
   const [testValue, value] = tuple;
 
   it(`A correct grammatical description of ${testValue} returns the correct pronoun`, () => {
-    const result = GermanPronoun(value);
+    const result = GermanPronounsCodeToString(value);
     expect(testValue).toBe(result);
   });
 }
