@@ -1,5 +1,5 @@
 import { GermanPronounKeys } from '../germanTypes';
-import GermanPronounsCodeToString from '../germanConstants/GermanPronounsCodeToString';
+import GermanPronounsCodeToString from '../germanHydrateResponseFunctions/GermanPronounsCodeToString';
 
 const germanPronounKeys = Object.keys(GermanPronounKeys);
 

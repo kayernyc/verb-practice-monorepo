@@ -151,4 +151,4 @@ export const GermanParticleRules = {
   zurecht: 'conveys the idea of "correct," "proper."',
   zurück: '"zurück" means "back," or "re"',
   zusammen: '"zusammen" means "together"',
-}
+};
