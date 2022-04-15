@@ -1,6 +1,6 @@
 import GermanPronounsCodeToString from '@german/germanHydrateResponseFunctions/GermanPronounsCodeToString';
 import { GermanPronounKeys, GermanTenses, GermanVerb } from '@german/germanTypes';
-import { JSON_DATA } from '../../jsonTypes';
+import { GermanJsonData } from '../../jsonTypes';
 
 const tenses: string[] = Object.keys(GermanTenses);
 
@@ -18,7 +18,7 @@ interface ReturnJson {
 
 const GermanAddPronounStringsToJson = (sourceJson: any) => sourceJson;
 // const sourceKeys = Object.keys(sourceJson).filter((key: string) => tenses.includes(key));
-// if (sourceJson in JSON_DATA) {
+// if (sourceJson in GermanJsonData) {
 //   const newJson: ReturnJson = {
 //     partizip: sourceJson.partizip as unknown as string,
 //   };

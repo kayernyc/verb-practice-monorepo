@@ -1,7 +1,9 @@
 import { GermanVerb } from '@german/germanTypes';
 
-// export type JSON_DATA = { [keyName: string]: (GermanVerb) | number | undefined };
-export type JSON_DATA = { [keyName: string]: GermanVerb | number | undefined };
+export interface GermanJsonData {
+  date: number;
+  verbs: { [key: string]: GermanVerb };
+}
 
 // CREDIT WHERE CREDIT IS DUE: https://stackoverflow.com/a/66605669
 export type Only<T, U> = {

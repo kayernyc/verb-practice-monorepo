@@ -50,18 +50,20 @@ describe('kranton returns false', () => {
 describe('hydrateFromInfinitive returns correctly', () => {
   const germanData = {
     date: 1633815078298,
-    bedeuten: {
-      drop: false,
-      hilfsverb: 'haben',
-      infinitive: 'bedeuten',
-      languages: { en: 'to mean' },
-      strong: false,
-    },
-    einatmen: {
-      drop: false,
-      hilfsverb: 'haben',
-      infinitive: 'einatmen',
-      languages: { en: 'to be meaningless' },
+    verbs: {
+      bedeuten: {
+        drop: false,
+        hilfsverb: 'haben',
+        infinitive: 'bedeuten',
+        languages: { en: 'to mean' },
+        strong: false,
+      },
+      einatmen: {
+        drop: false,
+        hilfsverb: 'haben',
+        infinitive: 'einatmen',
+        languages: { en: 'to be meaningless' },
+      },
     },
   };
 
