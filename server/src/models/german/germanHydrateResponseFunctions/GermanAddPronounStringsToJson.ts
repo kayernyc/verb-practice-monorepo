@@ -1,6 +1,5 @@
 import GermanPronounsCodeToString from '@german/germanHydrateResponseFunctions/GermanPronounsCodeToString';
-import { GermanPronounKeys, GermanTenses, GermanVerb } from '@german/germanTypes';
-import { GermanJsonData } from '../../jsonTypes';
+import { GermanTenses, GermanVerbHydrated } from '@german/germanTypes';
 
 const tenses: string[] = Object.keys(GermanTenses);
 
@@ -12,23 +11,32 @@ interface PronounHydration {
 interface ReturnJson {
   partizip: string,
   GermanTenses?: {
-    [keyName: string]: PronounHydration;
+    [keyName: number]: PronounHydration;
   }
 }
 
-const GermanAddPronounStringsToJson = (sourceJson: any) => sourceJson;
-// const sourceKeys = Object.keys(sourceJson).filter((key: string) => tenses.includes(key));
-// if (sourceJson in GermanJsonData) {
-//   const newJson: ReturnJson = {
-//     partizip: sourceJson.partizip as unknown as string,
-//   };
+export const GermanAddPronounStringsToJson = (sourceJson: GermanVerbHydrated): ReturnJson => {
+  const returnJson = { ...sourceJson };
+  const sourceKeys = Object.keys(sourceJson).filter((key: string) => tenses.includes(key));
 
-//   sourceKeys.forEach((key: string) => {
-//     // type TenseType = { [keyName: string]: string | { subject: string, verb: string } };
-//     console.log({ key });
-//   });
-// }
+  sourceKeys.forEach((key: string) => {
+    const sourceTense = sourceJson[key] as { [person: number]: string };
+    const returnTense = Object.keys(sourceTense).reduce((acc, curr) => {
+      const verbConjugation: string = sourceTense[curr] as string;
+      const subjectPronoun = GermanPronounsCodeToString(parseInt(curr, 10));
 
-//   return sourceJson;
-// }
+      acc[curr] = {
+        subjectPronoun,
+        verbConjugation,
+      };
+
+      return acc;
+    }, {});
+
+    returnJson[key] = returnTense;
+  });
+
+  return returnJson;
+};
+
 export default GermanAddPronounStringsToJson;

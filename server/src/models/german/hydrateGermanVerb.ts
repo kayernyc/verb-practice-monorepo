@@ -20,7 +20,7 @@ function importJsonData(): GermanJsonData {
   }
 }
 
-const germanVerbs = importJsonData();
+const germanVerbs: GermanJsonData = importJsonData();
 
 function createStandardConjugation({
   returnObject,
@@ -116,19 +116,13 @@ export function hydrateVerb(verbConfiguration: GermanVerb) {
 export const hydrateFromInfinitive = (
   infinitive: string,
   _germanVerbs?: GermanJsonData,
-): string => {
-  let germanVerbDictionary: GermanJsonData;
+): string | GermanVerbHydrated => {
+  const germanVerbDictionary = _germanVerbs?.verbs ?? germanVerbs.verbs;
 
-  if (_germanVerbs) {
-    germanVerbDictionary = _germanVerbs;
-  } else {
-    germanVerbDictionary = germanVerbs;
-  }
-
-  const verbConfiguration: GermanVerb = germanVerbDictionary[infinitive] as GermanVerb;
+  const verbConfiguration: GermanVerb = germanVerbDictionary[infinitive];
 
   if (verbConfiguration) {
-    return JSON.stringify(hydrateVerb(verbConfiguration));
+    return hydrateVerb(verbConfiguration);
   }
-  return JSON.stringify(infinitive);
+  return infinitive;
 };

@@ -10,8 +10,6 @@ import {
 import verbIsIrregular from './propertyTestFunctions/verbIsIrregular';
 import createIrregularVerbFeatures from './translateYtoJFunctions/createIrregularVerbFeatures';
 
-// export type JSON_DATA = { [keyName: string]: GermanVerb | number | undefined };
-
 export type DataObj = {
   en: string;
   tags?: string[];

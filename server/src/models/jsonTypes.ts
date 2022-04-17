@@ -1,8 +1,12 @@
 import { GermanVerb } from '@german/germanTypes';
 
+export interface GermanVerbDictionary {
+  [key: string]: GermanVerb;
+}
+
 export interface GermanJsonData {
   date: number;
-  verbs: { [key: string]: GermanVerb };
+  verbs: GermanVerbDictionary;
 }
 
 // CREDIT WHERE CREDIT IS DUE: https://stackoverflow.com/a/66605669

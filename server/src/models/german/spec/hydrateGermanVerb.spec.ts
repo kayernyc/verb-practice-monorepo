@@ -69,7 +69,7 @@ describe('hydrateFromInfinitive returns correctly', () => {
 
   it('returns the infitive if there is no data', () => {
     const result = hydrateFromInfinitive('bobben', germanData);
-    expect(result).toStrictEqual(JSON.stringify('bobben'));
+    expect(result).toStrictEqual('bobben');
   });
 
   it('returns a json if there is data', () => {
@@ -201,6 +201,3 @@ describe('Fallen conjugates correctly', () => {
   });
 });
 /* eslint-enable @typescript-eslint/restrict-plus-operands */
-
-// eslint-disable-next-line max-len
-// node node_modules/jest/bin/jest.js -i src/models/german/spec/hydrateGermanVerb.spec.ts -t "Fallen conjugates partizip correctly from minimal config"

@@ -1,11 +1,10 @@
 import {
   Request, Response,
 } from 'express';
-// import { JSON_DATA } from '../models/jsonTypes';
 
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 type PronounMappingFunction = (bitwisePerson: number) => string;
-type HydrationFunction = (infinitive: string) => string;
+type HydrationFunction = <R>(infinitive: string) => R | string;
 
 export default function languageBasedHydration(
   hydrationFunction: HydrationFunction,
@@ -15,7 +14,7 @@ export default function languageBasedHydration(
     const verb: string = req.params.verb?.toLowerCase();
     // const result = hydrateFromInfinitive(verb);
 
-    const sourceJson: string = hydrationFunction(verb);
+    const sourceJson = hydrationFunction(verb);
     console.log(sourceJson);
     // res.json(sourceJson);
 
