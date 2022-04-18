@@ -15,7 +15,7 @@ interface ReturnJson {
   }
 }
 
-export const GermanAddPronounStringsToJson = (sourceJson: GermanVerbHydrated): ReturnJson => {
+const germanAddPronounStringsToJson = (sourceJson: GermanVerbHydrated): ReturnJson => {
   const returnJson = { ...sourceJson };
   const sourceKeys = Object.keys(sourceJson).filter((key: string) => tenses.includes(key));
 
@@ -39,4 +39,4 @@ export const GermanAddPronounStringsToJson = (sourceJson: GermanVerbHydrated): R
   return returnJson;
 };
 
-export default GermanAddPronounStringsToJson;
+export default germanAddPronounStringsToJson;

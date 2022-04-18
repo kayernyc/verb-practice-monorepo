@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import GermanAddPronounStringsToJson from '../GermanAddPronounStringsToJson';
+import germanAddPronounStringsToJson from '../GermanAddPronounStringsToJson';
 
-describe('GermanAddPronounStringsToJson', () => {
+describe('germanAddPronounStringsToJson', () => {
   it('replaces code:sting pairs with objects', () => {
     const simpleTest = {
       partizip: 'test',
@@ -10,7 +10,7 @@ describe('GermanAddPronounStringsToJson', () => {
       },
     };
 
-    const result = GermanAddPronounStringsToJson(simpleTest);
+    const result = germanAddPronounStringsToJson(simpleTest);
 
     const expected = {
       partizip: 'test',
