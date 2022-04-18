@@ -2,24 +2,25 @@ import fs from 'fs';
 import path from 'path';
 
 import kranton from '@german/propertyTestFunctions/kranton';
+import { GermanJsonData } from 'models/jsonTypes';
 import {
   GermanPronounKeys, GermanTenses, GermanVerb, GermanVerbHydrated,
 } from './germanTypes';
-import { germanVerbData, JSON_DATA } from './germanVerbs';
+import { germanVerbData } from './germanVerbs';
 import hydrateIrregularStems from './hydrationFunctions/hydrateIrregularStems';
 
-function importJsonData(): JSON_DATA {
+function importJsonData(): GermanJsonData {
   try {
     const jsonPath = path.resolve(__dirname, '..', '..', './data/germanVerbsUnhydrated.json');
     const data: string = fs.readFileSync(jsonPath, 'utf8');
-    const parsedData: JSON_DATA = JSON.parse(data) as JSON_DATA;
+    const parsedData: GermanJsonData = JSON.parse(data) as GermanJsonData;
     return parsedData;
   } catch (err) {
     return germanVerbData();
   }
 }
 
-const germanVerbs = importJsonData();
+const germanVerbs: GermanJsonData = importJsonData();
 
 function createStandardConjugation({
   returnObject,
@@ -112,19 +113,16 @@ export function hydrateVerb(verbConfiguration: GermanVerb) {
   return standardHydration(verbConfiguration);
 }
 
-export const hydrateFromInfinitive = (infinitive: string, _germanVerbs?: JSON_DATA): string => {
-  let germanVerbDictionary: JSON_DATA;
+export const hydrateFromInfinitive = (
+  infinitive: string,
+  _germanVerbs?: GermanJsonData,
+): string | GermanVerbHydrated => {
+  const germanVerbDictionary = _germanVerbs?.verbs ?? germanVerbs.verbs;
 
-  if (_germanVerbs) {
-    germanVerbDictionary = _germanVerbs;
-  } else {
-    germanVerbDictionary = germanVerbs;
-  }
-
-  const verbConfiguration: GermanVerb = germanVerbDictionary[infinitive] as GermanVerb;
+  const verbConfiguration: GermanVerb = germanVerbDictionary[infinitive];
 
   if (verbConfiguration) {
-    return JSON.stringify(hydrateVerb(verbConfiguration));
+    return hydrateVerb(verbConfiguration);
   }
-  return JSON.stringify(infinitive);
+  return infinitive;
 };

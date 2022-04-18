@@ -3,6 +3,7 @@
     "allowJs": true,
     "baseUrl": "./src",
     "esModuleInterop": true,
+    "experimentalDecorators": true,
     "module": "commonjs",
     "moduleResolution": "node",
     "outDir": "./dist",

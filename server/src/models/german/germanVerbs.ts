@@ -2,14 +2,13 @@ import fs from 'fs';
 import path from 'path';
 import yaml from 'js-yaml';
 
+import { GermanJsonData } from 'models/jsonTypes';
 import {
   GermanVerb, LanguageMap,
 } from './germanTypes';
 
 import verbIsIrregular from './propertyTestFunctions/verbIsIrregular';
 import createIrregularVerbFeatures from './translateYtoJFunctions/createIrregularVerbFeatures';
-
-export type JSON_DATA = { [keyName: string]: GermanVerb | number | undefined };
 
 export type DataObj = {
   en: string;
@@ -43,14 +42,15 @@ export const createVerb = (_infinitive: string, dataObj: DataObj): GermanVerb =>
 };
 
 const processVerbs = (data: { [x: string]: DataObj }) => {
-  const newJsonObj: JSON_DATA = {
+  const newJsonObj: GermanJsonData = {
     date: Date.now(),
+    verbs: {},
   };
 
   for (const keyString in data) {
     if (Object.prototype.hasOwnProperty.call(data, keyString) && keyString !== 'date') {
       const newDataObj: DataObj = data[keyString];
-      newJsonObj[keyString] = createVerb(keyString, newDataObj);
+      newJsonObj.verbs[keyString] = createVerb(keyString, newDataObj);
     }
   }
 
@@ -59,7 +59,7 @@ const processVerbs = (data: { [x: string]: DataObj }) => {
   return newJsonObj;
 };
 
-const writeJson = (newJsonObj: JSON_DATA) => {
+const writeJson = (newJsonObj: GermanJsonData) => {
   const data: string = JSON.stringify(newJsonObj);
   fs.writeFileSync(path.resolve(__dirname, '../../', 'data/germanVerbsUnhydrated.json'), data);
 };
