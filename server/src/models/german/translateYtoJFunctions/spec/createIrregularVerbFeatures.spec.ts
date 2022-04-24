@@ -1,4 +1,5 @@
 import { GermanVerb, GermanTenses, GermanPronounKeys } from '@german/germanTypes';
+import { seinDataObject } from '@german/spec/specConstants';
 import { DataObj } from '../../germanVerbs';
 
 import createIrregularVerbFeatures from '../createIrregularVerbFeatures';
@@ -10,27 +11,6 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
       hilfsverb: 'sein',
       infinitive: 'sein',
       languages: { en: 'to be' },
-    };
-
-    const seinObj: DataObj = {
-      en: 'to be',
-      tags: ['hilfsverb'],
-      hilfsverb: 'sein',
-      partizip: 'gewesen',
-      strong: true,
-      stems: {
-        präteritum: 'war',
-        konjunktiv: 'sei',
-      },
-      irregular: {
-        präsens: {
-          ich: 'bin',
-          du: 'bist',
-          es: 'ist',
-          wir: 'sind',
-          ihr: 'seid',
-        },
-      },
     };
 
     const expected: GermanVerb = {
@@ -53,7 +33,7 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
       ,
     };
 
-    const result = createIrregularVerbFeatures({ newVerb, dataObj: seinObj });
+    const result = createIrregularVerbFeatures({ newVerb, dataObj: seinDataObject });
     expect(result).toEqual(expected);
   });
 

@@ -1,3 +1,4 @@
+import { seinDataObject } from '@german/spec/specConstants';
 import createIrregularObject from '../createIrregularObject';
 import { DataObj } from '../../germanVerbs';
 
@@ -13,27 +14,6 @@ describe('createIrregularObject correctly modifies the object', () => {
   });
 
   it('does modify sein because it does have irregular', () => {
-    const sein: DataObj = {
-      en: 'to be',
-      tags: ['hilfsverb'],
-      hilfsverb: 'sein',
-      partizip: 'gewesen',
-      strong: true,
-      stems: {
-        präteritum: 'war',
-        konjunktiv: 'sei',
-      },
-      irregular: {
-        präsens: {
-          ich: 'bin',
-          du: 'bist',
-          es: 'ist',
-          wir: 'sind',
-          ihr: 'seid',
-        },
-      },
-    };
-
     const expected = {
       präsens: {
         1033: 'bin',
@@ -44,8 +24,7 @@ describe('createIrregularObject correctly modifies the object', () => {
       },
     };
 
-    const result = createIrregularObject({ ...sein });
-
+    const result = createIrregularObject({ ...seinDataObject });
     expect(result).toEqual(expected);
   });
 });
