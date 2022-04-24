@@ -1,6 +1,7 @@
 import {
   GermanPronounKeys, GermanStems, GermanTenses, GermanVerb,
 } from '@german/germanTypes';
+import { DataObj } from '@german/germanVerbs';
 
 export const seinGermanVerb: GermanVerb = {
   drop: false,
@@ -20,6 +21,27 @@ export const seinGermanVerb: GermanVerb = {
   stems: { [GermanStems.präteritum]: 'war', [GermanStems.konjunktiv]: 'sei' },
   strong: true,
   weakEndings: false,
+};
+
+export const seinDataObject: DataObj = {
+  en: 'to be',
+  tags: ['hilfsverb'],
+  hilfsverb: 'sein',
+  partizip: 'gewesen',
+  strong: true,
+  stems: {
+    präteritum: 'war',
+    konjunktiv: 'sei',
+  },
+  irregular: {
+    präsens: {
+      ich: 'bin',
+      du: 'bist',
+      es: 'ist',
+      wir: 'sind',
+      ihr: 'seid',
+    },
+  },
 };
 
 export const seinReturnObject = {
