@@ -10,7 +10,7 @@ import {
   werdenGermanVerb,
   werdenReturnObject,
   werdenPräteritumExpected,
-} from '../../specConstants';
+} from '../../spec/specConstants';
 
 describe('hydrateIrregularStems creates correct präteritum stem objects', () => {
   it('creates correct partizip for sein', () => {
@@ -32,6 +32,3 @@ describe('hydrateIrregularStems creates correct präteritum stem objects', () =>
     expect(präteritumResult).toEqual(werdenPräteritumExpected);
   });
 });
-
-// eslint-disable-next-line max-len
-// node node_modules/jest/bin/jest.js -i src/models/german/hydrationFunctions/spec/hydrateIrregularStems.spec.ts

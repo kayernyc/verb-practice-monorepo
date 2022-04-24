@@ -1,7 +1,7 @@
 import { GermanVerb, GermanTenses, GermanPronounKeys } from '@german/germanTypes';
-import { DataObj } from '../germanVerbs';
+import { DataObj } from '../../germanVerbs';
 
-import createIrregularVerbFeatures from './createIrregularVerbFeatures';
+import createIrregularVerbFeatures from '../createIrregularVerbFeatures';
 
 describe('verbIsIrregular correctly determines the state of the verb', () => {
   it('populates sein correctly', () => {
@@ -18,7 +18,10 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
       hilfsverb: 'sein',
       partizip: 'gewesen',
       strong: true,
-      stems: { präteritum: 'war' },
+      stems: {
+        präteritum: 'war',
+        konjunktiv: 'sei',
+      },
       irregular: {
         präsens: {
           ich: 'bin',
@@ -37,7 +40,7 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
       languages: { en: 'to be' },
       partizip: 'gewesen',
       strong: true,
-      stems: { präteritum: 'war' },
+      stems: { präteritum: 'war', konjunktiv: 'sei' },
       irregular: {
         [GermanTenses.präsens]: {
           [GermanPronounKeys.ich]: 'bin',
@@ -162,6 +165,3 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
     expect(result).toEqual(expected);
   });
 });
-
-// eslint-disable-next-line max-len
-// node node_modules/jest/bin/jest.js -i src/models/german/translateYtoJFunctions/createIrregularVerbFeatures.spec.ts -t "verbIsIrregular correctly determines the state of the verb"

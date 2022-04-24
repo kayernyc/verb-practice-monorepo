@@ -7,7 +7,7 @@ import {
   seinReturnObject,
   werdenGermanVerb,
   werdenReturnObject,
-} from '../specConstants';
+} from './specConstants';
 
 describe('Haben verb conjugates correctly', () => {
   it('Haben conjugates correctly from config', () => {
@@ -32,6 +32,3 @@ describe('Werden verb conjugates correctly', () => {
     expect(result).toStrictEqual(werdenReturnObject);
   });
 });
-
-// eslint-disable-next-line max-len
-// node node_modules/jest/bin/jest.js -i src/models/german/spec/hydrateCoreIrregularVerb.spec.ts -t "Werden conjugates correctly from config"
