@@ -2,13 +2,8 @@ import { GermanVerb } from '@german/germanTypes';
 import generateStems from '../hydrationFunctions/generateStems';
 import hydrateIrregularStems from '../hydrationFunctions/hydrateIrregularStems';
 import {
-  habenGermanVerb,
   habenReturnObject,
-  seinGermanVerb,
-  seinReturnObject,
-  werdenGermanVerb,
-  werdenReturnObject,
-} from '../specConstants';
+} from './specConstants';
 
 describe('haben is correctly conjugated', () => {
   const config: GermanVerb = {
@@ -55,5 +50,3 @@ describe('haben is correctly conjugated', () => {
     expect(result).toEqual(habenReturnObject);
   });
 });
-
-// node node_modules/jest/bin/jest.js -i src/models/german/spec/coreIrregulars.spec.ts

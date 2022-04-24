@@ -1,5 +1,5 @@
-import createIrregularObject from './createIrregularObject';
-import { DataObj } from '../germanVerbs';
+import createIrregularObject from '../createIrregularObject';
+import { DataObj } from '../../germanVerbs';
 
 describe('createIrregularObject correctly modifies the object', () => {
   it('does not modify sollen because it does not have irregular', () => {
@@ -19,7 +19,10 @@ describe('createIrregularObject correctly modifies the object', () => {
       hilfsverb: 'sein',
       partizip: 'gewesen',
       strong: true,
-      stems: { präteritum: 'war' },
+      stems: {
+        präteritum: 'war',
+        konjunktiv: 'sei',
+      },
       irregular: {
         präsens: {
           ich: 'bin',
@@ -46,6 +49,3 @@ describe('createIrregularObject correctly modifies the object', () => {
     expect(result).toEqual(expected);
   });
 });
-
-// eslint-disable-next-line max-len
-// node node_modules/jest/bin/jest.js -i src/models/german/translateYtoJFunctions/createIrregularObject.spec.ts -t "createIrregularObject correctly modifies the object"

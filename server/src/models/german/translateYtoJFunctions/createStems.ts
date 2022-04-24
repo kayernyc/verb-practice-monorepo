@@ -2,11 +2,12 @@ import { GermanStems } from '@german/germanTypes';
 import { DataObj } from '../germanVerbs';
 
 const germanStemsDictionary = {
-  'präsens du/es': 'duEs',
-  präteritum: 'präteritum',
-  partizip: 'partizip',
-  'präsens singular': 'präsensSingular',
   k2präsens: 'k2präsens',
+  konjunktiv: 'konjunktiv',
+  partizip: 'partizip',
+  'präsens du/es': 'duEs',
+  'präsens singular': 'präsensSingular',
+  präteritum: 'präteritum',
 };
 
 export default function createStems(dataObj: DataObj) {
