@@ -41,7 +41,7 @@ export const createVerb = (_infinitive: string, dataObj: DataObj): GermanVerb =>
   return newVerb;
 };
 
-const processVerbs = (data: { [x: string]: DataObj }) => {
+const processVerbs = (data: { [x: string]: DataObj }): GermanJsonData => {
   const newJsonObj: GermanJsonData = {
     date: Date.now(),
     verbs: {},
