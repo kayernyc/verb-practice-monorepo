@@ -1,4 +1,45 @@
-import { createVerb, DataObj } from '../germanVerbs';
+import fs from 'fs';
+import { createVerb, DataObj, germanVerbData } from '../germanVerbs';
+
+jest.mock('fs');
+const mockFs = fs as jest.Mocked<typeof fs>;
+
+jest
+  .useFakeTimers()
+  .setSystemTime(new Date('2020-01-01'));
+
+describe('germanVerbData', () => {
+  it('reads files', () => {
+    // research how to mock yaml
+    mockFs.readFileSync.mockReturnValue(
+      /* eslint-disable comma-dangle */
+      `date: 16
+
+haben:
+  en: to have a test
+  tags:
+    - hilfsverb
+  strong:
+  weak endings: true
+  stems:
+    präsens du/es: ha
+    präteritum: t
+    partizip: b
+      `
+      /* eslint-enable comma-dangle */
+    );
+    const result = germanVerbData();
+    const expected = {
+      date: 1577836800000,
+      verbs: {
+        haben: {
+          drop: false, hilfsverb: 'haben', infinitive: 'haben', languages: { en: 'to have a test' }, stems: { duEs: 'ha', partizip: 'b', präteritum: 't' }, strong: true, weakEndings: true,
+        },
+      },
+    };
+    expect(result).toEqual(expected);
+  });
+});
 
 describe('createVerb', () => {
   it('populates sein correctly', () => {
@@ -102,4 +143,4 @@ describe('createVerb', () => {
 });
 
 // eslint-disable-next-line max-len
-// node node_modules/jest/bin/jest.js -i src/models/german/germanVerbs.spec.ts
+// npx jest -i src/models/german/spec/germanVerbs.spec.ts
