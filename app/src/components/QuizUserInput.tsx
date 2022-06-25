@@ -1,4 +1,4 @@
-import React, { FormEvent, useState } from 'react';
+import React, { FormEvent, KeyboardEvent, MouseEvent, useState } from 'react';
 import englishTestData from '../data/english_german_test.json';
 
 export type AvailableLanguages = 'en' | 'de';
@@ -35,7 +35,14 @@ export const QuizUserInput = ({
     }
   };
 
-  const submitInput = (event: React.MouseEvent) => {
+  const captureKeypress = (event: KeyboardEvent) => {
+    const { key } = event;
+    if (key === 'Enter') {
+      submitInput(event);
+    }
+  };
+
+  const submitInput = (event: MouseEvent | KeyboardEvent) => {
     setInputState(true);
   };
 
@@ -60,7 +67,14 @@ export const QuizUserInput = ({
     <>
       <p>{promptLanguageBlob.prompt}</p>
       <label htmlFor={id}>
-        <input disabled={inputState} id={id} value={input} type="text" onInput={captureInput} />
+        <input
+          disabled={inputState}
+          id={id}
+          value={input}
+          type="text"
+          onInput={captureInput}
+          onKeyUpCapture={captureKeypress}
+        />
         <button disabled={inputState} onClick={submitInput}>
           submit
         </button>
