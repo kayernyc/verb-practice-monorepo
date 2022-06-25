@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "CooperHewitt";
+  src:  url('/public/fonts/cooper_hewitt/cooperhewitt-bold-webfont.woff2') format('woff2'),
+        url('/public/fonts/cooper_hewitt/cooperhewitt-bold-webfont.woff') format('woff'),
+        url('/public/fonts/cooper_hewitt/cooperhewitt-bolditalic-webfont.woff2') format('woff2'),
+        url('/public/fonts/cooper_hewitt/cooperhewitt-bolditalic-webfont.woff') format('woff');
+  }
+
+.App {
+  font-family: 'PT Sans', sans-serif;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'CooperHewitt', sans-serif;
+  font-weight: 700;
+}
+
+p {
+  line-height: 1.5em;
+  max-width: 38em;
+  text-align: left;
+}
+
+main {
+  max-width: 38em;
+  margin: 0 auto;
+}

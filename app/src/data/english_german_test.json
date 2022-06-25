@@ -1,0 +1,16 @@
+{
+  "en": {
+    "conjugated_verb": "is",
+    "infinitive": "to be",
+    "prompt": "he is",
+    "pronoun": "he",
+    "results": ["he is"]
+  },
+  "de": {
+    "conjugated_verb": "ist",
+    "infinitive": "sein",
+    "prompt": "er ist",
+    "pronoun": "er",
+    "results": ["er ist"]
+  }
+}
