@@ -29,6 +29,7 @@ module.exports = {
         tsx: 'never',
       },
     ],
+    'import/prefer-default-export': 'off',
     'no-shadow': 'off',
     'no-param-reassign': ['error', { props: false }],
     '@typescript-eslint/no-shadow': 'error',
