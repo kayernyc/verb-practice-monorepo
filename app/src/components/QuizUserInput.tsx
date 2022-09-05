@@ -60,7 +60,11 @@ export const QuizUserInput = ({
     }
 
     const isCorrect = !!results.find((result: string) => result === userInput);
-    return <p className={isCorrect ? 'correct' : 'incorrect'}>{userInput}</p>;
+    return (
+      <p data-test-id="test-result-field" className={isCorrect ? 'correct' : 'incorrect'}>
+        {userInput}
+      </p>
+    );
   };
 
   return (
