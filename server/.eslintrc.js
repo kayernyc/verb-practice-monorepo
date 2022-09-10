@@ -19,6 +19,7 @@ module.exports = {
   plugins: ['@typescript-eslint', 'import'],
   rules: {
     'no-restricted-syntax': 0,
+    'import/prefer-default-export': 'off',
     'import/extensions': [
       'error',
       'ignorePackages',

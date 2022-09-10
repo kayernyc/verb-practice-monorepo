@@ -9,6 +9,8 @@ const germanVerbHydration = (req: Request, res: Response) => {
   const verb: string = req.params.verb?.toLowerCase();
   let message = `Verb ${verb} isn't fully hydrated.`;
 
+  // try from db first
+
   try {
     let hydratiedVerb = hydrateFromInfinitive(verb);
     if (typeof hydratiedVerb !== 'string') {
