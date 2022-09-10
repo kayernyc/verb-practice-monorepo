@@ -93,6 +93,7 @@ function standardHydration(verbConfiguration: GermanVerb): GermanVerbHydrated {
   const { infinitive, strong } = verbConfiguration;
   const infinitiveStem = infinitive.slice(0, -2);
   let returnObject: GermanVerbHydrated = {
+    infinitive,
     partizip: `ge${infinitiveStem}t`,
   };
 

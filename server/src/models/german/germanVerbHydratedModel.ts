@@ -1,27 +1,29 @@
 import { Schema } from 'mongoose';
 
-interface GermanConjugationModel {
+export interface GermanConjugationModel {
   person: 1033 | 1041 | 1098 | 1106 | 1548;
   conjugation: string;
 }
 
-const GermanConjugationSchema = new Schema<GermanConjugationModel>({
+export const GermanConjugationSchema = new Schema<GermanConjugationModel>({
   person: Number,
   conjugation: String,
 });
 
-interface GermanVerbTenseModel {
+export interface GermanVerbTenseModel {
   tenseName: string;
   conjugations: GermanConjugationModel[];
 }
 
-const GermanVerbTenseSchema = new Schema<GermanVerbTenseModel>({
+export const GermanVerbTenseSchema = new Schema<GermanVerbTenseModel>({
   tenseName: String,
   conjugations: [GermanConjugationSchema],
 });
 
-interface GermanVerbHydratedModel {
+export interface GermanVerbHydratedModel {
   date: Date;
+  infinitive: string;
+  partizip: string;
   schema_version: number;
   tenses: GermanVerbTenseModel[];
 }
@@ -29,6 +31,8 @@ interface GermanVerbHydratedModel {
 // eslint-disable-next-line import/prefer-default-export
 export const GermanVerbHydratedSchema = new Schema<GermanVerbHydratedModel>({
   date: Date,
+  infinitive: String,
+  partizip: String,
   schema_version: Number,
   tenses: [GermanVerbTenseSchema],
 });
