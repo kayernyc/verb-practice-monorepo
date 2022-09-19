@@ -1,7 +1,9 @@
 import { Schema } from 'mongoose';
 
+import { GermanTenses } from '@german/germanTypes';
+
 export interface GermanConjugationModel {
-  person: 1033 | 1041 | 1098 | 1106 | 1548;
+  person: string;
   conjugation: string;
 }
 
@@ -11,7 +13,7 @@ export const GermanConjugationSchema = new Schema<GermanConjugationModel>({
 });
 
 export interface GermanVerbTenseModel {
-  tenseName: string;
+  tenseName: GermanTenses;
   conjugations: GermanConjugationModel[];
 }
 

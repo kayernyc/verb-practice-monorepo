@@ -10,6 +10,8 @@ import { GermanVerbHydratedModel, GermanVerbHydratedSchema } from '@german/germa
 import { hydrateFromInfinitive } from '@german/hydrateGermanVerb';
 import germanAddPronounStringsToJson from '@german/germanHydrateResponseFunctions/GermanAddPronounStringsToJson';
 
+import { convertHydrationToModel } from '@german/germanDBModel';
+
 const germanVerbHydration = async (req: Request, res: Response) => {
   const verb: string = req.params.verb?.toLowerCase();
   let message = `Verb ${verb} isn't fully hydrated.`;
@@ -22,7 +24,7 @@ const germanVerbHydration = async (req: Request, res: Response) => {
   });
 
   const GermanModel = mongoose.model('GermanVerbModel', GermanVerbHydratedSchema);
-  const dbResult: unknown | GermanVerbHydratedModel = await GermanModel.find(
+  const dbResult: unknown | GermanVerbHydratedModel = GermanModel.find(
     { infinitive: verb },
     (err: Error, doc: GermanVerbHydratedModel): unknown => {
       if (err) {
@@ -33,13 +35,14 @@ const germanVerbHydration = async (req: Request, res: Response) => {
     },
   );
 
-  console.log({ dbResult });
+  // console.log({ dbResult });
 
   try {
     let hydratiedVerb = hydrateFromInfinitive(verb);
     if (typeof hydratiedVerb !== 'string') {
       hydratiedVerb = germanAddPronounStringsToJson(hydratiedVerb);
       message = `Verb ${verb} is successfully hydrated.`;
+      convertHydrationToModel(hydratiedVerb);
     }
     return res.status(200).json({ status: 200, data: hydratiedVerb, message });
   } catch (error: unknown) {
