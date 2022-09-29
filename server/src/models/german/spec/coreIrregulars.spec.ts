@@ -17,6 +17,7 @@ describe('haben is correctly conjugated', () => {
   };
 
   const returnObject = {
+    hilfsverb: 'haben',
     infinitive: 'haben',
     partizip: 'habt',
     präsens: {

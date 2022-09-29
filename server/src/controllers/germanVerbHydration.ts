@@ -12,7 +12,7 @@ import germanAddPronounStringsToJson from '@german/germanHydrateResponseFunction
 
 import { convertHydrationToModel } from '@german/germanDBModel';
 
-const germanVerbHydration = async (req: Request, res: Response) => {
+const germanVerbHydration = (req: Request, res: Response) => {
   const verb: string = req.params.verb?.toLowerCase();
   let message = `Verb ${verb} isn't fully hydrated.`;
 
@@ -42,7 +42,15 @@ const germanVerbHydration = async (req: Request, res: Response) => {
     if (typeof hydratiedVerb !== 'string') {
       hydratiedVerb = germanAddPronounStringsToJson(hydratiedVerb);
       message = `Verb ${verb} is successfully hydrated.`;
-      convertHydrationToModel(hydratiedVerb);
+      const DB = convertHydrationToModel(hydratiedVerb);
+      const newVerb = new GermanModel(DB);
+      newVerb.save()
+        .then(() => {
+          console.log('new verb should be saved');
+        })
+        .catch((err: Error) => {
+          console.log(` Error: ${err.message}`);
+        });
     }
     return res.status(200).json({ status: 200, data: hydratiedVerb, message });
   } catch (error: unknown) {

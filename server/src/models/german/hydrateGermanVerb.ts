@@ -90,9 +90,10 @@ function addStrongFeatures(
 
 function standardHydration(verbConfiguration: GermanVerb): GermanVerbHydrated {
   // find stem
-  const { infinitive, strong } = verbConfiguration;
+  const { hilfsverb, infinitive, strong } = verbConfiguration;
   const infinitiveStem = infinitive.slice(0, -2);
   let returnObject: GermanVerbHydrated = {
+    hilfsverb,
     infinitive,
     partizip: `ge${infinitiveStem}t`,
   };

@@ -24,6 +24,7 @@ export const GermanVerbTenseSchema = new Schema<GermanVerbTenseModel>({
 
 export interface GermanVerbHydratedModel {
   date: Date;
+  hilfsverb: string;
   infinitive: string;
   partizip: string;
   schema_version: number;
@@ -34,6 +35,7 @@ export interface GermanVerbHydratedModel {
 export const GermanVerbHydratedSchema = new Schema<GermanVerbHydratedModel>({
   date: Date,
   infinitive: String,
+  hilfsverb: String,
   partizip: String,
   schema_version: Number,
   tenses: [GermanVerbTenseSchema],

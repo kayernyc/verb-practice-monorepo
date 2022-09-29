@@ -9,6 +9,7 @@ interface PronounHydration {
 }
 
 interface ReturnJson {
+  hilfsverb: string,
   infinitive: string,
   partizip: string,
   GermanTenses?: {

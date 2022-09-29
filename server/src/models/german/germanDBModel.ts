@@ -37,6 +37,7 @@ export const convertHydrationToModel = (verb: GermanVerbHydrated) => {
   const newGermanVerHydratedSchemaObj: GermanVerbHydratedModel = {
     date: new Date(),
     infinitive: verb.infinitive,
+    hilfsverb: verb.hilfsverb,
     partizip: verb.partizip,
     schema_version: 1,
     tenses,
@@ -53,7 +54,6 @@ export const GermanVerbHydratedSchema = new Schema<GermanVerbHydratedModel>({
   schema_version: Number,
   tenses: [GermanVerbTenseSchema],
 });
-
 
 export type GermanVerbHydrated = {
   [key in GermanTenses]?: { [person: string]: string };
