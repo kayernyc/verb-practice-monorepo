@@ -1,12 +1,15 @@
+import * as dotenv from 'dotenv'; // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
 import express from 'express';
 import cors from 'cors';
 
 import deutschRouter from './routes/deutsch';
 
+dotenv.config();
+
 const app = express();
-const port = 3000;
 
 app.use(express.json()); // to support JSON-encoded bodies
+app.use(cors());
 
 app.use(
   express.urlencoded({
@@ -14,7 +17,6 @@ app.use(
     extended: true,
   }),
 );
-app.use(cors());
 
 app.get('/', (req, res) => {
   res.send('Welcome to your server');
@@ -22,8 +24,9 @@ app.get('/', (req, res) => {
 
 app.use('/de', deutschRouter);
 
-app.listen(port, () => {
-  /* eslint-disable */
-  console.log(`Server is runing on port ${port}`);
-  /* eslint-enable */
+app.use((_, res) => {
+  res.status(404);
+  res.send('404: File Not Found');
 });
+
+export default app;

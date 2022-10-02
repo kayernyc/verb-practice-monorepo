@@ -6,3 +6,6 @@
 
 # folders
 /coverage
+
+# db
+dbConnect.js

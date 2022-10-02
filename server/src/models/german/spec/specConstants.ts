@@ -45,6 +45,8 @@ export const seinDataObject: DataObj = {
 };
 
 export const seinReturnObject = {
+  hilfsverb: 'haben',
+  infinitive: 'sein',
   partizip: 'gewesen',
   präsens: {
     [GermanPronounKeys.ich]: 'bin',
@@ -89,6 +91,8 @@ export const habenGermanVerb: GermanVerb = {
 };
 
 export const habenReturnObject = {
+  hilfsverb: 'haben',
+  infinitive: 'haben',
   partizip: 'gehabt',
   präsens: {
     [GermanPronounKeys.ich]: 'habe',
@@ -149,6 +153,8 @@ export const werdenGermanVerb: GermanVerb = {
 };
 
 export const werdenReturnObject = {
+  hilfsverb: 'sein',
+  infinitive: 'werden',
   partizip: 'geworden',
   präsens: {
     [GermanPronounKeys.ich]: 'werde',

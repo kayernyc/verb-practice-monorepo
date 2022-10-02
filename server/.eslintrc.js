@@ -19,6 +19,7 @@ module.exports = {
   plugins: ['@typescript-eslint', 'import'],
   rules: {
     'no-restricted-syntax': 0,
+    'import/prefer-default-export': 'off',
     'import/extensions': [
       'error',
       'ignorePackages',
@@ -45,7 +46,7 @@ module.exports = {
     'import/resolver': {
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
-        moduleDirectory: ['node_modules', 'src/'],
+        moduleDirectory: ['node_modules', 'src/', 'db'],
       },
       typescript: {},
     },

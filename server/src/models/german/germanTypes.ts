@@ -32,6 +32,8 @@ export enum GermanStems {
 export type GermanVerbHydrated = {
   [key in GermanTenses]?: { [person: string]: string };
 } & {
+  hilfsverb: string;
+  infinitive: string;
   partizip: string;
 };
 

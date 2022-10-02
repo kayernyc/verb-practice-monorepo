@@ -80,6 +80,8 @@ describe('hydrateFromInfinitive returns correctly', () => {
 
 describe('Weak verb conjugates correctly', () => {
   const expected = {
+    hilfsverb: 'haben',
+    infinitive: 'schauen',
     partizip: 'geschaut',
     [GermanTenses.präsens]: {
       [GermanPronounKeys.ich]: 'schaue',
@@ -126,6 +128,8 @@ describe('Weak verb conjugates correctly', () => {
 
 describe('Fallen conjugates correctly', () => {
   const expected = {
+    hilfsverb: 'sein',
+    infinitive: 'fallen',
     partizip: 'gefallen',
     [GermanTenses.präsens]: {
       [GermanPronounKeys.ich]: 'falle',
