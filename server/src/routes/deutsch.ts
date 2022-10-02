@@ -9,8 +9,8 @@ import germanVerbHydration from '../controllers/germanVerbHydration';
 germanVerbData();
 const deutschRouter: Router = Router();
 
-deutschRouter.get('/:verb', async (req: Request, res: Response) => {
-  await germanVerbHydration(req, res);
+deutschRouter.get('/:verb', (req: Request, res: Response) => {
+  germanVerbHydration(req, res);
 }) as RequestHandler;
 
 export default deutschRouter;

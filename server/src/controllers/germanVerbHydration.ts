@@ -12,7 +12,7 @@ import germanAddPronounStringsToJson from '@german/germanHydrateResponseFunction
 
 import { convertHydrationToModel } from '@german/germanDBModel';
 
-const germanVerbHydration = (req: Request, res: Response) => {
+const germanVerbHydration = async (req: Request, res: Response) => {
   const verb: string = req.params.verb?.toLowerCase();
   let message = `Verb ${verb} isn't fully hydrated.`;
 
@@ -24,40 +24,48 @@ const germanVerbHydration = (req: Request, res: Response) => {
   });
 
   const GermanModel = mongoose.model('GermanVerbModel', GermanVerbHydratedSchema);
-  const dbResult: unknown | GermanVerbHydratedModel = GermanModel.find(
+  const dbResult: GermanVerbHydratedModel[] = await GermanModel.find(
     { infinitive: verb },
-    (err: Error, doc: GermanVerbHydratedModel): unknown => {
-      if (err) {
-        console.log('Error:', err);
-        return err;
-      }
-      return doc;
-    },
   );
+  let status = 500;
 
-  // console.log({ dbResult });
+  if (dbResult.length > 0) {
+    const retrievedVerb = dbResult[0];
+    const verbToClient = (
+      ({
+        infinitive, hilfsverb, partizip, tenses,
+      }) => ({
+        infinitive, hilfsverb, partizip, tenses,
+      }))(retrievedVerb);
+    status = 200;
+    return res.status(status).json({ status, data: verbToClient, message });
+  }
 
   try {
     let hydratiedVerb = hydrateFromInfinitive(verb);
     if (typeof hydratiedVerb !== 'string') {
       hydratiedVerb = germanAddPronounStringsToJson(hydratiedVerb);
       message = `Verb ${verb} is successfully hydrated.`;
-      const DB = convertHydrationToModel(hydratiedVerb);
-      const newVerb = new GermanModel(DB);
+      const dataBaseReadyVerb = convertHydrationToModel(hydratiedVerb);
+      const newVerb = new GermanModel(dataBaseReadyVerb);
       newVerb.save()
         .then(() => {
-          console.log('new verb should be saved');
+          console.log(`New verb ${verb} was successfully saved to the database.`);
+          status = 200;
         })
         .catch((err: Error) => {
           console.log(` Error: ${err.message}`);
+          res.status(500).json({ status, message: err.message });
         });
+
+      return res.status(status).json({ status, data: dataBaseReadyVerb, message });
     }
-    return res.status(200).json({ status: 200, data: hydratiedVerb, message });
+
+    throw Error('Verb is not hydrated');
   } catch (error: unknown) {
     message = 'Unknown Error';
     if (error instanceof Error) message = error.message;
-    // we'll proceed, but let's report it
-    return res.status(400).json({ status: 400, message });
+    return res.status(status).json({ status, message });
   }
 };
 

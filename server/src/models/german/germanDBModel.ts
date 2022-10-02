@@ -5,9 +5,7 @@ import { GermanConjugationModel, GermanVerbTenseModel, GermanVerbHydratedModel }
 const germanTenses = Object.values(GermanTenses);
 
 // convert GermanVerbHydratedModel
-export const convertHydrationToModel = (verb: GermanVerbHydrated) => {
-  console.log(verb);
-
+export const convertHydrationToModel = (verb: GermanVerbHydrated): GermanVerbHydratedModel => {
   const tenses: GermanVerbTenseModel[] = [];
 
   Object.keys(verb).forEach((key: string) => {
@@ -45,41 +43,3 @@ export const convertHydrationToModel = (verb: GermanVerbHydrated) => {
 
   return newGermanVerHydratedSchemaObj;
 };
-
-/*
-export const GermanVerbHydratedSchema = new Schema<GermanVerbHydratedModel>({
-  date: Date,
-  infinitive: String,
-  partizip: String,
-  schema_version: Number,
-  tenses: [GermanVerbTenseSchema],
-});
-
-export type GermanVerbHydrated = {
-  [key in GermanTenses]?: { [person: string]: string };
-  präsens?: {
-      [person: string]: string;
-  };
-  präteritum?: {
-      [person: string]: string;
-  };
-  futur?: {
-      [person: string]: string;
-  };
-  perfekt?: {
-      [person: string]: string;
-  };
-  konjunktiv?: {
-      [person: string]: string;
-  };
-  k2präsens?: {
-      [person: string]: string;
-  };
-  k2präteritum?: {
-      [person: string]: string;
-  };
-} & {
-  infinitive: string;
-  partizip: string;
-};
-*/
