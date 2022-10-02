@@ -10,7 +10,9 @@ germanVerbData();
 const deutschRouter: Router = Router();
 
 deutschRouter.get('/:verb', (req: Request, res: Response) => {
-  germanVerbHydration(req, res);
+  germanVerbHydration(req, res).catch((err: Error) => {
+    res.status(500).json({ status: 500, message: err.message });
+  });
 }) as RequestHandler;
 
 export default deutschRouter;
