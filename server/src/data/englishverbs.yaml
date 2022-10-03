@@ -1,0 +1,926 @@
+date: 1664720800446
+
+"be":
+  translations:
+    de: sein
+    fr: être
+  tags:
+    -auxilliary
+  irregular:
+    present:
+      i: am
+      it: is
+      we: are
+
+have:
+  translations:
+    de: haben
+  participle: had
+  irregular:
+    present:
+      i: have
+      it: has
+      we: have
+    past: had
+
+bear:
+  participle: bore
+  irregular:
+    past: borne
+
+beat:
+  translations:
+    de: schlagen
+  participle: beaten
+  irregular:
+    past: beat
+
+begin:
+  participle: begun
+  irregular:
+    past: began
+
+bend:
+  participle: bent
+  irregular:
+    past: bent
+
+bet:
+  participle: bet
+  irregular:
+    past: bet # [past tense and participle also sometimes betted]
+
+bid:
+  participle: bid
+  irregular:
+    past: bid [as in an auction]
+
+bid:
+  participle: bade/bid
+  irregular:
+    past: bidden/bid [meaning "request"]
+
+bide:
+  participle: bided/bode
+  irregular:
+    past: bided/bidden [but abide mostly uses the regular forms only]
+
+bind:
+  participle: bound
+  irregular:
+    past: bound
+
+bite:
+  participle: bit
+  irregular:
+    past: bitten
+
+bleed:
+  participle: bled
+  irregular:
+    past: bled
+
+blow:
+  participle: blew
+  irregular:
+    past: blown
+
+break:
+  participle: broke
+  irregular:
+    past: broken
+
+breed:
+  participle: bred
+  irregular:
+    past: bred
+
+bring:
+  participle: brought
+  irregular:
+    past: brought
+
+build:
+  participle: built
+  irregular:
+    past: built
+
+burn:
+  participle: [burnt, burned]
+  irregular:
+    past: [burnt, burned]
+
+burst:
+  participle: burst
+  irregular:
+    past: burst
+
+buy:
+  participle: bought
+  irregular:
+    past: bought
+
+cast:
+  participle: cast
+  irregular:
+    past: cast
+
+catch:
+  participle: caught
+  irregular:
+    past: caught
+
+choose:
+  participle: chose
+  irregular:
+    past: chosen
+
+clad:
+  participle: clad/cladded
+  irregular:
+    past: clad/cladded # [clad is also sometimes used as past form of clothe]
+
+cleave:
+  participle: clove/cleft
+  irregular:
+    past: cloven/cleft # [but regular when meaning "adhere"]
+
+cling:
+  participle: clung
+  irregular:
+    past: clung
+
+come:
+  participle: came
+  irregular:
+    past: come
+
+cost:
+  participle: cost/costed
+  irregular:
+    past: cost/costed # [but regular when meaning "calculate the cost of"]
+
+creep:
+  participle: crept/creeped
+  irregular:
+    past: crept/creeped
+
+crow:
+  participle: crowed/crew
+  irregular:
+    past: crowed # [crew normally used only of a cock's crowing]
+
+cut:
+  participle: cut
+  irregular:
+    past: cut
+
+dare:
+ #regular except for possible third person singular present dare (see anomalous cases above)
+
+deal:
+  participle: dealt
+  irregular:
+    past: dealt
+
+dig:
+  participle: dug
+  irregular:
+    past: dug
+
+dive:
+  participle: dived/dove
+  irregular:
+    past: dived # [the form dove is chiefly American]
+
+do:
+  participle: did
+  irregular:
+    present:
+      it: does
+    past: done
+
+drag:
+  participle: dragged/drug
+  irregular:
+    past: dragged/drug # [the form drug is chiefly dialectal]
+
+draw:
+  participle: drew
+  irregular:
+    past: drawn
+
+dream:
+  participle: dreamed/dreamt
+  irregular:
+    past: dreamed/dreamt
+
+drink:
+  participle: drank
+  irregular:
+    past: drunk
+
+drive:
+  participle: drove
+  irregular:
+    past: driven
+
+dwell:
+  participle: dwelt/dwelled
+  irregular:
+    past: dwelt/dwelled
+
+eat:
+  participle: ate
+  irregular:
+    past: eaten
+
+fall:
+  participle: fell
+  irregular:
+    past: fallen
+
+feed:
+  participle: fed
+  irregular:
+    past: fed
+
+feel:
+  participle: felt
+  irregular:
+    past: felt
+
+fight:
+  participle: fought
+  irregular:
+    past: fought
+
+find:
+  participle: found
+  irregular:
+    past: found
+
+fit:
+  participle: fit/fitted
+  irregular:
+    past: fit/fitted
+
+flee:
+  participle: fled
+  irregular:
+    past: fled
+
+fling:
+  participle: flung
+  irregular:
+    past: flung
+
+fly:
+  participle: flew
+  irregular:
+    past: flown # [the form flied is common in the baseball sense]
+
+forbid:
+  participle: forbade/forbid
+  irregular:
+    past: forbidden
+
+forget:
+  participle: forgot
+  irregular:
+    past: forgotten
+
+forsake:
+  participle: forsook
+  irregular:
+    past: forsaken
+
+freeze:
+  participle: froze
+  irregular:
+    past: frozen
+
+get:
+  participle: got
+  irregular:
+    past: gotten/got #[past participle got in British English, gotten in American, but see have got]
+
+gild:
+  participle: gilded/gilt
+  irregular:
+    past: gilded/gilt
+
+give:
+  participle: gave
+  irregular:
+    past: given
+
+go:
+  participle: went
+  irregular:
+    past: gone # [see also have been]
+
+grind:
+  participle: ground
+  irregular:
+    past: ground
+
+grow:
+  participle: grew
+  irregular:
+    past: grown
+
+hang:
+  participle: hung/hanged
+  irregular:
+    past: hung/hanged # [the form hanged is more common in the sense of execution by hanging]
+
+hear:
+  participle: heard
+  irregular:
+    past: heard
+
+hew:
+  participle: hewed
+  irregular:
+    past: hewn/hewed
+
+hide:
+  participle: hid
+  irregular:
+    past: hidden
+
+hit:
+  participle: hit
+  irregular:
+    past: hit
+
+hoist:
+  participle: hoist/hoisted
+  irregular:
+    past: hoist/hoisted
+
+hold:
+  participle: held
+  irregular:
+    past: held
+
+hurt:
+  participle: hurt
+  irregular:
+    past: hurt
+
+keep:
+  participle: kept
+  irregular:
+    past: kept
+
+kneel:
+  participle: knelt/kneeled
+  irregular:
+    past: knelt/kneeled
+
+knit:
+  participle: knit/knitted
+  irregular:
+    past: knit/knitted
+
+know:
+  participle: knew
+  irregular:
+    past: known
+
+lay:
+  participle: laid
+  irregular:
+    past: laid
+
+lead:
+  participle: led
+  irregular:
+    past: led
+
+lean:
+  participle: leaned/leant
+  irregular:
+    past: leaned/leant
+
+leap:
+  participle: leaped/leapt
+  irregular:
+    past: leaped/leapt
+
+learn:
+  participle: learned/learnt
+  irregular:
+    past: learned/learnt
+
+leave:
+  participle: left
+  irregular:
+    past: left
+
+lend:
+  participle: lent
+  irregular:
+    past: lent
+
+let:
+  participle: let
+  irregular:
+    past: let
+
+lie:
+  participle: lay
+  irregular:
+    past: lain # [but regular when meaning "tell an untruth"]
+
+light:
+  participle: lit/lighted
+  irregular:
+    past: lit/lighted
+
+lose:
+  participle: lost
+  irregular:
+    past: lost
+
+make:
+  participle: made
+  irregular:
+    past: made
+
+mean:
+  participle: meant
+  irregular:
+    past: meant
+
+meet:
+  participle: met
+  irregular:
+    past: met
+
+mow:
+  participle: mowed
+  irregular:
+    past: mowed/mown
+
+need:
+# regular except for possible third person singular present need (see anomalous cases above)
+
+pay:
+  participle: paid
+  irregular:
+    past: paid # [but sometimes spelt regularly when meaning "let out" (rope etc.)]
+
+plead:
+  participle: pleaded/pled
+  irregular:
+    past: pleaded/pled
+
+prove:
+  participle: proved
+  irregular:
+    past: proved/proven
+
+put:
+  participle: put
+  irregular:
+    past: put # [prefixed forms input and output sometimes take -ed]
+
+quit:
+  participle: quitted/quit
+  irregular:
+    past: quitted/quit
+
+read: # /riːd/
+  participle: read # /rɛd/
+  irregular:
+    past: read # /rɛd/
+
+rend:
+  participle: rent
+  irregular:
+    past: rent
+
+rid:
+  participle: rid/ridded
+  irregular:
+    past: rid/ridded/ridden
+
+ride:
+  participle: rid/rode
+  irregular:
+    past: ridden
+
+ring:
+  participle: rang
+  irregular:
+    past: rung
+
+rise:
+  participle: rose
+  irregular:
+    past: risen
+
+run:
+  participle: ran
+  irregular:
+    past: run
+
+saw:
+  participle: sawed
+  irregular:
+    past: sawn/sawed
+
+say: # (says /sɛz/)
+  participle: said
+  irregular:
+    present:
+      it: says
+    past: said
+
+see:
+  participle: saw
+  irregular:
+    past: seen
+
+seek:
+  participle: sought
+  irregular:
+    past: sought
+
+sell:
+  participle: sold
+  irregular:
+    past: sold
+
+send:
+  participle: sent
+  irregular:
+    past: sent
+
+set:
+  participle: set
+  irregular:
+    past: set
+
+sew:
+  participle: sewed
+  irregular:
+    past: sewn/sewed
+
+shake:
+  participle: shook
+  irregular:
+    past: shaken
+
+shear:
+  participle: sheared/shore
+  irregular:
+    past: shorn/sheared
+
+shed:
+  participle: shed
+  irregular:
+    past: shed
+
+shine:
+  participle: shone/shined
+  irregular:
+    past: shone/shined
+
+shit:
+  participle: shat/shit/shitted
+  irregular:
+    past: shat/shit/shitted
+
+shoe:
+  participle: shoed/shod
+  irregular:
+    past: shoed/shod
+
+shoot:
+  participle: shot
+  irregular:
+    past: shot
+
+show:
+  participle: showed
+  irregular:
+    past: shown/showed
+
+shrink:
+  participle: shrank/shrunk
+  irregular:
+    past: shrunk
+
+shrive:
+  participle: shrove
+  irregular:
+    past: shriven
+
+shut:
+  participle: shut
+  irregular:
+    past: shut
+
+sing:
+  participle: sang
+  irregular:
+    past: sung
+
+sink:
+  participle: sank
+  irregular:
+    past: sunk
+
+sit:
+  participle: sat
+  irregular:
+    past: sat
+
+slay:
+  participle: slew/slayed
+  irregular:
+    past: slain/slayed
+
+sleep:
+  participle: slept
+  irregular:
+    past: slept
+
+slide:
+  participle: slid
+  irregular:
+    past: slid
+
+sling:
+  participle: slung
+  irregular:
+    past: slung
+
+slink:
+  participle: slunk
+  irregular:
+    past: slunk
+
+slit:
+  participle: slit
+  irregular:
+    past: slit
+
+smell:
+  participle: smelled/smelt
+  irregular:
+    past: smelled/smelt
+
+smite:
+  participle: smote
+  irregular:
+    past: smitten
+
+sneak:
+  participle: sneaked/snuck
+  irregular:
+    past: sneaked/snuck # [snuck is chiefly American, is regarded as informal and is only cited from 1887[6]]
+
+sow:
+  participle: sowed
+  irregular:
+    past: sown/sowed
+
+speak:
+  participle: spoke
+  irregular:
+    past: spoken
+
+speed:
+  participle: sped/speeded
+  irregular:
+    past: sped/speeded
+
+spell:
+  participle: spelled/spelt
+  irregular:
+    past: spelled/spelt
+
+spend:
+  participle: spent
+  irregular:
+    past: spent
+
+spill:
+  participle: spilled/spilt
+  irregular:
+    past: spilled/spilt
+
+spin:
+  participle: span/spun
+  irregular:
+    past: spun
+
+spit:
+  participle: spat/spit
+  irregular:
+    past: spat/spit # [the form spit rather than spat is common in America]
+
+split:
+  participle: split
+  irregular:
+    past: split
+
+spoil:
+  participle: spoiled/spoilt
+  irregular:
+    past: spoiled/spoilt
+
+spread:
+  participle: spread
+  irregular:
+    past: spread
+
+spring:
+  participle: sprang/sprung
+  irregular:
+    past: sprung
+
+stand:
+  participle: stood
+  irregular:
+    past: stood
+
+stave:
+  participle: staved/stove
+  irregular:
+    past: staved/stove
+
+steal:
+  participle: stole
+  irregular:
+    past: stolen
+
+stick:
+  participle: stuck
+  irregular:
+    past: stuck
+
+sting:
+  participle: stung
+  irregular:
+    past: stung
+
+stink:
+  participle: stank
+  irregular:
+    past: stunk
+
+strew:
+  participle: strewed
+  irregular:
+    past: strewn/strewed
+
+stride:
+  participle: strode
+  irregular:
+    past: stridden/strode
+
+strike:
+  participle: struck
+  irregular:
+    past: struck/stricken
+
+string:
+  participle: strung
+  irregular:
+    past: strung
+
+strive:
+  participle: strove/strived
+  irregular:
+    past: striven/strived
+
+swear:
+  participle: swore
+  irregular:
+    past: sworn
+
+sweat:
+  participle: sweated/sweat
+  irregular:
+    past: sweated/sweat
+
+sweep:
+  participle: swept
+  irregular:
+    past: swept
+
+swell:
+  participle: swelled
+  irregular:
+    past: swollen/swelled
+
+swim:
+  participle: swam
+  irregular:
+    past: swum
+
+swing:
+  participle: swang/swung
+  irregular:
+    past: swung
+
+take:
+  participle: took
+  irregular:
+    past: taken
+
+teach:
+  participle: taught
+  irregular:
+    past: taught
+
+tear:
+  participle: tore
+  irregular:
+    past: torn
+
+tell:
+  participle: told
+  irregular:
+    past: told
+
+think:
+  participle: thought
+  irregular:
+    past: thought
+
+thrive:
+  participle: thrived/throve
+  irregular:
+    past: thrived/thriven
+
+throw:
+  participle: threw
+  irregular:
+    past: thrown
+
+thrust:
+  participle: thrust/thrusted
+  irregular:
+    past: thrust/thrusted
+
+tread:
+  participle: trod
+  irregular:
+    past: trodden/trod
+
+wake:
+  participle: woke
+  irregular:
+    past: woken
+
+wear:
+  participle: wore
+  irregular:
+    past: worn
+
+weave:
+  participle: wove
+  irregular:
+    past: woven
+
+wed:
+  participle: wed/wedded
+  irregular:
+    past: wed/wedded
+
+weep:
+  participle: wept
+  irregular:
+    past: wept
+
+wet:
+  participle: wet/wetted
+  irregular:
+    past: wet/wetted
+
+win:
+  participle: won
+  irregular:
+    past: won
+
+wind:
+  participle: wound
+  irregular:
+    past: wound # [but regular in the meanings connected with air and breath]
+
+wring:
+  participle: wrang/wrung
+  irregular:
+    past: wrung
+
+write:
+  participle: wrote
+  irregular:
+    past: written
