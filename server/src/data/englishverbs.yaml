@@ -5,7 +5,7 @@ date: 1664720800446
     de: sein
     fr: être
   tags:
-    -auxilliary
+    - auxilliary
   irregular:
     present:
       i: am
@@ -51,19 +51,20 @@ bet:
     past: bet # [past tense and participle also sometimes betted]
 
 bid:
-  participle: bid
-  irregular:
-    past: bid [as in an auction]
-
-bid:
-  participle: bade/bid
-  irregular:
-    past: bidden/bid [meaning "request"]
+  variations:
+    - definition: as in an auction
+      participle: bid
+      irregular:
+        past: bid
+    - definition: meaning "request"
+      participle: [bade, bid]
+      irregular:
+        past: bidden/bid
 
 bide:
   participle: bided/bode
   irregular:
-    past: bided/bidden [but abide mostly uses the regular forms only]
+    past: bided/bidden # [but abide mostly uses the regular forms only]
 
 bind:
   participle: bound
@@ -229,6 +230,10 @@ dwell:
   participle: dwelt/dwelled
   irregular:
     past: dwelt/dwelled
+
+exist:
+  translations:
+    fr: exister
 
 eat:
   participle: ate
