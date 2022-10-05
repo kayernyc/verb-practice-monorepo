@@ -48,7 +48,8 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
     };
 
     const könnenObj: DataObj = {
-      en: english,
+      translations:
+        { en: english },
       tags: ['modal'],
       'weak endings': true,
       strong: true,
@@ -81,7 +82,7 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
     };
 
     const sollenObj: DataObj = {
-      en: english,
+      translations: { en: english },
       tags: ['modal'],
       strong: true,
       'drop ich/es präsens endings': true,
@@ -110,7 +111,8 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
     };
 
     const verbObj: DataObj = {
-      en: english,
+      translations:
+        { en: english },
       tags: ['hilfsverb'],
       hilfsverb: 'sein',
       partizip: 'o',

@@ -11,7 +11,7 @@ import verbIsIrregular from './propertyTestFunctions/verbIsIrregular';
 import createIrregularVerbFeatures from './translateYtoJFunctions/createIrregularVerbFeatures';
 
 export type DataObj = {
-  en: string;
+  translations?: { [languageAbbr: string]: string | string[] };
   tags?: string[];
   hilfsverb?: string;
   partizip?: string;
@@ -25,7 +25,7 @@ export type DataObj = {
 // let germanVerbsDictionary;
 export const createVerb = (_infinitive: string, dataObj: DataObj): GermanVerb => {
   const languages: LanguageMap = {};
-  languages.en = dataObj.en;
+  languages.en = dataObj.translations.en;
 
   let newVerb: GermanVerb = {
     drop: dataObj['drop ich/es pr\u00e4sens endings'] || false,

@@ -16,7 +16,8 @@ describe('germanVerbData', () => {
       `date: 16
 
 haben:
-  en: to have a test
+  translations:
+    en: to have a test
   tags:
     - hilfsverb
   strong:
@@ -44,7 +45,8 @@ haben:
 describe('createVerb', () => {
   it('populates sein correctly', () => {
     const dataObj: DataObj = {
-      en: 'to be',
+      translations:
+        { en: 'to be' },
       tags: ['hilfsverb'],
       strong: true,
       hilfsverb: 'sein',
@@ -85,7 +87,8 @@ describe('createVerb', () => {
 
   it('populates fallen correctly', () => {
     const dataObj: DataObj = {
-      en: 'to fall',
+      translations:
+        { en: 'to fall' },
       strong: true,
       hilfsverb: 'sein',
       stems: { 'präsens du/es': 'ä', k2präsens: 'iel' },
@@ -107,7 +110,8 @@ describe('createVerb', () => {
 
   it('populates schwimmen correctly', () => {
     const dataObj: DataObj = {
-      en: 'to swim',
+      translations:
+        { en: 'to swim' },
       hilfsverb: 'sein',
       strong: true,
       stems: { partizip: 'o', präteritum: 'a' },
@@ -128,7 +132,7 @@ describe('createVerb', () => {
   });
 
   it('populates beraten correctly', () => {
-    const dataObj: DataObj = { en: 'to advise, to discuss' };
+    const dataObj: DataObj = { translations: { en: 'to advise, to discuss' } };
     const result = createVerb('beraten', dataObj);
     const expected = {
       drop: false,
@@ -141,6 +145,3 @@ describe('createVerb', () => {
     expect(result).toEqual(expected);
   });
 });
-
-// eslint-disable-next-line max-len
-// npx jest -i src/models/german/spec/germanVerbs.spec.ts
