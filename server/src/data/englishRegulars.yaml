@@ -1,13 +1,12 @@
 create:
   translations:
+    de: schaffen
 
 move:
   translations:
+    de: bewegen
 
 detect:
-  translations:
-
-learn:
   translations:
 
 receive:
@@ -34,9 +33,6 @@ escape:
 work:
   translations:
 
-need:
-  translations:
-
 demand:
   translations:
 
@@ -45,6 +41,7 @@ seem:
 
 ask:
   translations:
+    de: fragen
 
 question:
   translations:
@@ -54,6 +51,7 @@ demonstrate:
 
 try:
   translations:
+    de: versuchen
 
 supply:
   translations:
@@ -85,13 +83,7 @@ start:
 operate:
   translations:
 
-write:
-  translations:
-
 compose:
-  translations:
-
-set:
   translations:
 
 place:
@@ -115,22 +107,13 @@ add:
 believe:
   translations:
 
-meet:
-  translations:
-
 face:
-  translations:
-
-lead:
   translations:
 
 guide:
   translations:
 
 live:
-  translations:
-
-stand:
   translations:
 
 happen:
@@ -167,9 +150,6 @@ suggest:
   translations:
 
 advocate:
-  translations:
-
-let:
   translations:
 
 require:
@@ -226,9 +206,6 @@ involve:
 affect:
   translations:
 
-pay:
-  translations:
-
 return:
   translations:
 
@@ -248,9 +225,6 @@ walk:
   translations:
 
 travel:
-  translations:
-
-sell:
   translations:
 
 sale:
@@ -334,9 +308,6 @@ remain:
 reduce:
   translations:
 
-cut:
-  translations:
-
 establish:
   translations:
 
@@ -353,9 +324,6 @@ achieve:
   translations:
 
 succeed:
-  translations:
-
-seek:
   translations:
 
 search:
@@ -394,9 +362,6 @@ defeat:
 occur:
   translations:
 
-drive:
-  translations:
-
 repel:
   translations:
 
@@ -418,13 +383,7 @@ argue:
 debate:
   translations:
 
-prove:
-  translations:
-
 testify:
-  translations:
-
-catch:
   translations:
 
 capture:
@@ -434,9 +393,6 @@ enjoy:
   translations:
 
 love:
-  translations:
-
-eat:
   translations:
 
 introduce:
@@ -506,9 +462,6 @@ note:
   translations:
 
 observe:
-  translations:
-
-forget:
   translations:
 
 indicate:
@@ -589,9 +542,6 @@ drop:
 visit:
   translations:
 
-exist:
-  translations:
-
 encourage:
   translations:
 
@@ -646,16 +596,10 @@ reference:
 battle:
   translations:
 
-mean:
-  translations:
-
 omit:
   translations:
 
 unload:
-  translations:
-
-strike:
   translations:
 
 forward:
@@ -709,9 +653,6 @@ analyze:
 complete:
   translations:
 
-cost:
-  translations:
-
 sound:
   translations:
 
@@ -739,9 +680,6 @@ specify:
 examine:
   translations:
 
-fit:
-  translations:
-
 suit:
   translations:
 
@@ -752,9 +690,6 @@ recognise:
   translations:
 
 realize:
-  translations:
-
-shake:
   translations:
 
 sway:
@@ -811,12 +746,6 @@ imagine:
 attempt:
   translations:
 
-beat:
-  translations:
-
-born:
-  translations:
-
 associate:
   translations:
 
@@ -859,9 +788,6 @@ aim:
 mark:
   translations:
 
-shoot:
-  translations:
-
 injure:
   translations:
 
@@ -871,16 +797,10 @@ appoint:
 order:
   translations:
 
-drink:
-  translations:
-
 ignore:
   translations:
 
 link:
-  translations:
-
-ring:
   translations:
 
 settle:
@@ -955,9 +875,6 @@ repeat:
 recur:
   translations:
 
-sleep:
-  translations:
-
 rest:
   translations:
 
@@ -1018,9 +935,6 @@ consist:
 contribute:
   translations:
 
-hide:
-  translations:
-
 conceal:
   translations:
 
@@ -1049,9 +963,6 @@ invite:
   translations:
 
 tempt:
-  translations:
-
-sing:
   translations:
 
 chant:
@@ -1094,9 +1005,6 @@ steer:
   translations:
 
 label:
-  translations:
-
-stick:
   translations:
 
 nod:
@@ -1160,9 +1068,6 @@ procure:
   translations:
 
 step:
-  translations:
-
-tread:
   translations:
 
 transfer:
@@ -1255,9 +1160,6 @@ trust:
 approve:
   translations:
 
-burn:
-  translations:
-
 fear:
   translations:
 
@@ -1300,9 +1202,6 @@ matter:
 persuade:
   translations:
 
-ride:
-  translations:
-
 float:
   translations:
 
@@ -1316,9 +1215,6 @@ score:
   translations:
 
 slip:
-  translations:
-
-slide:
   translations:
 
 weigh:
@@ -1345,9 +1241,6 @@ house:
 stay:
   translations:
 
-lean:
-  translations:
-
 roll:
   translations:
 
@@ -1366,9 +1259,6 @@ accuse:
 charge:
   translations:
 
-bind:
-  translations:
-
 adhere:
   translations:
 
@@ -1379,9 +1269,6 @@ judge:
   translations:
 
 decide:
-  translations:
-
-steal:
   translations:
 
 comment:
@@ -1672,12 +1559,6 @@ arrange:
 struggle:
   translations:
 
-fight:
-  translations:
-
-cast:
-  translations:
-
 cook:
   translations:
 
@@ -1715,9 +1596,6 @@ kiss:
   translations:
 
 salute:
-  translations:
-
-light:
   translations:
 
 illuminate:

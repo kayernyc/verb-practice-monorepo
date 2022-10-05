@@ -1305,3 +1305,9 @@ testen:
   en: to test
   tags:
     - test
+
+bewegen:
+  en: to move
+
+verwenden:
+  en: to use
