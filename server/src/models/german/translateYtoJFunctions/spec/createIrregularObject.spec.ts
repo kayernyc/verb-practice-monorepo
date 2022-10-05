@@ -5,7 +5,8 @@ import { DataObj } from '../../germanVerbs';
 describe('createIrregularObject correctly modifies the object', () => {
   it('does not modify sollen because it does not have irregular', () => {
     const sollen: DataObj = {
-      en: 'to be expected to',
+      translations:
+        { en: 'to be expected to' },
       tags: ['modal'],
       'drop ich/es präsens endings': true,
     };

@@ -24,7 +24,8 @@ export const seinGermanVerb: GermanVerb = {
 };
 
 export const seinDataObject: DataObj = {
-  en: 'to be',
+  translations:
+    { en: 'to be' },
   tags: ['hilfsverb'],
   hilfsverb: 'sein',
   partizip: 'gewesen',

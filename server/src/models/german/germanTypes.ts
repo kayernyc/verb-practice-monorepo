@@ -3,8 +3,8 @@ import {
 } from '../languageTypes';
 
 export interface LanguageMap {
-  en?: string;
-  fr?: string;
+  en?: string | string[];
+  fr?: string | string[];
 }
 
 export enum GermanTenses {
