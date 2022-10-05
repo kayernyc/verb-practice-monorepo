@@ -60,12 +60,12 @@ bid:
     - definition: meaning "request"
       participle: [bade, bid]
       irregular:
-        past: bidden/bid
+        past: bidden, bid
 
 bide:
-  participle: bided/bode
+  participle: [bided, bode]
   irregular:
-    past: bided/bidden # [but abide mostly uses the regular forms only]
+    past: [bided, bidden]
 
 bind:
   participle: bound
@@ -138,14 +138,14 @@ choose:
     past: chosen
 
 clad:
-  participle: clad/cladded
+  participle: [clad, cladded]
   irregular:
-    past: clad/cladded # [clad is also sometimes used as past form of clothe]
+    past: [clad, cladded] # [clad is also sometimes used as past form of clothe]
 
 cleave:
-  participle: clove/cleft
+  participle: [clove, cleft]
   irregular:
-    past: cloven/cleft # [but regular when meaning "adhere"]
+    past: [cloven, cleft] # [but regular when meaning "adhere"]
 
 cling:
   participle: clung
@@ -158,17 +158,20 @@ come:
     past: come
 
 cost:
-  participle: cost/costed
-  irregular:
-    past: cost/costed # [but regular when meaning "calculate the cost of"]
+  variations:
+    - definition: cost
+      participle: [cost, costed]
+      irregular:
+        past: [cost, costed] # [but regular when meaning "calculate the cost of"]
+    - definition: calculate the cost of
 
 creep:
-  participle: crept/creeped
+  participle: [crept, creeped]
   irregular:
-    past: crept/creeped
+    past: [crept, creeped]
 
 crow:
-  participle: crowed/crew
+  participle: [crowed, crew]
   irregular:
     past: crowed # [crew normally used only of a cock's crowing]
 
@@ -191,9 +194,9 @@ dig:
     past: dug
 
 dive:
-  participle: dived/dove
+  participle: [dived, dove]
   irregular:
-    past: dived # [the form dove is chiefly American]
+    past: [dived, dove] # [the form dove is chiefly American]
 
 do:
   translations:
@@ -205,9 +208,9 @@ do:
     past: done
 
 drag:
-  participle: dragged/drug
+  participle: [dragged, drug]
   irregular:
-    past: dragged/drug # [the form drug is chiefly dialectal]
+    past: [dragged, drug] # [the form drug is chiefly dialectal]
 
 draw:
   participle: drew
@@ -215,9 +218,9 @@ draw:
     past: drawn
 
 dream:
-  participle: dreamed/dreamt
+  participle: [dreamed, dreamt]
   irregular:
-    past: dreamed/dreamt
+    past: [dreamed, dreamt]
 
 drink:
   participle: drank
@@ -230,9 +233,9 @@ drive:
     past: driven
 
 dwell:
-  participle: dwelt/dwelled
+  participle: [dwelt, dwelled]
   irregular:
-    past: dwelt/dwelled
+    past: [dwelt, dwelled]
 
 exist:
   translations:
@@ -269,9 +272,9 @@ find:
     past: found
 
 fit:
-  participle: fit/fitted
+  participle: [fit, fitted]
   irregular:
-    past: fit/fitted
+    past: [fit, fitted]
 
 flee:
   participle: fled
@@ -289,7 +292,7 @@ fly:
     past: flown # [the form flied is common in the baseball sense]
 
 forbid:
-  participle: forbade/forbid
+  participle: [forbade, forbid]
   irregular:
     past: forbidden
 
@@ -311,12 +314,12 @@ freeze:
 get:
   participle: got
   irregular:
-    past: gotten/got #[past participle got in British English, gotten in American, but see have got]
+    past: [gotten, got] #[past participle got in British English, gotten in American, but see have got]
 
 gild:
-  participle: gilded/gilt
+  participle: [gilded, gilt]
   irregular:
-    past: gilded/gilt
+    past: [gilded, gilt]
 
 give:
   participle: gave
@@ -339,9 +342,15 @@ grow:
     past: grown
 
 hang:
-  participle: hung/hanged
-  irregular:
-    past: hung/hanged # [the form hanged is more common in the sense of execution by hanging]
+ variations:
+    - definition: to hang an object
+      participle: [hung, hanged]
+      irregular:
+        past: hung, hanged
+    - definition: execution by hanging
+      participle: hanged
+      irregular:
+        past: hanged
 
 hear:
   participle: heard
@@ -351,7 +360,7 @@ hear:
 hew:
   participle: hewed
   irregular:
-    past: hewn/hewed
+    past: hewn, hewed
 
 hide:
   participle: hid
@@ -364,9 +373,9 @@ hit:
     past: hit
 
 hoist:
-  participle: hoist/hoisted
+  participle: [hoist, hoisted]
   irregular:
-    past: hoist/hoisted
+    past: [hoist, hoisted]
 
 hold:
   participle: held
@@ -384,14 +393,14 @@ keep:
     past: kept
 
 kneel:
-  participle: knelt/kneeled
+  participle: [knelt, kneeled]
   irregular:
-    past: knelt/kneeled
+    past: [knelt, kneeled]
 
 knit:
-  participle: knit/knitted
+  participle: [knit, knitted]
   irregular:
-    past: knit/knitted
+    past: [knit, knitted]
 
 know:
   participle: knew
@@ -409,19 +418,19 @@ lead:
     past: led
 
 lean:
-  participle: leaned/leant
+  participle: [leaned, leant]
   irregular:
-    past: leaned/leant
+    past: [leaned, leant]
 
 leap:
-  participle: leaped/leapt
+  participle: [leaped, leapt]
   irregular:
-    past: leaped/leapt
+    past: [leaped, leapt]
 
 learn:
-  participle: learned/learnt
+  participle: [learned, learnt]
   irregular:
-    past: learned/learnt
+    past: [learned, learnt]
 
 leave:
   participle: left
@@ -439,14 +448,17 @@ let:
     past: let
 
 lie:
-  participle: lay
-  irregular:
-    past: lain # [but regular when meaning "tell an untruth"]
+  variations:
+    - definition: to lay oneself
+      participle: lay
+      irregular:
+        past: lain
+    - definition: to tell an untruth
 
 light:
-  participle: lit/lighted
+  participle: [lit, lighted]
   irregular:
-    past: lit/lighted
+    past: [lit, lighted]
 
 lose:
   participle: lost
@@ -471,7 +483,7 @@ meet:
 mow:
   participle: mowed
   irregular:
-    past: mowed/mown
+    past: [mowed, mown]
 
 need:
 # regular except for possible third person singular present need (see anomalous cases above)
@@ -482,14 +494,14 @@ pay:
     past: paid # [but sometimes spelt regularly when meaning "let out" (rope etc.)]
 
 plead:
-  participle: pleaded/pled
+  participle: [pleaded, pled]
   irregular:
-    past: pleaded/pled
+    past: [pleaded, pled]
 
 prove:
   participle: proved
   irregular:
-    past: proved/proven
+    past: [proved, proven]
 
 put:
   participle: put
@@ -497,14 +509,14 @@ put:
     past: put # [prefixed forms input and output sometimes take -ed]
 
 quit:
-  participle: quitted/quit
+  participle: [quitted, quit]
   irregular:
-    past: quitted/quit
+    past: [quitted, quit]
 
-read: # /riːd/
-  participle: read # /rɛd/
+read: # , riːd,
+  participle: read # , rɛd,
   irregular:
-    past: read # /rɛd/
+    past: read # , rɛd,
 
 rend:
   participle: rent
@@ -512,12 +524,12 @@ rend:
     past: rent
 
 rid:
-  participle: rid/ridded
+  participle: [rid, ridded]
   irregular:
-    past: rid/ridded/ridden
+    past: [rid, ridded]
 
 ride:
-  participle: rid/rode
+  participle: [rid, rode]
   irregular:
     past: ridden
 
@@ -539,9 +551,9 @@ run:
 saw:
   participle: sawed
   irregular:
-    past: sawn/sawed
+    past: [sawn, sawed]
 
-say: # (says /sɛz/)
+say: # (says , sɛz, )
   participle: said
   irregular:
     present:
@@ -576,7 +588,7 @@ set:
 sew:
   participle: sewed
   irregular:
-    past: sewn/sewed
+    past: [sewn, sewed]
 
 shake:
   participle: shook
@@ -584,9 +596,9 @@ shake:
     past: shaken
 
 shear:
-  participle: sheared/shore
+  participle: [sheared, shore]
   irregular:
-    past: shorn/sheared
+    past: [shorn, sheared]
 
 shed:
   participle: shed
@@ -594,19 +606,19 @@ shed:
     past: shed
 
 shine:
-  participle: shone/shined
+  participle: [shone, shined]
   irregular:
-    past: shone/shined
+    past: [shone, shined]
 
 shit:
-  participle: shat/shit/shitted
+  participle: [shat, shit, shitted]
   irregular:
-    past: shat/shit/shitted
+    past: [shat, shit, shitted]
 
 shoe:
-  participle: shoed/shod
+  participle: [shoed, shod]
   irregular:
-    past: shoed/shod
+    past: [shoed, shod]
 
 shoot:
   participle: shot
@@ -616,10 +628,10 @@ shoot:
 show:
   participle: showed
   irregular:
-    past: shown/showed
+    past: [shown, showed]
 
 shrink:
-  participle: shrank/shrunk
+  participle: [shrank, shrunk]
   irregular:
     past: shrunk
 
@@ -649,9 +661,9 @@ sit:
     past: sat
 
 slay:
-  participle: slew/slayed
+  participle: [slew, slayed]
   irregular:
-    past: slain/slayed
+    past: [slain, slayed]
 
 sleep:
   participle: slept
@@ -679,9 +691,9 @@ slit:
     past: slit
 
 smell:
-  participle: smelled/smelt
+  participle: [smelled, smelt]
   irregular:
-    past: smelled/smelt
+    past: [smelled, smelt]
 
 smite:
   participle: smote
@@ -689,14 +701,14 @@ smite:
     past: smitten
 
 sneak:
-  participle: sneaked/snuck
+  participle: [sneaked, snuck]
   irregular:
-    past: sneaked/snuck # [snuck is chiefly American, is regarded as informal and is only cited from 1887[6]]
+    past: [sneaked, snuck] # [snuck is chiefly American, is regarded as informal and is only cited from 1887[6]]
 
 sow:
   participle: sowed
   irregular:
-    past: sown/sowed
+    past: [sown, sowed]
 
 speak:
   participle: spoke
@@ -704,14 +716,14 @@ speak:
     past: spoken
 
 speed:
-  participle: sped/speeded
+  participle: [sped, speeded]
   irregular:
-    past: sped/speeded
+    past: [sped, speeded]
 
 spell:
-  participle: spelled/spelt
+  participle: [spelled, spelt]
   irregular:
-    past: spelled/spelt
+    past: [spelled, spelt]
 
 spend:
   participle: spent
@@ -719,19 +731,19 @@ spend:
     past: spent
 
 spill:
-  participle: spilled/spilt
+  participle: [spilled, spilt]
   irregular:
-    past: spilled/spilt
+    past: [spilled, spilt]
 
 spin:
-  participle: span/spun
+  participle: [span, spun]
   irregular:
     past: spun
 
 spit:
-  participle: spat/spit
+  participle: [spat, spit]
   irregular:
-    past: spat/spit # [the form spit rather than spat is common in America]
+    past: [spat, spit] # [the form spit rather than spat is common in America]
 
 split:
   participle: split
@@ -739,9 +751,9 @@ split:
     past: split
 
 spoil:
-  participle: spoiled/spoilt
+  participle: [spoiled, spoilt]
   irregular:
-    past: spoiled/spoilt
+    past: [spoiled, spoilt]
 
 spread:
   participle: spread
@@ -749,7 +761,7 @@ spread:
     past: spread
 
 spring:
-  participle: sprang/sprung
+  participle: [sprang, sprung]
   irregular:
     past: sprung
 
@@ -759,9 +771,9 @@ stand:
     past: stood
 
 stave:
-  participle: staved/stove
+  participle: [staved, stove]
   irregular:
-    past: staved/stove
+    past: [staved, stove]
 
 steal:
   participle: stole
@@ -786,17 +798,17 @@ stink:
 strew:
   participle: strewed
   irregular:
-    past: strewn/strewed
+    past: [strewn, strewed]
 
 stride:
   participle: strode
   irregular:
-    past: stridden/strode
+    past: [stridden, strode]
 
 strike:
   participle: struck
   irregular:
-    past: struck/stricken
+    past: [struck, stricken]
 
 string:
   participle: strung
@@ -804,9 +816,9 @@ string:
     past: strung
 
 strive:
-  participle: strove/strived
+  participle: [strove, strived]
   irregular:
-    past: striven/strived
+    past: [striven, strived]
 
 swear:
   participle: swore
@@ -814,9 +826,9 @@ swear:
     past: sworn
 
 sweat:
-  participle: sweated/sweat
+  participle: [sweated, sweat]
   irregular:
-    past: sweated/sweat
+    past: [sweated, sweat]
 
 sweep:
   participle: swept
@@ -826,7 +838,7 @@ sweep:
 swell:
   participle: swelled
   irregular:
-    past: swollen/swelled
+    past: [swollen, swelled]
 
 swim:
   participle: swam
@@ -834,7 +846,7 @@ swim:
     past: swum
 
 swing:
-  participle: swang/swung
+  participle: [swang, swung]
   irregular:
     past: swung
 
@@ -864,9 +876,9 @@ think:
     past: thought
 
 thrive:
-  participle: thrived/throve
+  participle: [thrived, throve]
   irregular:
-    past: thrived/thriven
+    past: [thrived, thriven]
 
 throw:
   participle: threw
@@ -874,14 +886,14 @@ throw:
     past: thrown
 
 thrust:
-  participle: thrust/thrusted
+  participle: [thrust, thrusted]
   irregular:
-    past: thrust/thrusted
+    past: [thrust, thrusted]
 
 tread:
   participle: trod
   irregular:
-    past: trodden/trod
+    past: [trodden, trod]
 
 wake:
   participle: woke
@@ -899,9 +911,9 @@ weave:
     past: woven
 
 wed:
-  participle: wed/wedded
+  participle: [wed, wedded]
   irregular:
-    past: wed/wedded
+    past: [wed, wedded]
 
 weep:
   participle: wept
@@ -909,9 +921,9 @@ weep:
     past: wept
 
 wet:
-  participle: wet/wetted
+  participle: [wet, wetted]
   irregular:
-    past: wet/wetted
+    past: [wet, wetted]
 
 win:
   participle: won
@@ -919,12 +931,15 @@ win:
     past: won
 
 wind:
-  participle: wound
-  irregular:
-    past: wound # [but regular in the meanings connected with air and breath]
+  variations:
+    - definition: to wind as in string
+      participle: wound
+      irregular:
+        past: wound
+    - definition: to knock the wind out, or in the passive to be out of breath # [but regular in the meanings connected with air and breath]
 
 wring:
-  participle: wrang/wrung
+  participle: [wrang, wrung]
   irregular:
     past: wrung
 
