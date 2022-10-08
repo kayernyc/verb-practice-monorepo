@@ -25,6 +25,8 @@ have:
     past: had
 
 bear:
+  translations:
+    de: ertragen
   participle: bore
   irregular:
     past: borne
@@ -37,16 +39,22 @@ beat:
     past: beat
 
 begin:
+  translations:
+    de: beginnen
   participle: begun
   irregular:
     past: began
 
 bend:
+  translations:
+    de: biegen
   participle: bent
   irregular:
     past: bent
 
 bet:
+  translations:
+    de: wetten
   participle: bet
   irregular:
     past: bet # [past tense and participle also sometimes betted]
@@ -54,30 +62,42 @@ bet:
 bid:
   variations:
     - definition: as in an auction
+      translations:
+        de: um ein Gebot abzugeben
       participle: bid
       irregular:
         past: bid
     - definition: meaning "request"
+      translations:
+        de: bieten
       participle: [bade, bid]
       irregular:
         past: bidden, bid
 
 bide:
+  translations:
+    de: ab|warten
   participle: [bided, bode]
   irregular:
     past: [bided, bidden]
 
 bind:
+  translations:
+    de: binden
   participle: bound
   irregular:
     past: bound
 
 bite:
+  translations:
+    de: beißen
   participle: bit
   irregular:
     past: bitten
 
 bleed:
+  translations:
+    de: bluten
   participle: bled
   irregular:
     past: bled
@@ -88,61 +108,85 @@ blow:
     past: blown
 
 break:
+  translations:
+    de: brechen
   participle: broke
   irregular:
     past: broken
 
 breed:
+  translations:
+    de: züchten
   participle: bred
   irregular:
     past: bred
 
 bring:
+  translations:
+    de: bringen
   participle: brought
   irregular:
     past: brought
 
 build:
+  translations:
+    de: bilden
   participle: built
   irregular:
     past: built
 
 burn:
+  translations:
+    de: brennen
   participle: [burnt, burned]
   irregular:
     past: [burnt, burned]
 
 burst:
+  translations:
+    de: platzen
   participle: burst
   irregular:
     past: burst
 
 buy:
+  translations:
+    de: kaufen
   participle: bought
   irregular:
     past: bought
 
 cast:
+  translations:
+    de: gießen
   participle: cast
   irregular:
     past: cast
 
 catch:
+  translations:
+    de: erwischen
   participle: caught
   irregular:
     past: caught
 
 choose:
+  translations:
+    de: wählen
   participle: chose
   irregular:
     past: chosen
 
 clad:
+  translations:
+    de: bekleiden
   participle: [clad, cladded]
   irregular:
     past: [clad, cladded] # [clad is also sometimes used as past form of clothe]
 
 cleave:
+  translations:
+    de: spalten
   participle: [clove, cleft]
   irregular:
     past: [cloven, cleft] # [but regular when meaning "adhere"]
@@ -153,6 +197,8 @@ cling:
     past: clung
 
 come:
+  translations:
+    de: kommen
   participle: came
   irregular:
     past: come
@@ -218,16 +264,22 @@ draw:
     past: drawn
 
 dream:
+  translations:
+    de: traumen
   participle: [dreamed, dreamt]
   irregular:
     past: [dreamed, dreamt]
 
 drink:
+  translations:
+    de: trinken
   participle: drank
   irregular:
     past: drunk
 
 drive:
+  translations:
+    de: fahren
   participle: drove
   irregular:
     past: driven
@@ -242,11 +294,15 @@ exist:
     fr: exister
 
 eat:
+  translations:
+    de: essen
   participle: ate
   irregular:
     past: eaten
 
 fall:
+  translations:
+    de: fallen
   participle: fell
   irregular:
     past: fallen
@@ -327,6 +383,8 @@ give:
     past: given
 
 go:
+  translations:
+    de: gehen
   participle: went
   irregular:
     past: gone # [see also have been]
