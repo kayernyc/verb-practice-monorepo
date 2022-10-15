@@ -13,7 +13,8 @@
     "prettier:fix": "prettier --write 'src/**/*.ts'",
     "test": "jest --coverage",
     "englishbuild": "sh scripts/build.sh && tsc && node -e 'require(\"./dist/models/english/englishBuildJsonFromYml.js\").weedOutDuplicates()'",
-    "lint": "eslint --ext .js,.ts . --fix"
+    "lint": "eslint --ext .js,.ts . --fix",
+    "prep": "sh scripts/remove-duplicates.sh"
   },
   "keywords": [],
   "author": "",

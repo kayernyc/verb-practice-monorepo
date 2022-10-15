@@ -1,1620 +1,2159 @@
 abide:
+  language: en
   translations:
 
 create:
+  language: en
   translations:
     de: schaffen
 
 move:
+  language: en
   translations:
     de: bewegen
 
 detect:
+  language: en
   translations:
 
 receive:
+  language: en
   translations:
 
 use:
+  language: en
   translations:
 
 consume:
+  language: en
   translations:
 
 discover:
+  language: en
   translations:
 
 signify:
+  language: en
   translations:
 
 turninto:
+  language: en
   translations:
 
 escape:
+  language: en
   translations:
 
 work:
+  language: en
   translations:
 
 demand:
+  language: en
   translations:
 
 seem:
+  language: en
   translations:
 
 ask:
+  language: en
   translations:
     de: fragen
 
 question:
+  language: en
   translations:
 
 demonstrate:
+  language: en
   translations:
 
 try:
+  language: en
   translations:
     de: versuchen
 
 supply:
+  language: en
   translations:
 
 turn:
+  language: en
   translations:
 
 twist:
+  language: en
   translations:
 
 pursue:
+  language: en
   translations:
 
 like:
+  language: en
   translations:
 
 active:
+  language: en
   translations:
 
 help:
+  language: en
   translations:
 
 assist:
+  language: en
   translations:
 
 start:
+  language: en
   translations:
 
 operate:
+  language: en
   translations:
 
 compose:
+  language: en
   translations:
 
 place:
+  language: en
   translations:
 
 play:
+  language: en
   translations:
 
 act:
+  language: en
   translations:
 
 compensate:
+  language: en
   translations:
 
 include:
+  language: en
   translations:
 
 add:
+  language: en
   translations:
 
 believe:
+  language: en
   translations:
 
 face:
+  language: en
   translations:
 
 guide:
+  language: en
   translations:
 
 live:
+  language: en
   translations:
 
 happen:
+  language: en
   translations:
 
 appear:
+  language: en
   translations:
 
 carry:
+  language: en
   translations:
 
 talk:
+  language: en
   translations:
 
 chat:
+  language: en
   translations:
 
 produce:
+  language: en
   translations:
 
 offer:
+  language: en
   translations:
 
 propose:
+  language: en
   translations:
 
 consider:
+  language: en
   translations:
 
 expect:
+  language: en
   translations:
 
 suggest:
+  language: en
   translations:
 
 advocate:
+  language: en
   translations:
 
 require:
+  language: en
   translations:
 
 want:
+  language: en
   translations:
 
 last:
+  language: en
   translations:
 
 count:
+  language: en
   translations:
 
 change:
+  language: en
   translations:
 
 alter:
+  language: en
   translations:
 
 collapse:
+  language: en
   translations:
 
 continue:
+  language: en
   translations:
 
 stop:
+  language: en
   translations:
 
 understand:
+  language: en
   translations:
 
 describe:
+  language: en
   translations:
 
 detail:
+  language: en
   translations:
 
 develop:
+  language: en
   translations:
 
 concur:
+  language: en
   translations:
 
 reach:
+  language: en
   translations:
 
 construct:
+  language: en
   translations:
 
 involve:
+  language: en
   translations:
 
 affect:
+  language: en
   translations:
 
 return:
+  language: en
   translations:
 
 pull:
+  language: en
   translations:
 
 die:
+  language: en
   translations:
 
 fail:
+  language: en
   translations:
 
 hope:
+  language: en
   translations:
 
 walk:
+  language: en
   translations:
 
 travel:
+  language: en
   translations:
 
 sale:
+  language: en
   translations:
 
 wait:
+  language: en
   translations:
 
 delay:
+  language: en
   translations:
 
 cause:
+  language: en
   translations:
 
 pass:
+  language: en
   translations:
 
 accept:
+  language: en
   translations:
 
 watch:
+  language: en
   translations:
 
 raise:
+  language: en
   translations:
 
 elevate:
+  language: en
   translations:
 
 base:
+  language: en
   translations:
 
 found:
+  language: en
   translations:
 
 apply:
+  language: en
   translations:
 
 employ:
+  language: en
   translations:
 
 fallapart:
+  language: en
   translations:
 
 explain:
+  language: en
   translations:
 
 excuse:
+  language: en
   translations:
 
 acquire:
+  language: en
   translations:
 
 increase:
+  language: en
   translations:
 
 claim:
+  language: en
   translations:
 
 report:
+  language: en
   translations:
 
 cover:
+  language: en
   translations:
 
 support:
+  language: en
   translations:
 
 backup:
+  language: en
   translations:
 
 trim:
+  language: en
   translations:
 
 form:
+  language: en
   translations:
 
 remain:
+  language: en
   translations:
 
 reduce:
+  language: en
   translations:
 
 establish:
+  language: en
   translations:
 
 join:
+  language: en
   translations:
 
 wish:
+  language: en
   translations:
 
 desire:
+  language: en
   translations:
 
 achieve:
+  language: en
   translations:
 
 succeed:
+  language: en
   translations:
 
 search:
+  language: en
   translations:
 
 select:
+  language: en
   translations:
 
 plow:
+  language: en
   translations:
 
 confront:
+  language: en
   translations:
 
 flunk:
+  language: en
   translations:
 
 serve:
+  language: en
   translations:
 
 provide:
+  language: en
   translations:
 
 end:
+  language: en
   translations:
 
 terminate:
+  language: en
   translations:
 
 kill:
+  language: en
   translations:
 
 defeat:
+  language: en
   translations:
 
 occur:
+  language: en
   translations:
 
 repel:
+  language: en
   translations:
 
 represent:
+  language: en
   translations:
 
 discuss:
+  language: en
   translations:
 
 talkover:
+  language: en
   translations:
 
 pick:
+  language: en
   translations:
 
 argue:
+  language: en
   translations:
 
 debate:
+  language: en
   translations:
 
 testify:
+  language: en
   translations:
 
 capture:
+  language: en
   translations:
 
 enjoy:
+  language: en
   translations:
 
 love:
+  language: en
   translations:
 
 introduce:
+  language: en
   translations:
 
 enter:
+  language: en
   translations:
 
 enroll:
+  language: en
   translations:
 
 present:
+  language: en
   translations:
 
 point:
+  language: en
   translations:
 
 intend:
+  language: en
   translations:
 
 refer:
+  language: en
   translations:
 
 mention:
+  language: en
   translations:
 
 behave:
+  language: en
   translations:
 
 relate:
+  language: en
   translations:
 
 close:
+  language: en
   translations:
 
 identify:
+  language: en
   translations:
 
 name:
+  language: en
   translations:
 
 manage:
+  language: en
   translations:
 
 thank:
+  language: en
   translations:
 
 convey:
+  language: en
   translations:
 
 compare:
+  language: en
   translations:
 
 equate:
+  language: en
   translations:
 
 announce:
+  language: en
   translations:
 
 declare:
+  language: en
   translations:
 
 obtain:
+  language: en
   translations:
 
 note:
+  language: en
   translations:
 
 observe:
+  language: en
   translations:
 
 indicate:
+  language: en
   translations:
 
 wonder:
+  language: en
   translations:
 
 enquire:
+  language: en
   translations:
 
 maintain:
+  language: en
   translations:
 
 publish:
+  language: en
   translations:
 
 print:
+  language: en
   translations:
 
 suffer:
+  language: en
   translations:
 
 endure:
+  language: en
   translations:
 
 avoid:
+  language: en
   translations:
 
 annul:
+  language: en
   translations:
 
 express:
+  language: en
   translations:
 
 suppose:
+  language: en
   translations:
 
 determine:
+  language: en
   translations:
 
 design:
+  language: en
   translations:
 
 listen:
+  language: en
   translations:
 
 save:
+  language: en
   translations:
 
 tend:
+  language: en
   translations:
 
 treat:
+  language: en
   translations:
 
 process:
+  language: en
   translations:
 
 control:
+  language: en
   translations:
 
 command:
+  language: en
   translations:
 
 share:
+  language: en
   translations:
 
 remove:
+  language: en
   translations:
 
 withdraw:
+  language: en
   translations:
 
 drop:
+  language: en
   translations:
 
 visit:
+  language: en
   translations:
 
 encourage:
+  language: en
   translations:
 
 force:
+  language: en
   translations:
 
 push:
+  language: en
   translations:
 
 reflect:
+  language: en
   translations:
 
 ponder:
+  language: en
   translations:
 
 admit:
+  language: en
   translations:
 
 assume:
+  language: en
   translations:
 
 presume:
+  language: en
   translations:
 
 smile:
+  language: en
   translations:
 
 grin:
+  language: en
   translations:
 
 prepare:
+  language: en
   translations:
 
 fix:
+  language: en
   translations:
 
 replace:
+  language: en
   translations:
 
 fill:
+  language: en
   translations:
 
 improve:
+  language: en
   translations:
 
 better:
+  language: en
   translations:
 
 reference:
+  language: en
   translations:
 
 battle:
+  language: en
   translations:
 
 omit:
+  language: en
   translations:
 
 unload:
+  language: en
   translations:
 
 forward:
+  language: en
   translations:
 
 prevent:
+  language: en
   translations:
 
 refuse:
+  language: en
   translations:
 
 regard:
+  language: en
   translations:
 
 reveal:
+  language: en
   translations:
 
 uncover:
+  language: en
   translations:
 
 educate:
+  language: en
   translations:
 
 answer:
+  language: en
   translations:
 
 reply:
+  language: en
   translations:
 
 state:
+  language: en
   translations:
 
 depend:
+  language: en
   translations:
 
 enable:
+  language: en
   translations:
 
 record:
+  language: en
   translations:
 
 register:
+  language: en
   translations:
 
 check:
+  language: en
   translations:
 
 analyze:
+  language: en
   translations:
 
 complete:
+  language: en
   translations:
 
 sound:
+  language: en
   translations:
 
 vocalize:
+  language: en
   translations:
 
 laugh:
+  language: en
   translations:
 
 extend:
+  language: en
   translations:
 
 arise:
+  language: en
   translations:
 
 notice:
+  language: en
   translations:
 
 define:
+  language: en
   translations:
 
 specify:
+  language: en
   translations:
 
 examine:
+  language: en
   translations:
 
 suit:
+  language: en
   translations:
 
 study:
+  language: en
   translations:
 
 recognise:
+  language: en
   translations:
 
 realize:
+  language: en
   translations:
 
 sway:
+  language: en
   translations:
 
 sign:
+  language: en
   translations:
 
 hire:
+  language: en
   translations:
 
 attend:
+  language: en
   translations:
 
 perform:
+  language: en
   translations:
 
 execute:
+  language: en
   translations:
 
 result:
+  language: en
   translations:
 
 ensure:
+  language: en
   translations:
 
 journey:
+  language: en
   translations:
 
 adopt:
+  language: en
   translations:
 
 confirm:
+  language: en
   translations:
 
 affirm:
+  language: en
   translations:
 
 protect:
+  language: en
   translations:
 
 defend:
+  language: en
   translations:
 
 stare:
+  language: en
   translations:
 
 look:
+  language: en
   translations:
 
 imagine:
+  language: en
   translations:
 
 attempt:
+  language: en
   translations:
 
 associate:
+  language: en
   translations:
 
 care:
+  language: en
   translations:
 
 marry:
+  language: en
   translations:
 
 officiate:
+  language: en
   translations:
 
 collect:
+  language: en
   translations:
 
 compile:
+  language: en
   translations:
 
 voice:
+  language: en
   translations:
 
 issue:
+  language: en
   translations:
 
 release:
+  language: en
   translations:
 
 free:
+  language: en
   translations:
 
 emerge:
+  language: en
   translations:
 
 beware:
+  language: en
   translations:
 
 aim:
+  language: en
   translations:
 
 mark:
+  language: en
   translations:
 
 injure:
+  language: en
   translations:
 
 appoint:
+  language: en
   translations:
 
 order:
+  language: en
   translations:
 
 ignore:
+  language: en
   translations:
 
 link:
+  language: en
   translations:
 
 settle:
+  language: en
   translations:
 
 press:
+  language: en
   translations:
 
 compress:
+  language: en
   translations:
 
 respond:
+  language: en
   translations:
 
 survive:
+  language: en
   translations:
 
 concentrate:
+  language: en
   translations:
 
 focus:
+  language: en
   translations:
 
 lift:
+  language: en
   translations:
 
 approach:
+  language: en
   translations:
 
 near:
+  language: en
   translations:
 
 cross:
+  language: en
   translations:
 
 track:
+  language: en
   translations:
 
 test:
+  language: en
   translations:
 
 evaluate:
+  language: en
   translations:
 
 experience:
+  language: en
   translations:
 
 touch:
+  language: en
   translations:
 
 contact:
+  language: en
   translations:
 
 commit:
+  language: en
   translations:
 
 devote:
+  language: en
   translations:
 
 grant:
+  language: en
   translations:
 
 agree:
+  language: en
   translations:
 
 prefer:
+  language: en
   translations:
 
 repeat:
+  language: en
   translations:
 
 recur:
+  language: en
   translations:
 
 rest:
+  language: en
   translations:
 
 threaten:
+  language: en
   translations:
 
 menace:
+  language: en
   translations:
 
 insist:
+  language: en
   translations:
 
 importune:
+  language: en
   translations:
 
 launch:
+  language: en
   translations:
 
 open:
+  language: en
   translations:
 
 limit:
+  language: en
   translations:
 
 restrict:
+  language: en
   translations:
 
 promote:
+  language: en
   translations:
 
 deliver:
+  language: en
   translations:
 
 measure:
+  language: en
   translations:
 
 own:
+  language: en
   translations:
 
 retain:
+  language: en
   translations:
 
 assess:
+  language: en
   translations:
 
 attract:
+  language: en
   translations:
 
 belong:
+  language: en
   translations:
 
 reside:
+  language: en
   translations:
 
 consist:
+  language: en
   translations:
 
 contribute:
+  language: en
   translations:
 
 conceal:
+  language: en
   translations:
 
 promise:
+  language: en
   translations:
 
 assure:
+  language: en
   translations:
 
 reject:
+  language: en
   translations:
 
 deny:
+  language: en
   translations:
 
 cry:
+  language: en
   translations:
 
 impose:
+  language: en
   translations:
 
 enforce:
+  language: en
   translations:
 
 invite:
+  language: en
   translations:
 
 tempt:
+  language: en
   translations:
 
 chant:
+  language: en
   translations:
 
 vary:
+  language: en
   translations:
 
 warn:
+  language: en
   translations:
 
 discourage:
+  language: en
   translations:
 
 address:
+  language: en
   translations:
 
 call:
+  language: en
   translations:
 
 destroy:
+  language: en
   translations:
 
 demolish:
+  language: en
   translations:
 
 worry:
+  language: en
   translations:
 
 mind:
+  language: en
   translations:
 
 divide:
+  language: en
   translations:
 
 head:
+  language: en
   translations:
 
 steer:
+  language: en
   translations:
 
 label:
+  language: en
   translations:
 
 nod:
+  language: en
   translations:
 
 recognize:
+  language: en
   translations:
 
 train:
+  language: en
   translations:
 
 attack:
+  language: en
   translations:
 
 clear:
+  language: en
   translations:
 
 combine:
+  language: en
   translations:
 
 unite:
+  language: en
   translations:
 
 handle:
+  language: en
   translations:
 
 influence:
+  language: en
   translations:
 
 shape:
+  language: en
   translations:
 
 recommend:
+  language: en
   translations:
 
 urge:
+  language: en
   translations:
 
 shout:
+  language: en
   translations:
 
 utter:
+  language: en
   translations:
 
 undertake:
+  language: en
   translations:
 
 initiate:
+  language: en
   translations:
 
 account:
+  language: en
   translations:
 
 climb:
+  language: en
   translations:
 
 secure:
+  language: en
   translations:
 
 procure:
+  language: en
   translations:
 
 step:
+  language: en
   translations:
 
 transfer:
+  language: en
   translations:
 
 welcome:
+  language: en
   translations:
 
 conclude:
+  language: en
   translations:
 
 finish:
+  language: en
   translations:
 
 disappear:
+  language: en
   translations:
 
 vanish:
+  language: en
   translations:
 
 display:
+  language: en
   translations:
 
 dress:
+  language: en
   translations:
 
 clothe:
+  language: en
   translations:
 
 illustrate:
+  language: en
   translations:
 
 depict:
+  language: en
   translations:
 
 imply:
+  language: en
   translations:
 
 connote:
+  language: en
   translations:
 
 organise:
+  language: en
   translations:
 
 plan:
+  language: en
   translations:
 
 direct:
+  language: en
   translations:
 
 target:
+  language: en
   translations:
 
 generate:
+  language: en
   translations:
 
 investigate:
+  language: en
   translations:
 
 remind:
+  language: en
   translations:
 
 remember:
+  language: en
   translations:
 
 counsel:
+  language: en
   translations:
 
 afford:
+  language: en
   translations:
 
 earn:
+  language: en
   translations:
 
 gain:
+  language: en
   translations:
 
 hand:
+  language: en
   translations:
 
 inform:
+  language: en
   translations:
 
 advise:
+  language: en
   translations:
 
 trust:
+  language: en
   translations:
 
 approve:
+  language: en
   translations:
 
 fear:
+  language: en
   translations:
 
 dread:
+  language: en
   translations:
 
 vote:
+  language: en
   translations:
 
 conduct:
+  language: en
   translations:
 
 carryout:
+  language: en
   translations:
 
 cope:
+  language: en
   translations:
 
 derive:
+  language: en
   translations:
 
 elect:
+  language: en
   translations:
 
 gather:
+  language: en
   translations:
 
 jump:
+  language: en
   translations:
 
 match:
+  language: en
   translations:
 
 equal:
+  language: en
   translations:
 
 matter:
+  language: en
   translations:
 
 persuade:
+  language: en
   translations:
 
 float:
+  language: en
   translations:
 
 estimate:
+  language: en
   translations:
 
 recover:
+  language: en
   translations:
 
 score:
+  language: en
   translations:
 
 slip:
+  language: en
   translations:
 
 weigh:
+  language: en
   translations:
 
 hate:
+  language: en
   translations:
 
 dislike:
+  language: en
   translations:
 
 attach:
+  language: en
   translations:
 
 exercise:
+  language: en
   translations:
 
 exert:
+  language: en
   translations:
 
 house:
+  language: en
   translations:
 
 stay:
+  language: en
   translations:
 
 roll:
+  language: en
   translations:
 
 wash:
+  language: en
   translations:
 
 accompany:
+  language: en
   translations:
 
 follow:
+  language: en
   translations:
 
 accuse:
+  language: en
   translations:
 
 charge:
+  language: en
   translations:
 
 adhere:
+  language: en
   translations:
 
 explore:
+  language: en
   translations:
 
 judge:
+  language: en
   translations:
 
 decide:
+  language: en
   translations:
 
 comment:
+  language: en
   translations:
 
 assert:
+  language: en
   translations:
 
 exclude:
+  language: en
   translations:
 
 except:
+  language: en
   translations:
 
 adjust:
+  language: en
   translations:
 
 ache:
+  language: en
   translations:
 
 stretch:
+  language: en
   translations:
 
 retreat:
+  language: en
   translations:
 
 back:
+  language: en
   translations:
 
 endorse:
+  language: en
   translations:
 
 justify:
+  language: en
   translations:
 
 warrant:
+  language: en
   translations:
 
 knock:
+  language: en
   translations:
 
 bump:
+  language: en
   translations:
 
 prosecute:
+  language: en
   translations:
 
 switch:
+  language: en
   translations:
 
 trade:
+  language: en
   translations:
 
 appreciate:
+  language: en
   translations:
 
 value:
+  language: en
   translations:
 
 benefit:
+  language: en
   translations:
 
 lack:
+  language: en
   translations:
 
 miss:
+  language: en
   translations:
 
 list:
+  language: en
   translations:
 
 occupy:
+  language: en
   translations:
 
 busy:
+  language: en
   translations:
 
 permit:
+  language: en
   translations:
 
 allow:
+  language: en
   translations:
 
 surround:
+  language: en
   translations:
 
 circle:
+  language: en
   translations:
 
 abandon:
+  language: en
   translations:
 
 blame:
+  language: en
   translations:
 
 fault:
+  language: en
   translations:
 
 complain:
+  language: en
   translations:
 
 protest:
+  language: en
   translations:
 
 connect:
+  language: en
   translations:
 
 dominate:
+  language: en
   translations:
 
 paint:
+  language: en
   translations:
 
 quote:
+  language: en
   translations:
 
 view:
+  language: en
   translations:
 
 acknowledge:
+  language: en
   translations:
 
 dismiss:
+  language: en
   translations:
 
 displace:
+  language: en
   translations:
 
 incorporate:
+  language: en
   translations:
 
 interpret:
+  language: en
   translations:
 
 proceed:
+  language: en
   translations:
 
 separate:
+  language: en
   translations:
 
 stress:
+  language: en
   translations:
 
 analyse:
+  language: en
   translations:
 
 research:
+  language: en
   translations:
 
 arrest:
+  language: en
   translations:
 
 contain:
+  language: en
   translations:
 
 bother:
+  language: en
   translations:
 
 annoy:
+  language: en
   translations:
 
 expand:
+  language: en
   translations:
 
 implement:
+  language: en
   translations:
 
 applicate:
+  language: en
   translations:
 
 possess:
+  language: en
   translations:
 
 review:
+  language: en
   translations:
 
 tie:
+  language: en
   translations:
 
 calculate:
+  language: en
   translations:
 
 reason:
+  language: en
   translations:
 
 glance:
+  language: en
   translations:
 
 mix:
+  language: en
   translations:
 
 blend:
+  language: en
   translations:
 
 resolve:
+  language: en
   translations:
 
 rule:
+  language: en
   translations:
 
 govern:
+  language: en
   translations:
 
 suspect:
+  language: en
   translations:
 
 awake:
+  language: en
   translations:
 
 appeal:
+  language: en
   translations:
 
 request:
+  language: en
   translations:
 
 challenge:
+  language: en
   translations:
 
 contest:
+  language: en
   translations:
 
 clean:
+  language: en
   translations:
 
 cleanse:
+  language: en
   translations:
 
 damage:
+  language: en
   translations:
 
 harm:
+  language: en
   translations:
 
 guess:
+  language: en
   translations:
 
 reckon:
+  language: en
   translations:
 
 restore:
+  language: en
   translations:
 
 repair:
+  language: en
   translations:
 
 constitute:
+  language: en
   translations:
 
 convert:
+  language: en
   translations:
 
 distinguish:
+  language: en
   translations:
 
 submit:
+  language: en
   translations:
 
 rely:
+  language: en
   translations:
 
 feature:
+  language: en
   translations:
 
 land:
+  language: en
   translations:
 
 arrive:
+  language: en
   translations:
 
 locate:
+  language: en
   translations:
 
 predict:
+  language: en
   translations:
 
 preserve:
+  language: en
   translations:
 
 solve:
+  language: en
   translations:
 
 sort:
+  language: en
   translations:
 
 arrange:
+  language: en
   translations:
 
 struggle:
+  language: en
   translations:
 
 cook:
+  language: en
   translations:
 
 bake:
+  language: en
   translations:
 
 dance:
+  language: en
   translations:
 
 invest:
+  language: en
   translations:
 
 lock:
+  language: en
   translations:
 
 engage:
+  language: en
   translations:
 
 owe:
+  language: en
   translations:
 
 incur:
+  language: en
   translations:
 
 pour:
+  language: en
   translations:
 
 shift:
+  language: en
   translations:
 
 kick:
+  language: en
   translations:
 
 kiss:
+  language: en
   translations:
 
 salute:
+  language: en
   translations:
 
 illuminate:
+  language: en
   translations:
 
 purchase:
+  language: en
   translations:
 
 race:
+  language: en
   translations:
 
 chase:
+  language: en
   translations:
 
 retire:
+  language: en
   translations:
 
 depart:
+  language: en
   translations:
