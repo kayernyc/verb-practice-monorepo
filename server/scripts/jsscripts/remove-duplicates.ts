@@ -3,8 +3,6 @@ import path from 'path';
 import yaml from 'js-yaml';
 
 const args = process.argv;
-// eslint-disable-next-line no-console
-console.log(args);
 const filesArray: string[] = args.slice(2);
 
 type DataObj = {
@@ -23,30 +21,37 @@ type DataObj = {
   'drop ich/es pr\u00e4sens endings'?: boolean;
 };
 
-export function weedOutDuplicates() {
+export function weedOutDuplicates(_filesArray = filesArray) {
   const seenVerbs = {
     de: [],
     en: [],
   };
   // eslint-disable-next-line no-console
-  console.log({ filesArray });
+  console.log({ _filesArray });
 
-  filesArray.forEach((filePath: string) => {
+  _filesArray.forEach((filePath: string) => {
     // eslint-disable-next-line no-console
     try {
+      // eslint-disable-next-line no-console
+      console.log(filePath);
       const fileContents = fs.readFileSync(path.resolve(__dirname, '../../', filePath), 'utf8');
       const data = yaml.load(fileContents) as { [x: string]: DataObj };
 
+      // eslint-disable-next-line no-console
+      console.log(data);
+
       Object.keys(data).forEach((key: string) => {
-        const langKey = data[key].language;
+        if (key !== 'date') {
+          const langKey = data[key].language;
 
-        const wordArray = seenVerbs[langKey] as string[];
+          const wordArray = seenVerbs[langKey] as string[];
 
-        if (!wordArray.includes(key)) {
-          wordArray.push(key);
-        } else {
-          // eslint-disable-next-line no-console
-          console.warn(`${filePath} ${key} is a duplicate`);
+          if (!wordArray.includes(key)) {
+            wordArray.push(key);
+          } else {
+            // eslint-disable-next-line no-console
+            console.warn(`${filePath} ${key} is a duplicate`);
+          }
         }
       });
     } catch (err) {

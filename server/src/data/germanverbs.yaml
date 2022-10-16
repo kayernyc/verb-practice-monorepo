@@ -1606,98 +1606,98 @@ auf|tauchen:
 ein|richten:
   language: de
   translations:
-    en:  en: to establish, to furnish, to organize
+    en: to establish, to furnish, to organize
 
 aus|sagen:
   language: de
   translations:
-    en:  en: to state, to testify
+    en: to state, to testify
 
 sammeln:
   language: de
   translations:
-    en:  en: to gather, to collect
+    en: to gather, to collect
 
 wischen:
   language: de
   translations:
-    en:  en: to wipe, to mop
+    en: to wipe, to mop
 
 erwischen:
   language: de
   translations:
-    en:  en: to catch, to seize, to get hold of
+    en: to catch, to seize, to get hold of
 
 bestellen:
   language: de
   translations:
-    en:  en: to order, to request, to comission, to book
+    en: to order, to request, to comission, to book
 
 versetzen:
   language: de
   translations:
-    en:  en: to relocate, to transfer, to deploy, to retort
+    en: to relocate, to transfer, to deploy, to retort
 
 auf|gehen:
   language: de
   translations:
-    en:  en: to rise, to realise, to pan out
+    en: to rise, to realise, to pan out
 
 schnappen:
   language: de
   translations:
-    en:  en: to snatch, to grab
+    en: to snatch, to grab
 
 klettern:
   language: de
   translations:
-    en:  en: to climb
+    en: to climb
   hilfsverb: sein
 
 ergreifen:
   language: de
   translations:
-    en:  en: to seize, to grasp
+    en: to seize, to grasp
 
 winken:
   language: de
   translations:
-    en:  en: to wave
+    en: to wave
 
 antworten:
   language: de
   translations:
-    en:  en: to answer, to reply
+    en: to answer, to reply
 
 fassen:
   language: de
   translations:
-    en:  en: to grip, to catch, to comprehend
+    en: to grip, to catch, to comprehend
 
 wackeln:
   language: de
   translations:
-    en:  en: to wobble, to shake, to wiggle
+    en: to wobble, to shake, to wiggle
 
 schauen:
   language: de
   translations:
-    en:  en: to look, to see
+    en: to look, to see
 
 begreifen:
   language: de
   translations:
-    en:  en: to understand, to fathom
+    en: to understand, to fathom
 
 hoch|klettern:
   language: de
   translations:
-    en:  en: to climb up
+    en: to climb up
 
 rufen:
   language: de
   translations:
-    en:  en: to call, to exclaim
+    en: to call, to exclaim
   strong:
   stems:
     präteritum: ie
