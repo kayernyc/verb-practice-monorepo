@@ -12,13 +12,13 @@
       "@data/*": ["./data/*"]
     },
     "resolveJsonModule": true,
-    "rootDir": "./src",
+    "rootDir": "./",
     "sourceMap": true,
     "target": "es6"
   },
   "lib": ["es6"],
   "exclude": ["node_modules", "coverage", "**.spec.ts"],
-  "include": ["src"],
+  "include": ["src", "scripts/jsscripts"],
   "max-line-length": [
     true,
    {

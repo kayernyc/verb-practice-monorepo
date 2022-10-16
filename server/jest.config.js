@@ -7,8 +7,11 @@ module.exports = {
   },
   preset: 'ts-jest',
   testEnvironment: 'node',
-  testMatch: ['<rootDir>/src/**/?(*.)(spec|test).{js,jsx,ts,tsx}'],
-  testPathIgnorePatterns: ['dist'],
+  testMatch: [
+    '<rootDir>/src/**/?(*.)(spec|test).{js,jsx,ts,tsx}',
+    '<rootDir>/scripts/**/?(*.)(spec|test).{js,jsx,ts,tsx}',
+  ],
+  testPathIgnorePatterns: ['dist', 'node_modules'],
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
