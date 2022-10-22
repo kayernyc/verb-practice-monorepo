@@ -14,7 +14,8 @@
     "test": "jest --coverage",
     "englishbuild": "sh scripts/build.sh && tsc && node -e 'require(\"./dist/models/english/englishBuildJsonFromYml.js\").weedOutDuplicates()'",
     "lint": "eslint --ext .js,.ts . --fix",
-    "prep": "sh scripts/remove-duplicates.sh"
+    "prep": "sh scripts/remove-duplicates.sh",
+    "build": "tsc -p tsconfig.server.json"
   },
   "keywords": [],
   "author": "",
