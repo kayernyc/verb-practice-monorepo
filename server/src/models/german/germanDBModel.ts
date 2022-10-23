@@ -11,7 +11,7 @@ export const convertHydrationToModel = (verb: GermanVerbHydrated): GermanVerbHyd
   Object.keys(verb).forEach((key: string) => {
     if (germanTenses.includes(key as unknown as GermanTenses)) {
       // it's a tense conjugation object
-      const tense = GermanTenses[key] as GermanTenses
+      const tense = GermanTenses[key] as GermanTenses;
       let conjugations: GermanConjugationModel[] = [];
       const obj = verb[key] as { [person: string]: string }[];
 

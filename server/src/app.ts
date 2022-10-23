@@ -2,7 +2,7 @@ import * as dotenv from 'dotenv'; // see https://github.com/motdotla/dotenv#how-
 import express from 'express';
 import cors from 'cors';
 
-import englishRouter from 'routes/english';
+import englishRouter from './routes/english';
 import deutschRouter from './routes/deutsch';
 
 dotenv.config();

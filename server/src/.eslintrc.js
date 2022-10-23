@@ -13,8 +13,6 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 13,
     sourceType: 'module',
-    project: 'tsconfig.json',
-    tsconfigRootDir: __dirname,
   },
   plugins: ['@typescript-eslint', 'import'],
   rules: {
@@ -46,7 +44,7 @@ module.exports = {
     'import/resolver': {
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
-        moduleDirectory: ['node_modules', 'src/', 'db'],
+        moduleDirectory: ['node_modules', './', './src/', 'db'],
       },
       typescript: {},
     },

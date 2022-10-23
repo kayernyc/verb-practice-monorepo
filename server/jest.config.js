@@ -3,6 +3,7 @@ module.exports = {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   moduleNameMapper: {
     '@german(.*)$': '<rootDir>/src/models/german$1',
+    '@models(.*)$': '<rootDir>/src/models$1',
     '@data(.*)$': '<rootDir>/src/data$1',
   },
   preset: 'ts-jest',

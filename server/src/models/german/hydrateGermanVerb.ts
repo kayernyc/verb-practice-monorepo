@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 import kranton from '@german/propertyTestFunctions/kranton';
-import { GermanJsonData } from 'models/jsonTypes';
+import { GermanJsonData } from '@models/jsonTypes';
 import {
   GermanPronounKeys, GermanTenses, GermanVerb, GermanVerbHydrated,
 } from './germanTypes';
@@ -13,6 +13,7 @@ function importJsonData(): GermanJsonData {
   try {
     const jsonPath = path.resolve(__dirname, '..', '..', './data/germanVerbsUnhydrated.json');
     const data: string = fs.readFileSync(jsonPath, 'utf8');
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const parsedData: GermanJsonData = JSON.parse(data) as GermanJsonData;
     return parsedData;
   } catch (err) {
@@ -20,6 +21,7 @@ function importJsonData(): GermanJsonData {
   }
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 const germanVerbs: GermanJsonData = importJsonData();
 
 function createStandardConjugation({
@@ -119,8 +121,12 @@ export const hydrateFromInfinitive = (
   infinitive: string,
   _germanVerbs?: GermanJsonData,
 ): string | GermanVerbHydrated => {
+  // eslint-disable-next-line max-len
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
   const germanVerbDictionary = _germanVerbs?.verbs ?? germanVerbs.verbs;
 
+  // eslint-disable-next-line max-len
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
   const verbConfiguration: GermanVerb = germanVerbDictionary[infinitive];
 
   if (verbConfiguration) {

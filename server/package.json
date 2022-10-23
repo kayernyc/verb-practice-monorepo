@@ -15,7 +15,8 @@
     "englishbuild": "sh scripts/build.sh && tsc && node -e 'require(\"./dist/models/english/englishBuildJsonFromYml.js\").weedOutDuplicates()'",
     "lint": "eslint --ext .js,.ts . --fix",
     "prep": "sh scripts/remove-duplicates.sh",
-    "build": "tsc -p tsconfig.server.json"
+    "build": "rm -rf dist && mkdir dist && sh scripts/build.sh && tsc && tsc-alias -- --configFile tsconfig.server.json",
+    "start:server": "node dist/server.js"
   },
   "keywords": [],
   "author": "",
