@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import yaml from 'js-yaml';
 
-import { GermanJsonData } from 'models/jsonTypes';
+import { GermanJsonData } from '@models/jsonTypes';
 import {
   GermanVerb, LanguageMap,
 } from './germanTypes';

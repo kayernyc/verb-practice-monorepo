@@ -1,29 +1,29 @@
 {
   "compilerOptions": {
     "allowJs": true,
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "module": "commonjs",
     "moduleResolution": "node",
     "outDir": "./dist",
     "paths": {
-      "@german/*": ["./models/german/*"],
-      "@data/*": ["./data/*"]
+      "@german/*": ["./src/models/german/*"],
+      "@models/*": ["./src/models/*"],
+      "@data/*": ["./src/data/*"]
     },
     "resolveJsonModule": true,
-    "rootDir": "./",
     "sourceMap": true,
-    "target": "es6"
+    "target": "es6",
   },
   "lib": ["es6"],
   "exclude": ["node_modules", "coverage", "**.spec.ts"],
-  "include": ["src", "scripts/jsscripts"],
+  "include": ["./src"],
   "max-line-length": [
     true,
-   {
-       "limit": 100,
-       "ignore-pattern": "^import |^export {(.*?)}"
-   }
-],
+      {
+        "limit": 100,
+        "ignore-pattern": "^import |^export {(.*?)}"
+      }
+  ],
 }
