@@ -2,6 +2,7 @@
 module.exports = {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   moduleNameMapper: {
+    '@english(.*)$': '<rootDir>/src/models/english$1',
     '@german(.*)$': '<rootDir>/src/models/german$1',
     '@models(.*)$': '<rootDir>/src/models$1',
     '@data(.*)$': '<rootDir>/src/data$1',
