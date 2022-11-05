@@ -32,6 +32,15 @@ export interface EnglishJsonData {
   verbs: EnglishVerbDictionary;
 }
 
+export function writeProcessedVerbsToFile(
+  url: string,
+  processedVerbs: EnglishJsonData,
+  _dataPath = dataPath,
+) {
+  const data: string = JSON.stringify(processedVerbs);
+  fs.writeFileSync(path.join(_dataPath, url), data);
+}
+
 export function processVerbs(verbs: (DataObjEntry)[]) {
   const newJsonObj: EnglishJsonData = {
     date: Date.now(),
@@ -40,8 +49,10 @@ export function processVerbs(verbs: (DataObjEntry)[]) {
 
   verbs.forEach((yamlObject: DataObjEntry) => {
     Object.keys(yamlObject).forEach((key: string) => {
-      const dict = yamlObject[key] as EnglishVerb;
+      const dict = yamlObject[key] as unknown as EnglishVerb;
       if (key !== 'date') {
+        // eslint-disable-next-line no-console
+        console.log({ key }, { dict });
         newJsonObj.verbs[key] = dict;
       }
     });

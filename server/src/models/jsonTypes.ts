@@ -10,6 +10,7 @@ export interface GermanJsonData {
 }
 
 export interface LanguageMap {
+  de?: string | string[];
   en?: string | string[];
   fr?: string | string[];
 }

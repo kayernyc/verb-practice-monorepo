@@ -1,5 +1,13 @@
 import mock from 'mock-fs';
-import { processVerbs, readYamls } from '../englishBuildJsonFromYml';
+
+import fs from 'fs';
+import {
+  EnglishJsonData,
+  processVerbs,
+  readYamls,
+  writeProcessedVerbsToFile
+} from '../englishBuildJsonFromYml';
+import { EnglishPronounKeys } from '../englishTypes';
 
 jest
   .useFakeTimers()
