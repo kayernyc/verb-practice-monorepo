@@ -8,6 +8,7 @@
     "moduleResolution": "node",
     "outDir": "./dist",
     "paths": {
+      "@english/*": ["./src/models/english/*"],
       "@german/*": ["./src/models/german/*"],
       "@models/*": ["./src/models/*"],
       "@data/*": ["./src/data/*"]

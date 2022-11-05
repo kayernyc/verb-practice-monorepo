@@ -1,11 +1,7 @@
+import { LanguageMap } from '@models/jsonTypes';
 import {
   GrammaticalFormal, GrammaticalGender, GrammaticalNumber, GrammaticalPerson,
 } from '../languageTypes';
-
-export interface LanguageMap {
-  en?: string | string[];
-  fr?: string | string[];
-}
 
 export enum GermanTenses {
   präsens = 'präsens', // present

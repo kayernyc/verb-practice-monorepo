@@ -9,6 +9,12 @@ export interface GermanJsonData {
   verbs: GermanVerbDictionary;
 }
 
+export interface LanguageMap {
+  de?: string | string[];
+  en?: string | string[];
+  fr?: string | string[];
+}
+
 // CREDIT WHERE CREDIT IS DUE: https://stackoverflow.com/a/66605669
 export type Only<T, U> = {
   [P in keyof T]: T[P];
