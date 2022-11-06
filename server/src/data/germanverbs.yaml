@@ -3,7 +3,7 @@ date: 1630934144867
 haben:
   language: de
   translations:
-    en: to have
+    en: have
   tags:
     - hilfsverb
   strong:
@@ -16,7 +16,7 @@ haben:
 sein:
   language: de
   translations:
-    en: to be
+    en: be
   tags:
     - hilfsverb
   hilfsverb: sein
@@ -36,7 +36,7 @@ sein:
 werden:
   language: de
   translations:
-    en: to become, to grow
+    en: become, to grow
   tags:
     - hilfsverb
   hilfsverb: sein
@@ -55,7 +55,7 @@ werden:
 können:
   language: de
   translations:
-    en: can, may, are able to, to know how
+    en: [can, may, are able to, to know how]
   tags:
     - modal
   strong:
@@ -68,7 +68,7 @@ können:
 müssen:
   language: de
   translations:
-    en: to have to
+    en: have
   tags:
     - modal
   strong:
@@ -81,7 +81,7 @@ müssen:
 wollen:
   language: de
   translations:
-    en: to want to
+    en: want
   tags:
     - modal
   stems:
@@ -91,7 +91,7 @@ wollen:
 sollen:
   language: de
   translations:
-    en: to be expected to
+    en: be expected
   tags:
     - modal
   drop ich/es präsens endings: true
@@ -99,7 +99,7 @@ sollen:
 dürfen:
   language: de
   translations:
-    en: to be authorized to, must
+    en: [be authorized, must]
   tags:
     - modal
   strong:
@@ -113,7 +113,7 @@ dürfen:
 mögen:
   language: de
   translations:
-    en: to like to
+    en: like
   tags:
     - modal
   strong:
@@ -126,7 +126,7 @@ mögen:
 wissen:
   language: de
   translations:
-    en: to know
+    en: know
   strong:
   weak endings: true
   stems:
@@ -137,7 +137,7 @@ wissen:
 heißen:
   language: de
   translations:
-    en: to be called
+    en: be called
   strong:
   stems:
     präteritum: ie
@@ -146,7 +146,7 @@ heißen:
 lassen:
   language: de
   translations:
-    en: to let
+    en: let
   strong:
   stems:
     präsens du/es: ä
@@ -156,7 +156,7 @@ lassen:
 gehen:
   language: de
   translations:
-    en: to go
+    en: go
   strong:
   hilfsverb: sein
   stems:
@@ -167,7 +167,7 @@ gehen:
 laufen:
   language: de
   translations:
-    en: to run
+    en: run
   hilfsverb: sein
   strong:
   stems:
@@ -178,7 +178,7 @@ laufen:
 schreiben:
   language: de
   translations:
-    en: to write
+    en: write
   strong:
   stems:
     präteritum: ie
@@ -188,13 +188,13 @@ schreiben:
 folgen:
   language: de
   translations:
-    en: to follow
+    en: follow
   hilfsverb: sein
 
 greifen:
   language: de
   translations:
-    en: to grasp, to grab
+    en: grasp, grab
   strong:
   stems:
     präteritum: iff
@@ -204,7 +204,7 @@ greifen:
 pfeifen:
   language: de
   translations:
-    en: to whistle
+    en: whistle
   strong:
   stems:
     präteritum: iff
@@ -214,7 +214,7 @@ pfeifen:
 schreien:
   language: de
   translations:
-    en: to cry out, to scream
+    en: [cry out, scream]
   strong:
   stems:
     präteritum: ie
@@ -226,7 +226,7 @@ schreien:
 gelingen:
   language: de
   translations:
-    en: to succeed
+    en: succeed
   hilfsverb: sein
   strong:
   stems:
@@ -236,7 +236,7 @@ gelingen:
 gebären:
   language: de
   translations:
-    en: to give birth
+    en: give birth
   strong: true
   stems:
     präteritum: a
@@ -245,14 +245,14 @@ gebären:
 beraten:
   language: de
   translations:
-    en: to advise, to discuss
+    en: [advise, discuss]
 
 #-------------------------------------------------------------------------------------
 
 hängen:
   language: de
   translations:
-    en: to hang
+    en: hang
   strong:
   stems:
     präteritum: i
@@ -262,7 +262,7 @@ hängen:
 leiden:
   language: de
   translations:
-    en: to suffer
+    en: suffer
   strong:
   stems:
     präteritum: itt
@@ -272,7 +272,7 @@ leiden:
 halten:
   language: de
   translations:
-    en: to hold, to keep
+    en: [hold, keep]
   strong:
   stems:
     präsens du/es: ä
@@ -282,7 +282,7 @@ halten:
 schlafen:
   language: de
   translations:
-    en: to sleep
+    en: sleep
   strong:
   stems:
     präsens du/es: ä
@@ -292,122 +292,122 @@ schlafen:
 sagen:
   language: de
   translations:
-    en: to say
+    en: say
 
 spielen:
   language: de
   translations:
-    en: to play
+    en: play
 
 machen:
   language: de
   translations:
-    en: to make
+    en: make
 
 fragen:
   language: de
   translations:
-    en: to ask
+    en: ask
 
 glauben:
   language: de
   translations:
-    en: to believe, to reckon
+    en: [believe, reckon]
 
 leben:
   language: de
   translations:
-    en: to live
+    en: live
 
 lernen:
   language: de
   translations:
-    en: to learn
+    en: learn
 
 reden:
   language: de
   translations:
-    en: to speak
+    en: speak
 
 bedeuten:
   language: de
   translations:
-    en: to mean
+    en: mean
 
 gehören:
   language: de
   translations:
-    en: to belong
+    en: belong
 
 kaufen:
   language: de
   translations:
-    en: to buy
+    en: buy
 
 schmecken:
   language: de
   translations:
-    en: to taste
+    en: taste
 
 warten:
   language: de
   translations:
-    en: to wait
+    en: wait
 
 wohnen:
   language: de
   translations:
-    en: to live (somewhere)
+    en: [live (somewhere), inhabit]
 
 arbeiten:
   language: de
   translations:
-    en: to work
+    en: work
 
 brauchen:
   language: de
   translations:
-    en: to need
+    en: need
 
 setzen:
   language: de
   translations:
-    en: to put, to set
+    en: [put, set]
 
 suchen:
   language: de
   translations:
-    en: to search
+    en: search
 
 versuchen:
   language: de
   translations:
-    en: to attempt, to try
+    en: [attempt, try]
 
 bauen:
   language: de
   translations:
-    en: to build
+    en: build
 
 tagen:
   language: de
   translations:
-    en: to sit?
+    en: meet
 
 deuten:
   language: de
   translations:
-    en: to construe, to interpret
+    en: [construe, interpret]
 
 hören:
   language: de
   translations:
-    en: to hear, to listen
+    en: [hear, listen]
 
 fallen:
   language: de
   translations:
-    en: to fall
+    en: fall
   strong:
   hilfsverb: sein
   stems:
@@ -418,12 +418,12 @@ fallen:
 zerfallen:
   language: de
   translations:
-    en: to fall to pieces
+    en: fall to pieces
 
 fangen:
   language: de
   translations:
-    en: to catch
+    en: catch
   strong:
   stems:
     präsens du/es: ä
@@ -433,7 +433,7 @@ fangen:
 braten:
   language: de
   translations:
-    en: to fry
+    en: fry
   strong:
   stems:
     präsens du/es: ä
@@ -443,7 +443,7 @@ braten:
 raten:
   language: de
   translations:
-    en: to guess, to advise
+    en: [guess, advise]
   strong:
   stems:
     präsens du/es: ä
@@ -456,7 +456,7 @@ raten:
 fahren:
   language: de
   translations:
-    en: to drive, to ride
+    en: [drive, ride]
   strong:
   hilfsverb: sein
   stems:
@@ -466,7 +466,7 @@ fahren:
 graben:
   language: de
   translations:
-    en: to dig
+    en: dig
   strong:
   stems:
     präsens du/es: ä
@@ -475,7 +475,7 @@ graben:
 schlagen:
   language: de
   translations:
-    en: to strike, to bash, to hit, to beat
+    en: [strike, bash, hit, beat]
   strong:
   stems:
     präsens du/es: ä
@@ -484,7 +484,7 @@ schlagen:
 waschen:
   language: de
   translations:
-    en: to wash
+    en: wash
   strong:
   stems:
     präsens du/es: ä
@@ -493,7 +493,7 @@ waschen:
 wachsen:
   language: de
   translations:
-    en: to grow
+    en: grow
   hilfsverb: sein
   strong:
   stems:
@@ -503,7 +503,7 @@ wachsen:
 tragen:
   language: de
   translations:
-    en: to carry
+    en: [carry, wear]
   strong:
   stems:
     präsens du/es: ä
@@ -512,7 +512,7 @@ tragen:
 laden:
   language: de
   translations:
-    en: to load
+    en: load
   strong:
   stems:
     präsens du/es: ä
@@ -524,7 +524,7 @@ laden:
 liegen:
   language: de
   translations:
-    en: to lie
+    en: lie
   strong:
   stems:
     präteritum: a
@@ -533,7 +533,7 @@ liegen:
 bitten:
   language: de
   translations:
-    en: to ask for
+    en: ask for
   strong:
   stems:
     präteritum: at
@@ -542,7 +542,7 @@ bitten:
 sitzen:
   language: de
   translations:
-    en: to sit
+    en: sit
   strong:
   stems:
     präteritum: aß
@@ -551,7 +551,7 @@ sitzen:
 geben:
   language: de
   translations:
-    en: to give
+    en: give
   strong:
   stems:
     präsens du/es: i
@@ -560,7 +560,7 @@ geben:
 lesen:
   language: de
   translations:
-    en: to read
+    en: read
   strong:
   stems:
     präsens du/es: ie
@@ -569,7 +569,7 @@ lesen:
 treten:
   language: de
   translations:
-    en: to kick
+    en: kick
   strong:
   stems:
     präsens du/es: itt
@@ -578,7 +578,7 @@ treten:
 essen:
   language: de
   translations:
-    en: to eat
+    en: eat
   strong:
   stems:
     präsens du/es: i
@@ -588,7 +588,7 @@ essen:
 sehen:
   language: de
   translations:
-    en: to see
+    en: see
   strong:
   stems:
     präsens du/es: ie
@@ -597,7 +597,7 @@ sehen:
 geschehen:
   language: de
   translations:
-    en: to happen
+    en: happen
   hilfsverb: sein
   strong:
   stems:
@@ -610,7 +610,7 @@ geschehen:
 fliegen:
   language: de
   translations:
-    en: to fly
+    en: fly
   hilfsverb: sein
   strong:
   stems:
@@ -620,7 +620,7 @@ fliegen:
 fliehen:
   language: de
   translations:
-    en: to flee
+    en: flee
   hilfsverb: sein
   strong:
   stems:
@@ -630,7 +630,7 @@ fliehen:
 fließen:
   language: de
   translations:
-    en: to flow
+    en: flow
   hilfsverb: sein
   strong:
   stems:
@@ -640,7 +640,7 @@ fließen:
 frieren:
   language: de
   translations:
-    en: to freeze
+    en: freeze
   hilfsverb: sein
   strong:
   stems:
@@ -650,7 +650,7 @@ frieren:
 biegen:
   language: de
   translations:
-    en: to bend
+    en: bend
   strong:
   stems:
     präteritum: o
@@ -659,7 +659,7 @@ biegen:
 bieten:
   language: de
   translations:
-    en: to offer
+    en: offer
   strong:
   stems:
     präteritum: o
@@ -668,7 +668,7 @@ bieten:
 ziehen:
   language: de
   translations:
-    en: to pull
+    en: pull
   strong:
   stems:
     präteritum: og
@@ -677,12 +677,12 @@ ziehen:
 wiegen:
   language: de
   translations:
-    en: to weigh
+    en: weigh
 
 gießen:
   language: de
   translations:
-    en: to pour
+    en: pour
   strong:
   stems:
     präteritum: oss
@@ -691,7 +691,7 @@ gießen:
 riechen:
   language: de
   translations:
-    en: to smell
+    en: smell
   strong:
   stems:
     präteritum: o
@@ -700,7 +700,7 @@ riechen:
 schieben:
   language: de
   translations:
-    en: to push
+    en: push
   strong:
   stems:
     präteritum: o
@@ -709,7 +709,7 @@ schieben:
 schießen:
   language: de
   translations:
-    en: to shoot
+    en: shoot
   strong:
   stems:
     präteritum: oss
@@ -718,7 +718,7 @@ schießen:
 schließen:
   language: de
   translations:
-    en: to close
+    en: close
   strong:
   stems:
     präteritum: oss
@@ -727,7 +727,7 @@ schließen:
 heben:
   language: de
   translations:
-    en: to lift
+    en: lift
   strong:
   stems:
     präteritum: o
@@ -736,7 +736,7 @@ heben:
 saufen:
   language: de
   translations:
-    en: to booze
+    en: guzzle
   strong:
   stems:
     präsens du/es: äu
@@ -746,7 +746,7 @@ saufen:
 lügen:
   language: de
   translations:
-    en: to tell lies
+    en: lie
   strong:
   stems:
     präteritum: o
@@ -755,7 +755,7 @@ lügen:
 schmelzen:
   language: de
   translations:
-    en: to melt
+    en: melt
   hilfsverb: sein
   strong:
   stems:
@@ -766,7 +766,7 @@ schmelzen:
 genießen:
   language: de
   translations:
-    en: to enjoy
+    en: enjoy
   strong:
   stems:
     präteritum: oss
@@ -775,7 +775,7 @@ genießen:
 verlieren:
   language: de
   translations:
-    en: to lose
+    en: lose
   strong:
   stems:
     präteritum: o
@@ -787,7 +787,7 @@ verlieren:
 bleiben:
   language: de
   translations:
-    en: to remain, to stay
+    en: remain, stay
   strong:
   hilfsverb: sein
   stems:
@@ -798,7 +798,7 @@ bleiben:
 reiben:
   language: de
   translations:
-    en: to rub
+    en: rub
   strong:
   stems:
     präteritum: ie
@@ -808,7 +808,7 @@ reiben:
 gleiten:
   language: de
   translations:
-    en: to glide
+    en: glide
   hilfsverb: sein
   strong:
   stems:
@@ -819,7 +819,7 @@ gleiten:
 reiten:
   language: de
   translations:
-    en: to ride
+    en: ride
   strong:
   stems:
     präteritum: itt
@@ -829,7 +829,7 @@ reiten:
 reißen:
   language: de
   translations:
-    en: to tear
+    en: tear
   strong:
   stems:
     präteritum: iss
@@ -839,7 +839,7 @@ reißen:
 beißen:
   language: de
   translations:
-    en: to bite
+    en: bite
   strong:
   stems:
     präteritum: iss
@@ -849,7 +849,7 @@ beißen:
 scheißen:
   language: de
   translations:
-    en: to shit
+    en: shit
   strong:
   stems:
     präteritum: iss
@@ -859,7 +859,7 @@ scheißen:
 leihen:
   language: de
   translations:
-    en: to lend, to borrow
+    en: lend, borrow
   strong:
   stems:
     präteritum: ie
@@ -869,7 +869,7 @@ leihen:
 scheinen:
   language: de
   translations:
-    en: to shine, to seem
+    en: shine, seem
   strong:
   stems:
     präteritum: ie
@@ -879,7 +879,7 @@ scheinen:
 meiden:
   language: de
   translations:
-    en: to avoid
+    en: avoid
   strong:
   stems:
     präteritum: ie
@@ -889,7 +889,7 @@ meiden:
 steigen:
   language: de
   translations:
-    en: to rise
+    en: rise
   hilfsverb: sein
   strong:
   stems:
@@ -900,7 +900,7 @@ steigen:
 verzeihen:
   language: de
   translations:
-    en: to forgive
+    en: forgive
   strong:
   stems:
     präteritum: ie
@@ -913,7 +913,7 @@ verzeihen:
 beginnen:
   language: de
   translations:
-    en: to begin
+    en: begin
   strong:
   stems:
     präteritum: a
@@ -922,7 +922,7 @@ beginnen:
 kommen:
   language: de
   translations:
-    en: to come
+    en: come
   hilfsverb: sein
   strong:
   stems:
@@ -931,7 +931,7 @@ kommen:
 nehmen:
   language: de
   translations:
-    en: to take
+    en: take
   strong:
   stems:
     präsens du/es: imm
@@ -941,7 +941,7 @@ nehmen:
 sterben:
   language: de
   translations:
-    en: to die
+    en: die
   hilfsverb: sein
   strong:
   stems:
@@ -952,7 +952,7 @@ sterben:
 brechen:
   language: de
   translations:
-    en: to break
+    en: break
   strong:
   stems:
     präsens du/es: i
@@ -962,7 +962,7 @@ brechen:
 helfen:
   language: de
   translations:
-    en: to help
+    en: help
   strong:
   stems:
     präsens du/es: i
@@ -972,7 +972,7 @@ helfen:
 sprechen:
   language: de
   translations:
-    en: to speak
+    en: speak
   strong:
   stems:
     präsens du/es: i
@@ -982,7 +982,7 @@ sprechen:
 stechen:
   language: de
   translations:
-    en: to stab, to sting, to jab
+    en: [stab, sting, jab]
   strong:
   stems:
     präsens du/es: i
@@ -992,7 +992,7 @@ stechen:
 stehlen:
   language: de
   translations:
-    en: to steal
+    en: steal
   strong:
   stems:
     präsens du/es: ie
@@ -1002,7 +1002,7 @@ stehlen:
 treffen:
   language: de
   translations:
-    en: to meet, to hit, to strike
+    en:[ meet, hit, strike]
   strong:
   stems:
     präsens du/es: i
@@ -1012,7 +1012,7 @@ treffen:
 werfen:
   language: de
   translations:
-    en: to throw
+    en: throw
   strong:
   stems:
     präsens du/es: i
@@ -1023,7 +1023,7 @@ werfen:
 schwimmen:
   language: de
   translations:
-    en: to swim
+    en: swim
   hilfsverb: sein
   strong:
   stems:
@@ -1033,7 +1033,7 @@ schwimmen:
 empfehlen:
   language: de
   translations:
-    en: to recommend
+    en: recommend
   strong:
   stems:
     präsens du/es: ie
@@ -1043,7 +1043,7 @@ empfehlen:
 gewinnen:
   language: de
   translations:
-    en: to win
+    en: win
   strong:
   stems:
     partizip: o
@@ -1055,7 +1055,7 @@ gewinnen:
 binden:
   language: de
   translations:
-    en: to bind
+    en: bind
   strong:
   stems:
     präteritum: a
@@ -1064,7 +1064,7 @@ binden:
 finden:
   language: de
   translations:
-    en: to find
+    en: find
   strong:
   stems:
     präteritum: a
@@ -1073,7 +1073,7 @@ finden:
 trinken:
   language: de
   translations:
-    en: to drink
+    en: drink
   strong:
   stems:
     präteritum: a
@@ -1082,7 +1082,7 @@ trinken:
 stinken:
   language: de
   translations:
-    en: to stink
+    en: stink
   strong:
   stems:
     präteritum: a
@@ -1091,7 +1091,7 @@ stinken:
 sinken:
   language: de
   translations:
-    en: to sink
+    en: sink
   hilfsverb: sein
   strong:
   stems:
@@ -1101,7 +1101,7 @@ sinken:
 springen:
   language: de
   translations:
-    en: to jump
+    en: jump
   hilfsverb: sein
   strong:
   stems:
@@ -1111,7 +1111,7 @@ springen:
 singen:
   language: de
   translations:
-    en: to sing
+    en: sing
   strong:
   stems:
     präteritum: a
@@ -1120,7 +1120,7 @@ singen:
 zwingen:
   language: de
   translations:
-    en: to force
+    en: force
   strong:
   stems:
     präteritum: a
@@ -1132,7 +1132,7 @@ zwingen:
 brennen:
   language: de
   translations:
-    en: to burn, to shine, to distil
+    en: [burn, shine, distil]
   strong:
   weak endings: true
   stems:
@@ -1143,7 +1143,7 @@ brennen:
 kennen:
   language: de
   translations:
-    en: to know
+    en: know
   strong:
   weak endings: true
   stems:
@@ -1154,7 +1154,7 @@ kennen:
 denken:
   language: de
   translations:
-    en: to think, to guess
+    en: think, guess
   strong:
   weak endings: true
   stems:
@@ -1163,7 +1163,7 @@ denken:
 bringen:
   language: de
   translations:
-    en: to bring, to take
+    en: bring, take
   strong:
   weak endings: true
   stems:
@@ -1172,7 +1172,7 @@ bringen:
 stehen:
   language: de
   translations:
-    en: to stand
+    en: stand
   strong:
   stems:
     präteritum: and
@@ -1181,7 +1181,7 @@ stehen:
 tun:
   language: de
   translations:
-    en: to do
+    en: do
   strong:
   stems:
     präteritum: at
@@ -1190,7 +1190,7 @@ tun:
 rennen:
   language: de
   translations:
-    en: to run, to race
+    en: run, race
   hilfsverb: sein
   stems:
     präteritum: a
@@ -1200,7 +1200,7 @@ rennen:
 nennen:
   language: de
   translations:
-    en: to name
+    en: name
   stems:
     präteritum: a
     k2präsens: e
@@ -1209,7 +1209,7 @@ nennen:
 wachen:
   language: de
   translations:
-    en: to wake, to picket
+    en: wake, picket
 
 #-------------------------------------------------------------------------------
 # others
@@ -1217,38 +1217,38 @@ wachen:
 fehlen:
   language: de
   translations:
-    en: to lack, to miss
+    en: lack, miss
 
 rutschen:
   language: de
   translations:
-    en: to slip, to slide
+    en: slip, slide
   hilfsverb: sein
 
 an|bieten:
   language: de
   translations:
-    en: to provide, to offer
+    en: provide, offer
 
 an|fangen:
   language: de
   translations:
-    en: to begin
+    en: begin
 
 an|sehen:
   language: de
   translations:
-    en: to inspect, to view
+    en: inspect, view
 
 aus|sehen:
   language: de
   translations:
-    en: to look
+    en: look
 
 bekommen:
   language: de
   translations:
-    en: to get
+    en: get
   hilfsverb: haben
 
 #-------------------------------------------------------------------------------
@@ -1256,195 +1256,193 @@ bekommen:
 ein|kaufen:
   language: de
   translations:
-    en: to buy
+    en: buy
 
 auf|wachen:
   language: de
   translations:
-    en: to wake up
+    en: wake up
   hilfsverb: sein
 
 auf|wachsen:
   language: de
   translations:
-    en: to grow up
+    en: grow up
 
 auf|waschen:
   language: de
   translations:
-    en: to wash up
+    en: wash up
 
 auf|stehen:
   language: de
   translations:
-    en: to get up
+    en: get up
   hilfsverb: sein
 
 ein|schlafen:
   language: de
   translations:
-    en: to fall asleep
+    en: fall asleep
   hilfsverb: sein
 
 ein|brechen:
   language: de
   translations:
-    en: to crack, to burgle
+    en: [crack, burgle, collapse, break in]
   hilfsverb: sein
 
 er|frieren:
   language: de
   translations:
-    en: to freeze to death
+    en: freeze to death
   hilfsverb: sein
 
 auf|steigen:
   language: de
   translations:
-    en: to soar, to ascend
+    en: [soar, ascend]
   hilfsverb: sein
 
 ab|steigen:
   language: de
   translations:
-    en: to descend, to dismount
+    en: [descend, dismount]
   hilfsverb: sein
 
 bestehen:
   language: de
   translations:
-    en: to persist, to insist
+    en: [persist, insist]
 
 betreffen:
   language: de
   translations:
-    en: to concern, to affect
+    en: [concern, affect]
 
 bilden:
   language: de
   translations:
-    en: to build
+    en: build
 
 dar|stellen:
   language: de
   translations:
-    en: to constitute, to depict
+    en: [constitute, depict]
 
 entsprechen:
   language: de
   translations:
-    en: to match, to conform
+    en: [match, conform]
 
 entstehen:
   language: de
   translations:
-    en: to emerge, to arise
+    en: [emerge, arise]
   hilfsverb: sein
 
 ergeben:
   language: de
   translations:
-    en: to yield
+    en: yield
 
 erhalten:
   language: de
   translations:
-    en: to obtain
+    en: obtain
 
 erkennen:
   language: de
   translations:
-    en: to realize
+    en: realize
 
 erklären:
   language: de
   translations:
-    en: to explain, to declare
+    en: [explain, declare]
 
 erreichen:
   language: de
   translations:
-    en: to achieve
+    en: achieve
 
 erscheinen:
   language: de
   translations:
-    en: to appear, to seem
+    en: [appear, seem]
   hilfsverb: sein
 
 erwarten:
   language: de
   translations:
-    en: to expect, to await
+    en: [expect, await]
 
 erzählen:
   language: de
   translations:
-    en: to tell, to narrate
+    en: [tell, narrate]
 
-fühlen:
+erzählen:
   language: de
   translations:
-    en: to feel, to sense
+    en: [feel, sense]
 
 führen:
   language: de
   translations:
-    en: to lead, to guide
+    en: lead, guide
 
-# TODO:  should be 'interessiert' instead of 'geinteressiert'
 interessieren:
   language: de
   translations:
-    en: to interest
+    en: interest
   partizip: interessiert
 
-# TODO: should be 'studiert' not 'gestudiert'
 studieren:
   language: de
   translations:
-    en: to study
+    en: study
   partizip: studiert
 
 legen:
   language: de
   translations:
-    en: to put, to lay
+    en: [put, lay]
 
 meinen:
   language: de
   translations:
-    en: to mean, to deem
+    en: [mean, deem]
 
 schaffen:
   language: de
   translations:
-    en: to create, to accomplish
+    en: [create, accomplish]
 
 scheiben:
   language: de
   translations:
-    en: to slice
+    en: slice
 
 stellen:
   language: de
   translations:
-    en: to put, to place
+    en: [put, place]
 
 vor|stellen:
   language: de
   translations:
-    en: to introduce, to suggest
+    en: [introduce]
 
 vergehen:
   language: de
   translations:
-    en: to vanish, to slide
+    en: [vanish, slide]
 
 gleichen:
   language: de
   translations:
-    en: to equal
+    en: equal
   strong:
   stems:
     präteritum: i
@@ -1454,37 +1452,37 @@ gleichen:
 vergleichen:
   language: de
   translations:
-    en: to compare, to contrast
+    en: [compare, contrast]
 
 zeigen:
   language: de
   translations:
-    en: to exhibit, to feature
+    en: exhibit, feature
 
 zu|hören:
   language: de
   translations:
-    en: to listen
+    en: listen
 
 verstehen:
   language: de
   translations:
-    en: to understand
+    en: understand
 
 mißverstehen:
   language: de
   translations:
-    en: to misunderstand
+    en: misunderstand
 
 verbinden:
   language: de
   translations:
-    en: to connect, to link
+    en: [connect, link]
 
 gelten:
   language: de
   translations:
-    en: to apply, to pertain
+    en: [apply, pertain]
   strong:
   stems:
     präsens du/es: i
@@ -1494,210 +1492,210 @@ gelten:
 entwickeln:
   language: de
   translations:
-    en: to develop, to evolve
+    en: [develop, evolve]
 
 handeln:
   language: de
   translations:
-    en: to deal, to negotiate
+    en: [deal, negotiate]
 
 erinnern:
   language: de
   translations:
-    en: to remember
+    en: remember
 
 lehren:
   language: de
   translations:
-    en: to teach
+    en: teach
 
 kosten:
   language: de
   translations:
-    en: to cost
+    en: cost
 
 mit|bringen:
   language: de
   translations:
-    en: to bring, to bring along
+    en: [bring, bring along]
 
 packen:
   language: de
   translations:
-    en: to pack
+    en: pack
 
 versprechen:
   language: de
   translations:
-    en: to promise
+    en: promise
 
 vor|lesen:
   language: de
   translations:
-    en: to read to, to read aloud
+    en: [read, read aloud]
 
 mit|teilen:
   language: de
   translations:
-    en: to inform, to communicate
+    en: [inform, communicate]
 
 teilen:
   language: de
   translations:
-    en: to share, to divide
+    en: [share, divide]
 
 erkundigen:
   language: de
   translations:
-    en: to ask, to enquire
+    en: [ask, enquire]
   sich:
 
 hoffen:
   language: de
   translations:
-    en: to hope
+    en: hope
 
 planen:
   language: de
   translations:
-    en: to plan
+    en: plan
 
 ein|atmen:
   language: de
   translations:
-    en: to breathe in
+    en: breathe in
 
 atmen:
   language: de
   translations:
-    en: to breathe
+    en: breathe
 
 verheimlichen:
   language: de
   translations:
-    en: to conceal
+    en: conceal
 
 drehen:
   language: de
   translations:
-    en: to spin, to turn, to shoot [film]
+    en: [spin, turn, shoot (film)]
 
 her|stellen:
   language: de
   translations:
-    en: to manufacture, to produce
+    en: [manufacture, produce]
 
 aus|denken:
   language: de
   translations:
-    en: to invent
+    en: invent
 
 tauchen:
   language: de
   translations:
-    en: to dive, to plunge
+    en: [dive, plunge]
 
 auf|tauchen:
   language: de
   translations:
-    en: to appear, to crop up, to come to light
+    en: [appear, crop up, come to light]
   hilfsverb: sein
 
 ein|richten:
   language: de
   translations:
-    en: to establish, to furnish, to organize
+    en: [establish, furnish, organize]
 
 aus|sagen:
   language: de
   translations:
-    en: to state, to testify
+    en: [state, testify]
 
 sammeln:
   language: de
   translations:
-    en: to gather, to collect
+    en: [gather, collect]
 
 wischen:
   language: de
   translations:
-    en: to wipe, to mop
+    en: [wipe, mop]
 
 erwischen:
   language: de
   translations:
-    en: to catch, to seize, to get hold of
+    en: [catch, seize, get hold of]
 
 bestellen:
   language: de
   translations:
-    en: to order, to request, to comission, to book
+    en: [order, request, comission, book]
 
 versetzen:
   language: de
   translations:
-    en: to relocate, to transfer, to deploy, to retort
+    en: [relocate, transfer, deploy, retort]
 
 auf|gehen:
   language: de
   translations:
-    en: to rise, to realise, to pan out
+    en: [rise, realise, pan out]
 
 schnappen:
   language: de
   translations:
-    en: to snatch, to grab
+    en: [snatch, grab]
 
 klettern:
   language: de
   translations:
-    en: to climb
+    en: climb
   hilfsverb: sein
 
 ergreifen:
   language: de
   translations:
-    en: to seize, to grasp
+    en: [seize, grasp]
 
 winken:
   language: de
   translations:
-    en: to wave
+    en: wave
 
 antworten:
   language: de
   translations:
-    en: to answer, to reply
+    en: [answer, reply]
 
 fassen:
   language: de
   translations:
-    en: to grip, to catch, to comprehend
+    en: [grip, catch, comprehend, understand]
 
 wackeln:
   language: de
   translations:
-    en: to wobble, to shake, to wiggle
+    en: [wobble, shake, wiggle]
 
 schauen:
   language: de
   translations:
-    en: to look, to see
+    en: [look, see]
 
 begreifen:
   language: de
   translations:
-    en: to understand, to fathom
+    en: understand, fathom
 
 hoch|klettern:
   language: de
   translations:
-    en: to climb up
+    en: climb up
 
 rufen:
   language: de
   translations:
-    en: to call, to exclaim
+    en: [call, exclaim]
   strong:
   stems:
     präteritum: ie
@@ -1706,93 +1704,93 @@ rufen:
 an|rufen:
   language: de
   translations:
-    en: to call up
+    en: [call up]
 
 runter|fallen:
   language: de
   translations:
-    en: to go flying, to tip over the edge
+    en: [go flying, tip over the edge]
 
 weinen:
   language: de
   translations:
-    en: to cry
+    en: cry
 
 ein|fallen:
   language: de
   translations:
-    en: to collapse, to shrink,to dip
+    en: [collapse, shrink, dip]
 
 räumen:
   language: de
   translations:
-    en: to vacate, to clear
+    en: [vacate, clear]
 
 auf|räumen:
   language: de
   translations:
-    en: to tidy, to clear up
+    en: [tidy, clear up]
 
 rein|kommen:
   language: de
   translations:
-    en: to come in
+    en: [come in]
 
 verstecken:
   language: de
   translations:
-    en: to hide, to conceal, to stash
+    en: [hide, conceal, stash]
 
 stottern:
   language: de
   translations:
-    en: to stammer, to stutter
+    en: [stammer, stutter]
 
 über|legen:
   language: de
   translations:
-    en: to consider, to deliberate, to think
+    en: [consider, deliberate, think]
 
 enthalten:
   language: de
   translations:
-    en: to include, to convey, to comprise
+    en: [include, convey, comprise]
 
 verlassen:
   language: de
   translations:
-    en: to leave, to depart, to forsake
+    en: [leave, depart, forsake]
 
 stecken:
   language: de
   translations:
-    en: to stick, to put, to plug, to thrust
+    en: [stick, put, plug, thrust]
 
 auf|hören:
   language: de
   translations:
-    en: to stop, to end
+    en: [stop, end]
 
 #-------------------------------------------------------------------------------
 
 testen:
   language: de
   translations:
-    en: to test
+    en: test
   tags:
     - test
 
 bewegen:
   language: de
   translations:
-    en: to move
+    en: move
 
 verwenden:
   language: de
   translations:
-    en: to use
+    en: use
 
 bluten:
   language: de
   translations:
-    en: to bleed
+    en: bleed

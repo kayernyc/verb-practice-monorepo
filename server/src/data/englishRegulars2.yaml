@@ -1,4 +1,4 @@
-abuse:
+"abuse":
   language: en
   translations:
 
@@ -37,6 +37,7 @@ anger:
 anticipate:
   language: en
   translations:
+    de: vorweg|nehmen
 
 apologize:
   language: en
@@ -47,14 +48,6 @@ appropriate:
   translations:
 
 balance:
-  language: en
-  translations:
-
-bed:
-  language: en
-  translations:
-
-been:
   language: en
   translations:
 
@@ -89,6 +82,7 @@ click:
 communicate:
   language: en
   translations:
+    de: mit|teilen
 
 company:
   language: en
@@ -101,6 +95,7 @@ compete:
 concern:
   language: en
   translations:
+    de: betreffen
 
 conflict:
   language: en
@@ -109,6 +104,7 @@ conflict:
 consult:
   language: en
   translations:
+    de: hinzu|ziehen
 
 content:
   language: en
@@ -137,6 +133,7 @@ couple:
 crack:
   language: en
   translations:
+    de: ein|brechen
 
 craft:
   language: en
@@ -213,6 +210,7 @@ ease:
 emphasize:
   language: en
   translations:
+    de: hervor|heben
 
 enhance:
   language: en
@@ -221,6 +219,7 @@ enhance:
 exchange:
   language: en
   translations:
+    de: um|tauschen
 
 expose:
   language: en
@@ -233,6 +232,7 @@ firm:
 flow:
   language: en
   translations:
+    de: fließen
 
 fold:
   language: en
@@ -249,6 +249,7 @@ frame:
 fry:
   language: en
   translations:
+    de: braten
 
 guarantee:
   language: en
@@ -290,10 +291,12 @@ impress:
 install:
   language: en
   translations:
+    de: an|bringen
 
 interest:
   language: en
   translations:
+    de: interessieren
 
 interview:
   language: en
@@ -326,6 +329,7 @@ line:
 load:
   language: en
   translations:
+    de: laden
 
 log:
   language: en
@@ -342,6 +346,7 @@ mail:
 manufacture:
   language: en
   translations:
+    de: her|stellen
 
 mistake:
   language: en
@@ -350,6 +355,7 @@ mistake:
 negotiate:
   language: en
   translations:
+    de: handeln
 
 number:
   language: en
@@ -362,6 +368,7 @@ neglect:
 organize:
   language: en
   translations:
+    de: ein|richten
 
 overtake:
   language: en
@@ -370,10 +377,12 @@ overtake:
 overcome:
   language: en
   translations:
+    de: nieder|werfen
 
 pack:
   language: en
   translations:
+    de: packen
 
 park:
   language: en
@@ -438,6 +447,7 @@ pray:
 pretend:
   language: en
   translations:
+    de: vor|geben
 
 pride:
   language: en
@@ -490,6 +500,7 @@ rent:
 reserve:
   language: en
   translations:
+    de: vor|behalten
 
 resist:
   language: en
@@ -562,6 +573,7 @@ size:
 slice:
   language: en
   translations:
+    de: scheiben
 
 smoke:
   language: en
@@ -618,6 +630,7 @@ tap:
 taste:
   language: en
   translations:
+    de: schmecken
 
 tax:
   language: en
@@ -682,7 +695,13 @@ waste:
 wave:
   language: en
   translations:
+    de: winken
 
 wrap:
   language: en
   translations:
+
+whistle:
+  language: en
+  translations:
+    de: pfeifen

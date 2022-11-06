@@ -44,11 +44,11 @@ beat:
 
 begin:
   language: en
-  translations:
-    de: beginnen
   participle: begun
   irregular:
     past: began
+  translations:
+    de: [beginnen, an|fangen]
 
 bend:
   language: en
@@ -70,7 +70,7 @@ bid:
   language: en
   variations:
     - definition: as in an auction
-     language: en
+      language: en
       translations:
         de: um ein Gebot abzugeben
       participle: bid
@@ -85,11 +85,11 @@ bid:
 
 bide:
   language: en
-  translations:
-    de: ab|warten
   participle: [bided, bode]
   irregular:
     past: [bided, bidden]
+  translations:
+    de: [ab|warten]
 
 bind:
   language: en
@@ -109,11 +109,11 @@ bite:
 
 bleed:
   language: en
-  translations:
-    de: bluten
   participle: bled
   irregular:
     past: bled
+  translations:
+    de: bluten
 
 blow:
   participle: blew
@@ -139,18 +139,18 @@ breed:
 bring:
   language: en
   translations:
-    de: bringen
+    de: [bringen, mit|bringen, zu|bringen]
   participle: brought
   irregular:
     past: brought
 
 build:
   language: en
-  translations:
-    de: bilden
   participle: built
   irregular:
     past: built
+  translations:
+    de: bilden
 
 burn:
   language: en
@@ -170,11 +170,11 @@ burst:
 
 buy:
   language: en
-  translations:
-    de: kaufen
   participle: bought
   irregular:
     past: bought
+  translations:
+    de: [kaufen, ein|kaufen]
 
 cast:
   language: en
@@ -186,11 +186,11 @@ cast:
 
 catch:
   language: en
-  translations:
-    de: erwischen
   participle: caught
   irregular:
     past: caught
+  translations:
+    de: [erwischen, fangen, fassen]
 
 choose:
   language: en
@@ -237,6 +237,8 @@ cost:
       participle: [cost, costed]
       irregular:
         past: [cost, costed] # [but regular when meaning "calculate the cost of"]
+      translations:
+        de: kosten
     - definition: calculate the cost of
 
 creep:
@@ -265,18 +267,24 @@ deal:
   participle: dealt
   irregular:
     past: dealt
+  translations:
+    de: handeln
 
 dig:
   language: en
   participle: dug
   irregular:
     past: dug
+  translations:
+    de: graben
 
 dive:
   language: en
   participle: [dived, dove]
   irregular:
     past: [dived, dove] # [the form dove is chiefly American]
+  translations:
+    de: tauchen
 
 do:
   language: en
@@ -362,6 +370,8 @@ feel:
   participle: felt
   irregular:
     past: felt
+  translate:
+    de: erzählen
 
 fight:
   language: en
@@ -374,6 +384,8 @@ find:
   participle: found
   irregular:
     past: found
+  translations:
+    de: finden
 
 fit:
   language: en
@@ -386,6 +398,8 @@ flee:
   participle: fled
   irregular:
     past: fled
+  translations:
+    de: fliehen
 
 fling:
   language: en
@@ -398,6 +412,8 @@ fly:
   participle: flew
   irregular:
     past: flown # [the form flied is common in the baseball sense]
+  translations:
+    de: fliegen
 
 forbid:
   language: en
@@ -416,18 +432,24 @@ forsake:
   participle: forsook
   irregular:
     past: forsaken
+  translations:
+    de: verlassen
 
 freeze:
   language: en
   participle: froze
   irregular:
     past: frozen
+  translations:
+    de: frieren
 
 get:
   language: en
   participle: got
   irregular:
     past: [gotten, got] #[past participle got in British English, gotten in American, but see have got]
+  translations:
+    de: [bekommen, herbei|schaffen]
 
 gild:
   language: en
@@ -440,6 +462,8 @@ give:
   participle: gave
   irregular:
     past: given
+  translations:
+    de: geben
 
 go:
   language: en
@@ -460,6 +484,8 @@ grow:
   participle: grew
   irregular:
     past: grown
+  translations:
+    de: wachsen
 
 hang:
   language: en
@@ -468,6 +494,8 @@ hang:
       participle: [hung, hanged]
       irregular:
         past: hung, hanged
+      translations:
+        de: hängen
     - definition: execution by hanging
       participle: hanged
       irregular:
@@ -478,6 +506,8 @@ hear:
   participle: heard
   irregular:
     past: heard
+  translations:
+    de: hören
 
 hew:
   language: en
@@ -490,12 +520,16 @@ hide:
   participle: hid
   irregular:
     past: hidden
+  translations:
+    de: verstecken
 
 hit:
   language: en
   participle: hit
   irregular:
     past: hit
+  translations:
+    de: [schlagen, treffen]
 
 hoist:
   language: en
@@ -508,6 +542,8 @@ hold:
   participle: held
   irregular:
     past: held
+  translations:
+    de: halten
 
 hurt:
   language: en
@@ -520,6 +556,8 @@ keep:
   participle: kept
   irregular:
     past: kept
+  translations:
+    de: halten
 
 kneel:
   language: en
@@ -538,12 +576,16 @@ know:
   participle: knew
   irregular:
     past: known
+  translations:
+    de: kennen
 
 lay:
   language: en
   participle: laid
   irregular:
     past: laid
+  translations:
+    de: legen
 
 lead:
   language: en
@@ -556,6 +598,8 @@ lean:
   participle: [leaned, leant]
   irregular:
     past: [leaned, leant]
+  translations:
+    de: an|lehnen
 
 leap:
   language: en
@@ -568,18 +612,24 @@ learn:
   participle: [learned, learnt]
   irregular:
     past: [learned, learnt]
+  translations:
+    de: lernen
 
 leave:
   language: en
   participle: left
   irregular:
     past: left
+  translations:
+    de: verlassen
 
 lend:
   language: en
   participle: lent
   irregular:
     past: lent
+  translations:
+    de: leihen
 
 let:
   language: en
@@ -594,7 +644,11 @@ lie:
       participle: lay
       irregular:
         past: lain
+      translations:
+        de: liegen
     - definition: to tell an untruth
+      translations:
+        de: lügen
 
 light:
   language: en
@@ -607,24 +661,32 @@ lose:
   participle: lost
   irregular:
     past: lost
+  translations:
+    de: verlieren
 
 make:
   language: en
   participle: made
   irregular:
     past: made
+  translations:
+    de: machen
 
 mean:
   language: en
   participle: meant
   irregular:
     past: meant
+  translations:
+    de: [bedeuten, meinen]
 
 meet:
   language: en
   participle: met
   irregular:
     past: met
+  translations:
+    de: [tagen, treffen, zusammen|kommen]
 
 mow:
   language: en
@@ -635,6 +697,8 @@ mow:
 need:
   language: en
 # regular except for possible third person singular present need (see anomalous cases above)
+  translations:
+    de: brauchen
 
 pay:
   language: en
@@ -659,6 +723,8 @@ put:
   participle: put
   irregular:
     past: put # [prefixed forms input and output sometimes take -ed]
+  translations:
+    de: [setzen. legen, stellen, stecken]
 
 quit:
   language: en
@@ -671,6 +737,8 @@ read: # , riːd,
   participle: read # , rɛd,
   irregular:
     past: read # , rɛd,
+  translations:
+    de: [lesen, vor|lesen]
 
 rend:
   language: en
@@ -688,6 +756,8 @@ ride:
   participle: [rid, rode]
   irregular:
     past: ridden
+  translations:
+    de: [fahren, reiten]
 
 ring:
   language: en
@@ -700,12 +770,16 @@ rise:
   participle: rose
   irregular:
     past: risen
+  translations:
+    de: [steigen, auf|gehen]
 
 run:
   language: en
   participle: ran
   irregular:
     past: run
+  translations:
+    de: [laufen, rennen]
 
 saw:
   language: en
@@ -720,12 +794,16 @@ say: # (says , sɛz, )
     present:
       it: says
     past: said
+  translations:
+    de: sagen
 
 see:
   language: en
   participle: saw
   irregular:
     past: seen
+  translations:
+    de: [sehen, schauen]
 
 seek:
   language: en
@@ -762,6 +840,8 @@ shake:
   participle: shook
   irregular:
     past: shaken
+  translations:
+    de: wackeln
 
 shear:
   language: en
@@ -780,12 +860,16 @@ shine:
   participle: [shone, shined]
   irregular:
     past: [shone, shined]
+  translations:
+    de: scheinen
 
 shit:
   language: en
   participle: [shat, shit, shitted]
   irregular:
     past: [shat, shit, shitted]
+  translations:
+    de: scheißen
 
 shoe:
   language: en
@@ -798,18 +882,24 @@ shoot:
   participle: shot
   irregular:
     past: shot
+  translations:
+    de: [schießen, ab|drücken]
 
 show:
   language: en
   participle: showed
   irregular:
     past: [shown, showed]
+  translations:
+    de: zeigen
 
 shrink:
   language: en
   participle: [shrank, shrunk]
   irregular:
     past: shrunk
+  translations:
+    de: ein|fallen
 
 shrive:
   language: en
@@ -828,18 +918,24 @@ sing:
   participle: sang
   irregular:
     past: sung
+  translations:
+    de: singen
 
 sink:
   language: en
   participle: sank
   irregular:
     past: sunk
+  translations:
+    de: sinken
 
 sit:
   language: en
   participle: sat
   irregular:
     past: sat
+  translations:
+    de: sitzen
 
 slay:
   language: en
@@ -852,12 +948,16 @@ sleep:
   participle: slept
   irregular:
     past: slept
+  translations:
+    de: schlafen
 
 slide:
   language: en
   participle: slid
   irregular:
     past: slid
+  translations:
+    de: [rutschen, vergehen]
 
 sling:
   language: en
@@ -882,6 +982,8 @@ smell:
   participle: [smelled, smelt]
   irregular:
     past: [smelled, smelt]
+  translations:
+    de: riechen
 
 smite:
   language: en
@@ -906,6 +1008,8 @@ speak:
   participle: spoke
   irregular:
     past: spoken
+  translations:
+    de: [reden, sprechen]
 
 speed:
   language: en
@@ -936,6 +1040,8 @@ spin:
   participle: [span, spun]
   irregular:
     past: spun
+  translations:
+    de: drehen
 
 spit:
   language: en
@@ -972,6 +1078,8 @@ stand:
   participle: stood
   irregular:
     past: stood
+  translations:
+    de: stehen
 
 stave:
   language: en
@@ -984,24 +1092,36 @@ steal:
   participle: stole
   irregular:
     past: stolen
+  translations:
+    de: stehlen
 
 stick:
   language: en
   participle: stuck
   irregular:
     past: stuck
+  variations:
+    - definition: to sitck to something
+    - definition: to stick into something
+      translations:
+        de: stecken
+
 
 sting:
   language: en
   participle: stung
   irregular:
     past: stung
+  translations:
+    de: stechen
 
 stink:
   language: en
   participle: stank
   irregular:
     past: stunk
+  translations:
+    de: stinken
 
 strew:
   language: en
@@ -1020,6 +1140,8 @@ strike:
   participle: struck
   irregular:
     past: [struck, stricken]
+  translations:
+    de: [schlagen, treffen]
 
 string:
   language: en
@@ -1062,6 +1184,8 @@ swim:
   participle: swam
   irregular:
     past: swum
+  translations:
+    de: schwimmen
 
 swing:
   language: en
@@ -1074,30 +1198,40 @@ take:
   participle: took
   irregular:
     past: taken
+  translations:
+    de: [nehmen, bringen]
 
 teach:
   language: en
   participle: taught
   irregular:
     past: taught
+  translations:
+    de: lehren
 
 tear:
   language: en
   participle: tore
   irregular:
     past: torn
+  translations:
+    de: reißen
 
 tell:
   language: en
   participle: told
   irregular:
     past: told
+  translations:
+    de: erzählen
 
 think:
   language: en
   participle: thought
   irregular:
     past: thought
+  translations:
+    de: [denken, über|legen]
 
 thrive:
   language: en
@@ -1110,12 +1244,16 @@ throw:
   participle: threw
   irregular:
     past: thrown
+  translataions:
+    de: werfen
 
 thrust:
   language: en
   participle: [thrust, thrusted]
   irregular:
     past: [thrust, thrusted]
+  translations:
+    de: stecken
 
 tread:
   language: en
@@ -1128,12 +1266,16 @@ wake:
   participle: woke
   irregular:
     past: woken
+  translations:
+    de: wachen
 
 wear:
   language: en
   participle: wore
   irregular:
     past: worn
+  translations:
+    de: tragen
 
 weave:
   language: en
@@ -1164,6 +1306,8 @@ win:
   participle: won
   irregular:
     past: won
+  translations:
+    de: gewinnen
 
 wind:
   language: en
@@ -1185,3 +1329,5 @@ write:
   participle: wrote
   irregular:
     past: written
+  translations:
+    de: schreiben
