@@ -1,8 +1,8 @@
 import mock from 'mock-fs';
 
 import fs from 'fs';
+import sinon from 'sinon';
 import {
-  EnglishJsonData,
   processVerbs,
   readYamls,
   writeProcessedVerbsToFile
@@ -47,6 +47,25 @@ adapt:
         bob: fileTwo,
       },
     });
+  });
+
+  it('reads a single file if it exists.', () => {
+    const readResult = readYamls('phil.yaml', './');
+
+    const expected = [{
+      date: 16,
+      have: {
+        language: 'en',
+        translations: { de: 'haben' },
+        irregular: {
+          past: 'had',
+          present: { i: 'have', it: 'has', we: 'have' },
+        },
+        participle: 'had',
+      },
+    },
+    ];
+    expect(readResult).toEqual(expected);
   });
 
   it('reads files if they exist.', () => {
@@ -150,4 +169,51 @@ describe('processVerbs', () => {
     };
     expect(result).toEqual(expected);
   });
+});
+
+describe('writing files', () => {
+  let writeFileSync: sinon.SinonStub;
+
+  const input = {
+    date: 16,
+    verbs: {
+      have: {
+        infinitive: 'have',
+        language: 'en',
+        translations: { de: 'haben' },
+        irregular: {
+          past: 'had',
+          present: {
+            [EnglishPronounKeys.i]: 'have',
+            [EnglishPronounKeys.it]: 'has',
+            [EnglishPronounKeys.we]: 'have',
+          },
+        },
+        participle: 'had',
+      },
+    },
+  };
+
+  beforeEach(() => {
+    // eslint-disable-next-line max-len
+    /* eslint-disable @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call */
+    writeFileSync = sinon.stub(fs, 'writeFileSync').returns();
+  });
+
+  it('should write a json object', () => {
+    writeProcessedVerbsToFile('files-test/testing_bob.json', input, './');
+    expect(writeFileSync.callCount).toBe(1);
+  });
+
+  it('should write a json object even when not passed a data path', () => {
+    writeProcessedVerbsToFile('files-test/testing_bob.json', input);
+    expect(writeFileSync.callCount).toBe(1);
+  });
+
+  afterEach(() => {
+    writeFileSync.restore();
+  });
+
+  // eslint-disable-next-line max-len
+  /* eslint-enable @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call */
 });

@@ -38,6 +38,8 @@ export function writeProcessedVerbsToFile(
   _dataPath = dataPath,
 ) {
   const data: string = JSON.stringify(processedVerbs);
+  // eslint-disable-next-line no-console
+  console.log({ data });
   fs.writeFileSync(path.join(_dataPath, url), data);
 }
 
@@ -51,8 +53,6 @@ export function processVerbs(verbs: (DataObjEntry)[]) {
     Object.keys(yamlObject).forEach((key: string) => {
       const dict = yamlObject[key] as unknown as EnglishVerb;
       if (key !== 'date') {
-        // eslint-disable-next-line no-console
-        console.log({ key }, { dict });
         newJsonObj.verbs[key] = dict;
       }
     });
