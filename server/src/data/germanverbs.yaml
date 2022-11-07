@@ -1380,12 +1380,7 @@ erwarten:
 erzählen:
   language: de
   translations:
-    en: [tell, narrate]
-
-erzählen:
-  language: de
-  translations:
-    en: [feel, sense]
+    en: [tell, narrate, feel, sense]
 
 führen:
   language: de
