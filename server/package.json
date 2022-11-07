@@ -16,7 +16,8 @@
     "lint": "eslint --ext .js,.ts . --fix",
     "prep": "sh scripts/remove-duplicates.sh",
     "build": "rm -rf dist && mkdir dist && sh scripts/build.sh && tsc && tsc-alias -- --configFile tsconfig.server.json",
-    "start:server": "node dist/server.js"
+    "start:server": "node dist/server.js",
+    "data:build": "sh scripts/build.sh && tsc && tsc-alias -p tsconfig.json && node -e 'require(\"./dist/models/german/germanverbs.js\").germanVerbData()' && node -e 'require(\"./dist/models/english/englishBuildJsonFromYml.js\").buildAllSourceEnglish()'"
   },
   "keywords": [],
   "author": "",

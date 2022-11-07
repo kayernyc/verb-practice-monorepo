@@ -8,7 +8,8 @@ import { EnglishVerb } from '@english/englishTypes';
 
 dotenv.config();
 
-const dataPath = findPathToData(__dirname);
+const relativeDataPath = findPathToData(__dirname);
+const dataPath = path.join(__dirname, relativeDataPath);
 
 export type DataObj = {
   variations?: DataObj;
@@ -38,12 +39,10 @@ export function writeProcessedVerbsToFile(
   _dataPath = dataPath,
 ) {
   const data: string = JSON.stringify(processedVerbs);
-  // eslint-disable-next-line no-console
-  console.log({ data });
   fs.writeFileSync(path.join(_dataPath, url), data);
 }
 
-export function processVerbs(verbs: (DataObjEntry)[]) {
+export function processVerbs(verbs: DataObjEntry[]) {
   const newJsonObj: EnglishJsonData = {
     date: Date.now(),
     verbs: {},
@@ -76,9 +75,20 @@ export function readYamls(
       processedData = yaml.load(fileContents) as DataObjEntry;
     } catch (err) {
       // eslint-disable-next-line no-console
-      throw Error(`Error in English verbs model: ${err as string} ${__dirname}`);
+      throw Error(`Error in English verbs model: ${err as string} ${_url}`);
     }
     return processedData;
   })
     .filter((record: DataObjEntry | undefined) => record !== undefined);
+}
+
+export function buildAllSourceEnglish() {
+  const allFileNames = fs.readdirSync(dataPath)
+    .filter((filename: string) => filename.slice(0, 7) === 'english' && filename.slice(-4) === 'yaml');
+
+  const allFiles = readYamls(allFileNames);
+  if (allFiles) {
+    const allverbs = processVerbs(allFiles);
+    writeProcessedVerbsToFile('englishVerbsUnhydrated.json', allverbs);
+  }
 }
