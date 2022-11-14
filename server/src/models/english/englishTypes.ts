@@ -29,3 +29,20 @@ export type EnglishVerb = {
   translations: LanguageMap;
   participle?: string;
 };
+
+export interface EnglishVerbDictionary {
+  [key: string]: EnglishVerb;
+}
+
+export interface EnglishJsonData {
+  date: number;
+  verbs: EnglishVerbDictionary;
+}
+
+export type EnglishVerbHydrated = {
+  [key in EnglishTenses]?: { [person: string]: string };
+} & {
+  infinitive: string;
+  participle: string;
+  presentParticiple: string;
+};
