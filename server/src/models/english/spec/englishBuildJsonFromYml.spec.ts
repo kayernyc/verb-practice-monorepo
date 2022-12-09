@@ -3,9 +3,10 @@ import mock from 'mock-fs';
 import fs from 'fs';
 import sinon from 'sinon';
 import {
+  buildAllSourceEnglish,
   processVerbs,
   readYamls,
-  writeProcessedVerbsToFile
+  writeProcessedVerbsToFile,
 } from '../englishBuildJsonFromYml';
 import { EnglishPronounKeys } from '../englishTypes';
 
@@ -103,7 +104,7 @@ adapt:
     expect(readResult).toEqual(expected);
   });
 
-  it('throws errors if they don\'t exist.', () => {
+  it('throws errors if files don\'t exist.', () => {
     expect(() => {
       readYamls(['phillis.yaml', 'rick.yaml'], './');
     }).toThrowError();
@@ -194,24 +195,33 @@ describe('writing files', () => {
     },
   };
 
-  beforeEach(() => {
-    // eslint-disable-next-line max-len
-    /* eslint-disable @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call */
-    writeFileSync = sinon.stub(fs, 'writeFileSync').returns();
-  });
+  describe('read/write functions', () => {
+    beforeEach(() => {
+      // eslint-disable-next-line max-len
+      /* eslint-disable @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call */
+      writeFileSync = sinon.stub(fs, 'writeFileSync').returns();
+    });
 
-  it('should write a json object', () => {
-    writeProcessedVerbsToFile('files-test/testing_bob.json', input, './');
-    expect(writeFileSync.callCount).toBe(1);
-  });
+    describe('buildAllSourceEnglish', () => {
+      it('should process files and write to the file system if files are present.', () => {
+        buildAllSourceEnglish();
+        expect(writeFileSync.callCount).toBe(1);
+      });
+    });
 
-  it('should write a json object even when not passed a data path', () => {
-    writeProcessedVerbsToFile('files-test/testing_bob.json', input);
-    expect(writeFileSync.callCount).toBe(1);
-  });
+    it('should write a json object', () => {
+      writeProcessedVerbsToFile('files-test/testing_bob.json', input, './');
+      expect(writeFileSync.callCount).toBe(1);
+    });
 
-  afterEach(() => {
-    writeFileSync.restore();
+    it('should write a json object even when not passed a data path', () => {
+      writeProcessedVerbsToFile('files-test/testing_bob.json', input);
+      expect(writeFileSync.callCount).toBe(1);
+    });
+
+    afterEach(() => {
+      writeFileSync.restore();
+    });
   });
 
   // eslint-disable-next-line max-len

@@ -1,15 +1,53 @@
-import { standardHydration } from '../hydrateEnglishVerb';
+import mock from 'mock-fs';
 
+import { EnglishJsonData } from '@english/englishTypes';
+
+import {
+  hydrateFromInfinitive, hydrateVerb, importJsonData, standardHydration,
+} from '../hydrateEnglishVerb';
+
+const move = {
+  infinitive: 'move',
+  language: 'en',
+  translations: {
+    de: 'machen',
+  },
+};
+
+const panic = {
+  infinitive: 'panic',
+  language: 'en',
+  translations: {
+    de: 'machen',
+  },
+};
+
+const ship = {
+  infinitive: 'ship',
+  language: 'en',
+  translations: {
+    de: 'shipchen',
+  },
+};
+
+const tryVerb = {
+  infinitive: 'try',
+  language: 'en',
+  translations: {
+    de: 'versuchen',
+  },
+};
+
+const call = {
+  infinitive: 'call',
+  language: 'en',
+  translations: {
+    de: 'rufen',
+  },
+};
 
 describe('hydrate regular verb', () => {
   it('correctly hydrates a simple regular verb call', () => {
-    const call = {
-      infinitive: 'call',
-      translations: {
-        de: 'rufen',
-      },
-    };
-
     const hydratedCall = {
       present: {
         i: 'call',
@@ -34,6 +72,7 @@ describe('hydrate regular verb', () => {
   it('correctly hydrates a simple regular verb play', () => {
     const play = {
       infinitive: 'play',
+      language: 'en',
       translations: {
         de: 'spielen',
       },
@@ -61,13 +100,6 @@ describe('hydrate regular verb', () => {
   });
 
   it('correctly hydrates a simple regular verb ending in an e', () => {
-    const move = {
-      infinitive: 'move',
-      translations: {
-        de: 'machen',
-      },
-    };
-
     const hydratedCall = {
       present: {
         i: 'move',
@@ -90,13 +122,6 @@ describe('hydrate regular verb', () => {
   });
 
   it('correctly hydrates a simple regular verb ending in c', () => {
-    const move = {
-      infinitive: 'panic',
-      translations: {
-        de: 'machen',
-      },
-    };
-
     const hydratedCall = {
       present: {
         i: 'panic',
@@ -113,19 +138,12 @@ describe('hydrate regular verb', () => {
       presentParticiple: 'panicking',
     };
 
-    const result = standardHydration(move);
+    const result = standardHydration(panic);
 
     expect(result).toEqual(hydratedCall);
   });
 
   it('correctly hydrates a simple regular verb ending in a consonant followed by y', () => {
-    const move = {
-      infinitive: 'try',
-      translations: {
-        de: 'versuchen',
-      },
-    };
-
     const hydratedCall = {
       present: {
         i: 'try',
@@ -142,19 +160,12 @@ describe('hydrate regular verb', () => {
       presentParticiple: 'trying',
     };
 
-    const result = standardHydration(move);
+    const result = standardHydration(tryVerb);
 
     expect(result).toEqual(hydratedCall);
   });
 
   it('correctly hydrates a simple regular verb ending in a vowel plus a consonant', () => {
-    const move = {
-      infinitive: 'ship',
-      translations: {
-        de: 'versuchen',
-      },
-    };
-
     const hydratedCall = {
       present: {
         i: 'ship',
@@ -171,8 +182,90 @@ describe('hydrate regular verb', () => {
       presentParticiple: 'shipping',
     };
 
-    const result = standardHydration(move);
+    const result = standardHydration(ship);
 
     expect(result).toEqual(hydratedCall);
+  });
+});
+
+describe('hydrateVerb', () => {
+  it('returns a hydrated verb', () => {
+    const expected = {
+      infinitive: 'move', participle: 'moved', past: { i: 'moved', it: 'moved', we: 'moved' }, present: { i: 'move', it: 'moves', we: 'move' }, presentParticiple: 'moving',
+    };
+
+    const result = hydrateVerb(move);
+    expect(result).toStrictEqual(expected);
+  });
+});
+
+describe('write and import functions', () => {
+  beforeEach(() => {
+    const fileOne = `date: 16
+
+    have:
+      language: en
+      translations:
+        de: haben
+      participle: had
+      irregular:
+        present:
+          i: have
+          it: has
+          we: have
+        past: had
+        `;
+
+    const fileTwo = `date: 16
+
+    adapt:
+      language: en
+      translations:
+        fr: adapter
+        `;
+
+    mock({
+      'phil.yaml': fileOne,
+      'rick.yaml': fileOne,
+      'sue.yaml': fileTwo,
+      data: {
+        bob: fileTwo,
+      },
+    });
+  });
+
+  afterEach(() => {
+    mock.restore();
+  });
+
+  it('throws error if englishVerbsUnhydrated doesn\'t exist.', () => {
+    expect(() => {
+      importJsonData();
+    }).toThrow('English data file not found: unknown error');
+  });
+});
+
+describe('hydrateFromInfinitive', () => {
+  const verbsData: EnglishJsonData = {
+    date: 12344567,
+    verbs: {
+      move: { infinitive: 'move', language: 'en', translations: { de: ['bewegen', 'um|ziehen'] } },
+    },
+  };
+
+  it('returns an hydrated verb if it exists in the verbsData object.', () => {
+    const result = hydrateFromInfinitive('move', verbsData);
+    const expected = {
+      infinitive: 'move', participle: 'moved', past: { i: 'moved', it: 'moved', we: 'moved' }, present: { i: 'move', it: 'moves', we: 'move' }, presentParticiple: 'moving',
+    };
+
+    expect(expected).toStrictEqual(result);
+  });
+
+  it('returns an infinitve if it doesn\'t exist in the verbsData object.', () => {
+    const result = hydrateFromInfinitive('panic', verbsData);
+    const expected = 'panic';
+
+    expect(expected).toStrictEqual(result);
   });
 });

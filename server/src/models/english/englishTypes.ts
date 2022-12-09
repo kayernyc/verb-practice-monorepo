@@ -24,6 +24,7 @@ export type EnglishIrregularObject = {
 }
 
 export type EnglishVerb = {
+  language: LanguageMap | string;
   infinitive: string;
   irregular?: EnglishIrregularObject;
   translations: LanguageMap;
