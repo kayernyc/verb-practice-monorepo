@@ -4,7 +4,7 @@ import yaml from 'js-yaml';
 import * as dotenv from 'dotenv';
 
 import { findPathToData } from '@models/shared/readYaml';
-import { EnglishVerb } from '@english/englishTypes';
+import { EnglishJsonData, EnglishVerb } from '@english/englishTypes';
 
 dotenv.config();
 
@@ -23,15 +23,6 @@ export type DataObj = {
 export type DataObjEntry = {
   [x: string]: DataObj | number;
 };
-
-export interface EnglishVerbDictionary {
-  [key: string]: EnglishVerb;
-}
-
-export interface EnglishJsonData {
-  date: number;
-  verbs: EnglishVerbDictionary;
-}
 
 export function writeProcessedVerbsToFile(
   url: string,

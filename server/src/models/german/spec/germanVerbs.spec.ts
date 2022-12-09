@@ -9,6 +9,10 @@ jest
   .setSystemTime(new Date('2020-01-01'));
 
 describe('germanVerbData', () => {
+  afterEach(() => {
+    jest.resetAllMocks();
+  });
+
   it('reads files', () => {
     // research how to mock yaml
     mockFs.readFileSync.mockReturnValue(
@@ -43,6 +47,10 @@ haben:
 });
 
 describe('createVerb', () => {
+  afterEach(() => {
+    jest.resetAllMocks();
+  });
+
   it('populates sein correctly', () => {
     const dataObj: DataObj = {
       translations:
