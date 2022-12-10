@@ -38,7 +38,7 @@ haben:
       date: 1577836800000,
       verbs: {
         haben: {
-          drop: false, hilfsverb: 'haben', infinitive: 'haben', languages: { en: 'to have a test' }, stems: { duEs: 'ha', partizip: 'b', präteritum: 't' }, strong: true, weakEndings: true,
+          drop: false, hilfsverb: 'haben', infinitive: 'haben', translations: { en: 'to have a test' }, stems: { duEs: 'ha', partizip: 'b', präteritum: 't' }, strong: true, weakEndings: true,
         },
       },
     };
@@ -76,7 +76,7 @@ describe('createVerb', () => {
       drop: false,
       hilfsverb: 'sein',
       infinitive: 'sein',
-      languages: { en: 'to be' },
+      translations: { en: 'to be' },
       stems: { präteritum: 'war' },
       strong: true,
       irregular: {
@@ -106,7 +106,7 @@ describe('createVerb', () => {
       drop: false,
       hilfsverb: 'sein',
       infinitive: 'fallen',
-      languages: { en: 'to fall' },
+      translations: { en: 'to fall' },
       stems: {
         duEs: 'ä',
         k2präsens: 'iel',
@@ -129,7 +129,7 @@ describe('createVerb', () => {
       drop: false,
       hilfsverb: 'sein',
       infinitive: 'schwimmen',
-      languages: { en: 'to swim' },
+      translations: { en: 'to swim' },
       stems: {
         partizip: 'o',
         präteritum: 'a',
@@ -146,7 +146,7 @@ describe('createVerb', () => {
       drop: false,
       hilfsverb: 'haben',
       infinitive: 'beraten',
-      languages: {
+      translations: {
         en: 'to advise, to discuss',
       },
     };

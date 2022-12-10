@@ -10,14 +10,14 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
       drop: false,
       hilfsverb: 'sein',
       infinitive: 'sein',
-      languages: { en: 'to be' },
+      translations: { en: 'to be' },
     };
 
     const expected: GermanVerb = {
       drop: false,
       hilfsverb: 'sein',
       infinitive: 'sein',
-      languages: { en: 'to be' },
+      translations: { en: 'to be' },
       partizip: 'gewesen',
       strong: true,
       stems: { präteritum: 'war', konjunktiv: 'sei' },
@@ -44,7 +44,7 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
       drop: true,
       hilfsverb: 'haben',
       infinitive: 'können',
-      languages: { en: english },
+      translations: { en: english },
     };
 
     const könnenObj: DataObj = {
@@ -61,7 +61,7 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
       drop: true,
       hilfsverb: 'haben',
       infinitive: 'können',
-      languages: { en: english },
+      translations: { en: english },
       strong: true,
       stems: { präsensSingular: 'a', präteritum: 'o' },
       weakEndings: true,
@@ -78,7 +78,7 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
       drop: true,
       hilfsverb: 'haben',
       infinitive: 'sollen',
-      languages: { en: english },
+      translations: { en: english },
     };
 
     const sollenObj: DataObj = {
@@ -92,7 +92,7 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
       drop: true,
       hilfsverb: 'haben',
       infinitive: 'sollen',
-      languages: { en: english },
+      translations: { en: english },
       strong: true,
     };
 
@@ -107,7 +107,7 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
       drop: false,
       hilfsverb: 'sein',
       infinitive: 'werden',
-      languages: { en: english },
+      translations: { en: english },
     };
 
     const verbObj: DataObj = {
@@ -130,7 +130,7 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
       drop: false,
       hilfsverb: 'sein',
       infinitive: 'werden',
-      languages: { en: english },
+      translations: { en: english },
       partizip: 'o',
       strong: true,
       stems: { partizip: 'o', präteritum: 'u' },

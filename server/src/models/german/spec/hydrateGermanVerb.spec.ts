@@ -55,14 +55,14 @@ describe('hydrateFromInfinitive returns correctly', () => {
         drop: false,
         hilfsverb: 'haben',
         infinitive: 'bedeuten',
-        languages: { en: 'to mean' },
+        translations: { en: 'to mean' },
         strong: false,
       },
       einatmen: {
         drop: false,
         hilfsverb: 'haben',
         infinitive: 'einatmen',
-        languages: { en: 'to be meaningless' },
+        translations: { en: 'to be meaningless' },
       },
     },
   };
@@ -116,7 +116,7 @@ describe('Weak verb conjugates correctly', () => {
     drop: false,
     hilfsverb: 'haben',
     infinitive: 'schauen',
-    languages: { en: 'to look, to see' },
+    translations: { en: 'to look, to see' },
   };
 
   it('Schauen conjugates correctly from minimal config', () => {
@@ -166,7 +166,7 @@ describe('Fallen conjugates correctly', () => {
     strong: true,
     hilfsverb: 'sein',
     infinitive: 'fallen',
-    languages: { en: 'to fall' },
+    translations: { en: 'to fall' },
     stems: { duEs: 'ä', präteritum: 'iel', k2präsens: 'iel' },
   };
 

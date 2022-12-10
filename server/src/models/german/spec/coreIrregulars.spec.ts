@@ -12,7 +12,7 @@ describe('haben is correctly conjugated', () => {
     weakEndings: true,
     hilfsverb: 'haben',
     infinitive: 'haben',
-    languages: { en: 'to have' },
+    translations: { en: 'to have' },
     stems: { duEs: 'ha', präteritum: 't', partizip: 'b' },
   };
 

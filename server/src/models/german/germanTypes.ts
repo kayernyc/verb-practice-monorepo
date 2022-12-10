@@ -81,7 +81,7 @@ export type GermanVerb = {
   hilfsverb: string;
   infinitive: string;
   irregular?: GermanIrregularObject;
-  languages: LanguageMap;
+  translations: LanguageMap;
   partizip?: string;
   stems?: { [key in GermanStems]?: string };
   strong?: [string: boolean] | boolean;

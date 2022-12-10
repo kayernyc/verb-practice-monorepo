@@ -29,7 +29,7 @@ export const createVerb = (_infinitive: string, dataObj: DataObj): GermanVerb =>
     drop: dataObj['drop ich/es pr\u00e4sens endings'] || false,
     hilfsverb: dataObj.hilfsverb || 'haben',
     infinitive: _infinitive,
-    languages,
+    translations: languages,
   };
 
   if (verbIsIrregular(dataObj)) {

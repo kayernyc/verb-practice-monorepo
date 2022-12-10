@@ -8,7 +8,7 @@ describe('irregularPartizipConjugation handles irregulars', () => {
       weekEndings: true,
       hilfsverb: 'haben',
       infinitive: 'haben',
-      languages: { en: 'to have' },
+      translations: { en: 'to have' },
       stems: { duEs: 'ha', präteritum: 't', partizip: 'b' },
       strong: true,
     };
@@ -29,7 +29,7 @@ describe('irregularPartizipConjugation handles irregulars', () => {
       drop: false,
       hilfsverb: 'sein',
       infinitive: 'schwimmen',
-      languages: { en: 'to swim' },
+      translations: { en: 'to swim' },
       stems: { partizip: 'o', präteritum: 'a' },
       strong: true,
     };
@@ -49,7 +49,7 @@ describe('irregularPartizipConjugation handles irregulars', () => {
       weekEndings: true,
       hilfsverb: 'haben',
       infinitive: 'bringen',
-      languages: { en: 'to bring, to take' },
+      translations: { en: 'to bring, to take' },
       strong: true,
       stems: { präteritum: 'ach' },
     };
@@ -70,7 +70,7 @@ describe('irregularPartizipConjugation handles irregulars', () => {
       weakEndings: true,
       hilfsverb: 'haben',
       infinitive: 'denken',
-      languages: { en: 'to think, to guess' },
+      translations: { en: 'to think, to guess' },
       strong: true,
       stems: { präteritum: 'ach' },
     };
@@ -91,7 +91,7 @@ describe('irregularPartizipConjugation handles irregulars', () => {
       hilfsverb: 'haben',
       weakEndings: true,
       infinitive: 'brennen',
-      languages: { en: 'to burn, to shine, to distil' },
+      translations: { en: 'to burn, to shine, to distil' },
       strong: true,
       stems: { präteritum: 'a', k2präsens: 'e', partizip: 'a' },
     };
@@ -106,7 +106,7 @@ describe('irregularPartizipConjugation handles irregulars', () => {
       drop: false,
       hilfsverb: 'haben',
       infinitive: 'verkaufen',
-      languages: { en: 'to sell' },
+      translations: { en: 'to sell' },
     };
     const stem = generateStems(config);
 
