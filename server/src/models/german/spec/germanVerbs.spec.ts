@@ -38,7 +38,7 @@ haben:
       date: 1577836800000,
       verbs: {
         haben: {
-          drop: false, hilfsverb: 'haben', infinitive: 'haben', translations: { en: 'to have a test' }, stems: { duEs: 'ha', partizip: 'b', präteritum: 't' }, strong: true, weakEndings: true,
+          language: 'de', drop: false, hilfsverb: 'haben', infinitive: 'haben', translations: { en: 'to have a test' }, stems: { duEs: 'ha', partizip: 'b', präteritum: 't' }, strong: true, weakEndings: true,
         },
       },
     };
@@ -73,6 +73,7 @@ describe('createVerb', () => {
 
     const result = createVerb('sein', dataObj);
     const expected = {
+      language: 'de',
       drop: false,
       hilfsverb: 'sein',
       infinitive: 'sein',
@@ -103,6 +104,7 @@ describe('createVerb', () => {
     };
     const result = createVerb('fallen', dataObj);
     const expected = {
+      language: 'de',
       drop: false,
       hilfsverb: 'sein',
       infinitive: 'fallen',
@@ -126,6 +128,7 @@ describe('createVerb', () => {
     };
     const result = createVerb('schwimmen', dataObj);
     const expected = {
+      language: 'de',
       drop: false,
       hilfsverb: 'sein',
       infinitive: 'schwimmen',
@@ -143,6 +146,7 @@ describe('createVerb', () => {
     const dataObj: DataObj = { translations: { en: 'to advise, to discuss' } };
     const result = createVerb('beraten', dataObj);
     const expected = {
+      language: 'de',
       drop: false,
       hilfsverb: 'haben',
       infinitive: 'beraten',

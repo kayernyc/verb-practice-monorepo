@@ -4,6 +4,7 @@ import germanAddPronounStringsToJson from '../GermanAddPronounStringsToJson';
 describe('germanAddPronounStringsToJson', () => {
   it('replaces code:sting pairs with objects', () => {
     const simpleTest = {
+      language: 'de',
       hilfsverb: 'haben',
       infinitive: 'testen',
       partizip: 'test',
@@ -15,6 +16,7 @@ describe('germanAddPronounStringsToJson', () => {
     const result = germanAddPronounStringsToJson(simpleTest);
 
     const expected = {
+      language: 'de',
       hilfsverb: 'haben',
       infinitive: 'testen',
       partizip: 'test',

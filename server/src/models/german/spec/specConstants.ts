@@ -4,6 +4,7 @@ import {
 import { DataObj } from '@german/germanVerbs';
 
 export const seinGermanVerb: GermanVerb = {
+  language: 'de',
   drop: false,
   hilfsverb: 'haben',
   infinitive: 'sein',
@@ -46,6 +47,7 @@ export const seinDataObject: DataObj = {
 };
 
 export const seinReturnObject = {
+  language: 'de',
   hilfsverb: 'haben',
   infinitive: 'sein',
   partizip: 'gewesen',
@@ -82,6 +84,7 @@ export const seinReturnObject = {
 export const seinPräteritumExpected = seinReturnObject['präteritum'];
 
 export const habenGermanVerb: GermanVerb = {
+  language: 'de',
   drop: false,
   hilfsverb: 'haben',
   infinitive: 'haben',
@@ -92,6 +95,7 @@ export const habenGermanVerb: GermanVerb = {
 };
 
 export const habenReturnObject = {
+  language: 'de',
   hilfsverb: 'haben',
   infinitive: 'haben',
   partizip: 'gehabt',
@@ -134,6 +138,7 @@ export const habenPräteritumExpected = {
 };
 
 export const werdenGermanVerb: GermanVerb = {
+  language: 'de',
   drop: false,
   hilfsverb: 'sein',
   infinitive: 'werden',
@@ -154,6 +159,7 @@ export const werdenGermanVerb: GermanVerb = {
 };
 
 export const werdenReturnObject = {
+  language: 'de',
   hilfsverb: 'sein',
   infinitive: 'werden',
   partizip: 'geworden',

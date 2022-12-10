@@ -4,6 +4,7 @@ import generateStems from '../generateStems';
 describe('irregularPartizipConjugation handles irregulars', () => {
   it('conjugates haben partizip correctly', () => {
     const config = {
+      language: 'de',
       drop: false,
       weekEndings: true,
       hilfsverb: 'haben',
@@ -26,6 +27,7 @@ describe('irregularPartizipConjugation handles irregulars', () => {
 
   it('conjugates schwimmen partizip correctly', () => {
     const config = {
+      language: 'de',
       drop: false,
       hilfsverb: 'sein',
       infinitive: 'schwimmen',
@@ -45,6 +47,7 @@ describe('irregularPartizipConjugation handles irregulars', () => {
 
   it('conjugates bringen partizip correctly', () => {
     const config = {
+      language: 'de',
       drop: false,
       weekEndings: true,
       hilfsverb: 'haben',
@@ -66,6 +69,7 @@ describe('irregularPartizipConjugation handles irregulars', () => {
 
   it('conjugates denken partizip correctly', () => {
     const config = {
+      language: 'de',
       drop: false,
       weakEndings: true,
       hilfsverb: 'haben',
@@ -87,6 +91,7 @@ describe('irregularPartizipConjugation handles irregulars', () => {
 
   it('conjugates brennen partizip correctly', () => {
     const config = {
+      language: 'de',
       drop: false,
       hilfsverb: 'haben',
       weakEndings: true,
@@ -97,12 +102,15 @@ describe('irregularPartizipConjugation handles irregulars', () => {
     };
     const stem = generateStems(config);
 
-    const partizip = irregularPartizipConjugation({ stem, partizip: 'a', infinitive: 'brennen', weakEndings: true });
+    const partizip = irregularPartizipConjugation({
+      stem, partizip: 'a', infinitive: 'brennen', weakEndings: true,
+    });
     expect(partizip).toEqual('gebrannt');
   });
 
   it('conjugates verkaufen partizip correctly', () => {
     const config = {
+      language: 'de',
       drop: false,
       hilfsverb: 'haben',
       infinitive: 'verkaufen',

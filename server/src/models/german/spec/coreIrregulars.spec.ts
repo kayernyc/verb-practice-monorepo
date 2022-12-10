@@ -7,6 +7,7 @@ import {
 
 describe('haben is correctly conjugated', () => {
   const config: GermanVerb = {
+    language: 'de',
     drop: false,
     strong: true,
     weakEndings: true,
@@ -17,6 +18,7 @@ describe('haben is correctly conjugated', () => {
   };
 
   const returnObject = {
+    language: 'de',
     hilfsverb: 'haben',
     infinitive: 'haben',
     partizip: 'habt',

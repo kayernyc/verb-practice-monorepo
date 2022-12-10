@@ -52,6 +52,7 @@ describe('hydrateFromInfinitive returns correctly', () => {
     date: 1633815078298,
     verbs: {
       bedeuten: {
+        language: 'de',
         drop: false,
         hilfsverb: 'haben',
         infinitive: 'bedeuten',
@@ -59,6 +60,7 @@ describe('hydrateFromInfinitive returns correctly', () => {
         strong: false,
       },
       einatmen: {
+        language: 'de',
         drop: false,
         hilfsverb: 'haben',
         infinitive: 'einatmen',
@@ -80,6 +82,7 @@ describe('hydrateFromInfinitive returns correctly', () => {
 
 describe('Weak verb conjugates correctly', () => {
   const expected = {
+    language: 'de',
     hilfsverb: 'haben',
     infinitive: 'schauen',
     partizip: 'geschaut',
@@ -113,6 +116,7 @@ describe('Weak verb conjugates correctly', () => {
     },
   };
   const config: GermanVerb = {
+    language: 'de',
     drop: false,
     hilfsverb: 'haben',
     infinitive: 'schauen',
@@ -128,6 +132,7 @@ describe('Weak verb conjugates correctly', () => {
 
 describe('Fallen conjugates correctly', () => {
   const expected = {
+    language: 'de',
     hilfsverb: 'sein',
     infinitive: 'fallen',
     partizip: 'gefallen',
@@ -162,6 +167,7 @@ describe('Fallen conjugates correctly', () => {
   };
 
   const config: GermanVerb = {
+    language: 'de',
     drop: false,
     strong: true,
     hilfsverb: 'sein',

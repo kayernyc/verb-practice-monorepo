@@ -7,6 +7,7 @@ import createIrregularVerbFeatures from '../createIrregularVerbFeatures';
 describe('verbIsIrregular correctly determines the state of the verb', () => {
   it('populates sein correctly', () => {
     const newVerb: GermanVerb = {
+      language: 'de',
       drop: false,
       hilfsverb: 'sein',
       infinitive: 'sein',
@@ -14,6 +15,7 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
     };
 
     const expected: GermanVerb = {
+      language: 'de',
       drop: false,
       hilfsverb: 'sein',
       infinitive: 'sein',
@@ -41,6 +43,7 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
     const english = 'can, may, are able to, to know how';
 
     const newVerb: GermanVerb = {
+      language: 'de',
       drop: true,
       hilfsverb: 'haben',
       infinitive: 'können',
@@ -58,6 +61,7 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
     };
 
     const expected: GermanVerb = {
+      language: 'de',
       drop: true,
       hilfsverb: 'haben',
       infinitive: 'können',
@@ -75,6 +79,7 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
     const english = 'to be expected to';
 
     const newVerb: GermanVerb = {
+      language: 'de',
       drop: true,
       hilfsverb: 'haben',
       infinitive: 'sollen',
@@ -89,6 +94,7 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
     };
 
     const expected: GermanVerb = {
+      language: 'de',
       drop: true,
       hilfsverb: 'haben',
       infinitive: 'sollen',
@@ -104,6 +110,7 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
     const english = 'to become, to grow';
 
     const newVerb: GermanVerb = {
+      language: 'de',
       drop: false,
       hilfsverb: 'sein',
       infinitive: 'werden',
@@ -127,6 +134,7 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
     };
 
     const expected: GermanVerb = {
+      language: 'de',
       drop: false,
       hilfsverb: 'sein',
       infinitive: 'werden',

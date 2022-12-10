@@ -5,6 +5,7 @@ describe('generateStems creates the correct stem', () => {
   const testConfig: { config: GermanVerb; expected: string }[] = [
     {
       config: {
+        language: 'de',
         drop: false,
         strong: true,
         hilfsverb: 'sein',
@@ -16,6 +17,7 @@ describe('generateStems creates the correct stem', () => {
     },
     {
       config: {
+        language: 'de',
         drop: false,
         hilfsverb: 'haben',
         infinitive: 'sammeln',
@@ -26,6 +28,7 @@ describe('generateStems creates the correct stem', () => {
     },
     {
       config: {
+        language: 'de',
         drop: false,
         hilfsverb: 'haben',
         infinitive: 'mißsammeln',
@@ -36,6 +39,7 @@ describe('generateStems creates the correct stem', () => {
     },
     {
       config: {
+        language: 'de',
         drop: false,
         hilfsverb: 'haben',
         infinitive: 'be|sammeln',

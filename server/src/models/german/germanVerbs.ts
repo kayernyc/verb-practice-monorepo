@@ -26,6 +26,7 @@ export const createVerb = (_infinitive: string, dataObj: DataObj): GermanVerb =>
   languages.en = dataObj.translations.en;
 
   let newVerb: GermanVerb = {
+    language: 'de',
     drop: dataObj['drop ich/es pr\u00e4sens endings'] || false,
     hilfsverb: dataObj.hilfsverb || 'haben',
     infinitive: _infinitive,
