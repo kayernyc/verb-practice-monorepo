@@ -5,41 +5,45 @@ describe('generateStems creates the correct stem', () => {
   const testConfig: { config: GermanVerb; expected: string }[] = [
     {
       config: {
+        language: 'de',
         drop: false,
         strong: true,
         hilfsverb: 'sein',
         infinitive: 'fallen',
-        languages: { en: 'to fall' },
+        translations: { en: 'to fall' },
         stems: { duEs: 'ä', präteritum: 'iel', k2präsens: 'iel' },
       },
       expected: 'fall',
     },
     {
       config: {
+        language: 'de',
         drop: false,
         hilfsverb: 'haben',
         infinitive: 'sammeln',
-        languages: { en: 'to gather, to collect' },
+        translations: { en: 'to gather, to collect' },
         strong: false,
       },
       expected: 'sammel',
     },
     {
       config: {
+        language: 'de',
         drop: false,
         hilfsverb: 'haben',
         infinitive: 'mißsammeln',
-        languages: { en: 'to gather, to miscollect' },
+        translations: { en: 'to gather, to miscollect' },
         strong: false,
       },
       expected: 'mißsammel',
     },
     {
       config: {
+        language: 'de',
         drop: false,
         hilfsverb: 'haben',
         infinitive: 'be|sammeln',
-        languages: { en: 'to gather, to be causing something' },
+        translations: { en: 'to gather, to be causing something' },
         strong: false,
       },
       expected: 'sammel',

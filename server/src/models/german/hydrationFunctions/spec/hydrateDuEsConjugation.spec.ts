@@ -4,6 +4,7 @@ describe('hydrate irregular duEs creates correct du and es for präsens', () => 
   it('creates correct duEs for haben', () => {
     // this is a semi-processed return object
     const returnObject = {
+      language: 'de',
       hilfsverb: 'haben',
       infinitive: 'haben',
       partizip: 'gehabt',
@@ -26,6 +27,7 @@ describe('hydrate irregular duEs creates correct du and es for präsens', () => 
   it('creates correct duEs for sterben', () => {
     // this is a semi-processed return object
     const returnObject = {
+      language: 'de',
       hilfsverb: 'haben',
       infinitive: 'sterben',
       partizip: 'gestorben',
@@ -48,6 +50,7 @@ describe('hydrate irregular duEs creates correct du and es for präsens', () => 
   it('creates correct duEs for nehmen', () => {
     // this is a semi-processed return object
     const returnObject = {
+      language: 'de',
       hilfsverb: 'haben',
       infinitive: 'nehmen',
       partizip: 'genommen',
@@ -70,6 +73,7 @@ describe('hydrate irregular duEs creates correct du and es for präsens', () => 
   it('creates correct duEs for fakenehmen', () => {
     // this is a semi-processed return object
     const returnObject = {
+      language: 'de',
       hilfsverb: 'haben',
       infinitive: 'fakenehmen',
       partizip: 'fake',
@@ -92,6 +96,7 @@ describe('hydrate irregular duEs creates correct du and es for präsens', () => 
   it('creates correct duEs for stehlen', () => {
     // this is a semi-processed return object
     const returnObject = {
+      language: 'de',
       hilfsverb: 'haben',
       infinitive: 'stehlen',
       partizip: 'gestohlen',
@@ -114,6 +119,7 @@ describe('hydrate irregular duEs creates correct du and es for präsens', () => 
   it('throws if no präsens is present', () => {
     // this is a semi-processed return object
     const returnObject = {
+      language: 'de',
       hilfsverb: 'haben',
       infinitive: 'stohlen',
       partizip: 'gestohlen',

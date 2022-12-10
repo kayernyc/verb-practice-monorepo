@@ -7,17 +7,19 @@ import createIrregularVerbFeatures from '../createIrregularVerbFeatures';
 describe('verbIsIrregular correctly determines the state of the verb', () => {
   it('populates sein correctly', () => {
     const newVerb: GermanVerb = {
+      language: 'de',
       drop: false,
       hilfsverb: 'sein',
       infinitive: 'sein',
-      languages: { en: 'to be' },
+      translations: { en: 'to be' },
     };
 
     const expected: GermanVerb = {
+      language: 'de',
       drop: false,
       hilfsverb: 'sein',
       infinitive: 'sein',
-      languages: { en: 'to be' },
+      translations: { en: 'to be' },
       partizip: 'gewesen',
       strong: true,
       stems: { präteritum: 'war', konjunktiv: 'sei' },
@@ -41,10 +43,11 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
     const english = 'can, may, are able to, to know how';
 
     const newVerb: GermanVerb = {
+      language: 'de',
       drop: true,
       hilfsverb: 'haben',
       infinitive: 'können',
-      languages: { en: english },
+      translations: { en: english },
     };
 
     const könnenObj: DataObj = {
@@ -58,10 +61,11 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
     };
 
     const expected: GermanVerb = {
+      language: 'de',
       drop: true,
       hilfsverb: 'haben',
       infinitive: 'können',
-      languages: { en: english },
+      translations: { en: english },
       strong: true,
       stems: { präsensSingular: 'a', präteritum: 'o' },
       weakEndings: true,
@@ -75,10 +79,11 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
     const english = 'to be expected to';
 
     const newVerb: GermanVerb = {
+      language: 'de',
       drop: true,
       hilfsverb: 'haben',
       infinitive: 'sollen',
-      languages: { en: english },
+      translations: { en: english },
     };
 
     const sollenObj: DataObj = {
@@ -89,10 +94,11 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
     };
 
     const expected: GermanVerb = {
+      language: 'de',
       drop: true,
       hilfsverb: 'haben',
       infinitive: 'sollen',
-      languages: { en: english },
+      translations: { en: english },
       strong: true,
     };
 
@@ -104,10 +110,11 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
     const english = 'to become, to grow';
 
     const newVerb: GermanVerb = {
+      language: 'de',
       drop: false,
       hilfsverb: 'sein',
       infinitive: 'werden',
-      languages: { en: english },
+      translations: { en: english },
     };
 
     const verbObj: DataObj = {
@@ -127,10 +134,11 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
     };
 
     const expected: GermanVerb = {
+      language: 'de',
       drop: false,
       hilfsverb: 'sein',
       infinitive: 'werden',
-      languages: { en: english },
+      translations: { en: english },
       partizip: 'o',
       strong: true,
       stems: { partizip: 'o', präteritum: 'u' },

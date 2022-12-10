@@ -7,16 +7,18 @@ import {
 
 describe('haben is correctly conjugated', () => {
   const config: GermanVerb = {
+    language: 'de',
     drop: false,
     strong: true,
     weakEndings: true,
     hilfsverb: 'haben',
     infinitive: 'haben',
-    languages: { en: 'to have' },
+    translations: { en: 'to have' },
     stems: { duEs: 'ha', präteritum: 't', partizip: 'b' },
   };
 
   const returnObject = {
+    language: 'de',
     hilfsverb: 'haben',
     infinitive: 'haben',
     partizip: 'habt',

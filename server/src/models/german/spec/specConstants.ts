@@ -4,6 +4,7 @@ import {
 import { DataObj } from '@german/germanVerbs';
 
 export const seinGermanVerb: GermanVerb = {
+  language: 'de',
   drop: false,
   hilfsverb: 'haben',
   infinitive: 'sein',
@@ -16,7 +17,7 @@ export const seinGermanVerb: GermanVerb = {
       [GermanPronounKeys.es]: 'ist',
     },
   },
-  languages: { en: 'to be' },
+  translations: { en: 'to be' },
   partizip: 'gewesen',
   stems: { [GermanStems.präteritum]: 'war', [GermanStems.konjunktiv]: 'sei' },
   strong: true,
@@ -46,6 +47,7 @@ export const seinDataObject: DataObj = {
 };
 
 export const seinReturnObject = {
+  language: 'de',
   hilfsverb: 'haben',
   infinitive: 'sein',
   partizip: 'gewesen',
@@ -82,16 +84,18 @@ export const seinReturnObject = {
 export const seinPräteritumExpected = seinReturnObject['präteritum'];
 
 export const habenGermanVerb: GermanVerb = {
+  language: 'de',
   drop: false,
   hilfsverb: 'haben',
   infinitive: 'haben',
-  languages: { en: 'to have' },
+  translations: { en: 'to have' },
   stems: { [GermanStems.duEs]: 'ha', [GermanStems.präteritum]: 't', [GermanStems.partizip]: 'b' },
   strong: true,
   weakEndings: true,
 };
 
 export const habenReturnObject = {
+  language: 'de',
   hilfsverb: 'haben',
   infinitive: 'haben',
   partizip: 'gehabt',
@@ -134,6 +138,7 @@ export const habenPräteritumExpected = {
 };
 
 export const werdenGermanVerb: GermanVerb = {
+  language: 'de',
   drop: false,
   hilfsverb: 'sein',
   infinitive: 'werden',
@@ -147,13 +152,14 @@ export const werdenGermanVerb: GermanVerb = {
       [GermanPronounKeys.es]: 'wurde',
     },
   },
-  languages: { en: 'to become, to grow' },
+  translations: { en: 'to become, to grow' },
   stems: { [GermanStems.präteritum]: 'u', [GermanStems.partizip]: 'o' },
   strong: true,
   weakEndings: false,
 };
 
 export const werdenReturnObject = {
+  language: 'de',
   hilfsverb: 'sein',
   infinitive: 'werden',
   partizip: 'geworden',

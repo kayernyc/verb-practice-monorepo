@@ -9,6 +9,7 @@ interface PronounHydration {
 }
 
 interface ReturnJson {
+  language: string,
   hilfsverb: string,
   infinitive: string,
   partizip: string,

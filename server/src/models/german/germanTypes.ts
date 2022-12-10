@@ -28,6 +28,7 @@ export enum GermanStems {
 export type GermanVerbHydrated = {
   [key in GermanTenses]?: { [person: string]: string };
 } & {
+  language: string;
   hilfsverb: string;
   infinitive: string;
   partizip: string;
@@ -77,11 +78,12 @@ export const GermanPronounKeys: { [key: string]: number } = {
 };
 
 export type GermanVerb = {
+  language: LanguageMap | string;
   drop: boolean;
   hilfsverb: string;
   infinitive: string;
   irregular?: GermanIrregularObject;
-  languages: LanguageMap;
+  translations: LanguageMap;
   partizip?: string;
   stems?: { [key in GermanStems]?: string };
   strong?: [string: boolean] | boolean;
