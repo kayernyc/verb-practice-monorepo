@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { createVerb, DataObj, germanVerbData } from '../germanVerbs';
+import { createVerb, DataObj, germanVerbData } from '../germanBuildJsonFromYml';
 
 jest.mock('fs');
 const mockFs = fs as jest.Mocked<typeof fs>;

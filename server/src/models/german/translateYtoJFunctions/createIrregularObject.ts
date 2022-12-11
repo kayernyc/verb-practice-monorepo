@@ -1,7 +1,7 @@
 import {
   GermanIrregularObject, GermanIrregularSet, GermanPronounKeys, GermanTenses,
 } from '@german/germanTypes';
-import { DataObj } from '../germanVerbs';
+import { DataObj } from '../germanBuildJsonFromYml';
 
 export default function createIrregularObject(dataObj: DataObj)
   : GermanIrregularObject {

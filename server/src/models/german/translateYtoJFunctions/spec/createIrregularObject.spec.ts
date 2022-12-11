@@ -1,6 +1,6 @@
 import { seinDataObject } from '@german/spec/specConstants';
 import createIrregularObject from '../createIrregularObject';
-import { DataObj } from '../../germanVerbs';
+import { DataObj } from '../../germanBuildJsonFromYml';
 
 describe('createIrregularObject correctly modifies the object', () => {
   it('does not modify sollen because it does not have irregular', () => {

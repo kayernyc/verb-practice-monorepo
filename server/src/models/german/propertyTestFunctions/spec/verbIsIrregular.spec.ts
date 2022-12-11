@@ -1,4 +1,4 @@
-import { DataObj } from '@german/germanVerbs';
+import { DataObj } from '@german/germanBuildJsonFromYml';
 import verbIsIrregular from '../verbIsIrregular';
 
 describe('verbIsIrregular correctly determines the state of the verb', () => {

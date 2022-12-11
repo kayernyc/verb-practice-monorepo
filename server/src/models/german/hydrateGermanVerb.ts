@@ -6,7 +6,7 @@ import { GermanJsonData } from '@models/jsonTypes';
 import {
   GermanPronounKeys, GermanTenses, GermanVerb, GermanVerbHydrated,
 } from './germanTypes';
-import { germanVerbData } from './germanVerbs';
+import { germanVerbData } from './germanBuildJsonFromYml';
 import hydrateIrregularStems from './hydrationFunctions/hydrateIrregularStems';
 
 function importJsonData(): GermanJsonData {

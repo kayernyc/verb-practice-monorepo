@@ -2,7 +2,7 @@ import {
   Request, Response, RequestHandler, Router,
 } from 'express';
 
-import { germanVerbData } from '@german/germanVerbs';
+import { germanVerbData } from '@german/germanBuildJsonFromYml';
 
 import germanVerbHydration from '../controllers/germanVerbHydration';
 

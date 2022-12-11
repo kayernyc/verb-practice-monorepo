@@ -1,5 +1,5 @@
 import { GermanStems } from '@german/germanTypes';
-import { DataObj } from '../germanVerbs';
+import { DataObj } from '../germanBuildJsonFromYml';
 
 const germanStemsDictionary = {
   k2präsens: 'k2präsens',
