@@ -57,12 +57,41 @@ bobben:
     präteritum: t
     partizip: b
       `;
+    const fileFour = `date: 17
+
+ratten:
+  language: de
+  translations:
+    en: guess, advise
+  tags:
+    - hilfsverb
+  strong:
+  weak endings: true
+  stems:
+    präsens du/es: ha
+    präteritum: t
+    partizip: b
+
+suchen:
+  language: de
+  translations:
+    en: to have a test
+  tags:
+    - hilfsverb
+  strong:
+  weak endings: true
+  stems:
+    präsens du/es: ha
+    präteritum: t
+    partizip: b
+      `;
 
     // eslint-disable-next-line @typescript-eslint/no-unsafe-call
     mock({
       'badgerman.yaml': fileOne,
       'wrong.yaml': fileTwo,
       'german.yaml': fileThree,
+      'german_2.yaml': fileFour,
     });
   });
 
@@ -82,6 +111,15 @@ bobben:
       date: 16,
       ratten: {
         language: 'de', stems: { partizip: 'b', 'präsens du/es': 'ha', präteritum: 't' }, strong: null, tags: ['hilfsverb'], translations: { en: 'guess' }, 'weak endings': true,
+      },
+    },
+    {
+      suchen: {
+        language: 'de', stems: { partizip: 'b', 'präsens du/es': 'ha', präteritum: 't' }, strong: null, tags: ['hilfsverb'], translations: { en: 'to have a test' }, 'weak endings': true,
+      },
+      date: 17,
+      ratten: {
+        language: 'de', stems: { partizip: 'b', 'präsens du/es': 'ha', präteritum: 't' }, strong: null, tags: ['hilfsverb'], translations: { en: 'guess, advise' }, 'weak endings': true,
       },
     }];
 

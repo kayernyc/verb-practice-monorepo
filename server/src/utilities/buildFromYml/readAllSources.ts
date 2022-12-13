@@ -19,7 +19,7 @@ export function readYamls(
   languageName: string,
   typeGuard: Guard<unknown>,
   _dataPath = dataPath,
-): unknown[] | void {
+): unknown[] {
   const urlArray: string[] = typeof url === 'string' ? [url] : url;
 
   return urlArray.map((_url: string) => {
