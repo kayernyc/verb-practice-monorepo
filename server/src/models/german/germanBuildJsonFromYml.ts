@@ -77,3 +77,21 @@ export function germanVerbData() {
 
   throw Error('Writing data failed.');
 }
+
+const validKeys = [
+  'language', 'translations', 'tags', 'partizip',
+  'strong', 'stems', 'irregular', 'weak endings',
+  'drop ich/es pr\u00e4sens endings'];
+
+export const germanTypeGuard = function germanType(x: object): x is DataObj {
+  let returnValue = true;
+
+  const xKeys = Object.keys(x);
+  xKeys.forEach((key: string) => {
+    if (!validKeys.includes(key)) {
+      returnValue = false;
+    }
+  });
+
+  return 'language' in x && returnValue;
+};
