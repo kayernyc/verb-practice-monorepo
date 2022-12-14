@@ -14,15 +14,17 @@ dotenv.config();
 const relativeDataPath = findPathToData(__dirname);
 const dataPath = path.join(__dirname, relativeDataPath);
 
-export function readYamls(
+export function readYamls<T>(
   url: string | string[],
   languageName: string,
-  typeGuard: Guard<unknown>,
+  typeGuard: Guard<T>,
   _dataPath = dataPath,
-): unknown[] {
+): { [id: string]: T; } {
   const urlArray: string[] = typeof url === 'string' ? [url] : url;
+  const allRecords: { [id: string]: T; } = {};
+  const keyDict: { [key: string]: number } = {};
 
-  return urlArray.map((_url: string) => {
+  urlArray.map((_url: string) => {
     let processedData: unknown;
 
     try {
@@ -34,24 +36,36 @@ export function readYamls(
     }
     return processedData;
   })
-    .filter((record: unknown) => {
+    .forEach((record: unknown) => {
+      let currentDate = 0;
       const keys = Object.keys(record);
-      let returnValue = true;
       keys.forEach((key: string) => {
-        if (key !== 'date' && !typeGuard(record[key])) {
-          returnValue = false;
+        // eslint-disable-next-line dot-notation
+        if (record['date'] !== undefined) {
+          // eslint-disable-next-line dot-notation
+          currentDate = record['date'] as number || 0;
+        }
+        if (key !== 'date' && typeGuard(record[key])) {
+          const verb = record[key] as T;
+          if (keyDict[key] === undefined) {
+            keyDict[key] = currentDate;
+            allRecords[key] = verb;
+          } else if (keyDict[key] < currentDate) {
+            keyDict[key] = currentDate;
+            allRecords[key] = verb;
+          }
         }
       });
-
-      return returnValue;
     });
+
+  return allRecords;
 }
 
-export function buildAllSource(
+export function buildAllSource<T>(
   languageName: string,
-  typeGuard: Guard<unknown>,
+  typeGuard: Guard<T>,
   _dataPath = dataPath,
-): unknown[] | void {
+): { [id: string]: T; } {
   const allFileNames = fs.readdirSync(_dataPath)
     .filter((filename: string) => filename.slice(0, languageName.length) === languageName && filename.slice(-4) === 'yaml');
 
