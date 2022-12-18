@@ -2,14 +2,11 @@ import fs from 'fs';
 import path from 'path';
 import * as dotenv from 'dotenv';
 
-import { GermanJsonData, LanguageMap } from '@models/jsonTypes';
+import { GermanJsonData } from '@models/jsonTypes';
 import { findRelativePathToData } from '@models/shared/readYaml';
-import { GermanVerb } from './germanTypes';
 
+import { createSeparableVerb, createVerb } from '@german/createGermanVerb';
 import { buildAllSource } from '../../utilities/buildFromYml/readAllSources';
-
-import verbIsIrregular from './propertyTestFunctions/verbIsIrregular';
-import createIrregularVerbFeatures from './translateYtoJFunctions/createIrregularVerbFeatures';
 
 dotenv.config();
 
@@ -25,26 +22,6 @@ export type DataObj = {
   'drop ich/es pr\u00e4sens endings'?: boolean;
 };
 
-// let germanVerbsDictionary;
-export const createVerb = (_infinitive: string, dataObj: DataObj): GermanVerb => {
-  const languages: LanguageMap = {};
-  languages.en = dataObj.translations.en;
-
-  let newVerb: GermanVerb = {
-    language: 'de',
-    drop: dataObj['drop ich/es pr\u00e4sens endings'] || false,
-    hilfsverb: dataObj.hilfsverb || 'haben',
-    infinitive: _infinitive,
-    translations: languages,
-  };
-
-  if (verbIsIrregular(dataObj)) {
-    newVerb = createIrregularVerbFeatures({ newVerb, dataObj });
-  }
-
-  return newVerb;
-};
-
 const processVerbs = (data: { [x: string]: DataObj }): GermanJsonData => {
   const newJsonObj: GermanJsonData = {
     date: Date.now(),
@@ -54,7 +31,16 @@ const processVerbs = (data: { [x: string]: DataObj }): GermanJsonData => {
   for (const keyString in data) {
     if (Object.prototype.hasOwnProperty.call(data, keyString) && keyString !== 'date') {
       const newDataObj: DataObj = data[keyString];
-      newJsonObj.verbs[keyString] = createVerb(keyString, newDataObj);
+
+      if (keyString.includes('|')) {
+        const seperableVerbTuple = createSeparableVerb(keyString, newDataObj);
+        if (seperableVerbTuple) {
+          const [key, sepVerb] = seperableVerbTuple;
+          newJsonObj.verbs[key] = sepVerb;
+        }
+      } else {
+        newJsonObj.verbs[keyString] = createVerb(keyString, newDataObj);
+      }
     }
   }
 

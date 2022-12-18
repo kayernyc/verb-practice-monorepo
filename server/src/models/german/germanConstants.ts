@@ -1,6 +1,15 @@
 export const firstVowelGroupRegex = /\b([bcdfghjklmnpqrstvwxyzß]+)([aeiouäöü]+)([bcdfghjklmnpqrstvwxyzß][a-zß]+)\b/;
 
 export const inseperableRegex = /^(?<prefix>be|emp|ent|er|ge|miß|ver|zer)(.*)/;
+export type SeperableGermanParticles = 'ab' | 'an' | 'auf' | 'aus' | 'auseinander'
+  | 'bei' | 'da' | 'dabei' | 'dar' | 'durch' | 'ein' | 'empor'
+  | 'entgegen' | 'entlang' | 'entzwei' | 'fehl' | 'fern' | 'fest'
+  | 'fort' | 'frei' | 'gegenüber' | 'gleich' | 'her' | 'herab' | 'heran'
+  | 'herauf' | 'heraus' | 'herbei' | 'herein' | 'herüber' | 'herum' | 'herunter'
+  | 'hinauf' | 'hinaus' | 'hinein' | 'hinweg' | 'heim' | 'hoch' | 'mit' | 'statt' | 'über'
+  | 'um' | 'vor' | 'vorweg' | 'voraus' | 'vorbei' | 'vorüber' | 'voran' | 'vorangehen'
+  | 'vorankommen' | 'weiter' | 'wieder' | 'zu' | 'zurecht' | 'zurück' | 'zusammen';
+
 export const separableArray = [
   'ab',
   'an',

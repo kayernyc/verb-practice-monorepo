@@ -2,7 +2,7 @@ import mock from 'mock-fs';
 
 import fs from 'fs';
 import sinon from 'sinon';
-import { createVerb, DataObj, germanVerbData } from '../germanBuildJsonFromYml';
+import { DataObj, germanVerbData } from '../germanBuildJsonFromYml';
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-return
 jest.mock('./@models/shared/readYaml', () => ({
@@ -118,114 +118,6 @@ fliegen:
     präteritum: t
     partizip: b
 `;
-
-describe('createVerb', () => {
-  it('populates sein correctly', () => {
-    const dataObj: DataObj = {
-      translations:
-        { en: 'to be' },
-      tags: ['hilfsverb'],
-      strong: true,
-      hilfsverb: 'sein',
-      partizip: 'gewesen',
-      stems: { präteritum: 'war' },
-      irregular: {
-        präsens: {
-          ich: 'bin',
-          du: 'bist',
-          es: 'ist',
-          wir: 'sind',
-          ihr: 'seid',
-        },
-      },
-    };
-
-    const result = createVerb('sein', dataObj);
-    const expected = {
-      language: 'de',
-      drop: false,
-      hilfsverb: 'sein',
-      infinitive: 'sein',
-      translations: { en: 'to be' },
-      stems: { präteritum: 'war' },
-      strong: true,
-      irregular: {
-        präsens: {
-          1033: 'bin',
-          1041: 'sind',
-          1098: 'bist',
-          1106: 'seid',
-          1548: 'ist',
-        },
-      },
-      partizip: 'gewesen',
-    };
-    expect(result).toEqual(expected);
-  });
-
-  it('populates fallen correctly', () => {
-    const dataObj: DataObj = {
-      translations:
-        { en: 'to fall' },
-      strong: true,
-      hilfsverb: 'sein',
-      stems: { 'präsens du/es': 'ä', k2präsens: 'iel' },
-    };
-    const result = createVerb('fallen', dataObj);
-    const expected = {
-      language: 'de',
-      drop: false,
-      hilfsverb: 'sein',
-      infinitive: 'fallen',
-      translations: { en: 'to fall' },
-      stems: {
-        duEs: 'ä',
-        k2präsens: 'iel',
-      },
-      strong: true,
-    };
-    expect(result).toEqual(expected);
-  });
-
-  it('populates schwimmen correctly', () => {
-    const dataObj: DataObj = {
-      translations:
-        { en: 'to swim' },
-      hilfsverb: 'sein',
-      strong: true,
-      stems: { partizip: 'o', präteritum: 'a' },
-    };
-    const result = createVerb('schwimmen', dataObj);
-    const expected = {
-      language: 'de',
-      drop: false,
-      hilfsverb: 'sein',
-      infinitive: 'schwimmen',
-      translations: { en: 'to swim' },
-      stems: {
-        partizip: 'o',
-        präteritum: 'a',
-      },
-      strong: true,
-    };
-    expect(result).toEqual(expected);
-  });
-
-  it('populates beraten correctly', () => {
-    const dataObj: DataObj = { translations: { en: 'to advise, to discuss' } };
-    const result = createVerb('beraten', dataObj);
-    const expected = {
-      language: 'de',
-      drop: false,
-      hilfsverb: 'haben',
-      infinitive: 'beraten',
-      translations: {
-        en: 'to advise, to discuss',
-      },
-    };
-    expect(result).toEqual(expected);
-  });
-});
 
 describe('processes bekommen', () => {
   const originalPWD = process.env.PWD;
@@ -352,5 +244,118 @@ describe('germanVerbData', () => {
   it('reads files', () => {
     germanVerbData();
     expect(writeFileSync.callCount).toBe(1);
+  });
+});
+
+describe('weeds out malformed seperable verbs', () => {
+  const originalPWD = process.env.PWD;
+  let writeFileSync: sinon.SinonStub;
+
+  const bekommen = `date: 15
+
+ent|fehlen:
+  language: de
+  translations:
+    en: feel
+  hilfsverb: bob
+
+bekommen:
+  language: de
+  translations:
+    en: get
+  hilfsverb: haben
+      `;
+
+  beforeEach(() => {
+    process.env.PWD = './';
+    writeFileSync = sinon.stub(fs, 'writeFileSync').returns();
+
+    mock({
+      data: {
+        'german1.yaml': bekommen,
+      },
+    });
+  });
+
+  afterEach(() => {
+    process.env.PWD = originalPWD;
+    mock.restore();
+    writeFileSync.restore();
+  });
+
+  it('reads the malformed verb', () => {
+    const result = germanVerbData();
+    const expected = {
+      date: 1577836800000,
+      verbs: {
+        bekommen: {
+          drop: false, hilfsverb: 'haben', infinitive: 'bekommen', language: 'de', translations: { en: 'get' },
+        },
+      },
+    };
+    // expect(writeFileSync.callCount).toBe(1);
+    expect(result).toEqual(expected);
+  });
+});
+
+describe('processes well-formed seperable verbs', () => {
+  const originalPWD = process.env.PWD;
+  let writeFileSync: sinon.SinonStub;
+
+  const bekommen = `date: 15
+
+dar|fehlen:
+  language: de
+  translations:
+    en: feel
+  hilfsverb: haben
+
+bekommen:
+  language: de
+  translations:
+    en: get
+  hilfsverb: haben
+      `;
+
+  beforeEach(() => {
+    process.env.PWD = './';
+    mock({
+      data: {
+        'german1.yaml': bekommen,
+      },
+    });
+  });
+
+  afterEach(() => {
+    process.env.PWD = originalPWD;
+    mock.restore();
+  });
+
+  it('reads files', () => {
+    const result = germanVerbData();
+    const expected = {
+      date: 1577836800000,
+      verbs: {
+        bekommen: {
+          drop: false,
+          hilfsverb: 'haben',
+          infinitive: 'bekommen',
+          language: 'de',
+          translations: {
+            en: 'get',
+          },
+        },
+        darfehlen: {
+          base: 'fehlen',
+          hilfsverb: 'haben',
+          language: 'de',
+          particle: 'dar',
+          translations: {
+            en: 'feel',
+          },
+        },
+      },
+    };
+    expect(result).toEqual(expected);
   });
 });

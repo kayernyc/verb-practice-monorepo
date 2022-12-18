@@ -1,7 +1,7 @@
-import { GermanVerb } from '@german/germanTypes';
+import { GermanVerb, GermanSeparableVerb } from '@german/germanTypes';
 
 export interface GermanVerbDictionary {
-  [key: string]: GermanVerb;
+  [key: string]: GermanVerb | GermanSeparableVerb;
 }
 
 export interface GermanJsonData {

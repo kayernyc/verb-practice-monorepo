@@ -1,3 +1,4 @@
+import { SeperableGermanParticles } from '@german/germanConstants';
 import { LanguageMap } from '@models/jsonTypes';
 import {
   GrammaticalFormal, GrammaticalGender, GrammaticalNumber, GrammaticalPerson,
@@ -78,14 +79,38 @@ export const GermanPronounKeys: { [key: string]: number } = {
 };
 
 export type GermanVerb = {
-  language: LanguageMap | string;
   drop: boolean;
   hilfsverb: string;
   infinitive: string;
   irregular?: GermanIrregularObject;
-  translations: LanguageMap;
+  language: LanguageMap | string;
   partizip?: string;
   stems?: { [key in GermanStems]?: string };
   strong?: [string: boolean] | boolean;
+  translations: LanguageMap;
   weakEndings?: boolean;
+
+};
+
+export type GermanSeparableVerb = {
+  base: string;
+  hilfsverb: string;
+  language: LanguageMap | string;
+  particle: SeperableGermanParticles;
+  translations: LanguageMap;
+}
+
+const validSeperableKeys = ['base', 'hilfsverb', 'language', 'particle', 'translations'];
+
+export const GermanSeparableVerbTypeGuard = (x: object): x is GermanSeparableVerb => {
+  let returnValue = true;
+
+  const xKeys = Object.keys(x);
+  xKeys.forEach((key: string) => {
+    if (!validSeperableKeys.includes(key)) {
+      returnValue = false;
+    }
+  });
+
+  return 'language' in x && returnValue;
 };

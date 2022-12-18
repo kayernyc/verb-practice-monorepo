@@ -4,7 +4,12 @@ import path from 'path';
 import kranton from '@german/propertyTestFunctions/kranton';
 import { GermanJsonData } from '@models/jsonTypes';
 import {
-  GermanPronounKeys, GermanTenses, GermanVerb, GermanVerbHydrated,
+  GermanPronounKeys,
+  GermanSeparableVerb,
+  GermanSeparableVerbTypeGuard,
+  GermanTenses,
+  GermanVerb,
+  GermanVerbHydrated,
 } from './germanTypes';
 import { germanVerbData } from './germanBuildJsonFromYml';
 import hydrateIrregularStems from './hydrationFunctions/hydrateIrregularStems';
@@ -122,15 +127,10 @@ export const hydrateFromInfinitive = (
   infinitive: string,
   _germanVerbs?: GermanJsonData,
 ): string | GermanVerbHydrated => {
-  // eslint-disable-next-line max-len
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
   const germanVerbDictionary = _germanVerbs?.verbs ?? germanVerbs.verbs;
+  const verbConfiguration: GermanVerb | GermanSeparableVerb = germanVerbDictionary[infinitive];
 
-  // eslint-disable-next-line max-len
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
-  const verbConfiguration: GermanVerb = germanVerbDictionary[infinitive];
-
-  if (verbConfiguration) {
+  if (verbConfiguration && !GermanSeparableVerbTypeGuard(verbConfiguration)) {
     return hydrateVerb(verbConfiguration);
   }
   return infinitive;
