@@ -3,13 +3,12 @@ import path from 'path';
 import yaml from 'js-yaml';
 import * as dotenv from 'dotenv';
 
-import { findPathToData } from '@models/shared/readYaml';
+import { findRelativePathToData } from '@models/shared/readYaml';
 import { EnglishJsonData, EnglishVerb } from '@english/englishTypes';
 
 dotenv.config();
 
-const relativeDataPath = findPathToData(__dirname);
-const dataPath = path.join(__dirname, relativeDataPath);
+const dataPath = findRelativePathToData(__dirname);
 
 export type DataObj = {
   variations?: DataObj;

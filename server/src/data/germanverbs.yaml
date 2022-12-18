@@ -1238,12 +1238,12 @@ an|fangen:
 an|sehen:
   language: de
   translations:
-    en: inspect, view
+    en: inspect, view, look at, regard
 
 aus|sehen:
   language: de
   translations:
-    en: look
+    en: appear
 
 bekommen:
   language: de
@@ -1252,11 +1252,6 @@ bekommen:
   hilfsverb: haben
 
 #-------------------------------------------------------------------------------
-
-ein|kaufen:
-  language: de
-  translations:
-    en: buy
 
 auf|wachen:
   language: de
@@ -1289,7 +1284,7 @@ ein|schlafen:
 ein|brechen:
   language: de
   translations:
-    en: [crack, burgle, collapse, break in]
+    en: [crack, burgle, collapse, break in, cave in]
   hilfsverb: sein
 
 er|frieren:
@@ -1558,7 +1553,7 @@ planen:
 ein|atmen:
   language: de
   translations:
-    en: breathe in
+    en: breathe in, inhale
 
 atmen:
   language: de
@@ -1634,7 +1629,7 @@ versetzen:
 auf|gehen:
   language: de
   translations:
-    en: [rise, realise, pan out]
+    en: [rise, realise, pan out, open]
 
 schnappen:
   language: de
@@ -1714,7 +1709,7 @@ weinen:
 ein|fallen:
   language: de
   translations:
-    en: [collapse, shrink, dip]
+    en: [collapse, shrink, dip, to occur to]
 
 räumen:
   language: de

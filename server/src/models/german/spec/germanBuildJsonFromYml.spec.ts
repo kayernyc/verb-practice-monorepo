@@ -1,50 +1,123 @@
+import mock from 'mock-fs';
+
 import fs from 'fs';
+import sinon from 'sinon';
 import { createVerb, DataObj, germanVerbData } from '../germanBuildJsonFromYml';
 
-jest.mock('fs');
-const mockFs = fs as jest.Mocked<typeof fs>;
+// eslint-disable-next-line @typescript-eslint/no-unsafe-return
+jest.mock('./@models/shared/readYaml', () => ({
+  __esModule: true,
+  ...jest.requireActual('./@models/shared/readYaml'),
+  findRelativePathToData: () => './data/',
+}));
 
 jest
   .useFakeTimers()
   .setSystemTime(new Date('2020-01-01'));
 
-describe('germanVerbData', () => {
-  afterEach(() => {
-    jest.resetAllMocks();
-  });
+const fileOne = `date: 15
 
-  it('reads files', () => {
-    // research how to mock yaml
-    mockFs.readFileSync.mockReturnValue(
-      /* eslint-disable comma-dangle */
-      `date: 16
+  ratten:
+    language: de
+    translations:
+      en: guess
+    tags:
+      - hilfsverb
+    strong:
+    weak endings: true
+    stems:
+      präsens du/es: ha
+      präteritum: t
+      partizip: b
+      `;
 
-haben:
-  translations:
-    en: to have a test
-  tags:
-    - hilfsverb
-  strong:
-  weak endings: true
-  stems:
-    präsens du/es: ha
-    präteritum: t
-    partizip: b
-      `
-      /* eslint-enable comma-dangle */
-    );
-    const result = germanVerbData();
-    const expected = {
-      date: 1577836800000,
-      verbs: {
-        haben: {
-          language: 'de', drop: false, hilfsverb: 'haben', infinitive: 'haben', translations: { en: 'to have a test' }, stems: { duEs: 'ha', partizip: 'b', präteritum: 't' }, strong: true, weakEndings: true,
-        },
-      },
-    };
-    expect(result).toEqual(expected);
-  });
-});
+const fileTwo = `
+  ratten:
+    language: de
+    translations:
+      en: speak
+    tags:
+      - hilfsverb
+    strong:
+    weak endings: true
+    stems:
+      präsens du/es: ha
+      präteritum: t
+      partizip: b
+        `;
+
+const fileThree = `date: 16
+
+  ratten:
+    language: de
+    translations:
+      en: guess, advise
+    tags:
+      - hilfsverb
+    strong:
+    weak endings: true
+    stems:
+      präsens du/es: ha
+      präteritum: t
+      partizip: b
+
+  bobben:
+    language: de
+    translations:
+      en: to have a test
+    tags:
+      - hilfsverb
+    strong:
+    weak endings: true
+    stems:
+      präsens du/es: ha
+      präteritum: t
+      partizip: b
+        `;
+
+const fileFour = `date: 17
+
+  fehlen:
+    language: de
+    translations:
+      en: feel
+    tags:
+      - hilfsverb
+    strong:
+    weak endings: true
+    stems:
+      präsens du/es: ha
+      präteritum: t
+      partizip: b
+
+  suchen:
+    language: de
+    translations:
+      en: to have a test
+    tags:
+      - hilfsverb
+    strong:
+    weak endings: true
+    stems:
+      präsens du/es: ha
+      präteritum: t
+      partizip: b
+        `;
+
+const fileFive = `date: bob
+  fliegen:
+    language: de
+    translations:
+      en: to have a test
+    tags:
+      - hilfsverb
+    strong:
+    weak endings: true
+    stems:
+      präsens du/es: ha
+      präteritum: t
+      partizip: b
+  `;
 
 describe('createVerb', () => {
   afterEach(() => {
@@ -155,5 +228,38 @@ describe('createVerb', () => {
       },
     };
     expect(result).toEqual(expected);
+  });
+});
+
+describe('germanVerbData', () => {
+  const originalPWD = process.env.PWD;
+  let writeFileSync: sinon.SinonStub;
+
+  beforeEach(() => {
+    process.env.PWD = './';
+    writeFileSync = sinon.stub(fs, 'writeFileSync').returns();
+
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
+    mock({
+      'german1.yaml': fileOne,
+      'german2.yaml': fileTwo,
+      'german3.yaml': fileThree,
+      'german4.yaml': fileFour,
+      'german5.yaml': fileFive,
+      data: {},
+    });
+  });
+
+  afterEach(() => {
+    process.env.PWD = originalPWD;
+    mock.restore();
+    writeFileSync.restore();
+  });
+
+  it('reads files', () => {
+    // research how to mock yaml
+    germanVerbData();
+    expect(writeFileSync.callCount).toBe(1);
+    // expect(result).toEqual(expected);
   });
 });

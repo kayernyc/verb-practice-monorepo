@@ -1,7 +1,7 @@
 /** @type {import('ts-jest/dist/types').InitialOptionsTsJest} */
 module.exports = {
   coverageDirectory: './coverage/',
-  collectCoverageFrom: ['./src/**/*', 'scripts/**/*', '!./src/data/**/*'],
+  collectCoverageFrom: ['./src/**/*.ts', 'scripts/**/*.ts', '!./src/data/**/*'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   moduleNameMapper: {
     '@english(.*)$': '<rootDir>/src/models/english$1',

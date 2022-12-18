@@ -223,11 +223,6 @@ an|schneiden:
   translations:
     en: cut into (cut the first piece of)
 
-an|sehen:
-  language: de
-  translations:
-    en: look at, regard
-
 an|sprechen:
   language: de
   translations:
@@ -308,11 +303,6 @@ auf|brechen:
   translations:
     en: break open
 
-auf|brauchen:
-  language: de
-  translations:
-    en: use up
-
 auf|decken:
   language: de
   translations:
@@ -347,11 +337,6 @@ auf|geben:
   language: de
   translations:
     en: give up
-
-auf|gehen:
-  language: de
-  translations:
-    en: open
 
 auf|klären:
   language: de
@@ -412,11 +397,6 @@ auf|tischen:
   language: de
   translations:
     en: serve up
-
-auf|wachsen:
-  language: de
-  translations:
-    en: grow up
 
 auf|weichen:
   language: de
@@ -597,11 +577,6 @@ aus|steigen:
   language: de
   translations:
     en: get out of [a car, train]
-
-aus|sehen:
-  language: de
-  translations:
-    en: appear
 
 aus|wechseln:
   language: de
@@ -828,11 +803,6 @@ durch|ziehen:
   translations:
     en: pull through [an opening]).
 
-ein|atmen:
-  language: de
-  translations:
-    en: inhale
-
 ein|berufen:
   language: de
   translations:
@@ -842,11 +812,6 @@ ein|biegen:
   language: de
   translations:
     en: turn in
-
-ein|brechen:
-  language: de
-  translations:
-    en: break in, cave in
 
 ein|cremen:
   language: de
@@ -862,11 +827,6 @@ ein|fahren:
   language: de
   translations:
     en: drive in
-
-ein|fallen:
-  language: de
-  translations:
-    en: collapse to occur to
 
 ein|gehen:
   language: de
@@ -1641,12 +1601,7 @@ herunter|steigen:
 hervor|gehen:
   language: de
   translations:
-    en: emerge
-
-hervor|gehen:
-  language: de
-  translations:
-    en: lure out
+    en: emerge, lure out
 
 hervor|heben:
   language: de
@@ -2053,11 +2008,6 @@ hoch|halten:
   translations:
     en: hold up [in a raised position]
 
-hoch|klettern:
-  language: de
-  translations:
-    en: climb up
-
 hoch|krempeln:
   language: de
   translations:
@@ -2132,11 +2082,6 @@ mit|arbeiten:
   language: de
   translations:
     en: collaborate, work along with
-
-mit|bringen:
-  language: de
-  translations:
-    en: bring along
 
 mit|dürfen:
   language: de
@@ -2797,11 +2742,6 @@ vor|ziehen:
   language: de
   translations:
     en: prefer, pull forward,  draw [a curtain]
-
-voraus|sein:
-  language: de
-  translations:
-    en: be in advance, be ahead
 
 voraus|berechnen:
   language: de

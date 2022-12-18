@@ -1,10 +1,10 @@
 import path from 'path';
-import { findPathToData } from '../readYaml';
+import { findRelativePathToData } from '../readYaml';
 
-describe('findPathToData', () => {
+describe('findRelativePathToData', () => {
   it('finds the relative path', () => {
-    const testPath = path.join(process.env.PWD, 'src', 'bob');
-    const result: string = findPathToData(testPath);
-    expect(result).toEqual('../../dist/data');
+    const testPath = path.join('src', 'bob');
+    const result: string = findRelativePathToData(testPath);
+    expect(result).toEqual('dist/data');
   });
 });
