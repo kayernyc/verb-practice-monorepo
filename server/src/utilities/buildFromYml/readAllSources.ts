@@ -69,6 +69,5 @@ export function buildAllSource<T>(
 
   const allFileNames = fs.readdirSync(currentDataPath)
     .filter((filename: string) => filename.slice(0, languageName.length) === languageName && filename.slice(-4) === 'yaml');
-
   return readYamls(allFileNames, languageName, typeGuard, currentDataPath);
 }
