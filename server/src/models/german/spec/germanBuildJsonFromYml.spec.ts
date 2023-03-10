@@ -2,7 +2,7 @@ import mock from 'mock-fs';
 
 import fs from 'fs';
 import sinon from 'sinon';
-import { DataObj, germanVerbData } from '../germanBuildJsonFromYml';
+import { germanVerbData } from '../germanBuildJsonFromYml';
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-return
 jest.mock('./@models/shared/readYaml', () => ({
@@ -300,8 +300,6 @@ bekommen:
 
 describe('processes well-formed seperable verbs', () => {
   const originalPWD = process.env.PWD;
-  let writeFileSync: sinon.SinonStub;
-
   const bekommen = `date: 15
 
 dar|fehlen:

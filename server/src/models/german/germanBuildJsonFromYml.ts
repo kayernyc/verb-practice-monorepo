@@ -49,10 +49,6 @@ const processVerbs = (data: { [x: string]: DataObj }): GermanJsonData => {
   return newJsonObj;
 };
 
-export function dataPathFinder() {
-  return findRelativePathToData(__dirname);
-}
-
 export function writeProcessedVerbsToFile(
   url: string,
   processedVerbs: GermanJsonData,

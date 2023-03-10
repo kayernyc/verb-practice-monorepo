@@ -10,15 +10,15 @@ export const createVerb = (_infinitive: string, dataObj: DataObj): GermanVerb | 
     return;
   }
 
-  const languages: LanguageMap = {};
-  languages.en = dataObj.translations.en;
+  const translations: LanguageMap = {};
+  translations.en = dataObj.translations.en;
 
   let newVerb: GermanVerb = {
     language: 'de',
     drop: dataObj['drop ich/es pr\u00e4sens endings'] || false,
     hilfsverb: dataObj.hilfsverb === 'sein' ? 'sein' : 'haben',
     infinitive: _infinitive,
-    translations: languages,
+    translations,
   };
 
   if (verbIsIrregular(dataObj)) {
@@ -39,8 +39,8 @@ export const createSeparableVerb = (
   const condidateParticle = _infinitive.slice(0, _infinitive.indexOf('|'));
   if (separableArray.includes(condidateParticle)) {
     const particle = condidateParticle as SeperableGermanParticles;
-    const languages: LanguageMap = {};
-    languages.en = dataObj.translations.en;
+    const translations: LanguageMap = {};
+    translations.en = dataObj.translations.en;
 
     return [
       _infinitive.replace('|', ''),
@@ -48,7 +48,7 @@ export const createSeparableVerb = (
         language: 'de',
         hilfsverb: dataObj.hilfsverb === 'sein' ? 'sein' : 'haben',
         base: _infinitive.slice(_infinitive.indexOf('|') + 1),
-        translations: languages,
+        translations,
         particle,
       },
     ];

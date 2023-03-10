@@ -89,7 +89,32 @@ export type GermanVerb = {
   strong?: [string: boolean] | boolean;
   translations: LanguageMap;
   weakEndings?: boolean;
+};
 
+const validKeys = [
+  'drop',
+  'hilfsverb',
+  'infinitive',
+  'irregular',
+  'language',
+  'partizip',
+  'stems',
+  'strong',
+  'translations',
+  'weekEndings',
+];
+
+export const GermanVerbTypeGuard = (x: object): x is GermanVerb => {
+  let returnValue = true;
+
+  const xKeys = Object.keys(x);
+  xKeys.forEach((key: string) => {
+    if (!validKeys.includes(key)) {
+      returnValue = false;
+    }
+  });
+
+  return 'language' in x && returnValue;
 };
 
 export type GermanSeparableVerb = {

@@ -1,18 +1,23 @@
-import { GermanVerb, GermanSeparableVerb } from '@german/germanTypes';
+export interface LanguageMap {
+  de?: string | string[];
+  en?: string | string[];
+  fr?: string | string[];
+}
 
 export interface GermanVerbDictionary {
-  [key: string]: GermanVerb | GermanSeparableVerb;
+  [key: string]: {
+    drop?: boolean,
+    hilfsverb: string,
+    infinitive?: string,
+    language: string | LanguageMap,
+    strong?: [string: boolean] | boolean,
+    translations: LanguageMap,
+  };
 }
 
 export interface GermanJsonData {
   date: number;
   verbs: GermanVerbDictionary;
-}
-
-export interface LanguageMap {
-  de?: string | string[];
-  en?: string | string[];
-  fr?: string | string[];
 }
 
 // CREDIT WHERE CREDIT IS DUE: https://stackoverflow.com/a/66605669
