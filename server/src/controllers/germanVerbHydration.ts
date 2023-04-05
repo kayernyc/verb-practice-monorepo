@@ -15,6 +15,7 @@ import { convertHydrationToModel } from '@german/germanDBModel';
 const germanVerbHydration = async (req: Request, res: Response) => {
   const verb: string = req.params.verb?.toLowerCase();
   let message = `Verb ${verb} isn't fully hydrated.`;
+  console.log('i got here');
 
   // try from db first
   const db = mongoose.connection;
@@ -43,6 +44,8 @@ const germanVerbHydration = async (req: Request, res: Response) => {
 
   try {
     let hydratiedVerb = hydrateFromInfinitive(verb);
+
+    console.log('I got here');
     if (typeof hydratiedVerb !== 'string') {
       hydratiedVerb = germanAddPronounStringsToJson(hydratiedVerb);
       message = `Verb ${verb} is successfully hydrated.`;

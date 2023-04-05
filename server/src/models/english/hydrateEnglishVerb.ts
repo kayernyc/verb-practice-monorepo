@@ -3,13 +3,12 @@ import path from 'path';
 import * as dotenv from 'dotenv';
 
 import { EnglishJsonData, EnglishVerb, EnglishVerbHydrated } from '@english/englishTypes';
-import { findPathToData } from '@models/shared/readYaml';
+import { findRelativePathToData } from '@models/shared/readYaml';
 import { vowels } from '@english/englishConstants';
 
 dotenv.config();
 
-const relativeDataPath = findPathToData(__dirname);
-const dataPath = path.join(__dirname, relativeDataPath);
+const dataPath = findRelativePathToData(__dirname);
 
 export function importJsonData(): EnglishJsonData {
   try {

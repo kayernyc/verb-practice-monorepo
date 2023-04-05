@@ -3,7 +3,7 @@ import mock from 'mock-fs';
 import { weedOutDuplicates } from '../remove-duplicates';
 
 describe('tests files for duplicates', () => {
-  beforeAll(() => {
+  beforeEach(() => {
     const fileOne = `date: 16
 
 willem:
@@ -51,7 +51,7 @@ bobben:
     expect(logSpy).toHaveBeenCalledWith('rick.yaml willem is a duplicate');
   });
 
-  afterAll(() => {
+  afterEach(() => {
     mock.restore();
   });
 });

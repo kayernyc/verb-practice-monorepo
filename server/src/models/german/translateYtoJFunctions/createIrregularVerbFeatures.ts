@@ -1,5 +1,5 @@
 import { GermanVerb } from '@german/germanTypes';
-import { DataObj } from '../germanVerbs';
+import { DataObj } from '../germanBuildJsonFromYml';
 import createIrregularObject from './createIrregularObject';
 import createStems from './createStems';
 

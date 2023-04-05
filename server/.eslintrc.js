@@ -30,6 +30,7 @@ module.exports = {
         tsx: 'never',
       },
     ],
+    'consistent-return': 'off',
     'import/prefer-default-export': 'off',
     indent: 'off',
     'no-shadow': 'off',

@@ -1,7 +1,7 @@
 import {
   GermanPronounKeys, GermanStems, GermanTenses, GermanVerb,
 } from '@german/germanTypes';
-import { DataObj } from '@german/germanVerbs';
+import { DataObj } from '@german/germanBuildJsonFromYml';
 
 export const seinGermanVerb: GermanVerb = {
   language: 'de',

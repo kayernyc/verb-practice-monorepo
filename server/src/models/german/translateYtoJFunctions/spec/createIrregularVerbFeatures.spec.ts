@@ -1,6 +1,6 @@
 import { GermanVerb, GermanTenses, GermanPronounKeys } from '@german/germanTypes';
 import { seinDataObject } from '@german/spec/specConstants';
-import { DataObj } from '../../germanVerbs';
+import { DataObj } from '../../germanBuildJsonFromYml';
 
 import createIrregularVerbFeatures from '../createIrregularVerbFeatures';
 

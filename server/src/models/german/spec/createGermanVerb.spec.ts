@@ -1,56 +1,7 @@
-import fs from 'fs';
-import { createVerb, DataObj, germanVerbData } from '../germanVerbs';
-
-jest.mock('fs');
-const mockFs = fs as jest.Mocked<typeof fs>;
-
-jest
-  .useFakeTimers()
-  .setSystemTime(new Date('2020-01-01'));
-
-describe('germanVerbData', () => {
-  afterEach(() => {
-    jest.resetAllMocks();
-  });
-
-  it('reads files', () => {
-    // research how to mock yaml
-    mockFs.readFileSync.mockReturnValue(
-      /* eslint-disable comma-dangle */
-      `date: 16
-
-haben:
-  translations:
-    en: to have a test
-  tags:
-    - hilfsverb
-  strong:
-  weak endings: true
-  stems:
-    präsens du/es: ha
-    präteritum: t
-    partizip: b
-      `
-      /* eslint-enable comma-dangle */
-    );
-    const result = germanVerbData();
-    const expected = {
-      date: 1577836800000,
-      verbs: {
-        haben: {
-          language: 'de', drop: false, hilfsverb: 'haben', infinitive: 'haben', translations: { en: 'to have a test' }, stems: { duEs: 'ha', partizip: 'b', präteritum: 't' }, strong: true, weakEndings: true,
-        },
-      },
-    };
-    expect(result).toEqual(expected);
-  });
-});
+import { createVerb, createSeparableVerb } from '@german/createGermanVerb';
+import { DataObj } from '@german/germanBuildJsonFromYml';
 
 describe('createVerb', () => {
-  afterEach(() => {
-    jest.resetAllMocks();
-  });
-
   it('populates sein correctly', () => {
     const dataObj: DataObj = {
       translations:
@@ -155,5 +106,32 @@ describe('createVerb', () => {
       },
     };
     expect(result).toEqual(expected);
+  });
+
+  it('does not create a full verb from a separable verb', () => {
+    const dataObj: DataObj = { translations: { en: 'to wash up' } };
+    const result = createVerb('auf|waschen', dataObj);
+
+    expect(result).toBeUndefined();
+  });
+
+  it('does create a seperable verb obj from a separable verb with a valid particle', () => {
+    const dataObj: DataObj = { translations: { en: 'to wash up' } };
+    const result = createSeparableVerb('auf|waschen', dataObj);
+    const expected = [
+      'aufwaschen',
+      {
+        base: 'waschen', hilfsverb: 'haben', language: 'de', particle: 'auf', translations: { en: 'to wash up' },
+      },
+    ];
+
+    expect(result).toStrictEqual(expected);
+  });
+
+  it('does not create a seperable verb obj from a separable verb with an invalid particle', () => {
+    const dataObj: DataObj = { translations: { en: 'to wash up' } };
+    const result = createSeparableVerb('emp|waschen', dataObj);
+
+    expect(result).toBeUndefined();
   });
 });

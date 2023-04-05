@@ -30,15 +30,11 @@ export function weedOutDuplicates(_filesArray = filesArray) {
   console.log({ _filesArray });
 
   _filesArray.forEach((filePath: string) => {
-    // eslint-disable-next-line no-console
     try {
       // eslint-disable-next-line no-console
       console.log(filePath);
       const fileContents = fs.readFileSync(path.resolve(__dirname, '../../', filePath), 'utf8');
       const data = yaml.load(fileContents) as { [x: string]: DataObj };
-
-      // eslint-disable-next-line no-console
-      console.log(data);
 
       Object.keys(data).forEach((key: string) => {
         if (key !== 'date') {

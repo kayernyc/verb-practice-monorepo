@@ -1,4 +1,4 @@
-import { DataObj } from '../germanVerbs';
+import { DataObj } from '../germanBuildJsonFromYml';
 
 const standardIrregularProperties = ['partizip', 'strong', 'stems', 'irregular'];
 

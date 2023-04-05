@@ -3,18 +3,26 @@ import path from 'path';
 
 import kranton from '@german/propertyTestFunctions/kranton';
 import { GermanJsonData } from '@models/jsonTypes';
+import { findRelativePathToData } from '@models/shared/readYaml';
 import {
-  GermanPronounKeys, GermanTenses, GermanVerb, GermanVerbHydrated,
+  GermanPronounKeys,
+  GermanSeparableVerb,
+  GermanTenses,
+  GermanVerb,
+  GermanVerbTypeGuard,
+  GermanVerbHydrated,
 } from './germanTypes';
-import { germanVerbData } from './germanVerbs';
+import { germanVerbData } from './germanBuildJsonFromYml';
 import hydrateIrregularStems from './hydrationFunctions/hydrateIrregularStems';
 
 function importJsonData(): GermanJsonData {
   try {
-    const jsonPath = path.resolve(__dirname, '..', '..', './data/germanVerbsUnhydrated.json');
-    const data: string = fs.readFileSync(jsonPath, 'utf8');
+    const dataPath = findRelativePathToData(__dirname);
+
+    const fileContents = fs.readFileSync(path.join(dataPath, 'germanVerbsUnhydrated.json'), 'utf8');
+
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-    const parsedData: GermanJsonData = JSON.parse(data) as GermanJsonData;
+    const parsedData: GermanJsonData = JSON.parse(fileContents) as GermanJsonData;
     return parsedData;
   } catch (err) {
     return germanVerbData();
@@ -122,16 +130,39 @@ export const hydrateFromInfinitive = (
   infinitive: string,
   _germanVerbs?: GermanJsonData,
 ): string | GermanVerbHydrated => {
-  // eslint-disable-next-line max-len
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
   const germanVerbDictionary = _germanVerbs?.verbs ?? germanVerbs.verbs;
+  const verbConfiguration = germanVerbDictionary[infinitive];
 
-  // eslint-disable-next-line max-len
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
-  const verbConfiguration: GermanVerb = germanVerbDictionary[infinitive];
+  // console.log({ verbConfiguration }, 'from hydrate', GermanVerbTypeGuard(verbConfiguration));
 
-  if (verbConfiguration) {
+  if (verbConfiguration && GermanVerbTypeGuard(verbConfiguration)) {
     return hydrateVerb(verbConfiguration);
   }
   return infinitive;
 };
+
+export function hydrateSeparableVerb(verbConfiguration: GermanSeparableVerb) {
+  const { base, particle } = verbConfiguration;
+  const baseConfig = hydrateFromInfinitive(base);
+
+  if (baseConfig && typeof baseConfig !== 'string') {
+    baseConfig.infinitive = `${particle}${base}`;
+    const newPartizip = baseConfig.partizip.slice(0, 2) === 'ge' ? baseConfig.partizip.slice(2) : baseConfig.partizip;
+    baseConfig.partizip = `${particle}ge${newPartizip}`;
+
+    [
+      GermanTenses.präsens, GermanTenses.präteritum,
+      GermanTenses.konjunktiv, GermanTenses.k2präsens,
+    ].forEach((tense: GermanTenses) => {
+      const currentTense = baseConfig[tense];
+      [
+        GermanPronounKeys.ich, GermanPronounKeys.du,
+        GermanPronounKeys.es, GermanPronounKeys.wir, GermanPronounKeys.ihr,
+      ].forEach((person) => {
+        currentTense[person] = `${currentTense[person]} ${particle}`;
+      });
+    });
+  }
+
+  return baseConfig;
+}

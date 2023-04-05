@@ -6,18 +6,18 @@
   "version": "1.0.0",
   "scripts": {
     "start": "sh scripts/build.sh && tsc && tsc-alias -p tsconfig.json && node dist/server.js",
-    "testbuild": "tsc && node -e 'require(\"./dist/models/german/germanverbs.js\").germanVerbData()'",
+    "germanbuild": "sh scripts/build.sh && tsc && tsc-alias -p tsconfig.json && node -e 'require(\"./dist/models/german/germanBuildJsonFromYml.js\").germanVerbData()'",
+    "englishbuild": "sh scripts/build.sh && tsc && tsc-alias -p tsconfig.json && node -e 'require(\"./scripts/node/remove-duplicates.js\").weedOutDuplicates()'",
     "dev:build": "sh scripts/build.sh && tsc && tsc-alias",
     "dev:server": "tsc -w & tsc-alias -w & node dist/server.js",
     "prettier": "prettier 'src/**/*.ts'",
     "prettier:fix": "prettier --write 'src/**/*.ts'",
     "test": "jest --coverage",
-    "englishbuild": "sh scripts/build.sh && tsc && node -e 'require(\"./dist/models/english/englishBuildJsonFromYml.js\").weedOutDuplicates()'",
     "lint": "eslint --ext .js,.ts . --fix",
     "prep": "sh scripts/remove-duplicates.sh",
     "build": "rm -rf dist && mkdir dist && sh scripts/build.sh && tsc && tsc-alias -- --configFile tsconfig.server.json",
     "start:server": "node dist/server.js",
-    "data:build": "sh scripts/build.sh && tsc && tsc-alias -p tsconfig.json && node -e 'require(\"./dist/models/german/germanverbs.js\").germanVerbData()' && node -e 'require(\"./dist/models/english/englishBuildJsonFromYml.js\").buildAllSourceEnglish()'"
+    "data:build": "sh scripts/build.sh && tsc && tsc-alias -p tsconfig.json && node -e 'require(\"./dist/models/german/germanBuildJsonFromYml.js\").germanVerbData()' && node -e 'require(\"./dist/models/english/englishBuildJsonFromYml.js\").buildAllSourceEnglish()'"
   },
   "keywords": [],
   "author": "",
