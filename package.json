@@ -1,0 +1,23 @@
+{
+  "name": "verb-practice-monorepo",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "graph": "nx graph",
+    "nx": "nx",
+    "preinstall": "npx only-allow pnpm",
+    "test:unit:all": "nx run-many --target=test:unit --all"
+  },
+  "private": true,
+  "devDependencies": {
+    "@nrwl/workspace": "^15.9.2",
+    "jest": "^29.5.0",
+    "nx": "15.0.10",
+    "only-allow": "^1.1.1",
+    "prettier": "^2.6.2",
+    "typescript": "^5.0.3"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
