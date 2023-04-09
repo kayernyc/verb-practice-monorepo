@@ -5,13 +5,28 @@
     "default": {
       "runner": "nx/tasks-runners/default",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ]
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
       }
     }
+  },
+  "targetDefaults": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ],
+    "test:unit": [
+      {
+        "target": "build",
+        "projects": "self"
+      }
+    ],
+    "test:e2e": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
   }
 }
