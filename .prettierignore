@@ -1,4 +1,12 @@
 # Add files here to ignore them from prettier formatting
-
+# Ignore artifacts:
 /dist
 /coverage
+/build
+/coverage
+
+# Ignore all HTML files:
+*.html
+
+# Ignore configurations
+*.json
