@@ -1,0 +1,11 @@
+# dist
+/dist/**/*
+
+# config
+**.js
+
+# folders
+/coverage
+
+# db
+dbConnect.js
