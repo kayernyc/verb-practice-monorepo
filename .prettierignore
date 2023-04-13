@@ -10,3 +10,4 @@
 
 # Ignore configurations
 *.json
+*.yaml
