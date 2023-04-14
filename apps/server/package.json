@@ -30,8 +30,7 @@
     "mock-fs": "^5.1.4",
     "module-alias": "^2.2.2",
     "mongoose": "^6.5.4",
-    "sinon": "^14.0.1",
-    "styled-components": "^5.3.5"
+    "sinon": "^14.0.1"
   },
   "devDependencies": {
     "@types/cors": "^2.8.12",
@@ -39,6 +38,7 @@
     "@types/jest": "^27.0.1",
     "@types/js-yaml": "4.0.5",
     "@types/mock-fs": "^4.13.1",
+    "@types/node": "*",
     "@types/sinon": "^10.0.13",
     "@typescript-eslint/eslint-plugin": "5.4.0",
     "@typescript-eslint/parser": "5.4.0",

@@ -1,8 +1,8 @@
-const sumTwo = require('sum-two');
-const sumOne = require('sum-one');
+import sumTwo from 'sum-two';
+import { sumOne } from 'sum-one';
 
 describe('When using sumOne and sumTwo', () => {
-  it('should sum three to the given number', () => {
+  it('should sum 3 to 7', () => {
     expect(sumOne(sumTwo(4))).toEqual(7);
   });
 });

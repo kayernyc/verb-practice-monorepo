@@ -1,5 +1,6 @@
 {
   "name": "sum-two",
+  "type": "module",
   "version": "1.0.0-beta.1",
   "description": "Sums two to a given number",
   "scripts": {
