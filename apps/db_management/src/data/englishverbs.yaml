@@ -1,0 +1,1333 @@
+date: 1664720800446
+
+"be":
+  language: en
+  translations:
+    de: sein
+    fr: être
+  tags:
+    - auxilliary
+  irregular:
+    present:
+      i: am
+      it: is
+      we: are
+
+have:
+  language: en
+  translations:
+    de: haben
+    fr: avoir
+  participle: had
+  irregular:
+    present:
+      i: have
+      it: has
+      we: have
+    past: had
+
+bear:
+  language: en
+  translations:
+    de: ertragen
+  participle: bore
+  irregular:
+    past: borne
+
+beat:
+  language: en
+  translations:
+    de: schlagen
+  participle: beaten
+  irregular:
+    past: beat
+
+begin:
+  language: en
+  participle: begun
+  irregular:
+    past: began
+  translations:
+    de: [beginnen, an|fangen]
+
+bend:
+  language: en
+  translations:
+    de: biegen
+  participle: bent
+  irregular:
+    past: bent
+
+bet:
+  language: en
+  translations:
+    de: wetten
+  participle: bet
+  irregular:
+    past: bet # [past tense and participle also sometimes betted]
+
+bid:
+  language: en
+  variations:
+    - definition: as in an auction
+      language: en
+      translations:
+        de: um ein Gebot abzugeben
+      participle: bid
+      irregular:
+        past: bid
+    - definition: meaning "request"
+      translations:
+        de: bieten
+      participle: [bade, bid]
+      irregular:
+        past: bidden, bid
+
+bide:
+  language: en
+  participle: [bided, bode]
+  irregular:
+    past: [bided, bidden]
+  translations:
+    de: [ab|warten]
+
+bind:
+  language: en
+  translations:
+    de: binden
+  participle: bound
+  irregular:
+    past: bound
+
+bite:
+  language: en
+  translations:
+    de: beißen
+  participle: bit
+  irregular:
+    past: bitten
+
+bleed:
+  language: en
+  participle: bled
+  irregular:
+    past: bled
+  translations:
+    de: bluten
+
+blow:
+  participle: blew
+  irregular:
+    past: blown
+
+break:
+  language: en
+  translations:
+    de: brechen
+  participle: broke
+  irregular:
+    past: broken
+
+breed:
+  language: en
+  translations:
+    de: züchten
+  participle: bred
+  irregular:
+    past: bred
+
+bring:
+  language: en
+  translations:
+    de: [bringen, mit|bringen, zu|bringen]
+  participle: brought
+  irregular:
+    past: brought
+
+build:
+  language: en
+  participle: built
+  irregular:
+    past: built
+  translations:
+    de: bilden
+
+burn:
+  language: en
+  translations:
+    de: brennen
+  participle: [burnt, burned]
+  irregular:
+    past: [burnt, burned]
+
+burst:
+  language: en
+  translations:
+    de: platzen
+  participle: burst
+  irregular:
+    past: burst
+
+buy:
+  language: en
+  participle: bought
+  irregular:
+    past: bought
+  translations:
+    de: [kaufen, ein|kaufen]
+
+cast:
+  language: en
+  translations:
+    de: gießen
+  participle: cast
+  irregular:
+    past: cast
+
+catch:
+  language: en
+  participle: caught
+  irregular:
+    past: caught
+  translations:
+    de: [erwischen, fangen, fassen]
+
+choose:
+  language: en
+  translations:
+    de: wählen
+  participle: chose
+  irregular:
+    past: chosen
+
+clad:
+  language: en
+  translations:
+    de: bekleiden
+  participle: [clad, cladded]
+  irregular:
+    past: [clad, cladded] # [clad is also sometimes used as past form of clothe]
+
+cleave:
+  language: en
+  translations:
+    de: spalten
+  participle: [clove, cleft]
+  irregular:
+    past: [cloven, cleft] # [but regular when meaning "adhere"]
+
+cling:
+  language: en
+  participle: clung
+  irregular:
+    past: clung
+
+come:
+  language: en
+  translations:
+    de: kommen
+  participle: came
+  irregular:
+    past: come
+
+cost:
+  language: en
+  variations:
+    - definition: cost
+      participle: [cost, costed]
+      irregular:
+        past: [cost, costed] # [but regular when meaning "calculate the cost of"]
+      translations:
+        de: kosten
+    - definition: calculate the cost of
+
+creep:
+  language: en
+  participle: [crept, creeped]
+  irregular:
+    past: [crept, creeped]
+
+crow:
+  language: en
+  participle: [crowed, crew]
+  irregular:
+    past: crowed # [crew normally used only of a cock's crowing]
+
+cut:
+  language: en
+  participle: cut
+  irregular:
+    past: cut
+
+dare:
+ #regular except for possible third person singular present dare (see anomalous cases above)
+
+deal:
+  language: en
+  participle: dealt
+  irregular:
+    past: dealt
+  translations:
+    de: handeln
+
+dig:
+  language: en
+  participle: dug
+  irregular:
+    past: dug
+  translations:
+    de: graben
+
+dive:
+  language: en
+  participle: [dived, dove]
+  irregular:
+    past: [dived, dove] # [the form dove is chiefly American]
+  translations:
+    de: tauchen
+
+do:
+  language: en
+  translations:
+    de: [tun, machen]
+  participle: did
+  irregular:
+    present:
+      it: does
+    past: done
+
+drag:
+  language: en
+  participle: [dragged, drug]
+  irregular:
+    past: [dragged, drug] # [the form drug is chiefly dialectal]
+
+draw:
+  language: en
+  participle: drew
+  irregular:
+    past: drawn
+
+dream:
+  language: en
+  translations:
+    de: traumen
+  participle: [dreamed, dreamt]
+  irregular:
+    past: [dreamed, dreamt]
+
+drink:
+  language: en
+  translations:
+    de: trinken
+  participle: drank
+  irregular:
+    past: drunk
+
+drive:
+  language: en
+  translations:
+    de: fahren
+  participle: drove
+  irregular:
+    past: driven
+
+dwell:
+  language: en
+  participle: [dwelt, dwelled]
+  irregular:
+    past: [dwelt, dwelled]
+
+exist:
+  language: en
+  translations:
+    fr: exister
+
+eat:
+  language: en
+  translations:
+    de: essen
+  participle: ate
+  irregular:
+    past: eaten
+
+fall:
+  language: en
+  translations:
+    de: fallen
+  participle: fell
+  irregular:
+    past: fallen
+
+feed:
+  language: en
+  participle: fed
+  irregular:
+    past: fed
+
+feel:
+  language: en
+  participle: felt
+  irregular:
+    past: felt
+  translate:
+    de: erzählen
+
+fight:
+  language: en
+  participle: fought
+  irregular:
+    past: fought
+
+find:
+  language: en
+  participle: found
+  irregular:
+    past: found
+  translations:
+    de: finden
+
+fit:
+  language: en
+  participle: [fit, fitted]
+  irregular:
+    past: [fit, fitted]
+
+flee:
+  language: en
+  participle: fled
+  irregular:
+    past: fled
+  translations:
+    de: fliehen
+
+fling:
+  language: en
+  participle: flung
+  irregular:
+    past: flung
+
+fly:
+  language: en
+  participle: flew
+  irregular:
+    past: flown # [the form flied is common in the baseball sense]
+  translations:
+    de: fliegen
+
+forbid:
+  language: en
+  participle: [forbade, forbid]
+  irregular:
+    past: forbidden
+
+forget:
+  language: en
+  participle: forgot
+  irregular:
+    past: forgotten
+
+forsake:
+  language: en
+  participle: forsook
+  irregular:
+    past: forsaken
+  translations:
+    de: verlassen
+
+freeze:
+  language: en
+  participle: froze
+  irregular:
+    past: frozen
+  translations:
+    de: frieren
+
+get:
+  language: en
+  participle: got
+  irregular:
+    past: [gotten, got] #[past participle got in British English, gotten in American, but see have got]
+  translations:
+    de: [bekommen, herbei|schaffen]
+
+gild:
+  language: en
+  participle: [gilded, gilt]
+  irregular:
+    past: [gilded, gilt]
+
+give:
+  language: en
+  participle: gave
+  irregular:
+    past: given
+  translations:
+    de: geben
+
+go:
+  language: en
+  translations:
+    de: gehen
+  participle: went
+  irregular:
+    past: gone # [see also have been]
+
+grind:
+  language: en
+  participle: ground
+  irregular:
+    past: ground
+
+grow:
+  language: en
+  participle: grew
+  irregular:
+    past: grown
+  translations:
+    de: wachsen
+
+hang:
+  language: en
+  variations:
+    - definition: to hang an object
+      participle: [hung, hanged]
+      irregular:
+        past: hung, hanged
+      translations:
+        de: hängen
+    - definition: execution by hanging
+      participle: hanged
+      irregular:
+        past: hanged
+
+hear:
+  language: en
+  participle: heard
+  irregular:
+    past: heard
+  translations:
+    de: hören
+
+hew:
+  language: en
+  participle: hewed
+  irregular:
+    past: hewn, hewed
+
+hide:
+  language: en
+  participle: hid
+  irregular:
+    past: hidden
+  translations:
+    de: verstecken
+
+hit:
+  language: en
+  participle: hit
+  irregular:
+    past: hit
+  translations:
+    de: [schlagen, treffen]
+
+hoist:
+  language: en
+  participle: [hoist, hoisted]
+  irregular:
+    past: [hoist, hoisted]
+
+hold:
+  language: en
+  participle: held
+  irregular:
+    past: held
+  translations:
+    de: halten
+
+hurt:
+  language: en
+  participle: hurt
+  irregular:
+    past: hurt
+
+keep:
+  language: en
+  participle: kept
+  irregular:
+    past: kept
+  translations:
+    de: halten
+
+kneel:
+  language: en
+  participle: [knelt, kneeled]
+  irregular:
+    past: [knelt, kneeled]
+
+knit:
+  language: en
+  participle: [knit, knitted]
+  irregular:
+    past: [knit, knitted]
+
+know:
+  language: en
+  participle: knew
+  irregular:
+    past: known
+  translations:
+    de: kennen
+
+lay:
+  language: en
+  participle: laid
+  irregular:
+    past: laid
+  translations:
+    de: legen
+
+lead:
+  language: en
+  participle: led
+  irregular:
+    past: led
+
+lean:
+  language: en
+  participle: [leaned, leant]
+  irregular:
+    past: [leaned, leant]
+  translations:
+    de: an|lehnen
+
+leap:
+  language: en
+  participle: [leaped, leapt]
+  irregular:
+    past: [leaped, leapt]
+
+learn:
+  language: en
+  participle: [learned, learnt]
+  irregular:
+    past: [learned, learnt]
+  translations:
+    de: lernen
+
+leave:
+  language: en
+  participle: left
+  irregular:
+    past: left
+  translations:
+    de: verlassen
+
+lend:
+  language: en
+  participle: lent
+  irregular:
+    past: lent
+  translations:
+    de: leihen
+
+let:
+  language: en
+  participle: let
+  irregular:
+    past: let
+
+lie:
+  language: en
+  variations:
+    - definition: to lay oneself
+      participle: lay
+      irregular:
+        past: lain
+      translations:
+        de: liegen
+    - definition: to tell an untruth
+      translations:
+        de: lügen
+
+light:
+  language: en
+  participle: [lit, lighted]
+  irregular:
+    past: [lit, lighted]
+
+lose:
+  language: en
+  participle: lost
+  irregular:
+    past: lost
+  translations:
+    de: verlieren
+
+make:
+  language: en
+  participle: made
+  irregular:
+    past: made
+  translations:
+    de: machen
+
+mean:
+  language: en
+  participle: meant
+  irregular:
+    past: meant
+  translations:
+    de: [bedeuten, meinen]
+
+meet:
+  language: en
+  participle: met
+  irregular:
+    past: met
+  translations:
+    de: [tagen, treffen, zusammen|kommen]
+
+mow:
+  language: en
+  participle: mowed
+  irregular:
+    past: [mowed, mown]
+
+need:
+  language: en
+# regular except for possible third person singular present need (see anomalous cases above)
+  translations:
+    de: brauchen
+
+pay:
+  language: en
+  participle: paid
+  irregular:
+    past: paid # [but sometimes spelt regularly when meaning "let out" (rope etc.)]
+
+plead:
+  language: en
+  participle: [pleaded, pled]
+  irregular:
+    past: [pleaded, pled]
+
+prove:
+  language: en
+  participle: proved
+  irregular:
+    past: [proved, proven]
+
+put:
+  language: en
+  participle: put
+  irregular:
+    past: put # [prefixed forms input and output sometimes take -ed]
+  translations:
+    de: [setzen. legen, stellen, stecken]
+
+quit:
+  language: en
+  participle: [quitted, quit]
+  irregular:
+    past: [quitted, quit]
+
+read: # , riːd,
+  language: en
+  participle: read # , rɛd,
+  irregular:
+    past: read # , rɛd,
+  translations:
+    de: [lesen, vor|lesen]
+
+rend:
+  language: en
+  participle: rent
+  irregular:
+    past: rent
+
+rid:
+  participle: [rid, ridded]
+  irregular:
+    past: [rid, ridded]
+
+ride:
+  language: en
+  participle: [rid, rode]
+  irregular:
+    past: ridden
+  translations:
+    de: [fahren, reiten]
+
+ring:
+  language: en
+  participle: rang
+  irregular:
+    past: rung
+
+rise:
+  language: en
+  participle: rose
+  irregular:
+    past: risen
+  translations:
+    de: [steigen, auf|gehen]
+
+run:
+  language: en
+  participle: ran
+  irregular:
+    past: run
+  translations:
+    de: [laufen, rennen]
+
+saw:
+  language: en
+  participle: sawed
+  irregular:
+    past: [sawn, sawed]
+
+say: # (says , sɛz, )
+  language: en
+  participle: said
+  irregular:
+    present:
+      it: says
+    past: said
+  translations:
+    de: sagen
+
+see:
+  language: en
+  participle: saw
+  irregular:
+    past: seen
+  translations:
+    de: [sehen, schauen]
+
+seek:
+  language: en
+  participle: sought
+  irregular:
+    past: sought
+
+sell:
+  language: en
+  participle: sold
+  irregular:
+    past: sold
+
+send:
+  language: en
+  participle: sent
+  irregular:
+    past: sent
+
+set:
+  language: en
+  participle: set
+  irregular:
+    past: set
+
+sew:
+  language: en
+  participle: sewed
+  irregular:
+    past: [sewn, sewed]
+
+shake:
+  language: en
+  participle: shook
+  irregular:
+    past: shaken
+  translations:
+    de: wackeln
+
+shear:
+  language: en
+  participle: [sheared, shore]
+  irregular:
+    past: [shorn, sheared]
+
+shed:
+  language: en
+  participle: shed
+  irregular:
+    past: shed
+
+shine:
+  language: en
+  participle: [shone, shined]
+  irregular:
+    past: [shone, shined]
+  translations:
+    de: scheinen
+
+shit:
+  language: en
+  participle: [shat, shit, shitted]
+  irregular:
+    past: [shat, shit, shitted]
+  translations:
+    de: scheißen
+
+shoe:
+  language: en
+  participle: [shoed, shod]
+  irregular:
+    past: [shoed, shod]
+
+shoot:
+  language: en
+  participle: shot
+  irregular:
+    past: shot
+  translations:
+    de: [schießen, ab|drücken]
+
+show:
+  language: en
+  participle: showed
+  irregular:
+    past: [shown, showed]
+  translations:
+    de: zeigen
+
+shrink:
+  language: en
+  participle: [shrank, shrunk]
+  irregular:
+    past: shrunk
+  translations:
+    de: ein|fallen
+
+shrive:
+  language: en
+  participle: shrove
+  irregular:
+    past: shriven
+
+shut:
+  language: en
+  participle: shut
+  irregular:
+    past: shut
+
+sing:
+  language: en
+  participle: sang
+  irregular:
+    past: sung
+  translations:
+    de: singen
+
+sink:
+  language: en
+  participle: sank
+  irregular:
+    past: sunk
+  translations:
+    de: sinken
+
+sit:
+  language: en
+  participle: sat
+  irregular:
+    past: sat
+  translations:
+    de: sitzen
+
+slay:
+  language: en
+  participle: [slew, slayed]
+  irregular:
+    past: [slain, slayed]
+
+sleep:
+  language: en
+  participle: slept
+  irregular:
+    past: slept
+  translations:
+    de: schlafen
+
+slide:
+  language: en
+  participle: slid
+  irregular:
+    past: slid
+  translations:
+    de: [rutschen, vergehen]
+
+sling:
+  language: en
+  participle: slung
+  irregular:
+    past: slung
+
+slink:
+  language: en
+  participle: slunk
+  irregular:
+    past: slunk
+
+slit:
+  language: en
+  participle: slit
+  irregular:
+    past: slit
+
+smell:
+  language: en
+  participle: [smelled, smelt]
+  irregular:
+    past: [smelled, smelt]
+  translations:
+    de: riechen
+
+smite:
+  language: en
+  participle: smote
+  irregular:
+    past: smitten
+
+sneak:
+  language: en
+  participle: [sneaked, snuck]
+  irregular:
+    past: [sneaked, snuck] # [snuck is chiefly American, is regarded as informal and is only cited from 1887[6]]
+
+sow:
+  language: en
+  participle: sowed
+  irregular:
+    past: [sown, sowed]
+
+speak:
+  language: en
+  participle: spoke
+  irregular:
+    past: spoken
+  translations:
+    de: [reden, sprechen]
+
+speed:
+  language: en
+  participle: [sped, speeded]
+  irregular:
+    past: [sped, speeded]
+
+spell:
+  language: en
+  participle: [spelled, spelt]
+  irregular:
+    past: [spelled, spelt]
+
+spend:
+  language: en
+  participle: spent
+  irregular:
+    past: spent
+
+spill:
+  language: en
+  participle: [spilled, spilt]
+  irregular:
+    past: [spilled, spilt]
+
+spin:
+  language: en
+  participle: [span, spun]
+  irregular:
+    past: spun
+  translations:
+    de: drehen
+
+spit:
+  language: en
+  participle: [spat, spit]
+  irregular:
+    past: [spat, spit] # [the form spit rather than spat is common in America]
+
+split:
+  language: en
+  participle: split
+  irregular:
+    past: split
+
+spoil:
+  language: en
+  participle: [spoiled, spoilt]
+  irregular:
+    past: [spoiled, spoilt]
+
+spread:
+  language: en
+  participle: spread
+  irregular:
+    past: spread
+
+spring:
+  language: en
+  participle: [sprang, sprung]
+  irregular:
+    past: sprung
+
+stand:
+  language: en
+  participle: stood
+  irregular:
+    past: stood
+  translations:
+    de: stehen
+
+stave:
+  language: en
+  participle: [staved, stove]
+  irregular:
+    past: [staved, stove]
+
+steal:
+  language: en
+  participle: stole
+  irregular:
+    past: stolen
+  translations:
+    de: stehlen
+
+stick:
+  language: en
+  participle: stuck
+  irregular:
+    past: stuck
+  variations:
+    - definition: to sitck to something
+    - definition: to stick into something
+      translations:
+        de: stecken
+
+
+sting:
+  language: en
+  participle: stung
+  irregular:
+    past: stung
+  translations:
+    de: stechen
+
+stink:
+  language: en
+  participle: stank
+  irregular:
+    past: stunk
+  translations:
+    de: stinken
+
+strew:
+  language: en
+  participle: strewed
+  irregular:
+    past: [strewn, strewed]
+
+stride:
+  language: en
+  participle: strode
+  irregular:
+    past: [stridden, strode]
+
+strike:
+  language: en
+  participle: struck
+  irregular:
+    past: [struck, stricken]
+  translations:
+    de: [schlagen, treffen]
+
+string:
+  language: en
+  participle: strung
+  irregular:
+    past: strung
+
+strive:
+  language: en
+  participle: [strove, strived]
+  irregular:
+    past: [striven, strived]
+
+swear:
+  language: en
+  participle: swore
+  irregular:
+    past: sworn
+
+sweat:
+  language: en
+  participle: [sweated, sweat]
+  irregular:
+    past: [sweated, sweat]
+
+sweep:
+  language: en
+  participle: swept
+  irregular:
+    past: swept
+
+swell:
+  language: en
+  participle: swelled
+  irregular:
+    past: [swollen, swelled]
+
+swim:
+  language: en
+  participle: swam
+  irregular:
+    past: swum
+  translations:
+    de: schwimmen
+
+swing:
+  language: en
+  participle: [swang, swung]
+  irregular:
+    past: swung
+
+take:
+  language: en
+  participle: took
+  irregular:
+    past: taken
+  translations:
+    de: [nehmen, bringen]
+
+teach:
+  language: en
+  participle: taught
+  irregular:
+    past: taught
+  translations:
+    de: lehren
+
+tear:
+  language: en
+  participle: tore
+  irregular:
+    past: torn
+  translations:
+    de: reißen
+
+tell:
+  language: en
+  participle: told
+  irregular:
+    past: told
+  translations:
+    de: erzählen
+
+think:
+  language: en
+  participle: thought
+  irregular:
+    past: thought
+  translations:
+    de: [denken, über|legen]
+
+thrive:
+  language: en
+  participle: [thrived, throve]
+  irregular:
+    past: [thrived, thriven]
+
+throw:
+  language: en
+  participle: threw
+  irregular:
+    past: thrown
+  translataions:
+    de: werfen
+
+thrust:
+  language: en
+  participle: [thrust, thrusted]
+  irregular:
+    past: [thrust, thrusted]
+  translations:
+    de: stecken
+
+tread:
+  language: en
+  participle: trod
+  irregular:
+    past: [trodden, trod]
+
+wake:
+  language: en
+  participle: woke
+  irregular:
+    past: woken
+  translations:
+    de: wachen
+
+wear:
+  language: en
+  participle: wore
+  irregular:
+    past: worn
+  translations:
+    de: tragen
+
+weave:
+  language: en
+  participle: wove
+  irregular:
+    past: woven
+
+wed:
+  language: en
+  participle: [wed, wedded]
+  irregular:
+    past: [wed, wedded]
+
+weep:
+  language: en
+  participle: wept
+  irregular:
+    past: wept
+
+wet:
+  language: en
+  participle: [wet, wetted]
+  irregular:
+    past: [wet, wetted]
+
+win:
+  language: en
+  participle: won
+  irregular:
+    past: won
+  translations:
+    de: gewinnen
+
+wind:
+  language: en
+  variations:
+    - definition: to wind as in string
+      participle: wound
+      irregular:
+        past: wound
+    - definition: to knock the wind out, or in the passive to be out of breath # [but regular in the meanings connected with air and breath]
+
+wring:
+  language: en
+  participle: [wrang, wrung]
+  irregular:
+    past: wrung
+
+write:
+  language: en
+  participle: wrote
+  irregular:
+    past: written
+  translations:
+    de: schreiben
