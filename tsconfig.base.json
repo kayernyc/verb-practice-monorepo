@@ -18,7 +18,17 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@english/*": [
+        "./typescript/english/*"
+      ],
+      "@global/*": [
+        "./typescript/global_types/*"
+      ],
+      "global": [
+        "packages/global/src/index.ts"
+      ]
+    }
   },
   "exclude": [
     "node_modules",
