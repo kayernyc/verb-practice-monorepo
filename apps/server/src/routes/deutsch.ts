@@ -1,6 +1,4 @@
-import {
-  Request, Response, RequestHandler, Router,
-} from 'express';
+import { Request, Response, RequestHandler, Router } from 'express';
 
 import { germanVerbData } from '@german/germanBuildJsonFromYml';
 

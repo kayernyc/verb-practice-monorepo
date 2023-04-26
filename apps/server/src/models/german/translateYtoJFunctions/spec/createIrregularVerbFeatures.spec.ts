@@ -31,8 +31,7 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
           [GermanPronounKeys.wir]: 'sind',
           [GermanPronounKeys.ihr]: 'seid',
         },
-      }
-      ,
+      },
     };
 
     const result = createIrregularVerbFeatures({ newVerb, dataObj: seinDataObject });
@@ -51,8 +50,7 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
     };
 
     const könnenObj: DataObj = {
-      translations:
-        { en: english },
+      translations: { en: english },
       tags: ['modal'],
       'weak endings': true,
       strong: true,
@@ -118,8 +116,7 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
     };
 
     const verbObj: DataObj = {
-      translations:
-        { en: english },
+      translations: { en: english },
       tags: ['hilfsverb'],
       hilfsverb: 'sein',
       partizip: 'o',
@@ -147,8 +144,7 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
           [GermanPronounKeys.du]: 'wirst',
           [GermanPronounKeys.es]: 'wird',
         },
-      }
-      ,
+      },
     };
 
     const result = createIrregularVerbFeatures({ newVerb, dataObj: verbObj });

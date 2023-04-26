@@ -102,7 +102,12 @@ suchen:
   it('reads german files', () => {
     const expected = {
       bobben: {
-        language: 'de', stems: { partizip: 'b', 'präsens du/es': 'ha', präteritum: 't' }, strong: null, tags: ['hilfsverb'], translations: { en: 'to have a test' }, 'weak endings': true,
+        language: 'de',
+        stems: { partizip: 'b', 'präsens du/es': 'ha', präteritum: 't' },
+        strong: null,
+        tags: ['hilfsverb'],
+        translations: { en: 'to have a test' },
+        'weak endings': true,
       },
       fehlen: {
         language: 'de',
@@ -112,9 +117,7 @@ suchen:
           präteritum: 't',
         },
         strong: null,
-        tags: [
-          'hilfsverb',
-        ],
+        tags: ['hilfsverb'],
         translations: {
           en: 'feel',
         },
@@ -128,9 +131,7 @@ suchen:
           präteritum: 't',
         },
         strong: null,
-        tags: [
-          'hilfsverb',
-        ],
+        tags: ['hilfsverb'],
         translations: {
           en: 'to have a test',
         },
@@ -144,9 +145,7 @@ suchen:
           präteritum: 't',
         },
         strong: null,
-        tags: [
-          'hilfsverb',
-        ],
+        tags: ['hilfsverb'],
         translations: {
           en: 'guess',
         },
@@ -295,7 +294,12 @@ fliegen:
   it('reads german files', () => {
     const expected = {
       bobben: {
-        language: 'de', stems: { partizip: 'b', 'präsens du/es': 'ha', präteritum: 't' }, strong: null, tags: ['hilfsverb'], translations: { en: 'to have a test' }, 'weak endings': true,
+        language: 'de',
+        stems: { partizip: 'b', 'präsens du/es': 'ha', präteritum: 't' },
+        strong: null,
+        tags: ['hilfsverb'],
+        translations: { en: 'to have a test' },
+        'weak endings': true,
       },
       fehlen: {
         language: 'de',
@@ -305,9 +309,7 @@ fliegen:
           präteritum: 't',
         },
         strong: null,
-        tags: [
-          'hilfsverb',
-        ],
+        tags: ['hilfsverb'],
         translations: {
           en: 'feel',
         },
@@ -321,9 +323,7 @@ fliegen:
           präteritum: 't',
         },
         strong: null,
-        tags: [
-          'hilfsverb',
-        ],
+        tags: ['hilfsverb'],
         translations: {
           en: 'to have a test',
         },
@@ -337,9 +337,7 @@ fliegen:
           präteritum: 't',
         },
         strong: null,
-        tags: [
-          'hilfsverb',
-        ],
+        tags: ['hilfsverb'],
         translations: {
           en: 'guess, advise',
         },
@@ -353,9 +351,7 @@ fliegen:
           präteritum: 't',
         },
         strong: null,
-        tags: [
-          'hilfsverb',
-        ],
+        tags: ['hilfsverb'],
         translations: {
           en: 'to have a test',
         },

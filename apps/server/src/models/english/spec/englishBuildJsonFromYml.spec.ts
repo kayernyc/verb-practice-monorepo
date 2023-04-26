@@ -10,9 +10,7 @@ import {
 } from '../englishBuildJsonFromYml';
 import { EnglishPronounKeys } from '../englishTypes';
 
-jest
-  .useFakeTimers()
-  .setSystemTime(new Date('2020-01-01'));
+jest.useFakeTimers().setSystemTime(new Date('2020-01-01'));
 
 describe('readYamls', () => {
   beforeAll(() => {
@@ -53,25 +51,73 @@ adapt:
   it('reads a single file if it exists.', () => {
     const readResult = readYamls('phil.yaml', './');
 
-    const expected = [{
-      date: 16,
-      have: {
-        language: 'en',
-        translations: { de: 'haben' },
-        irregular: {
-          past: 'had',
-          present: { i: 'have', it: 'has', we: 'have' },
+    const expected = [
+      {
+        date: 16,
+        have: {
+          language: 'en',
+          translations: { de: 'haben' },
+          irregular: {
+            past: 'had',
+            present: { i: 'have', it: 'has', we: 'have' },
+          },
+          participle: 'had',
         },
-        participle: 'had',
       },
-    },
     ];
     expect(readResult).toEqual(expected);
   });
 
   it('reads files if they exist.', () => {
     const readResult = readYamls(['phil.yaml', 'rick.yaml'], './');
-    const expected = [{
+    const expected = [
+      {
+        date: 16,
+        have: {
+          language: 'en',
+          translations: { de: 'haben' },
+          irregular: {
+            past: 'had',
+            present: { i: 'have', it: 'has', we: 'have' },
+          },
+          participle: 'had',
+        },
+      },
+      {
+        date: 16,
+        have: {
+          language: 'en',
+          translations: { de: 'haben' },
+          irregular: {
+            past: 'had',
+            present: {
+              i: 'have',
+              it: 'has',
+              we: 'have',
+            },
+          },
+          participle: 'had',
+        },
+      },
+    ];
+
+    expect(readResult).toEqual(expected);
+  });
+
+  it("throws errors if files don't exist.", () => {
+    expect(() => {
+      readYamls(['phillis.yaml', 'rick.yaml'], './');
+    }).toThrowError();
+  });
+
+  afterAll(() => {
+    mock.restore();
+  });
+});
+
+describe('processVerbs', () => {
+  const input = [
+    {
       date: 16,
       have: {
         language: 'en',
@@ -99,51 +145,6 @@ adapt:
         participle: 'had',
       },
     },
-    ];
-
-    expect(readResult).toEqual(expected);
-  });
-
-  it('throws errors if files don\'t exist.', () => {
-    expect(() => {
-      readYamls(['phillis.yaml', 'rick.yaml'], './');
-    }).toThrowError();
-  });
-
-  afterAll(() => {
-    mock.restore();
-  });
-});
-
-describe('processVerbs', () => {
-  const input = [{
-    date: 16,
-    have: {
-      language: 'en',
-      translations: { de: 'haben' },
-      irregular: {
-        past: 'had',
-        present: { i: 'have', it: 'has', we: 'have' },
-      },
-      participle: 'had',
-    },
-  },
-  {
-    date: 16,
-    have: {
-      language: 'en',
-      translations: { de: 'haben' },
-      irregular: {
-        past: 'had',
-        present: {
-          i: 'have',
-          it: 'has',
-          we: 'have',
-        },
-      },
-      participle: 'had',
-    },
-  },
   ];
   const result = processVerbs(input);
 

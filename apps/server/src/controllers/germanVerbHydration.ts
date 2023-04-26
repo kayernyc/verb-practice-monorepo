@@ -1,8 +1,6 @@
 /* eslint-disable @typescript-eslint/no-shadow */
 /* eslint-disable no-console */
-import {
-  Request, Response,
-} from 'express';
+import { Request, Response } from 'express';
 
 import mongoose from 'mongoose';
 import { GermanVerbHydratedModel, GermanVerbHydratedSchema } from '@german/germanVerbHydratedModel';
@@ -25,19 +23,17 @@ const germanVerbHydration = async (req: Request, res: Response) => {
   });
 
   const GermanModel = mongoose.model('GermanVerbModel', GermanVerbHydratedSchema);
-  const dbResult: GermanVerbHydratedModel[] = await GermanModel.find(
-    { infinitive: verb },
-  );
+  const dbResult: GermanVerbHydratedModel[] = await GermanModel.find({ infinitive: verb });
   let status = 500;
 
   if (dbResult.length > 0) {
     const retrievedVerb = dbResult[0];
-    const verbToClient = (
-      ({
-        infinitive, hilfsverb, partizip, tenses,
-      }) => ({
-        infinitive, hilfsverb, partizip, tenses,
-      }))(retrievedVerb);
+    const verbToClient = (({ infinitive, hilfsverb, partizip, tenses }) => ({
+      infinitive,
+      hilfsverb,
+      partizip,
+      tenses,
+    }))(retrievedVerb);
     status = 200;
     return res.status(status).json({ status, data: verbToClient, message });
   }
@@ -51,7 +47,8 @@ const germanVerbHydration = async (req: Request, res: Response) => {
       message = `Verb ${verb} is successfully hydrated.`;
       const dataBaseReadyVerb = convertHydrationToModel(hydratiedVerb);
       const newVerb = new GermanModel(dataBaseReadyVerb);
-      newVerb.save()
+      newVerb
+        .save()
         .then(() => {
           console.log(`New verb ${verb} was successfully saved to the database.`);
           status = 200;

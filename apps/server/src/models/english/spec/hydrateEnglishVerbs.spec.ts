@@ -3,7 +3,10 @@ import mock from 'mock-fs';
 import { EnglishJsonData } from '@english/englishTypes';
 
 import {
-  hydrateFromInfinitive, hydrateVerb, importJsonData, standardHydration,
+  hydrateFromInfinitive,
+  hydrateVerb,
+  importJsonData,
+  standardHydration,
 } from '../hydrateEnglishVerb';
 
 const move = {
@@ -191,7 +194,11 @@ describe('hydrate regular verb', () => {
 describe('hydrateVerb', () => {
   it('returns a hydrated verb', () => {
     const expected = {
-      infinitive: 'move', participle: 'moved', past: { i: 'moved', it: 'moved', we: 'moved' }, present: { i: 'move', it: 'moves', we: 'move' }, presentParticiple: 'moving',
+      infinitive: 'move',
+      participle: 'moved',
+      past: { i: 'moved', it: 'moved', we: 'moved' },
+      present: { i: 'move', it: 'moves', we: 'move' },
+      presentParticiple: 'moving',
     };
 
     const result = hydrateVerb(move);
@@ -238,7 +245,7 @@ describe('write and import functions', () => {
     mock.restore();
   });
 
-  it('throws error if englishVerbsUnhydrated doesn\'t exist.', () => {
+  it("throws error if englishVerbsUnhydrated doesn't exist.", () => {
     expect(() => {
       importJsonData();
     }).toThrow('English data file not found: unknown error');
@@ -256,13 +263,17 @@ describe('hydrateFromInfinitive', () => {
   it('returns an hydrated verb if it exists in the verbsData object.', () => {
     const result = hydrateFromInfinitive('move', verbsData);
     const expected = {
-      infinitive: 'move', participle: 'moved', past: { i: 'moved', it: 'moved', we: 'moved' }, present: { i: 'move', it: 'moves', we: 'move' }, presentParticiple: 'moving',
+      infinitive: 'move',
+      participle: 'moved',
+      past: { i: 'moved', it: 'moved', we: 'moved' },
+      present: { i: 'move', it: 'moves', we: 'move' },
+      presentParticiple: 'moving',
     };
 
     expect(expected).toStrictEqual(result);
   });
 
-  it('returns an infinitve if it doesn\'t exist in the verbsData object.', () => {
+  it("returns an infinitve if it doesn't exist in the verbsData object.", () => {
     const result = hydrateFromInfinitive('panic', verbsData);
     const expected = 'panic';
 

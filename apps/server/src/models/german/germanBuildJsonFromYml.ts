@@ -63,9 +63,17 @@ export function writeProcessedVerbsToFile(
 }
 
 const validKeys = [
-  'language', 'translations', 'tags', 'partizip',
-  'strong', 'stems', 'irregular', 'weak endings', 'hilfsverb',
-  'drop ich/es pr\u00e4sens endings'];
+  'language',
+  'translations',
+  'tags',
+  'partizip',
+  'strong',
+  'stems',
+  'irregular',
+  'weak endings',
+  'hilfsverb',
+  'drop ich/es pr\u00e4sens endings',
+];
 
 export const germanTypeGuard = function germanType(x: object): x is DataObj {
   let returnValue = true;

@@ -1,7 +1,10 @@
 import { SeperableGermanParticles } from './germanConstants';
 import { LanguageMap } from './jsonTypes';
 import {
-  GrammaticalFormal, GrammaticalGender, GrammaticalNumber, GrammaticalPerson,
+  GrammaticalFormal,
+  GrammaticalGender,
+  GrammaticalNumber,
+  GrammaticalPerson,
 } from './languageTypes';
 
 export enum GermanTenses {
@@ -57,25 +60,29 @@ export type GermanPronoun = {
 };
 
 export const GermanPronounKeys: { [key: string]: number } = {
-  ich: GrammaticalPerson.First.valueOf() + GrammaticalNumber.Singular.valueOf()
-    + GermanCase.Nominative.valueOf(),
+  ich:
+    GrammaticalPerson.First.valueOf() +
+    GrammaticalNumber.Singular.valueOf() +
+    GermanCase.Nominative.valueOf(),
   du:
-    GrammaticalPerson.Second.valueOf()
-    + GrammaticalNumber.Singular.valueOf()
-    + GrammaticalFormal.Informal.valueOf()
-    + GermanCase.Nominative.valueOf(),
+    GrammaticalPerson.Second.valueOf() +
+    GrammaticalNumber.Singular.valueOf() +
+    GrammaticalFormal.Informal.valueOf() +
+    GermanCase.Nominative.valueOf(),
   es:
-    GrammaticalPerson.Third.valueOf()
-    + GrammaticalNumber.Singular.valueOf()
-    + GermanCase.Nominative.valueOf()
-    + GrammaticalGender.Neuter.valueOf(),
-  wir: GrammaticalPerson.First.valueOf() + GrammaticalNumber.Plural.valueOf()
-    + GermanCase.Nominative.valueOf(),
+    GrammaticalPerson.Third.valueOf() +
+    GrammaticalNumber.Singular.valueOf() +
+    GermanCase.Nominative.valueOf() +
+    GrammaticalGender.Neuter.valueOf(),
+  wir:
+    GrammaticalPerson.First.valueOf() +
+    GrammaticalNumber.Plural.valueOf() +
+    GermanCase.Nominative.valueOf(),
   ihr:
-    GrammaticalPerson.Second.valueOf()
-    + GrammaticalNumber.Plural.valueOf()
-    + GrammaticalFormal.Informal.valueOf()
-    + GermanCase.Nominative.valueOf(),
+    GrammaticalPerson.Second.valueOf() +
+    GrammaticalNumber.Plural.valueOf() +
+    GrammaticalFormal.Informal.valueOf() +
+    GermanCase.Nominative.valueOf(),
 };
 
 export type GermanVerb = {
@@ -123,7 +130,7 @@ export type GermanSeparableVerb = {
   language: LanguageMap | string;
   particle: SeperableGermanParticles;
   translations: LanguageMap;
-}
+};
 
 const validSeperableKeys = ['base', 'hilfsverb', 'language', 'particle', 'translations'];
 

@@ -1,9 +1,7 @@
 import mock from 'mock-fs';
 import fs from 'fs';
 
-import {
-  GermanVerb, GermanPronounKeys, GermanTenses, GermanSeparableVerb,
-} from '../germanTypes';
+import { GermanVerb, GermanPronounKeys, GermanTenses, GermanSeparableVerb } from '../germanTypes';
 import { hydrateFromInfinitive, hydrateVerb, hydrateSeparableVerb } from '../hydrateGermanVerb';
 import kranton from '../propertyTestFunctions/kranton';
 
@@ -397,7 +395,7 @@ describe('separable verbs conjugate correctly', () => {
     expect(result).toStrictEqual(expected);
   });
 
-  it('fernblanblen returns the infinitive because it\'s not a legit verb', () => {
+  it("fernblanblen returns the infinitive because it's not a legit verb", () => {
     const expected = 'blanblen';
 
     const config: GermanSeparableVerb = {

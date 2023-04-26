@@ -6,5 +6,5 @@ export default {
   testEnvironment: 'node16',
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
-  }
+  },
 };

@@ -1,6 +1,4 @@
-import {
-  GermanPronounKeys, GermanStems, GermanTenses, GermanVerb,
-} from '@german/germanTypes';
+import { GermanPronounKeys, GermanStems, GermanTenses, GermanVerb } from '@german/germanTypes';
 import { DataObj } from '@german/germanBuildJsonFromYml';
 
 export const seinGermanVerb: GermanVerb = {
@@ -25,8 +23,7 @@ export const seinGermanVerb: GermanVerb = {
 };
 
 export const seinDataObject: DataObj = {
-  translations:
-    { en: 'to be' },
+  translations: { en: 'to be' },
   tags: ['hilfsverb'],
   hilfsverb: 'sein',
   partizip: 'gewesen',

@@ -43,14 +43,14 @@ describe('modifies stems correctly', () => {
     expect(result).toEqual(expected);
   });
 
-  it('replaces tail consonant when there\'s no leading consonent', () => {
+  it("replaces tail consonant when there's no leading consonent", () => {
     const result = modifiedStem({ stem: 'ot', irregularStem: 'b' });
     const expected = 'ob';
 
     expect(result).toEqual(expected);
   });
 
-  it('replaces vowel and tail consonant when there\'s no leading consonent', () => {
+  it("replaces vowel and tail consonant when there's no leading consonent", () => {
     const result = modifiedStem({ stem: 'oten', irregularStem: 'ib' });
     const expected = 'ib';
 

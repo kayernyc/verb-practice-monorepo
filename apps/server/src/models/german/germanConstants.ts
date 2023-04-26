@@ -1,14 +1,64 @@
-export const firstVowelGroupRegex = /\b([bcdfghjklmnpqrstvwxyzß]+)([aeiouäöü]+)([bcdfghjklmnpqrstvwxyzß][a-zß]+)\b/;
+export const firstVowelGroupRegex =
+  /\b([bcdfghjklmnpqrstvwxyzß]+)([aeiouäöü]+)([bcdfghjklmnpqrstvwxyzß][a-zß]+)\b/;
 
 export const inseperableRegex = /^(?<prefix>be|emp|ent|er|ge|miß|ver|zer)(.*)/;
-export type SeperableGermanParticles = 'ab' | 'an' | 'auf' | 'aus' | 'auseinander'
-  | 'bei' | 'da' | 'dabei' | 'dar' | 'durch' | 'ein' | 'empor'
-  | 'entgegen' | 'entlang' | 'entzwei' | 'fehl' | 'fern' | 'fest'
-  | 'fort' | 'frei' | 'gegenüber' | 'gleich' | 'her' | 'herab' | 'heran'
-  | 'herauf' | 'heraus' | 'herbei' | 'herein' | 'herüber' | 'herum' | 'herunter'
-  | 'hinauf' | 'hinaus' | 'hinein' | 'hinweg' | 'heim' | 'hoch' | 'mit' | 'statt' | 'über'
-  | 'um' | 'vor' | 'vorweg' | 'voraus' | 'vorbei' | 'vorüber' | 'voran' | 'vorangehen'
-  | 'vorankommen' | 'weiter' | 'wieder' | 'zu' | 'zurecht' | 'zurück' | 'zusammen';
+export type SeperableGermanParticles =
+  | 'ab'
+  | 'an'
+  | 'auf'
+  | 'aus'
+  | 'auseinander'
+  | 'bei'
+  | 'da'
+  | 'dabei'
+  | 'dar'
+  | 'durch'
+  | 'ein'
+  | 'empor'
+  | 'entgegen'
+  | 'entlang'
+  | 'entzwei'
+  | 'fehl'
+  | 'fern'
+  | 'fest'
+  | 'fort'
+  | 'frei'
+  | 'gegenüber'
+  | 'gleich'
+  | 'her'
+  | 'herab'
+  | 'heran'
+  | 'herauf'
+  | 'heraus'
+  | 'herbei'
+  | 'herein'
+  | 'herüber'
+  | 'herum'
+  | 'herunter'
+  | 'hinauf'
+  | 'hinaus'
+  | 'hinein'
+  | 'hinweg'
+  | 'heim'
+  | 'hoch'
+  | 'mit'
+  | 'statt'
+  | 'über'
+  | 'um'
+  | 'vor'
+  | 'vorweg'
+  | 'voraus'
+  | 'vorbei'
+  | 'vorüber'
+  | 'voran'
+  | 'vorangehen'
+  | 'vorankommen'
+  | 'weiter'
+  | 'wieder'
+  | 'zu'
+  | 'zurecht'
+  | 'zurück'
+  | 'zusammen';
 
 export const separableArray = [
   'ab',
@@ -123,7 +173,8 @@ export const GermanParticleRules = {
   gegenüber: 'gegenüber" means "across from," "opposite".',
   gleich: 'gleich means "equal"',
   her: '"her indicates motion toward the speaker, "hither". It can also combine with a number of other prefixes, making their direction more precise. Note that these prefixes do not necessarily replace prepositions.',
-  herab: '"herab" means "down from" or "off from". Again, the direction is toward the point of view of the speaker".',
+  herab:
+    '"herab" means "down from" or "off from". Again, the direction is toward the point of view of the speaker".',
   heran: '"heran": has the meaning of "approaching toward [the point of view of the speaker]".',
   herauf: '"herauf" means "up from," "out of" — toward the point of view of the speaker.',
   heraus: '"heraus" means "from," "out of" — toward the point of view of the speaker.',

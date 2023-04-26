@@ -1,9 +1,7 @@
 import { GermanVerb } from '@german/germanTypes';
 import generateStems from '../hydrationFunctions/generateStems';
 import hydrateIrregularStems from '../hydrationFunctions/hydrateIrregularStems';
-import {
-  habenReturnObject,
-} from './specConstants';
+import { habenReturnObject } from './specConstants';
 
 describe('haben is correctly conjugated', () => {
   const config: GermanVerb = {
@@ -50,7 +48,11 @@ describe('haben is correctly conjugated', () => {
   });
 
   it('generates the irregular stems of haben correctly', () => {
-    const result = hydrateIrregularStems({ infinitiveStem: 'hab', returnObject, verbConfiguration: config });
+    const result = hydrateIrregularStems({
+      infinitiveStem: 'hab',
+      returnObject,
+      verbConfiguration: config,
+    });
     expect(result).toEqual(habenReturnObject);
   });
 });

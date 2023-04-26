@@ -52,29 +52,30 @@ export function processVerbs(verbs: DataObjEntry[]) {
   return newJsonObj;
 }
 
-export function readYamls(
-  url: string | string[],
-  _dataPath = dataPath,
-): DataObjEntry[] | void {
+export function readYamls(url: string | string[], _dataPath = dataPath): DataObjEntry[] | void {
   const urlArray: string[] = typeof url === 'string' ? [url] : url;
 
-  return urlArray.map((_url: string) => {
-    let processedData: DataObjEntry;
-    try {
-      const fileContents = fs.readFileSync(path.join(_dataPath, _url), 'utf8');
-      processedData = yaml.load(fileContents) as DataObjEntry;
-    } catch (err) {
-      // eslint-disable-next-line no-console
-      throw Error(`Error in English verbs model: ${err as string} ${_url}`);
-    }
-    return processedData;
-  })
+  return urlArray
+    .map((_url: string) => {
+      let processedData: DataObjEntry;
+      try {
+        const fileContents = fs.readFileSync(path.join(_dataPath, _url), 'utf8');
+        processedData = yaml.load(fileContents) as DataObjEntry;
+      } catch (err) {
+        // eslint-disable-next-line no-console
+        throw Error(`Error in English verbs model: ${err as string} ${_url}`);
+      }
+      return processedData;
+    })
     .filter((record: DataObjEntry | undefined) => record !== undefined);
 }
 
 export function buildAllSourceEnglish() {
-  const allFileNames = fs.readdirSync(dataPath)
-    .filter((filename: string) => filename.slice(0, 7) === 'english' && filename.slice(-4) === 'yaml');
+  const allFileNames = fs
+    .readdirSync(dataPath)
+    .filter(
+      (filename: string) => filename.slice(0, 7) === 'english' && filename.slice(-4) === 'yaml',
+    );
 
   const allFiles = readYamls(allFileNames);
   if (allFiles) {

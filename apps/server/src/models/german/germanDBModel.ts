@@ -1,6 +1,10 @@
 /* eslint-disable no-console */
 import { GermanTenses, GermanVerbHydrated } from '@german/germanTypes';
-import { GermanConjugationModel, GermanVerbTenseModel, GermanVerbHydratedModel } from '@german/germanVerbHydratedModel';
+import {
+  GermanConjugationModel,
+  GermanVerbTenseModel,
+  GermanVerbHydratedModel,
+} from '@german/germanVerbHydratedModel';
 
 const germanTenses = Object.values(GermanTenses);
 

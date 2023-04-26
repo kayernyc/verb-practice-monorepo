@@ -6,12 +6,12 @@ export interface LanguageMap {
 
 export interface GermanVerbDictionary {
   [key: string]: {
-    drop?: boolean,
-    hilfsverb: string,
-    infinitive?: string,
-    language: string | LanguageMap,
-    strong?: [string: boolean] | boolean,
-    translations: LanguageMap,
+    drop?: boolean;
+    hilfsverb: string;
+    infinitive?: string;
+    language: string | LanguageMap;
+    strong?: [string: boolean] | boolean;
+    translations: LanguageMap;
   };
 }
 
@@ -24,7 +24,7 @@ export interface GermanJsonData {
 export type Only<T, U> = {
   [P in keyof T]: T[P];
 } & {
-    [P in keyof U]?: never;
-  };
+  [P in keyof U]?: never;
+};
 
 export type Either<T, U> = Only<T, U> | Only<U, T>;

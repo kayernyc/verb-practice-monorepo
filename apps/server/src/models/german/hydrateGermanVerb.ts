@@ -80,10 +80,15 @@ function createStandardConjugation({
   return newReturnObject;
 }
 
-function addStrongFeatures(
-  { infinitiveStem, returnObject, verbConfiguration }:
-    { infinitiveStem: string, returnObject: GermanVerbHydrated, verbConfiguration: GermanVerb },
-) {
+function addStrongFeatures({
+  infinitiveStem,
+  returnObject,
+  verbConfiguration,
+}: {
+  infinitiveStem: string;
+  returnObject: GermanVerbHydrated;
+  verbConfiguration: GermanVerb;
+}) {
   const { irregular, stems } = verbConfiguration;
 
   if (stems) {
@@ -147,17 +152,23 @@ export function hydrateSeparableVerb(verbConfiguration: GermanSeparableVerb) {
 
   if (baseConfig && typeof baseConfig !== 'string') {
     baseConfig.infinitive = `${particle}${base}`;
-    const newPartizip = baseConfig.partizip.slice(0, 2) === 'ge' ? baseConfig.partizip.slice(2) : baseConfig.partizip;
+    const newPartizip =
+      baseConfig.partizip.slice(0, 2) === 'ge' ? baseConfig.partizip.slice(2) : baseConfig.partizip;
     baseConfig.partizip = `${particle}ge${newPartizip}`;
 
     [
-      GermanTenses.präsens, GermanTenses.präteritum,
-      GermanTenses.konjunktiv, GermanTenses.k2präsens,
+      GermanTenses.präsens,
+      GermanTenses.präteritum,
+      GermanTenses.konjunktiv,
+      GermanTenses.k2präsens,
     ].forEach((tense: GermanTenses) => {
       const currentTense = baseConfig[tense];
       [
-        GermanPronounKeys.ich, GermanPronounKeys.du,
-        GermanPronounKeys.es, GermanPronounKeys.wir, GermanPronounKeys.ihr,
+        GermanPronounKeys.ich,
+        GermanPronounKeys.du,
+        GermanPronounKeys.es,
+        GermanPronounKeys.wir,
+        GermanPronounKeys.ihr,
       ].forEach((person) => {
         currentTense[person] = `${currentTense[person]} ${particle}`;
       });
