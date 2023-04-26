@@ -1,16 +1,12 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "declaration": true,
-    "outDir": "./dist",
-    "sourceMap": false,
+    "rootDir": "./src",
+    "outDir": "../../dist/db_management",
+    "resolveJsonModule": true,
   },
-  "exclude": [
-    "./dist",
-    "node_modules",
-    "tmp"
-  ],
-  "include": [
-    "./src"
-  ],
+  "references": [
+    { "path": "../../shared-types/global-types/tsconfig.json"},
+    { "path": "../../packages/vpm_types"}
+  ]
 }
