@@ -5,28 +5,24 @@
     "default": {
       "runner": "nx/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": ["lint", "test", "e2e"]
       }
     }
   },
   "targetDefaults": {
-    "build": [
-      {
-        "target": "build",
-        "projects": "dependencies"
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "dependsOn": ["^build"],
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist"
       }
-    ],
-    "test:unit": [
-      {
-        "target": "build",
-        "projects": "self"
-      }
-    ],
-    "test:e2e": [
-      {
-        "target": "build",
-        "projects": "dependencies"
-      }
-    ]
+    },
+    "test:unit": {
+      "dependsOn": ["build"]
+    },
+    "test:e2e": {
+      "dependsOn": ["build"]
+    }
   }
 }

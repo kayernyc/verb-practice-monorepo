@@ -109,3 +109,5 @@ web_modules/
 .env.test
 .env.production
 
+tsconfig.tsbuildinfo
+
