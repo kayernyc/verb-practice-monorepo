@@ -1,5 +1,6 @@
 {
   "name": "vpm_types",
+  "type": "module",
   "version": "1.0.0-beta.1",
   "description": "language types for server and consumer",
   "scripts": {

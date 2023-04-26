@@ -2,15 +2,17 @@
   "compileOnSave": false,
   "compilerOptions": {
     "allowJs": true,
-    "rootDir": ".",
-    "sourceMap": true,
     "declaration": false,
-    "moduleResolution": "node16",
     "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "target": "es2015",
     "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": false,
+    "rootDir": ".",
+    "sourceMap": true,
+    "target": "es2015",
     "lib": [
       "es2017",
       "dom"
@@ -20,13 +22,13 @@
     "baseUrl": ".",
     "paths": {
       "@english/*": [
-        "./typescript/english/*"
+        "shared-types/english/*"
       ],
       "@global/*": [
-        "./typescript/global_types/*"
+        "shared-types/global-types/*"
       ],
-      "global": [
-        "packages/global/src/index.ts"
+      "@vpm": [
+        "packages/vpm_types/index.ts"
       ]
     }
   },

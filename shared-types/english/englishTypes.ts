@@ -1,5 +1,5 @@
-import { LanguageMap } from '../Global/jsonTypes.js';
-import { GrammaticalNumber, GrammaticalPerson } from '../Global/languageTypes.js';
+import { LanguageMap } from '../global-types/jsonTypes';
+import { GrammaticalNumber, GrammaticalPerson } from '../global-types/languageTypes.js';
 
 export const EnglishPronounKeys: { [key: string]: number } = {
   i: GrammaticalPerson.First.valueOf() + GrammaticalNumber.Singular.valueOf(),

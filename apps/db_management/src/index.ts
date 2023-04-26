@@ -1,3 +1,4 @@
-import { GrammaticalPerson } from '@global/languageTypes.js'
+import { VPM_Types } from '@vpm';
+import { GrammaticalPerson } from '@global/languageTypes';
 
-console.log('bubbles');
+console.log('this is a test', VPM_Types, GrammaticalPerson);

@@ -34,7 +34,8 @@
   },
   "workspaces": [
     "packages/*",
-    "apps/*"
+    "apps/*",
+    "shared-types/*"
   ],
   "dependencies": {
     "tslib": "^2.3.0"
