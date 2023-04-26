@@ -1,0 +1,2322 @@
+abide:
+  language: en
+  translations:
+
+create:
+  language: en
+  translations:
+    de: schaffen
+
+move:
+  language: en
+  translations:
+    de: [bewegen, um|ziehen]
+
+detect:
+  language: en
+  translations:
+
+receive:
+  language: en
+  translations:
+    de: entgegen|nehmen
+
+use:
+  language: en
+  translations:
+    de: verwenden
+
+consume:
+  language: en
+  translations:
+
+discover:
+  language: en
+  translations:
+
+signify:
+  language: en
+  translations:
+
+escape:
+  language: en
+  translations:
+    de: frei|kommen
+
+work:
+  language: en
+  translations:
+    de: arbeiten
+
+demand:
+  language: en
+  translations:
+
+seem:
+  language: en
+  translations:
+    de: [scheinen, erscheinen, vor|kommen]
+
+ask:
+  language: en
+  translations:
+    de: [fragen, erkundigen]
+
+question:
+  language: en
+  translations:
+
+demonstrate:
+  language: en
+  translations:
+    de: zeigen
+
+try:
+  language: en
+  translations:
+    de: versuchen
+
+supply:
+  language: en
+  translations:
+
+turn:
+  language: en
+  translations:
+    de: drehen
+
+twist:
+  language: en
+  translations:
+
+pursue:
+  language: en
+  translations:
+
+like:
+  language: en
+  translations:
+
+active:
+  language: en
+  translations:
+
+help:
+  language: en
+  translations:
+    de: helfen
+
+assist:
+  language: en
+  translations:
+
+start:
+  language: en
+  translations:
+
+operate:
+  language: en
+  translations:
+
+compose:
+  language: en
+  translations:
+
+place:
+  language: en
+  translations:
+    de: stellen
+
+play:
+  language: en
+  translations:
+    de: spielen
+
+act:
+  language: en
+  translations:
+
+compensate:
+  language: en
+  translations:
+
+include:
+  language: en
+  translations:
+    de: [enthalten, um|fassen]
+
+add:
+  language: en
+  translations:
+    de: [hinzu|fügen, hinzu|setzen]
+
+believe:
+  language: en
+  translations:
+    de: glauben
+
+face:
+  language: en
+  translations:
+    de: gegenüber|liegen
+
+guide:
+  language: en
+  translations:
+
+live:
+  language: en
+  translations:
+    de: [leben, wohnen]
+
+happen:
+  language: en
+  translations:
+    de: [geschehen, vor|fallen, vor|kommen]
+
+appear:
+  language: en
+  translations:
+    de: [erscheinen, auf|tauchen]
+
+carry:
+  language: en
+  translations:
+    de: tragen
+
+talk:
+  language: en
+  translations:
+
+chat:
+  language: en
+  translations:
+
+produce:
+  language: en
+  translations:
+    de: [her|stellen, vor|bringen]
+
+offer:
+  language: en
+  translations:
+    de: [bieten, an|bieten]
+
+propose:
+  language: en
+  translations:
+    de: [vor|bringen, vor|schlagen]
+
+consider:
+  language: en
+  translations:
+    de: über|legen
+
+expect:
+  language: en
+  translations:
+    de: erwarten
+
+suggest:
+  language: en
+  translations:
+    de: vor|schlagen
+
+advocate:
+  language: en
+  translations:
+
+require:
+  language: en
+  translations:
+
+want:
+  language: en
+  translations:
+
+last:
+  language: en
+  translations:
+    de: an|dauern
+
+count:
+  language: en
+  translations:
+
+change:
+  language: en
+  translations:
+    de: um|ändern
+
+alter:
+  language: en
+  translations:
+
+collapse:
+  language: en
+  translations:
+    de: ein|fallen
+
+continue:
+  language: en
+  translations:
+    de: [an|dauern, fort|fahren, weiter|führen]
+
+stop:
+  language: en
+  translations:
+    de: auf|hören
+
+understand:
+  language: en
+  translations:
+    de: [verstehen, fassen, begreifen]
+
+describe:
+  language: en
+  translations:
+
+detail:
+  language: en
+  translations:
+
+develop:
+  language: en
+  translations:
+    de: entwickeln
+
+concur:
+  language: en
+  translations:
+
+reach:
+  language: en
+  translations:
+
+construct:
+  language: en
+  translations:
+
+involve:
+  language: en
+  translations:
+
+affect:
+  language: en
+  translations:
+    de: betreffen
+
+return:
+  language: en
+  translations:
+    de: [wieder|kehren, zurück|geben, zurück|müssen]
+
+pull:
+  language: en
+  translations:
+    de: ziehen
+
+die:
+  language: en
+  translations:
+    de: sterben
+
+fail:
+  language: en
+  translations:
+
+hope:
+  language: en
+  translations:
+    de: hoffen
+
+walk:
+  language: en
+  translations:
+
+travel:
+  language: en
+  translations:
+
+sale:
+  language: en
+  translations:
+
+wait:
+  language: en
+  translations:
+    de: warten
+
+delay:
+  language: en
+  translations:
+    de: hin|halten
+
+cause:
+  language: en
+  translations:
+    de: herauf|beschwören
+
+pass:
+  language: en
+  translations:
+
+accept:
+  language: en
+  translations:
+    de: entgegen|nehmen
+
+watch:
+  language: en
+  translations:
+
+raise:
+  language: en
+  translations:
+
+elevate:
+  language: en
+  translations:
+
+base:
+  language: en
+  translations:
+
+found:
+  language: en
+  translations:
+
+apply:
+  language: en
+  translations:
+    de: gelten
+
+employ:
+  language: en
+  translations:
+
+fallapart:
+  language: en
+  translations:
+
+explain:
+  language: en
+  translations:
+    de: erklären
+
+excuse:
+  language: en
+  translations:
+
+acquire:
+  language: en
+  translations:
+
+increase:
+  language: en
+  translations:
+    de: zu|nehmen
+
+claim:
+  language: en
+  translations:
+
+report:
+  language: en
+  translations:
+
+cover:
+  language: en
+  translations:
+
+support:
+  language: en
+  translations:
+
+backup:
+  language: en
+  translations:
+
+trim:
+  language: en
+  translations:
+
+form:
+  language: en
+  translations:
+
+remain:
+  language: en
+  translations:
+    de: bleiben
+
+reduce:
+  language: en
+  translations:
+    de: [herab|mindern, herab|setzen]
+
+establish:
+  language: en
+  translations:
+    de: [ein|richten, fest|legen]
+
+join:
+  language: en
+  translations:
+    de: hinzu|gesellen
+
+wish:
+  language: en
+  translations:
+
+desire:
+  language: en
+  translations:
+
+achieve:
+  language: en
+  translations:
+    de: erreichen
+
+succeed:
+  language: en
+  translations:
+    de: [gelingen, nach|folgen]
+
+search:
+  language: en
+  translations:
+    de: suchen
+
+select:
+  language: en
+  translations:
+
+plow:
+  language: en
+  translations:
+
+confront:
+  language: en
+  translations:
+    de: [entgegen|tretenm, gegenüber|stellen]
+
+flunk:
+  language: en
+  translations:
+
+serve:
+  language: en
+  translations:
+
+provide:
+  language: en
+  translations:
+    de: an|bieten
+
+end:
+  language: en
+  translations:
+    de: auf|hören
+
+terminate:
+  language: en
+  translations:
+
+kill:
+  language: en
+  translations:
+    de: um|bringen
+
+defeat:
+  language: en
+  translations:
+    de: nieder|werfen
+
+occur:
+  language: en
+  translations:
+
+repel:
+  language: en
+  translations:
+
+represent:
+  language: en
+  translations:
+
+discuss:
+  language: en
+  translations:
+
+talkover:
+  language: en
+  translations:
+
+pick:
+  language: en
+  translations:
+
+argue:
+  language: en
+  translations:
+
+debate:
+  language: en
+  translations:
+
+testify:
+  language: en
+  translations:
+    de: aus|sagen
+
+capture:
+  language: en
+  translations:
+
+enjoy:
+  language: en
+  translations:
+    de: genießen
+
+love:
+  language: en
+  translations:
+
+introduce:
+  language: en
+  translations:
+    de: vor|stellen
+
+enter:
+  language: en
+  translations:
+    de: hinein|gehen
+
+enroll:
+  language: en
+  translations:
+
+present:
+  language: en
+  translations:
+    de: [vor|legen, vor|tragen]
+
+point:
+  language: en
+  translations:
+
+intend:
+  language: en
+  translations:
+    de: vor|haben
+
+refer:
+  language: en
+  translations:
+
+mention:
+  language: en
+  translations:
+
+behave:
+  language: en
+  translations:
+
+relate:
+  language: en
+  translations:
+
+close:
+  language: en
+  translations:
+    de: [schließen, zu|machen]
+
+identify:
+  language: en
+  translations:
+
+name:
+  language: en
+  translations:
+    de: nennen
+
+manage:
+  language: en
+  translations:
+
+thank:
+  language: en
+  translations:
+
+convey:
+  language: en
+  translations:
+    de: enthalten
+
+compare:
+  language: en
+  translations:
+    de: [vergleichen, gegenüber|stellen]
+
+equate:
+  language: en
+  translations:
+    de: gleich|setzen
+
+announce:
+  language: en
+  translations:
+
+declare:
+  language: en
+  translations:
+    de: erklären
+
+obtain:
+  language: en
+  translations:
+    de: erhalten
+
+note:
+  language: en
+  translations:
+    de: an|merken
+
+observe:
+  language: en
+  translations:
+
+indicate:
+  language: en
+  translations:
+
+wonder:
+  language: en
+  translations:
+
+enquire:
+  language: en
+  translations:
+    de: erkundigen
+
+maintain:
+  language: en
+  translations:
+
+publish:
+  language: en
+  translations:
+    de: heraus|bringen
+
+print:
+  language: en
+  translations:
+
+suffer:
+  language: en
+  translations:
+    de: leiden
+
+endure:
+  language: en
+  translations:
+
+avoid:
+  language: en
+  translations:
+    de: meiden
+
+annul:
+  language: en
+  translations:
+
+express:
+  language: en
+  translations:
+
+suppose:
+  language: en
+  translations:
+
+determine:
+  language: en
+  translations:
+
+design:
+  language: en
+  translations:
+
+listen:
+  language: en
+  translations:
+    de: zu|hören
+
+save:
+  language: en
+  translations:
+
+tend:
+  language: en
+  translations:
+
+treat:
+  language: en
+  translations:
+
+process:
+  language: en
+  translations:
+
+control:
+  language: en
+  translations:
+
+command:
+  language: en
+  translations:
+
+share:
+  language: en
+  translations:
+    de: teilen
+
+remove:
+  language: en
+  translations:
+    de: ab|nehmen
+
+withdraw:
+  language: en
+  translations:
+    de: ab|ziehen
+
+drop:
+  language: en
+  translations:
+
+visit:
+  language: en
+  translations:
+
+encourage:
+  language: en
+  translations:
+
+force:
+  language: en
+  translations:
+    de: zwingen
+
+push:
+  language: en
+  translations:
+    de: schieben
+
+reflect:
+  language: en
+  translations:
+
+ponder:
+  language: en
+  translations:
+
+admit:
+  language: en
+  translations:
+    de: zu|geben
+
+assume:
+  language: en
+  translations:
+    de: voraus|setzen
+
+presume:
+  language: en
+  translations:
+
+smile:
+  language: en
+  translations:
+
+grin:
+  language: en
+  translations:
+
+prepare:
+  language: en
+  translations:
+    de: vor|bereiten
+
+fix:
+  language: en
+  translations:
+
+replace:
+  language: en
+  translations:
+
+fill:
+  language: en
+  translations:
+
+improve:
+  language: en
+  translations:
+
+better:
+  language: en
+  translations:
+
+reference:
+  language: en
+  translations:
+
+battle:
+  language: en
+  translations:
+
+omit:
+  language: en
+  translations:
+
+unload:
+  language: en
+  translations:
+
+forward:
+  language: en
+  translations:
+
+prevent:
+  language: en
+  translations:
+    de: vor|beugen
+
+refuse:
+  language: en
+  translations:
+    de: zurück|weisen
+
+regard:
+  language: en
+  translations:
+    de: an|sehen
+
+reveal:
+  language: en
+  translations:
+
+uncover:
+  language: en
+  translations:
+    de: frei|legen
+
+educate:
+  language: en
+  translations:
+
+answer:
+  language: en
+  translations:
+    de: antworten
+
+reply:
+  language: en
+  translations:
+    de: antworten
+
+state:
+  language: en
+  translations:
+    de: aus|sagen
+
+depend:
+  language: en
+  translations:
+
+enable:
+  language: en
+  translations:
+
+record:
+  language: en
+  translations:
+
+register:
+  language: en
+  translations:
+
+check:
+  language: en
+  translations:
+
+analyze:
+  language: en
+  translations:
+
+complete:
+  language: en
+  translations:
+
+sound:
+  language: en
+  translations:
+
+vocalize:
+  language: en
+  translations:
+
+laugh:
+  language: en
+  translations:
+
+extend:
+  language: en
+  translations:
+
+arise:
+  language: en
+  translations:
+    de: entstehen
+
+notice:
+  language: en
+  translations:
+    de: an|merken
+
+define:
+  language: en
+  translations:
+
+specify:
+  language: en
+  translations:
+
+examine:
+  language: en
+  translations:
+
+suit:
+  language: en
+  translations:
+
+study:
+  language: en
+  translations:
+    de: studieren
+
+recognise:
+  language: en
+  translations:
+
+realize:
+  language: en
+  translations:
+    de: erkennen
+
+sway:
+  language: en
+  translations:
+
+sign:
+  language: en
+  translations:
+
+hire:
+  language: en
+  translations:
+
+attend:
+  language: en
+  translations:
+
+perform:
+  language: en
+  translations:
+    de: [vor|führen, vor|tragen]
+
+execute:
+  language: en
+  translations:
+    de: hin|richten
+
+result:
+  language: en
+  translations:
+
+ensure:
+  language: en
+  translations:
+
+journey:
+  language: en
+  translations:
+
+adopt:
+  language: en
+  translations:
+
+confirm:
+  language: en
+  translations:
+
+affirm:
+  language: en
+  translations:
+
+protect:
+  language: en
+  translations:
+
+defend:
+  language: en
+  translations:
+
+stare:
+  language: en
+  translations:
+
+look:
+  language: en
+  translations:
+    de: [aus|sehen, schauen]
+
+imagine:
+  language: en
+  translations:
+
+attempt:
+  language: en
+  translations:
+
+associate:
+  language: en
+  translations:
+
+care:
+  language: en
+  translations:
+
+marry:
+  language: en
+  translations:
+
+officiate:
+  language: en
+  translations:
+
+collect:
+  language: en
+  translations:
+    de: sammeln
+
+compile:
+  language: en
+  translations:
+
+voice:
+  language: en
+  translations:
+
+issue:
+  language: en
+  translations:
+
+release:
+  language: en
+  translations:
+    de: frei|setzen
+
+free:
+  language: en
+  translations:
+
+emerge:
+  language: en
+  translations:
+    de: [entstehen, hervor|gehen, hervor|treten]
+
+beware:
+  language: en
+  translations:
+
+aim:
+  language: en
+  translations:
+
+mark:
+  language: en
+  translations:
+
+injure:
+  language: en
+  translations:
+
+appoint:
+  language: en
+  translations:
+
+order:
+  language: en
+  translations:
+    de: bestellen
+
+ignore:
+  language: en
+  translations:
+
+link:
+  language: en
+  translations:
+    de: verbinden
+
+settle:
+  language: en
+  translations:
+
+press:
+  language: en
+  translations:
+
+compress:
+  language: en
+  translations:
+
+respond:
+  language: en
+  translations:
+
+survive:
+  language: en
+  translations:
+
+concentrate:
+  language: en
+  translations:
+
+focus:
+  language: en
+  translations:
+
+lift:
+  language: en
+  translations:
+    de: heben
+
+approach:
+  language: en
+  translations:
+    de: [entgegen|kommen, herauf|ziehen, zu|kommen]
+
+near:
+  language: en
+  translations:
+
+cross:
+  language: en
+  translations:
+
+track:
+  language: en
+  translations:
+
+test:
+  language: en
+  translations:
+    de: testen
+
+evaluate:
+  language: en
+  translations:
+
+experience:
+  language: en
+  translations:
+
+touch:
+  language: en
+  translations:
+
+contact:
+  language: en
+  translations:
+
+commit:
+  language: en
+  translations:
+
+devote:
+  language: en
+  translations:
+    de: hin|geben
+
+grant:
+  language: en
+  translations:
+    de: [statt|geben, zu|billigen]
+
+agree:
+  language: en
+  translations:
+
+prefer:
+  language: en
+  translations:
+    de: vor|ziehen
+
+repeat:
+  language: en
+  translations:
+    de: [wieder|geben, wieder|holen]
+
+recur:
+  language: en
+  translations:
+
+rest:
+  language: en
+  translations:
+
+threaten:
+  language: en
+  translations:
+
+menace:
+  language: en
+  translations:
+
+insist:
+  language: en
+  translations:
+    de: bestehen
+
+importune:
+  language: en
+  translations:
+
+launch:
+  language: en
+  translations:
+    de: heraus|bringen
+
+open:
+  language: en
+  translations:
+
+limit:
+  language: en
+  translations:
+
+restrict:
+  language: en
+  translations:
+
+promote:
+  language: en
+  translations:
+
+deliver:
+  language: en
+  translations:
+
+measure:
+  language: en
+  translations:
+
+own:
+  language: en
+  translations:
+
+retain:
+  language: en
+  translations:
+
+assess:
+  language: en
+  translations:
+
+attract:
+  language: en
+  translations:
+
+belong:
+  language: en
+  translations:
+    de: gehören
+
+reside:
+  language: en
+  translations:
+
+consist:
+  language: en
+  translations:
+
+contribute:
+  language: en
+  translations:
+
+conceal:
+  language: en
+  translations:
+    de: [verheimlichen, verstecken]
+
+promise:
+  language: en
+  translations:
+    de: versprechen
+
+assure:
+  language: en
+  translations:
+
+reject:
+  language: en
+  translations:
+
+deny:
+  language: en
+  translations:
+
+cry:
+  language: en
+  translations:
+    de: weinen
+
+impose:
+  language: en
+  translations:
+
+enforce:
+  language: en
+  translations:
+
+invite:
+  language: en
+  translations:
+
+tempt:
+  language: en
+  translations:
+
+chant:
+  language: en
+  translations:
+
+vary:
+  language: en
+  translations:
+
+warn:
+  language: en
+  translations:
+
+discourage:
+  language: en
+  translations:
+
+address:
+  language: en
+  translations:
+
+call:
+  language: en
+  translations:
+    de: rufen
+
+destroy:
+  language: en
+  translations:
+
+demolish:
+  language: en
+  translations:
+
+worry:
+  language: en
+  translations:
+
+mind:
+  language: en
+  translations:
+
+divide:
+  language: en
+  translations:
+    de: teilen
+
+head:
+  language: en
+  translations:
+
+steer:
+  language: en
+  translations:
+
+label:
+  language: en
+  translations:
+
+nod:
+  language: en
+  translations:
+
+recognize:
+  language: en
+  translations:
+
+train:
+  language: en
+  translations:
+
+attack:
+  language: en
+  translations:
+    de: an|greifen
+
+clear:
+  language: en
+  translations:
+    de: räumen
+
+combine:
+  language: en
+  translations:
+
+unite:
+  language: en
+  translations:
+
+handle:
+  language: en
+  translations:
+
+influence:
+  language: en
+  translations:
+
+shape:
+  language: en
+  translations:
+
+recommend:
+  language: en
+  translations:
+    de: empfehlen
+
+urge:
+  language: en
+  translations:
+
+shout:
+  language: en
+  translations:
+
+utter:
+  language: en
+  translations:
+
+undertake:
+  language: en
+  translations:
+
+initiate:
+  language: en
+  translations:
+
+account:
+  language: en
+  translations:
+
+climb:
+  language: en
+  translations:
+    de: klettern
+
+secure:
+  language: en
+  translations:
+    de: ab|sichern
+
+procure:
+  language: en
+  translations:
+
+step:
+  language: en
+  translations:
+
+transfer:
+  language: en
+  translations:
+    de: [versetzen, um|setzen, um|steigen]
+
+welcome:
+  language: en
+  translations:
+
+conclude:
+  language: en
+  translations:
+
+finish:
+  language: en
+  translations:
+
+disappear:
+  language: en
+  translations:
+
+vanish:
+  language: en
+  translations:
+    de: vergehen
+
+display:
+  language: en
+  translations:
+
+dress:
+  language: en
+  translations:
+
+clothe:
+  language: en
+  translations:
+
+illustrate:
+  language: en
+  translations:
+
+depict:
+  language: en
+  translations:
+    de: dar|stellen
+
+imply:
+  language: en
+  translations:
+
+connote:
+  language: en
+  translations:
+
+organise:
+  language: en
+  translations:
+
+plan:
+  language: en
+  translations:
+    de: plannen
+
+direct:
+  language: en
+  translations:
+
+target:
+  language: en
+  translations:
+
+generate:
+  language: en
+  translations:
+
+investigate:
+  language: en
+  translations:
+    de: nach|forschen
+
+remind:
+  language: en
+  translations:
+
+remember:
+  language: en
+  translations:
+    de: erinnern
+
+counsel:
+  language: en
+  translations:
+
+afford:
+  language: en
+  translations:
+
+earn:
+  language: en
+  translations:
+
+gain:
+  language: en
+  translations:
+
+hand:
+  language: en
+  translations:
+
+inform:
+  language: en
+  translations:
+    de: mit|teilen
+
+advise:
+  language: en
+  translations:
+    de: [beraten, raten]
+
+trust:
+  language: en
+  translations:
+
+approve:
+  language: en
+  translations:
+
+fear:
+  language: en
+  translations:
+
+dread:
+  language: en
+  translations:
+
+vote:
+  language: en
+  translations:
+    de: ab|stimmen
+
+conduct:
+  language: en
+  translations:
+
+carryout:
+  language: en
+  translations:
+
+cope:
+  language: en
+  translations:
+
+derive:
+  language: en
+  translations:
+
+elect:
+  language: en
+  translations:
+
+gather:
+  language: en
+  translations:
+    de: sammeln
+
+jump:
+  language: en
+  translations:
+    de: springen
+
+match:
+  language: en
+  translations:
+    de: entsprechen
+
+equal:
+  language: en
+  translations:
+    de: [gleichen, gleich|kommen]
+
+matter:
+  language: en
+  translations:
+
+persuade:
+  language: en
+  translations:
+
+float:
+  language: en
+  translations:
+
+estimate:
+  language: en
+  translations:
+
+recover:
+  language: en
+  translations:
+
+score:
+  language: en
+  translations:
+
+slip:
+  language: en
+  translations:
+    de: rutschen
+
+weigh:
+  language: en
+  translations:
+    de: wiegen
+
+hate:
+  language: en
+  translations:
+
+dislike:
+  language: en
+  translations:
+
+attach:
+  language: en
+  translations:
+    de: [an|hängen, an|machen]
+
+exercise:
+  language: en
+  translations:
+
+exert:
+  language: en
+  translations:
+
+house:
+  language: en
+  translations:
+
+stay:
+  language: en
+  translations:
+    de: bleiben
+
+roll:
+  language: en
+  translations:
+
+wash:
+  language: en
+  translations:
+    de: waschen
+
+accompany:
+  language: en
+  translations:
+
+follow:
+  language: en
+  translations:
+    de: [folgen, nach|folgen]
+
+accuse:
+  language: en
+  translations:
+
+charge:
+  language: en
+  translations:
+
+adhere:
+  language: en
+  translations:
+
+explore:
+  language: en
+  translations:
+
+judge:
+  language: en
+  translations:
+
+decide:
+  language: en
+  translations:
+
+comment:
+  language: en
+  translations:
+
+assert:
+  language: en
+  translations:
+
+exclude:
+  language: en
+  translations:
+
+except:
+  language: en
+  translations:
+
+adjust:
+  language: en
+  translations:
+
+ache:
+  language: en
+  translations:
+
+stretch:
+  language: en
+  translations:
+
+retreat:
+  language: en
+  translations:
+
+back:
+  language: en
+  translations:
+
+endorse:
+  language: en
+  translations:
+
+justify:
+  language: en
+  translations:
+
+warrant:
+  language: en
+  translations:
+
+knock:
+  language: en
+  translations:
+
+bump:
+  language: en
+  translations:
+
+prosecute:
+  language: en
+  translations:
+
+switch:
+  language: en
+  translations:
+
+trade:
+  language: en
+  translations:
+
+appreciate:
+  language: en
+  translations:
+
+value:
+  language: en
+  translations:
+
+benefit:
+  language: en
+  translations:
+
+lack:
+  language: en
+  translations:
+    de: fehlen
+
+miss:
+  language: en
+  translations:
+    de: [fehlen, vorbei|schießen]
+
+list:
+  language: en
+  translations:
+
+occupy:
+  language: en
+  translations:
+
+busy:
+  language: en
+  translations:
+
+permit:
+  language: en
+  translations:
+
+allow:
+  language: en
+  translations:
+    de: [statt|geben, zu|billigen]
+
+surround:
+  language: en
+  translations:
+
+circle:
+  language: en
+  translations:
+
+abandon:
+  language: en
+  translations:
+
+blame:
+  language: en
+  translations:
+
+fault:
+  language: en
+  translations:
+
+complain:
+  language: en
+  translations:
+
+protest:
+  language: en
+  translations:
+
+connect:
+  language: en
+  translations:
+    de: verbinden
+
+dominate:
+  language: en
+  translations:
+
+paint:
+  language: en
+  translations:
+
+quote:
+  language: en
+  translations:
+
+view:
+  language: en
+  translations:
+    de: an|sehen
+
+acknowledge:
+  language: en
+  translations:
+
+dismiss:
+  language: en
+  translations:
+
+displace:
+  language: en
+  translations:
+
+incorporate:
+  language: en
+  translations:
+
+interpret:
+  language: en
+  translations:
+    de: deuten
+
+proceed:
+  language: en
+  translations:
+    de: vor|gehen
+
+separate:
+  language: en
+  translations:
+
+stress:
+  language: en
+  translations:
+
+analyse:
+  language: en
+  translations:
+
+research:
+  language: en
+  translations:
+
+arrest:
+  language: en
+  translations:
+    de: fest|nehmen
+
+contain:
+  language: en
+  translations:
+
+bother:
+  language: en
+  translations:
+
+annoy:
+  language: en
+  translations:
+
+expand:
+  language: en
+  translations:
+
+implement:
+  language: en
+  translations:
+
+applicate:
+  language: en
+  translations:
+
+possess:
+  language: en
+  translations:
+
+review:
+  language: en
+  translations:
+
+tie:
+  language: en
+  translations:
+    de: zu|binden
+
+calculate:
+  language: en
+  translations:
+
+reason:
+  language: en
+  translations:
+
+glance:
+  language: en
+  translations:
+
+mix:
+  language: en
+  translations:
+
+blend:
+  language: en
+  translations:
+
+resolve:
+  language: en
+  translations:
+
+rule:
+  language: en
+  translations:
+
+govern:
+  language: en
+  translations:
+
+suspect:
+  language: en
+  translations:
+
+awake:
+  language: en
+  translations:
+
+appeal:
+  language: en
+  translations:
+
+request:
+  language: en
+  translations:
+    de: bestellen
+
+challenge:
+  language: en
+  translations:
+    de: heraus|fordern
+
+contest:
+  language: en
+  translations:
+
+clean:
+  language: en
+  translations:
+
+cleanse:
+  language: en
+  translations:
+
+damage:
+  language: en
+  translations:
+
+harm:
+  language: en
+  translations:
+
+guess:
+  language: en
+  translations:
+    de: [raten, denken]
+
+reckon:
+  language: en
+  translations:
+
+restore:
+  language: en
+  translations:
+    de: wieder|herstellen
+
+repair:
+  language: en
+  translations:
+
+constitute:
+  language: en
+  translations:
+    de: dar|stellen
+
+convert:
+  language: en
+  translations:
+
+distinguish:
+  language: en
+  translations:
+
+submit:
+  language: en
+  translations:
+
+rely:
+  language: en
+  translations:
+
+feature:
+  language: en
+  translations:
+    de: zeigen
+
+land:
+  language: en
+  translations:
+
+arrive:
+  language: en
+  translations:
+    de: an|kommen
+
+locate:
+  language: en
+  translations:
+
+predict:
+  language: en
+  translations:
+    de: voraus|sagen
+
+preserve:
+  language: en
+  translations:
+
+solve:
+  language: en
+  translations:
+
+sort:
+  language: en
+  translations:
+
+arrange:
+  language: en
+  translations:
+    de: hin|biegen
+
+struggle:
+  language: en
+  translations:
+
+cook:
+  language: en
+  translations:
+
+bake:
+  language: en
+  translations:
+
+dance:
+  language: en
+  translations:
+
+invest:
+  language: en
+  translations:
+
+lock:
+  language: en
+  translations:
+
+engage:
+  language: en
+  translations:
+
+owe:
+  language: en
+  translations:
+
+incur:
+  language: en
+  translations:
+
+pour:
+  language: en
+  translations:
+    de: gießen
+
+shift:
+  language: en
+  translations:
+
+kick:
+  language: en
+  translations:
+    de: treten
+
+kiss:
+  language: en
+  translations:
+
+salute:
+  language: en
+  translations:
+
+illuminate:
+  language: en
+  translations:
+
+purchase:
+  language: en
+  translations:
+
+race:
+  language: en
+  translations:
+
+chase:
+  language: en
+  translations:
+
+retire:
+  language: en
+  translations:
+
+depart:
+  language: en
+  translations:
+    de: verlassen
+
+scream:
+  language: en
+  translations:
+    de: schreien
+

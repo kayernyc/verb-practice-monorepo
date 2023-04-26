@@ -1,5 +1,3 @@
-function sumOne(number) {
+export function sumOne(number) {
   return number + 1;
 }
-
-module.exports = sumOne;

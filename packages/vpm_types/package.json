@@ -1,13 +1,10 @@
 {
-  "name": "sum-two",
+  "name": "vpm_types",
   "type": "module",
   "version": "1.0.0-beta.1",
-  "description": "Sums two to a given number",
+  "description": "language types for server and consumer",
   "scripts": {
     "build": "echo \"Built!\"",
     "test:unit": "jest"
-  },
-  "dependencies": {
-    "sum-one": "workspace:*"
   }
 }

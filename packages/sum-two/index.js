@@ -1,7 +1,5 @@
-const sumOne = require('sum-one');
+import { sumOne } from 'sum-one';
 
-function sumTwo(number) {
+export default function sumTwo(number) {
   return sumOne(sumOne(number));
 }
-
-module.exports = sumTwo;

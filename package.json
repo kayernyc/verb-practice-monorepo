@@ -1,6 +1,7 @@
 {
   "name": "verb-practice-monorepo",
   "version": "0.0.0",
+  "type": "module",
   "license": "MIT",
   "scripts": {
     "graph": "nx graph",
@@ -10,14 +11,33 @@
   },
   "private": true,
   "devDependencies": {
-    "@nrwl/workspace": "^15.9.2",
-    "jest": "^29.5.0",
-    "nx": "15.0.10",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.21.4",
+    "@nrwl/cli": "15.9.2",
+    "@nrwl/jest": "15.9.2",
+    "@nrwl/js": "15.9.2",
+    "@nrwl/node": "15.9.2",
+    "@nrwl/webpack": "15.9.2",
+    "@nrwl/workspace": "15.9.2",
+    "@types/jest": "^29.4.0",
+    "@types/node": "~18.7.1",
+    "jest": "^29.4.1",
+    "jest-environment-node": "^29.4.1",
+    "jest-esm-transformer": "^1.0.0",
+    "node:lib": "link:@nrwl/node:lib",
+    "nx": "15.9.2",
     "only-allow": "^1.1.1",
     "prettier": "^2.6.2",
-    "typescript": "^5.0.3"
+    "ts-jest": "^29.0.5",
+    "ts-node": "10.9.1",
+    "typescript": "~4.9.5"
   },
   "workspaces": [
-    "packages/*"
-  ]
+    "packages/*",
+    "apps/*",
+    "shared-types/*"
+  ],
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
 }
