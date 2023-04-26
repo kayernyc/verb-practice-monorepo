@@ -1,6 +1,7 @@
 {
-  "parser": "typescript",
+  "parser": "@typescript-eslint/parser",
   "printWidth": 100,
+  "semi": true,
   "singleQuote": true,
   "trailingComma": "all"
 }
