@@ -14,6 +14,10 @@
   "devDependencies": {
     "@babel/core": "^7.14.0",
     "@babel/preset-env": "^7.21.4",
+    "@commitlint/cli": "^17.6.1",
+    "@commitlint/config-conventional": "^17.6.1",
+    "@commitlint/config-nx-scopes": "^17.4.3",
+    "@commitlint/cz-commitlint": "^17.5.0",
     "@nrwl/cli": "15.9.2",
     "@nrwl/jest": "15.9.2",
     "@nrwl/js": "15.9.2",
@@ -52,10 +56,5 @@
       "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true",
       "pre-commit": "lint-staged"
     }
-  },
-  "lint-staged": {
-    "*.{js, json, ts, tsx}": [
-      "pnpm nx format:write --uncommitted"
-    ]
   }
 }
