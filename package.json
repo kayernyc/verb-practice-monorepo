@@ -60,5 +60,10 @@
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
