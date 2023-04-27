@@ -13,7 +13,10 @@ export default function generateStems({ infinitive }: GermanVerb): string {
   }
 
   // remove en or n ending
-  regularStem = regularStem.charAt(infinitive.length - 2) === 'e' ? regularStem.slice(0, -2) : regularStem.slice(0, -1);
+  regularStem =
+    regularStem.charAt(infinitive.length - 2) === 'e'
+      ? regularStem.slice(0, -2)
+      : regularStem.slice(0, -1);
 
   return regularStem;
 }

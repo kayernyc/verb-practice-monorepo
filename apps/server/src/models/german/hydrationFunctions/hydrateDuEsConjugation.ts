@@ -1,7 +1,9 @@
 import { GermanPronounKeys, GermanVerbHydrated } from '@german/germanTypes';
 
-const irregularStemRegex = /(?<firstConst>[bcdfghjklmnpqrstvwxyzß]*)(?<vowelGroup>[aeiouäöü]*)(?<secondConst>[bcdfghjklmnpqrstvwxyzß]*)/;
-const regularStemRegex = /(?<firstConst>[bcdfghjklmnpqrstvwxyzß]*)(?<vowelGroup>[aeiouäöü]*)(?<secondConst>[a-zß]*)/;
+const irregularStemRegex =
+  /(?<firstConst>[bcdfghjklmnpqrstvwxyzß]*)(?<vowelGroup>[aeiouäöü]*)(?<secondConst>[bcdfghjklmnpqrstvwxyzß]*)/;
+const regularStemRegex =
+  /(?<firstConst>[bcdfghjklmnpqrstvwxyzß]*)(?<vowelGroup>[aeiouäöü]*)(?<secondConst>[a-zß]*)/;
 
 export default function duEsConjugation({
   returnObject,
@@ -26,13 +28,9 @@ export default function duEsConjugation({
     },
   } = irregularStemRegex.exec(duEsStem);
 
-  function processStem({ regularStem, ending }: { regularStem: string, ending: string }) {
+  function processStem({ regularStem, ending }: { regularStem: string; ending: string }) {
     const {
-      groups: {
-        firstConst,
-        vowelGroup,
-        secondConst,
-      },
+      groups: { firstConst, vowelGroup, secondConst },
     } = regularStemRegex.exec(regularStem);
 
     if (irregularStemFirstConst && !irregularStemSecondGroup) {
@@ -43,8 +41,13 @@ export default function duEsConjugation({
       return `${firstConst}${irregularStemVowelGroup}${irregularStemSecondGroup}${ending}`;
     }
 
-    return `${irregularStemFirstConst || firstConst}${irregularStemVowelGroup || vowelGroup}${irregularStemSecondGroup || secondConst}`;
+    return `${irregularStemFirstConst || firstConst}${irregularStemVowelGroup || vowelGroup}${
+      irregularStemSecondGroup || secondConst
+    }`;
   }
 
-  return [processStem({ regularStem: du, ending: 'st' }), processStem({ regularStem: es, ending: 't' })];
+  return [
+    processStem({ regularStem: du, ending: 'st' }),
+    processStem({ regularStem: es, ending: 't' }),
+  ];
 }

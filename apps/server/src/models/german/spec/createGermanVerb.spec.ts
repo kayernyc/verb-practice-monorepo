@@ -4,8 +4,7 @@ import { DataObj } from '@german/germanBuildJsonFromYml';
 describe('createVerb', () => {
   it('populates sein correctly', () => {
     const dataObj: DataObj = {
-      translations:
-        { en: 'to be' },
+      translations: { en: 'to be' },
       tags: ['hilfsverb'],
       strong: true,
       hilfsverb: 'sein',
@@ -47,8 +46,7 @@ describe('createVerb', () => {
 
   it('populates fallen correctly', () => {
     const dataObj: DataObj = {
-      translations:
-        { en: 'to fall' },
+      translations: { en: 'to fall' },
       strong: true,
       hilfsverb: 'sein',
       stems: { 'präsens du/es': 'ä', k2präsens: 'iel' },
@@ -71,8 +69,7 @@ describe('createVerb', () => {
 
   it('populates schwimmen correctly', () => {
     const dataObj: DataObj = {
-      translations:
-        { en: 'to swim' },
+      translations: { en: 'to swim' },
       hilfsverb: 'sein',
       strong: true,
       stems: { partizip: 'o', präteritum: 'a' },
@@ -121,7 +118,11 @@ describe('createVerb', () => {
     const expected = [
       'aufwaschen',
       {
-        base: 'waschen', hilfsverb: 'haben', language: 'de', particle: 'auf', translations: { en: 'to wash up' },
+        base: 'waschen',
+        hilfsverb: 'haben',
+        language: 'de',
+        particle: 'auf',
+        translations: { en: 'to wash up' },
       },
     ];
 

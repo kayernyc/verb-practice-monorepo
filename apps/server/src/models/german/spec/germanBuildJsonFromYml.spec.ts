@@ -11,9 +11,7 @@ jest.mock('./@models/shared/readYaml', () => ({
   findRelativePathToData: () => './data/',
 }));
 
-jest
-  .useFakeTimers()
-  .setSystemTime(new Date('2020-01-01'));
+jest.useFakeTimers().setSystemTime(new Date('2020-01-01'));
 
 const fileOne = `date: 15
 
@@ -155,7 +153,11 @@ bekommen:
       date: 1577836800000,
       verbs: {
         bekommen: {
-          drop: false, hilfsverb: 'haben', infinitive: 'bekommen', language: 'de', translations: { en: 'get' },
+          drop: false,
+          hilfsverb: 'haben',
+          infinitive: 'bekommen',
+          language: 'de',
+          translations: { en: 'get' },
         },
       },
     };
@@ -206,7 +208,11 @@ bekommen:
       date: 1577836800000,
       verbs: {
         bekommen: {
-          drop: false, hilfsverb: 'haben', infinitive: 'bekommen', language: 'de', translations: { en: 'get' },
+          drop: false,
+          hilfsverb: 'haben',
+          infinitive: 'bekommen',
+          language: 'de',
+          translations: { en: 'get' },
         },
       },
     };
@@ -289,7 +295,11 @@ bekommen:
       date: 1577836800000,
       verbs: {
         bekommen: {
-          drop: false, hilfsverb: 'haben', infinitive: 'bekommen', language: 'de', translations: { en: 'get' },
+          drop: false,
+          hilfsverb: 'haben',
+          infinitive: 'bekommen',
+          language: 'de',
+          translations: { en: 'get' },
         },
       },
     };

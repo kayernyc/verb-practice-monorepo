@@ -7,7 +7,10 @@ describe('Regular Partizip Conjugation', () => {
   });
 
   it('conjugates the partizip of studieren correctly.', () => {
-    const result = regularPartizipConjugation({ infinitive: 'studieren', infinitiveStem: 'studier' });
+    const result = regularPartizipConjugation({
+      infinitive: 'studieren',
+      infinitiveStem: 'studier',
+    });
     expect(result).toBe('studiert');
   });
 

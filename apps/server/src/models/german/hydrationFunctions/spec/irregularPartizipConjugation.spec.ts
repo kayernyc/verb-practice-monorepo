@@ -103,7 +103,10 @@ describe('irregularPartizipConjugation handles irregulars', () => {
     const stem = generateStems(config);
 
     const partizip = irregularPartizipConjugation({
-      stem, partizip: 'a', infinitive: 'brennen', weakEndings: true,
+      stem,
+      partizip: 'a',
+      infinitive: 'brennen',
+      weakEndings: true,
     });
     expect(partizip).toEqual('gebrannt');
   });

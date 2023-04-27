@@ -4,8 +4,7 @@ import verbIsIrregular from '../verbIsIrregular';
 describe('verbIsIrregular correctly determines the state of the verb', () => {
   it('flags fallen as not irregular', () => {
     const fallenObj: DataObj = {
-      translations:
-        { en: 'to fall' },
+      translations: { en: 'to fall' },
     };
     const result = verbIsIrregular(fallenObj);
     expect(result).not.toBeTruthy();
@@ -13,8 +12,7 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
 
   it('flags sein as irregular', () => {
     const fallenObj: DataObj = {
-      translations:
-        { en: 'to be' },
+      translations: { en: 'to be' },
       tags: ['hilfsverb'],
       hilfsverb: 'sein',
       partizip: 'gewesen',
@@ -22,7 +20,11 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
       stems: { präteritum: 'war' },
       irregular: {
         präsens: {
-          ich: 'bin', du: 'bist', es: 'ist', wir: 'sind', ihr: 'seid',
+          ich: 'bin',
+          du: 'bist',
+          es: 'ist',
+          wir: 'sind',
+          ihr: 'seid',
         },
       },
       'weak endings': false,

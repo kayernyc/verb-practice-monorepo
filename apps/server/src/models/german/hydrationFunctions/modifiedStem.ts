@@ -1,7 +1,12 @@
-export default function modifiedStem(
-  { stem, irregularStem }: { stem: string, irregularStem: string },
-): string {
-  const irregularStemRegex = /\b(?<firstConst>[bcdfghjklmnpqrstvwxyzß]*)(?<vowelGroup>[aeiouäöü]*)(?<secondConst>[bcdfghjklmnpqrstvwxyzß]*)\b/;
+export default function modifiedStem({
+  stem,
+  irregularStem,
+}: {
+  stem: string;
+  irregularStem: string;
+}): string {
+  const irregularStemRegex =
+    /\b(?<firstConst>[bcdfghjklmnpqrstvwxyzß]*)(?<vowelGroup>[aeiouäöü]*)(?<secondConst>[bcdfghjklmnpqrstvwxyzß]*)\b/;
 
   const {
     groups: {
@@ -12,16 +17,14 @@ export default function modifiedStem(
   } = irregularStemRegex.exec(irregularStem);
 
   const {
-    groups: {
-      firstConst,
-      vowelGroup,
-      secondConst,
-    },
+    groups: { firstConst, vowelGroup, secondConst },
   } = irregularStemRegex.exec(stem);
 
   if (irregularStemFirstConst && !irregularStemVowelGroup) {
     return `${firstConst || ''}${vowelGroup}${irregularStemFirstConst}`;
   }
 
-  return `${irregularStemFirstConst || firstConst || ''}${irregularStemVowelGroup || vowelGroup || ''}${irregularStemSecondGroup || secondConst || ''}`;
+  return `${irregularStemFirstConst || firstConst || ''}${
+    irregularStemVowelGroup || vowelGroup || ''
+  }${irregularStemSecondGroup || secondConst || ''}`;
 }

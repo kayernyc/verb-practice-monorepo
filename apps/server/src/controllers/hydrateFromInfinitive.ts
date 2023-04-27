@@ -1,6 +1,4 @@
-import {
-  Request, Response,
-} from 'express';
+import { Request, Response } from 'express';
 
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 type PronounMappingFunction = (bitwisePerson: number) => string;

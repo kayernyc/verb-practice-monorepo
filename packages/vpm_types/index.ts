@@ -5,5 +5,5 @@ import * as EnglishTypes from './englishTypes';
 export const VPM_Types = {
   JsonTypes,
   EnglishConstants,
-  EnglishTypes
-}
+  EnglishTypes,
+};

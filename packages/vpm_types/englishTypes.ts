@@ -3,15 +3,10 @@ import { GrammaticalNumber, GrammaticalPerson } from './languageTypes';
 
 export const EnglishPronounKeys: { [key: string]: number } = {
   i: GrammaticalPerson.First.valueOf() + GrammaticalNumber.Singular.valueOf(),
-  you:
-    GrammaticalPerson.Second.valueOf(),
-  it:
-    GrammaticalPerson.Third.valueOf()
-    + GrammaticalNumber.Singular.valueOf(),
+  you: GrammaticalPerson.Second.valueOf(),
+  it: GrammaticalPerson.Third.valueOf() + GrammaticalNumber.Singular.valueOf(),
   we: GrammaticalPerson.First.valueOf() + GrammaticalNumber.Plural.valueOf(),
-  they:
-    GrammaticalPerson.Third.valueOf()
-    + GrammaticalNumber.Plural.valueOf(),
+  they: GrammaticalPerson.Third.valueOf() + GrammaticalNumber.Plural.valueOf(),
 };
 
 export enum EnglishTenses {
@@ -20,8 +15,8 @@ export enum EnglishTenses {
 }
 
 export type EnglishIrregularObject = {
-  [key in EnglishTenses]?: string | string[] | { EnglishPronounKeys?: string }
-}
+  [key in EnglishTenses]?: string | string[] | { EnglishPronounKeys?: string };
+};
 
 export type EnglishVerb = {
   language: LanguageMap | string;

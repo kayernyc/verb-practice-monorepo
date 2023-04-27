@@ -4,18 +4,18 @@ import { GermanTenses, GermanVerbHydrated } from '@german/germanTypes';
 const tenses: string[] = Object.keys(GermanTenses);
 
 interface PronounHydration {
-  subjectPronoun: string,
-  verbConjugation: string,
+  subjectPronoun: string;
+  verbConjugation: string;
 }
 
 interface ReturnJson {
-  language: string,
-  hilfsverb: string,
-  infinitive: string,
-  partizip: string,
+  language: string;
+  hilfsverb: string;
+  infinitive: string;
+  partizip: string;
   GermanTenses?: {
     [keyName: number]: PronounHydration;
-  }
+  };
 }
 
 const germanAddPronounStringsToJson = (sourceJson: GermanVerbHydrated): ReturnJson => {

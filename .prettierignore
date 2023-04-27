@@ -4,6 +4,7 @@
 /coverage
 /build
 /coverage
+*.d.ts
 
 # Ignore all HTML files:
 *.html
