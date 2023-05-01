@@ -13,6 +13,7 @@ dotenv.config();
 
 type JsonRecord = {
   date: number;
+  [key: string]: unknown;
 };
 
 export function readYamls<T>(
@@ -38,24 +39,26 @@ export function readYamls<T>(
       return processedData;
     })
     .forEach((record: unknown) => {
-      let currentDate = 0;
-      const keys = Object.keys(record);
-      const dateSource = record as JsonRecord;
-      if (dateSource) {
-        currentDate = dateSource.date || 0;
-      }
-      keys.forEach((key: string) => {
-        if (key !== 'date' && typeGuard(record[key])) {
-          const verb = record[key] as T;
-          if (keyDict[key] === undefined) {
-            keyDict[key] = currentDate;
-            allRecords[key] = verb;
-          } else if (keyDict[key] < currentDate) {
-            keyDict[key] = currentDate;
-            allRecords[key] = verb;
-          }
+      if (record !== null && typeof record === 'object') {
+        let currentDate = 0;
+        const keys: string[] = Object.keys(record);
+        const dateSource = record as JsonRecord;
+        if (dateSource) {
+          currentDate = dateSource.date || 0;
         }
-      });
+        keys.forEach((key: string) => {
+          if (key !== 'date' && typeGuard(dateSource[key])) {
+            const verb = dateSource[key] as T;
+            if (keyDict[key] === undefined) {
+              keyDict[key] = currentDate;
+              allRecords[key] = verb;
+            } else if (keyDict[key] < currentDate) {
+              keyDict[key] = currentDate;
+              allRecords[key] = verb;
+            }
+          }
+        });
+      }
     });
 
   return allRecords;

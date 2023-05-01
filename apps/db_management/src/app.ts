@@ -1,10 +1,10 @@
 import * as dotenv from 'dotenv'; // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
-import express from 'express';
+import express, { Application } from 'express';
 import cors from 'cors';
 
 dotenv.config();
 
-const app = express();
+const app: Application = express();
 
 app.use(express.json()); // to support JSON-encoded bodies
 app.use(cors());

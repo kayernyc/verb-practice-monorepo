@@ -6,12 +6,12 @@ export interface LanguageMap {
 
 export interface GermanVerbDictionary {
   [key: string]: {
-    drop?: boolean,
-    hilfsverb: string,
-    infinitive?: string,
-    language: string | LanguageMap,
-    strong?: [string: boolean] | boolean,
-    translations: LanguageMap,
+    drop?: boolean;
+    hilfsverb: string;
+    infinitive?: string;
+    language: string | LanguageMap;
+    strong?: [string: boolean] | boolean;
+    translations: LanguageMap;
   };
 }
 

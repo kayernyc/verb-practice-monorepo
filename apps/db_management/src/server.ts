@@ -1,4 +1,4 @@
-import * as dotenv from 'dotenv'; // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
+import * as dotenv from 'dotenv'; 
 import mongoose from 'mongoose';
 
 import app from './app.js';
@@ -8,6 +8,7 @@ dotenv.config();
 let server: unknown;
 const port = 3030;
 
+if (process.env.DB_URL) {
 mongoose
   .connect(process.env.DB_URL)
   .then(() => {
@@ -21,3 +22,7 @@ mongoose
     console.log('Unable to connect to MongoDB Atlas!');
     console.error(error);
   });
+}
+
+console.log(process.env.DB_URL)
+

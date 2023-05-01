@@ -2,9 +2,12 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "baseUrl": "./",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "outDir": "./dist",
     "rootDir": "./src",
     "resolveJsonModule": true,
-    "outDir": "./"
+    "target": "ES5"
   },
   "include": ["./src"]
 }

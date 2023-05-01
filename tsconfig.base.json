@@ -16,22 +16,13 @@
     "sourceMap": true,
     "target": "es2017",
     "lib": [
+      "ES6",
       "es2017",
       "dom"
     ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-    "paths": {
-      "@english/*": [
-        "shared-types/english/*"
-      ],
-      "@global/*": [
-        "shared-types/global-types/*"
-      ],
-      "@vpm": [
-        "packages/vpm_types/index.ts"
-      ]
-    }
+    "strict": true
   },
   "exclude": [
     "node_modules",
