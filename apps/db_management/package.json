@@ -1,6 +1,5 @@
 {
   "name": "db_management",
-  "type": "module",
   "version": "1.0.0",
   "description": "",
   "main": "src/server.ts",

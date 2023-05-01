@@ -1,7 +1,7 @@
 import * as dotenv from 'dotenv'; 
 import mongoose from 'mongoose';
 
-import app from './app.js';
+import app from './app';
 
 dotenv.config();
 
@@ -25,4 +25,5 @@ mongoose
 }
 
 console.log(process.env.DB_URL)
+console.log('blah')
 
