@@ -1,12 +1,13 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
+    "baseUrl": "./",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "outDir": "./dist",
     "rootDir": "./src",
-    "outDir": "../../dist/db_management",
     "resolveJsonModule": true,
+    "target": "ES2018"
   },
-  "references": [
-    { "path": "../../shared-types/global-types/tsconfig.json"},
-    { "path": "../../packages/vpm_types"}
-  ]
+  "include": ["./src"]
 }

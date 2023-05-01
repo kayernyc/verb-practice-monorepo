@@ -1,11 +1,11 @@
 import { SeperableGermanParticles } from './germanConstants';
-import { LanguageMap } from './jsonTypes';
+import { LanguageMap } from '@global/jsonTypes';
 import {
   GrammaticalFormal,
   GrammaticalGender,
   GrammaticalNumber,
   GrammaticalPerson,
-} from './languageTypes';
+} from '@global/languageTypes';
 
 export enum GermanTenses {
   präsens = 'präsens', // present
