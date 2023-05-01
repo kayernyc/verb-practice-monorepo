@@ -14,10 +14,10 @@
     "noEmit": false,
     "rootDir": ".",
     "sourceMap": true,
-    "target": "es2017",
+    "target": "ES2018",
     "lib": [
       "ES6",
-      "es2017",
+      "ES2018",
       "dom"
     ],
     "skipLibCheck": true,
