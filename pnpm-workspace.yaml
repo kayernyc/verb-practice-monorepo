@@ -1,5 +1,5 @@
 packages:
-  - 'apps/**'
-  - 'packages/**'
-  - 'test/**'
-  - 'shared_types/**'
+  - 'apps/*'
+  - 'packages/*'
+  - 'test/*'
+  - 'shared-types/*'

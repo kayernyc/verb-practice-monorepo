@@ -13,9 +13,10 @@
     "build": {
       "executor": "@nrwl/js:tsc",
       "dependsOn": ["^build"],
-      "outputs": ["{options.outputPath}"],
+      "outputs": ["dist"],
       "options": {
-        "outputPath": "dist"
+        "packageJson": "./package.json",
+        "externalDependencies": "none"
       }
     },
     "test:unit": {

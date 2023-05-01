@@ -7,18 +7,26 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc && tsc-alias",
-    "run": "node ./dist/index.js"
+    "postbuild": "echo \"starting\" && exit 1",
+    "run": "node ./dist/index.js",
+    "dev:server": "tsc -w & tsc-alias -w & node ../../dist/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.17.1",
     "js-yaml": "^4.1.0",
     "module-alias": "^2.2.2",
+    "mongoose": "^6.5.4",
     "vpm_types": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^18.15.11",
+    "global-types": "workspace:*",
+    "mock-fs": "^5.1.4",
     "ts-node": "^10.9.1",
     "tsc-alias": "^1.8.5",
     "tsc-watch": "^6.0.0",

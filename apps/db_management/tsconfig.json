@@ -2,8 +2,7 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "rootDir": "./src",
-    "outDir": "../../dist/db_management",
-    "resolveJsonModule": true,
+    "resolveJsonModule": true
   },
   "references": [
     { "path": "../../shared-types/global-types/tsconfig.json"},
