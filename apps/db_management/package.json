@@ -20,8 +20,7 @@
     "express": "^4.17.1",
     "js-yaml": "^4.1.0",
     "module-alias": "^2.2.2",
-    "mongoose": "^6.5.4",
-    "vpm_types": "workspace:*"
+    "mongoose": "^6.5.4"
   },
   "devDependencies": {
     "@types/node": "^18.15.11",

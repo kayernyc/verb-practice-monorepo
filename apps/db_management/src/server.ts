@@ -2,7 +2,6 @@ import * as dotenv from 'dotenv'; // see https://github.com/motdotla/dotenv#how-
 import mongoose from 'mongoose';
 
 import app from './app.js';
-import { GrammaticalPerson } from 'vpm_types/languageTypes.js';
 
 dotenv.config();
 

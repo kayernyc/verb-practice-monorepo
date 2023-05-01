@@ -1,1 +1,2 @@
-export const GlobalTypes = {};
+export * from './jsonTypes';
+export * from './languageTypes';

@@ -1,7 +1,6 @@
 {
   "extends": "../../tsconfig.base.json",
   "references": [
-    { "path": "../global-types/tsconfig.json"},
-    { "path": "../../packages/vpm_types"}
+    { "path": "../global-types/tsconfig.json"}
   ]
 }

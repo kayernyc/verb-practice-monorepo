@@ -1,11 +1,10 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
+    "baseUrl": "./",
     "rootDir": "./src",
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "outDir": "./"
   },
-  "references": [
-    { "path": "../../shared-types/global-types/tsconfig.json"},
-    { "path": "../../packages/vpm_types"}
-  ]
+  "include": ["./src"]
 }
