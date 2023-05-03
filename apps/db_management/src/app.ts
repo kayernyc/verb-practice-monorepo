@@ -2,7 +2,6 @@ import * as dotenv from 'dotenv'; // see https://github.com/motdotla/dotenv#how-
 import express, { Application } from 'express';
 import cors from 'cors';
 
-dotenv.config();
 process.env.APP_ROOT = __dirname;
 
 export const createApp = async (): Promise<Application> => {

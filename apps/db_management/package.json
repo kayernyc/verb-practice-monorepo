@@ -6,10 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "sh scripts/copy-data.sh && tsc && tsc-alias",
-    "postbuild": "echo \"here!!!!\" & exit 0",
     "run": "node ./dist/server.js",
     "dev:server": "tsc -w & tsc-alias -w && node ./dist/server.js",
-    "populate": "POPULATE=true && pnpm build"
   },
   "keywords": [],
   "author": "",

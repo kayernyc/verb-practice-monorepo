@@ -1,12 +1,7 @@
-import { Request, Response } from 'express';
 import fs from 'fs';
 import path from 'path';
 import yaml from 'js-yaml';
 import { findRelativePathToData } from '@utilities/buildFromYml/readYaml';
-import * as dotenv from 'dotenv';
-// import { LanguageMap } from 'global-types';
-
-dotenv.config();
 
 type LanguageMap = 'en' | 'fr' | 'de';
 
