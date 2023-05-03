@@ -34,12 +34,13 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+*.js.map
 
 # System Files
 .DS_Store
 Thumbs.db
-# Logs
 
+# Logs
 logs
 _.log
 npm-debug.log_

@@ -125,6 +125,9 @@ importers:
       express:
         specifier: ^4.17.1
         version: 4.17.1
+      german-types:
+        specifier: workspace:1.0.0-beta.1
+        version: link:../../shared-types/german-types
       js-yaml:
         specifier: ^4.1.0
         version: 4.1.0
@@ -274,7 +277,29 @@ importers:
         specifier: workspace:*
         version: link:../sum-one
 
+  shared-types/english-types:
+    devDependencies:
+      '@types/node':
+        specifier: ^18.15.11
+        version: 18.15.11
+      ts-node:
+        specifier: ^10.9.1
+        version: 10.9.1(@types/node@18.15.11)(typescript@4.9.5)
+      tsc-alias:
+        specifier: ^1.8.5
+        version: 1.8.5
+      tsc-watch:
+        specifier: ^6.0.0
+        version: 6.0.0(typescript@4.9.5)
+      typescript:
+        specifier: ^4.4.2
+        version: 4.9.5
+
   shared-types/german-types:
+    dependencies:
+      global-types:
+        specifier: workspace:*
+        version: link:../global-types
     devDependencies:
       '@types/node':
         specifier: ^18.15.11

@@ -1,8 +1,8 @@
-export interface LanguageMap {
-  de?: string | string[];
-  en?: string | string[];
-  fr?: string | string[];
-}
+export enum LanguageMap {
+  'en' = 'en',
+  'fr' = 'fr',
+  'de' = 'de'
+};
 
 export interface GermanVerbDictionary {
   [key: string]: {

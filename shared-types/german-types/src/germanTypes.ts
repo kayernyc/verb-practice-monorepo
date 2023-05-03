@@ -1,11 +1,12 @@
 import { SeperableGermanParticles } from './germanConstants';
-import { LanguageMap } from '@global/jsonTypes';
 import {
   GrammaticalFormal,
   GrammaticalGender,
   GrammaticalNumber,
   GrammaticalPerson,
-} from '@global/languageTypes';
+  LanguageMap,
+  LanguageVerbBase
+} from 'global-types';
 
 export enum GermanTenses {
   präsens = 'präsens', // present
@@ -95,6 +96,7 @@ export type GermanVerb = {
   stems?: { [key in GermanStems]?: string };
   strong?: [string: boolean] | boolean;
   translations: LanguageMap;
+  variations?: Array<GermanVerb | {definition: string}>;
   weakEndings?: boolean;
 };
 
@@ -113,6 +115,10 @@ const validKeys = [
 
 export const GermanVerbTypeGuard = (x: object): x is GermanVerb => {
   let returnValue = true;
+  
+  if ('language' in x && (x.language !== 'de')) {
+    return false;
+  }
 
   const xKeys = Object.keys(x);
   xKeys.forEach((key: string) => {

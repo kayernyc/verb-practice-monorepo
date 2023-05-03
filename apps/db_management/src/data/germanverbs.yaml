@@ -2,6 +2,7 @@ dateKey: 1630934144867
 
 haben:
   language: de
+  infinitive: haben
   translations:
     en: have
   tags:
@@ -15,6 +16,7 @@ haben:
 
 sein:
   language: de
+  infinitive: sein
   translations:
     en: be
   tags:
@@ -35,6 +37,7 @@ sein:
 
 werden:
   language: de
+  infinitive: werden
   translations:
     en: become, to grow
   tags:
@@ -54,6 +57,7 @@ werden:
 
 können:
   language: de
+  infinitive: können
   translations:
     en: [can, may, are able to, to know how]
   tags:
@@ -67,6 +71,7 @@ können:
 
 müssen:
   language: de
+  infinitive: müssen
   translations:
     en: have
   tags:
@@ -80,6 +85,7 @@ müssen:
 
 wollen:
   language: de
+  infinitive: wollen
   translations:
     en: want
   tags:
@@ -90,6 +96,7 @@ wollen:
 
 sollen:
   language: de
+  infinitive: sollen
   translations:
     en: be expected
   tags:
@@ -98,6 +105,7 @@ sollen:
 
 dürfen:
   language: de
+  infinitive: dürfen
   translations:
     en: [be authorized, must]
   tags:
@@ -112,6 +120,7 @@ dürfen:
 
 mögen:
   language: de
+  infinitive: mögen
   translations:
     en: like
   tags:
@@ -125,6 +134,7 @@ mögen:
 
 wissen:
   language: de
+  infinitive: wissen
   translations:
     en: know
   strong:
@@ -136,6 +146,7 @@ wissen:
 
 heißen:
   language: de
+  infinitive: heißen
   translations:
     en: be called
   strong:
@@ -145,6 +156,7 @@ heißen:
 
 lassen:
   language: de
+  infinitive: lassen
   translations:
     en: let
   strong:
@@ -155,6 +167,7 @@ lassen:
 
 gehen:
   language: de
+  infinitive: gehen
   translations:
     en: go
   strong:
@@ -166,6 +179,7 @@ gehen:
 
 laufen:
   language: de
+  infinitive: laufen
   translations:
     en: run
   hilfsverb: sein
@@ -177,6 +191,7 @@ laufen:
 
 schreiben:
   language: de
+  infinitive: schreiben
   translations:
     en: write
   strong:
@@ -187,12 +202,14 @@ schreiben:
 
 folgen:
   language: de
+  infinitive: folgen
   translations:
     en: follow
   hilfsverb: sein
 
 greifen:
   language: de
+  infinitive: greifen
   translations:
     en: grasp, grab
   strong:
@@ -203,6 +220,7 @@ greifen:
 
 pfeifen:
   language: de
+  infinitive: pfeifen
   translations:
     en: whistle
   strong:
@@ -213,6 +231,7 @@ pfeifen:
 
 schreien:
   language: de
+  infinitive: schreien
   translations:
     en: [cry out, scream]
   strong:
@@ -225,6 +244,7 @@ schreien:
 
 gelingen:
   language: de
+  infinitive: gelingen
   translations:
     en: succeed
   hilfsverb: sein
@@ -235,6 +255,7 @@ gelingen:
 
 gebären:
   language: de
+  infinitive: gebären
   translations:
     en: give birth
   strong: true
@@ -244,6 +265,7 @@ gebären:
 
 beraten:
   language: de
+  infinitive: beraten
   translations:
     en: [advise, discuss]
 
@@ -251,6 +273,7 @@ beraten:
 
 hängen:
   language: de
+  infinitive: hängen
   translations:
     en: hang
   strong:
@@ -261,6 +284,7 @@ hängen:
 
 leiden:
   language: de
+  infinitive: leiden
   translations:
     en: suffer
   strong:
@@ -271,6 +295,7 @@ leiden:
 
 halten:
   language: de
+  infinitive: halten
   translations:
     en: [hold, keep]
   strong:
@@ -281,6 +306,7 @@ halten:
 
 schlafen:
   language: de
+  infinitive: schlafen
   translations:
     en: sleep
   strong:
@@ -291,121 +317,145 @@ schlafen:
 
 sagen:
   language: de
+  infinitive: sagen
   translations:
     en: say
 
 spielen:
   language: de
+  infinitive: spielen
   translations:
     en: play
 
 machen:
   language: de
+  infinitive: machen
   translations:
     en: make
 
 fragen:
   language: de
+  infinitive: fragen
   translations:
     en: ask
 
 glauben:
   language: de
+  infinitive: glauben
   translations:
     en: [believe, reckon]
 
 leben:
   language: de
+  infinitive: leben
   translations:
     en: live
 
 lernen:
   language: de
+  infinitive: lernen
   translations:
     en: learn
 
 reden:
   language: de
+  infinitive: reden
   translations:
     en: speak
 
 bedeuten:
   language: de
+  infinitive: bedeuten
   translations:
     en: mean
 
 gehören:
   language: de
+  infinitive: gehören
   translations:
     en: belong
 
 kaufen:
   language: de
+  infinitive: kaufen
   translations:
     en: buy
 
 schmecken:
   language: de
+  infinitive: schmecken
   translations:
     en: taste
 
 warten:
   language: de
+  infinitive: warten
   translations:
     en: wait
 
 wohnen:
   language: de
+  infinitive: wohnen
   translations:
     en: [live (somewhere), inhabit]
 
 arbeiten:
   language: de
+  infinitive: arbeiten
   translations:
     en: work
 
 brauchen:
   language: de
+  infinitive: brauchen
   translations:
     en: need
 
 setzen:
   language: de
+  infinitive:
   translations:
     en: [put, set]
 
 suchen:
   language: de
+  infinitive: suchen
   translations:
     en: search
 
 versuchen:
   language: de
+  infinitive: versuchen
   translations:
     en: [attempt, try]
 
 bauen:
   language: de
+  infinitive: bauen
   translations:
     en: build
 
 tagen:
   language: de
+  infinitive: tagen
   translations:
     en: meet
 
 deuten:
   language: de
+  infinitive: deuten
   translations:
     en: [construe, interpret]
 
 hören:
   language: de
+  infinitive: hören
   translations:
     en: [hear, listen]
 
 fallen:
   language: de
+  infinitive: fallen
   translations:
     en: fall
   strong:
@@ -417,11 +467,13 @@ fallen:
 
 zerfallen:
   language: de
+  infinitive: zerfallen
   translations:
     en: fall to pieces
 
 fangen:
   language: de
+  infinitive: fangen
   translations:
     en: catch
   strong:
@@ -432,6 +484,7 @@ fangen:
 
 braten:
   language: de
+  infinitive: braten
   translations:
     en: fry
   strong:
@@ -442,6 +495,7 @@ braten:
 
 raten:
   language: de
+  infinitive: raten
   translations:
     en: [guess, advise]
   strong:
@@ -455,6 +509,7 @@ raten:
 
 fahren:
   language: de
+  infinitive: fahren
   translations:
     en: [drive, ride]
   strong:
@@ -465,6 +520,7 @@ fahren:
 
 graben:
   language: de
+  infinitive: graben
   translations:
     en: dig
   strong:
@@ -474,6 +530,7 @@ graben:
 
 schlagen:
   language: de
+  infinitive: schlagen
   translations:
     en: [strike, bash, hit, beat]
   strong:
@@ -483,6 +540,7 @@ schlagen:
 
 waschen:
   language: de
+  infinitive: waschen
   translations:
     en: wash
   strong:
@@ -492,6 +550,7 @@ waschen:
 
 wachsen:
   language: de
+  infinitive: wachsen
   translations:
     en: grow
   hilfsverb: sein
@@ -502,6 +561,7 @@ wachsen:
 
 tragen:
   language: de
+  infinitive: tragen
   translations:
     en: [carry, wear]
   strong:
@@ -511,6 +571,7 @@ tragen:
 
 laden:
   language: de
+  infinitive: laden
   translations:
     en: load
   strong:
@@ -523,6 +584,7 @@ laden:
 
 liegen:
   language: de
+  infinitive: liegen
   translations:
     en: lie
   strong:
@@ -532,6 +594,7 @@ liegen:
 
 bitten:
   language: de
+  infinitive: bitten
   translations:
     en: ask for
   strong:
@@ -541,6 +604,7 @@ bitten:
 
 sitzen:
   language: de
+  infinitive: sitzen
   translations:
     en: sit
   strong:
@@ -550,6 +614,7 @@ sitzen:
 
 geben:
   language: de
+  infinitive: geben
   translations:
     en: give
   strong:
@@ -559,6 +624,7 @@ geben:
 
 lesen:
   language: de
+  infinitive: lesen
   translations:
     en: read
   strong:
@@ -568,6 +634,7 @@ lesen:
 
 treten:
   language: de
+  infinitive: treten
   translations:
     en: kick
   strong:
@@ -577,6 +644,7 @@ treten:
 
 essen:
   language: de
+  infinitive: essen
   translations:
     en: eat
   strong:
@@ -587,6 +655,7 @@ essen:
 
 sehen:
   language: de
+  infinitive: sehen
   translations:
     en: see
   strong:
@@ -596,6 +665,7 @@ sehen:
 
 geschehen:
   language: de
+  infinitive: geschehen
   translations:
     en: happen
   hilfsverb: sein
@@ -609,6 +679,7 @@ geschehen:
 
 fliegen:
   language: de
+  infinitive: fliegen
   translations:
     en: fly
   hilfsverb: sein
@@ -619,6 +690,7 @@ fliegen:
 
 fliehen:
   language: de
+  infinitive: fliehen
   translations:
     en: flee
   hilfsverb: sein
@@ -629,6 +701,7 @@ fliehen:
 
 fließen:
   language: de
+  infinitive: fließen
   translations:
     en: flow
   hilfsverb: sein
@@ -639,6 +712,7 @@ fließen:
 
 frieren:
   language: de
+  infinitive: frieren
   translations:
     en: freeze
   hilfsverb: sein
@@ -649,6 +723,7 @@ frieren:
 
 biegen:
   language: de
+  infinitive: biegen
   translations:
     en: bend
   strong:
@@ -658,6 +733,7 @@ biegen:
 
 bieten:
   language: de
+  infinitive: bieten
   translations:
     en: offer
   strong:
@@ -667,6 +743,7 @@ bieten:
 
 ziehen:
   language: de
+  infinitive: ziehen
   translations:
     en: pull
   strong:
@@ -676,11 +753,13 @@ ziehen:
 
 wiegen:
   language: de
+  infinitive: wiegen
   translations:
     en: weigh
 
 gießen:
   language: de
+  infinitive: gießen
   translations:
     en: pour
   strong:
@@ -690,6 +769,7 @@ gießen:
 
 riechen:
   language: de
+  infinitive: riechen
   translations:
     en: smell
   strong:
@@ -699,6 +779,7 @@ riechen:
 
 schieben:
   language: de
+  infinitive: schieben
   translations:
     en: push
   strong:
@@ -708,6 +789,7 @@ schieben:
 
 schießen:
   language: de
+  infinitive: schießen
   translations:
     en: shoot
   strong:
@@ -717,6 +799,7 @@ schießen:
 
 schließen:
   language: de
+  infinitive: schließen
   translations:
     en: close
   strong:
@@ -726,6 +809,7 @@ schließen:
 
 heben:
   language: de
+  infinitive: heben
   translations:
     en: lift
   strong:
@@ -735,6 +819,7 @@ heben:
 
 saufen:
   language: de
+  infinitive: saufen
   translations:
     en: guzzle
   strong:
@@ -745,6 +830,7 @@ saufen:
 
 lügen:
   language: de
+  infinitive: lügen
   translations:
     en: lie
   strong:
@@ -754,6 +840,7 @@ lügen:
 
 schmelzen:
   language: de
+  infinitive: schmelzen
   translations:
     en: melt
   hilfsverb: sein
@@ -765,6 +852,7 @@ schmelzen:
 
 genießen:
   language: de
+  infinitive: genießen
   translations:
     en: enjoy
   strong:
@@ -774,6 +862,7 @@ genießen:
 
 verlieren:
   language: de
+  infinitive: verlieren
   translations:
     en: lose
   strong:
@@ -786,6 +875,7 @@ verlieren:
 
 bleiben:
   language: de
+  infinitive: bleiben
   translations:
     en: remain, stay
   strong:
@@ -797,6 +887,7 @@ bleiben:
 
 reiben:
   language: de
+  infinitive: reiben
   translations:
     en: rub
   strong:
@@ -807,6 +898,7 @@ reiben:
 
 gleiten:
   language: de
+  infinitive: gleiten
   translations:
     en: glide
   hilfsverb: sein
@@ -818,6 +910,7 @@ gleiten:
 
 reiten:
   language: de
+  infinitive: reiten
   translations:
     en: ride
   strong:
@@ -828,6 +921,7 @@ reiten:
 
 reißen:
   language: de
+  infinitive: reißen
   translations:
     en: tear
   strong:
@@ -838,6 +932,7 @@ reißen:
 
 beißen:
   language: de
+  infinitive: beißen
   translations:
     en: bite
   strong:
@@ -848,6 +943,7 @@ beißen:
 
 scheißen:
   language: de
+  infinitive: scheißen
   translations:
     en: shit
   strong:
@@ -858,6 +954,7 @@ scheißen:
 
 leihen:
   language: de
+  infinitive: leihen
   translations:
     en: lend, borrow
   strong:
@@ -868,6 +965,7 @@ leihen:
 
 scheinen:
   language: de
+  infinitive: scheinen
   translations:
     en: shine, seem
   strong:
@@ -878,6 +976,7 @@ scheinen:
 
 meiden:
   language: de
+  infinitive: meiden
   translations:
     en: avoid
   strong:
@@ -888,6 +987,7 @@ meiden:
 
 steigen:
   language: de
+  infinitive: steigen
   translations:
     en: rise
   hilfsverb: sein
@@ -899,6 +999,7 @@ steigen:
 
 verzeihen:
   language: de
+  infinitive: verzeihen
   translations:
     en: forgive
   strong:
@@ -912,6 +1013,7 @@ verzeihen:
 
 beginnen:
   language: de
+  infinitive: beginnen
   translations:
     en: begin
   strong:
@@ -921,6 +1023,7 @@ beginnen:
 
 kommen:
   language: de
+  infinitive: kommen
   translations:
     en: come
   hilfsverb: sein
@@ -930,6 +1033,7 @@ kommen:
 
 nehmen:
   language: de
+  infinitive: nehmen
   translations:
     en: take
   strong:
@@ -940,6 +1044,7 @@ nehmen:
 
 sterben:
   language: de
+  infinitive: sterben
   translations:
     en: die
   hilfsverb: sein
@@ -951,6 +1056,7 @@ sterben:
 
 brechen:
   language: de
+  infinitive: brechen
   translations:
     en: break
   strong:
@@ -961,6 +1067,7 @@ brechen:
 
 helfen:
   language: de
+  infinitive: helfen
   translations:
     en: help
   strong:
@@ -971,6 +1078,7 @@ helfen:
 
 sprechen:
   language: de
+  infinitive: sprechen
   translations:
     en: speak
   strong:
@@ -981,6 +1089,7 @@ sprechen:
 
 stechen:
   language: de
+  infinitive: stechen
   translations:
     en: [stab, sting, jab]
   strong:
@@ -991,6 +1100,7 @@ stechen:
 
 stehlen:
   language: de
+  infinitive: stehlen
   translations:
     en: steal
   strong:
@@ -1001,6 +1111,7 @@ stehlen:
 
 treffen:
   language: de
+  infinitive: treffen
   translations:
     en:[ meet, hit, strike]
   strong:
@@ -1011,6 +1122,7 @@ treffen:
 
 werfen:
   language: de
+  infinitive: werfen
   translations:
     en: throw
   strong:
@@ -1022,6 +1134,7 @@ werfen:
 
 schwimmen:
   language: de
+  infinitive: schwimmen
   translations:
     en: swim
   hilfsverb: sein
@@ -1032,6 +1145,7 @@ schwimmen:
 
 empfehlen:
   language: de
+  infinitive: empfehlen
   translations:
     en: recommend
   strong:
@@ -1042,6 +1156,7 @@ empfehlen:
 
 gewinnen:
   language: de
+  infinitive: gewinnen
   translations:
     en: win
   strong:
@@ -1054,6 +1169,7 @@ gewinnen:
 
 binden:
   language: de
+  infinitive: binden
   translations:
     en: bind
   strong:
@@ -1063,6 +1179,7 @@ binden:
 
 finden:
   language: de
+  infinitive: finden
   translations:
     en: find
   strong:
@@ -1072,6 +1189,7 @@ finden:
 
 trinken:
   language: de
+  infinitive: trinken
   translations:
     en: drink
   strong:
@@ -1081,6 +1199,7 @@ trinken:
 
 stinken:
   language: de
+  infinitive: stinken
   translations:
     en: stink
   strong:
@@ -1090,6 +1209,7 @@ stinken:
 
 sinken:
   language: de
+  infinitive: sinken
   translations:
     en: sink
   hilfsverb: sein
@@ -1100,6 +1220,7 @@ sinken:
 
 springen:
   language: de
+  infinitive: springen
   translations:
     en: jump
   hilfsverb: sein
@@ -1110,6 +1231,7 @@ springen:
 
 singen:
   language: de
+  infinitive: singen
   translations:
     en: sing
   strong:
@@ -1119,6 +1241,7 @@ singen:
 
 zwingen:
   language: de
+  infinitive: zwingen
   translations:
     en: force
   strong:
@@ -1131,6 +1254,7 @@ zwingen:
 
 brennen:
   language: de
+  infinitive: brennen
   translations:
     en: [burn, shine, distil]
   strong:
@@ -1142,6 +1266,7 @@ brennen:
 
 kennen:
   language: de
+  infinitive: kennen
   translations:
     en: know
   strong:
@@ -1153,6 +1278,7 @@ kennen:
 
 denken:
   language: de
+  infinitive: denken
   translations:
     en: think, guess
   strong:
@@ -1162,6 +1288,7 @@ denken:
 
 bringen:
   language: de
+  infinitive: bringen
   translations:
     en: bring, take
   strong:
@@ -1171,6 +1298,7 @@ bringen:
 
 stehen:
   language: de
+  infinitive: stehen
   translations:
     en: stand
   strong:
@@ -1180,6 +1308,7 @@ stehen:
 
 tun:
   language: de
+  infinitive: tun
   translations:
     en: do
   strong:
@@ -1189,6 +1318,7 @@ tun:
 
 rennen:
   language: de
+  infinitive: rennen
   translations:
     en: run, race
   hilfsverb: sein
@@ -1199,6 +1329,7 @@ rennen:
 
 nennen:
   language: de
+  infinitive: nennen
   translations:
     en: name
   stems:
@@ -1208,6 +1339,7 @@ nennen:
 
 wachen:
   language: de
+  infinitive: wachen
   translations:
     en: wake, picket
 
@@ -1216,37 +1348,44 @@ wachen:
 
 fehlen:
   language: de
+  infinitive: fehlen
   translations:
     en: lack, miss
 
 rutschen:
   language: de
+  infinitive: rutschen
   translations:
     en: slip, slide
   hilfsverb: sein
 
 an|bieten:
   language: de
+  infinitive: an|bieten
   translations:
     en: provide, offer
 
 an|fangen:
   language: de
+  infinitive: an|fangen
   translations:
     en: begin
 
 an|sehen:
   language: de
+  infinitive: an|sehen
   translations:
     en: inspect, view, look at, regard
 
 aus|sehen:
   language: de
+  infinitive: aus|sehen
   translations:
     en: appear
 
 bekommen:
   language: de
+  infinitive: bekommen
   translations:
     en: get
   hilfsverb: haben
@@ -1255,182 +1394,216 @@ bekommen:
 
 auf|wachen:
   language: de
+  infinitive: auf|wachen
   translations:
     en: wake up
   hilfsverb: sein
 
 auf|wachsen:
   language: de
+  infinitive: auf|wachsen
   translations:
     en: grow up
 
 auf|waschen:
   language: de
+  infinitive: auf|waschen
   translations:
     en: wash up
 
 auf|stehen:
   language: de
+  infinitive: auf|stehen
   translations:
     en: get up
   hilfsverb: sein
 
 ein|schlafen:
   language: de
+  infinitive: ein|schlafen
   translations:
     en: fall asleep
   hilfsverb: sein
 
 ein|brechen:
   language: de
+  infinitive: ein|brechen
   translations:
     en: [crack, burgle, collapse, break in, cave in]
   hilfsverb: sein
 
 er|frieren:
   language: de
+  infinitive: er|frieren
   translations:
     en: freeze to death
   hilfsverb: sein
 
 auf|steigen:
   language: de
+  infinitive: auf|steigen
   translations:
     en: [soar, ascend]
   hilfsverb: sein
 
 ab|steigen:
   language: de
+  infinitive: ab|steigen
   translations:
     en: [descend, dismount]
   hilfsverb: sein
 
 bestehen:
   language: de
+  infinitive: bestehen
   translations:
     en: [persist, insist]
 
 betreffen:
   language: de
+  infinitive: betreffen
   translations:
     en: [concern, affect]
 
 bilden:
   language: de
+  infinitive: bilden
   translations:
     en: build
 
 dar|stellen:
   language: de
+  infinitive: dar|stellen
   translations:
     en: [constitute, depict]
 
 entsprechen:
   language: de
+  infinitive: entsprechen
   translations:
     en: [match, conform]
 
 entstehen:
   language: de
+  infinitive: entstehen
   translations:
     en: [emerge, arise]
   hilfsverb: sein
 
 ergeben:
   language: de
+  infinitive: ergeben
   translations:
     en: yield
 
 erhalten:
   language: de
+  infinitive: erhalten
   translations:
     en: obtain
 
 erkennen:
   language: de
+  infinitive: erkennen
   translations:
     en: realize
 
 erklären:
   language: de
+  infinitive: erklären
   translations:
     en: [explain, declare]
 
 erreichen:
   language: de
+  infinitive: erreichen
   translations:
     en: achieve
 
 erscheinen:
   language: de
+  infinitive: erscheinen
   translations:
     en: [appear, seem]
   hilfsverb: sein
 
 erwarten:
   language: de
+  infinitive: erwarten
   translations:
     en: [expect, await]
 
 erzählen:
   language: de
+  infinitive: erzählen
   translations:
     en: [tell, narrate, feel, sense]
 
 führen:
   language: de
+  infinitive: führen
   translations:
     en: lead, guide
 
 interessieren:
   language: de
+  infinitive: interessieren
   translations:
     en: interest
   partizip: interessiert
 
 studieren:
   language: de
+  infinitive: studieren
   translations:
     en: study
   partizip: studiert
 
 legen:
   language: de
+  infinitive: legen
   translations:
     en: [put, lay]
 
 meinen:
   language: de
+  infinitive: meinen
   translations:
     en: [mean, deem]
 
 schaffen:
   language: de
+  infinitive: schaffen
   translations:
     en: [create, accomplish]
 
 scheiben:
   language: de
+  infinitive: scheiben
   translations:
     en: slice
 
 stellen:
   language: de
+  infinitive: stellen
   translations:
     en: [put, place]
 
 vor|stellen:
   language: de
+  infinitive: vor|stellen
   translations:
     en: [introduce]
 
 vergehen:
   language: de
+  infinitive: vergehen
   translations:
     en: [vanish, slide]
 
 gleichen:
   language: de
+  infinitive: gleichen
   translations:
     en: equal
   strong:
@@ -1441,36 +1614,43 @@ gleichen:
 
 vergleichen:
   language: de
+  infinitive: vergleichen
   translations:
     en: [compare, contrast]
 
 zeigen:
   language: de
+  infinitive: zeigen
   translations:
     en: exhibit, feature
 
 zu|hören:
   language: de
+  infinitive: zu|hören
   translations:
     en: listen
 
 verstehen:
   language: de
+  infinitive: verstehen
   translations:
     en: understand
 
 mißverstehen:
   language: de
+  infinitive: mißverstehen
   translations:
     en: misunderstand
 
 verbinden:
   language: de
+  infinitive: verbinden
   translations:
     en: [connect, link]
 
 gelten:
   language: de
+  infinitive: gelten
   translations:
     en: [apply, pertain]
   strong:
@@ -1481,209 +1661,250 @@ gelten:
 
 entwickeln:
   language: de
+  infinitive: entwickeln
   translations:
     en: [develop, evolve]
 
 handeln:
   language: de
+  infinitive: handeln
   translations:
     en: [deal, negotiate]
 
 erinnern:
   language: de
+  infinitive: erinnern
   translations:
     en: remember
 
 lehren:
   language: de
+  infinitive: lehren
   translations:
     en: teach
 
 kosten:
   language: de
+  infinitive: kosten
   translations:
     en: cost
 
 mit|bringen:
   language: de
+  infinitive: mit|bringen
   translations:
     en: [bring, bring along]
 
 packen:
   language: de
+  infinitive: packen
   translations:
     en: pack
 
 versprechen:
   language: de
+  infinitive:
   translations:
     en: promise
 
 vor|lesen:
   language: de
+  infinitive: vor|lesen
   translations:
     en: [read, read aloud]
 
 mit|teilen:
   language: de
+  infinitive: mit|teilen
   translations:
     en: [inform, communicate]
 
 teilen:
   language: de
+  infinitive: teilen
   translations:
     en: [share, divide]
 
 erkundigen:
   language: de
+  infinitive: erkundigen
   translations:
     en: [ask, enquire]
   sich:
 
 hoffen:
   language: de
+  infinitive: hoffen
   translations:
     en: hope
 
 planen:
   language: de
+  infinitive: planen
   translations:
     en: plan
 
 ein|atmen:
   language: de
+  infinitive: ein|atmen
   translations:
     en: breathe in, inhale
 
 atmen:
   language: de
+  infinitive: atmen
   translations:
     en: breathe
 
 verheimlichen:
   language: de
+  infinitive: verheimlichen
   translations:
     en: conceal
 
 drehen:
   language: de
+  infinitive: drehen
   translations:
     en: [spin, turn, shoot (film)]
 
 her|stellen:
   language: de
+  infinitive: her|stellen
   translations:
     en: [manufacture, produce]
 
 aus|denken:
   language: de
+  infinitive: aus|denken
   translations:
     en: invent
 
 tauchen:
   language: de
+  infinitive: tauchen
   translations:
     en: [dive, plunge]
 
 auf|tauchen:
   language: de
+  infinitive: auf|tauchen
   translations:
     en: [appear, crop up, come to light]
   hilfsverb: sein
 
 ein|richten:
   language: de
+  infinitive: ein|richten
   translations:
     en: [establish, furnish, organize]
 
 aus|sagen:
   language: de
+  infinitive: aus|sagen
   translations:
     en: [state, testify]
 
 sammeln:
   language: de
+  infinitive: sammeln
   translations:
     en: [gather, collect]
 
 wischen:
   language: de
+  infinitive: wischen
   translations:
     en: [wipe, mop]
 
 erwischen:
   language: de
+  infinitive: erwischen
   translations:
     en: [catch, seize, get hold of]
 
 bestellen:
   language: de
+  infinitive: bestellen
   translations:
     en: [order, request, comission, book]
 
 versetzen:
   language: de
+  infinitive: versetzen
   translations:
     en: [relocate, transfer, deploy, retort]
 
 auf|gehen:
   language: de
+  infinitive: auf|gehen
   translations:
     en: [rise, realise, pan out, open]
 
 schnappen:
   language: de
+  infinitive: schnappen
   translations:
     en: [snatch, grab]
 
 klettern:
   language: de
+  infinitive: klettern
   translations:
     en: climb
   hilfsverb: sein
 
 ergreifen:
   language: de
+  infinitive: ergreifen
   translations:
     en: [seize, grasp]
 
 winken:
   language: de
+  infinitive: winken
   translations:
     en: wave
 
 antworten:
   language: de
+  infinitive: antworten
   translations:
     en: [answer, reply]
 
 fassen:
   language: de
+  infinitive: fassen
   translations:
     en: [grip, catch, comprehend, understand]
 
 wackeln:
   language: de
+  infinitive: wackeln
   translations:
     en: [wobble, shake, wiggle]
 
 schauen:
   language: de
+  infinitive: schauen
   translations:
     en: [look, see]
 
 begreifen:
   language: de
+  infinitive: begreifen
   translations:
     en: understand, fathom
 
 hoch|klettern:
   language: de
+  infinitive: hoch|klettern
   translations:
     en: climb up
 
 rufen:
   language: de
+  infinitive: rufen
   translations:
     en: [call, exclaim]
   strong:
@@ -1693,71 +1914,85 @@ rufen:
 
 an|rufen:
   language: de
+  infinitive: an|rufen
   translations:
     en: [call up]
 
 runter|fallen:
   language: de
+  infinitive: runter|fallen
   translations:
     en: [go flying, tip over the edge]
 
 weinen:
   language: de
+  infinitive: weinen
   translations:
     en: cry
 
 ein|fallen:
   language: de
+  infinitive: ein|fallen
   translations:
     en: [collapse, shrink, dip, to occur to]
 
 räumen:
   language: de
+  infinitive: räumen
   translations:
     en: [vacate, clear]
 
 auf|räumen:
   language: de
+  infinitive: auf|räumen
   translations:
     en: [tidy, clear up]
 
 rein|kommen:
   language: de
+  infinitive: rein|kommen
   translations:
     en: [come in]
 
 verstecken:
   language: de
+  infinitive: verstecken
   translations:
     en: [hide, conceal, stash]
 
 stottern:
   language: de
+  infinitive: stottern
   translations:
     en: [stammer, stutter]
 
 über|legen:
   language: de
+  infinitive:
   translations:
     en: [consider, deliberate, think]
 
 enthalten:
   language: de
+  infinitive: enthalten
   translations:
     en: [include, convey, comprise]
 
 verlassen:
   language: de
+  infinitive: verlassen
   translations:
     en: [leave, depart, forsake]
 
 stecken:
   language: de
+  infinitive: stecken
   translations:
     en: [stick, put, plug, thrust]
 
 auf|hören:
   language: de
+  infinitive: auf|hören
   translations:
     en: [stop, end]
 
@@ -1765,6 +2000,7 @@ auf|hören:
 
 testen:
   language: de
+  infinitive: testen
   translations:
     en: test
   tags:
@@ -1772,15 +2008,18 @@ testen:
 
 bewegen:
   language: de
+  infinitive: bewegen
   translations:
     en: move
 
 verwenden:
   language: de
+  infinitive: verwenden
   translations:
     en: use
 
 bluten:
   language: de
+  infinitive: bluten
   translations:
     en: bleed

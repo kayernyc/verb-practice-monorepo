@@ -1,6 +1,10 @@
 {
   "extends": "../../tsconfig.base.json",
-  "references": [
-    { "path": "../global-types/tsconfig.json"}
-  ]
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "resolveJsonModule": true
+  },
+  "include": ["./src"]
 }
