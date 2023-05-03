@@ -3,27 +3,36 @@ import express, { Application } from 'express';
 import cors from 'cors';
 
 dotenv.config();
+process.env.APP_ROOT = __dirname;
 
-const app: Application = express();
+export const createApp = async (): Promise<Application> => {
+  const app: Application = express();
+  
+  app.use(express.json()); // to support JSON-encoded bodies
+  app.use(cors());
+  
+  app.use(
+    express.urlencoded({
+      // to support URL-encoded bodies
+      extended: true,
+    }),
+  );
+  
+  app.get('/', (req, res) => {
+    res.send('Welcome to db management server');
+  });
+  
+  if (process.env.POPULATE) {
+    const { populateRouter }  = await import('./routes/PopulateRoutes');
+    app.use('/populate', populateRouter);
+  }
+  
+  app.use((_, res) => {
+    res.status(404);
+    res.send('404: File Not Found');
+  });
 
-app.use(express.json()); // to support JSON-encoded bodies
-app.use(cors());
+  return app;
+}
 
-app.use(
-  express.urlencoded({
-    // to support URL-encoded bodies
-    extended: true,
-  }),
-);
-
-app.get('/', (req, res) => {
-  res.send('Welcome to db management server');
-});
-
-
-app.use((_, res) => {
-  res.status(404);
-  res.send('404: File Not Found');
-});
-
-export default app;
+export default createApp;

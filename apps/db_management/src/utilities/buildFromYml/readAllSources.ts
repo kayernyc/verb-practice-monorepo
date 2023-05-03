@@ -77,5 +77,6 @@ export function buildAllSource<T>(
       (filename: string) =>
         filename.slice(0, languageName.length) === languageName && filename.slice(-4) === 'yaml',
     );
+    
   return readYamls(allFileNames, languageName, typeGuard, currentDataPath);
 }
