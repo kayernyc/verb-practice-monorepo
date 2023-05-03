@@ -1,15 +1,10 @@
 import fs from 'fs';
 import path from 'path';
 import yaml from 'js-yaml';
-import * as dotenv from 'dotenv';
 
 import { findRelativePathToData } from './readYaml';
 
 type Guard<T> = (x: unknown) => x is T;
-
-const passingType = <T, U>(t: Guard<T>, p: U): boolean => t(p);
-
-dotenv.config();
 
 type JsonRecord = {
   date: number;
@@ -77,5 +72,6 @@ export function buildAllSource<T>(
       (filename: string) =>
         filename.slice(0, languageName.length) === languageName && filename.slice(-4) === 'yaml',
     );
+
   return readYamls(allFileNames, languageName, typeGuard, currentDataPath);
 }

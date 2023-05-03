@@ -2,11 +2,17 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "baseUrl": "./",
+    "composite": false,
     "esModuleInterop": true,
+    "module": "node16",
     "moduleResolution": "node",
     "outDir": "./dist",
     "rootDir": "./src",
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "paths": {
+      "@utilities/*": ["./src/utilities/*"],
+      "@controllers/*": ["./src/controllers/*"]
+    }
   },
   "include": ["./src"]
 }
