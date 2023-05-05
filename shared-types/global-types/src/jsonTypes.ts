@@ -4,21 +4,16 @@ export enum LanguageMap {
   'de' = 'de'
 };
 
-export interface GermanVerbDictionary {
-  [key: string]: {
-    drop?: boolean;
-    hilfsverb: string;
-    infinitive?: string;
-    language: string | LanguageMap;
-    strong?: [string: boolean] | boolean;
-    translations: LanguageMap;
-  };
-}
-
-export interface GermanJsonData {
-  date: number;
-  verbs: GermanVerbDictionary;
-}
+// export interface GermanVerbDictionary {
+//   [key: string]: {
+//     drop?: boolean;
+//     hilfsverb: string;
+//     infinitive?: string;
+//     language: string | LanguageMap;
+//     strong?: [string: boolean] | boolean;
+//     translations: <>;
+//   };
+// }
 
 // CREDIT WHERE CREDIT IS DUE: https://stackoverflow.com/a/66605669
 export type Only<T, U> = {

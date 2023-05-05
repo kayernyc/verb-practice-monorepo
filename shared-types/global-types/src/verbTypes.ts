@@ -4,6 +4,6 @@ export interface LanguageVerbBase {
   language: LanguageMap;
   infinitive: string;
   translations: { 
-    [key in LanguageMap]?: string []
+    [key in LanguageMap]?: string [] | string;
   };
 }
