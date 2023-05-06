@@ -3,6 +3,7 @@ import path from 'path';
 import yaml from 'js-yaml';
 import { LanguageVerbBase, LanguageMap } from 'global-types'
 import { processDeRecord } from './processDeRecord';
+import { processEnRecord } from './processEnRecord';
 
 type JsonRecord = {
   dateKey: number;
@@ -58,6 +59,7 @@ export const readYamls = (url: string[], dataPath: string) => {
   });
 
   allRecords.de.forEach(record => processDeRecord(record));
+  allRecords.en.forEach(record => processEnRecord(record));
 
   return allRecords;
 }
