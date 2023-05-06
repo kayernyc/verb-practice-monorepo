@@ -122,9 +122,6 @@ importers:
       dotenv:
         specifier: ^16.0.2
         version: 16.0.2
-      english-types:
-        specifier: workspace:1.0.0-beta.1
-        version: link:../../shared-types/english-types
       express:
         specifier: ^4.17.1
         version: 4.17.1
@@ -150,6 +147,9 @@ importers:
       '@types/node':
         specifier: ^18.15.11
         version: 18.15.11
+      english-types:
+        specifier: workspace:*
+        version: link:../../shared-types/english-types
       german-types:
         specifier: workspace:*
         version: link:../../shared-types/german-types
