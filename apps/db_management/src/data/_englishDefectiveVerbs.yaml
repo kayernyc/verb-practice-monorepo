@@ -1,0 +1,26 @@
+dateKey: 1664720800446
+
+beware:
+  defective: true # [see anomalous cases above]
+
+may:
+  participle: might
+  defective: true # see anomalous cases above]
+
+can:
+  participle: could
+  defective: true # see anomalous cases above]
+
+must:
+  defective: true #[see anomalous cases above]
+
+ought:
+  defective: true # [see anomalous cases above]
+
+shall:
+  participle: should
+  defective: true # see anomalous cases above]
+
+will:
+  participle: would
+  defective: true #; see anomalous cases above]

@@ -5,8 +5,7 @@ dateKey: 1664720800446
   translations:
     de: sein
     fr: être
-  tags:
-    - auxilliary
+  auxilliary: true
   irregular:
     present:
       i: am
@@ -18,6 +17,7 @@ have:
   translations:
     de: haben
     fr: avoir
+  auxilliary: true
   participle: had
   irregular:
     present:
@@ -116,6 +116,7 @@ bleed:
     de: bluten
 
 blow:
+  language: en
   participle: blew
   irregular:
     past: blown
@@ -259,7 +260,7 @@ cut:
   irregular:
     past: cut
 
-dare:
+#dare:
  #regular except for possible third person singular present dare (see anomalous cases above)
 
 deal:
@@ -747,6 +748,7 @@ rend:
     past: rent
 
 rid:
+  language: en
   participle: [rid, ridded]
   irregular:
     past: [rid, ridded]
@@ -1101,7 +1103,7 @@ stick:
   irregular:
     past: stuck
   variations:
-    - definition: to sitck to something
+    - definition: to stick to something
     - definition: to stick into something
       translations:
         de: stecken

@@ -26,3 +26,9 @@ pnpm nx build global-types
 4. use `pnpm cz` to trigger a commitzen to commit.
 5. push to origin
 
+### To add internal, workspace packages
+
+```node
+pnpm add <internal workspace package> --filter <target workspace> --workspace
+```
+

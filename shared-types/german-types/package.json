@@ -2,9 +2,9 @@
   "name": "german-types",
   "description": "",
   "version": "1.0.0-beta.1",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "build": "tsc", 
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
@@ -16,5 +16,8 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "global-types": "workspace:*"
+  }
 }

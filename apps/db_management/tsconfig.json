@@ -1,7 +1,7 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "./src",
     "composite": false,
     "esModuleInterop": true,
     "module": "node16",
@@ -10,8 +10,9 @@
     "rootDir": "./src",
     "resolveJsonModule": true,
     "paths": {
-      "@utilities/*": ["./src/utilities/*"],
-      "@controllers/*": ["./src/controllers/*"]
+      "@controllers/*": ["./controllers/*"],
+      "@models/*": ["./models/*"],
+      "@utilities/*": ["./utilities/*"]
     }
   },
   "include": ["./src"]
