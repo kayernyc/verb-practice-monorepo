@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import yaml from 'js-yaml';
 import { LanguageVerbBase, LanguageMap } from 'global-types'
+import { processDeRecord } from './processDeRecord';
 
 type JsonRecord = {
   dateKey: number;
@@ -10,10 +11,10 @@ type JsonRecord = {
 export const readYamls = (url: string[], dataPath: string) => {
   const urlArray: string[] = typeof url === 'string' ? [url] : url;
   const allRecords = {
-    currentDate: 0,
     [LanguageMap.de]: new Array<LanguageVerbBase>,
     [LanguageMap.en]: new Array<LanguageVerbBase>,
     [LanguageMap.fr]: new Array<LanguageVerbBase>,
+    currentDate: 0
   }
 
   urlArray.map((_url: string) => {
@@ -55,6 +56,8 @@ export const readYamls = (url: string[], dataPath: string) => {
       });
     }
   });
+
+  allRecords.de.forEach(record => processDeRecord(record));
 
   return allRecords;
 }

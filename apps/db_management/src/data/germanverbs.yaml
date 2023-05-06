@@ -10,7 +10,7 @@ haben:
   strong:
   weakEndings: true
   stems:
-    du_es: ha
+    duEs: ha
     präteritum: t
     partizip: b
 
@@ -161,7 +161,7 @@ lassen:
     en: let
   strong:
   stems:
-    du_es: ä
+    duEs: ä
     präteritum: ieß
     k2präsens: ieß
 
@@ -185,7 +185,7 @@ laufen:
   hilfsverb: sein
   strong:
   stems:
-    du_es: äu
+    duEs: äu
     präteritum: ie
     k2präsens: ie
 
@@ -300,7 +300,7 @@ halten:
     en: [hold, keep]
   strong:
   stems:
-    du_es: ä
+    duEs: ä
     präteritum: ie
     k2präsens: ie
 
@@ -311,7 +311,7 @@ schlafen:
     en: sleep
   strong:
   stems:
-    du_es: ä
+    duEs: ä
     präteritum: ie
     k2präsens: ie
 
@@ -461,7 +461,7 @@ fallen:
   strong:
   hilfsverb: sein
   stems:
-    du_es: ä
+    duEs: ä
     präteritum: iel
     k2präsens: iel
 
@@ -478,7 +478,7 @@ fangen:
     en: catch
   strong:
   stems:
-    du_es: ä
+    duEs: ä
     präteritum: i
     k2präsens: i
 
@@ -489,7 +489,7 @@ braten:
     en: fry
   strong:
   stems:
-    du_es: ä
+    duEs: ä
     präteritum: ie
     k2präsens: ie
 
@@ -500,7 +500,7 @@ raten:
     en: [guess, advise]
   strong:
   stems:
-    du_es: ä
+    duEs: ä
     präteritum: ie
     k2präsens: ie
 
@@ -515,7 +515,7 @@ fahren:
   strong:
   hilfsverb: sein
   stems:
-    du_es: ä
+    duEs: ä
     präteritum: u
 
 graben:
@@ -525,7 +525,7 @@ graben:
     en: dig
   strong:
   stems:
-    du_es: ä
+    duEs: ä
     präteritum: u
 
 schlagen:
@@ -535,7 +535,7 @@ schlagen:
     en: [strike, bash, hit, beat]
   strong:
   stems:
-    du_es: ä
+    duEs: ä
     präteritum: u
 
 waschen:
@@ -545,7 +545,7 @@ waschen:
     en: wash
   strong:
   stems:
-    du_es: ä
+    duEs: ä
     präteritum: u
 
 wachsen:
@@ -556,7 +556,7 @@ wachsen:
   hilfsverb: sein
   strong:
   stems:
-    du_es: ä
+    duEs: ä
     präteritum: u
 
 tragen:
@@ -566,7 +566,7 @@ tragen:
     en: [carry, wear]
   strong:
   stems:
-    du_es: ä
+    duEs: ä
     präteritum: u
 
 laden:
@@ -576,7 +576,7 @@ laden:
     en: load
   strong:
   stems:
-    du_es: ä
+    duEs: ä
     präteritum: u
 
 #-------------------------------------------------------------------------------
@@ -619,7 +619,7 @@ geben:
     en: give
   strong:
   stems:
-    du_es: i
+    duEs: i
     präteritum: a
 
 lesen:
@@ -629,7 +629,7 @@ lesen:
     en: read
   strong:
   stems:
-    du_es: ie
+    duEs: ie
     präteritum: a
 
 treten:
@@ -639,7 +639,7 @@ treten:
     en: kick
   strong:
   stems:
-    du_es: itt
+    duEs: itt
     präteritum: a
 
 essen:
@@ -649,7 +649,7 @@ essen:
     en: eat
   strong:
   stems:
-    du_es: i
+    duEs: i
     präteritum: aß
     partizip: gess
 
@@ -660,7 +660,7 @@ sehen:
     en: see
   strong:
   stems:
-    du_es: ie
+    duEs: ie
     präteritum: a
 
 geschehen:
@@ -671,7 +671,7 @@ geschehen:
   hilfsverb: sein
   strong:
   stems:
-    du_es: ie
+    duEs: ie
     präteritum: a
 
 #-------------------------------------------------------------------------------
@@ -824,7 +824,7 @@ saufen:
     en: guzzle
   strong:
   stems:
-    du_es: äu
+    duEs: äu
     präteritum: off
     partizip: off
 
@@ -846,7 +846,7 @@ schmelzen:
   hilfsverb: sein
   strong:
   stems:
-    du_es: i
+    duEs: i
     präteritum: o
     partizip: o
 
@@ -1038,7 +1038,7 @@ nehmen:
     en: take
   strong:
   stems:
-    du_es: imm
+    duEs: imm
     präteritum: a
     partizip: omm
 
@@ -1050,7 +1050,7 @@ sterben:
   hilfsverb: sein
   strong:
   stems:
-    du_es: i
+    duEs: i
     präteritum: a
     partizip: o
 
@@ -1061,7 +1061,7 @@ brechen:
     en: break
   strong:
   stems:
-    du_es: i
+    duEs: i
     präteritum: a
     partizip: o
 
@@ -1072,7 +1072,7 @@ helfen:
     en: help
   strong:
   stems:
-    du_es: i
+    duEs: i
     präteritum: a
     partizip: o
 
@@ -1083,7 +1083,7 @@ sprechen:
     en: speak
   strong:
   stems:
-    du_es: i
+    duEs: i
     präteritum: a
     partizip: o
 
@@ -1094,7 +1094,7 @@ stechen:
     en: [stab, sting, jab]
   strong:
   stems:
-    du_es: i
+    duEs: i
     präteritum: a
     partizip: o
 
@@ -1105,7 +1105,7 @@ stehlen:
     en: steal
   strong:
   stems:
-    du_es: ie
+    duEs: ie
     präteritum: a
     partizip: o
 
@@ -1116,7 +1116,7 @@ treffen:
     en:[ meet, hit, strike]
   strong:
   stems:
-    du_es: i
+    duEs: i
     präteritum: af
     partizip: o
 
@@ -1127,7 +1127,7 @@ werfen:
     en: throw
   strong:
   stems:
-    du_es: i
+    duEs: i
     präteritum: a
     k2präsens: ü
     partizip: o
@@ -1150,7 +1150,7 @@ empfehlen:
     en: recommend
   strong:
   stems:
-    du_es: ie
+    duEs: ie
     partizip: o
     präteritum: a
 
@@ -1655,7 +1655,7 @@ gelten:
     en: [apply, pertain]
   strong:
   stems:
-    du_es: i
+    duEs: i
     präteritum: a
     partizip: o
 

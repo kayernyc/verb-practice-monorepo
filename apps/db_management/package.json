@@ -26,6 +26,7 @@
     "@types/js-yaml": "4.0.5",
     "@types/node": "^18.15.11",
     "german-types": "workspace:*",
+    "english-types": "workspace:*",
     "global-types": "workspace:*",
     "mock-fs": "^5.1.4",
     "ts-node": "^10.9.1",

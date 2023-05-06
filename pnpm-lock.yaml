@@ -122,12 +122,12 @@ importers:
       dotenv:
         specifier: ^16.0.2
         version: 16.0.2
+      english-types:
+        specifier: workspace:1.0.0-beta.1
+        version: link:../../shared-types/english-types
       express:
         specifier: ^4.17.1
         version: 4.17.1
-      german-types:
-        specifier: workspace:1.0.0-beta.1
-        version: link:../../shared-types/german-types
       js-yaml:
         specifier: ^4.1.0
         version: 4.1.0
@@ -150,6 +150,9 @@ importers:
       '@types/node':
         specifier: ^18.15.11
         version: 18.15.11
+      german-types:
+        specifier: workspace:*
+        version: link:../../shared-types/german-types
       global-types:
         specifier: workspace:*
         version: link:../../shared-types/global-types
@@ -278,6 +281,10 @@ importers:
         version: link:../sum-one
 
   shared-types/english-types:
+    dependencies:
+      global-types:
+        specifier: workspace:1.0.0-beta.1
+        version: link:../global-types
     devDependencies:
       '@types/node':
         specifier: ^18.15.11

@@ -4,7 +4,6 @@ import {
   GrammaticalGender,
   GrammaticalNumber,
   GrammaticalPerson,
-  LanguageMap,
   LanguageVerbBase
 } from 'global-types';
 
@@ -26,6 +25,7 @@ const ALL_GERMAN_VALID_KEYS = [
   'strong',
   'translations',
   'weakEndings',
+  'variations'
 ];
 export type GermanValidKey = typeof ALL_GERMAN_VALID_KEYS[number];
 
@@ -48,7 +48,7 @@ type GermanIrregularKeys = GermanTenses.präsens | GermanTenses.präteritum;
 export type GermanIrregularObject = { [key in GermanIrregularKeys]: GermanIrregularSet };
 
 const ALL_GERMAN_STEMS = ['duEs', 'k2präsens', 'konjunktiv', 'partizip', 'präsensSingular', 'präteritum'] as const;
-type GermanStem = typeof ALL_GERMAN_STEMS[number];
+export type GermanStem = typeof ALL_GERMAN_STEMS[number];
 
 // export enum GermanStems {
 //   duEs = 'duEs',
@@ -144,53 +144,53 @@ export const validKeys = [
   'weakEndings',
 ];
 
-export const GermanVerbTypeGuard = (x: object): x is GermanVerb => {
-  let returnValue = true;
-  
+export const isGermanVerb = (x: object): x is GermanVerb => {
+  let isValid = true;
+
   if ('language' in x && (x.language !== 'de')) {
     return false;
   }
 
   const xKeys = Object.keys(x);
   xKeys.forEach((key: string) => {
-    if (!validKeys.includes(key)) {
-      returnValue = false;
-    }
-
-    if ('irregular' in x) {
-      const irregular = x['irregular'];
-      
-      if (irregular && typeof irregular === 'object') {
-        for (let tenseKey of Object.keys(irregular!)) {
-          if (tenseKey === 'präteritum' || tenseKey === 'präsens') {
-            const irregularTense: Record<string, unknown> = irregular[tenseKey as keyof typeof irregular];
-            const tensePronouns = Object.keys(irregularTense);
-
-            tensePronouns.forEach((pronoun: string) => {
-              if (!isGermanKeyPronoun(pronoun) || typeof irregularTense[pronoun] !== 'string') {
-                returnValue = false;
-              }
-            });
-
-          } else {
-            returnValue = false;
-          }
-        }
-      }
-    }
-
-    if ('stems' in x) {
-      if (x['stems'] && typeof x['stems'] === 'object') {
-        for (let stem of Object.keys(x['stems'])) {
-          if (!ALL_GERMAN_STEMS.includes(stem as GermanStem)) {
-            returnValue = false;
-          }
-        }
-      }
+    if (!ALL_GERMAN_VALID_KEYS.includes(key)) {
+      isValid = false;
     }
   });
 
-  return 'language' in x && returnValue;
+  if ('irregular' in x) {
+    const irregular = x['irregular'];
+    
+    if (irregular && typeof irregular === 'object') {
+      for (let tenseKey of Object.keys(irregular!)) {
+        if (tenseKey === 'präteritum' || tenseKey === 'präsens') {
+          const irregularTense: Record<string, unknown> = irregular[tenseKey as keyof typeof irregular];
+          const tensePronouns = Object.keys(irregularTense);
+
+          tensePronouns.forEach((pronoun: string) => {
+            if (!isGermanKeyPronoun(pronoun) || typeof irregularTense[pronoun] !== 'string') {
+              isValid = false;
+            }
+          });
+
+        } else {
+          isValid = false;
+        }
+      }
+    }
+  }
+
+  if ('stems' in x) {
+    if (x['stems'] && typeof x['stems'] === 'object') {
+      for (let stem of Object.keys(x['stems'])) {
+        if (!ALL_GERMAN_STEMS.includes(stem as GermanStem)) {
+          isValid = false;
+        }
+      }
+    }
+  }
+
+  return isValid;
 };
 
 export interface GermanSeparableVerb extends LanguageVerbBase {
@@ -201,7 +201,7 @@ export interface GermanSeparableVerb extends LanguageVerbBase {
 
 const validSeperableKeys = ['base', 'hilfsverb', 'language', 'particle', 'translations'];
 
-export const GermanSeparableVerbTypeGuard = (x: object): x is GermanSeparableVerb => {
+export const isGermanSeparableVerb = (x: object): x is GermanSeparableVerb => {
   let returnValue = true;
 
   const xKeys = Object.keys(x);

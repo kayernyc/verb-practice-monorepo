@@ -1,9 +1,9 @@
 import { LanguageVerbBase } from 'global-types';
-import { isGermanVerb } from 'german-types';
+import { isEnglishVerb } from 'english-types';
 
-export const processDeRecord = (record: LanguageVerbBase) => {
+export const processEnRecord = (record: LanguageVerbBase) => {
   // confirm record is German
-  if (!isGermanVerb(record)) {
+  if (!isEnglishVerb(record)) {
     throw new Error (`Error: ${record.infinitive} is not a valid German Verb`)
   }
 

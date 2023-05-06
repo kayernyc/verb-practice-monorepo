@@ -15,5 +15,6 @@ export function buildAllSource(
         filename.charAt(0) !== '_' && filename.slice(-4) === 'yaml',
     );
 
-    return readYamls(allFileNames, currentDataPath);
+    const allSource =  readYamls(allFileNames, currentDataPath);
+    return allSource;
 }

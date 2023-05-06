@@ -5,8 +5,7 @@ dateKey: 1664720800446
   translations:
     de: sein
     fr: être
-  tags:
-    - auxilliary
+  auxilliary: true
   irregular:
     present:
       i: am
@@ -18,6 +17,7 @@ have:
   translations:
     de: haben
     fr: avoir
+  auxilliary: true
   participle: had
   irregular:
     present:

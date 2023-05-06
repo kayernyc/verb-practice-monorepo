@@ -1,33 +1,26 @@
 dateKey: 1664720800446
 
 beware:
-  tags:
-    - defective: # [see anomalous cases above]
+  defective: true # [see anomalous cases above]
 
 may:
   participle: might
-  tags:
-    - defective: # see anomalous cases above]
+  defective: true # see anomalous cases above]
 
 can:
   participle: could
-  tags:
-    - defective: # see anomalous cases above]
+  defective: true # see anomalous cases above]
 
 must:
-  tags:
-    - defective: #[see anomalous cases above]
+  defective: true #[see anomalous cases above]
 
 ought:
-  tags:
-    - defective: # [see anomalous cases above]
+  defective: true # [see anomalous cases above]
 
 shall:
   participle: should
-  tags:
-    - defective: # see anomalous cases above]
+  defective: true # see anomalous cases above]
 
 will:
   participle: would
-  tags:
-    - defective: #; see anomalous cases above]
+  defective: true #; see anomalous cases above]
