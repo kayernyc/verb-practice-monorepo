@@ -1,4 +1,4 @@
-import { GermanPronounKeys } from 'german-types';
+import { GermanPronounCode } from 'german-types';
 import { RegExpGroups } from 'global-types';
 
 const irregularStemRegex =
@@ -8,10 +8,10 @@ const regularStemRegex =
 
 export const duEsConjugation = (
   duEsStem: string,
-  tense: Record<number, string>,
+  tense: Record<GermanPronounCode, string>,
 ): [string, string] => {
-  const du = tense[GermanPronounKeys.du];
-  const es = tense[GermanPronounKeys.es];
+  const du = tense[GermanPronounCode.du];
+  const es = tense[GermanPronounCode.es];
 
   let irregularStemFirstConst = '';
   let irregularStemVowelGroup = '';

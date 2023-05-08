@@ -78,7 +78,7 @@ export type TranslationSet = {
 };
 
 export type GermanVerbHydrated = {
-  [key in GermanTenses]?: { GermanPronounKeys: string };
+  [key in GermanTenses]?: { [key in GermanPronounCode]: string };
 } & {
   hilfsverb: string;
   infinitive: string;
@@ -102,6 +102,27 @@ export type GermanPronoun = {
   grammaticalFormal: GrammaticalFormal;
   case: GermanCase;
 };
+
+export enum GermanPronounCode {
+  'ich' = GrammaticalPerson.First.valueOf() +
+    GrammaticalNumber.Singular.valueOf() +
+    GermanCase.Nominative.valueOf(),
+  'du' = GrammaticalPerson.Second.valueOf() +
+    GrammaticalNumber.Singular.valueOf() +
+    GrammaticalFormal.Informal.valueOf() +
+    GermanCase.Nominative.valueOf(),
+  'es' = GrammaticalPerson.Third.valueOf() +
+    GrammaticalNumber.Singular.valueOf() +
+    GermanCase.Nominative.valueOf() +
+    GrammaticalGender.Neuter.valueOf(),
+  'wir' = GrammaticalPerson.First.valueOf() +
+    GrammaticalNumber.Plural.valueOf() +
+    GermanCase.Nominative.valueOf(),
+  'ihr' = GrammaticalPerson.Second.valueOf() +
+    GrammaticalNumber.Plural.valueOf() +
+    GrammaticalFormal.Informal.valueOf() +
+    GermanCase.Nominative.valueOf(),
+}
 
 export const GermanPronounKeys: { [key in GermanKeyPronoun]: number } = {
   ich:

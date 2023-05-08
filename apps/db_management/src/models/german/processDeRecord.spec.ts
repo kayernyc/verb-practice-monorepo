@@ -58,9 +58,29 @@ describe('processDeRecord', () => {
     expect(result).toEqual(p_expected);
   });
 
-  it('returns a verb with custom du/es', () => {
-    const de_testObject = { ...testObject, stems: { duEs: 'ha' } };
+  it('returns a verb with custom du/es vowel', () => {
+    const de_testObject = { ...testObject, stems: { duEs: 'i' } };
     const de_expected = { ...expected };
+    de_expected.präsens[1098] = 'stickst';
+    de_expected.präsens[1548] = 'stickt';
+    const result = processDeRecord(de_testObject);
+    expect(result).toEqual(de_expected);
+  });
+
+  it('returns a verb with custom du/es v/c combo', () => {
+    const de_testObject = { ...testObject, stems: { duEs: 'im' } };
+    const de_expected = { ...expected };
+    de_expected.präsens[1098] = 'stimst';
+    de_expected.präsens[1548] = 'stimt';
+    const result = processDeRecord(de_testObject);
+    expect(result).toEqual(de_expected);
+  });
+
+  it('returns a verb with custom du/es c/v combo', () => {
+    const de_testObject = { ...testObject, stems: { duEs: 'cha' } };
+    const de_expected = { ...expected };
+    de_expected.präsens[1098] = 'chast';
+    de_expected.präsens[1548] = 'chat';
     const result = processDeRecord(de_testObject);
     expect(result).toEqual(de_expected);
   });
