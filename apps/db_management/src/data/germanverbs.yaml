@@ -1,13 +1,13 @@
 dateKey: 1630934144867
 
 haben:
+  auxiliary: true
   language: de
   infinitive: haben
   translations:
     en: have
-  tags:
-    - hilfsverb
-  strong:
+  hilfsverb: haben
+  strong: true
   weakEndings: true
   stems:
     duEs: ha
@@ -15,15 +15,14 @@ haben:
     partizip: b
 
 sein:
+  auxiliary: true
   language: de
   infinitive: sein
   translations:
     en: be
-  tags:
-    - hilfsverb
   hilfsverb: sein
   partizip: gewesen
-  strong:
+  strong: true
   stems:
     präteritum: war
     konjunktiv: sei
@@ -36,14 +35,13 @@ sein:
       ihr: seid
 
 werden:
+  auxiliary: true
   language: de
   infinitive: werden
   translations:
     en: become, to grow
-  tags:
-    - hilfsverb
   hilfsverb: sein
-  strong:
+  strong: true
   stems:
     präteritum: u
     partizip: o
@@ -60,96 +58,90 @@ können:
   infinitive: können
   translations:
     en: [can, may, are able to, to know how]
-  tags:
-    - modal
-  strong:
+  modal: true
+  strong: true
   weakEndings: true
   stems:
-    präsens singular: a
+    präsensSingular: a
     präteritum: o
-  drop ich/es präsens endings: true
+  drop: true
 
 müssen:
   language: de
   infinitive: müssen
   translations:
     en: have
-  tags:
-    - modal
-  strong:
+  modal: true
   weakEndings: true
   stems:
     präteritum: u
-    präsens singular: u
-  drop ich/es präsens endings: true
+    präsensSingular: u
+  strong: true
+  drop: true
 
 wollen:
   language: de
   infinitive: wollen
   translations:
     en: want
-  tags:
-    - modal
+  modal: true
   stems:
-    präsens singular: i
-  drop ich/es präsens endings: true
+    präsensSingular: i
+  drop: true
 
 sollen:
   language: de
   infinitive: sollen
   translations:
     en: be expected
-  tags:
-    - modal
-  drop ich/es präsens endings: true
+  modal: true
+  drop: true
 
 dürfen:
   language: de
   infinitive: dürfen
   translations:
     en: [be authorized, must]
-  tags:
-    - modal
-  strong:
-  weakEndings: true
+  modal: true
+  strong: true
   stems:
-    präsens singular: arf
+    präsensSingular: arf
     präteritum: u
     partizip: u
-  drop ich/es präsens endings: true
+  drop: true
+  weakEndings: true
 
 mögen:
   language: de
   infinitive: mögen
   translations:
     en: like
-  tags:
-    - modal
-  strong:
-  weakEndings: true
+  modal: true
+  strong: true
   stems:
-    präsens singular: ag
+    präsensSingular: ag
     präteritum: och
-  drop ich/es präsens endings: true
+  drop: true
+  weakEndings: true
 
 wissen:
   language: de
   infinitive: wissen
   translations:
     en: know
-  strong:
+  strong: true
   weakEndings: true
   stems:
-    präsens singular: eiß
+    präsensSingular: eiß
     präteritum: u
-  drop ich/es präsens endings: true
+  drop: true
 
 heißen:
   language: de
   infinitive: heißen
   translations:
     en: be called
-  strong:
+  strong: true
   stems:
     präteritum: ie
     k2präsens: ie
@@ -159,7 +151,7 @@ lassen:
   infinitive: lassen
   translations:
     en: let
-  strong:
+  strong: true
   stems:
     duEs: ä
     präteritum: ieß
@@ -170,7 +162,7 @@ gehen:
   infinitive: gehen
   translations:
     en: go
-  strong:
+  strong: true
   hilfsverb: sein
   stems:
     präteritum: ing
@@ -183,7 +175,7 @@ laufen:
   translations:
     en: run
   hilfsverb: sein
-  strong:
+  strong: true
   stems:
     duEs: äu
     präteritum: ie
@@ -194,7 +186,7 @@ schreiben:
   infinitive: schreiben
   translations:
     en: write
-  strong:
+  strong: true
   stems:
     präteritum: ie
     k2präsens: ie
@@ -212,7 +204,7 @@ greifen:
   infinitive: greifen
   translations:
     en: grasp, grab
-  strong:
+  strong: true
   stems:
     präteritum: iff
     k2präsens: iff
@@ -223,7 +215,7 @@ pfeifen:
   infinitive: pfeifen
   translations:
     en: whistle
-  strong:
+  strong: true
   stems:
     präteritum: iff
     k2präsens: iff
@@ -234,7 +226,7 @@ schreien:
   infinitive: schreien
   translations:
     en: [cry out, scream]
-  strong:
+  strong: true
   stems:
     präteritum: ie
     k2präsens: ie
@@ -248,7 +240,7 @@ gelingen:
   translations:
     en: succeed
   hilfsverb: sein
-  strong:
+  strong: true
   stems:
     präteritum: a
     partizip: u
@@ -276,7 +268,7 @@ hängen:
   infinitive: hängen
   translations:
     en: hang
-  strong:
+  strong: true
   stems:
     präteritum: i
     k2präsens: i
@@ -287,7 +279,7 @@ leiden:
   infinitive: leiden
   translations:
     en: suffer
-  strong:
+  strong: true
   stems:
     präteritum: itt
     k2präsens: itt
@@ -298,7 +290,7 @@ halten:
   infinitive: halten
   translations:
     en: [hold, keep]
-  strong:
+  strong: true
   stems:
     duEs: ä
     präteritum: ie
@@ -309,7 +301,7 @@ schlafen:
   infinitive: schlafen
   translations:
     en: sleep
-  strong:
+  strong: true
   stems:
     duEs: ä
     präteritum: ie
@@ -413,7 +405,7 @@ brauchen:
 
 setzen:
   language: de
-  infinitive:
+  infinitive: setzen
   translations:
     en: [put, set]
 
@@ -458,7 +450,7 @@ fallen:
   infinitive: fallen
   translations:
     en: fall
-  strong:
+  strong: true
   hilfsverb: sein
   stems:
     duEs: ä
@@ -476,7 +468,7 @@ fangen:
   infinitive: fangen
   translations:
     en: catch
-  strong:
+  strong: true
   stems:
     duEs: ä
     präteritum: i
@@ -487,7 +479,7 @@ braten:
   infinitive: braten
   translations:
     en: fry
-  strong:
+  strong: true
   stems:
     duEs: ä
     präteritum: ie
@@ -498,7 +490,7 @@ raten:
   infinitive: raten
   translations:
     en: [guess, advise]
-  strong:
+  strong: true
   stems:
     duEs: ä
     präteritum: ie
@@ -512,7 +504,7 @@ fahren:
   infinitive: fahren
   translations:
     en: [drive, ride]
-  strong:
+  strong: true
   hilfsverb: sein
   stems:
     duEs: ä
@@ -523,7 +515,7 @@ graben:
   infinitive: graben
   translations:
     en: dig
-  strong:
+  strong: true
   stems:
     duEs: ä
     präteritum: u
@@ -533,7 +525,7 @@ schlagen:
   infinitive: schlagen
   translations:
     en: [strike, bash, hit, beat]
-  strong:
+  strong: true
   stems:
     duEs: ä
     präteritum: u
@@ -543,7 +535,7 @@ waschen:
   infinitive: waschen
   translations:
     en: wash
-  strong:
+  strong: true
   stems:
     duEs: ä
     präteritum: u
@@ -554,7 +546,7 @@ wachsen:
   translations:
     en: grow
   hilfsverb: sein
-  strong:
+  strong: true
   stems:
     duEs: ä
     präteritum: u
@@ -564,7 +556,7 @@ tragen:
   infinitive: tragen
   translations:
     en: [carry, wear]
-  strong:
+  strong: true
   stems:
     duEs: ä
     präteritum: u
@@ -574,7 +566,7 @@ laden:
   infinitive: laden
   translations:
     en: load
-  strong:
+  strong: true
   stems:
     duEs: ä
     präteritum: u
@@ -587,7 +579,7 @@ liegen:
   infinitive: liegen
   translations:
     en: lie
-  strong:
+  strong: true
   stems:
     präteritum: a
     partizip: e
@@ -597,7 +589,7 @@ bitten:
   infinitive: bitten
   translations:
     en: ask for
-  strong:
+  strong: true
   stems:
     präteritum: at
     partizip: et
@@ -607,7 +599,7 @@ sitzen:
   infinitive: sitzen
   translations:
     en: sit
-  strong:
+  strong: true
   stems:
     präteritum: aß
     partizip: ess
@@ -617,7 +609,7 @@ geben:
   infinitive: geben
   translations:
     en: give
-  strong:
+  strong: true
   stems:
     duEs: i
     präteritum: a
@@ -627,7 +619,7 @@ lesen:
   infinitive: lesen
   translations:
     en: read
-  strong:
+  strong: true
   stems:
     duEs: ie
     präteritum: a
@@ -637,7 +629,7 @@ treten:
   infinitive: treten
   translations:
     en: kick
-  strong:
+  strong: true
   stems:
     duEs: itt
     präteritum: a
@@ -647,7 +639,7 @@ essen:
   infinitive: essen
   translations:
     en: eat
-  strong:
+  strong: true
   stems:
     duEs: i
     präteritum: aß
@@ -658,7 +650,7 @@ sehen:
   infinitive: sehen
   translations:
     en: see
-  strong:
+  strong: true
   stems:
     duEs: ie
     präteritum: a
@@ -669,7 +661,7 @@ geschehen:
   translations:
     en: happen
   hilfsverb: sein
-  strong:
+  strong: true
   stems:
     duEs: ie
     präteritum: a
@@ -683,7 +675,7 @@ fliegen:
   translations:
     en: fly
   hilfsverb: sein
-  strong:
+  strong: true
   stems:
     präteritum: o
     partizip: o
@@ -694,7 +686,7 @@ fliehen:
   translations:
     en: flee
   hilfsverb: sein
-  strong:
+  strong: true
   stems:
     präteritum: o
     partizip: o
@@ -705,7 +697,7 @@ fließen:
   translations:
     en: flow
   hilfsverb: sein
-  strong:
+  strong: true
   stems:
     präteritum: oss
     partizip: oss
@@ -716,7 +708,7 @@ frieren:
   translations:
     en: freeze
   hilfsverb: sein
-  strong:
+  strong: true
   stems:
     präteritum: o
     partizip: o
@@ -726,7 +718,7 @@ biegen:
   infinitive: biegen
   translations:
     en: bend
-  strong:
+  strong: true
   stems:
     präteritum: o
     partizip: o
@@ -736,7 +728,7 @@ bieten:
   infinitive: bieten
   translations:
     en: offer
-  strong:
+  strong: true
   stems:
     präteritum: o
     partizip: o
@@ -746,7 +738,7 @@ ziehen:
   infinitive: ziehen
   translations:
     en: pull
-  strong:
+  strong: true
   stems:
     präteritum: og
     partizip: og
@@ -762,7 +754,7 @@ gießen:
   infinitive: gießen
   translations:
     en: pour
-  strong:
+  strong: true
   stems:
     präteritum: oss
     partizip: oss
@@ -772,7 +764,7 @@ riechen:
   infinitive: riechen
   translations:
     en: smell
-  strong:
+  strong: true
   stems:
     präteritum: o
     partizip: o
@@ -782,7 +774,7 @@ schieben:
   infinitive: schieben
   translations:
     en: push
-  strong:
+  strong: true
   stems:
     präteritum: o
     partizip: o
@@ -792,7 +784,7 @@ schießen:
   infinitive: schießen
   translations:
     en: shoot
-  strong:
+  strong: true
   stems:
     präteritum: oss
     partizip: oss
@@ -802,7 +794,7 @@ schließen:
   infinitive: schließen
   translations:
     en: close
-  strong:
+  strong: true
   stems:
     präteritum: oss
     partizip: oss
@@ -812,7 +804,7 @@ heben:
   infinitive: heben
   translations:
     en: lift
-  strong:
+  strong: true
   stems:
     präteritum: o
     partizip: o
@@ -822,7 +814,7 @@ saufen:
   infinitive: saufen
   translations:
     en: guzzle
-  strong:
+  strong: true
   stems:
     duEs: äu
     präteritum: off
@@ -833,7 +825,7 @@ lügen:
   infinitive: lügen
   translations:
     en: lie
-  strong:
+  strong: true
   stems:
     präteritum: o
     partizip: o
@@ -844,7 +836,7 @@ schmelzen:
   translations:
     en: melt
   hilfsverb: sein
-  strong:
+  strong: true
   stems:
     duEs: i
     präteritum: o
@@ -855,7 +847,7 @@ genießen:
   infinitive: genießen
   translations:
     en: enjoy
-  strong:
+  strong: true
   stems:
     präteritum: oss
     partizip: oss
@@ -865,7 +857,7 @@ verlieren:
   infinitive: verlieren
   translations:
     en: lose
-  strong:
+  strong: true
   stems:
     präteritum: o
     partizip: o
@@ -878,7 +870,7 @@ bleiben:
   infinitive: bleiben
   translations:
     en: remain, stay
-  strong:
+  strong: true
   hilfsverb: sein
   stems:
     präteritum: ie
@@ -890,7 +882,7 @@ reiben:
   infinitive: reiben
   translations:
     en: rub
-  strong:
+  strong: true
   stems:
     präteritum: ie
     k2präsens: ie
@@ -902,7 +894,7 @@ gleiten:
   translations:
     en: glide
   hilfsverb: sein
-  strong:
+  strong: true
   stems:
     präteritum: itt
     k2präsens: itt
@@ -913,7 +905,7 @@ reiten:
   infinitive: reiten
   translations:
     en: ride
-  strong:
+  strong: true
   stems:
     präteritum: itt
     k2präsens: itt
@@ -924,7 +916,7 @@ reißen:
   infinitive: reißen
   translations:
     en: tear
-  strong:
+  strong: true
   stems:
     präteritum: iss
     k2präsens: iss
@@ -935,7 +927,7 @@ beißen:
   infinitive: beißen
   translations:
     en: bite
-  strong:
+  strong: true
   stems:
     präteritum: iss
     k2präsens: iss
@@ -946,7 +938,7 @@ scheißen:
   infinitive: scheißen
   translations:
     en: shit
-  strong:
+  strong: true
   stems:
     präteritum: iss
     k2präsens: iss
@@ -957,7 +949,7 @@ leihen:
   infinitive: leihen
   translations:
     en: lend, borrow
-  strong:
+  strong: true
   stems:
     präteritum: ie
     k2präsens: ie
@@ -968,7 +960,7 @@ scheinen:
   infinitive: scheinen
   translations:
     en: shine, seem
-  strong:
+  strong: true
   stems:
     präteritum: ie
     k2präsens: ie
@@ -979,7 +971,7 @@ meiden:
   infinitive: meiden
   translations:
     en: avoid
-  strong:
+  strong: true
   stems:
     präteritum: ie
     k2präsens: ie
@@ -991,7 +983,7 @@ steigen:
   translations:
     en: rise
   hilfsverb: sein
-  strong:
+  strong: true
   stems:
     präteritum: ie
     k2präsens: ie
@@ -1002,7 +994,7 @@ verzeihen:
   infinitive: verzeihen
   translations:
     en: forgive
-  strong:
+  strong: true
   stems:
     präteritum: ie
     k2präsens: ie
@@ -1016,7 +1008,7 @@ beginnen:
   infinitive: beginnen
   translations:
     en: begin
-  strong:
+  strong: true
   stems:
     präteritum: a
     partizip: o
@@ -1027,7 +1019,7 @@ kommen:
   translations:
     en: come
   hilfsverb: sein
-  strong:
+  strong: true
   stems:
     präteritum: am
 
@@ -1036,7 +1028,7 @@ nehmen:
   infinitive: nehmen
   translations:
     en: take
-  strong:
+  strong: true
   stems:
     duEs: imm
     präteritum: a
@@ -1048,7 +1040,7 @@ sterben:
   translations:
     en: die
   hilfsverb: sein
-  strong:
+  strong: true
   stems:
     duEs: i
     präteritum: a
@@ -1059,7 +1051,7 @@ brechen:
   infinitive: brechen
   translations:
     en: break
-  strong:
+  strong: true
   stems:
     duEs: i
     präteritum: a
@@ -1070,7 +1062,7 @@ helfen:
   infinitive: helfen
   translations:
     en: help
-  strong:
+  strong: true
   stems:
     duEs: i
     präteritum: a
@@ -1081,7 +1073,7 @@ sprechen:
   infinitive: sprechen
   translations:
     en: speak
-  strong:
+  strong: true
   stems:
     duEs: i
     präteritum: a
@@ -1092,7 +1084,7 @@ stechen:
   infinitive: stechen
   translations:
     en: [stab, sting, jab]
-  strong:
+  strong: true
   stems:
     duEs: i
     präteritum: a
@@ -1103,7 +1095,7 @@ stehlen:
   infinitive: stehlen
   translations:
     en: steal
-  strong:
+  strong: true
   stems:
     duEs: ie
     präteritum: a
@@ -1114,7 +1106,7 @@ treffen:
   infinitive: treffen
   translations:
     en:[ meet, hit, strike]
-  strong:
+  strong: true
   stems:
     duEs: i
     präteritum: af
@@ -1125,7 +1117,7 @@ werfen:
   infinitive: werfen
   translations:
     en: throw
-  strong:
+  strong: true
   stems:
     duEs: i
     präteritum: a
@@ -1138,7 +1130,7 @@ schwimmen:
   translations:
     en: swim
   hilfsverb: sein
-  strong:
+  strong: true
   stems:
     partizip: o
     präteritum: a
@@ -1148,7 +1140,7 @@ empfehlen:
   infinitive: empfehlen
   translations:
     en: recommend
-  strong:
+  strong: true
   stems:
     duEs: ie
     partizip: o
@@ -1159,7 +1151,7 @@ gewinnen:
   infinitive: gewinnen
   translations:
     en: win
-  strong:
+  strong: true
   stems:
     partizip: o
     präteritum: a
@@ -1172,7 +1164,7 @@ binden:
   infinitive: binden
   translations:
     en: bind
-  strong:
+  strong: true
   stems:
     präteritum: a
     partizip: u
@@ -1182,7 +1174,7 @@ finden:
   infinitive: finden
   translations:
     en: find
-  strong:
+  strong: true
   stems:
     präteritum: a
     partizip: u
@@ -1192,7 +1184,7 @@ trinken:
   infinitive: trinken
   translations:
     en: drink
-  strong:
+  strong: true
   stems:
     präteritum: a
     partizip: u
@@ -1202,7 +1194,7 @@ stinken:
   infinitive: stinken
   translations:
     en: stink
-  strong:
+  strong: true
   stems:
     präteritum: a
     partizip: u
@@ -1213,7 +1205,7 @@ sinken:
   translations:
     en: sink
   hilfsverb: sein
-  strong:
+  strong: true
   stems:
     präteritum: a
     partizip: u
@@ -1224,7 +1216,7 @@ springen:
   translations:
     en: jump
   hilfsverb: sein
-  strong:
+  strong: true
   stems:
     präteritum: a
     partizip: u
@@ -1234,7 +1226,7 @@ singen:
   infinitive: singen
   translations:
     en: sing
-  strong:
+  strong: true
   stems:
     präteritum: a
     partizip: u
@@ -1244,7 +1236,7 @@ zwingen:
   infinitive: zwingen
   translations:
     en: force
-  strong:
+  strong: true
   stems:
     präteritum: a
     partizip: u
@@ -1269,39 +1261,39 @@ kennen:
   infinitive: kennen
   translations:
     en: know
-  strong:
-  weakEndings: true
+  strong: true
   stems:
     präteritum: a
     k2präsens: e
     partizip: a
+  weakEndings: true
 
 denken:
   language: de
   infinitive: denken
   translations:
     en: think, guess
-  strong:
-  weakEndings: true
+  strong: true
   stems:
     präteritum: ach
+  weakEndings: true
 
 bringen:
   language: de
   infinitive: bringen
   translations:
     en: bring, take
-  strong:
-  weakEndings: true
+  strong: true
   stems:
     präteritum: ach
+  weakEndings: true
 
 stehen:
   language: de
   infinitive: stehen
   translations:
     en: stand
-  strong:
+  strong: true
   stems:
     präteritum: and
     partizip: and
@@ -1311,7 +1303,7 @@ tun:
   infinitive: tun
   translations:
     en: do
-  strong:
+  strong: true
   stems:
     präteritum: at
     partizip: a
@@ -1606,7 +1598,7 @@ gleichen:
   infinitive: gleichen
   translations:
     en: equal
-  strong:
+  strong: true
   stems:
     präteritum: i
     k2präsens: i
@@ -1653,7 +1645,7 @@ gelten:
   infinitive: gelten
   translations:
     en: [apply, pertain]
-  strong:
+  strong: true
   stems:
     duEs: i
     präteritum: a
@@ -1703,7 +1695,7 @@ packen:
 
 versprechen:
   language: de
-  infinitive:
+  infinitive: versprechen
   translations:
     en: promise
 
@@ -1730,7 +1722,7 @@ erkundigen:
   infinitive: erkundigen
   translations:
     en: [ask, enquire]
-  sich:
+  sich: true
 
 hoffen:
   language: de
@@ -1907,7 +1899,7 @@ rufen:
   infinitive: rufen
   translations:
     en: [call, exclaim]
-  strong:
+  strong: true
   stems:
     präteritum: ie
     k2präsens: ie
@@ -1968,7 +1960,6 @@ stottern:
 
 über|legen:
   language: de
-  infinitive:
   translations:
     en: [consider, deliberate, think]
 
@@ -2003,8 +1994,6 @@ testen:
   infinitive: testen
   translations:
     en: test
-  tags:
-    - test
 
 bewegen:
   language: de

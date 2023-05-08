@@ -371,7 +371,7 @@ feel:
   participle: felt
   irregular:
     past: felt
-  translate:
+  translations:
     de: erzählen
 
 fight:
@@ -1246,7 +1246,7 @@ throw:
   participle: threw
   irregular:
     past: thrown
-  translataions:
+  translations:
     de: werfen
 
 thrust:

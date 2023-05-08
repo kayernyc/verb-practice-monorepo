@@ -1,4 +1,9 @@
-import { LanguageMap, GrammaticalNumber, GrammaticalPerson, LanguageVerbBase } from 'global-types';
+import {
+  LanguageMap,
+  GrammaticalNumber,
+  GrammaticalPerson,
+  LanguageVerbBase,
+} from 'global-types';
 
 export const EnglishPronounKeys: { [key: string]: number } = {
   i: GrammaticalPerson.First.valueOf() + GrammaticalNumber.Singular.valueOf(),
@@ -13,7 +18,7 @@ export type EnglishKeyPronoun = typeof ALL_ENGLISH_KEY_PRONOUNS[number];
 
 const isGermanKeyPronoun = (value: string): value is EnglishKeyPronoun => {
   return ALL_ENGLISH_KEY_PRONOUNS.includes(value as EnglishKeyPronoun);
-}
+};
 
 const ALL_ENGLISH_VALID_KEYS = [
   'auxilliary',
@@ -23,7 +28,7 @@ const ALL_ENGLISH_VALID_KEYS = [
   'participle',
   'variations',
   'translations',
-  'defective'
+  'defective',
 ];
 export type EnglishValidKey = typeof ALL_ENGLISH_VALID_KEYS[number];
 
@@ -40,7 +45,7 @@ export interface EnglishVerb extends LanguageVerbBase {
   infinitive: string;
   irregular?: EnglishIrregularObject;
   participle?: string;
-};
+}
 
 export interface EnglishVerbDictionary {
   [key: string]: EnglishVerb;
@@ -61,7 +66,7 @@ export type EnglishVerbHydrated = {
 
 export const isEnglishVerb = (x: object): x is EnglishVerb => {
   let isValid = true;
-  if ('language' in x && (x.language !== 'en')) {
+  if ('language' in x && x.language !== 'en') {
     return false;
   }
 
@@ -75,15 +80,13 @@ export const isEnglishVerb = (x: object): x is EnglishVerb => {
 
   if ('irregular' in x && typeof x['irregular'] === 'object') {
     const irregular = x['irregular']!;
-    const irregularTenses: string[] = Object.values(EnglishTenses)
+    const irregularTenses: string[] = Object.values(EnglishTenses);
     Object.keys(irregular).forEach((tense: string) => {
-      console.log('>>', tense, '\n', irregularTenses);
-      console.log('>>', irregularTenses.includes(tense));
       if (!irregularTenses.includes(tense)) {
         isValid = false;
-      };
-    })
+      }
+    });
   }
 
   return isValid;
-}
+};
