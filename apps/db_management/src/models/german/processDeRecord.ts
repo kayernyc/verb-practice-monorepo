@@ -12,6 +12,8 @@ import verbIsIrregular from '@utilities/propertyTestFunctions/verbIsIrregular';
 import { duEsConjugation } from './utilities/hydrateDuEsConjugation';
 import { irregularPartizipConjugation } from './utilities/irregularPartizipConjugation';
 import { generateStems } from './utilities/generateStems';
+import { präteritumConjugation } from './utilities/prateritumConjugation';
+import { konjunktiv2Conjugation } from './utilities/k2Conjugation';
 
 const createStandardConjugation = (
   infinitive: string,
@@ -112,6 +114,22 @@ export const processDeRecord = (record: LanguageVerbBase) => {
           infinitive,
           weakEndings: record.weakEndings || false,
         });
+      }
+
+      if ('präteritum' in stems && typeof stems.präteritum === 'string') {
+        hydratedVerb.präteritum = präteritumConjugation(
+          infinitiveStem,
+          stems.präteritum,
+          weakEndings || false,
+        );
+      }
+
+      if (stems.k2präsens || stems.präteritum || weakEndings) {
+        hydratedVerb.k2präsens = konjunktiv2Conjugation(
+          infinitiveStem,
+          stems.k2präsens || stems.präteritum || '',
+          weakEndings || false,
+        );
       }
     }
   }

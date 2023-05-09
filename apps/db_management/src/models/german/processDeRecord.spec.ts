@@ -110,7 +110,24 @@ describe('processDeRecord', () => {
       ...testObject,
       stems: { partizip: 'ang', präteritum: 'ing' },
     };
-    const part1_expected = { ...expected, partizip: 'gestangcken' };
+    const part1_expected = {
+      ...expected,
+      partizip: 'gestangcken',
+      präteritum: {
+        '1033': 'sting',
+        '1041': 'stingen',
+        '1098': 'stingst',
+        '1106': 'stingt',
+        '1548': 'sting',
+      },
+      k2präsens: {
+        '1033': 'stinge',
+        '1041': 'stingen',
+        '1098': 'stingest',
+        '1106': 'stinget',
+        '1548': 'stinge',
+      },
+    };
     const result = processDeRecord(part1_testObject);
     expect(result).toEqual(part1_expected);
   });
@@ -121,7 +138,24 @@ describe('processDeRecord', () => {
       weakEndings: true,
       stems: { präteritum: 'ing' },
     };
-    const part1_expected = { ...expected, partizip: 'gestingt' };
+    const part1_expected = {
+      ...expected,
+      partizip: 'gestingt',
+      präteritum: {
+        '1033': 'stingte',
+        '1041': 'stingten',
+        '1098': 'stingtest',
+        '1106': 'stingtet',
+        '1548': 'stingte',
+      },
+      k2präsens: {
+        '1033': 'stingte',
+        '1041': 'stingten',
+        '1098': 'stingtest',
+        '1106': 'stingtet',
+        '1548': 'stingte',
+      },
+    };
     const result = processDeRecord(part1_testObject);
     expect(result).toEqual(part1_expected);
   });
@@ -169,11 +203,11 @@ describe('processDeRecord matches real conjugations:', () => {
         '1548': 'brennt',
       },
       präteritum: {
-        '1033': 'brennte',
-        '1041': 'brennten',
-        '1098': 'brenntest',
-        '1106': 'brenntet',
-        '1548': 'brennte',
+        '1033': 'brannte',
+        '1041': 'brannten',
+        '1098': 'branntest',
+        '1106': 'branntet',
+        '1548': 'brannte',
       },
       translations: {
         en: ['burn', 'shine', 'distil'],
@@ -181,5 +215,62 @@ describe('processDeRecord matches real conjugations:', () => {
     };
     const result = processDeRecord(brennen);
     expect(result).toEqual(brennen_expected);
+  });
+
+  it('returns haben correctly', () => {
+    const haben = {
+      infinitive: 'haben',
+      language: LanguageMap.de,
+      translations: {
+        en: ['have'],
+      },
+      weakEndings: true,
+      stems: {
+        duEs: 'ha',
+        präteritum: 't',
+        partizip: 'b',
+      },
+    };
+
+    const haben_expected = {
+      hilfsverb: 'haben',
+      infinitive: 'haben',
+      language: 'de',
+      k2präsens: {
+        '1033': 'hätte',
+        '1041': 'hätten',
+        '1098': 'hättest',
+        '1106': 'hättet',
+        '1548': 'hätte',
+      },
+      konjunktiv: {
+        '1033': 'habe',
+        '1041': 'haben',
+        '1098': 'habest',
+        '1106': 'habet',
+        '1548': 'habe', // es
+      },
+      partizip: 'gehabt',
+      präsens: {
+        '1033': 'habe',
+        '1041': 'haben',
+        '1098': 'hast',
+        '1106': 'habt',
+        '1548': 'hat',
+      },
+      präteritum: {
+        '1033': 'hatte',
+        '1041': 'hatten',
+        '1098': 'hattest',
+        '1106': 'hattet',
+        '1548': 'hatte',
+      },
+      translations: {
+        en: ['have'],
+      },
+    };
+
+    const result = processDeRecord(haben);
+    expect(result).toEqual(haben_expected);
   });
 });

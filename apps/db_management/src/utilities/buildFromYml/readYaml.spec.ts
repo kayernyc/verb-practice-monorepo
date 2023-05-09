@@ -1,5 +1,5 @@
 import path from 'path';
-import { findRelativePathToData } from './readYaml.js';
+import { findRelativePathToData } from './readYaml';
 
 describe('findRelativePathToData', () => {
   it('finds the relative path', () => {

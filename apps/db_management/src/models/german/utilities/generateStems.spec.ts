@@ -1,60 +1,31 @@
 import { GermanVerb } from 'german-types';
-import generateStems from './generateStems';
+import { generateStems } from './generateStems';
 import { LanguageMap } from 'global-types';
 
 describe('generateStems creates the correct stem', () => {
-  const testConfig: { config: GermanVerb; expected: string }[] = [
+  const testConfig: { infinitive: string; expected: string }[] = [
     {
-      config: {
-        language: LanguageMap.de,
-        drop: false,
-        strong: true,
-        hilfsverb: 'sein',
-        infinitive: 'fallen',
-        translations: { en: 'to fall' },
-        stems: { duEs: 'ä', präteritum: 'iel', k2präsens: 'iel' },
-      },
+      infinitive: 'fallen',
       expected: 'fall',
     },
     {
-      config: {
-        language: LanguageMap.de,
-        drop: false,
-        hilfsverb: 'haben',
-        infinitive: 'sammeln',
-        translations: { en: 'to gather, to collect' },
-        strong: false,
-      },
+      infinitive: 'sammeln',
       expected: 'sammel',
     },
     {
-      config: {
-        language: LanguageMap.de,
-        drop: false,
-        hilfsverb: 'haben',
-        infinitive: 'mißsammeln',
-        translations: { en: 'to gather, to miscollect' },
-        strong: false,
-      },
+      infinitive: 'mißsammeln',
       expected: 'mißsammel',
     },
     {
-      config: {
-        language: LanguageMap.de,
-        drop: false,
-        hilfsverb: 'haben',
-        infinitive: 'be|sammeln',
-        translations: { en: 'to gather, to be causing something' },
-        strong: false,
-      },
+      infinitive: 'be|sammeln',
       expected: 'sammel',
     },
   ];
 
   testConfig.forEach(
-    ({ config, expected }: { config: GermanVerb; expected: string }) => {
-      it(`removes the ending of ${config.infinitive} correctly`, () => {
-        expect(generateStems(config)).toEqual(expected);
+    ({ infinitive, expected }: { infinitive: string; expected: string }) => {
+      it(`removes the ending of ${infinitive} correctly`, () => {
+        expect(generateStems(infinitive)).toEqual(expected);
       });
     },
   );

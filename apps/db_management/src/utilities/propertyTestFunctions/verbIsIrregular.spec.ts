@@ -10,7 +10,7 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
       translations: { en: 'build' },
     };
 
-    const result = verbIsIrregular(bildenVerb, GERMAN_IRREGULAR_KEYS);
+    const result = verbIsIrregular(bildenVerb, [...GERMAN_IRREGULAR_KEYS]);
     expect(result).not.toBeTruthy();
   });
 
@@ -22,7 +22,7 @@ describe('verbIsIrregular correctly determines the state of the verb', () => {
       strong: true,
     };
 
-    const result = verbIsIrregular(bildenVerb, GERMAN_IRREGULAR_KEYS);
+    const result = verbIsIrregular(bildenVerb, [...GERMAN_IRREGULAR_KEYS]);
     expect(result).toBeTruthy();
   });
 });
