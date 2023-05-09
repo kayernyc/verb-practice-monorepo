@@ -57,10 +57,11 @@ export enum GermanTenses {
   k2präteritum = 'k2präteritum',
 }
 
-export type GermanIrregularSet = { GermanPronounKeys?: string };
-type GermanIrregularKeys = GermanTenses.präsens | GermanTenses.präteritum;
+export type GermanIrregularSet = Record<GermanPronounCode, string>;
 export type GermanIrregularObject = {
-  [key in GermanIrregularKeys]?: GermanIrregularSet;
+  // [key in GermanIrregularKeys]?: GermanIrregularSet;
+  [GermanTenses.präsens]: Record<GermanPronounCode, string>;
+  [GermanTenses.präteritum]: Record<GermanPronounCode, string>;
 };
 
 const ALL_GERMAN_STEMS = [
@@ -80,6 +81,7 @@ export type TranslationSet = {
 export type GermanVerbHydrated = {
   [key in GermanTenses]?: { [key in GermanPronounCode]: string };
 } & {
+  auxiliary?: boolean;
   hilfsverb: string;
   infinitive: string;
   language: LanguageMap;

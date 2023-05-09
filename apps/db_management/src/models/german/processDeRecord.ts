@@ -14,6 +14,7 @@ import { irregularPartizipConjugation } from './utilities/irregularPartizipConju
 import { generateStems } from './utilities/generateStems';
 import { präteritumConjugation } from './utilities/prateritumConjugation';
 import { konjunktiv2Conjugation } from './utilities/k2Conjugation';
+import { konjunktivConjugation } from './utilities/konjunktivConjugation';
 
 const createStandardConjugation = (
   infinitive: string,
@@ -124,12 +125,45 @@ export const processDeRecord = (record: LanguageVerbBase) => {
         );
       }
 
+      if ('konjunktiv' in stems && typeof stems.konjunktiv === 'string') {
+        hydratedVerb.konjunktiv = konjunktivConjugation(
+          infinitiveStem,
+          stems.konjunktiv,
+        );
+      }
+
       if (stems.k2präsens || stems.präteritum || weakEndings) {
         hydratedVerb.k2präsens = konjunktiv2Conjugation(
           infinitiveStem,
           stems.k2präsens || stems.präteritum || '',
           weakEndings || false,
         );
+      }
+    }
+
+    if ('irregular' in record && typeof record.irregular === 'object') {
+      const irregular = record.irregular;
+      for (const tense in irregular) {
+        const target = hydratedVerb[tense as GermanTenses];
+
+        if (
+          (tense === GermanTenses.präsens ||
+            tense === GermanTenses.präteritum) &&
+          typeof irregular[tense] === 'object'
+        ) {
+          const irregularTense = irregular[tense];
+
+          for (let pronoun in irregularTense) {
+            if (
+              target &&
+              pronoun in irregularTense &&
+              pronoun in GermanPronounCode
+            ) {
+              target[GermanPronounKeys[pronoun]] =
+                irregularTense[pronoun as unknown as GermanPronounCode];
+            }
+          }
+        }
       }
     }
   }

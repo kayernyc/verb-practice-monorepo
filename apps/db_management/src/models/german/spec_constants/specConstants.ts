@@ -2,22 +2,22 @@ import {
   GermanPronounKeys,
   GermanTenses,
   GermanVerb,
-  GermanStem,
+  GermanVerbHydrated,
 } from 'german-types';
-import { LanguageMap } from 'global-types';
+import { LanguageMap, LanguageVerbCandidate } from 'global-types';
 
-export const seinGermanVerb: GermanVerb = {
+export const seinGermanVerb: LanguageVerbCandidate = {
+  auxiliary: true,
   language: LanguageMap.de,
-  drop: false,
-  hilfsverb: 'haben',
+  hilfsverb: 'sein',
   infinitive: 'sein',
   irregular: {
     [GermanTenses.präsens]: {
-      [GermanPronounKeys.ich]: 'bin',
-      [GermanPronounKeys.wir]: 'sind',
-      [GermanPronounKeys.du]: 'bist',
-      [GermanPronounKeys.ihr]: 'seid',
-      [GermanPronounKeys.es]: 'ist',
+      ich: 'bin',
+      wir: 'sind',
+      du: 'bist',
+      ihr: 'seid',
+      es: 'ist',
     },
   },
   translations: { en: 'to be' },
@@ -27,42 +27,9 @@ export const seinGermanVerb: GermanVerb = {
   weakEndings: false,
 };
 
-export type DataObj = {
-  translations?: { [languageAbbr: string]: string | string[] };
-  hilfsverb?: string;
-  auxiliary: boolean;
-  partizip?: string;
-  strong?: [string: boolean] | boolean;
-  stems?: { [characterName: string]: string };
-  irregular?: { [key: string]: { [person: string]: string } };
-  weakEndings?: boolean;
-  drop?: boolean;
-};
-
-export const seinDataObject: DataObj = {
-  auxiliary: true,
-  irregular: {
-    präsens: {
-      ich: 'bin',
-      du: 'bist',
-      es: 'ist',
-      wir: 'sind',
-      ihr: 'seid',
-    },
-  },
+export const seinReturnObject: GermanVerbHydrated = {
+  language: LanguageMap.de,
   hilfsverb: 'sein',
-  partizip: 'gewesen',
-  strong: true,
-  stems: {
-    präteritum: 'war',
-    konjunktiv: 'sei',
-  },
-  translations: { en: 'to be' },
-};
-
-export const seinReturnObject = {
-  language: 'de',
-  hilfsverb: 'haben',
   infinitive: 'sein',
   partizip: 'gewesen',
   präsens: {
@@ -93,27 +60,25 @@ export const seinReturnObject = {
     [GermanPronounKeys.ihr]: 'wäret',
     [GermanPronounKeys.es]: 'wäre',
   },
+  translations: {
+    en: 'to be',
+  },
 };
 
-export const seinPräteritumExpected = seinReturnObject['präteritum'];
-
-export const habenGermanVerb: GermanVerb = {
+export const habenGermanVerb: LanguageVerbCandidate = {
   language: LanguageMap.de,
-  drop: false,
-  hilfsverb: 'haben',
   infinitive: 'haben',
-  translations: { en: 'to have' },
+  translations: { en: ['have'] },
   stems: {
     duEs: 'ha',
     präteritum: 't',
     partizip: 'b',
   },
-  strong: true,
   weakEndings: true,
 };
 
-export const habenReturnObject = {
-  language: 'de',
+export const habenReturnObject: GermanVerbHydrated = {
+  language: LanguageMap.de,
   hilfsverb: 'haben',
   infinitive: 'haben',
   partizip: 'gehabt',
@@ -144,6 +109,9 @@ export const habenReturnObject = {
     [GermanPronounKeys.du]: 'hättest',
     [GermanPronounKeys.ihr]: 'hättet',
     [GermanPronounKeys.es]: 'hätte',
+  },
+  translations: {
+    en: ['have'],
   },
 };
 

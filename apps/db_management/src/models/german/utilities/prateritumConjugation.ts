@@ -8,6 +8,7 @@ export const präteritumConjugation = (
   weakEndings: boolean,
 ): { [key: string]: string } => {
   const newStem = modifiedStem(stem, präteritum);
+
   // is it Kranton?
   const defaultEnding = kranton(stem) ? 'e' : '';
 

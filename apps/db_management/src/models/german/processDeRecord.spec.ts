@@ -1,9 +1,15 @@
-import { LanguageMap, LanguageVerbBase } from 'global-types';
+import { LanguageMap, LanguageVerbCandidate } from 'global-types';
 import { processDeRecord } from './processDeRecord';
 import { GermanVerbHydrated } from 'german-types';
+import {
+  habenGermanVerb,
+  habenReturnObject,
+  seinGermanVerb,
+  seinReturnObject,
+} from './spec_constants/specConstants';
 
 describe('processDeRecord', () => {
-  let testObject: LanguageVerbBase;
+  let testObject: LanguageVerbCandidate;
   let expected: GermanVerbHydrated;
 
   beforeEach(() => {
@@ -218,59 +224,12 @@ describe('processDeRecord matches real conjugations:', () => {
   });
 
   it('returns haben correctly', () => {
-    const haben = {
-      infinitive: 'haben',
-      language: LanguageMap.de,
-      translations: {
-        en: ['have'],
-      },
-      weakEndings: true,
-      stems: {
-        duEs: 'ha',
-        präteritum: 't',
-        partizip: 'b',
-      },
-    };
+    const result = processDeRecord(habenGermanVerb);
+    expect(result).toEqual(habenReturnObject);
+  });
 
-    const haben_expected = {
-      hilfsverb: 'haben',
-      infinitive: 'haben',
-      language: 'de',
-      k2präsens: {
-        '1033': 'hätte',
-        '1041': 'hätten',
-        '1098': 'hättest',
-        '1106': 'hättet',
-        '1548': 'hätte',
-      },
-      konjunktiv: {
-        '1033': 'habe',
-        '1041': 'haben',
-        '1098': 'habest',
-        '1106': 'habet',
-        '1548': 'habe', // es
-      },
-      partizip: 'gehabt',
-      präsens: {
-        '1033': 'habe',
-        '1041': 'haben',
-        '1098': 'hast',
-        '1106': 'habt',
-        '1548': 'hat',
-      },
-      präteritum: {
-        '1033': 'hatte',
-        '1041': 'hatten',
-        '1098': 'hattest',
-        '1106': 'hattet',
-        '1548': 'hatte',
-      },
-      translations: {
-        en: ['have'],
-      },
-    };
-
-    const result = processDeRecord(haben);
-    expect(result).toEqual(haben_expected);
+  it('returns sein correctly', () => {
+    const result = processDeRecord(seinGermanVerb);
+    expect(result).toEqual(seinReturnObject);
   });
 });

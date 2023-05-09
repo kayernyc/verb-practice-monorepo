@@ -2,6 +2,7 @@ module.exports = {
   coverageDirectory: './coverage/',
   collectCoverage: true,
   collectCoverageFrom: ['./src/**/*.ts', 'scripts/**/*.ts', '!./src/data/**/*'],
+  maxWorkers: '50%',
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   moduleNameMapper: {
     '@controllers(.*)$': '<rootDir>/src/controllers/$1',
