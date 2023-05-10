@@ -1,4 +1,10 @@
-export function generateStems(infinitive: string): string {
+import { RegExpGroups } from 'global-types/dist/RegExUtilities';
+
+const geDetector =
+  /(?<particleGe>ge)(?=[bcdfghjklmnpqrstvwxyzß][aeiouäöü][a-zß]*)/;
+
+export function generateStems(infinitive: string): [string, string] {
+  let particle = '';
   let regularStem = infinitive;
 
   if (regularStem.includes('|')) {
@@ -7,7 +13,7 @@ export function generateStems(infinitive: string): string {
 
   // knien is an exception
   if (regularStem === 'knien') {
-    return 'knie';
+    return ['knie', ''];
   }
 
   // remove en or n ending
@@ -16,5 +22,14 @@ export function generateStems(infinitive: string): string {
       ? regularStem.slice(0, -2)
       : regularStem.slice(0, -1);
 
-  return regularStem;
+  if (regularStem.slice(0, 2) === 'ge') {
+    const match: RegExpGroups<'particleGe'> = geDetector.exec(regularStem);
+
+    if (match && match.groups?.particleGe) {
+      regularStem = regularStem.slice(2);
+      particle = 'ge';
+    }
+  }
+
+  return [regularStem, particle];
 }

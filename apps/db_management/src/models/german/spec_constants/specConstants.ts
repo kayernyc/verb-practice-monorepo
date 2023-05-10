@@ -1,7 +1,6 @@
 import {
   GermanPronounKeys,
   GermanTenses,
-  GermanVerb,
   GermanVerbHydrated,
 } from 'german-types';
 import { LanguageMap, LanguageVerbCandidate } from 'global-types';
@@ -115,27 +114,18 @@ export const habenReturnObject: GermanVerbHydrated = {
   },
 };
 
-export const habenPräteritumExpected = {
-  [GermanPronounKeys.ich]: 'hatte',
-  [GermanPronounKeys.wir]: 'hatten',
-  [GermanPronounKeys.du]: 'hattest',
-  [GermanPronounKeys.ihr]: 'hattet',
-  [GermanPronounKeys.es]: 'hatte',
-};
-
-export const werdenGermanVerb: GermanVerb = {
+export const werdenGermanVerb: LanguageVerbCandidate = {
   language: LanguageMap.de,
-  drop: false,
   hilfsverb: 'sein',
   infinitive: 'werden',
   irregular: {
     [GermanTenses.präsens]: {
-      [GermanPronounKeys.du]: 'wirst',
-      [GermanPronounKeys.es]: 'wird',
+      du: 'wirst',
+      es: 'wird',
     },
     [GermanTenses.präteritum]: {
-      [GermanPronounKeys.ich]: 'wurde',
-      [GermanPronounKeys.es]: 'wurde',
+      ich: 'wurde',
+      es: 'wurde',
     },
   },
   translations: { en: 'to become, to grow' },
@@ -177,12 +167,162 @@ export const werdenReturnObject = {
     [GermanPronounKeys.ihr]: 'würdet',
     [GermanPronounKeys.es]: 'würde',
   },
+  translations: { en: 'to become, to grow' },
 };
 
-export const werdenPräteritumExpected = {
-  [GermanPronounKeys.ich]: 'wurde',
-  [GermanPronounKeys.wir]: 'wurden',
-  [GermanPronounKeys.du]: 'wurdest',
-  [GermanPronounKeys.ihr]: 'wurdet',
-  [GermanPronounKeys.es]: 'wurde',
+export const könnenGermanVerb: LanguageVerbCandidate = {
+  infinitive: 'können',
+  language: LanguageMap.de,
+  translations: {
+    en: ['can', 'may', 'are able to', 'to know how'],
+  },
+  modal: true,
+  strong: true,
+  weakEndings: true,
+  stems: {
+    präsensSingular: 'a',
+    präteritum: 'o',
+  },
+  drop: true,
+};
+
+export const könnenReturnObject = {
+  language: LanguageMap.de,
+  hilfsverb: 'haben',
+  infinitive: 'können',
+  partizip: 'gekonnt',
+  präsens: {
+    [GermanPronounKeys.ich]: 'kann',
+    [GermanPronounKeys.wir]: 'können',
+    [GermanPronounKeys.du]: 'kannst',
+    [GermanPronounKeys.ihr]: 'könnt',
+    [GermanPronounKeys.es]: 'kann',
+  },
+  präteritum: {
+    [GermanPronounKeys.ich]: 'konnte',
+    [GermanPronounKeys.wir]: 'konnten',
+    [GermanPronounKeys.du]: 'konntest',
+    [GermanPronounKeys.ihr]: 'konntet',
+    [GermanPronounKeys.es]: 'konnte',
+  },
+  konjunktiv: {
+    [GermanPronounKeys.ich]: 'könne',
+    [GermanPronounKeys.wir]: 'können',
+    [GermanPronounKeys.du]: 'könnest',
+    [GermanPronounKeys.ihr]: 'könnet',
+    [GermanPronounKeys.es]: 'könne',
+  },
+  k2präsens: {
+    [GermanPronounKeys.ich]: 'könnte',
+    [GermanPronounKeys.wir]: 'könnten',
+    [GermanPronounKeys.du]: 'könntest',
+    [GermanPronounKeys.ihr]: 'könntet',
+    [GermanPronounKeys.es]: 'könnte',
+  },
+  translations: {
+    en: ['can', 'may', 'are able to', 'to know how'],
+  },
+};
+
+export const gelingenGermanVerb: LanguageVerbCandidate = {
+  infinitive: 'gelingen',
+  language: LanguageMap.de,
+  translations: {
+    en: ['succeed'],
+  },
+  hilfsverb: 'sein',
+  stems: {
+    präteritum: 'a',
+    partizip: 'u',
+  },
+};
+
+export const gelingenReturnObject = {
+  language: LanguageMap.de,
+  hilfsverb: 'sein',
+  infinitive: 'gelingen',
+  partizip: 'gelungen',
+  präsens: {
+    [GermanPronounKeys.ich]: 'gelinge',
+    [GermanPronounKeys.wir]: 'gelingen',
+    [GermanPronounKeys.du]: 'gelingst',
+    [GermanPronounKeys.ihr]: 'gelingt',
+    [GermanPronounKeys.es]: 'gelingt',
+  },
+  präteritum: {
+    [GermanPronounKeys.ich]: 'gelang',
+    [GermanPronounKeys.wir]: 'gelangen',
+    [GermanPronounKeys.du]: 'gelangst',
+    [GermanPronounKeys.ihr]: 'gelangt',
+    [GermanPronounKeys.es]: 'gelang',
+  },
+  konjunktiv: {
+    [GermanPronounKeys.ich]: 'gelinge',
+    [GermanPronounKeys.wir]: 'gelingen',
+    [GermanPronounKeys.du]: 'gelingest',
+    [GermanPronounKeys.ihr]: 'gelinget',
+    [GermanPronounKeys.es]: 'gelinge',
+  },
+  k2präsens: {
+    [GermanPronounKeys.ich]: 'gelänge',
+    [GermanPronounKeys.wir]: 'gelängen',
+    [GermanPronounKeys.du]: 'gelängest',
+    [GermanPronounKeys.ihr]: 'gelänget',
+    [GermanPronounKeys.es]: 'gelänge',
+  },
+  translations: {
+    en: ['succeed'],
+  },
+};
+
+export const gehenGermanVerb: LanguageVerbCandidate = {
+  infinitive: 'gehen',
+  language: LanguageMap.de,
+  translations: {
+    en: ['go'],
+  },
+  hilfsverb: 'sein',
+  stems: {
+    präteritum: 'ing',
+    k2präsens: 'ing',
+    partizip: 'ang',
+  },
+};
+
+export const gehenReturnObject = {
+  language: LanguageMap.de,
+  hilfsverb: 'sein',
+  infinitive: 'gehen',
+  partizip: 'gegangen',
+  präsens: {
+    [GermanPronounKeys.ich]: 'gehe',
+    [GermanPronounKeys.wir]: 'gehen',
+    [GermanPronounKeys.du]: 'gehst',
+    [GermanPronounKeys.ihr]: 'geht',
+    [GermanPronounKeys.es]: 'geht',
+  },
+  präteritum: {
+    [GermanPronounKeys.ich]: 'ging',
+    [GermanPronounKeys.wir]: 'gingen',
+    [GermanPronounKeys.du]: 'gingst',
+    [GermanPronounKeys.ihr]: 'gingt',
+    [GermanPronounKeys.es]: 'ging',
+  },
+  konjunktiv: {
+    [GermanPronounKeys.ich]: 'gehe',
+    [GermanPronounKeys.wir]: 'gehen',
+    [GermanPronounKeys.du]: 'gehest',
+    [GermanPronounKeys.ihr]: 'gehet',
+    [GermanPronounKeys.es]: 'gehe',
+  },
+  k2präsens: {
+    [GermanPronounKeys.ich]: 'ginge',
+    [GermanPronounKeys.wir]: 'gingen',
+    [GermanPronounKeys.du]: 'gingest',
+    [GermanPronounKeys.ihr]: 'ginget',
+    [GermanPronounKeys.es]: 'ginge',
+  },
+  translations: {
+    en: ['go'],
+  },
 };

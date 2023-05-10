@@ -2,10 +2,18 @@ import { LanguageMap, LanguageVerbCandidate } from 'global-types';
 import { processDeRecord } from './processDeRecord';
 import { GermanVerbHydrated } from 'german-types';
 import {
+  gehenGermanVerb,
+  gehenReturnObject,
+  gelingenGermanVerb,
+  gelingenReturnObject,
   habenGermanVerb,
   habenReturnObject,
+  könnenGermanVerb,
+  könnenReturnObject,
   seinGermanVerb,
   seinReturnObject,
+  werdenGermanVerb,
+  werdenReturnObject,
 } from './spec_constants/specConstants';
 
 describe('processDeRecord', () => {
@@ -106,7 +114,7 @@ describe('processDeRecord', () => {
 
   it('returns a verb with custom vcc partizip combo', () => {
     const part1_testObject = { ...testObject, stems: { partizip: 'ang' } };
-    const part1_expected = { ...expected, partizip: 'gestangcken' };
+    const part1_expected = { ...expected, partizip: 'gestangen' };
     const result = processDeRecord(part1_testObject);
     expect(result).toEqual(part1_expected);
   });
@@ -118,7 +126,7 @@ describe('processDeRecord', () => {
     };
     const part1_expected = {
       ...expected,
-      partizip: 'gestangcken',
+      partizip: 'gestangen',
       präteritum: {
         '1033': 'sting',
         '1041': 'stingen',
@@ -231,5 +239,25 @@ describe('processDeRecord matches real conjugations:', () => {
   it('returns sein correctly', () => {
     const result = processDeRecord(seinGermanVerb);
     expect(result).toEqual(seinReturnObject);
+  });
+
+  it('returns werden correctly', () => {
+    const result = processDeRecord(werdenGermanVerb);
+    expect(result).toEqual(werdenReturnObject);
+  });
+
+  it('returns können correctly', () => {
+    const result = processDeRecord(könnenGermanVerb);
+    expect(result).toEqual(könnenReturnObject);
+  });
+
+  it('returns gelingen correctly', () => {
+    const result = processDeRecord(gelingenGermanVerb);
+    expect(result).toEqual(gelingenReturnObject);
+  });
+
+  it('returns gehen correctly', () => {
+    const result = processDeRecord(gehenGermanVerb);
+    expect(result).toEqual(gehenReturnObject);
   });
 });

@@ -4,6 +4,7 @@ import { modifiedStem } from './modifiedStem';
 export const konjunktivConjugation = (
   stem: string,
   konjunktiv: string,
+  particle = '',
 ): {
   [key: string]: string;
 } => {
@@ -14,10 +15,10 @@ export const konjunktivConjugation = (
   }
 
   return {
-    [GermanPronounKeys.ich]: `${newStem}${defaultEnding}`,
-    [GermanPronounKeys.du]: `${newStem}${defaultEnding}st`,
-    [GermanPronounKeys.es]: `${newStem}${defaultEnding}`,
-    [GermanPronounKeys.wir]: `${newStem}en`,
-    [GermanPronounKeys.ihr]: `${newStem}et`,
+    [GermanPronounKeys.ich]: `${particle}${newStem}${defaultEnding}`,
+    [GermanPronounKeys.du]: `${particle}${newStem}${defaultEnding}st`,
+    [GermanPronounKeys.es]: `${particle}${newStem}${defaultEnding}`,
+    [GermanPronounKeys.wir]: `${particle}${newStem}en`,
+    [GermanPronounKeys.ihr]: `${particle}${newStem}et`,
   };
 };

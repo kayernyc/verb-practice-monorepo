@@ -15,45 +15,47 @@ import { generateStems } from './utilities/generateStems';
 import { präteritumConjugation } from './utilities/prateritumConjugation';
 import { konjunktiv2Conjugation } from './utilities/k2Conjugation';
 import { konjunktivConjugation } from './utilities/konjunktivConjugation';
+import { präsensSingular } from './utilities/präsensSingular';
 
 const createStandardConjugation = (
   infinitive: string,
   stem: string,
+  particle = '',
 ): Omit<
   GermanVerbHydrated,
   'language' | 'translations' | 'hilfsverb' | 'infinitive' | 'stems'
 > => {
-  const defaultEnding = kranton(infinitive.slice(-2)) ? 'e' : '';
+  const defaultEnding = kranton(stem) ? 'e' : '';
 
   return {
     partizip: `ge${stem}t`,
     [GermanTenses.präsens]: {
-      [GermanPronounKeys.ich]: `${stem}e`,
-      [GermanPronounKeys.du]: `${stem}${defaultEnding}st`,
-      [GermanPronounKeys.es]: `${stem}${defaultEnding}t`,
+      [GermanPronounKeys.ich]: `${particle}${stem}e`,
+      [GermanPronounKeys.du]: `${particle}${stem}${defaultEnding}st`,
+      [GermanPronounKeys.es]: `${particle}${stem}${defaultEnding}t`,
       [GermanPronounKeys.wir]: infinitive,
-      [GermanPronounKeys.ihr]: `${stem}${defaultEnding}t`,
+      [GermanPronounKeys.ihr]: `${particle}${stem}${defaultEnding}t`,
     },
     [GermanTenses.konjunktiv]: {
-      [GermanPronounKeys.ich]: `${stem}e`,
-      [GermanPronounKeys.du]: `${stem}est`,
-      [GermanPronounKeys.es]: `${stem}e`,
+      [GermanPronounKeys.ich]: `${particle}${stem}e`,
+      [GermanPronounKeys.du]: `${particle}${stem}est`,
+      [GermanPronounKeys.es]: `${particle}${stem}e`,
       [GermanPronounKeys.wir]: infinitive,
-      [GermanPronounKeys.ihr]: `${stem}et`,
+      [GermanPronounKeys.ihr]: `${particle}${stem}et`,
     },
     [GermanTenses.präteritum]: {
-      [GermanPronounKeys.ich]: `${stem}te`,
-      [GermanPronounKeys.du]: `${stem}test`,
-      [GermanPronounKeys.es]: `${stem}te`,
-      [GermanPronounKeys.wir]: `${stem}ten`,
-      [GermanPronounKeys.ihr]: `${stem}tet`,
+      [GermanPronounKeys.ich]: `${particle}${stem}te`,
+      [GermanPronounKeys.du]: `${particle}${stem}test`,
+      [GermanPronounKeys.es]: `${particle}${stem}te`,
+      [GermanPronounKeys.wir]: `${particle}${stem}ten`,
+      [GermanPronounKeys.ihr]: `${particle}${stem}tet`,
     },
     [GermanTenses.k2präsens]: {
-      [GermanPronounKeys.ich]: `${stem}te`,
-      [GermanPronounKeys.du]: `${stem}test`,
-      [GermanPronounKeys.es]: `${stem}te`,
-      [GermanPronounKeys.wir]: `${stem}ten`,
-      [GermanPronounKeys.ihr]: `${stem}tet`,
+      [GermanPronounKeys.ich]: `${particle}${stem}te`,
+      [GermanPronounKeys.du]: `${particle}${stem}test`,
+      [GermanPronounKeys.es]: `${particle}${stem}te`,
+      [GermanPronounKeys.wir]: `${particle}${stem}ten`,
+      [GermanPronounKeys.ihr]: `${particle}${stem}tet`,
     },
   } as Omit<
     GermanVerbHydrated,
@@ -71,7 +73,7 @@ export const processDeRecord = (record: LanguageVerbBase) => {
   }
 
   const { infinitive, language, translations, weakEndings } = record;
-  const infinitiveStem = generateStems(infinitive);
+  const [infinitiveStem, particle] = generateStems(infinitive);
 
   const hilfsverb: string =
     'hilfsverb' in record && typeof record.hilfsverb === 'string'
@@ -83,7 +85,7 @@ export const processDeRecord = (record: LanguageVerbBase) => {
     hilfsverb,
     language,
     translations,
-    ...createStandardConjugation(record.infinitive, infinitiveStem),
+    ...createStandardConjugation(record.infinitive, infinitiveStem, particle),
   };
 
   if ('partizip' in record && record.partizip) {
@@ -93,6 +95,21 @@ export const processDeRecord = (record: LanguageVerbBase) => {
   if (verbIsIrregular(record, [...GERMAN_IRREGULAR_KEYS])) {
     if ('stems' in record && typeof record.stems === 'object') {
       const stems = record.stems;
+
+      if (
+        'präsensSingular' in stems &&
+        typeof stems.präsensSingular === 'string'
+      ) {
+        const [newIch, newDu, newEs] = präsensSingular(
+          infinitiveStem,
+          stems.präsensSingular,
+          weakEndings,
+        );
+        hydratedVerb.präsens![GermanPronounCode.ich] = newIch;
+        hydratedVerb.präsens![GermanPronounCode.du] = newDu;
+        hydratedVerb.präsens![GermanPronounCode.es] = newEs;
+      }
+
       if ('duEs' in stems && typeof stems.duEs === 'string') {
         const [duValue, esValue] = duEsConjugation(
           stems.duEs,
@@ -122,6 +139,7 @@ export const processDeRecord = (record: LanguageVerbBase) => {
           infinitiveStem,
           stems.präteritum,
           weakEndings || false,
+          particle,
         );
       }
 
@@ -129,6 +147,7 @@ export const processDeRecord = (record: LanguageVerbBase) => {
         hydratedVerb.konjunktiv = konjunktivConjugation(
           infinitiveStem,
           stems.konjunktiv,
+          particle,
         );
       }
 
@@ -137,6 +156,7 @@ export const processDeRecord = (record: LanguageVerbBase) => {
           infinitiveStem,
           stems.k2präsens || stems.präteritum || '',
           weakEndings || false,
+          particle,
         );
       }
     }

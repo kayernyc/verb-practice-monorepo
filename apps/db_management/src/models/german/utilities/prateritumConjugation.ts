@@ -6,6 +6,7 @@ export const präteritumConjugation = (
   stem: string,
   präteritum: string,
   weakEndings: boolean,
+  particle = '',
 ): { [key: string]: string } => {
   const newStem = modifiedStem(stem, präteritum);
 
@@ -13,10 +14,18 @@ export const präteritumConjugation = (
   const defaultEnding = kranton(stem) ? 'e' : '';
 
   return {
-    [GermanPronounKeys.ich]: `${newStem}${weakEndings ? 'te' : defaultEnding}`,
-    [GermanPronounKeys.du]: `${newStem}${weakEndings ? 'te' : defaultEnding}st`,
-    [GermanPronounKeys.es]: `${newStem}${weakEndings ? 'te' : defaultEnding}`,
-    [GermanPronounKeys.wir]: `${newStem}${weakEndings ? 't' : ''}en`,
-    [GermanPronounKeys.ihr]: `${newStem}${weakEndings ? 'te' : defaultEnding}t`,
+    [GermanPronounKeys.ich]: `${particle}${newStem}${
+      weakEndings ? 'te' : defaultEnding
+    }`,
+    [GermanPronounKeys.du]: `${particle}${newStem}${
+      weakEndings ? 'te' : defaultEnding
+    }st`,
+    [GermanPronounKeys.es]: `${particle}${newStem}${
+      weakEndings ? 'te' : defaultEnding
+    }`,
+    [GermanPronounKeys.wir]: `${particle}${newStem}${weakEndings ? 't' : ''}en`,
+    [GermanPronounKeys.ihr]: `${particle}${newStem}${
+      weakEndings ? 'te' : defaultEnding
+    }t`,
   };
 };

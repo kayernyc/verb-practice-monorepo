@@ -14,6 +14,7 @@ export const konjunktiv2Conjugation = (
   stem: string,
   irregularStem: string,
   weakEndings: boolean,
+  particle = '',
 ): { [key: string]: string } => {
   let newStem = modifiedStem(stem, irregularStem);
   let defaultEnding = 'e';
@@ -36,15 +37,14 @@ export const konjunktiv2Conjugation = (
   }
 
   if (weakEndings) {
-    // does new have a single vowel that can take an umlaut?
     defaultEnding = 'te';
   }
 
   return {
-    [GermanPronounKeys.ich]: `${newStem}${defaultEnding}`,
-    [GermanPronounKeys.du]: `${newStem}${defaultEnding}st`,
-    [GermanPronounKeys.es]: `${newStem}${defaultEnding}`,
-    [GermanPronounKeys.wir]: `${newStem}${defaultEnding}n`,
-    [GermanPronounKeys.ihr]: `${newStem}${defaultEnding}t`,
+    [GermanPronounKeys.ich]: `${particle}${newStem}${defaultEnding}`,
+    [GermanPronounKeys.du]: `${particle}${newStem}${defaultEnding}st`,
+    [GermanPronounKeys.es]: `${particle}${newStem}${defaultEnding}`,
+    [GermanPronounKeys.wir]: `${particle}${newStem}${defaultEnding}n`,
+    [GermanPronounKeys.ihr]: `${particle}${newStem}${defaultEnding}t`,
   };
 };

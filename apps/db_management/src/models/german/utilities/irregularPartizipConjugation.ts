@@ -1,5 +1,6 @@
 import { firstVowelGroupRegex } from 'german-types';
 import verbIsInseparable from '../propertyTestFunctions/inseparable';
+import { processStemSubstitution } from './processStemSubstitution';
 
 export function irregularPartizipConjugation({
   stem,
@@ -18,17 +19,27 @@ export function irregularPartizipConjugation({
     return `${stem}t`;
   }
 
-  if (!partizip && !weakEndings && !präteritum) {
-    return `ge${infinitive}`;
-  }
+  if (!partizip) {
+    if (weakEndings && präteritum) {
+      const newStem = processStemSubstitution({
+        regularStem: stem,
+        irregularStem: präteritum,
+      });
+      return `ge${newStem}t`;
+      // return stem.replace(firstVowelGroupRegex, `ge$1${präteritum}t`);
+    }
 
-  if (weakEndings && präteritum && !partizip) {
-    return stem.replace(firstVowelGroupRegex, `ge$1${präteritum}t`);
+    if (!weakEndings && !präteritum) {
+      return `ge${infinitive}`;
+    }
   }
 
   let builtStem = stem;
   if (partizip) {
-    builtStem = stem.replace(firstVowelGroupRegex, `$1${partizip}$3`);
+    builtStem = processStemSubstitution({
+      regularStem: stem,
+      irregularStem: partizip,
+    });
     builtStem = `ge${builtStem}`;
   }
 

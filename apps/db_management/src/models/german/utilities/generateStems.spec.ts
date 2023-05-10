@@ -1,29 +1,45 @@
-import { GermanVerb } from 'german-types';
 import { generateStems } from './generateStems';
-import { LanguageMap } from 'global-types';
 
 describe('generateStems creates the correct stem', () => {
-  const testConfig: { infinitive: string; expected: string }[] = [
+  const testConfig: { infinitive: string; expected: [string, string] }[] = [
     {
       infinitive: 'fallen',
-      expected: 'fall',
+      expected: ['fall', ''],
     },
     {
       infinitive: 'sammeln',
-      expected: 'sammel',
+      expected: ['sammel', ''],
     },
     {
       infinitive: 'mißsammeln',
-      expected: 'mißsammel',
+      expected: ['mißsammel', ''],
     },
     {
       infinitive: 'be|sammeln',
-      expected: 'sammel',
+      expected: ['sammel', ''],
+    },
+    {
+      infinitive: 'gehen',
+      expected: ['geh', ''],
+    },
+    {
+      infinitive: 'genießen',
+      expected: ['nieß', 'ge'],
+    },
+    {
+      infinitive: 'gelingen',
+      expected: ['ling', 'ge'],
     },
   ];
 
   testConfig.forEach(
-    ({ infinitive, expected }: { infinitive: string; expected: string }) => {
+    ({
+      infinitive,
+      expected,
+    }: {
+      infinitive: string;
+      expected: [string, string];
+    }) => {
       it(`removes the ending of ${infinitive} correctly`, () => {
         expect(generateStems(infinitive)).toEqual(expected);
       });

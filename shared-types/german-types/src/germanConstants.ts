@@ -1,7 +1,7 @@
 export const firstVowelGroupRegex =
-  /\b([bcdfghjklmnpqrstvwxyzß]+)([aeiouäöü]+)([bcdfghjklmnpqrstvwxyzß][a-zß]+)\b/;
+  /\b([bcdfghjklmnpqrstvwxyzß]+)([aeiouäöü]+)([bcdfghjklmnpqrstvwxyzß][a-zß]*)\b/;
 
-export const inseperableRegex = /^(?<prefix>be|emp|ent|er|ge|miß|ver|zer)(.*)/;
+export const inseperableRegex = /^(?<prefix>be|emp|ent|er|miß|ver|zer)(.*)/;
 export type SeperableGermanParticles =
   | 'ab'
   | 'an'
@@ -159,11 +159,13 @@ export const GermanParticleRules = {
   dabei:
     'The prefixes ‚da\' and "dabei" mean "there" — "dabei" has the sense of staying with something that is going on',
   dar: '‚dar’ is used when the main verb is done for others. It is not a particle that can be used on its own.',
-  durch: '"durch" has the meaning of entering a process with purpose and coming out the other end.',
+  durch:
+    '"durch" has the meaning of entering a process with purpose and coming out the other end.',
   ein: '‚ein’ means in, into, inward, it is dative.',
   empor: '"empor" has the meaning of "upwards"',
   entgegen: '"entgegen" means "toward" or "against"',
-  entlang: '"entlang-" means "along". It can be affixed to just about any verb of motion.',
+  entlang:
+    '"entlang-" means "along". It can be affixed to just about any verb of motion.',
   entzwei: '"entzwei" means "asunder", "in half", "into two pieces"',
   fehl: '"fehl-" has the sense of "wrong" or "false".',
   fern: '"fern"means "far" and corresponds to the English "tele". It more often affixed to nouns (e.g. "die Fernbahn [long-distance rail].',
@@ -175,9 +177,12 @@ export const GermanParticleRules = {
   her: '"her indicates motion toward the speaker, "hither". It can also combine with a number of other prefixes, making their direction more precise. Note that these prefixes do not necessarily replace prepositions.',
   herab:
     '"herab" means "down from" or "off from". Again, the direction is toward the point of view of the speaker".',
-  heran: '"heran": has the meaning of "approaching toward [the point of view of the speaker]".',
-  herauf: '"herauf" means "up from," "out of" — toward the point of view of the speaker.',
-  heraus: '"heraus" means "from," "out of" — toward the point of view of the speaker.',
+  heran:
+    '"heran": has the meaning of "approaching toward [the point of view of the speaker]".',
+  herauf:
+    '"herauf" means "up from," "out of" — toward the point of view of the speaker.',
+  heraus:
+    '"heraus" means "from," "out of" — toward the point of view of the speaker.',
   herbei: '"herbei" means "(towards) over here".',
   herein:
     '"herein" means to "come in", i.e. into a real or metaphorical space that marks the speaker\'s point of orientation.',
@@ -194,7 +199,8 @@ export const GermanParticleRules = {
   heim: '"heim" means "(to) home"',
   hoch: '"hoch," when affixed to a verb, indicates an upward motion or position.',
   mit: 'mit means with, and is dative.',
-  statt: '"statt" does not have a specific meaning as a prefix and appears in just two verbs.',
+  statt:
+    '"statt" does not have a specific meaning as a prefix and appears in just two verbs.',
   über: '‚über’ means over, and can be accusative or dative.',
   um: '"um" can carry a variety of meanings including "around," "down," and "over." It also can denote substantial sorts of change.',
   vor: '‚vor’ means "before," "forward," "pre-," and "pro", and as a temporal preposition, it is dative.',

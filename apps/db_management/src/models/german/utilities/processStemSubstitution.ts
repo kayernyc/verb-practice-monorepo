@@ -28,7 +28,7 @@ const matchSet = (testString: string, regex: RegExp) => {
   return ['', '', ''];
 };
 
-export const processStem = ({
+export const processStemSubstitution = ({
   regularStem,
   irregularStem,
 }: {
