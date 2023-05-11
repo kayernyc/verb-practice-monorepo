@@ -1,6 +1,6 @@
 import { modifiedStem } from '../utilities/modifiedStem';
 
-export const präsensSingular = (
+export const hydratePräsensSingular = (
   stem: string,
   irregularStem: string,
   dropEndings = false,

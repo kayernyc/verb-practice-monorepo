@@ -1,8 +1,8 @@
-import { duEsConjugation } from './hydrateDuEsConjugation';
+import { hydrateDuEsConjugation } from './hydrateDuEsConjugation';
 
 describe('hydrate irregular duEs creates correct du and es for präsens', () => {
   it('creates correct duEs for haben', () => {
-    const result = duEsConjugation('ha', {
+    const result = hydrateDuEsConjugation('ha', {
       1033: 'habe',
       1041: 'haben',
       1098: 'habst',
@@ -14,7 +14,7 @@ describe('hydrate irregular duEs creates correct du and es for präsens', () => 
   });
 
   it('creates correct duEs for sterben', () => {
-    const result = duEsConjugation('i', {
+    const result = hydrateDuEsConjugation('i', {
       1033: 'sterbe',
       1041: 'sterben',
       1098: 'sterbst',
@@ -26,7 +26,7 @@ describe('hydrate irregular duEs creates correct du and es for präsens', () => 
   });
 
   it('creates correct duEs for nehmen', () => {
-    const result = duEsConjugation('imm', {
+    const result = hydrateDuEsConjugation('imm', {
       1033: 'nehme',
       1041: 'nehmen',
       1098: 'nehmst',
@@ -38,7 +38,7 @@ describe('hydrate irregular duEs creates correct du and es for präsens', () => 
   });
 
   it('creates correct duEs for fakenehmen', () => {
-    const result = duEsConjugation('t', {
+    const result = hydrateDuEsConjugation('t', {
       1033: 'nehme',
       1041: 'nehmen',
       1098: 'nehmst',
@@ -50,7 +50,7 @@ describe('hydrate irregular duEs creates correct du and es for präsens', () => 
   });
 
   it('creates correct duEs for stehlen', () => {
-    const result = duEsConjugation('ie', {
+    const result = hydrateDuEsConjugation('ie', {
       1033: 'stehle',
       1041: 'stehlen',
       1098: 'stehlst',

@@ -14,7 +14,7 @@
       "@models/*": ["./models/*"],
       "@germanHydrationFunctions/*": ["./models/german/hydrationFunctions/*.ts"],
       "@germanUtilities/*": ["./models/german/utilities/*.ts"],
-      "@tilities/*": ["./utilities/*"],
+      "@utilities/*": ["./utilities/*"],
     }
   },
   "include": ["./src"]

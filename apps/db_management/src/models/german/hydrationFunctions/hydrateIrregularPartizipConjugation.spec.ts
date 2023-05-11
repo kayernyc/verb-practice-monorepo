@@ -1,10 +1,10 @@
-import { generateStems } from './generateStems';
-import { irregularPartizipConjugation } from './irregularPartizipConjugation';
+import { generateStems } from '@germanUtilities/generateStems';
+import { hydrateIrregularPartizipConjugation } from './hydrateIrregularPartizipConjugation';
 
 describe('irregularPartizipConjugation handles irregulars', () => {
   it('conjugates haben partizip correctly', () => {
     const [stem] = generateStems('haben');
-    const partizip = irregularPartizipConjugation({
+    const partizip = hydrateIrregularPartizipConjugation({
       stem,
       infinitive: 'haben',
       präteritum: 't',
@@ -16,7 +16,7 @@ describe('irregularPartizipConjugation handles irregulars', () => {
 
   it('conjugates schwimmen partizip correctly', () => {
     const [stem] = generateStems('schwimmen');
-    const partizip = irregularPartizipConjugation({
+    const partizip = hydrateIrregularPartizipConjugation({
       stem,
       partizip: 'o',
       infinitive: 'schwimmen',
@@ -26,7 +26,7 @@ describe('irregularPartizipConjugation handles irregulars', () => {
 
   it('conjugates bringen partizip correctly', () => {
     const [stem] = generateStems('bringen');
-    const partizip = irregularPartizipConjugation({
+    const partizip = hydrateIrregularPartizipConjugation({
       stem,
       infinitive: 'bringen',
       präteritum: 'ach',
@@ -37,7 +37,7 @@ describe('irregularPartizipConjugation handles irregulars', () => {
 
   it('conjugates denken partizip correctly', () => {
     const [stem] = generateStems('denken');
-    const partizip = irregularPartizipConjugation({
+    const partizip = hydrateIrregularPartizipConjugation({
       stem,
       infinitive: 'denken',
       präteritum: 'ach',
@@ -48,7 +48,7 @@ describe('irregularPartizipConjugation handles irregulars', () => {
 
   it('conjugates brennen partizip correctly', () => {
     const [stem] = generateStems('brennen');
-    const partizip = irregularPartizipConjugation({
+    const partizip = hydrateIrregularPartizipConjugation({
       stem,
       partizip: 'a',
       infinitive: 'brennen',
@@ -59,7 +59,7 @@ describe('irregularPartizipConjugation handles irregulars', () => {
 
   it('conjugates verkaufen partizip correctly', () => {
     const [stem] = generateStems('verkaufen');
-    const partizip = irregularPartizipConjugation({
+    const partizip = hydrateIrregularPartizipConjugation({
       stem,
       partizip: 'a',
       infinitive: 'verkaufen',
@@ -69,7 +69,7 @@ describe('irregularPartizipConjugation handles irregulars', () => {
 
   it('conjugates gehen partizip correctly', () => {
     const [stem] = generateStems('gehen');
-    const partizip = irregularPartizipConjugation({
+    const partizip = hydrateIrregularPartizipConjugation({
       stem,
       partizip: 'ang',
       infinitive: 'gehen',
@@ -80,7 +80,7 @@ describe('irregularPartizipConjugation handles irregulars', () => {
 
   it('conjugates genießen partizip correctly', () => {
     const [stem] = generateStems('genießen');
-    const partizip = irregularPartizipConjugation({
+    const partizip = hydrateIrregularPartizipConjugation({
       stem,
       partizip: 'oss',
       infinitive: 'genießen',
@@ -91,7 +91,7 @@ describe('irregularPartizipConjugation handles irregulars', () => {
 
   it('conjugates gelingen partizip correctly', () => {
     const [stem] = generateStems('gelingen');
-    const partizip = irregularPartizipConjugation({
+    const partizip = hydrateIrregularPartizipConjugation({
       stem,
       partizip: 'u',
       infinitive: 'gelingen',

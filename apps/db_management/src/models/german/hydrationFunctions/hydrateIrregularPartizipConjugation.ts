@@ -1,7 +1,7 @@
 import verbIsInseparable from '../propertyTestFunctions/inseparable';
 import { processStemSubstitution } from '@germanUtilities/processStemSubstitution';
 
-export function irregularPartizipConjugation({
+export function hydrateIrregularPartizipConjugation({
   stem,
   partizip,
   präteritum,

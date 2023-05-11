@@ -10,7 +10,7 @@ const umlautVersions: { [key: string]: string } = {
   u: 'ü',
 };
 
-export const konjunktiv2Conjugation = (
+export const hydrateKonjunktiv2Conjugation = (
   stem: string,
   irregularStem: string,
   weakEndings: boolean,

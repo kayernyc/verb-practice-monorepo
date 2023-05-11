@@ -6,7 +6,7 @@ const irregularStemRegex =
 const regularStemRegex =
   /(?<firstConst>[bcdfghjklmnpqrstvwxyzß]*)(?<vowelGroup>[aeiouäöü]*)(?<secondConst>[a-zß]*)/;
 
-export const duEsConjugation = (
+export const hydrateDuEsConjugation = (
   duEsStem: string,
   tense: Record<GermanPronounCode, string>,
 ): [string, string] => {

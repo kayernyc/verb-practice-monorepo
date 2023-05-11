@@ -2,7 +2,7 @@ import { GermanPronounKeys } from 'german-types';
 import kranton from '../propertyTestFunctions/kranton';
 import { modifiedStem } from '../utilities/modifiedStem';
 
-export const präteritumConjugation = (
+export const hydratePräteritumConjugation = (
   stem: string,
   präteritum: string,
   weakEndings: boolean,

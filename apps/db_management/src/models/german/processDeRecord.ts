@@ -9,13 +9,13 @@ import {
 } from 'german-types';
 import kranton from './propertyTestFunctions/kranton';
 import verbIsIrregular from '@utilities/propertyTestFunctions/verbIsIrregular';
-import { duEsConjugation } from './utilities/hydrateDuEsConjugation';
-import { irregularPartizipConjugation } from './utilities/irregularPartizipConjugation';
-import { generateStems } from './utilities/generateStems';
-import { präteritumConjugation } from './hydrationFunctions/prateritumConjugation';
-import { konjunktiv2Conjugation } from './hydrationFunctions/k2Conjugation';
-import { konjunktivConjugation } from './utilities/konjunktivConjugation';
-import { präsensSingular } from './hydrationFunctions/präsensSingular';
+import { hydrateDuEsConjugation } from '@germanHydrationFunctions/hydrateDuEsConjugation';
+import { hydrateIrregularPartizipConjugation } from '@germanHydrationFunctions/hydrateIrregularPartizipConjugation';
+import { generateStems } from '@germanUtilities/generateStems';
+import { hydratePräteritumConjugation } from '@germanHydrationFunctions/hydratePrateritumConjugation';
+import { hydrateKonjunktiv2Conjugation } from '@germanHydrationFunctions/hydrateK2Conjugation';
+import { konjunktivConjugation } from '@germanHydrationFunctions/hydrateKonjunktivConjugation';
+import { hydratePräsensSingular } from '@germanHydrationFunctions/hydratePräsensSingular';
 
 const createStandardConjugation = (
   infinitive: string,
@@ -100,7 +100,7 @@ export const processDeRecord = (record: LanguageVerbBase) => {
         'präsensSingular' in stems &&
         typeof stems.präsensSingular === 'string'
       ) {
-        const [newIch, newDu, newEs] = präsensSingular(
+        const [newIch, newDu, newEs] = hydratePräsensSingular(
           infinitiveStem,
           stems.präsensSingular,
           weakEndings,
@@ -111,7 +111,7 @@ export const processDeRecord = (record: LanguageVerbBase) => {
       }
 
       if ('duEs' in stems && typeof stems.duEs === 'string') {
-        const [duValue, esValue] = duEsConjugation(
+        const [duValue, esValue] = hydrateDuEsConjugation(
           stems.duEs,
           hydratedVerb.präsens!,
         );
@@ -125,7 +125,7 @@ export const processDeRecord = (record: LanguageVerbBase) => {
           'präteritum' in stems &&
           typeof stems.präteritum === 'string')
       ) {
-        hydratedVerb.partizip = irregularPartizipConjugation({
+        hydratedVerb.partizip = hydrateIrregularPartizipConjugation({
           stem: infinitiveStem,
           partizip: stems.partizip,
           präteritum: stems.präteritum || '',
@@ -135,7 +135,7 @@ export const processDeRecord = (record: LanguageVerbBase) => {
       }
 
       if ('präteritum' in stems && typeof stems.präteritum === 'string') {
-        hydratedVerb.präteritum = präteritumConjugation(
+        hydratedVerb.präteritum = hydratePräteritumConjugation(
           infinitiveStem,
           stems.präteritum,
           weakEndings || false,
@@ -152,7 +152,7 @@ export const processDeRecord = (record: LanguageVerbBase) => {
       }
 
       if (stems.k2präsens || stems.präteritum || weakEndings) {
-        hydratedVerb.k2präsens = konjunktiv2Conjugation(
+        hydratedVerb.k2präsens = hydrateKonjunktiv2Conjugation(
           infinitiveStem,
           stems.k2präsens || stems.präteritum || '',
           weakEndings || false,
