@@ -1,5 +1,5 @@
 import { GermanPronounKeys } from 'german-types';
-import { modifiedStem } from './modifiedStem';
+import { modifiedStem } from '../utilities/modifiedStem';
 import { RegExpGroups } from 'global-types';
 
 const singleVowelNoUmlaut =

@@ -1,5 +1,5 @@
 import { GermanPronounKeys } from 'german-types';
-import { modifiedStem } from './modifiedStem';
+import { modifiedStem } from '@germanUtilities/modifiedStem';
 
 export const konjunktivConjugation = (
   stem: string,

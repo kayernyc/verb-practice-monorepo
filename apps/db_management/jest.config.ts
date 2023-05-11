@@ -6,6 +6,9 @@ module.exports = {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   moduleNameMapper: {
     '@controllers(.*)$': '<rootDir>/src/controllers/$1',
+    '@germanHydrationFunctions(.*)$':
+      '<rootDir>/src/models/german/hydrationFunctions/$1',
+    '@germanUtilities(.*)$': '<rootDir>/src/models/german/utilities/$1',
     '@models(.*)$': '<rootDir>/src/models/models$1',
     '@utilities(.*)$': '<rootDir>/src/utilities/$1',
   },

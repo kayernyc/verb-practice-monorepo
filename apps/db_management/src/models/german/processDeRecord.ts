@@ -12,10 +12,10 @@ import verbIsIrregular from '@utilities/propertyTestFunctions/verbIsIrregular';
 import { duEsConjugation } from './utilities/hydrateDuEsConjugation';
 import { irregularPartizipConjugation } from './utilities/irregularPartizipConjugation';
 import { generateStems } from './utilities/generateStems';
-import { präteritumConjugation } from './utilities/prateritumConjugation';
-import { konjunktiv2Conjugation } from './utilities/k2Conjugation';
+import { präteritumConjugation } from './hydrationFunctions/prateritumConjugation';
+import { konjunktiv2Conjugation } from './hydrationFunctions/k2Conjugation';
 import { konjunktivConjugation } from './utilities/konjunktivConjugation';
-import { präsensSingular } from './utilities/präsensSingular';
+import { präsensSingular } from './hydrationFunctions/präsensSingular';
 
 const createStandardConjugation = (
   infinitive: string,

@@ -1,6 +1,6 @@
 import { GermanPronounKeys } from 'german-types';
 import kranton from '../propertyTestFunctions/kranton';
-import { modifiedStem } from './modifiedStem';
+import { modifiedStem } from '../utilities/modifiedStem';
 
 export const präteritumConjugation = (
   stem: string,

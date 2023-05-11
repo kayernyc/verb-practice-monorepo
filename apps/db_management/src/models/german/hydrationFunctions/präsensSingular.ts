@@ -1,4 +1,4 @@
-import { modifiedStem } from './modifiedStem';
+import { modifiedStem } from '../utilities/modifiedStem';
 
 export const präsensSingular = (
   stem: string,
