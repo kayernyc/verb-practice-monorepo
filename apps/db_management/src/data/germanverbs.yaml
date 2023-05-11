@@ -817,8 +817,8 @@ saufen:
   strong: true
   stems:
     duEs: äu
-    präteritum: off
-    partizip: off
+    präteritum: 'off'
+    partizip: 'off'
 
 lügen:
   language: de

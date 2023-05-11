@@ -26,11 +26,6 @@ export function irregularPartizipConjugation({
         irregularStem: präteritum,
       });
       return `ge${newStem}t`;
-      // return stem.replace(firstVowelGroupRegex, `ge$1${präteritum}t`);
-    }
-
-    if (!weakEndings && !präteritum) {
-      return `ge${infinitive}`;
     }
   }
 

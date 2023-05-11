@@ -326,3 +326,106 @@ export const gehenReturnObject = {
     en: ['go'],
   },
 };
+
+export const fliegenGermanVerb: LanguageVerbCandidate = {
+  infinitive: 'fliegen',
+  language: LanguageMap.de,
+  translations: {
+    en: ['fly'],
+  },
+  hilfsverb: 'sein',
+  stems: {
+    präteritum: 'o',
+    partizip: 'o',
+  },
+};
+
+export const fliegenReturnObject = {
+  language: LanguageMap.de,
+  hilfsverb: 'sein',
+  infinitive: 'fliegen',
+  partizip: 'gegangen',
+  präsens: {
+    [GermanPronounKeys.ich]: 'fliege',
+    [GermanPronounKeys.wir]: 'fliegen',
+    [GermanPronounKeys.du]: 'fliegst',
+    [GermanPronounKeys.ihr]: 'fliegt',
+    [GermanPronounKeys.es]: 'fliegt',
+  },
+  präteritum: {
+    [GermanPronounKeys.ich]: 'flog',
+    [GermanPronounKeys.wir]: 'flogen',
+    [GermanPronounKeys.du]: 'flogst',
+    [GermanPronounKeys.ihr]: 'flogt',
+    [GermanPronounKeys.es]: 'flog',
+  },
+  konjunktiv: {
+    [GermanPronounKeys.ich]: 'fliege',
+    [GermanPronounKeys.wir]: 'fliegen',
+    [GermanPronounKeys.du]: 'fliegest',
+    [GermanPronounKeys.ihr]: 'flieget',
+    [GermanPronounKeys.es]: 'fliege',
+  },
+  k2präsens: {
+    [GermanPronounKeys.ich]: 'flöge',
+    [GermanPronounKeys.wir]: 'flögen',
+    [GermanPronounKeys.du]: 'flögest',
+    [GermanPronounKeys.ihr]: 'flöget',
+    [GermanPronounKeys.es]: 'flöge',
+  },
+  translations: {
+    en: ['fly'],
+  },
+};
+
+export const bleibenGermanVerb: LanguageVerbCandidate = {
+  infinitive: 'bleiben',
+  language: LanguageMap.de,
+  translations: {
+    en: ['remain', 'stay'],
+  },
+  hilfsverb: 'sein',
+  stems: {
+    präteritum: 'ie',
+    k2präsens: 'ie',
+    partizip: 'ie',
+  },
+};
+
+export const bleibenReturnObject = {
+  language: LanguageMap.de,
+  hilfsverb: 'sein',
+  infinitive: 'bleiben',
+  partizip: 'geblieben',
+  präsens: {
+    [GermanPronounKeys.ich]: 'bleibe',
+    [GermanPronounKeys.wir]: 'bleiben',
+    [GermanPronounKeys.du]: 'bleibst',
+    [GermanPronounKeys.ihr]: 'bleibt',
+    [GermanPronounKeys.es]: 'bleibt',
+  },
+  präteritum: {
+    [GermanPronounKeys.ich]: 'blieb',
+    [GermanPronounKeys.wir]: 'blieben',
+    [GermanPronounKeys.du]: 'bliebst',
+    [GermanPronounKeys.ihr]: 'bliebt',
+    [GermanPronounKeys.es]: 'blieb',
+  },
+  konjunktiv: {
+    [GermanPronounKeys.ich]: 'bleibe',
+    [GermanPronounKeys.wir]: 'bleiben',
+    [GermanPronounKeys.du]: 'bleibest',
+    [GermanPronounKeys.ihr]: 'bleibet',
+    [GermanPronounKeys.es]: 'bleibe',
+  },
+  k2präsens: {
+    [GermanPronounKeys.ich]: 'bliebe',
+    [GermanPronounKeys.wir]: 'blieben',
+    [GermanPronounKeys.du]: 'bliebest',
+    [GermanPronounKeys.ihr]: 'bliebet',
+    [GermanPronounKeys.es]: 'bliebe',
+  },
+  translations: {
+    en: ['remain', 'stay'],
+  },
+};
