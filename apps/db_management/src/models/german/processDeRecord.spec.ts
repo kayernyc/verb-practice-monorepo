@@ -2,6 +2,10 @@ import { LanguageMap, LanguageVerbCandidate } from 'global-types';
 import { processDeRecord } from './processDeRecord';
 import { GermanVerbHydrated } from 'german-types';
 import {
+  bleibenGermanVerb,
+  bleibenReturnObject,
+  fliegenGermanVerb,
+  fliegenReturnObject,
   gehenGermanVerb,
   gehenReturnObject,
   gelingenGermanVerb,
@@ -259,5 +263,15 @@ describe('processDeRecord matches real conjugations:', () => {
   it('returns gehen correctly', () => {
     const result = processDeRecord(gehenGermanVerb);
     expect(result).toEqual(gehenReturnObject);
+  });
+
+  it('returns gehen correctly', () => {
+    const result = processDeRecord(fliegenGermanVerb);
+    expect(result).toEqual(fliegenReturnObject);
+  });
+
+  it('returns bleiben correctly', () => {
+    const result = processDeRecord(bleibenGermanVerb);
+    expect(result).toEqual(bleibenReturnObject);
   });
 });

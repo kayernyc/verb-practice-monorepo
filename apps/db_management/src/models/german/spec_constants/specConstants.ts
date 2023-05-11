@@ -344,7 +344,7 @@ export const fliegenReturnObject = {
   language: LanguageMap.de,
   hilfsverb: 'sein',
   infinitive: 'fliegen',
-  partizip: 'gegangen',
+  partizip: 'geflogen',
   präsens: {
     [GermanPronounKeys.ich]: 'fliege',
     [GermanPronounKeys.wir]: 'fliegen',
