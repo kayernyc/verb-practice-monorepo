@@ -265,7 +265,7 @@ describe('processDeRecord matches real conjugations:', () => {
     expect(result).toEqual(gehenReturnObject);
   });
 
-  it('returns gehen correctly', () => {
+  it('returns fliegen correctly', () => {
     const result = processDeRecord(fliegenGermanVerb);
     expect(result).toEqual(fliegenReturnObject);
   });
