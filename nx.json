@@ -16,7 +16,7 @@
       "outputs": ["dist"],
       "options": {
         "packageJson": "./package.json",
-        "externalDependencies": "none"
+        "externalDependencies": "all"
       }
     },
     "test:unit": {

@@ -29,7 +29,9 @@ export function readYamls<T>(
         const fileContents = fs.readFileSync(path.join(dataPath, _url), 'utf8');
         processedData = yaml.load(fileContents);
       } catch (err) {
-        throw Error(`Error in ${languageName} verbs model: ${err as string} ${_url}`);
+        throw Error(
+          `Error in ${languageName} verbs model: ${err as string} ${_url}`,
+        );
       }
       return processedData;
     })
@@ -70,7 +72,8 @@ export function buildAllSource<T>(
     .readdirSync(currentDataPath)
     .filter(
       (filename: string) =>
-        filename.slice(0, languageName.length) === languageName && filename.slice(-4) === 'yaml',
+        filename.slice(0, languageName.length) === languageName &&
+        filename.slice(-4) === 'yaml',
     );
 
   return readYamls(allFileNames, languageName, typeGuard, currentDataPath);

@@ -12,7 +12,9 @@
     "paths": {
       "@controllers/*": ["./controllers/*"],
       "@models/*": ["./models/*"],
-      "@utilities/*": ["./utilities/*"]
+      "@germanHydrationFunctions/*": ["./models/german/hydrationFunctions/*.ts"],
+      "@germanUtilities/*": ["./models/german/utilities/*.ts"],
+      "@utilities/*": ["./utilities/*"],
     }
   },
   "include": ["./src"]
