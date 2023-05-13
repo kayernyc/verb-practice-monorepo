@@ -1860,6 +1860,7 @@ winken:
 
 antworten:
   language: de
+  dative: true
   infinitive: antworten
   translations:
     en: [answer, reply]
@@ -2012,3 +2013,28 @@ bluten:
   infinitive: bluten
   translations:
     en: bleed
+
+ähneln:
+  language: de
+  dative: true
+  infinitive: ähneln
+  translations:
+    en: resemble
+
+weichen:
+  language: de
+  infinitive: weichen
+  # this may have variations
+  translations:
+    en: yeild
+
+befehlen:
+  language: de
+  infinitive: befehlen
+  translations:
+    en: order, command
+  stems:
+    präteritum: a
+    k2präsens: iff
+    partizip: o
+    duEs: ie
