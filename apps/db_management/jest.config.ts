@@ -1,7 +1,6 @@
-module.exports = {
+export default {
   coverageDirectory: './coverage/',
   collectCoverage: true,
-  collectCoverageFrom: ['./src/**/*.ts', 'scripts/**/*.ts', '!./src/data/**/*'],
   maxWorkers: '50%',
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   moduleNameMapper: {
@@ -15,8 +14,8 @@ module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node',
   testMatch: [
-    '<rootDir>/src/**/?(*.)(spec|test).{js,jsx,ts,tsx}',
-    '<rootDir>/scripts/**/?(*.)(spec|test).{js,jsx,ts,tsx}',
+    '<rootDir>/**/src/**/?(*.)(spec|test).{js,jsx,ts,tsx}',
+    '<rootDir>/**/scripts/**/?(*.)(spec|test).{js,jsx,ts,tsx}',
   ],
   testPathIgnorePatterns: ['dist', 'node_modules'],
   transform: {

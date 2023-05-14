@@ -1,7 +1,5 @@
 import path from 'path';
 
-import * as dotenv from 'dotenv';
-
 export function findPathToData(dirPath: string): string {
   if (process.env.APP_ROOT && process.env.DATA_PATH) {
     const basePath = path.join(process.env.APP_ROOT, process.env.DATA_PATH);
