@@ -1,7 +1,6 @@
 import path from 'path';
 
 import * as dotenv from 'dotenv';
-console.log(process.env);
 
 export function findPathToData(dirPath: string): string {
   if (process.env.APP_ROOT && process.env.DATA_PATH) {

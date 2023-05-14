@@ -1,7 +1,6 @@
 {
   "name": "verb-practice-monorepo",
   "version": "0.0.0",
-  "type": "module",
   "license": "MIT",
   "scripts": {
     "cz": "cz",
@@ -25,11 +24,13 @@
     "@nrwl/webpack": "15.9.2",
     "@nrwl/workspace": "15.9.2",
     "@types/jest": "^29.4.0",
+    "@types/lodash": "^4.14.194",
     "@types/node": "~18.7.1",
-    "@typescript-eslint/eslint-plugin": "5.4.0",
-    "@typescript-eslint/parser": "5.4.0",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
     "commitizen": "^4.3.0",
     "cors": "^2.8.5",
+    "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.8.0",
     "express": "^4.17.0",
     "husky": "^8.0.3",
@@ -54,6 +55,7 @@
     "shared-types/*"
   ],
   "dependencies": {
+    "lodash": "^4.17.21",
     "shared-types": "^1.0.0",
     "tslib": "^2.3.0"
   },

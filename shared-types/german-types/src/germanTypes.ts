@@ -78,15 +78,20 @@ export type TranslationSet = {
   [key in LanguageMap]?: string[] | string;
 };
 
-export type GermanVerbHydrated = {
+export type GermanVerbVariation = {
   [key in GermanTenses]?: { [key in GermanPronounCode]: string };
 } & {
   auxiliary?: boolean;
+  definition?: string;
   hilfsverb: string;
-  infinitive: string;
-  language: LanguageMap;
   partizip: string;
   translations: TranslationSet;
+};
+
+export type GermanVerbHydrated = {
+  language: LanguageMap.de;
+  infinitive: string;
+  variations: GermanVerbVariation[];
 };
 
 // tslint:disable: no-bitwise
@@ -183,6 +188,7 @@ export const validKeys = [
   'stems',
   'strong',
   'translations',
+  'variations',
   'weakEndings',
 ];
 
