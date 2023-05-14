@@ -31,8 +31,17 @@ module.exports = {
     },
     {
       files: ['*.ts', '*.tsx'],
-      extends: ['plugin:@nrwl/nx/typescript'],
-      rules: {},
+      extends: [
+        'plugin:@nrwl/nx/typescript',
+        'airbnb',
+        'airbnb-typescript',
+        'plugin:prettier/recommended',
+        'plugin:react/jsx-runtime',
+      ],
+      rules: { 'no-console': 1 },
+      parserOptions: {
+        project: './tsconfig.base.json',
+      },
     },
     {
       files: ['*.js', '*.jsx'],
@@ -50,12 +59,13 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 13,
-    project: 'tsconfig.json',
+    project: 'tsconfig.base.json',
     sourceType: 'module',
     tsconfigRootDir: __dirname,
   },
   plugins: ['@nrwl/nx'],
   rules: {
+    'no-console': 1,
     'no-restricted-syntax': 0,
     'import/prefer-default-export': 'off',
     'import/extensions': [

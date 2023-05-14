@@ -27,10 +27,12 @@ export const hydrateKonjunktiv2Conjugation = (
   */
   const match: RegExpGroups<'firstConst' | 'vowelGroup' | 'rest'> =
     singleVowelNoUmlaut.exec(newStem);
+
   if (match?.groups) {
     const {
       groups: { firstConst, vowel, rest },
     } = match;
+
     if (vowel && umlautVersions[vowel]) {
       newStem = `${firstConst}${umlautVersions[vowel]}${rest || ''}`;
     }

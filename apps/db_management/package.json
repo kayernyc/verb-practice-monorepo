@@ -5,6 +5,7 @@
   "main": "src/server.ts",
   "scripts": {
     "test": "npx jest",
+    "lint": "eslint",
     "build": "sh scripts/copy-data.sh && tsc && tsc-alias",
     "run": "node ./dist/server.js",
     "dev:server": "tsc -w & tsc-alias -w && node ./dist/server.js"

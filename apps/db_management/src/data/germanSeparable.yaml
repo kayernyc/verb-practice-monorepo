@@ -320,6 +320,7 @@ auf|essen:
 
 auf|fallen:
   language: de
+  dative: true
   translations:
     en: stand out, be noticeable
 
@@ -3312,3 +3313,9 @@ ab|warten:
   language: de
   translations:
     en: bide
+
+aus|weichen:
+  language: de
+  dative: true
+  translations:
+    en: evade
