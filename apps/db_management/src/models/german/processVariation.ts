@@ -22,7 +22,7 @@ export const processVariation = (
   record: any,
   infinitive: string,
 ) => {
-  const { translations, weakEndings } = record;
+  const { dative, translations, weakEndings } = record;
 
   const [infinitiveStem, particle] = generateStems(infinitive);
 
@@ -31,7 +31,7 @@ export const processVariation = (
       ? record.hilfsverb
       : 'haben';
 
-  const hydratedVerb = { ...baseHydratedVerb, translations, hilfsverb };
+  const hydratedVerb = { ...baseHydratedVerb, dative, translations, hilfsverb };
 
   if ('partizip' in record && record.partizip) {
     hydratedVerb.partizip = record.partizip;

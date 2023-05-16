@@ -18,6 +18,10 @@ import {
   werdenGermanVerb,
   werdenReturnObject,
 } from './spec_constants/specConstants';
+import {
+  ähnelnGermanVerb,
+  ähnelnReturnObject,
+} from './spec_constants/newVerbsSpec';
 
 describe('processDeRecord matches real conjugations:', () => {
   it('returns brennen correctly', () => {
@@ -118,5 +122,10 @@ describe('processDeRecord matches real conjugations:', () => {
   it('returns bleiben correctly', () => {
     const result = processDeRecord(bleibenGermanVerb);
     expect(result).toEqual(bleibenReturnObject);
+  });
+
+  it('returns ähneln correctly', () => {
+    const result = processDeRecord(ähnelnGermanVerb);
+    expect(result).toEqual(ähnelnReturnObject);
   });
 });

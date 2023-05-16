@@ -17,20 +17,25 @@ const isGermanKeyPronoun = (value: string): value is GermanKeyPronoun => {
 
 const ALL_GERMAN_VALID_KEYS = [
   'auxiliary',
+  'dative',
   'drop',
   'hilfsverb',
+  'genitive',
+  'impersonal',
   'infinitive',
   'irregular',
   'language',
   'modal',
   'partizip',
+  'reflexive',
+  'seperable',
   'stems',
   'strong',
   'translations',
   'weakEndings',
   'variations',
-  'sich',
 ];
+
 export type GermanValidKey = typeof ALL_GERMAN_VALID_KEYS[number];
 
 const isGermanValidKey = (value: string): value is GermanValidKey => {
@@ -71,6 +76,7 @@ const ALL_GERMAN_STEMS = [
   'partizip',
   'präsensSingular',
   'präteritum',
+  'reflexive',
 ] as const;
 export type GermanStem = typeof ALL_GERMAN_STEMS[number];
 
@@ -82,6 +88,7 @@ export type GermanVerbVariation = {
   [key in GermanTenses]?: { [key in GermanPronounCode]: string };
 } & {
   auxiliary?: boolean;
+  dative?: boolean;
   definition?: string;
   hilfsverb: string;
   partizip: string;
@@ -132,24 +139,29 @@ export enum GermanPronounCode {
 }
 
 export const GermanPronounKeys: { [key in GermanKeyPronoun]: number } = {
+  // 1033
   ich:
     GrammaticalPerson.First.valueOf() +
     GrammaticalNumber.Singular.valueOf() +
     GermanCase.Nominative.valueOf(),
+  // 1098
   du:
     GrammaticalPerson.Second.valueOf() +
     GrammaticalNumber.Singular.valueOf() +
     GrammaticalFormal.Informal.valueOf() +
     GermanCase.Nominative.valueOf(),
+  // 1548
   es:
     GrammaticalPerson.Third.valueOf() +
     GrammaticalNumber.Singular.valueOf() +
     GermanCase.Nominative.valueOf() +
     GrammaticalGender.Neuter.valueOf(),
+  // 1041
   wir:
     GrammaticalPerson.First.valueOf() +
     GrammaticalNumber.Plural.valueOf() +
     GermanCase.Nominative.valueOf(),
+  // 1106
   ihr:
     GrammaticalPerson.Second.valueOf() +
     GrammaticalNumber.Plural.valueOf() +
@@ -167,30 +179,18 @@ export type GermanIrregular = {
 };
 
 export interface GermanVerb extends LanguageVerbBase {
+  dative?: boolean;
   drop: boolean;
   hilfsverb: string;
   infinitive: string;
   irregular?: GermanIrregularObject;
   partizip?: string;
+  seperable?: boolean;
   stems?: { [key in GermanStem]?: string };
   strong?: boolean;
   variations?: Array<Partial<GermanVerb> | { definition: string }>;
   weakEndings?: boolean;
 }
-
-export const validKeys = [
-  'drop',
-  'hilfsverb',
-  'infinitive',
-  'irregular',
-  'language',
-  'partizip',
-  'stems',
-  'strong',
-  'translations',
-  'variations',
-  'weakEndings',
-];
 
 export const isGermanVerb = (x: object): x is GermanVerb => {
   let isValid = true;
@@ -202,6 +202,7 @@ export const isGermanVerb = (x: object): x is GermanVerb => {
   const xKeys = Object.keys(x);
   xKeys.forEach((key: string) => {
     if (!ALL_GERMAN_VALID_KEYS.includes(key)) {
+      console.log(`bad key = ${key}`);
       isValid = false;
     }
   });

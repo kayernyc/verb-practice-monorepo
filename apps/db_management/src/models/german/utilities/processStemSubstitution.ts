@@ -1,7 +1,5 @@
 import { RegExpGroups } from 'global-types';
-
-const irregularStemRegex =
-  /(?<firstConst>[bcdfghjklmnpqrstvwxyzß]*)(?<vowelGroup>[aeiouäöü]*)(?<secondConst>[bcdfghjklmnpqrstvwxyzß]*)/;
+import { syllableRegex } from 'german-types';
 
 const regularStemRegex =
   /(?<firstConst>[bcdfghjklmnpqrstvwxyzß]*)(?<vowelGroup>[aeiouäöü]*)(?<secondConst>[a-zß]*)/;
@@ -41,7 +39,7 @@ export const processStemSubstitution = ({
   );
   const [irrfirstConst, irrvowelGroup, irrsecondConst] = matchSet(
     irregularStem,
-    irregularStemRegex,
+    syllableRegex,
   );
 
   return `${irrfirstConst || firstConst}${irrvowelGroup || vowelGroup}${

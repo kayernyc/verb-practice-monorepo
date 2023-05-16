@@ -1855,6 +1855,7 @@ ergreifen:
 winken:
   language: de
   infinitive: winken
+  dative: true
   translations:
     en: wave
 
@@ -2038,3 +2039,17 @@ befehlen:
     k2präsens: iff
     partizip: o
     duEs: ie
+  variations:
+    - definition: to order (alt spelling)
+      stems:
+        k2präsens: ö
+
+widersprechen: 
+  language: de
+  dative: true
+  translations: 
+    en: contradict, gainsay
+  stems:
+    duEs: i
+    k2präsens: 
+    präteritum: a
