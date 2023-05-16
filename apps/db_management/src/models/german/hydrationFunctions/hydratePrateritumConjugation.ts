@@ -1,17 +1,19 @@
 import { GermanPronounKeys } from 'german-types';
 import kranton from '../propertyTestFunctions/kranton';
 import { modifiedStem } from '../utilities/modifiedStem';
+import { processStemSubstitution } from '../utilities/processStemSubstitution';
 
 export const hydratePräteritumConjugation = (
-  stem: string,
-  präteritum: string,
+  regularStem: string,
+  irregularStem: string,
   weakEndings: boolean,
   particle = '',
 ): { [key: string]: string } => {
-  const newStem = modifiedStem(stem, präteritum);
+  // const newStem = modifiedStem(stem, präteritum);
+  let newStem = processStemSubstitution({ regularStem, irregularStem });
 
   // is it Kranton?
-  const defaultEnding = kranton(stem) ? 'e' : '';
+  const defaultEnding = kranton(regularStem) ? 'e' : '';
 
   return {
     [GermanPronounKeys.ich]: `${particle}${newStem}${

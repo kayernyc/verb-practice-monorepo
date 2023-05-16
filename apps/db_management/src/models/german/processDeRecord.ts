@@ -21,6 +21,7 @@ export const processDeRecord = (record: LanguageVerbBase) => {
 
   const {
     dative,
+    genitive,
     drop,
     infinitive,
     irregular,
@@ -34,6 +35,7 @@ export const processDeRecord = (record: LanguageVerbBase) => {
 
   const baseRecord = {
     dative,
+    genitive,
     drop,
     irregular,
     hilfsverb,

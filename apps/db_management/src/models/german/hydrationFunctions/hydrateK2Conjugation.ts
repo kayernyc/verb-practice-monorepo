@@ -1,9 +1,9 @@
 import { GermanPronounKeys } from 'german-types';
-import { modifiedStem } from '../utilities/modifiedStem';
 import { RegExpGroups } from 'global-types';
+import { processStemSubstitution } from '../utilities/processStemSubstitution';
 
 const singleVowelNoUmlaut =
-  /(?<firstConst>[bcdfghjklmnpqrstvwxyzß]*)(?<vowel>(?<![aou])[aou](?![aou]))(?<rest>[bcdfghjklmnpqrstvwxyzß]+[a-zß]*)/;
+  /(?<firstConst>[a-zß]*?)(?<vowel>(?<![aou])[aou](?![aou]))(?<rest>[bcdfghjklmnpqrstvwxyzß]*$)/;
 const umlautVersions: { [key: string]: string } = {
   a: 'ä',
   o: 'ö',
@@ -11,12 +11,13 @@ const umlautVersions: { [key: string]: string } = {
 };
 
 export const hydrateKonjunktiv2Conjugation = (
-  stem: string,
+  regularStem: string,
   irregularStem: string,
   weakEndings: boolean,
   particle = '',
 ): { [key: string]: string } => {
-  let newStem = modifiedStem(stem, irregularStem);
+  // let newStem = modifiedStem(regularStem, irregularStem);
+  let newStem = processStemSubstitution({ regularStem, irregularStem });
   let defaultEnding = 'e';
   /*
   A completely regular strong verb will form

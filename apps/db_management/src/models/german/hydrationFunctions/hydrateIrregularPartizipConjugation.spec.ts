@@ -61,7 +61,6 @@ describe('irregularPartizipConjugation handles irregulars', () => {
     const [stem] = generateStems('verkaufen');
     const partizip = hydrateIrregularPartizipConjugation({
       stem,
-      partizip: 'a',
       infinitive: 'verkaufen',
     });
     expect(partizip).toEqual('verkauft');

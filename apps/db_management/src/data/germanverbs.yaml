@@ -2053,3 +2053,19 @@ widersprechen:
     duEs: i
     k2präsens: 
     präteritum: a
+
+bedürfen: 
+  language: de
+  genitive: true
+  weakEndings: true
+  translations:
+    en: require
+  stems:
+    präteritum: u
+    partizip: u
+  irregular:
+    präsens:
+      ich: bedarf
+      du: bedarfst
+      es: bedarf
+

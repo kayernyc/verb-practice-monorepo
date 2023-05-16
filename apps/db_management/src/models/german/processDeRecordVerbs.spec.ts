@@ -19,6 +19,8 @@ import {
   werdenReturnObject,
 } from './spec_constants/specConstants';
 import {
+  bedürfenGermanVerb,
+  bedürfenReturnObject,
   ähnelnGermanVerb,
   ähnelnReturnObject,
 } from './spec_constants/newVerbsSpec';
@@ -127,5 +129,10 @@ describe('processDeRecord matches real conjugations:', () => {
   it('returns ähneln correctly', () => {
     const result = processDeRecord(ähnelnGermanVerb);
     expect(result).toEqual(ähnelnReturnObject);
+  });
+
+  it('returns bedürfen correctly', () => {
+    const result = processDeRecord(bedürfenGermanVerb);
+    expect(result).toEqual(bedürfenReturnObject);
   });
 });

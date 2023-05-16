@@ -11,3 +11,6 @@ export const stemRegex =
 */
 export const syllableRegex =
   /(?<firstConst>[bcdfghjklmnpqrstvwxyzß]*)(?<vowelGroup>[aeiouäöü]*)(?<secondConst>[bcdfghjklmnpqrstvwxyzß]*)/;
+
+export const regularStemRegex =
+  /^(?<prepend>.*?)(?<firstConst>[bcdfghjklmnpqrstvwxyzß]*)(?<vowelGroup>[aeiouäöü]*)(?<secondConst>[bcdfghjklmnpqrstvwxyzß]*$)/;

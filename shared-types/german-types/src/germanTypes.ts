@@ -90,6 +90,7 @@ export type GermanVerbVariation = {
   auxiliary?: boolean;
   dative?: boolean;
   definition?: string;
+  genitive?: boolean;
   hilfsverb: string;
   partizip: string;
   translations: TranslationSet;
@@ -180,6 +181,7 @@ export type GermanIrregular = {
 
 export interface GermanVerb extends LanguageVerbBase {
   dative?: boolean;
+  genitive?: boolean;
   drop: boolean;
   hilfsverb: string;
   infinitive: string;

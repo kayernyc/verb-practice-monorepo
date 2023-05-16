@@ -14,10 +14,6 @@ export function hydrateIrregularPartizipConjugation({
   infinitive: string;
   weakEndings?: boolean;
 }) {
-  if (verbIsInseparable(infinitive)) {
-    return `${stem}t`;
-  }
-
   if (!partizip) {
     if (weakEndings && präteritum) {
       const newStem = processStemSubstitution({
@@ -34,8 +30,13 @@ export function hydrateIrregularPartizipConjugation({
       regularStem: stem,
       irregularStem: partizip,
     });
-    builtStem = `ge${builtStem}`;
+    if (verbIsInseparable(infinitive)) {
+      return `${builtStem}t`;
+    }
+    builtStem = `${verbIsInseparable(infinitive) ? '' : 'ge'}${builtStem}`;
   }
 
-  return `${builtStem}${weakEndings ? 't' : 'en'}`;
+  return `${builtStem}${
+    weakEndings || verbIsInseparable(infinitive) ? 't' : 'en'
+  }`;
 }

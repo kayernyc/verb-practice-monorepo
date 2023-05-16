@@ -108,3 +108,67 @@ export const ähnelnReturnObject: GermanVerbHydrated = {
     },
   ],
 };
+
+export const bedürfenGermanVerb: LanguageVerbCandidate = {
+  infinitive: 'bedürfen',
+  genitive: true,
+  weakEndings: true,
+  language: LanguageMap.de,
+  translations: {
+    en: ['require'],
+  },
+  stems: {
+    präteritum: 'u',
+    partizip: 'u',
+  },
+  irregular: {
+    präsens: {
+      ich: 'bedarf',
+      du: 'bedarfst',
+      es: 'bedarf',
+    },
+  },
+};
+
+export const bedürfenReturnObject: GermanVerbHydrated = {
+  infinitive: 'bedürfen',
+  language: LanguageMap.de,
+  variations: [
+    {
+      genitive: true,
+      hilfsverb: 'haben',
+      partizip: 'bedurft',
+      präsens: {
+        [GermanPronounKeys.ich]: 'bedarf',
+        [GermanPronounKeys.wir]: 'bedürfen',
+        [GermanPronounKeys.du]: 'bedarfst',
+        [GermanPronounKeys.ihr]: 'bedürft',
+        [GermanPronounKeys.es]: 'bedarf',
+      },
+      präteritum: {
+        [GermanPronounKeys.ich]: 'bedurfte',
+        [GermanPronounKeys.wir]: 'bedurften',
+        [GermanPronounKeys.du]: 'bedurftest',
+        [GermanPronounKeys.ihr]: 'bedurftet',
+        [GermanPronounKeys.es]: 'bedurfte',
+      },
+      konjunktiv: {
+        [GermanPronounKeys.ich]: 'bedürfe',
+        [GermanPronounKeys.wir]: 'bedürfen',
+        [GermanPronounKeys.du]: 'bedürfest',
+        [GermanPronounKeys.ihr]: 'bedürfet',
+        [GermanPronounKeys.es]: 'bedürfe',
+      },
+      k2präsens: {
+        [GermanPronounKeys.ich]: 'bedürfte',
+        [GermanPronounKeys.wir]: 'bedürften',
+        [GermanPronounKeys.du]: 'bedürftest',
+        [GermanPronounKeys.ihr]: 'bedürftet',
+        [GermanPronounKeys.es]: 'bedürfte',
+      },
+      translations: {
+        en: ['require'],
+      },
+    },
+  ],
+};
