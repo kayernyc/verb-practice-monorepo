@@ -3,6 +3,8 @@
 ## What is this repo buiding?
 This repo will contain 2 backend services and possible future frontend consumers for one of those services, and an administration panel.
 
+The ultimate aim is provide a backend to power different consumers.
+
 ## To Start:
 
 ### Requirements
