@@ -127,6 +127,7 @@ export const GermanParticleRules = {
   vorankommen: 'vorankommen means "to make progress".',
   weiter: '"weiter" means "further", see also "fort"',
   wieder: '"wieder" means "again"',
+  wider: '"wider" means "against"',
   zu: '‚zu’ means "closed," "to," "towards," "upon" and is dative.',
   zurecht: 'conveys the idea of "correct," "proper."',
   zurück: '"zurück" means "back," or "re"',

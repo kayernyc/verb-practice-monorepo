@@ -5,9 +5,10 @@ export const widersprechenGermanVerb: LanguageVerbCandidate = {
   infinitive: 'widersprechen',
   dative: true,
   language: LanguageMap.de,
+  partizip: 'widersprochen',
   stems: {
     duEs: 'i',
-    k2präsens: 'a',
+    präteritum: 'a',
   },
   translations: {
     en: ['contradict'],
@@ -21,7 +22,7 @@ export const widersprechenReturnObject: GermanVerbHydrated = {
     {
       dative: true,
       hilfsverb: 'haben',
-      partizip: 'gewidersprochen',
+      partizip: 'widersprochen',
       präsens: {
         [GermanPronounKeys.ich]: 'widerspreche',
         [GermanPronounKeys.wir]: 'widersprechen',
@@ -31,17 +32,17 @@ export const widersprechenReturnObject: GermanVerbHydrated = {
       },
       präteritum: {
         [GermanPronounKeys.ich]: 'widersprach',
-        [GermanPronounKeys.wir]: 'widersprachn',
+        [GermanPronounKeys.wir]: 'widersprachen',
         [GermanPronounKeys.du]: 'widersprachst',
         [GermanPronounKeys.ihr]: 'widerspracht',
         [GermanPronounKeys.es]: 'widersprach',
       },
       konjunktiv: {
-        [GermanPronounKeys.ich]: 'widersprech',
+        [GermanPronounKeys.ich]: 'widerspreche',
         [GermanPronounKeys.wir]: 'widersprechen',
-        [GermanPronounKeys.du]: 'widersprechst',
-        [GermanPronounKeys.ihr]: 'widersprecht',
-        [GermanPronounKeys.es]: 'widersprech',
+        [GermanPronounKeys.du]: 'widersprechest',
+        [GermanPronounKeys.ihr]: 'widersprechet',
+        [GermanPronounKeys.es]: 'widerspreche',
       },
       k2präsens: {
         [GermanPronounKeys.ich]: 'widerspräche',

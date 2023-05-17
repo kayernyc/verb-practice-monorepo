@@ -24,19 +24,17 @@ export function hydrateIrregularPartizipConjugation({
     }
   }
 
+  const inseparable = verbIsInseparable(infinitive);
+
   let builtStem = stem;
   if (partizip) {
     builtStem = processStemSubstitution({
       regularStem: stem,
       irregularStem: partizip,
     });
-    if (verbIsInseparable(infinitive)) {
-      return `${builtStem}t`;
-    }
-    builtStem = `${verbIsInseparable(infinitive) ? '' : 'ge'}${builtStem}`;
+
+    builtStem = `${inseparable ? '' : 'ge'}${builtStem}`;
   }
 
-  return `${builtStem}${
-    weakEndings || verbIsInseparable(infinitive) ? 't' : 'en'
-  }`;
+  return `${builtStem}${weakEndings || inseparable ? 't' : 'en'}`;
 }

@@ -1,6 +1,5 @@
 import { GermanPronounKeys } from 'german-types';
 import kranton from '../propertyTestFunctions/kranton';
-import { modifiedStem } from '../utilities/modifiedStem';
 import { processStemSubstitution } from '../utilities/processStemSubstitution';
 
 export const hydratePräteritumConjugation = (

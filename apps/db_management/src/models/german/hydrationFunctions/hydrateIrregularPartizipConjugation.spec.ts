@@ -98,4 +98,15 @@ describe('irregularPartizipConjugation handles irregulars', () => {
     });
     expect(partizip).toEqual('gelungen');
   });
+
+  it('conjugates bedürfen partizip correctly', () => {
+    const [stem] = generateStems('bedürfen');
+    const partizip = hydrateIrregularPartizipConjugation({
+      stem,
+      partizip: 'u',
+      infinitive: 'bedürfen',
+      präteritum: 'u',
+    });
+    expect(partizip).toEqual('bedurft');
+  });
 });

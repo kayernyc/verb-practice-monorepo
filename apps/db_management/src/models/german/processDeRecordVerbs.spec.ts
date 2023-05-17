@@ -21,6 +21,8 @@ import {
 import {
   bedürfenGermanVerb,
   bedürfenReturnObject,
+  widersprechenGermanVerb,
+  widersprechenReturnObject,
   ähnelnGermanVerb,
   ähnelnReturnObject,
 } from './spec_constants/newVerbsSpec';
@@ -134,5 +136,10 @@ describe('processDeRecord matches real conjugations:', () => {
   it('returns bedürfen correctly', () => {
     const result = processDeRecord(bedürfenGermanVerb);
     expect(result).toEqual(bedürfenReturnObject);
+  });
+
+  it('returns bedürfen correctly', () => {
+    const result = processDeRecord(widersprechenGermanVerb);
+    expect(result).toEqual(widersprechenReturnObject);
   });
 });

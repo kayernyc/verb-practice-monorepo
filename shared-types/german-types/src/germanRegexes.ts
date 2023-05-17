@@ -3,7 +3,7 @@
   present (eln).
 */
 export const stemRegex =
-  /(?<firstConst>[bcdfghjklmnpqrstvwxyzß]*)(?<vowelGroup>[aeiouäöü]*)(?<secondConst>[bcdfghjklmnpqrstvwxyzß]*)(?<ending>e*[ln]*\b)/;
+  /(?<firstConst>[bcdfghjklmnpqrstvwxyzß]*)(?<vowelGroup>[aeiouäöü]*)(?<secondConst>[bcdfghjklmnpqrstvwxyzß]*)(?<ending>e*[lrn]*\b)/;
 
 /*
   This regex is looking only for patterns of
