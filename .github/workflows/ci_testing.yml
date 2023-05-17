@@ -9,16 +9,14 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    
-  steps:
-  - uses: actions/checkout@v3
-  - uses: pnpm/action-setup@v2
-    with:
-      version: 6.32.9
-  - uses: actions/setup-node@v3
-    with:
-      node-version: '14'
-      cache: 'pnpm'
-  - run: pnpm install --frozen-lockfile
-  - run: pnpm nx test db_management
-
+    steps:
+    - uses: actions/checkout@v3
+    - uses: pnpm/action-setup@v2
+      with:
+        version: 6.32.9
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '14'
+        cache: 'pnpm'
+    - run: pnpm install --frozen-lockfile
+    - run: pnpm nx test db_management
