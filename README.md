@@ -3,7 +3,7 @@
 ## What is this repo buiding?
 This repo will contain 2 backend services and possible future frontend consumers for one of those services, and an administration panel.
 
-The ultimate aim is provide a backend to power different consumers.
+The ultimate aim is provide a backend to power different consumers for creating apps that train the user against different verb sets.
 
 ## To Start:
 
