@@ -61,7 +61,6 @@ describe('irregularPartizipConjugation handles irregulars', () => {
     const [stem] = generateStems('verkaufen');
     const partizip = hydrateIrregularPartizipConjugation({
       stem,
-      partizip: 'a',
       infinitive: 'verkaufen',
     });
     expect(partizip).toEqual('verkauft');
@@ -98,5 +97,16 @@ describe('irregularPartizipConjugation handles irregulars', () => {
       präteritum: 'a',
     });
     expect(partizip).toEqual('gelungen');
+  });
+
+  it('conjugates bedürfen partizip correctly', () => {
+    const [stem] = generateStems('bedürfen');
+    const partizip = hydrateIrregularPartizipConjugation({
+      stem,
+      partizip: 'u',
+      infinitive: 'bedürfen',
+      präteritum: 'u',
+    });
+    expect(partizip).toEqual('bedurft');
   });
 });

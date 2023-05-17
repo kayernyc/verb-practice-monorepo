@@ -20,9 +20,9 @@ describe('processStem', () => {
   it('transforms werorden prateritum', () => {
     const result = processStemSubstitution({
       regularStem: 'werord',
-      irregularStem: 'o',
+      irregularStem: 'i',
     });
-    expect(result).toBe('worord');
+    expect(result).toBe('werird');
   });
 
   it('transforms mögen prateritum', () => {
@@ -55,5 +55,13 @@ describe('processStem', () => {
       irregularStem: 'gess',
     });
     expect(result).toBe('gess');
+  });
+
+  it('transforms bedürfen', () => {
+    const result = processStemSubstitution({
+      regularStem: 'bedürf',
+      irregularStem: 'ü',
+    });
+    expect(result).toBe('bedürf');
   });
 });

@@ -20,7 +20,10 @@ export const processDeRecord = (record: LanguageVerbBase) => {
   }
 
   const {
+    dative,
+    genitive,
     drop,
+    impersonal,
     infinitive,
     irregular,
     hilfsverb,
@@ -32,7 +35,10 @@ export const processDeRecord = (record: LanguageVerbBase) => {
   } = record;
 
   const baseRecord = {
+    dative,
+    genitive,
     drop,
+    impersonal,
     irregular,
     hilfsverb,
     partizip,

@@ -1,31 +1,30 @@
 import { RegExpGroups } from 'global-types';
-
-const irregularStemRegex =
-  /(?<firstConst>[bcdfghjklmnpqrstvwxyzß]*)(?<vowelGroup>[aeiouäöü]*)(?<secondConst>[bcdfghjklmnpqrstvwxyzß]*)/;
-
-const regularStemRegex =
-  /(?<firstConst>[bcdfghjklmnpqrstvwxyzß]*)(?<vowelGroup>[aeiouäöü]*)(?<secondConst>[a-zß]*)/;
+import { regularStemRegex, syllableRegex } from 'german-types';
 
 const matchSet = (testString: string, regex: RegExp) => {
+  let prepend = '';
   let firstConst: string;
   let vowelGroup: string;
   let secondConst: string;
 
   const regularResult: RegExpGroups<
-    'firstConst' | 'vowelGroup' | 'secondConst'
+    'prepend' | 'firstConst' | 'vowelGroup' | 'secondConst'
   > = regex.exec(testString);
   if (regularResult) {
+    prepend = regularResult.groups!.prepend || '';
     firstConst = regularResult.groups!.firstConst;
     vowelGroup = regularResult.groups!.vowelGroup;
+
     if (!vowelGroup && firstConst) {
       secondConst = firstConst;
       firstConst = '';
     } else {
       secondConst = regularResult.groups!.secondConst;
     }
-    return [firstConst, vowelGroup, secondConst];
+
+    return [prepend, firstConst, vowelGroup, secondConst];
   }
-  return ['', '', ''];
+  return ['', '', '', ''];
 };
 
 export const processStemSubstitution = ({
@@ -35,16 +34,16 @@ export const processStemSubstitution = ({
   regularStem: string;
   irregularStem: string;
 }) => {
-  const [firstConst, vowelGroup, secondConst] = matchSet(
+  const [prepend, firstConst, vowelGroup, secondConst] = matchSet(
     regularStem,
     regularStemRegex,
   );
-  const [irrfirstConst, irrvowelGroup, irrsecondConst] = matchSet(
+  const [_, irrfirstConst, irrvowelGroup, irrsecondConst] = matchSet(
     irregularStem,
-    irregularStemRegex,
+    syllableRegex,
   );
 
-  return `${irrfirstConst || firstConst}${irrvowelGroup || vowelGroup}${
-    irrsecondConst || secondConst
-  }`;
+  return `${prepend}${irrfirstConst || firstConst}${
+    irrvowelGroup || vowelGroup
+  }${irrsecondConst || secondConst}`;
 };

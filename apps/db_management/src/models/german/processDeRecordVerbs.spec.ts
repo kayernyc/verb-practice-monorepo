@@ -7,8 +7,6 @@ import {
   fliegenReturnObject,
   gehenGermanVerb,
   gehenReturnObject,
-  gelingenGermanVerb,
-  gelingenReturnObject,
   habenGermanVerb,
   habenReturnObject,
   könnenGermanVerb,
@@ -18,6 +16,16 @@ import {
   werdenGermanVerb,
   werdenReturnObject,
 } from './spec_constants/specConstants';
+import {
+  bedürfenGermanVerb,
+  bedürfenReturnObject,
+  gelingenGermanVerb,
+  gelingenReturnObject,
+  widersprechenGermanVerb,
+  widersprechenReturnObject,
+  ähnelnGermanVerb,
+  ähnelnReturnObject,
+} from './spec_constants/newVerbsSpec';
 
 describe('processDeRecord matches real conjugations:', () => {
   it('returns brennen correctly', () => {
@@ -100,11 +108,6 @@ describe('processDeRecord matches real conjugations:', () => {
     expect(result).toEqual(könnenReturnObject);
   });
 
-  it('returns gelingen correctly', () => {
-    const result = processDeRecord(gelingenGermanVerb);
-    expect(result).toEqual(gelingenReturnObject);
-  });
-
   it('returns gehen correctly', () => {
     const result = processDeRecord(gehenGermanVerb);
     expect(result).toEqual(gehenReturnObject);
@@ -118,5 +121,25 @@ describe('processDeRecord matches real conjugations:', () => {
   it('returns bleiben correctly', () => {
     const result = processDeRecord(bleibenGermanVerb);
     expect(result).toEqual(bleibenReturnObject);
+  });
+
+  it('returns ähneln correctly', () => {
+    const result = processDeRecord(ähnelnGermanVerb);
+    expect(result).toEqual(ähnelnReturnObject);
+  });
+
+  it('returns bedürfen correctly', () => {
+    const result = processDeRecord(bedürfenGermanVerb);
+    expect(result).toEqual(bedürfenReturnObject);
+  });
+
+  it('returns widersprechen correctly', () => {
+    const result = processDeRecord(widersprechenGermanVerb);
+    expect(result).toEqual(widersprechenReturnObject);
+  });
+
+  it('returns gelingen correctly', () => {
+    const result = processDeRecord(gelingenGermanVerb);
+    expect(result).toEqual(gelingenReturnObject);
   });
 });

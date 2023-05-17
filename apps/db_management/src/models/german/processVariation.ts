@@ -22,7 +22,7 @@ export const processVariation = (
   record: any,
   infinitive: string,
 ) => {
-  const { translations, weakEndings } = record;
+  const { dative, genitive, impersonal, translations, weakEndings } = record;
 
   const [infinitiveStem, particle] = generateStems(infinitive);
 
@@ -31,7 +31,14 @@ export const processVariation = (
       ? record.hilfsverb
       : 'haben';
 
-  const hydratedVerb = { ...baseHydratedVerb, translations, hilfsverb };
+  const hydratedVerb = {
+    ...baseHydratedVerb,
+    dative,
+    genitive,
+    impersonal,
+    translations,
+    hilfsverb,
+  };
 
   if ('partizip' in record && record.partizip) {
     hydratedVerb.partizip = record.partizip;
@@ -131,6 +138,21 @@ export const processVariation = (
         }
       }
     }
+  }
+
+  if (impersonal) {
+    [
+      hydratedVerb.k2präsens,
+      hydratedVerb.konjunktiv,
+      hydratedVerb.präsens,
+      hydratedVerb.präteritum,
+    ].forEach((tenseGroup) => {
+      if (tenseGroup) {
+        delete tenseGroup[GermanPronounKeys.ich];
+        delete tenseGroup[GermanPronounKeys.du];
+        delete tenseGroup[GermanPronounKeys.ihr];
+      }
+    });
   }
 
   return hydratedVerb;

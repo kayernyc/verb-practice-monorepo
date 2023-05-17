@@ -1,16 +1,14 @@
 import { RegExpGroups } from 'global-types';
+import { syllableRegex } from 'german-types';
 
 export const modifiedStem = (stem: string, irregularStem: string): string => {
-  const irregularStemRegex =
-    /(?<firstConst>[bcdfghjklmnpqrstvwxyzß]*)(?<vowelGroup>[aeiouäöü]*)(?<secondConst>[bcdfghjklmnpqrstvwxyzß]*)/;
-
   const irregularStemResult: RegExpGroups<
     'firstConst' | 'vowelGroup' | 'secondConst'
-  > = irregularStemRegex.exec(irregularStem);
+  > = syllableRegex.exec(irregularStem);
 
   const regularStemResult: RegExpGroups<
     'firstConst' | 'vowelGroup' | 'secondConst'
-  > = irregularStemRegex.exec(stem);
+  > = syllableRegex.exec(stem);
 
   if (regularStemResult?.groups && irregularStemResult?.groups) {
     const {

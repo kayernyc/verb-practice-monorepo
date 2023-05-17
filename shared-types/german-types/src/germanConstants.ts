@@ -1,64 +1,4 @@
-export const firstVowelGroupRegex =
-  /\b([bcdfghjklmnpqrstvwxyzß]+)([aeiouäöü]+)([bcdfghjklmnpqrstvwxyzß][a-zß]*)\b/;
-
 export const inseperableRegex = /^(?<prefix>be|emp|ent|er|miß|ver|zer)(.*)/;
-export type SeperableGermanParticles =
-  | 'ab'
-  | 'an'
-  | 'auf'
-  | 'aus'
-  | 'auseinander'
-  | 'bei'
-  | 'da'
-  | 'dabei'
-  | 'dar'
-  | 'durch'
-  | 'ein'
-  | 'empor'
-  | 'entgegen'
-  | 'entlang'
-  | 'entzwei'
-  | 'fehl'
-  | 'fern'
-  | 'fest'
-  | 'fort'
-  | 'frei'
-  | 'gegenüber'
-  | 'gleich'
-  | 'her'
-  | 'herab'
-  | 'heran'
-  | 'herauf'
-  | 'heraus'
-  | 'herbei'
-  | 'herein'
-  | 'herüber'
-  | 'herum'
-  | 'herunter'
-  | 'hinauf'
-  | 'hinaus'
-  | 'hinein'
-  | 'hinweg'
-  | 'heim'
-  | 'hoch'
-  | 'mit'
-  | 'statt'
-  | 'über'
-  | 'um'
-  | 'vor'
-  | 'vorweg'
-  | 'voraus'
-  | 'vorbei'
-  | 'vorüber'
-  | 'voran'
-  | 'vorangehen'
-  | 'vorankommen'
-  | 'weiter'
-  | 'wieder'
-  | 'zu'
-  | 'zurecht'
-  | 'zurück'
-  | 'zusammen';
 
 export const separableArray = [
   'ab',
@@ -118,33 +58,7 @@ export const separableArray = [
   'zurück',
   'zusammen',
 ];
-
-export const separableRegex = new RegExp(separableArray.join('|'), 'gi');
-
-export const consonents = [
-  'b',
-  'c',
-  'd',
-  'f',
-  'g',
-  'h',
-  'j',
-  'k',
-  'l',
-  'm',
-  'n',
-  'p',
-  'q',
-  'r',
-  's',
-  't',
-  'v',
-  'w',
-  'x',
-  'y',
-  'z',
-  'ß',
-];
+export type SeperableGermanParticles = typeof separableArray[number];
 export const vowels = ['a', 'e', 'i', 'o', 'u', 'ä', 'ë', 'ü'];
 
 // taken from http://www.dartmouth.edu/~deutsch/Grammatik/Wortbildung/Separables.html
@@ -213,6 +127,7 @@ export const GermanParticleRules = {
   vorankommen: 'vorankommen means "to make progress".',
   weiter: '"weiter" means "further", see also "fort"',
   wieder: '"wieder" means "again"',
+  wider: '"wider" means "against"',
   zu: '‚zu’ means "closed," "to," "towards," "upon" and is dative.',
   zurecht: 'conveys the idea of "correct," "proper."',
   zurück: '"zurück" means "back," or "re"',

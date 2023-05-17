@@ -13,17 +13,6 @@ describe('germanTypes', () => {
     expect(germanVerb).toBeTruthy();
   });
 
-  // it('passes haben.', () => {
-  //   const testRecord: LanguageVerbBase = {
-  //     language: LanguageMap.de,
-  //     translations: { [LanguageMap.en]: [ 'fade out', 'dim (lights)'] },
-  //     infinitive:'haben'
-  //   };
-
-  //   const germanVerb = isGermanVerb(testRecord);
-  //   expect(germanVerb).toBeTruthy();
-  // });
-
   it('does not pass an incorrect, simple object.', () => {
     const testRecordWrong: LanguageVerbBase = {
       language: LanguageMap.fr,

@@ -237,6 +237,7 @@ schreien:
 gelingen:
   language: de
   infinitive: gelingen
+  impersonal: true
   translations:
     en: succeed
   hilfsverb: sein
@@ -1855,11 +1856,13 @@ ergreifen:
 winken:
   language: de
   infinitive: winken
+  dative: true
   translations:
     en: wave
 
 antworten:
   language: de
+  dative: true
   infinitive: antworten
   translations:
     en: [answer, reply]
@@ -2012,3 +2015,58 @@ bluten:
   infinitive: bluten
   translations:
     en: bleed
+
+ähneln:
+  language: de
+  dative: true
+  infinitive: ähneln
+  translations:
+    en: resemble
+
+weichen:
+  language: de
+  infinitive: weichen
+  # this may have variations
+  translations:
+    en: yeild
+
+befehlen:
+  language: de
+  infinitive: befehlen
+  translations:
+    en: order, command
+  stems:
+    präteritum: a
+    k2präsens: iff
+    partizip: o
+    duEs: ie
+  variations:
+    - definition: to order (alt spelling)
+      stems:
+        k2präsens: ö
+
+widersprechen: 
+  language: de
+  dative: true
+  translations: 
+    en: contradict, gainsay
+  stems:
+    duEs: i
+    k2präsens: 
+    präteritum: a
+
+bedürfen: 
+  language: de
+  genitive: true
+  weakEndings: true
+  translations:
+    en: require
+  stems:
+    präteritum: u
+    partizip: u
+  irregular:
+    präsens:
+      ich: bedarf
+      du: bedarfst
+      es: bedarf
+

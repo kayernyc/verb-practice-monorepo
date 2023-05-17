@@ -1,12 +1,11 @@
-import { modifiedStem } from '../utilities/modifiedStem';
+import { processStemSubstitution } from '../utilities/processStemSubstitution';
 
 export const hydratePräsensSingular = (
-  stem: string,
+  regularStem: string,
   irregularStem: string,
   dropEndings = false,
 ) => {
-  const newStem = modifiedStem(stem, irregularStem);
-
+  const newStem = processStemSubstitution({ regularStem, irregularStem });
   return [
     `${newStem}${dropEndings ? '' : 'e'}`,
     `${newStem}st`,
