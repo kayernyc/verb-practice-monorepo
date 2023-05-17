@@ -237,6 +237,7 @@ schreien:
 gelingen:
   language: de
   infinitive: gelingen
+  impersonal: true
   translations:
     en: succeed
   hilfsverb: sein

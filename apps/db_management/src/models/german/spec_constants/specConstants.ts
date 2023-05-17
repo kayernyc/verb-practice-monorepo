@@ -240,61 +240,6 @@ export const könnenReturnObject: GermanVerbHydrated = {
   ],
 };
 
-export const gelingenGermanVerb: LanguageVerbCandidate = {
-  infinitive: 'gelingen',
-  language: LanguageMap.de,
-  translations: {
-    en: ['succeed'],
-  },
-  hilfsverb: 'sein',
-  stems: {
-    präteritum: 'a',
-    partizip: 'u',
-  },
-};
-
-export const gelingenReturnObject: GermanVerbHydrated = {
-  infinitive: 'gelingen',
-  language: LanguageMap.de,
-  variations: [
-    {
-      hilfsverb: 'sein',
-      partizip: 'gelungen',
-      präsens: {
-        [GermanPronounKeys.ich]: 'gelinge',
-        [GermanPronounKeys.wir]: 'gelingen',
-        [GermanPronounKeys.du]: 'gelingst',
-        [GermanPronounKeys.ihr]: 'gelingt',
-        [GermanPronounKeys.es]: 'gelingt',
-      },
-      präteritum: {
-        [GermanPronounKeys.ich]: 'gelang',
-        [GermanPronounKeys.wir]: 'gelangen',
-        [GermanPronounKeys.du]: 'gelangst',
-        [GermanPronounKeys.ihr]: 'gelangt',
-        [GermanPronounKeys.es]: 'gelang',
-      },
-      konjunktiv: {
-        [GermanPronounKeys.ich]: 'gelinge',
-        [GermanPronounKeys.wir]: 'gelingen',
-        [GermanPronounKeys.du]: 'gelingest',
-        [GermanPronounKeys.ihr]: 'gelinget',
-        [GermanPronounKeys.es]: 'gelinge',
-      },
-      k2präsens: {
-        [GermanPronounKeys.ich]: 'gelänge',
-        [GermanPronounKeys.wir]: 'gelängen',
-        [GermanPronounKeys.du]: 'gelängest',
-        [GermanPronounKeys.ihr]: 'gelänget',
-        [GermanPronounKeys.es]: 'gelänge',
-      },
-      translations: {
-        en: ['succeed'],
-      },
-    },
-  ],
-};
-
 export const gehenGermanVerb: LanguageVerbCandidate = {
   infinitive: 'gehen',
   language: LanguageMap.de,

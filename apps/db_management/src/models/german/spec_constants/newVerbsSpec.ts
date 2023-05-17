@@ -173,3 +173,51 @@ export const bedürfenReturnObject: GermanVerbHydrated = {
     },
   ],
 };
+
+export const gelingenGermanVerb: LanguageVerbCandidate = {
+  hilfsverb: 'sein',
+  impersonal: true,
+  infinitive: 'gelingen',
+  dative: true,
+  // weakEndings: true,
+  language: LanguageMap.de,
+  translations: {
+    en: ['succeed (reverse, impersonal)'],
+  },
+  stems: {
+    präteritum: 'a',
+    partizip: 'u',
+  },
+};
+
+export const gelingenReturnObject: GermanVerbHydrated = {
+  infinitive: 'gelingen',
+  language: LanguageMap.de,
+  variations: [
+    {
+      dative: true,
+      impersonal: true,
+      hilfsverb: 'sein',
+      partizip: 'gelungen',
+      präsens: {
+        [GermanPronounKeys.wir]: 'gelingen',
+        [GermanPronounKeys.es]: 'gelingt',
+      },
+      präteritum: {
+        [GermanPronounKeys.wir]: 'gelangen',
+        [GermanPronounKeys.es]: 'gelang',
+      },
+      konjunktiv: {
+        [GermanPronounKeys.wir]: 'gelingen',
+        [GermanPronounKeys.es]: 'gelinge',
+      },
+      k2präsens: {
+        [GermanPronounKeys.wir]: 'gelängen',
+        [GermanPronounKeys.es]: 'gelänge',
+      },
+      translations: {
+        en: ['succeed (reverse, impersonal)'],
+      },
+    },
+  ],
+};
