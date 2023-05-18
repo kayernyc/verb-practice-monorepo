@@ -30,6 +30,9 @@ jobs:
       - name: Get branch name
         id: get-branch-name
         uses: tj-actions/branch-names@v7.0.1
+    outputs:
+      base-branch-name: ${{ steps.get-base-branch-name.outputs.branch }}
+      branch-name: ${{ steps.get-branch-name.outputs.branch }}
 
   get-affected:
     needs: [branch-info]
@@ -54,7 +57,16 @@ jobs:
           cache: 'pnpm'
       - name: Install dependencies
         run: pnpm install
-
-    outputs:
-      base-branch-name: ${{ steps.get-base-branch-name.outputs.branch }}
-      branch-name: ${{ steps.get-branch-name.outputs.branch }}
+      - name: Get affected
+        id: get-projects-arrays
+        run: |
+          if [[ "${{github.event.pull_request.base.ref}}" == "" && "${{needs.branch-info.outputs.branch-name}}" == "main" ]]; then
+            echo "::set-output name=test-unit::$(node scripts/print-affected-array.js test:unit --all)"
+            echo "::set-output name=test-e2e::$(node scripts/print-affected-array.js test:e2e --all)"
+          else
+            echo "::set-output name=test-unit::$(node scripts/print-affected-array.js test:unit origin/${{needs.branch-info.outputs.base-branch-name}})"
+            echo "::set-output name=test-e2e::$(node scripts/print-affected-array.js test:e2e origin/${{needs.branch-info.outputs.base-branch-name}})"
+          fi
+        outputs:
+          test-unit: ${{ steps.get-projects-arrays.outputs.test-unit }}
+          test-e2e: ${{ steps.get-projects-arrays.outputs.test-e2e }}
