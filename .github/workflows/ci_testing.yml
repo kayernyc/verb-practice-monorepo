@@ -1,6 +1,14 @@
-# This workflow will test the db package
+# - name: Setup pnpm
+#   uses: pnpm/action-setup@v2.2.4
+#   with:
+#     # Version of pnpm to install
+#     version: "8.x"
+#     # Where to store pnpm files
+#     # dest: # optional, default is ~/setup-pnpm
+#     # If specified, run `pnpm install`
+#     run_install: # optional, default is null
 
-name: Node.js CI DB Management
+name: build
 
 on:
   pull_request:
@@ -22,6 +30,30 @@ jobs:
       - name: Get branch name
         id: get-branch-name
         uses: tj-actions/branch-names@v7.0.1
+
+  get-affected:
+    needs: [branch-info]
+    runs-on: ubuntu-latest
+    steps:
+      # Check out the repository
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Derive appropriate SHAs for base and head for `nx affected` commands
+        uses: nrwl/nx-set-shas@v2
+        with:
+          main-branch-name: ${{needs.branch-info.outputs.base-branch-name}}
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.2.4
+        with:
+          version: "8.x"
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18.x"
+          cache: "pnpm"
+      - name: Install dependencies
+        run: pnpm install
       
     outputs:
       base-branch-name: ${{ steps.get-base-branch-name.outputs.branch }}
