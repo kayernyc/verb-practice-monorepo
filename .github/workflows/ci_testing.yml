@@ -1,26 +1,72 @@
-# This workflow will test the db package
+# - name: Setup pnpm
+#   uses: pnpm/action-setup@v2.2.4
+#   with:
+#     # Version of pnpm to install
+#     version: "8.x"
+#     # Where to store pnpm files
+#     # dest: # optional, default is ~/setup-pnpm
+#     # If specified, run `pnpm install`
+#     run_install: # optional, default is null
 
-name: Node.js CI DB Management
+name: build
 
 on:
   pull_request:
-    branches: [ "main" ]
+    branches:
+      - main
 
 jobs:
-  build:
-
+  branch-info:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [14.x, 16.x, 18.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'pnpm'
-    - run: pnpm nx test db_managemenet
+      - name: Get base branch name
+        id: get-base-branch-name
+        run: |
+          if [[ "${{github.event.pull_request.base.ref}}" != "" ]]; then
+            echo "::set-output name=branch::${{github.event.pull_request.base.ref}}"
+          else
+            echo "::set-output name=branch::main"
+          fi
+      - name: Get branch name
+        id: get-branch-name
+        uses: tj-actions/branch-names@v7.0.1
+
+  get-affected:
+    needs: [branch-info]
+    runs-on: ubuntu-latest
+    steps:
+      # Check out the repository
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Derive appropriate SHAs for base and head for `nx affected` commands
+        uses: nrwl/nx-set-shas@v3.0.2
+        with:
+          main-branch-name: ${{needs.branch-info.outputs.base-branch-name}}
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.2.4
+        with:
+          version: '8.x'
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+          cache: 'pnpm'
+      - name: Install dependencies
+        run: pnpm install
+      - name: Get affected
+        id: get-projects-arrays
+        run: |
+            if [[ "${{github.event.pull_request.base.ref}}" == "" && "${{needs.branch-info.outputs.branch-name}}" == "main" ]]; then
+              echo "::set-output name=test-unit::$(node scripts/print-affected-array.js test:unit --all)"
+              echo "::set-output name=test-e2e::$(node scripts/print-affected-array.js test:e2e --all)"
+            else
+              echo "::set-output name=test-unit::$(node scripts/print-affected-array.js test:unit origin/${{needs.branch-info.outputs.base-branch-name}})"
+              echo "::set-output name=test-e2e::$(node scripts/print-affected-array.js test:e2e origin/${{needs.branch-info.outputs.base-branch-name}})"
+            fi
+      outputs:
+        test-e2e: ${{ steps.get-projects-arrays.outputs.test-e2e }}
+        
+    outputs:
+      base-branch-name: ${{ steps.get-base-branch-name.outputs.branch }}
+      branch-name: ${{ steps.get-branch-name.outputs.branch }}
