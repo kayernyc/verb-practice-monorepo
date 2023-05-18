@@ -4,19 +4,26 @@ name: Node.js CI DB Management
 
 on:
   pull_request:
-    branches: [ "main" ]
+    branches:
+      - main
 
 jobs:
-  test:
+  branch-info:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - uses: pnpm/action-setup@v2
-      with:
-        version: 6.32.9
-    - uses: actions/setup-node@v3
-      with:
-        node-version: '14'
-        cache: 'pnpm'
-    - run: pnpm install --frozen-lockfile
-    - run: pnpm nx test db_management
+      - name: Get base branch name
+        id: get-base-branch-name
+        run: |
+            if [[ "${{github.event.pull_request.base.ref}}" != "" ]]; then
+              echo "::set-output name=branch::${{github.event.pull_request.base.ref}}"
+            else
+              echo "::set-output name=branch::main"
+            fi
+      - name: Get branch name
+        id: get-branch-name
+        uses: tj-actions/branch-names@v5.2
+      
+    outputs:
+      base-branch-name: ${{ steps.get-base-branch-name.outputs.branch }}
+      branch-name: ${{ steps.get-branch-name.outputs.branch }}
+    
