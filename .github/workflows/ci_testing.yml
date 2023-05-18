@@ -30,6 +30,9 @@ jobs:
       - name: Get branch name
         id: get-branch-name
         uses: tj-actions/branch-names@v7.0.1
+    outputs:
+      base-branch-name: ${{ steps.get-base-branch-name.outputs.branch }}
+      branch-name: ${{ steps.get-branch-name.outputs.branch }}
 
   get-affected:
     needs: [branch-info]
@@ -66,7 +69,4 @@ jobs:
             fi
       outputs:
         test-e2e: ${{ steps.get-projects-arrays.outputs.test-e2e }}
-        
-    outputs:
-      base-branch-name: ${{ steps.get-base-branch-name.outputs.branch }}
-      branch-name: ${{ steps.get-branch-name.outputs.branch }}
+
