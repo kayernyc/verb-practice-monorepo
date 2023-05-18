@@ -21,7 +21,7 @@ jobs:
             fi
       - name: Get branch name
         id: get-branch-name
-        uses: tj-actions/branch-names@v5.2
+        uses: tj-actions/branch-names@v7.0.1
       
     outputs:
       base-branch-name: ${{ steps.get-base-branch-name.outputs.branch }}
