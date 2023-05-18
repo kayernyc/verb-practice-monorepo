@@ -7,6 +7,7 @@ The ultimate aim is provide a backend to power different consumers for creating 
 ### future features:
 - auth
 - graphQL
+- Vite type checking, or maybe ARK
 
 ## To Start:
 
