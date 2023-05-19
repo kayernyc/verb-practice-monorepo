@@ -73,8 +73,6 @@ jobs:
 
   test-unit:
     steps:
-      name: Got here
-      id: got-here
       run: |
         if [[ '${{github.event.pull_request.base.ref}}' == '' && '${{needs.branch-info.outputs.branch-name}}' == 'main' ]]; then
           echo '::set-output name=test-unit::$(node scripts/print-affected-array.js test:unit --all)'
