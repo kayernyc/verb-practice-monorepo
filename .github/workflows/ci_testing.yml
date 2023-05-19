@@ -72,6 +72,8 @@ jobs:
       test-e2e: ${{ steps.get-projects-arrays.outputs.test-e2e }}
 
   test-unit:
+    runs-on: ubuntu-latest
+    needs: [get-affected]
     steps:
       - name: Try to echo
         run: |
