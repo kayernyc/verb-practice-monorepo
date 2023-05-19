@@ -83,3 +83,4 @@ jobs:
           else
             echo '::set-output name=test-unit::$(node scripts/print-affected-array.mjs test:unit origin/${{needs.branch-info.outputs.base-branch-name}})'
             echo '::set-output name=test-e2e::$(node scripts/print-affected-array.mjs test:e2e origin/${{needs.branch-info.outputs.base-branch-name}})'
+          fi
