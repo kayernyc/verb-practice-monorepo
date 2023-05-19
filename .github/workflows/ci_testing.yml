@@ -85,3 +85,6 @@ jobs:
             echo 'test-unit={$(node scripts/print-affected-array.mjs test:unit origin/${{needs.branch-info.outputs.base-branch-name}})}' >> $GITHUB_OUTPUT
             echo 'test-e2e={$(node scripts/print-affected-array.mjs test:e2e origin/${{needs.branch-info.outputs.base-branch-name}})}' >> $GITHUB_OUTPUT
           fi
+    if: ${{ !fromJson(needs.get-affected.outputs.test-unit)[0] }}
+    name: Else
+    run: echo ":("
