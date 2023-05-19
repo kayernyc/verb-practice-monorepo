@@ -77,10 +77,10 @@ jobs:
     if: ${{ fromJson(needs.get-affected.outputs.test-unit)[0] }}
     strategy:
       # Run in parallel
-      max-parallel: 4
+      max-parallel: 2
       # One job for each different project and node version
       matrix:
-        node: ['18.x']
+        node: ${{ matrix.node }}
         projectName: ${{fromJson(needs.get-affected.outputs.test-unit)}}
     steps:
       - name: Try to echo
