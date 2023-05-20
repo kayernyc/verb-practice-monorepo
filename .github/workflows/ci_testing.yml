@@ -77,4 +77,7 @@ jobs:
     # Skip the job if there are not affected projects containing unit tests
     steps:
       - name: Is script working
-        run: echo $GITHUB_OUTPUT
+        env:
+          TEST_UNIT: ${{ needs.get-affected.outputs.test-unit }}
+          TEST_E2E: ${{ needs.get-affected.outputs.test-e2e }}
+        run: echo "$TEST_UNIT $TEST_E2E"
