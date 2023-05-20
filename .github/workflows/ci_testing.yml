@@ -22,8 +22,8 @@ jobs:
       - name: Get base branch name
         id: get-base-branch-name
         run: |
-          if [[ '${{github.event.pull_request.base.ref}}' != '' ]]; then
-            echo 'branch=${{github.event.pull_request.base.ref}}' >> $GITHUB_OUTPUT
+          if [[ '${{ github.event.pull_request.base.ref }}' != '' ]]; then
+            echo 'branch=${{ github.event.pull_request.base.ref }}' >> $GITHUB_OUTPUT
           else
             echo 'branch=main' >> $GITHUB_OUTPUT
           fi
@@ -45,7 +45,7 @@ jobs:
       - name: Derive appropriate SHAs for base and head for `nx affected` commands
         uses: nrwl/nx-set-shas@v3.0.2
         with:
-          main-branch-name: ${{needs.branch-info.outputs.base-branch-name}}
+          main-branch-name: ${{ needs.branch-info.outputs.base-branch-name }}
       - name: Install pnpm
         uses: pnpm/action-setup@v2.2.4
         with:
@@ -60,12 +60,12 @@ jobs:
       - name: Get affected
         id: get-projects-arrays
         run: |
-          if [[ '${{github.event.pull_request.base.ref}}' == '' && '${{needs.branch-info.outputs.branch-name}}' == 'main' ]]; then
+          if [[ '${{ github.event.pull_request.base.ref }}' == '' && '${{ needs.branch-info.outputs.branch-name }}' == 'main' ]]; then
             echo 'test-unit=$(node scripts/print-affected-array.js test:unit --all)' >> $GITHUB_OUTPUT
             echo 'test-e2e=$(node scripts/print-affected-array.js test:e2e --all)' >> $GITHUB_OUTPUT
           else
-            echo 'test-unit=$(node scripts/print-affected-array.js test:unit origin/${{needs.branch-info.outputs.base-branch-name}})' >> $GITHUB_OUTPUT
-            echo 'test-e2e=$(node scripts/print-affected-array.js test:e2e origin/${{needs.branch-info.outputs.base-branch-name}})' >> $GITHUB_OUTPUT
+            echo 'test-unit=$(node scripts/print-affected-array.js test:unit origin/${{ needs.branch-info.outputs.base-branch-name }})' >> $GITHUB_OUTPUT
+            echo 'test-e2e=$(node scripts/print-affected-array.js test:e2e origin/${{ needs.branch-info.outputs.base-branch-name }})' >> $GITHUB_OUTPUT
           fi
     outputs:
       test-unit: ${{ steps.get-projects-arrays.outputs.test-unit }}
@@ -78,15 +78,17 @@ jobs:
     steps:
       - name: Get workspaces
         id: get-workspaces
-        if: ${{ fromJson(needs.get-affected.outputs.test-unit)[0] }}
         env:
           TEST_UNIT: ${{ needs.get-affected.outputs.test-unit }}
           TEST_E2E: ${{ needs.get-affected.outputs.test-e2e }}
-        run: echo 'unit-test-array=$TEST_UNIT' >> $GITHUB_OUTPUT
+        run: >-
+          echo array='$(
+            node ${{ needs.get-affected.outputs.test-unit }}
+          )' >> $GITHUB_OUTPUT
 
       - name: Test result
         id: test-result
-        run: 'echo $unit-test-array'
+        run: 'echo $array'
 
     outputs:
       unit-test-array: ${{ steps.get-workspaces.outputs.unit-test-array}}
