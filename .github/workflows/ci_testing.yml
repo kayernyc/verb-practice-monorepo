@@ -76,4 +76,4 @@ jobs:
     needs: [get-affected]
     steps:
       - name: Try to echo
-        run: echo ${{ fromJson(needs.get-affected.outpputs.test-unit) }}
+        run: echo ${{ fromJson(needs.get-affected.outputs.test-unit) }}
