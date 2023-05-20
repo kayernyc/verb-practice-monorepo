@@ -83,7 +83,7 @@ jobs:
           TEST_E2E: ${{ needs.get-affected.outputs.test-e2e }}
         run: >-
           echo array='$(
-            node ${{ needs.get-affected.outputs.test-unit }}
+            ${{ needs.get-affected.outputs.test-unit }}
           )' >> $GITHUB_OUTPUT
 
       - name: Test result
