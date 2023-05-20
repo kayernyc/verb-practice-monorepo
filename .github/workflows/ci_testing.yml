@@ -77,4 +77,4 @@ jobs:
     # Skip the job if there are not affected projects containing unit tests
     steps:
       - name: Is script working
-        run: ${{ fromJson(needs.get-affected.outputs.test-unit) }}
+        run: echo $GITHUB_OUTPUT
