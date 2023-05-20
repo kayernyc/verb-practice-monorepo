@@ -1,5 +1,5 @@
-import path from 'path';
-import spawn from 'cross-spawn';
+const path = require('path');
+const spawn = require('cross-spawn');
 
 const processArguments = process.argv.slice(2);
 
