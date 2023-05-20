@@ -76,9 +76,10 @@ jobs:
     needs: [get-affected]
     # Skip the job if there are not affected projects containing unit tests
     steps:
-      - name: Is script working
+      - name: Get workspaces
         env:
           TEST_UNIT: ${{ needs.get-affected.outputs.test-unit }}
           TEST_E2E: ${{ needs.get-affected.outputs.test-e2e }}
-        if: ${{ fromJson(needs.get-affected.outputs.test-unit)[0] }}
-        run: echo "$TEST_UNIT $TEST_E2E"
+        run: |
+          echo 'unit-test-array=$TEST_UNIT' >> $GITHUB_OUTPUT
+          echo "$TEST_UNIT $TEST_E2E $unit-test-array"
