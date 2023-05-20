@@ -77,4 +77,4 @@ jobs:
     # Skip the job if there are not affected projects containing unit tests
     steps:
       - name: Is script working
-        run: echo ENV
+        run: echo $ENV
