@@ -78,6 +78,7 @@ jobs:
     steps:
       - name: Get workspaces
         id: get-workspaces
+        if: ${{ fromJson(needs.get-affected.outputs.test-unit)[0] }}
         env:
           TEST_UNIT: ${{ needs.get-affected.outputs.test-unit }}
           TEST_E2E: ${{ needs.get-affected.outputs.test-e2e }}
