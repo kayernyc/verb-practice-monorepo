@@ -76,5 +76,5 @@ jobs:
     steps:
       - name: Run Unit Tests
         uses: MansaGroup/nrwl-nx-action@v3.2.2
-          with:
-            targets: test:unit
+        with:
+          targets: test:unit
