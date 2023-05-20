@@ -73,8 +73,7 @@ jobs:
 
   test-unit:
     runs-on: ubuntu-latest
+    needs: [get-affected]
     steps:
-      - name: Run Unit Tests
-        uses: MansaGroup/nrwl-nx-action@v3.2.2
-        with:
-          targets: test:unit
+      - name: Try to echo
+        run: echo {{ fromJson(needs.get-affected.outpputs.test-unit) }}
