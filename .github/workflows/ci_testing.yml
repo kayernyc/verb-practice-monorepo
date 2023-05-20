@@ -73,18 +73,8 @@ jobs:
 
   test-unit:
     runs-on: ubuntu-latest
-    needs: [get-affected]
-    if: ${{ fromJson(needs.get-affected.outputs.test-unit)[0] }}
     steps:
-      - name: Try to echo
-        run: |
-          if [[ '${{github.event.pull_request.base.ref}}' == '' && '${{needs.branch-info.outputs.branch-name}}' == 'main' ]]; then
-            echo 'test-unit={$(node scripts/print-affected-array.mjs test:unit --all)}' >> $GITHUB_OUTPUT
-            echo 'test-e2e={$(node scripts/print-affected-array.mjs test:e2e --all)}' >> $GITHUB_OUTPUT
-          else
-            echo 'test-unit={$(node scripts/print-affected-array.mjs test:unit origin/${{needs.branch-info.outputs.base-branch-name}})}' >> $GITHUB_OUTPUT
-            echo 'test-e2e={$(node scripts/print-affected-array.mjs test:e2e origin/${{needs.branch-info.outputs.base-branch-name}})}' >> $GITHUB_OUTPUT
-          fi
-    if: ${{ !fromJson(needs.get-affected.outputs.test-unit)[0] }}
-    name: Else
-    run: echo ":("
+      - name: Run Unit Tests
+        uses: MansaGroup/nrwl-nx-action@v3.2.2
+          with:
+            targets: test:unit
