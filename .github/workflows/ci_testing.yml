@@ -80,4 +80,5 @@ jobs:
         env:
           TEST_UNIT: ${{ needs.get-affected.outputs.test-unit }}
           TEST_E2E: ${{ needs.get-affected.outputs.test-e2e }}
+        if: ${{ fromJson(needs.get-affected.outputs.test-unit)[0] }}
         run: echo "$TEST_UNIT $TEST_E2E"
