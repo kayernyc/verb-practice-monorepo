@@ -81,7 +81,7 @@ jobs:
       # One job for each different project and node version
       matrix:
         node: ['18.0.0']
-        projectName: ${{fromJson(needs.get-affected.outputs.test-unit)}}
+        projectName: ${{ fromJson(needs.get-affected.outputs.test-unit) }}
     env:
       NODE: ${{ matrix.node }}
     steps:
