@@ -67,7 +67,6 @@ jobs:
             echo "test-unit=$(node scripts/print-affected-array.js test:unit origin/${{ needs.branch-info.outputs.base-branch-name }})" >> $GITHUB_OUTPUT
             echo "test-e2e=$(node scripts/print-affected-array.js test:e2e origin/${{ needs.branch-info.outputs.base-branch-name }})" >> $GITHUB_OUTPUT
           fi
-          echo "::debug::${{ env }}"
     outputs:
       test-unit: ${{ steps.get-projects-arrays.outputs.test-unit }}
       test-e2e: ${{ steps.get-projects-arrays.outputs.test-e2e }}
@@ -76,8 +75,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: [get-affected]
     # Skip the job if there are not affected projects containing unit tests
-    if: ${{ needs.get-affected.outputs.test-unit[0] }}
+
     steps:
       - name: Get workspaces
         id: get-workspaces
-        run: 'echo HI'
+        run: echo "::debug::${{ env }}"
