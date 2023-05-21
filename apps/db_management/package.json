@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/server.ts",
   "scripts": {
-    "test:unit": "npx jest",
+    "test:unit": "DATA_PATH=data && npx jest",
     "lint": "eslint",
     "build": "sh scripts/copy-data.sh && tsc && tsc-alias",
     "run": "node ./dist/server.js",
