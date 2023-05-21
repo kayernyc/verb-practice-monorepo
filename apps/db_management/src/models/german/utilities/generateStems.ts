@@ -1,4 +1,4 @@
-import { RegExpGroups } from 'global-types/dist/RegExUtilities';
+import { RegExpGroups } from 'global-types';
 
 const geDetector =
   /(?<particleGe>ge)(?=[bcdfghjklmnpqrstvwxyzß][aeiouäöü][a-zß]*)/;

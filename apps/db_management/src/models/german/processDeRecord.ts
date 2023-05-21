@@ -72,7 +72,6 @@ export const processDeRecord = (record: LanguageVerbBase) => {
     infinitive,
     language,
     variations,
-    translations,
   };
 
   return hydratedVerb;
