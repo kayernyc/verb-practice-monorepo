@@ -6,7 +6,9 @@ export function findPathToData(dirPath: string): string {
     return path.relative(dirPath, basePath);
   }
 
-  throw Error('Required env path variable not found');
+  throw Error(
+    `Required env path variable not found, data: ${process.env.DATA_PATH} and app root: ${process.env.APP_ROOT}`,
+  );
 }
 
 export function findRelativePathToData(
