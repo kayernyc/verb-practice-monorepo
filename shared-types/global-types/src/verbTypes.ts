@@ -3,7 +3,7 @@ import { LanguageMap } from './jsonTypes';
 export interface LanguageVerbBase {
   language: LanguageMap;
   infinitive: string;
-  translations: {
+  translations?: {
     [key in LanguageMap]?: string[] | string;
   };
 }
