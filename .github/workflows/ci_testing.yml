@@ -79,4 +79,4 @@ jobs:
     steps:
       - name: Get workspaces
         id: get-workspaces
-        run: echo "::debug::${{ env }}"
+        run: echo "::debug::${{ needs.get-affected.outputs.test-unit }}"
