@@ -85,6 +85,7 @@ jobs:
         projectName: ${{fromJson(needs.get-affected.outputs.test-unit)}}
     env:
       NODE: ${{ matrix.node }}
+      DATA_PATH: 'data'
     steps:
       - name: Get workspaces
         id: get-workspaces
