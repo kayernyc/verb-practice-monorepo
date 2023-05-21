@@ -89,7 +89,7 @@ jobs:
 
       - name: Test result
         id: test-result
-        run: 'echo ${{ steps.get-workspaces.outputs.array }}'
+        run: 'echo ${{ fromJson(steps.get-workspaces.outputs.array)[0] }}'
 
     outputs:
       unit-test-array: ${{ steps.get-workspaces.outputs.array }}
