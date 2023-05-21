@@ -117,11 +117,7 @@ async function printAffectedProjectsContainingTask() {
   console.log(JSON.stringify(projects));
 }
 
-printAffectedProjectsContainingTask(() => [
-  'db_management',
-  'sum-one',
-  'sum-two',
-]).catch((error) => {
+printAffectedProjectsContainingTask().catch((error) => {
   console.error(error);
   process.exit(1);
 });
