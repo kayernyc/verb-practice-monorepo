@@ -11,6 +11,8 @@ on:
 jobs:
   call-workflow:
     uses: ./.github/workflows/set_up_testing_env.yml
+    with:
+      project-name: 'bob'
   branch-info:
     runs-on: ubuntu-latest
     steps:

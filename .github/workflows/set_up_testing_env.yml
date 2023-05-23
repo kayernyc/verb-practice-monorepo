@@ -2,9 +2,13 @@ name: Set up testing environment
 
 on:
   workflow_call:
+    inputs:
+      project-name:
+        required: true
+        type: string
 
 jobs:
   set-up:
     runs-on: ubuntu-latest
     steps:
-      - run: 'echo HI and this works this is a trivial change'
+      - run: 'echo HI and ${{ inputs.project-name }}'
