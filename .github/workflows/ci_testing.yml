@@ -9,10 +9,6 @@ on:
       - main
 
 jobs:
-  call-workflow:
-    uses: ./.github/workflows/set_up_testing_env.yml
-    with:
-      project-name: 'bob'
   branch-info:
     runs-on: ubuntu-latest
     steps:
@@ -85,6 +81,10 @@ jobs:
       APP_ROOT: ./dist
       DATA_PATH: data
     steps:
+      - name: call-workflow
+        uses: ./.github/workflows/set_up_testing_env.yml
+        with:
+          project-name: ${{fromJson(needs.get-affected.outputs.test-unit)}}
       - name: Get workspaces
         id: get-workspaces
         run: echo "::debug::${{ fromJson(needs.get-affected.outputs.test-unit)[0] }}"
