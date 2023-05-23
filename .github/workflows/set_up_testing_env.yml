@@ -1,0 +1,10 @@
+name: Set up testing environment
+
+on:
+  workflow_call:
+
+jobs:
+  set-up:
+    runs-on: ubuntu-latest
+    steps:
+      - run: 'echo HI'
