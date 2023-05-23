@@ -7,4 +7,4 @@ jobs:
   set-up:
     runs-on: ubuntu-latest
     steps:
-      - run: 'echo HI'
+      - run: 'echo HI and this works this is a trivial change'
