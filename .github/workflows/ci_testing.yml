@@ -81,23 +81,20 @@ jobs:
       APP_ROOT: ./dist
       DATA_PATH: data
     steps:
-      - name: check the workflow
+      - name: Set up environment
         uses: actions/checkout@v3
       - uses: ./.github/actions/set_up_testing_env
+
       - name: Get workspaces
         id: get-workspaces
         run: echo "::debug::${{ fromJson(needs.get-affected.outputs.test-unit)[0] }}"
-      - name: Checkout and setup environment
-        uses: actions/checkout@v3
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2.2.4
-        with:
-          version: '8.x'
-      - name: Use Node.js
+
+      - name: Override version
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
           cache: 'pnpm'
+
       - name: Install dependencies
         run: pnpm install
       # Run test:unit script in the affected project
@@ -124,18 +121,13 @@ jobs:
       - name: Get workspaces
         id: get-workspaces
         run: echo "::debug::${{ fromJson(needs.get-affected.outputs.test-unit)[0] }}"
-      - name: check the workflow
+
+      - name: Set up environment
         uses: actions/checkout@v3
       - uses: ./.github/actions/set_up_testing_env
+
       - name: Install dependencies
         run: pnpm install
       # Run test:unit script in the affected project
       - name: Test e2e
         run: pnpm nx test:e2e ${{ matrix.projectName }}
-
-  test-workflow:
-    runs-on: ubuntu-latest
-    steps:
-      - name: check the workflow
-        uses: actions/checkout@v3
-      - uses: ./.github/actions/set_up_testing_env
