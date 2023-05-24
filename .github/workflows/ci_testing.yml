@@ -25,7 +25,7 @@ jobs:
         uses: tj-actions/branch-names@v7.0.1
     outputs:
       base-branch-name: ${{ steps.get-base-branch-name.outputs.branch }}
-      branch-name: ${{ steps.get-branch-name.outputs.branch }}
+      branch-name: ${{ steps.get-base-branch-name.outputs.branch }}
 
   get-affected:
     needs: [branch-info]
@@ -63,6 +63,13 @@ jobs:
     outputs:
       test-unit: ${{ steps.get-projects-arrays.outputs.test-unit }}
       test-e2e: ${{ steps.get-projects-arrays.outputs.test-e2e }}
+
+  test-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./.github/actions/set_up_testing_env
+      - name: check the workflow
+        run: echo 'I ran'
 
   test-unit:
     runs-on: ubuntu-latest
