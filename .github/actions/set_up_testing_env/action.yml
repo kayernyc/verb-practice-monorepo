@@ -3,6 +3,7 @@ runs:
   using: 'composite'
   steps:
     - name: Install pnpm
+      shell: bash
       run: npm install -g pnpm@^8.3.1
     - name: Install Node.js
       uses: actions/setup-node@v2
