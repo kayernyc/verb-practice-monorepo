@@ -64,13 +64,6 @@ jobs:
       test-unit: ${{ steps.get-projects-arrays.outputs.test-unit }}
       test-e2e: ${{ steps.get-projects-arrays.outputs.test-e2e }}
 
-  test-workflow:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: ./.github/actions/set_up_testing_env@main
-      - name: check the workflow
-        run: echo 'I ran'
-
   test-unit:
     runs-on: ubuntu-latest
     needs: [get-affected]
@@ -148,3 +141,10 @@ jobs:
       # Run test:unit script in the affected project
       - name: Test e2e
         run: pnpm nx test:e2e ${{ matrix.projectName }}
+
+  test-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./.github/actions/set_up_testing_env@main
+      - name: check the workflow
+        run: echo 'I ran'
