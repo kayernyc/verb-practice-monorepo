@@ -145,6 +145,6 @@ jobs:
   test-workflow:
     runs-on: ubuntu-latest
     steps:
-      - uses: ./.github/actions/set_up_testing_env@main
       - name: check the workflow
-        run: echo 'I ran'
+        uses: actions/checkout@v3
+      - uses: ./.github/actions/set_up_testing_env
