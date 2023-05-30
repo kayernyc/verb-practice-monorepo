@@ -9,7 +9,7 @@
     "lint": "eslint",
     "build": "sh scripts/copy-data.sh && tsc && tsc-alias",
     "run": "node ./dist/server.js",
-    "dev:server": "tsc -w & tsc-alias -w && node ./dist/server.js"
+    "dev:server": "tsc -w && tsc-alias -w & node ./dist/server.js"
   },
   "keywords": [],
   "author": "",
