@@ -4,6 +4,7 @@
   "description": "Sums two to a given number",
   "scripts": {
     "build": "echo \"Built!\"",
+    "test:e2e": "echo 0",
     "test:unit": "jest"
   },
   "dependencies": {
