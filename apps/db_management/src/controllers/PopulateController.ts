@@ -14,5 +14,6 @@ export function buildAllSource(dataPath?: string): unknown {
     );
 
   const allSource = readYamls(allFileNames, currentDataPath);
+
   return allSource;
 }

@@ -1,7 +1,6 @@
 {
   "name": "sum-e2e",
   "private": "true",
-  "type": "module",
   "description": "E2E tests of all sum packages",
   "scripts": {
     "test:e2e": "jest"

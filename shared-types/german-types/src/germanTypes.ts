@@ -29,6 +29,7 @@ const ALL_GERMAN_VALID_KEYS = [
   'partizip',
   'reflexive',
   'seperable',
+  'sich',
   'stems',
   'strong',
   'translations',

@@ -1,5 +1,5 @@
 import sumTwo from 'sum-two';
-import { sumOne } from 'sum-one';
+import sumOne from 'sum-one';
 
 describe('When using sumOne and sumTwo', () => {
   it('should sum 3 to 7', () => {

@@ -1,21 +1,29 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "baseUrl": "./src",
-    "composite": false,
+    "baseUrl": "src",
     "esModuleInterop": true,
-    "module": "node16",
     "moduleResolution": "node",
+    "module": "commonjs",
     "outDir": "./dist",
-    "rootDir": "./src",
     "resolveJsonModule": true,
     "paths": {
       "@controllers/*": ["./controllers/*"],
       "@models/*": ["./models/*"],
-      "@germanHydrationFunctions/*": ["./models/german/hydrationFunctions/*.ts"],
-      "@germanUtilities/*": ["./models/german/utilities/*.ts"],
+      "@germanHydrationFunctions/*": ["./models/german/hydrationFunctions/*"],
+      "@germanUtilities/*": ["./models/german/utilities/*"],
       "@utilities/*": ["./utilities/*"],
-    }
+    },
+    "rootDir": "src"
   },
-  "include": ["./src"]
+  "include": ["./src"],
+  "exclude": ["node_modules"],
+  "tsc-alias": {
+    "verbose": true,
+    "resolveFullPaths": false,
+    "fileExtensions": {
+      "inputGlob": "js",
+      "outputCheck": ["js"]
+    }
+  }
 }

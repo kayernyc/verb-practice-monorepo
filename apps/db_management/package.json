@@ -9,7 +9,7 @@
     "lint": "eslint",
     "build": "sh scripts/copy-data.sh && tsc && tsc-alias",
     "run": "node ./dist/server.js",
-    "dev:server": "tsc -w & tsc-alias -w && node ./dist/server.js"
+    "dev:server": "sh scripts/copy-data.sh && tsc -w && tsc-alias -w & node ./dist/server.js"
   },
   "keywords": [],
   "author": "",
@@ -24,11 +24,12 @@
   },
   "devDependencies": {
     "@types/cors": "^2.8.12",
+    "@types/ejs": "^3.1.2",
     "@types/express": "^4.17.13",
     "@types/js-yaml": "4.0.5",
     "@types/node": "^18.15.11",
-    "german-types": "workspace:*",
     "english-types": "workspace:*",
+    "german-types": "workspace:*",
     "global-types": "workspace:*",
     "mock-fs": "^5.1.4",
     "ts-node": "^10.9.1",
