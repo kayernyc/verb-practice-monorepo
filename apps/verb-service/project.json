@@ -1,0 +1,39 @@
+{
+  "name": "verb-service",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/verb-service/src",
+  "targets": {
+    "build": {
+      "executor": "@nx/deno:emit",
+      "outputs": ["dist/apps/verb-service"],
+      "options": {
+        "main": "apps/verb-service/src/main.ts",
+        "outputFile": "dist/apps/verb-service/main.js",
+        "denoConfig": "apps/verb-service/deno.json"
+      }
+    },
+    "serve": {
+      "executor": "@nx/deno:run",
+      "options": {
+        "buildTarget": "verb-service:build",
+        "watch": true
+      }
+    },
+    "test": {
+      "executor": "@nx/deno:test",
+      "outputs": ["coverage/apps/verb-service"],
+      "options": {
+        "coverageDirectory": "coverage/apps/verb-service",
+        "denoConfig": "apps/verb-service/deno.json"
+      }
+    },
+    "lint": {
+      "executor": "@nx/deno:lint",
+      "options": {
+        "denoConfig": "apps/verb-service/deno.json"
+      }
+    }
+  },
+  "tags": []
+}

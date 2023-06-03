@@ -18,6 +18,9 @@ The ultimate aim is provide a backend to power different consumers for creating 
 
 - [pnpm](https://pnpm.io/installation) @^8.3.1
 - [node](https://nodejs.org/en/download) @^18.15.0
+- [deno](https://deno.com/manual@v1.31.1/getting_started)
+
+If you are working in VSCode, install the [Deno VS Code Extension Pack](justjavac.vscode-deno-extensionpack). This will quiet type errors and allow you to cache dependencies.
 
 ### Start
 
@@ -55,6 +58,7 @@ pnpm nx run-many -t build -p  global-types german-types --watch
 ```node
 pnpm add <internal workspace package> --filter <target workspace> --workspace
 ```
+<<<<<<< HEAD
 
 ### Running tests
 
@@ -77,3 +81,5 @@ for example:
 ```sh
 pnpm nx test:unit db_management
 ```
+=======
+>>>>>>> 4d5f386 (feat: add deno service for verbs)
