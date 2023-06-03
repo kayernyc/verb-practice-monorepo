@@ -1,9 +1,9 @@
-<%- include('./partials/header'); %>
+<%- include('./partials/header', {titleString: 'Data for population'}); %>
 <main>
  <div class="ui segment">
    <h1>Welcome to populate.</h1>
    <!-- Next step turn this button into a fetch -->
-   <button href="/sources/allverbs">Download</button>
+   <button onclick="downloadAll()">Download</button>
  </div>
 </main>
 
@@ -11,4 +11,21 @@
   <%- include ("./partials/footer") %>
 </footer>
 
+<script>
+  const downloadAll = () => {
+    console.log('heard that')
+    fetch("sources/allverbs")
+      .then(response => response.json())
+      .then(data => {
+        let hiddenElement = document.createElement('a')
+        hiddenElement.href = 'data:attachment/text,' + encodeURIComponent(JSON.stringify(data, undefined,));
+        hiddenElement.target = '_blank';
+        hiddenElement.download = 'allVerbs.json';
+        hiddenElement.click();
+        hiddenElement.remove();
+      });
+  }
+</script>
+
 </body></html>
+

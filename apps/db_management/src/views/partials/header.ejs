@@ -2,7 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Random Title</title>
+    <title>
+      <%= typeof titleString != 'undefined' ? titleString : 'Rando'%>
+    </title>
 
     <!-- CSS link (loading Semantic UI from a CDN) -->
     <link
@@ -22,7 +24,7 @@
     <header>
       <div class="ui inverted menu">
         <a class="item" href="/"> Home </a>
-        <a class="item" href="/sources/allverbs"> Magic </a>
+        <a class="item" href="/sources/allverbs"> All Verbs </a>
       </div>
     </header>
   </body>

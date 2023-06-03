@@ -10,7 +10,7 @@ populateRouter.get('/', (_, res) => {
     const root = process.env.APP_ROOT;
     if (root && typeof root === 'string') {
       const pathToPage = path.join(root, 'views', 'populate.ejs');
-      res.render(pathToPage);
+      res.render(pathToPage, { mascot: 'bob' });
     } else {
       res.send(result);
     }
