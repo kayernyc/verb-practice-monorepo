@@ -1,31 +1,29 @@
-import { Application, Router } from 'https://deno.land/x/oak@v11.1.0/mod.ts';
+import { Server } from 'https://deno.land/std@0.166.0/http/server.ts';
+import { GraphQLHTTP } from 'https://deno.land/x/gql@1.1.2/mod.ts';
+import { makeExecutableSchema } from 'https://deno.land/x/graphql_tools@0.0.2/mod.ts';
 
-const router = new Router();
+import { typeDefs } from './schema/helloSchema.ts';
 
-router.get('/', (ctx) => {
-  ctx.response.redirect('/api');
+const resolvers = {
+  Query: {
+    hello: () => `Hello, World!`,
+  },
+};
+
+const schema = makeExecutableSchema({ resolvers, typeDefs });
+
+const server = new Server({
+  handler: async (req) => {
+    const { pathname } = new URL(req.url);
+
+    return pathname === '/graphql'
+      ? await GraphQLHTTP<Request>({
+          schema,
+          graphiql: true,
+        })(req)
+      : new Response('Not Found', { status: 404 });
+  },
+  port: 3060,
 });
 
-router.get('/api', (ctx) => {
-  ctx.response.body = { message: 'Hello verb-service' };
-  ctx.response.type = 'text/json';
-});
-
-const app = new Application();
-
-app.addEventListener('listen', ({ hostname, port, secure }) => {
-  console.log(
-    `Listening on: ${secure ? 'https://' : 'http://'}${
-      hostname ?? 'localhost'
-    }:${port}`,
-  );
-});
-
-app.use(router.routes());
-app.use(router.allowedMethods());
-
-await app
-  .listen({ port: Number(Deno.env.get('PORT') || 4200) })
-  .catch((err) => {
-    console.error('Error serving app. Original Error:', err);
-  });
+server.listenAndServe();
