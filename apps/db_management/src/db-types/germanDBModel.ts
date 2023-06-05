@@ -1,8 +1,8 @@
 /* eslint-disable no-console */
 import { GermanTenses, GermanVerbHydrated } from 'german-types';
 import {
-  GermanConjugationModel,
   GermanVerbTenseModel,
+  GermanVerbVariationModel,
   GermanVerbHydratedModel,
 } from './germanVerbHydratedModel';
 
@@ -11,12 +11,41 @@ const germanTenses: string[] = Object.values(GermanTenses);
 // convert GermanVerbHydratedModel
 export const convertGermanVerbToHydratedGermanVerb = (
   verb: GermanVerbHydrated,
-) => {
-  // GermanVerbHydratedModel[]
-  const tenses: GermanVerbTenseModel[] = [];
-  const verbs: GermanVerbHydratedModel[] = [];
+): GermanVerbHydratedModel => {
+  const { infinitive, variations } = verb;
 
-  const { infinitive, language, variations } = verb;
+  const germanVerbVariations = variations.map((variation) => {
+    const tenses: GermanVerbTenseModel[] = [];
+    const { hilfsverb, partizip, translations } = variation;
 
-  variations.forEach((variation) => console.log({ variation }));
+    for (const [keyword, value] of Object.entries(variation)) {
+      if (germanTenses.includes(keyword)) {
+        let conjugations = Object.entries(value).map((entry) => {
+          const [person, conjugation] = entry;
+          return { person, conjugation };
+        });
+
+        const newTense: GermanVerbTenseModel = {
+          tenseName: GermanTenses[keyword as keyof typeof GermanTenses],
+          conjugations,
+        };
+
+        tenses.push(newTense);
+      }
+    }
+
+    return {
+      partizip,
+      hilfsverb,
+      tenses,
+      translations,
+    } as GermanVerbVariationModel;
+  });
+
+  return {
+    date: new Date(),
+    infinitive,
+    schema_version: 1,
+    variations: germanVerbVariations,
+  };
 };

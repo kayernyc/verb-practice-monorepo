@@ -47,6 +47,7 @@ describe('convertGermanVerbToHydratedGermanVerb', () => {
     const result = convertGermanVerbToHydratedGermanVerb(
       scheißen as GermanVerbHydrated,
     );
+    console.log({ result });
     expect(true).toBe(true);
   });
 });

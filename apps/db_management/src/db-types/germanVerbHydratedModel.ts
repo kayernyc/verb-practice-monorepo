@@ -1,41 +1,51 @@
 import { GermanTenses } from 'german-types';
-import { Schema } from 'mongoose';
+import { Schema, Types } from 'mongoose';
+
+import { TranslationDictionaryModel } from './languageTranslations';
 
 export interface GermanConjugationModel {
   person: string;
   conjugation: string;
 }
 
-export const GermanConjugationSchema = new Schema<GermanConjugationModel>({
-  person: Number,
-  conjugation: String,
-});
+// export const GermanConjugationSchema = new Schema<GermanConjugationModel>({
+//   person: Number,
+//   conjugation: String,
+// });
 
 export interface GermanVerbTenseModel {
   tenseName: GermanTenses;
   conjugations: GermanConjugationModel[];
 }
 
-export const GermanVerbTenseSchema = new Schema<GermanVerbTenseModel>({
-  tenseName: String,
-  conjugations: [GermanConjugationSchema],
+// export const GermanVerbTenseSchema = new Schema<GermanVerbTenseModel>({
+//   tenseName: String,
+//   conjugations: Types.DocumentArray<GermanConjugationModel>,
+// });
+
+export interface GermanVerbVariationModel {
+  partizip: string;
+  hilfsverb: string;
+  tenses: GermanVerbTenseModel[];
+  translations: TranslationDictionaryModel[];
+}
+
+export const GermanVerbVariationSchema = new Schema<GermanVerbVariationModel>({
+  partizip: String,
+  tenses: Types.DocumentArray<GermanVerbTenseModel>,
+  translations: Types.DocumentArray<TranslationDictionaryModel>
 });
 
 export interface GermanVerbHydratedModel {
   date: Date;
-  hilfsverb: string;
-  infinitive: string;
-  partizip: string;
   schema_version: number;
-  tenses: GermanVerbTenseModel[];
+  infinitive: string;
+  variations: GermanVerbVariationModel[];
 }
 
-// eslint-disable-next-line import/prefer-default-export
 export const GermanVerbHydratedSchema = new Schema<GermanVerbHydratedModel>({
   date: Date,
   infinitive: String,
-  hilfsverb: String,
-  partizip: String,
   schema_version: Number,
-  tenses: [GermanVerbTenseSchema],
+  variations: Types.DocumentArray<GermanVerbVariationModel>
 });
