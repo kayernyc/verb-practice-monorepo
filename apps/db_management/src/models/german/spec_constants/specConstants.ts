@@ -457,3 +457,106 @@ export const drehenReturnObject: GermanVerbHydrated = {
     },
   ],
 };
+
+export const nehmenGermanVerb: LanguageVerbCandidate = {
+  infinitive: 'nehmen',
+  language: LanguageMap.de,
+  translations: {
+    en: ['take'],
+  },
+  stems: { präteritum: 'a', partizip: 'omm', duEs: 'imm' },
+  hilfsverb: 'haben',
+};
+
+export const nehmenReturnObject: GermanVerbHydrated = {
+  infinitive: 'nehmen',
+  language: LanguageMap.de,
+  variations: [
+    {
+      hilfsverb: 'haben',
+      partizip: 'genommen',
+      präsens: {
+        [GermanPronounKeys.ich]: 'nehme',
+        [GermanPronounKeys.wir]: 'nehmen',
+        [GermanPronounKeys.du]: 'nimmst',
+        [GermanPronounKeys.ihr]: 'nehmt',
+        [GermanPronounKeys.es]: 'nimmt',
+      },
+      präteritum: {
+        [GermanPronounKeys.ich]: 'nahm',
+        [GermanPronounKeys.wir]: 'nahmen',
+        [GermanPronounKeys.du]: 'nahmst',
+        [GermanPronounKeys.ihr]: 'nahmt',
+        [GermanPronounKeys.es]: 'nahm',
+      },
+      konjunktiv: {
+        [GermanPronounKeys.ich]: 'nehme',
+        [GermanPronounKeys.wir]: 'nehmen',
+        [GermanPronounKeys.du]: 'nehmest',
+        [GermanPronounKeys.ihr]: 'nehmet',
+        [GermanPronounKeys.es]: 'nehme',
+      },
+      k2präsens: {
+        [GermanPronounKeys.ich]: 'nähme',
+        [GermanPronounKeys.wir]: 'nähmen',
+        [GermanPronounKeys.du]: 'nähmest',
+        [GermanPronounKeys.ihr]: 'nähmet',
+        [GermanPronounKeys.es]: 'nähme',
+      },
+      translations: {
+        en: ['take'],
+      },
+    },
+  ],
+};
+
+export const blendenGermanVerb: LanguageVerbCandidate = {
+  infinitive: 'blenden',
+  language: LanguageMap.de,
+  translations: {
+    en: ['blind'],
+  },
+  hilfsverb: 'haben',
+};
+
+export const blendenReturnObject: GermanVerbHydrated = {
+  infinitive: 'blenden',
+  language: LanguageMap.de,
+  variations: [
+    {
+      hilfsverb: 'haben',
+      partizip: 'geblendet',
+      präsens: {
+        [GermanPronounKeys.ich]: 'blende',
+        [GermanPronounKeys.wir]: 'blenden',
+        [GermanPronounKeys.du]: 'blendest',
+        [GermanPronounKeys.ihr]: 'blendet',
+        [GermanPronounKeys.es]: 'blendet',
+      },
+      präteritum: {
+        [GermanPronounKeys.ich]: 'blendete',
+        [GermanPronounKeys.wir]: 'blendeten',
+        [GermanPronounKeys.du]: 'blendetest',
+        [GermanPronounKeys.ihr]: 'blendetet',
+        [GermanPronounKeys.es]: 'blendete',
+      },
+      konjunktiv: {
+        [GermanPronounKeys.ich]: 'blende',
+        [GermanPronounKeys.wir]: 'blenden',
+        [GermanPronounKeys.du]: 'blendest',
+        [GermanPronounKeys.ihr]: 'blendet',
+        [GermanPronounKeys.es]: 'blende',
+      },
+      k2präsens: {
+        [GermanPronounKeys.ich]: 'blendete',
+        [GermanPronounKeys.wir]: 'blendeten',
+        [GermanPronounKeys.du]: 'blendetest',
+        [GermanPronounKeys.ihr]: 'blendetet',
+        [GermanPronounKeys.es]: 'blendete',
+      },
+      translations: {
+        en: ['blind'],
+      },
+    },
+  ],
+};

@@ -11,6 +11,8 @@ import {
   habenReturnObject,
   könnenGermanVerb,
   könnenReturnObject,
+  nehmenGermanVerb,
+  nehmenReturnObject,
   seinGermanVerb,
   seinReturnObject,
   werdenGermanVerb,
@@ -141,5 +143,10 @@ describe('processDeRecord matches real conjugations:', () => {
   it('returns gelingen correctly', () => {
     const result = processDeRecord(gelingenGermanVerb);
     expect(result).toEqual(gelingenReturnObject);
+  });
+
+  it('returns nehmen correctly', () => {
+    const result = processDeRecord(nehmenGermanVerb);
+    expect(result).toEqual(nehmenReturnObject);
   });
 });
