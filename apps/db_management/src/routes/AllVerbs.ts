@@ -1,6 +1,5 @@
 import { RequestHandler, Router } from 'express';
 import { buildAllSource } from '@controllers/PopulateController';
-import stream from 'stream';
 
 export const allVerbsRouter: Router = Router();
 

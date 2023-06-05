@@ -1,9 +1,17 @@
 import fs from 'fs';
 import { findRelativePathToData } from '@utilities/buildFromYml/readYaml';
 import { readYamls } from 'models/readSourceYamls';
+import { LanguageVerbBase } from 'global-types';
 
-export function buildAllSource(dataPath?: string): unknown {
-  // { [id: string]: T }
+type VerbDictionary = {
+  de: LanguageVerbBase[];
+  en: LanguageVerbBase[];
+  fr: LanguageVerbBase[];
+  currentDate: number;
+};
+
+export function buildAllSource(dataPath?: string): VerbDictionary {
+  // TODO: add error handling
   const currentDataPath = dataPath || findRelativePathToData(__dirname);
 
   const allFileNames = fs
