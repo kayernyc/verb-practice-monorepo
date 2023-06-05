@@ -16,7 +16,7 @@ export const convertGermanVerbToHydratedGermanVerb = (
 
   const germanVerbVariations = variations.map((variation) => {
     const tenses: GermanVerbTenseModel[] = [];
-    const { hilfsverb, partizip, translations } = variation;
+    const { hilfsverb, partizip, particle, translations } = variation;
 
     for (const [keyword, value] of Object.entries(variation)) {
       if (germanTenses.includes(keyword)) {
@@ -35,8 +35,9 @@ export const convertGermanVerbToHydratedGermanVerb = (
     }
 
     return {
-      partizip,
       hilfsverb,
+      particle,
+      partizip,
       tenses,
       translations,
     } as GermanVerbVariationModel;

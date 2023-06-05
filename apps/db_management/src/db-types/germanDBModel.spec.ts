@@ -1,6 +1,7 @@
 import { LanguageMap } from 'global-types';
 import { convertGermanVerbToHydratedGermanVerb } from './germanDBModel';
 import { GermanVerbHydrated } from 'german-types';
+import { blendenReturnObject } from '@models/german/spec_constants/specConstants';
 
 const scheißen = {
   infinitive: 'scheißen',
@@ -42,12 +43,50 @@ const scheißen = {
   ],
 };
 
+const abblenden = { ...blendenReturnObject };
+abblenden.variations.push({
+  hilfsverb: 'haben',
+  partizip: 'geblendet',
+  particle: 'ab',
+  präsens: {
+    '1033': 'blende',
+    '1041': 'blenden',
+    '1098': 'blendest',
+    '1106': 'blendet',
+    '1548': 'blendet',
+  },
+  präteritum: {
+    '1033': 'blendete',
+    '1041': 'blendeten',
+    '1098': 'blendetest',
+    '1106': 'blendetet',
+    '1548': 'blendete',
+  },
+  konjunktiv: {
+    '1033': 'blende',
+    '1041': 'blenden',
+    '1098': 'blendest',
+    '1106': 'blendet',
+    '1548': 'blende',
+  },
+  k2präsens: {
+    '1033': 'blendete',
+    '1041': 'blendeten',
+    '1098': 'blendetest',
+    '1106': 'blendetet',
+    '1548': 'blendete',
+  },
+  translations: {
+    en: ['fade out'],
+  },
+});
+
 describe('convertGermanVerbToHydratedGermanVerb', () => {
-  it('transforms German Hydrated Verb scheißen to a Mongoose model', () => {
+  it('transforms German Hydrated Verb blenden to a Mongoose model', () => {
     const result = convertGermanVerbToHydratedGermanVerb(
-      scheißen as GermanVerbHydrated,
+      abblenden as GermanVerbHydrated,
     );
-    console.log({ result });
+    console.log(JSON.stringify(result));
     expect(true).toBe(true);
   });
 });

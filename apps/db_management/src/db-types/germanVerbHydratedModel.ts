@@ -24,14 +24,17 @@ export interface GermanVerbTenseModel {
 // });
 
 export interface GermanVerbVariationModel {
-  partizip: string;
   hilfsverb: string;
+  partizip: string;
+  particle: string,
   tenses: GermanVerbTenseModel[];
   translations: TranslationDictionaryModel[];
 }
 
 export const GermanVerbVariationSchema = new Schema<GermanVerbVariationModel>({
+  hilfsverb: String,
   partizip: String,
+  particle: String,
   tenses: Types.DocumentArray<GermanVerbTenseModel>,
   translations: Types.DocumentArray<TranslationDictionaryModel>
 });
