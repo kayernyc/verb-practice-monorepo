@@ -17,6 +17,10 @@ haben:
     - particle: vor
       translations:
         en: intend
+    - particle: an
+      language: de
+      translations:
+        en: [have on, wear]
 
 sein:
   auxiliary: true
@@ -41,6 +45,12 @@ sein:
     - particle: voraus
       translations:
         en: be in advance, be ahead
+    - particle: auf
+      translations:
+        en: be open, be up
+    - particle: dabei
+      translations:
+        en: be present at, take part in
 
 werden:
   auxiliary: true
@@ -60,6 +70,10 @@ werden:
     präteritum:
       ich: wurde
       es: wurde
+  variations:
+    - particle: etwas los
+      translations:
+        en: get rid of something
 
 können:
   language: de
@@ -107,6 +121,16 @@ wollen:
   stems:
     präsensSingular: i
   drop: true
+  variations:
+    - particle: hinaus
+      translations:
+        en: want to go out
+    - particle: hinein
+      translations:
+        en: want to go in
+    - particle: los
+      translations:
+        en: want to be off  
 
 sollen:
   language: de
@@ -129,6 +153,13 @@ dürfen:
     partizip: u
   drop: true
   weakEndings: true
+  variations:
+    - particle: hinein
+      translations:
+        en: be allowed in
+    - particle: mit
+      translations:
+        en: be allowed to go along
 
 mögen:
   language: de
@@ -188,7 +219,28 @@ lassen:
     - particle: nieder
       sich: true
       translations:
-        en: ensconce oneself      
+        en: ensconce oneself
+    - particle: nach
+      translations:
+        en: diminish, loosen
+    - particle: los
+      translations:
+        en: let go of
+    - particle: hinunter
+      translations:
+        en: lower down (e.g. with a rope)
+    - particle: da
+      translations:
+        en: leave there
+    - particle: ein
+      translations:
+        en: allow to enter
+    - particle: durch
+      translations:
+        en: allow through
+    - particle: hinab
+      translations:
+        en: lower down (e.g. with a rope)    
 
 gehen:
   language: de
@@ -232,6 +284,51 @@ gehen:
     - particle: nebenher
       translations:
         en: walk alongside
+    - particle: hinauf
+      translations:
+        en: walk up, walk upstairs, go upwards
+    - particle: hervor
+      translations:
+        en: emerge, lure out
+    - particle: heran
+      translations:
+        en: go up closer
+    - particle: heim
+      translations:
+        en: go/walk home
+    - particle: fehl
+      translations:
+        en: go wrong
+    - particle: entzwei
+      translations:
+        en: come apart
+    - particle: entlang
+      translations:
+        en: [go along, walk along]
+    - particle: ein
+      translations:
+        en: enter, sink in, shrink
+    - particle: durch
+      translations:
+        en: walk through
+    - particle: auseinander
+      translations:
+        en: part, disperse
+    - particle: aus
+      translations:
+        en: go out
+    - particle: nach
+      translations:
+        en: [follow after, look into (an issue), run slow (clock)]
+    - particle: los
+      translations:
+        en: commence
+    - particle: hinein
+      translations:
+        en: enter
+    - particle: hinaus
+      translations:
+        en: go out
 
 laufen:
   language: de
@@ -251,6 +348,21 @@ laufen:
     - particle: nebenher
       translations:
         en: [run alongside, proceed at the same time]
+    - particle: entlang
+      translations:
+        en: [go along, walk along]
+    - particle: hinterher
+      translations:
+        en: run after
+    - particle: herbei
+      translations:
+        en: to come running up
+    - particle: fort
+      translations:
+        en: run away
+    - particle: fest
+      translations:
+        en: run aground
 
 schreiben:
   language: de
@@ -262,6 +374,16 @@ schreiben:
     präteritum: ie
     k2präsens: ie
     partizip: ie
+  variations:
+    - particle: mit
+      translations:
+        en: take notes
+    - particle: auf
+      translations:
+        en: write down
+    - particle: ein
+      translations:
+        en: enroll
 
 folgen:
   language: de
@@ -269,6 +391,10 @@ folgen:
   translations:
     en: follow
   hilfsverb: sein
+  variations:
+    - particle: nach
+      translations:
+        en: succeed, follow
 
 greifen:
   language: de
@@ -284,6 +410,9 @@ greifen:
     - particle: zu
       translations:
         en: [take hold, help oneself (to something)]
+    - particle: an
+      translations:
+        en: attack
 
 pfeifen:
   language: de
@@ -295,6 +424,10 @@ pfeifen:
     präteritum: iff
     k2präsens: iff
     partizip: iff
+  variations:
+    - particle: an
+      translations:
+        en: whistle for play to start
 
 schreien:
   language: de
@@ -353,6 +486,15 @@ hängen:
     - particle: um
       translations:
         en: re-hang (curtains), drape around
+    - particle: herab
+      translations:
+        en: hang down
+    - particle: an
+      translations:
+        en: attach
+    - particle: heraus
+      translations:
+        en: hang out
 
 leiden:
   language: de
@@ -378,7 +520,33 @@ halten:
   variations:
     - particle: nieder
       translations:
-        en: oppress 
+        en: oppress
+    - particle: an
+      translations:
+        en: cause to stop
+    - particle: aus
+      translations:
+        en: endure, withstand
+    - particle: durch
+      translations:
+        en: withstand, endure
+    - particle: fest
+      translations:
+        en: hold on firmly
+    - particle: frei
+      translations:
+        en: keep clear (not block)
+    - particle: hin
+      translations:
+        en:
+          - hold out
+          - delay
+    - particle: hoch
+      translations:
+        en: hold up [in a raised position]
+    - particle: mit
+      translations:
+        en: keep up with
 
 schlafen:
   language: de
@@ -422,6 +590,9 @@ spielen:
     - particle: nach
       translations:
         en: play during time that has been added on (injury time in soccer)
+    - particle: mit
+      translations:
+        en: take part in the game
 
 machen:
   language: de
@@ -437,7 +608,28 @@ machen:
         en: close
     - particle: weiter
       translations:
-        en: carry on      
+        en: carry on
+    - particle: mit
+      translations:
+        en: participate
+    - particle: nach
+      translations:
+        en: imitate, counterfeit
+    - particle: an
+      translations:
+        en: [attach, make a pass at]
+    - particle: auf
+      translations:
+        en: open
+    - particle: fest
+      translations:
+        en: fasten firmly
+    - particle: gleich
+      translations:
+        en: make equal
+    - particle: aus
+      translations:
+        en: turn off, extinguish, make a difference, add up to
 
 fragen:
   language: de
@@ -484,10 +676,22 @@ reden:
   variations:
     - particle: weiter
       translations:
-        en: continue talking      
+        en: continue talking
     - particle: vorbei
       translations:
-        en: talk past    
+        en: talk past
+    - particle: ein
+      translations:
+        en: pursuade
+    - particle: dazwischen
+      translations:
+        en: interrupt
+    - particle: fort
+      translations:
+        en: continue talking
+    - particle: mit
+      translations:
+        en: [participate in the conversation, have a say]
 
 bedeuten:
   language: de
@@ -513,6 +717,15 @@ kaufen:
   infinitive: kaufen
   translations:
     en: buy
+  variations:
+    - particle: ein
+      translations:
+        en: shop
+    - particle: frei
+      translations:
+        en:
+          - ransom
+          - buy someone's freedom
 
 schmecken:
   language: de
@@ -536,6 +749,10 @@ wohnen:
   infinitive: wohnen
   translations:
     en: [live (somewhere), inhabit]
+  variations:
+    - particle: bei
+      translations:
+        en: be present at
 
 arbeiten:
   language: de
@@ -553,12 +770,41 @@ arbeiten:
     - particle: um
       translations:
         en: rework
+    - particle: auf
+      translations:
+        en: finish off, reuse
+    - particle: nach
+      translations:
+        en: do make-up work
+    - particle: mit
+      translations:
+        en: collaborate, work along with
+    - particle: hin
+      translations:
+        en: work towards
+    - particle: herauf
+      translations:
+        en: work one's way up
+    - particle: entgegen
+      translations:
+        en: work against
+    - particle: empor
+      sich: true
+      translations:
+        en: work one's way up
+    - particle: durch
+      translations:
+        en: work through
 
 brauchen:
   language: de
   infinitive: brauchen
   translations:
     en: need
+  variations:
+    - particle: auf
+      translations:
+        en: use up
 
 setzen:
   language: de
@@ -580,13 +826,47 @@ setzen:
         en: put before      
     - particle: um
       translations:
-        en: [transfer, transpose, implement, transact, transform]     
+        en: [transfer, transpose, implement, transact, transform]
+    - particle: bei
+      translations:
+        en: bury
+    - particle: entgegen
+      translations:
+        en: contrast
+    - particle: fort
+      translations:
+        en:
+          - continue
+          - carry on with
+          - resume
+    - particle: frei
+      translations:
+        en: release
+    - particle: gleich
+      translations:
+        en: equate
+    - particle: herab
+      translations:
+        en: reduce, disparage
+    - particle: hin
+      sich: true
+      translations:
+        en: sit down
+    - particle: hinzu
+      translations:
+        en:
+          - add
+          - append  
 
 suchen:
   language: de
   infinitive: suchen
   translations:
     en: search
+  variations:
+    - particle: heim
+      translations:
+        en: afflict
 
 versuchen:
   language: de
@@ -609,6 +889,15 @@ bauen:
     - particle: vor
       translations:
         en: make provision
+    - particle: aus
+      translations:
+        en: extend, improve, expand
+    - particle: auf
+      translations:
+        en: build up
+    - particle: an
+      translations:
+        en: [build on, add, cultivate (a crop)]
 
 tagen:
   language: de
@@ -621,6 +910,10 @@ deuten:
   infinitive: deuten
   translations:
     en: [construe, interpret]
+  variations:
+    - particle: hin
+      translations:
+        en: point to
 
 hören:
   language: de
@@ -641,6 +934,9 @@ hören:
       sich: true 
       translations:
         en: keep one's ears open
+    - particle: mit
+      translations:
+        en: listen in, eavesdrop
 
 fallen:
   language: de
@@ -666,6 +962,37 @@ fallen:
     - particle: um
       translations:
         en: [fall over, fall down]
+    - particle: hin
+      translations:
+        en: fall down
+    - particle: herunter
+      translations:
+        en: fall down
+    - particle: herein
+      translations:
+        en: fall into, be duped
+    - particle: herab
+      translations:
+        en: fall from
+    - particle: auseinander
+      translations:
+        en: fall apart
+    - particle: aus
+      translations:
+        en: fail, drop out, be canceled
+    - particle: auf
+      dative: true
+      translations:
+        en: stand out, be noticeable
+    - particle: hinein
+      translations:
+        en: fall into
+    - particle: hinab
+      translations:
+        en: fall down
+    - particle: hinunter
+      translations:
+        en: fall down
 
 zerfallen:
   language: de
@@ -694,6 +1021,10 @@ braten:
     duEs: ä
     präteritum: ie
     k2präsens: ie
+  variations:
+    - particle: durch
+      translations:
+        en: cook or roast all the way through
 
 raten:
   language: de
@@ -741,6 +1072,42 @@ fahren:
     - particle: nebenher
       translations:
         en: drive alongside
+    - particle: hin
+      translations:
+        en: go/drive there
+    - particle: herüber
+      translations:
+        en: drive over here
+    - particle: heraus
+      translations:
+        en: drive out of
+    - particle: her
+      translations:
+        en: [travel here, drive here]
+    - particle: heim
+      translations:
+        en: drive home
+    - particle: fort
+      translations:
+        en: continue
+    - particle: ein
+      translations:
+        en: drive in
+    - particle: durch
+      translations:
+        en: drive straight through
+    - particle: aus
+      translations:
+        en: go for a drive, take for a drive
+    - particle: an
+      translations:
+        en: [drive up, arrive (by car)]
+    - particle: mit
+      translations:
+        en: ride with
+    - particle: los
+      translations:
+        en: drive off
 
 graben:
   language: de
@@ -775,6 +1142,15 @@ schlagen:
     - particle: nieder
       translations:
         en: [knock down, suppress, make despondent]
+    - particle: auf
+      translations:
+        en: open [a book]
+    - particle: ein
+      translations:
+        en: hammer in, knock in
+    - particle: entzwei
+      translations:
+        en: smash into two pieces
 
 waschen:
   language: de
@@ -796,6 +1172,10 @@ wachsen:
   stems:
     duEs: ä
     präteritum: u
+  variations:
+    - particle: über etwas hinaus
+      translations:
+        en: grow beyond/outgrow something  
 
 tragen:
   language: de
@@ -810,6 +1190,18 @@ tragen:
     - particle: vor
       translations:
         en: perform, present (a speech, song, etc.)
+    - particle: bei
+      translations:
+        en: contribute [to]
+    - particle: her
+      translations:
+        en: carry (to) here (in this direction)
+    - particle: herauf
+      translations:
+        en: carry up here
+    - particle: hin
+      translations:
+        en: carry there
 
 laden:
   language: de
@@ -827,6 +1219,9 @@ laden:
     - particle: um
       translations:
         en: transfer (a load)
+    - particle: ein
+      translations:
+        en: invite
 
 #-------------------------------------------------------------------------------
 # BARREL ones from smarter german
@@ -840,6 +1235,18 @@ liegen:
   stems:
     präteritum: a
     partizip: e
+  variations:
+    - particle: bei
+      translations:
+        en: be enclosed [along with]
+    - particle: das würde mir fern
+      translations:
+        en: that would be the last thing I would do
+    - particle: gegenüber
+      translations:
+        en:
+          - face
+          - be across from
 
 bitten:
   language: de
@@ -850,6 +1257,13 @@ bitten:
   stems:
     präteritum: at
     partizip: et
+  variations:
+    - particle: heraus
+      translations:
+        en: ask (someone) to come outside
+    - particle: herein
+      translations:
+        en: invite in
 
 sitzen:
   language: de
@@ -860,6 +1274,18 @@ sitzen:
   stems:
     präteritum: aß
     partizip: ess
+  variations:
+    - particle: dabei
+      translations:
+        en: sit/stand there, stick with
+    - particle: fest
+      translations:
+        en: be stuck
+    - particle: gegenüber
+      translations:
+        en:
+          - sit facing
+          - sit across from  
 
 geben:
   language: de
@@ -888,7 +1314,22 @@ geben:
         en: pretend 
     - particle: statt
       translations:
-        en: [accede to, grant, allow] 
+        en: [accede to, grant, allow]
+    - particle: nach
+      translations:
+        en: [give way, give in]
+    - particle: hin
+      translations:
+        en: devote, sacrifice
+    - particle: heraus
+      translations:
+        en: [hand over, hand out]
+    - particle: frei
+      translations:
+        en: [release (a prisoner), allow (a currency) to float]
+    - particle: auf
+      translations:
+        en: give up
 
 lesen:
   language: de
@@ -909,6 +1350,19 @@ treten:
   stems:
     duEs: itt
     präteritum: a
+  variations:
+    - particle: bei
+      translations:
+        en: join
+    - particle: ein
+      translations:
+        en: enter
+    - particle: entgegen
+      translations:
+        en: confront
+    - particle: hervor
+      translations:
+        en: emerge, step forth  
 
 essen:
   language: de
@@ -920,6 +1374,10 @@ essen:
     duEs: i
     präteritum: aß
     partizip: gess
+  variations:
+    - particle: auf
+      translations:
+        en: eat up  
 
 sehen:
   language: de
@@ -953,6 +1411,9 @@ sehen:
     - particle: nach
       translations:
         en: [look up, check up]
+    - particle: fern
+      translations:
+        en: watch television
 
 geschehen:
   language: de
@@ -982,6 +1443,9 @@ fliegen:
     - particle: vorüber
       translations:
         en: fly by
+    - particle: auf
+      translations:
+        en: fly up
 
 fliehen:
   language: de
@@ -1007,7 +1471,13 @@ fließen:
   variations:
     - particle: zu
       translations:
-        en: flow toward    
+        en: flow toward
+    - particle: herab
+      translations:
+        en: flow down
+    - particle: hinein
+      translations:
+        en: flow into  
 
 frieren:
   language: de
@@ -1019,6 +1489,10 @@ frieren:
   stems:
     präteritum: o
     partizip: o
+  variations:
+    - particle: fest
+      translations:
+        en: ice over
 
 biegen:
   language: de
@@ -1029,6 +1503,13 @@ biegen:
   stems:
     präteritum: o
     partizip: o
+  variations:
+    - particle: ein
+      translations:
+        en: turn in
+    - particle: hin
+      translations:
+        en: arrange
 
 bieten:
   language: de
@@ -1075,6 +1556,27 @@ ziehen:
     - particle: um
       translations:
         en: move (to change address)
+    - particle: hinzu
+      translations:
+        en: consult
+    - particle: ab
+      translations:
+        en: deduct, withdraw
+    - particle: an
+      translations:
+        en: attract, put on
+    - particle: heraus
+      translations:
+        en: pull out
+    - particle: herauf
+      translations:
+        en: [pull up, approach]
+    - particle: auf
+      translations:
+        en: wind up, raise [children]
+    - particle: durch
+      translations:
+        en: pull through [an opening]).
 
 wiegen:
   language: de
@@ -1111,6 +1613,10 @@ schieben:
   stems:
     präteritum: o
     partizip: o
+  variations:
+    - particle: hinaus
+      translations:
+        en: postpone
 
 schießen:
   language: de
@@ -1127,7 +1633,16 @@ schießen:
         en: miss (the target)      
     - particle: nieder
       translations:
-        en: gun down      
+        en: gun down
+    - particle: an
+      translations:
+        en: shoot at and wound
+    - particle: empor
+      translations:
+        en: shoot up [grow suddenly]
+    - particle: hoch
+      translations:
+        en: shoot upwards     
 
 schließen:
   language: de
@@ -1138,6 +1653,13 @@ schließen:
   stems:
     präteritum: oss
     partizip: oss
+  variations:
+    - particle: auf
+      translations:
+        en: unlock, open up
+    - particle: aus
+      translations:
+        en: exclude, lock out    
 
 heben:
   language: de
@@ -1148,6 +1670,13 @@ heben:
   stems:
     präteritum: o
     partizip: o
+  variations:
+    - particle: empor
+      translations:
+        en: lift up
+    - particle: hervor
+      translations:
+        en: emphasize
 
 saufen:
   language: de
@@ -1219,10 +1748,22 @@ bleiben:
   variations:
     - particle: zurück
       translations:
-        en: stay behind      
+        en: stay behind
     - particle: weg
       translations:
-        en: stay away      
+        en: stay away
+    - particel: da
+      translations:
+        en: stay there
+    - particel: dabei
+      translations:
+        en: stay there, stick with
+    - particel: aus
+      translations:
+        en: stay away, fail to show up
+    - particel: gleich
+      translations:
+        en: stay the same
 
 reiben:
   language: de
@@ -1257,6 +1798,10 @@ reiten:
     präteritum: itt
     k2präsens: itt
     partizip: itt
+  variations:
+    - particle: hinein
+      translations:
+        en: ride in (on horseback)
 
 reißen:
   language: de
@@ -1272,6 +1817,17 @@ reißen:
     - particle: nieder
       translations:
         en: tear down
+    - particle: entzwei
+      translations:
+        en: rip in two
+    - particle: hin
+      translations:
+        en:
+          - delight
+          - fascinate
+    - particle: sich los
+      translations:
+        en: break free of
 
 beißen:
   language: de
@@ -1286,7 +1842,13 @@ beißen:
   variations:
     - particle: zusammen
       translations:
-        en: bite together      
+        en: bite together
+    - particle: an
+      translations:
+        en: take a bite of
+    - particle: fest
+      translations:
+        en: bite into firmly    
 
 scheißen:
   language: de
@@ -1309,6 +1871,10 @@ leihen:
     präteritum: ie
     k2präsens: ie
     partizip: ie
+  variations:
+    - particle: aus
+      translations:
+        en: lend
 
 scheinen:
   language: de
@@ -1353,6 +1919,21 @@ steigen:
     - particle: um
       translations:
         en: transfer (change buses, trains, planes)
+    - particle: aus
+      translations:
+        en: get out of [a car, train]
+    - particle: ein
+      translations:
+        en: enter [a vehicle]
+    - particle: empor
+      translations:
+        en: climb up
+    - particle: herab
+      translations:
+        en: climb down, descend
+    - particle: herunter
+      translations:
+        en: climb down
 
 verzeihen:
   language: de
@@ -1408,7 +1989,67 @@ kommen:
         en: [happen, seem]      
     - particle: um
       translations:
-        en: get killed      
+        en: get killed
+    - particle: heim
+      translations:
+        en: come home
+    - particle: gleich
+      translations:
+        en: [equal, be tantamount to]
+    - particle: frei
+      translations:
+        en: [escape, get away]
+    - particle: entgegen
+      translations:
+        en: [approach, accommodate, meet halfway]
+    - particle: dahinter
+      translations:
+        en: find out
+    - particle: bei
+      translations:
+        en: get hold of, deal with
+    - particle: auf
+      translations:
+        en: arise, spring for [costs]
+    - particle: an
+      translations:
+        en: arrive
+    - particle: ab
+      translations:
+        en: get away
+    - particle: los
+      translations:
+        en: get away
+    - particle: hinzu
+      translations:
+        en: be added to
+    - particle: hinterher
+      translations:
+        en: follow after
+    - particle: hin
+      translations:
+        en: get there
+    - particle: herunter
+      translations:
+        en: come down (go to the dogs)
+    - particle: heran
+      translations:
+        en: draw near
+    - particle: her
+      translations:
+        en: [come here, come from]
+    - particle: herein
+      translations:
+        en: come in
+    - particle: herüber
+      translations:
+        en: come over here
+    - particle: mit
+      translations:
+        en: come along
+    - particle: nach
+      translations:
+        en: [come later]
 
 nehmen:
   language: de
@@ -1426,7 +2067,22 @@ nehmen:
         en: [increase, gain weight]
     - particle: vorweg
       translations:
-        en: [anticipate, pre-empt, forestall]      
+        en: [anticipate, pre-empt, forestall]
+    - particle: mit
+      translations:
+        en: take along
+    - particle: hin
+      translations:
+        en: accept, put up with
+    - particle: est
+      translations:
+        en: arrest
+    - particle: entgegen
+        translations:
+          en: [accept, receive]
+    - particle: ab
+        translations:
+          en: [remove, take away]
 
 sterben:
   language: de
@@ -1458,6 +2114,18 @@ brechen:
     - particle: ein
       translations:
         en: [crack, burgle, collapse, break in, cave in]
+    - particle: auf
+      translations:
+        en: break open
+    - particle: auseinander
+      translations:
+        en: break up, break apart
+    - particle: durch
+      translations:
+        en: break through
+    - particle: entzwei
+      translations:
+        en: break in two
 
 helfen:
   language: de
@@ -1469,6 +2137,16 @@ helfen:
     duEs: i
     präteritum: a
     partizip: o
+  variations:
+    - particle: aus
+      translations:
+        en: help out
+    - particle: mit
+      translations:
+        en: help out
+    - particle: jemandem über etwas hinweg
+      translations:
+        en: help someone to get over something
 
 sprechen:
   language: de
@@ -1487,6 +2165,14 @@ sprechen:
     - particle: nach
       translations:
         en: repeat after
+    - particle: an
+      translations:
+        en:
+          - speak to
+          - initiate a conversation with
+    - particle: durch
+      translations:
+        en: talk through, talk over, talk out, argue something out
 
 
 stechen:
@@ -1547,6 +2233,12 @@ werfen:
     - particle: nieder
       translations:
         en: [overcome, defeat]
+    - particle: ein
+      translations:
+        en: throw in, drop [a coin or letter]
+    - particle: hinaus
+      translations:
+        en: throw out
 
 schwimmen:
   language: de
@@ -1595,7 +2287,16 @@ binden:
   variations:
     - particle: zu
       translations:
-        en: tie, tie up   
+        en: tie, tie up
+    - particle: los
+      translations:
+        en: untie
+    - particle: an
+      translations:
+        en: attach
+    - particle: auf
+      translations:
+        en: untie, undo
 
 finden:
   language: de
@@ -1614,6 +2315,15 @@ finden:
     - particle: statt
       translations:
         en: take place
+    - particle: heim
+      translations:
+        en: find one's way home
+    - particle: sich durch
+      translations:
+        en: find one's way through
+    - particle: hin
+      translations:
+        en: find one's way to
 
 trinken:
   language: de
@@ -1645,6 +2355,10 @@ sinken:
   stems:
     präteritum: a
     partizip: u
+  variations:
+    - particle: herab
+      translations:
+        en: sink down, descend
 
 springen:
   language: de
@@ -1656,6 +2370,10 @@ springen:
   stems:
     präteritum: a
     partizip: u
+  variations:
+    - particle: ein
+      translations:
+        en: jump in [to help out]
 
 singen:
   language: de
@@ -1670,6 +2388,9 @@ singen:
     - particle: vor
       translations:
         en: sing (in front of people)
+    - particle: mit
+      translations:
+        en: sing along
 
 zwingen:
   language: de
@@ -1680,6 +2401,10 @@ zwingen:
   stems:
     präteritum: a
     partizip: u
+  variations:
+    - particle: auf
+      translations:
+        en: force upon
 
 danken:
   language: de
@@ -1711,7 +2436,10 @@ brennen:
         en: burn down    
     - particle: nieder
       translations:
-        en: burn down    
+        en: burn down
+    - particle: aus
+      translations:
+        en: burn out  
 
 kennen:
   language: de
@@ -1770,6 +2498,33 @@ bringen:
     - particle: um
       translations:
         en: kill
+    - particle: hinaus
+      translations:
+        en: take out
+    - particle: hin
+      translations:
+        en: take there
+    - particle: herein
+      translations:
+        en: bring in
+    - particle: herbei
+      translations:
+        en: bring over
+    - particle: heraus
+      translations:
+        en: [bring out, publish, launch, make known]
+    - particle: heran
+      translations:
+        en: [bring toward, bring up to (a certain point)]
+    - particle: bei
+      translations:
+        en: teach
+    - particle: an
+      translations:
+        en: [fasten, install]
+    - particle: fort
+      translations:
+        en: take away (for repair)
 
 stehen:
   language: de
@@ -1780,6 +2535,15 @@ stehen:
   stems:
     präteritum: and
     partizip: and
+  variations:
+    - particle: dabei
+      translations:
+        en: sit/stand there, stick with
+    - particle: gegenüber
+      translations:
+        en:
+          - stand facing
+          - be confronted with
 
 tun:
   language: de
@@ -1790,6 +2554,10 @@ tun:
   stems:
     präteritum: at
     partizip: a
+  variations:
+    - particle: sich hervor
+      translations:
+        en: excel
 
 rennen:
   language: de
@@ -1856,6 +2624,21 @@ bekommen:
     - particle: wieder
       translations:
         en: get back
+    - particle: auseinander
+      translations:
+        en: manage, get apart
+    - particle: frei
+      translations:
+        en:
+          - get time off
+    - particle: herunter
+      translations:
+        en:
+          - be able to eat
+          - manage to get down
+    - particle: hin
+      translations:
+        en: wangle, manage to do
 
 
 #-------------------------------------------------------------------------------
@@ -1892,6 +2675,10 @@ ein|schlafen:
   translations:
     en: fall asleep
   hilfsverb: sein
+  variations:
+    - particle: sich aus
+      translations:
+        en: get a good sleep
 
 er|frieren:
   language: de
@@ -1921,7 +2708,13 @@ bilden:
   infinitive: bilden
   translations:
     en: build
-
+  variations:
+  - particle: fort
+    translations:
+      en: continue (one's) education
+  - particle: aus
+    translations:
+      en: train
 
 
 entsprechen:
@@ -1996,7 +2789,10 @@ erzählen:
   variations:
     - particle: weiter
       translations:
-        en: tell further, continue a narration      
+        en: tell further, continue a narration
+    - particle: nach
+      translations:
+        en: retell
 
 führen:
   language: de
@@ -2019,6 +2815,30 @@ führen:
     - particle: vor
       translations:
         en: [bring forward, perform]
+    - particle: aus
+      translations:
+        en: take for a walk, carry out [work], put into practice
+    - particle: durch
+      translations:
+        en: implement, carry out [a task]
+    - particle: her
+      translations:
+        en:
+          - bring here
+          - lead here
+    - particle: heran
+      translations:
+        en:
+          - bring up (to a place)
+          - lead here
+    - particle: herauf
+      translations:
+        en:
+          - bring up here
+          - lead up here
+    - particle: hin
+      translations:
+        en: lead to
 
 interessieren:
   language: de
@@ -2033,6 +2853,10 @@ studieren:
   translations:
     en: study
   partizip: studiert
+  variations:
+    - particle: ein
+      translations:
+        en: rehearse
 
 legen:
   language: de
@@ -2045,7 +2869,22 @@ legen:
         en: lay out in readiness
     - particle: vor
       translations:
-        en: present 
+        en: present
+    - particle: hin
+      translations:
+        en: lay down
+    - particle: frei
+      translations:
+        en: uncover
+    - particle: fest
+      translations:
+        en: establish
+    - particle: los
+      translations:
+        en: get started  let it rip
+    - particle: hoch
+      translations:
+        en: support in a raised position
 
 meinen:
   language: de
@@ -2058,6 +2897,13 @@ schaffen:
   infinitive: schaffen
   translations:
     en: [create, accomplish]
+  variations:
+    - particle: ab
+      translations:
+        en: do away with
+    - particle: herbei
+      translations:
+        en: get
 
 scheiben:
   language: de
@@ -2086,6 +2932,19 @@ stellen:
     - particle: nach
       translations:
         en: readjust
+    - particle: entegen
+      sich: true
+      translations:
+        en: oppose
+    - particle: gegenüber
+      translations:
+        en:
+          - confront
+          - compare
+    - particle: heraus
+      sich: true
+      translations:
+        en: turn out (to be)
 
 vergehen:
   language: de
@@ -2103,6 +2962,10 @@ gleichen:
     präteritum: i
     k2präsens: i
     partizip: i
+  variations:
+    - particle: aus
+      translations:
+        en: even out 
 
 vergleichen:
   language: de
@@ -2115,8 +2978,10 @@ zeigen:
   infinitive: zeigen
   translations:
     en: exhibit, feature
-
-
+  variations:
+    - particle: an
+      translations:
+        en: report to the authorities, show
 
 verstehen:
   language: de
@@ -2156,12 +3021,20 @@ entwickeln:
     - particle: weiter
       translations:
         en: develop further
+    - particle: fort
+      sich: true
+      translations:
+        en: continue to develop
 
 handeln:
   language: de
   infinitive: handeln
   translations:
     en: [deal, negotiate]
+  variations:
+    - particle: herunter
+      translations:
+        en: bargain down
 
 erinnern:
   language: de
@@ -2188,6 +3061,10 @@ packen:
   infinitive: packen
   translations:
     en: pack
+  variations:
+  - particle: an
+    translations:
+      en: take hold of 
 
 versprechen:
   language: de
@@ -2232,17 +3109,21 @@ planen:
   translations:
     en: plan
 
-ein|atmen:
-  language: de
-  infinitive: ein|atmen
-  translations:
-    en: breathe in, inhale
-
 atmen:
   language: de
   infinitive: atmen
   translations:
     en: breathe
+  variations:
+    - particle: durch    
+      translations:
+        en: breathe deeply
+    - particle: auf
+      translations:
+        en: breathe a sigh of relief
+    - particle: ein
+      translations:
+        en: breathe in, inhale
 
 verheimlichen:
   language: de
@@ -2262,12 +3143,22 @@ drehen:
     - particle: um
       translations:
         en: turn around
+    - particle: auf
+      translations:
+        en: unscrew, turn up, wind up
+    - particle: durch
+      translations:
+        en: put through a grinder
 
 tauchen:
   language: de
   infinitive: tauchen
   translations:
     en: [dive, plunge]
+  variations:
+    - particle: ein
+      translations:
+        en: immerse, dive in
 
 auf|tauchen:
   language: de
@@ -2276,11 +3167,26 @@ auf|tauchen:
     en: [appear, crop up, come to light]
   hilfsverb: sein
 
-ein|richten:
+richten:
   language: de
-  infinitive: ein|richten
+  infinitive: richten
   translations:
-    en: [establish, furnish, organize]
+    en: target
+  variations:
+    - particle: ein
+      translations:
+        en: [establish, furnish, organize]
+    - particle: auf
+      translations:
+        en: erect
+    - particle: aus
+      translations:
+        en: pass on [a message]
+    - particle: hin
+      translations:
+        en:
+          - execute
+          - put to death
 
 sammeln:
   language: de
@@ -2309,6 +3215,13 @@ bestellen:
   infinitive: bestellen
   translations:
     en: [order, request, comission, book]
+  variations:
+    - particle: her
+      translations:
+        en: summon
+    - particle: nach
+      translations:
+        en: order more (of something)
 
 versetzen:
   language: de
@@ -2363,7 +3276,13 @@ fassen:
         en: grab at      
     - particle: um
       translations:
-        en: [grasp, include, embrace]    
+        en: [grasp, include, embrace]
+    - particle: an
+      translations:
+        en: take hold of
+    - particle: auf
+      translations:
+        en: grasp, undertsand
 
 wackeln:
   language: de
@@ -2384,7 +3303,16 @@ schauen:
     - particle: nach
       sich: true
       translations:
-        en: [look up, check up]    
+        en: [look up, check up]
+    - particle: herüber
+      translations:
+        en: look over here
+    - particle: an
+      translations:
+        en: look at
+    - particle: hinauf
+      translations:
+        en: look up etc.  
 
 begreifen:
   language: de
@@ -2407,6 +3335,13 @@ rufen:
   stems:
     präteritum: ie
     k2präsens: ie
+  variations:
+    - particle: herbei
+      translations:
+        en: call over
+    - particle: hervor
+      translations:
+        en: call to come out  
 
 an|rufen:
   language: de
@@ -2483,7 +3418,10 @@ stecken:
   variations:
     - particle: weg
       translations:
-        en: [put away, withstand (a blow)]    
+        en: [put away, withstand (a blow)]
+    - particle: hervor
+      translations:
+        en: stick out  
 
 #-------------------------------------------------------------------------------
 
@@ -2498,6 +3436,20 @@ bewegen:
   infinitive: bewegen
   translations:
     en: move
+  variations:
+    - particle: fort
+      sich: true
+      translations:
+        en:
+          - move along
+          - move on
+    - particle: hin
+      translations:
+        en: move toward
+    - particle: hin
+      sich: true
+      translations:
+        en: move upwards
 
 verwenden:
   language: de
@@ -2529,6 +3481,9 @@ weichen:
       dative: true
       translations:
         en: evade
+    - particle: auf
+      translations:
+        en: soften up
 
 
 befehlen:
@@ -2594,6 +3549,9 @@ passen:
     - particle: zusammen
       translations:
         en: be suited for each other
+    - particle: auf
+      translations:
+        en: look, watch out
 
 weisen: 
   language: de
