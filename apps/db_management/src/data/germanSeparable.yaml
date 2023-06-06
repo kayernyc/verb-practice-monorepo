@@ -1,32 +1,97 @@
-ab|blenden:
+hinein|reichen:
   language: de
   translations:
-    en: [fade out, dim (lights)]
+    en: reach into
+hin|reichen:
+  language: de
+  translations:
+    en: suffice
+aus|reichen:
+  language: de
+  translations:
+    en: be sufficient
+nach|reichen:
+  language: de
+  translations:
+    en: hand in later
 
-ab|brechen:
+wieder|holen:
   language: de
   translations:
-    en: break off
+    en: repeat
+nach|holen:
+  language: de
+  translations:
+    en: [catch up on, make up for, fetch later]
+herunter|holen:
+  language: de
+  translations:
+    en: fetch down
+herein|holen:
+  language: de
+  translations:
+    en: bring in
+herbei|holen:
+  language: de
+  translations:
+    en: fetch
 
-ab|brennen:
+hinein|drängen:
   language: de
   translations:
-    en: burn down
+    en: fall into
+vor|drängen:
+  language: de
+  translations:
+    en: push forward
 
-ab|danken:
+zurück|lehnen:
   language: de
   translations:
-    en: [abdicate, resign]
+    en: lean back
+an|lehnen:
+  language: de
+  translations:
+    en: lean
 
-ab|drücken:
+fort|treiben:
   language: de
   translations:
-    en: [pull the trigger, shoot]
+    en: [drive away, drift away, continue on with]
+ab|treiben:
+  language: de
+  translations:
+    en: abort
 
-ab|fahren:
+um|stimmen:
   language: de
   translations:
-    en: [drive off,  depart (by car)]
+    en: persuade [to change one's mind]
+ab|stimmen:
+  language: de
+  translations:
+    en: vote
+
+ab|schicken:
+  language: de
+  translations:
+    en: send off
+vorweg|schicken:
+  language: de
+  translations:
+    en: send off in anticipation
+hinterher|schicken:
+  language: de
+  translations:
+    en: [send after, send on]
+hin|schicken:
+  language: de
+  translations:
+    en: send there
+herüber|schicken:
+  language: de
+  translations:
+    en: send over here
 
 ab|fegen:
   language: de
@@ -38,30 +103,10 @@ ab|hacken:
   translations:
     en: chop off
 
-ab|hängen von:
-  language: de
-  translations:
-    en: be dependent on
-
-ab|hören:
-  language: de
-  translations:
-    en: wiretap
-
-ab|kommen:
-  language: de
-  translations:
-    en: get away
-
 ab|lenken:
   language: de
   translations:
     en: divert
-
-ab|nehmen:
-  language: de
-  translations:
-    en: [remove, take away]
 
 ab|nutzen:
   language: de
@@ -73,120 +118,40 @@ ab|riegeln:
   translations:
     en: [bolt (a door), close off]
 
-ab|schaffen:
-  language: de
-  translations:
-    en: do away with
-
-ab|schicken:
-  language: de
-  translations:
-    en: send off
-
 ab|sichern:
   language: de
   translations:
     en: secure
-
-ab|stimmen:
-  language: de
-  translations:
-    en: vote
-
-ab|treiben:
-  language: de
-  translations:
-    en: abort
 
 ab|wehren:
   language: de
   translations:
     en: [repulse, fend off]
 
-ab|ziehen:
-  language: de
-  translations:
-    en: deduct, withdraw
-
 ab|zweigen:
   language: de
   translations:
     en: branch off
-
-an|bauen:
-  language: de
-  translations:
-    en: [build on, add, cultivate (a crop)]
-
-an|beißen:
-  language: de
-  translations:
-    en: take a bite of
-
-an|binden:
-  language: de
-  translations:
-    en: attach
-
-an|bringen:
-  language: de
-  translations:
-    en: [fasten, install]
 
 an|dauern:
   language: de
   translations:
     en: last, continue
 
-an|fahren:
-  language: de
-  translations:
-    en: [drive up, arrive (by car)]
-
 an|fassen:
   language: de
   translations:
     en: take hold of
-
-an|hängen:
-  language: de
-  translations:
-    en: attach
-
-an|greifen:
-  language: de
-  translations:
-    en: attack
-
-an|haben:
-  language: de
-  translations:
-    en: [have on, wear]
 
 an|halten:
   language: de
   translations:
     en: cause to stop
 
-an|kommen:
-  language: de
-  translations:
-    en: arrive
-
 an|lächeln:
   language: de
   translations:
     en: smile at
-
-an|lehnen:
-  language: de
-  translations:
-    en: lean
-
-an|machen:
-  language: de
-  translations:
-    en: [attach, make a pass at]
 
 an|merken:
   language: de
@@ -213,10 +178,7 @@ an|schießen:
   translations:
     en: shoot at and wound
 
-an|schauen:
-  language: de
-  translations:
-    en: look at
+
 
 an|schneiden:
   language: de
@@ -243,35 +205,10 @@ an|tippen:
   translations:
     en: give a light tap to
 
-an|zeigen:
-  language: de
-  translations:
-    en: report to the authorities, show
-
-an|ziehen:
-  language: de
-  translations:
-    en: attract, put on
-
 an|zünden:
   language: de
   translations:
     en: ignite
-
-auf|arbeiten:
-  language: de
-  translations:
-    en: finish off, reuse
-
-auf|atmen:
-  language: de
-  translations:
-    en: breathe a sigh of relief
-
-auf|bauen:
-  language: de
-  translations:
-    en: build up
 
 auf|bessern:
   language: de
@@ -282,11 +219,6 @@ auf|bewahren:
   language: de
   translations:
     en: keep, store
-
-auf|binden:
-  language: de
-  translations:
-    en: untie, undo
 
 auf|blühen:
   language: de
@@ -318,11 +250,7 @@ auf|essen:
   translations:
     en: eat up
 
-auf|fallen:
-  language: de
-  dative: true
-  translations:
-    en: stand out, be noticeable
+
 
 auf|fassen:
   language: de
@@ -334,25 +262,11 @@ auf|fliegen:
   translations:
     en: fly up
 
-auf|geben:
-  language: de
-  translations:
-    en: give up
-
 auf|klären:
   language: de
   translations:
     en: enlighten
 
-auf|kommen:
-  language: de
-  translations:
-    en: arise, spring for [costs]
-
-auf|machen:
-  language: de
-  translations:
-    en: open
 
 auf|passen:
   language: de
@@ -384,10 +298,6 @@ auf|schneiden:
   translations:
     en: cut open
 
-auf|schreiben:
-  language: de
-  translations:
-    en: write down
 
 auf|sein:
   language: de
@@ -404,20 +314,10 @@ auf|weichen:
   translations:
     en: soften up
 
-auf|ziehen:
-  language: de
-  translations:
-    en: wind up, raise [children]
-
 auf|zwingen:
   language: de
   translations:
     en: force upon).
-
-aus|bauen:
-  language: de
-  translations:
-    en: extend, improve, expand
 
 aus|bessern:
   language: de
@@ -429,15 +329,7 @@ aus|beuten:
   translations:
     en: exploit
 
-aus|bilden:
-  language: de
-  translations:
-    en: train
 
-aus|bleiben:
-  language: de
-  translations:
-    en: stay away, fail to show up
 
 aus|breiten:
   language: de
@@ -459,16 +351,6 @@ aus|diskutieren:
   translations:
     en: discuss thoroughly
 
-aus|fahren:
-  language: de
-  translations:
-    en: go for a drive, take for a drive
-
-aus|fallen:
-  language: de
-  translations:
-    en: fail, drop out, be canceled
-
 aus|führen:
   language: de
   translations:
@@ -479,11 +361,6 @@ aus|füllen:
   translations:
     en: fill out [a form]
 
-aus|gehen:
-  language: de
-  translations:
-    en: go out
-
 aus|gleichen:
   language: de
   translations:
@@ -493,11 +370,6 @@ aus|halten:
   language: de
   translations:
     en: endure, withstand
-
-aus|helfen:
-  language: de
-  translations:
-    en: help out
 
 aus|klammern:
   language: de
@@ -519,11 +391,6 @@ aus|leihen:
   translations:
     en: lend
 
-aus|machen:
-  language: de
-  translations:
-    en: turn off, extinguish, make a difference, add up to
-
 aus|pressen:
   language: de
   translations:
@@ -539,10 +406,7 @@ aus|radieren:
   translations:
     en: erase
 
-aus|reichen:
-  language: de
-  translations:
-    en: be sufficient
+
 
 aus|richten:
   language: de
@@ -594,15 +458,9 @@ auseinander|brechen:
   translations:
     en: break up, break apart
 
-auseinander|fallen:
-  language: de
-  translations:
-    en: fall apart
 
-auseinander|gehen:
-  language: de
-  translations:
-    en: part, disperse
+
+
 
 auseinander|haltem:
   language: de
@@ -624,20 +482,12 @@ bei|behalten:
   translations:
     en: retain
 
-bei|bringen:
-  language: de
-  translations:
-    en: teach
-
 bei|fügen:
   language: de
   translations:
     en: enclose [along with]
 
-bei|kommen:
-  language: de
-  translations:
-    en: get hold of, deal with
+
 
 bei|liegen:
   language: de
@@ -669,11 +519,6 @@ bei|wohnen:
   translations:
     en: be present at
 
-dabei|bleiben:
-  language: de
-  translations:
-    en: stay there, stick with
-
 dabei|sein:
   language: de
   translations:
@@ -689,45 +534,10 @@ dabei|stehen:
   translations:
     en: sit/stand there, stick with
 
-da|bleiben:
-  language: de
-  translations:
-    en: stay there
-
-da|lassen:
-  language: de
-  translations:
-    en: leave there
-
-sich dar|anmachen:
-  language: de
-  translations:
-    en: set about it, get down to it
-
-dahinter|kommen:
-  language: de
-  translations:
-    en: find out
-
-dazwischen|reden:
-  language: de
-  translations:
-    en: interrupt
-
-durch|arbeiten:
-  language: de
-  translations:
-    en: work through
-
 durch|brechen:
   language: de
   translations:
     en: break through
-
-durch|atmen:
-  language: de
-  translations:
-    en: breathe deeply
 
 durch|braten:
   language: de
@@ -739,25 +549,12 @@ durch|drehen:
   translations:
     en: put through a grinder
 
-durch|gehen:
-  language: de
-  translations:
-    en: walk through
 
-sich durch|finden:
-  language: de
-  translations:
-    en: find one's way through
 
 durch|halten:
   language: de
   translations:
     en: withstand, endure
-
-durch|fahren:
-  language: de
-  translations:
-    en: drive straight through
 
 durch|führen:
   language: de
@@ -769,10 +566,7 @@ durch|kämmen:
   translations:
     en: comb through [hair]
 
-durch|lassen:
-  language: de
-  translations:
-    en: allow through
+
 
 durch|schlüpfen:
   language: de
@@ -799,11 +593,6 @@ durch|wählen:
   translations:
     en: dial directly
 
-durch|ziehen:
-  language: de
-  translations:
-    en: pull through [an opening]).
-
 ein|berufen:
   language: de
   translations:
@@ -823,16 +612,6 @@ ein|dringen:
   language: de
   translations:
     en: enter forcibly into
-
-ein|fahren:
-  language: de
-  translations:
-    en: drive in
-
-ein|gehen:
-  language: de
-  translations:
-    en: enter, sink in, shrink
 
 ein|kalkulieren:
   language: de
@@ -859,11 +638,6 @@ ein|laden:
   translations:
     en: invite
 
-ein|lassen:
-  language: de
-  translations:
-    en: allow to enter
-
 ein|leiten:
   language: de
   translations:
@@ -884,11 +658,6 @@ ein|parken:
   translations:
     en: park [in a parking space]
 
-ein|reden:
-  language: de
-  translations:
-    en: pursuade
-
 ein|sacken:
   language: de
   translations:
@@ -903,11 +672,6 @@ ein|schneiden:
   language: de
   translations:
     en: make a cut in
-
-ein|schreiben:
-  language: de
-  translations:
-    en: enroll
 
 ein|schreiten:
   language: de
@@ -954,11 +718,6 @@ ein|zahlen:
   translations:
     en: pay in, pay a deposit).
 
-sich empor|arbeiten:
-  language: de
-  translations:
-    en: work one's way up
-
 empor|blicken:
   language: de
   translations:
@@ -989,21 +748,6 @@ empor|streben:
   translations:
     en: aspire
 
-entgegen|arbeiten:
-  language: de
-  translations:
-    en: work against
-
-entgegen|kommen:
-  language: de
-  translations:
-    en: [approach, accommodate, meet halfway]
-
-entgegen|nehmen:
-  language: de
-  translations:
-    en: [accept, receive]
-
 entgegen|setzen:
   language: de
   translations:
@@ -1024,25 +768,15 @@ entgegen|wirken:
   translations:
     en: counteract
 
-entlang|gehen:
-  language: de
-  translations:
-    en: [go along, walk along]
 
-entlang|laufen:
-  language: de
-  translations:
-    en: [go along, walk along]
+
 
 entzwei|brechen:
   language: de
   translations:
     en: break in two
 
-entzwei|gehen:
-  language: de
-  translations:
-    en: come apart
+
 
 entzwei|reißen:
   language: de
@@ -1059,10 +793,7 @@ fehl|besetzen:
   translations:
     en: miscast [in film or theater]
 
-fehl|gehen:
-  language: de
-  translations:
-    en: go wrong
+
 
 fehl|starten:
   language: de
@@ -1089,11 +820,6 @@ fern|sehen:
   translations:
     en: watch television
 
-fest|beißen:
-  language: de
-  translations:
-    en: bite into firmly
-
 fest|frieren:
   language: de
   translations:
@@ -1109,95 +835,41 @@ fest|kleben:
   translations:
     en: [glue on, be glued on]
 
-fest|laufen:
-  language: de
-  translations:
-    en: run aground
-
-fest|legen:
-  language: de
-  translations:
-    en: establish
-
-fest|machen:
-  language: de
-  translations:
-    en: fasten firmly
-
 fest|nageln:
   language: de
   translations:
     en: nail down
-
-fest|nehmen:
-  language: de
-  translations:
-    en: arrest
 
 fest|sitzen:
   language: de
   translations:
     en: be stuck
 
-sich fortbewegen:
+sich fort|bewegen:
   language: de
   translations:
     en: [move along, move on]
 
-fort|bilden:
-  language: de
-  translations:
-    en: continue (one's) education
-
-fort|bringen:
-  language: de
-  translations:
-    en: take away (for repair)
-
-sich fortentwickeln:
+sich fort|entwickeln:
   language: de
   translations:
     en: continue to develop
 
-fort|fahren:
-  language: de
-  translations:
-    en: continue
-
-fort|laufen:
-  language: de
-  translations:
-    en: run away
 
 fort|pflanzen:
   language: de
   translations:
     en: propagate
 
-fort|reden:
-  language: de
-  translations:
-    en: continue talking
-
 fort|setzen:
   language: de
   translations:
     en: [continue, carry on with, resume]
 
-fort|treiben:
-  language: de
-  translations:
-    en: [drive away, drift away, continue on with]
-
 frei|bekommen:
   language: de
   translations:
     en: [get time off]
-
-frei|geben:
-  language: de
-  translations:
-    en: [release (a prisoner), allow (a currency) to float]
 
 frei|halten:
   language: de
@@ -1213,16 +885,6 @@ frei|kaufen:
   language: de
   translations:
     en: [ransom, buy (a slave's) freedom]
-
-frei|kommen:
-  language: de
-  translations:
-    en: [escape, get away]
-
-frei|legen:
-  language: de
-  translations:
-    en: uncover
 
 frei|setzen:
   language: de
@@ -1249,21 +911,6 @@ gegenüber|stellen:
   translations:
     en: [confront, compare]
 
-gleich|bleiben:
-  language: de
-  translations:
-    en: stay the same
-
-gleich|kommen:
-  language: de
-  translations:
-    en: [equal, be tantamount to]
-
-gleich|machen:
-  language: de
-  translations:
-    en: make equal
-
 gleich|setzen:
   language: de
   translations:
@@ -1274,30 +921,10 @@ heim|begleiten:
   translations:
     en: accompany home
 
-heim|fahren:
-  language: de
-  translations:
-    en: drive home
-
-heim|finden:
-  language: de
-  translations:
-    en: find one's way home
-
-heim|gehen:
-  language: de
-  translations:
-    en: go/walk home
-
 heim|kehren:
   language: de
   translations:
     en: return home
-
-heim|kommen:
-  language: de
-  translations:
-    en: come home
 
 heim|suchen:
   language: de
@@ -1314,40 +941,23 @@ her|bestellen:
   translations:
     en: summon
 
-her|fahren:
-  language: de
-  translations:
-    en: [travel here, drive here]
-
 her|führen:
   language: de
   translations:
     en: [bring here, lead here]
 
-her|kommen:
-  language: de
-  translations:
-    en: [come here, come from]
 
 her|tragen:
   language: de
   translations:
     en: carry (to) here (in this direction)
 
-herab|fallen:
-  language: de
-  translations:
-    en: fall from
-
 herab|fließen:
   language: de
   translations:
     en: flow down
 
-herab|hängen:
-  language: de
-  translations:
-    en: hang down
+
 
 herab|setzen:
   language: de
@@ -1379,35 +989,15 @@ herab|stürzen:
   translations:
     en: plummet down
 
-heran|bringen:
-  language: de
-  translations:
-    en: [bring toward, bring up to (a certain point)]
-
 heran|führen:
   language: de
   translations:
     en: [bring up (to a place), lead here]
 
-heran|gehen:
-  language: de
-  translations:
-    en: go up closer
-
-heran|kommen:
-  language: de
-  translations:
-    en: draw near
-
 heran|reifen:
   language: de
   translations:
     en: mature
-
-herauf|arbeiten:
-  language: de
-  translations:
-    en: work one's way up
 
 herauf|beschwören:
   language: de
@@ -1424,30 +1014,16 @@ herauf|tragen:
   translations:
     en: carry up here
 
-herauf|ziehen:
-  language: de
-  translations:
-    en: [pull up, approach]
+
 
 heraus|bitten:
   language: de
   translations:
     en: ask (someone) to come outside
 
-heraus|bringen:
-  language: de
-  translations:
-    en: [bring out, publish, launch, make known]
 
-heraus|fahren:
-  language: de
-  translations:
-    en: drive out of
 
-heraus|geben:
-  language: de
-  translations:
-    en: [hand over, hand out]
+
 
 heraus|hängen:
   language: de
@@ -1469,35 +1045,13 @@ sich heraus|stellen:
   translations:
     en: turn out (to be)
 
-heraus|ziehen:
-  language: de
-  translations:
-    en: pull out
 
-herbei|bringen:
-  language: de
-  translations:
-    en: bring over
 
-herbei|holen:
-  language: de
-  translations:
-    en: fetch
-
-herbei|laufen:
-  language: de
-  translations:
-    en: to come running up
 
 herbei|rufen:
   language: de
   translations:
     en: call over
-
-herbei|schaffen:
-  language: de
-  translations:
-    en: get
 
 herbei|sehnen:
   language: de
@@ -1509,25 +1063,8 @@ herein|bitten:
   translations:
     en: invite in
 
-herein|bringen:
-  language: de
-  translations:
-    en: bring in
 
-herein|fallen:
-  language: de
-  translations:
-    en: fall into, be duped
 
-herein|holen:
-  language: de
-  translations:
-    en: bring in
-
-herein|kommen:
-  language: de
-  translations:
-    en: come in
 
 herein|schneien:
   language: de
@@ -1539,50 +1076,15 @@ herein|spazieren:
   translations:
     en: stroll in
 
-herüber|fahren:
-  language: de
-  translations:
-    en: drive over here
-
-herüber|kommen:
-  language: de
-  translations:
-    en: come over here
-
-herüber|schauen:
-  language: de
-  translations:
-    en: look over here
-
-herüber|schicken:
-  language: de
-  translations:
-    en: send over here
-
 herunter|bekommen:
   language: de
   translations:
     en: [be able to eat, manage to get down]
 
-herunter|fallen:
-  language: de
-  translations:
-    en: fall down
-
 herunter|handeln:
   language: de
   translations:
     en: bargain down
-
-herunter|holen:
-  language: de
-  translations:
-    en: fetch down
-
-herunter|kommen:
-  language: de
-  translations:
-    en: come down (go to the dogs)
 
 herunter|schlucken:
   language: de
@@ -1598,11 +1100,6 @@ herunter|steigen:
   language: de
   translations:
     en: climb down
-
-hervor|gehen:
-  language: de
-  translations:
-    en: emerge, lure out
 
 hervor|heben:
   language: de
@@ -1639,11 +1136,6 @@ sich hervor|wagen:
   translations:
     en: dare to come out
 
-hin|arbeiten:
-  language: de
-  translations:
-    en: work towards
-
 hin|bekommen:
   language: de
   translations:
@@ -1669,40 +1161,19 @@ hin|blättern:
   translations:
     en: shell out
 
-hin|bringen:
-  language: de
-  translations:
-    en: take there
+
 
 hin|deuten:
   language: de
   translations:
     en: point to
 
-hin|fahren:
-  language: de
-  translations:
-    en: go/drive there
-
-hin|fallen:
-  language: de
-  translations:
-    en: fall down
-
-hin|finden:
-  language: de
-  translations:
-    en: find one's way to
-
 hin|führen:
   language: de
   translations:
     en: lead to
 
-hin|geben:
-  language: de
-  translations:
-    en: devote, sacrifice
+
 
 hin|geraten:
   language: de
@@ -1724,11 +1195,6 @@ hin|knien:
   translations:
     en: kneel down
 
-hin|kommen:
-  language: de
-  translations:
-    en: get there
-
 hin|kriegen:
   language: de
   translations:
@@ -1739,25 +1205,11 @@ vor sich hin|leben:
   translations:
     en: live passively, without purpose
 
-hin|legen:
-  language: de
-  translations:
-    en: lay down
 
 hin|lenken:
   language: de
   translations:
     en: steer toward
-
-hin|nehmen:
-  language: de
-  translations:
-    en: accept, put up with
-
-hin|reichen:
-  language: de
-  translations:
-    en: suffice
 
 hin|reißen:
   language: de
@@ -1768,11 +1220,6 @@ hin|richten:
   language: de
   translations:
     en: [execute, put to death]
-
-hin|schicken:
-  language: de
-  translations:
-    en: send there
 
 hin|schleppen:
   language: de
@@ -1804,55 +1251,15 @@ hinab|blicken:
   translations:
     en: look down
 
-hinab|fallen/hinunter|fallen:
-  language: de
-  translations:
-    en: fall down
-
-hinab|lassen:
-  language: de
-  translations:
-    en: lower down (e.g. with a rope)
-
-hinunter|lassen:
-  language: de
-  translations:
-    en: lower down (e.g. with a rope)
-
 hinunter|spülen:
   language: de
   translations:
     en: wash down
 
-hinauf|gehen:
-  language: de
-  translations:
-    en: walk up, walk upstairs, go upwards
-
-hinauf|schauen:
-  language: de
-  translations:
-    en: look up etc.
-
-hinaus|bringen:
-  language: de
-  translations:
-    en: take out
-
 hinaus|ekeln:
   language: de
   translations:
     en: drive out in disgust
-
-hinaus|gehen:
-  language: de
-  translations:
-    en: go out
-
-auf etwas hinaus|laufen:
-  language: de
-  translations:
-    en: lead to something
 
 hinaus|ragen:
   language: de
@@ -1884,35 +1291,17 @@ hinaus|zögern:
   translations:
     en: draw out, delay
 
-hinein|drängen:
-  language: de
-  translations:
-    en: fall into
-
 hinein|dürfen:
   language: de
   translations:
     en: be allowed in
-
-hinein|fallen:
-  language: de
-  translations:
-    en: fall into
 
 hinein|fließen:
   language: de
   translations:
     en: flow into
 
-hinein|gehen:
-  language: de
-  translations:
-    en: enter
 
-hinein|reichen:
-  language: de
-  translations:
-    en: reach into
 
 hinein|reiten:
   language: de
@@ -1954,21 +1343,6 @@ hinterher|hinken:
   translations:
     en: limp along behind
 
-hinterher|kommen:
-  language: de
-  translations:
-    en: follow after
-
-hinterher|laufen:
-  language: de
-  translations:
-    en: run after
-
-hinterher|schicken:
-  language: de
-  translations:
-    en: [send after, send on]
-
 hinzu|fügen:
   language: de
   translations:
@@ -1984,25 +1358,10 @@ hinzu|gesellen:
   translations:
     en: join
 
-hinzu|kommen:
-  language: de
-  translations:
-    en: be added to
-
 hinzu|verdienen:
   language: de
   translations:
     en: earn (something) extra
-
-hinzu|ziehen:
-  language: de
-  translations:
-    en: consult
-
-jemanden hoch|bringen:
-  language: de
-  translations:
-    en: help someone up
 
 hoch|halten:
   language: de
@@ -2014,11 +1373,6 @@ hoch|krempeln:
   translations:
     en: roll up [a sleeve]
 
-hoch|legen:
-  language: de
-  translations:
-    en: support in a raised position
-
 hoch|rechnen:
   language: de
   translations:
@@ -2029,40 +1383,11 @@ hoch|schießen:
   translations:
     en: shoot upwards
 
-los|binden:
-  language: de
-  translations:
-    en: untie
-
-los|fahren:
-  language: de
-  translations:
-    en: drive off
-
-los|gehen:
-  language: de
-  translations:
-    en: commence
-
-los|kommen:
-  language: de
-  translations:
-    en: get away
-
 los|kriegen:
   language: de
   translations:
     en: get rid of
 
-los|lassen:
-  language: de
-  translations:
-    en: let go of
-
-los|legen:
-  language: de
-  translations:
-    en: get started  let it rip
 
 sich los|reißen:
   language: de
@@ -2079,65 +1404,15 @@ los|wollen:
   translations:
     en: want to be off
 
-mit|arbeiten:
-  language: de
-  translations:
-    en: collaborate, work along with
-
 mit|dürfen:
   language: de
   translations:
     en: be allowed to go along
 
-mit|fahren:
-  language: de
-  translations:
-    en: ride with
-
-etwas mit|geben:
-  language: de
-  translations:
-    en: give something [for the purpose of taking it along]
-
 mit|halten:
   language: de
   translations:
     en: keep up with
-
-mit|helfen:
-  language: de
-  translations:
-    en: help out
-
-mit|hören:
-  language: de
-  translations:
-    en: listen in, eavesdrop
-
-mit|kommen:
-  language: de
-  translations:
-    en: come along
-
-mit|machen:
-  language: de
-  translations:
-    en: participate
-
-mit|nehmen:
-  language: de
-  translations:
-    en: take along
-
-mit|reden:
-  language: de
-  translations:
-    en: [participate in the conversation, have a say]
-
-mit|schreiben:
-  language: de
-  translations:
-    en: take notes
 
 mit|singen:
   language: de
@@ -2163,11 +1438,6 @@ nach|ahmen:
   language: de
   translations:
     en: imitate
-
-nach|arbeiten:
-  language: de
-  translations:
-    en: do make-up work
 
 nach|bessern:
   language: de
@@ -2219,77 +1489,12 @@ nach|füllen:
   translations:
     en: [refill, top off]
 
-nach|geben:
-  language: de
-  translations:
-    en: [give way, give in]
-
-nach|gehen:
-  language: de
-  translations:
-    en: [follow after, look into (an issue), run slow (clock)]
-
 nach|haken:
   language: de
   translations:
     en: [dig deeper, ask further about]
 
-nach|holen:
-  language: de
-  translations:
-    en: [catch up on, make up for, fetch later]
-
-nach|kommen:
-  language: de
-  translations:
-    en: [come later]
-
-nach|lassen:
-  language: de
-  translations:
-    en: diminish, loosen
-
-nach|machen:
-  language: de
-  translations:
-    en: imitate, counterfeit
-
-nach|reichen:
-  language: de
-  translations:
-    en: hand in later
-
-nach|rücken:
-  language: de
-  translations:
-    en: move up (to the next position after it has become vacant)
-
-nach|schauen / nachsehen:
-  language: de
-  translations:
-    en: [look up, check up
-]
-nach|spielen:
-  language: de
-  translations:
-    en: play during time that has been added on (injury time in soccer)
-
-nach|sprechen:
-  language: de
-  translations:
-    en: repeat after
-
-nach|stellen:
-  language: de
-  translations:
-    en: readjust
-
 nach|trauern:
-  language: de
-  translations:
-    en: mourn or bemoan the passing of
-
-nach|weinen:
   language: de
   translations:
     en: mourn or bemoan the passing of
@@ -2298,11 +1503,6 @@ nach|vollziehen:
   language: de
   translations:
     en: comprehend
-
-nach|weisen:
-  language: de
-  translations:
-    en: provide proof of something that has been committed
 
 nach|wirken:
   language: de
@@ -2314,100 +1514,20 @@ nach|zählen:
   translations:
     en: recount (count again)
 
-nebenher|fahren:
-  language: de
-  translations:
-    en: drive alongside
-
-nebenher|gehen:
-  language: de
-  translations:
-    en: walk alongside
-
-nebenher|laufen:
-  language: de
-  translations:
-    en: run alongside, proceed at the same time
-
-nieder|brennen:
-  language: de
-  translations:
-    en: burn down
-
 nieder|brüllen:
   language: de
   translations:
     en: shout down
-
-nieder|gehen:
-  language: de
-  translations:
-    en: [drop down, go down, land]
-
-nieder|halten:
-  language: de
-  translations:
-    en: oppress
 
 nieder|knien:
   language: de
   translations:
     en: kneel down
 
-nieder|lassen:
-  language: de
-  translations:
-    en: lower
-
-sich nieder|lassen:
-  language: de
-  translations:
-    en: ensconce oneself
-
-nieder|reißen:
-  language: de
-  translations:
-    en: tear down
-
-nieder|schießen:
-  language: de
-  translations:
-    en: gun down
-
-nieder|schlagen:
-  language: de
-  translations:
-    en: [knock down, suppress, make despondent]
-
-nieder|werfen:
-  language: de
-  translations:
-    en: [overcome, defeat]
-
-sich nieder|werfen:
-  language: de
-  translations:
-    en: prostrate oneself
-
-statt|finden:
-  language: de
-  translations:
-    en: take place
-
-statt|geben:
-  language: de
-  translations:
-    en: [accede to, grant, allow]
-
 um|ändern:
   language: de
   translations:
     en: change, change around
-
-um|arbeiten:
-  language: de
-  translations:
-    en: rework
 
 um|benennen:
   language: de
@@ -2419,35 +1539,10 @@ um|blicken:
   translations:
     en: look around
 
-um|bringen:
-  language: de
-  translations:
-    en: kill
-
 um|buchen:
   language: de
   translations:
     en: re-book (travel plans)
-
-um|denken:
-  language: de
-  translations:
-    en: [rethink, revise one's opinion]
-
-um|drehen:
-  language: de
-  translations:
-    en: turn around
-
-um|fallen:
-  language: de
-  translations:
-    en: [fall over, fall down]
-
-um|fassen:
-  language: de
-  translations:
-    en: [grasp, include, embrace]
 
 um|formen:
   language: de
@@ -2464,16 +1559,6 @@ um|funktionieren:
   translations:
     en: change the function of
 
-um|graben:
-  language: de
-  translations:
-    en: dig over to turn over (dirt)
-
-um|hängen:
-  language: de
-  translations:
-    en: re-hang (curtains), drape around
-
 um|hauen:
   language: de
   translations:
@@ -2483,6 +1568,11 @@ um|kehren:
   language: de
   translations:
     en: turn around
+
+wieder|kehren:
+  language: de
+  translations:
+    en: return
 
 um|kippen:
   language: de
@@ -2494,25 +1584,10 @@ um|klammern:
   translations:
     en: clutch
 
-um|kommen:
-  language: de
-  translations:
-    en: get killed
-
 um|kreisen:
   language: de
   translations:
     en: orbit
-
-um|laden:
-  language: de
-  translations:
-    en: transfer (a load)
-
-um|lernen:
-  language: de
-  translations:
-    en: learn to think differently
 
 um|rahmen:
   language: de
@@ -2534,21 +1609,6 @@ um|schalten:
   translations:
     en: change, switch (gears, channels)
 
-um|setzen:
-  language: de
-  translations:
-    en: transfer, transpose, implement, transact, transform
-
-um|steigen:
-  language: de
-  translations:
-    en: transfer [change buses, trains, planes]
-
-um|stimmen:
-  language: de
-  translations:
-    en: persuade [to change one's mind]
-
 um|schulen:
   language: de
   translations:
@@ -2559,60 +1619,10 @@ um|spulen:
   translations:
     en: rewind
 
-um|stellen:
-  language: de
-  translations:
-    en: rearrange
-
 um|tauschen:
   language: de
   translations:
     en: exchange
-
-um|werfen:
-  language: de
-  translations:
-    en: knock over
-
-um|ziehen:
-  language: de
-  translations:
-    en: move (to change address)
-
-sich um|ziehen:
-  language: de
-  translations:
-    en: change clothes
-
-sich um|hören:
-  language: de
-  translations:
-    en: keep one's ears open
-
-sich um|fragen:
-  language: de
-  translations:
-    en: ask around
-
-sich um|sehen:
-  language: de
-  translations:
-    en: look around
-
-sich um|schauen:
-  language: de
-  translations:
-    en: look around
-
-sich vor|arbeiten:
-  language: de
-  translations:
-    en: work one's way forward
-
-vor|bauen:
-  language: de
-  translations:
-    en: make provision
 
 vor|behalten:
   language: de
@@ -2629,70 +1639,12 @@ vor|beugen:
   translations:
     en: [prevent, bend forward]
 
-vor|bringen:
-  language: de
-  translations:
-    en: propose, bring forward, produce
 
-vor|drängen:
-  language: de
-  translations:
-    en: push forward
-
-vor|fahren:
-  language: de
-  translations:
-    en: drive on ahead, drive up in front (of a building)
-
-vor|fallen:
-  language: de
-  translations:
-    en: happen
-
-vor|führen:
-  language: de
-  translations:
-    en: bring forward, perform
-
-vor|geben:
-  language: de
-  translations:
-    en: pretend
-
-vor|gehen:
-  language: de
-  translations:
-    en: proceed, go first
-
-vor|legen:
-  language: de
-  translations:
-    en: present
-
-jemandem vor|greifen:
-  language: de
-  translations:
-    en: jump in ahead of someone
-
-vor|haben:
-  language: de
-  translations:
-    en: intend
 
 vor|herrschen:
   language: de
   translations:
     en: predominate
-
-vor|kommen:
-  language: de
-  translations:
-    en: happen, seem
-
-vor|laden:
-  language: de
-  translations:
-    en: summon
 
 vor|neigen:
   language: de
@@ -2704,595 +1656,95 @@ vor|programmieren:
   translations:
     en: pre-program
 
-vor|rücken:
-  language: de
-  translations:
-    en: move forward
 
-vor|schlagen:
-  language: de
-  translations:
-    en: propose, suggest
-
-vor|setzen:
-  language: de
-  translations:
-    en: put before
-
-vor|singen:
-  language: de
-  translations:
-    en: sing (in front of people)
-
-vor|sorge:
+vor|sorgen:
   language: de
   translations:
     en: make provisions
-
-vor|spielen:
-  language: de
-  translations:
-    en: play (music in front of people)
-
-vor|tragen:
-  language: de
-  translations:
-    en: perform, present (a speech, song, etc.)
-
-vor|ziehen:
-  language: de
-  translations:
-    en: prefer, pull forward,  draw [a curtain]
 
 voraus|berechnen:
   language: de
   translations:
     en: calculate in advance
 
-voraus|gehen:
-  language: de
-  translations:
-    en: go on ahead
-
-voraus|sagen:
-  language: de
-  translations:
-    en: predict
-
-voraus|sehen:
-  language: de
-  translations:
-    en: foresee
-
-voraus|sein:
-  language: de
-  translations:
-    en: be in advance, be ahead
-
-voraus|setzen:
-  language: de
-  translations:
-    en: assume
-
-vorbei|fahren:
-  language: de
-  translations:
-    en: drive past
-
-vorbei|gehen:
-  language: de
-  translations:
-    en: walk past
-
-vorbei|kommen:
-  language: de
-  translations:
-    en: drop in
-
-vorbei|lassen:
-  language: de
-  translations:
-    en: let by
-
-vorbei|reden:
-  language: de
-  translations:
-    en: talk past
-
-vorbei|schießen:
-  language: de
-  translations:
-    en: miss (the target)
-
 vorüber|eilen:
   language: de
   translations:
     en: hurry past
 
-vorüber|fahren:
-  language: de
-  translations:
-    en: drive by
-
-vorüber|fliegen:
-  language: de
-  translations:
-    en: fly by
-
-vorüber|gehen:
-  language: de
-  translations:
-    en: go by
-
-vorüber|ziehen:
-  language: de
-  translations:
-    en: pass by
-
-vorweg|nehmen:
-  language: de
-  translations:
-    en: anticipate, pre-empt, forestall
-
-vorweg|sagen:
-  language: de
-  translations:
-    en: say in anticipation
-
-vorweg|schicken:
-  language: de
-  translations:
-    en: send off in anticipation
 
 weg|blasen:
   language: de
   translations:
     en: blow away
 
-weg|bleiben:
-  language: de
-  translations:
-    en: stay away
-
-weg|bringen:
-  language: de
-  translations:
-    en: take away
-
 etwas weg|denken:
   language: de
   translations:
     en: imagine that something is not there
-
-weg|fahren:
-  language: de
-  translations:
-    en: drive off
 
 weg|fegen:
   language: de
   translations:
     en: sweep away
 
-weg|führen:
-  language: de
-  translations:
-    en: lead off
-
-weg|geben:
-  language: de
-  translations:
-    en: give away
-
-weg|gehen:
-  language: de
-  translations:
-    en: go away
-
 weg|jagen:
   language: de
   translations:
     en: chase away
-
-weg|kommen:
-  language: de
-  translations:
-    en: get away
-
-weg|können:
-  language: de
-  translations:
-    en: [be able to get away, be able to leave]
-
-weg|laufen:
-  language: de
-  translations:
-    en: run away
-
-weg|müssen:
-  language: de
-  translations:
-    en: have to leave
-
-weg|räumen:
-  language: de
-  translations:
-    en: clear away
-
-weg|sehen:
-  language: de
-  translations:
-    en: look away
-
-weg|stecken:
-  language: de
-  translations:
-    en: [put away, withstand (a blow)]
-
-weg|werfen:
-  language: de
-  translations:
-    en: throw away
-
-weg|wischen:
-  language: de
-  translations:
-    en: erase, wipe away
-
-weg|ziehen:
-  language: de
-  translations:
-    en: move away, pull away
-
-weiter|bestehen:
-  language: de
-  translations:
-    en: continue to exist
-
-weiter|entwickeln:
-  language: de
-  translations:
-    en: develop further
-
-weiter|erzählen:
-  language: de
-  translations:
-    en: tell further, continue a narration
-
-weiter|führen:
-  language: de
-  translations:
-    en: continue
-
-weiter|gehen:
-  language: de
-  translations:
-    en: move along
-
-weiter|kommen:
-  language: de
-  translations:
-    en: [get further, make progress]
-
-weiter|leben:
-  language: de
-  translations:
-    en: continue living
-
-weiter|machen:
-  language: de
-  translations:
-    en: carry on
-
-weiter|reden:
-  language: de
-  translations:
-    en: continue talking
-
-weiter|sprechen:
-  language: de
-  translations:
-    en: continue talking
-
-weiter|sagen:
-  language: de
-  translations:
-    en: pass (the word) on
-
-weiter|ziehen:
-  language: de
-  translations:
-    en: move along
-
-wieder|bekommen:
-  language: de
-  translations:
-    en: get back
 
 wieder|beleben:
   language: de
   translations:
     en: resuscitate
 
-wieder|bringen:
-  language: de
-  translations:
-    en: bring back
-
 wieder|entdecken:
   language: de
   translations:
     en: rediscover
-
-wieder|geben:
-  language: de
-  translations:
-    en: give back, repeat
 
 wieder|herstellen:
   language: de
   translations:
     en: restore, reestablish
 
-wieder|holen:
-  language: de
-  translations:
-    en: repeat
 
 wieder|käuen:
   language: de
   translations:
     en: ruminate
 
-wieder|kehren:
-  language: de
-  translations:
-    en: return
-
-wieder|sehen:
-  language: de
-  translations:
-    en: see again
-
 wieder|vereinigen:
   language: de
   translations:
     en: reunite
-
-zu|bauen:
-  language: de
-  translations:
-    en: block off
 
 zu|billigen:
   language: de
   translations:
     en: grant, allow
 
-zu|binden:
-  language: de
-  translations:
-    en: tie, tie up
-
-zu|bringen:
-  language: de
-  translations:
-    en: bring
-
-zu|decken:
-  language: de
-  translations:
-    en: cover up, tuck in
-
-zu|drücken:
-  language: de
-  translations:
-    en: press shut
-
-zu|erkennen:
-  language: de
-  translations:
-    en: [bestow, confer (on)]
-
-zu|fahren:
-  language: de
-  translations:
-    en: [drive towards, ride towards]
-
-zu|fassen:
-  language: de
-  translations:
-    en: grab at
-
-zu|fließen:
-  language: de
-  translations:
-    en: flow toward
-
-zu|gehören:
-  language: de
-  translations:
-    en: belong to
-
-zu|geben:
-  language: de
-  translations:
-    en: admit to, confess
-
-zu|greifen:
-  language: de
-  translations:
-    en: [take hold, help oneself (to something)]
-
-zu|kommen:
-  language: de
-  translations:
-    en: approach
-
-zu|lassen:
-  language: de
-  translations:
-    en: authorize
-
-zu|machen:
-  language: de
-  translations:
-    en: close
-
-zu|nehmen:
-  language: de
-  translations:
-    en: increase, gain weight
-
-zu|ziehen:
-  language: de
-  translations:
-    en: pull shut
-
-sich zurecht|finden:
-  language: de
-  translations:
-    en: [find one's way, get one's bearings]
-
 zurecht|kommen mit:
   language: de
   translations:
     en: cope with
-
-zurecht|legen:
-  language: de
-  translations:
-    en: lay out in readiness
-
-zurecht|machen:
-  language: de
-  translations:
-    en: get (something) ready
-
-zurecht|weisen:
-  language: de
-  translations:
-    en: rebuke, reprimand
-
-zurück|bleiben:
-  language: de
-  translations:
-    en: stay behind
-
-zurück|blenden:
-  language: de
-  translations:
-    en: flash back (film)
-
-zurück|drehen:
-  language: de
-  translations:
-    en: turn back
-
-zurück|erhalten:
-  language: de
-  translations:
-    en: get back, be given back
 
 zurück|erobern:
   language: de
   translations:
     en: recapture
 
-zurück|führen:
-  language: de
-  translations:
-    en: trace back
 
-zurück|geben:
-  language: de
-  translations:
-    en: give back, return
-
-zurück|müssen:
-  language: de
-  translations:
-    en: go back, return
-
-zurück|gehen:
-  language: de
-  translations:
-    en: have to go back
-
-zurück|lehnen:
-  language: de
-  translations:
-    en: lean back
-
-zurück|schlagen:
-  language: de
-  translations:
-    en: hit back, strike back
 
 zurück|schrecken:
   language: de
   translations:
     en: shrink back, shrink from, recoil
 
-zurück|setzen:
-  language: de
-  translations:
-    en: reverse, put back
-
-zurück|weisen:
-  language: de
-  translations:
-    en: refuse, send back
-
-zusammen|arbeiten:
-  language: de
-  translations:
-    en: work together
-
-zusammen|beißen:
-  language: de
-  translations:
-    en: bite together
-
-zusammen|bauen:
-  language: de
-  translations:
-    en: assemble
-
-zusammen|fassen:
-  language: de
-  translations:
-    en: summarize
-
-zusammen|führen:
-  language: de
-  translations:
-    en: bring together
-
-zusammen|gehören:
-  language: de
-  translations:
-    en: belong together
-
 zusammen|klappen:
   language: de
   translations:
     en: fold up, shut
-
-zusammen|kommen:
-  language: de
-  translations:
-    en: meet, come together
-
-zusammen|passen:
-  language: de
-  translations:
-    en: be suited for each other
-
-zusammen|setzen:
-  language: de
-  translations:
-    en: seat/put together
 
 zusammen|stoßen:
   language: de
@@ -3304,18 +1756,3 @@ zusammen|zählen:
   translations:
     en: add up
 
-zusammen|ziehen:
-  language: de
-  translations:
-    en: pull together
-
-ab|warten:
-  language: de
-  translations:
-    en: bide
-
-aus|weichen:
-  language: de
-  dative: true
-  translations:
-    en: evade

@@ -1,0 +1,840 @@
+reichen:
+  - particle: hinein
+    translations:
+      en: reach into
+  - particle: hin
+    translations:
+      en: suffice
+  - particle: aus
+    translations:
+      en: be sufficient
+  - particle: nach
+    translations:
+      en: hand in later
+holen:
+  - particle: wieder
+    translations:
+      en: repeat
+  - particle: nach
+    translations:
+      en:
+        - catch up on
+        - make up for
+        - fetch later
+  - particle: herunter
+    translations:
+      en: fetch down
+  - particle: herein
+    translations:
+      en: bring in
+  - particle: herbei
+    translations:
+      en: fetch
+drängen:
+  - particle: hinein
+    translations:
+      en: fall into
+  - particle: vor
+    translations:
+      en: push forward
+lehnen:
+  - particle: zurück
+    translations:
+      en: lean back
+  - particle: an
+    translations:
+      en: lean
+treiben:
+  - particle: fort
+    translations:
+      en:
+        - drive away
+        - drift away
+        - continue on with
+  - particle: ab
+    translations:
+      en: abort
+stimmen:
+  - particle: um
+    translations:
+      en: persuade [to change one's mind]
+  - particle: ab
+    translations:
+      en: vote
+schicken:
+  - particle: ab
+    translations:
+      en: send off
+  - particle: vorweg
+    translations:
+      en: send off in anticipation
+  - particle: hinterher
+    translations:
+      en:
+        - send after
+        - send on
+  - particle: hin
+    translations:
+      en: send there
+  - particle: herüber
+    translations:
+      en: send over here
+fegen:
+  - particle: ab
+    translations:
+      en: brush off
+  - particle: weg
+    translations:
+      en: sweep away
+hacken:
+  - particle: ab
+    translations:
+      en: chop off
+lenken:
+  - particle: ab
+    translations:
+      en: divert
+  - particle: fern
+    translations:
+      en: steer by remote control
+  - particle: hin
+    translations:
+      en: steer toward
+nutzen:
+  - particle: ab
+    translations:
+      en: wear out
+riegeln:
+  - particle: ab
+    translations:
+      en:
+        - bolt (a door)
+        - close off
+sichern:
+  - particle: ab
+    translations:
+      en: secure
+wehren:
+  - particle: ab
+    translations:
+      en:
+        - repulse
+        - fend off
+zweigen:
+  - particle: ab
+    translations:
+      en: branch off
+dauern:
+  - particle: an
+    translations:
+      en: last, continue
+
+lächeln:
+  - particle: an
+    translations:
+      en: smile at
+merken:
+  - particle: an
+    translations:
+      en:
+        - notice
+        - note
+
+
+rechnen:
+  - particle: an
+    translations:
+      en: take into account
+  - particle: hoch
+    translations:
+      en: extrapolate to project [a forecast]
+  - particle: um
+    translations:
+      en: convert (e.g. into different units)
+
+schneiden:
+  - particle: an
+    translations:
+      en: cut into (cut the first piece of)
+  - particle: auf
+    translations:
+      en: cut open
+  - particle: durch
+    translations:
+      en: cut through
+  - particle: ein
+    translations:
+      en: make a cut in
+  - particle: hinein
+    translations:
+      en: cut into
+
+streben:
+  - particle: an
+    translations:
+      en: aspire
+  - particle: empor
+    translations:
+      en: aspire
+strengen:
+  - particle: an
+    translations:
+      en: strain
+tippen:
+  - particle: an
+    translations:
+      en: give a light tap to
+zünden:
+  - particle: an
+    translations:
+      en: ignite
+bessern:
+  - particle: auf
+    translations:
+      en: improve
+  - particle: aus
+    translations:
+      en: fix, touch up
+  - particle: nach
+    translations:
+      en:
+        - touch up
+        - improve by making adjustments
+bewahren:
+  - particle: auf
+    translations:
+      en: keep, store
+blühen:
+  - particle: auf
+    translations:
+      en: blossom forth
+
+
+decken:
+  - particle: auf
+    translations:
+      en: uncover
+
+klären:
+  - particle: auf
+    translations:
+      en: enlighten
+
+pumpen:
+  - particle: auf
+    translations:
+      en: inflate
+
+tischen:
+  - particle: auf
+    translations:
+      en: serve up
+
+
+beuten:
+  - particle: aus
+    translations:
+      en: exploit
+breiten:
+  - particle: aus
+    translations:
+      en: spread out
+
+dehnen:
+  - particle: aus
+    translations:
+      en: extend, expand
+diskutieren:
+  - particle: aus
+    translations:
+      en: discuss thoroughly
+
+füllen:
+  - particle: aus
+    translations:
+      en: fill out [a form]
+  - particle: nach
+    translations:
+      en:
+        - refill
+        - top off
+  - particle: um
+    translations:
+      en: transfer (something) into (another container)
+
+klammern:
+  - particle: aus
+    translations:
+      en: bracket out
+  - particle: ein
+    translations:
+      en: put in brackets
+  - particle: um
+    translations:
+      en: clutch
+klingen:
+  - particle: aus
+    translations:
+      en: fade away [music]
+lachen:
+  - particle: aus
+    translations:
+      en: laugh at
+
+pressen:
+  - particle: aus
+    translations:
+      en: press or squeeze out
+quetschen:
+  - particle: aus
+    translations:
+      en: press or squeeze out
+radieren:
+  - particle: aus
+    translations:
+      en: erase
+rotten:
+  - particle: aus
+    translations:
+      en: eradicate
+rüsten:
+  - particle: aus
+    translations:
+      en: equip
+
+
+schütten:
+  - particle: aus
+    translations:
+      en: spill out, tip out
+
+wechseln:
+  - particle: aus
+    translations:
+      en: switch, replace.
+
+haltem:
+  - particle: auseinander
+    translations:
+      en: distinguish, keep apart
+
+behalten:
+  - particle: bei
+    translations:
+      en: retain
+  - particle: vor
+    translations:
+      en: reserve
+fügen:
+  - particle: bei
+    translations:
+      en: enclose [along with]
+  - particle: hinzu
+    translations:
+      en:
+        - add
+        - append
+
+mischen:
+  - particle: bei
+    translations:
+      en: add [to a mixture]
+
+
+kämmen:
+  - particle: durch
+    translations:
+      en: comb through [hair]
+schlüpfen:
+  - particle: durch
+    translations:
+      en: slip through
+stoßen:
+  - particle: durch
+    translations:
+      en: knock a hole through
+  - particle: zusammen
+    translations:
+      en: collide, clash
+wählen:
+  - particle: durch
+    translations:
+      en: dial directly
+berufen:
+  - particle: ein
+    translations:
+      en: conscript, convene
+
+cremen:
+  - particle: ein
+    translations:
+      en: put lotion on
+dringen:
+  - particle: ein
+    translations:
+      en: enter forcibly into
+kalkulieren:
+  - particle: ein
+    translations:
+      en: take into account
+
+kellern:
+  - particle: ein
+    translations:
+      en: store in the cellar
+
+leiten:
+  - particle: ein
+    translations:
+      en: introduce, begin
+marschieren:
+  - particle: ein
+    translations:
+      en: march in
+ordnen:
+  - particle: ein
+    translations:
+      en: put into order
+parken:
+  - particle: ein
+    translations:
+      en: park [in a parking space]
+sacken:
+  - particle: ein
+    translations:
+      en: pocket
+schreiten:
+  - particle: ein
+    translations:
+      en: intervene
+
+
+willigen:
+  - particle: ein
+    translations:
+      en: agree [to], consent
+zahlen:
+  - particle: ein
+    translations:
+      en: pay in, pay a deposit).
+  - particle: heim
+    translations:
+      en:
+        - pay back
+        - get even with
+blicken:
+  - particle: empor
+    translations:
+      en: raise one's eyes
+  - particle: hinunter
+    translations:
+      en: look down
+  - particle: hinab
+    translations:
+      en: look down
+  - particle: um
+    translations:
+      en: look around
+
+ragen:
+  - particle: empor
+    translations:
+      en: tower above
+  - particle: hervor
+    translations:
+      en: project, jut out, stand out
+  - particle: hinaus
+    translations:
+      en: project beyond
+
+wirken:
+  - particle: entgegen
+    translations:
+      en: counteract
+  - particle: mit
+    translations:
+      en: be involved
+  - particle: nach
+    translations:
+      en: have a lasting effect
+
+besetzen:
+  - particle: fehl
+    translations:
+      en: miscast [in film or theater]
+starten:
+  - particle: fehl
+    translations:
+      en: make a false start
+bedienen:
+  - particle: fern
+    translations:
+      en: operate by remote control
+
+
+kleben:
+  - particle: fest
+    translations:
+      en:
+        - glue on
+        - be glued on
+nageln:
+  - particle: fest
+    translations:
+      en: nail down
+pflanzen:
+  - particle: fort
+    translations:
+      en: propagate
+kämpfen:
+  - particle: frei
+    translations:
+      en: liberate
+begleiten:
+  - particle: heim
+    translations:
+      en: accompany home
+  - particle: hin
+    translations:
+      en: accompany thither
+kehren:
+  - particle: heim
+    translations:
+      en: return home
+  - particle: um
+    translations:
+      en: turn around
+  - particle: wieder
+    translations:
+      en: return
+
+
+mindern:
+  - particle: herab
+    translations:
+      en: reduce, disparage
+
+
+stürzen:
+  - particle: herab
+    translations:
+      en: plummet down
+reifen:
+  - particle: heran
+    translations:
+      en: mature
+beschwören:
+  - particle: herauf
+    translations:
+      en:
+        - cause
+        - bring about
+        - evoke
+
+kriegen:
+  - particle: heraus
+    translations:
+      en:
+        - get out of
+        - find out
+  - particle: hin
+    translations:
+      en: manage to take care of, make (something) function
+  - particle: los
+    translations:
+      en: get rid of
+fordern:
+  - particle: heraus
+    translations:
+      en:
+        - challenge
+        - provoke
+
+sehnen:
+  - particle: herbei
+    translations:
+      en: long for
+schneien:
+  - particle: herein
+    translations:
+      en: snow in, appear out of the blue
+spazieren:
+  - particle: herein
+    translations:
+      en: stroll in
+
+schlucken:
+  - particle: herunter
+    translations:
+      en: swallow
+schrauben:
+  - particle: herunter
+    translations:
+      en:
+        - ratchet down
+        - dumb down
+
+wagen:
+  - particle: sich hervor
+    translations:
+      en: dare to come out
+blättern:
+  - particle: hin
+    translations:
+      en: shell out
+
+geraten:
+  - particle: hin
+    translations:
+      en: get there
+horchen:
+  - particle: hin
+    translations:
+      en: listen closely
+knien:
+  - particle: hin
+    translations:
+      en: kneel down
+  - particle: nieder
+    translations:
+      en: kneel down
+
+schleppen:
+  - particle: hin
+    translations:
+      en: the drag there
+spülen:
+  - particle: hinunter
+    translations:
+      en: wash down
+ekeln:
+  - particle: hinaus
+    translations:
+      en: drive out in disgust
+
+zögern:
+  - particle: hinaus
+    translations:
+      en: draw out, delay
+
+eversetzen:
+  - particle: sich hinein
+    translations:
+      en: put oneself into (someone's situation)
+
+hinken:
+  - particle: hinterher
+    translations:
+      en: limp along behind
+gesellen:
+  - particle: hinzu
+    translations:
+      en: join
+verdienen:
+  - particle: hinzu
+    translations:
+      en: earn (something) extra
+krempeln:
+  - particle: hoch
+    translations:
+      en: roll up [a sleeve]
+
+affen:
+  - particle: nach
+    translations:
+      en:
+        - mimic
+        - ape
+ahmen:
+  - particle: nach
+    translations:
+      en: imitate
+drucken:
+  - particle: nach
+    translations:
+      en: reprint
+empfinden:
+  - particle: nach
+    translations:
+      en: empathize
+fühlen:
+  - particle: nach
+    translations:
+      en: empathize
+
+
+feiern:
+  - particle: nach
+    translations:
+      en: celebrate at a later date
+
+forschen:
+  - particle: nach
+    translations:
+      en: investigate
+haken:
+  - particle: nach
+    translations:
+      en:
+        - dig deeper
+        - ask further about
+trauern:
+  - particle: nach
+    translations:
+      en: mourn or bemoan the passing of
+vollziehen:
+  - particle: nach
+    translations:
+      en: comprehend
+zählen:
+  - particle: nach
+    translations:
+      en: recount (count again)
+  - particle: zusammen
+    translations:
+      en: add up
+brüllen:
+  - particle: nieder
+    translations:
+      en: shout down
+ändern:
+  - particle: um
+    translations:
+      en: change, change around
+benennen:
+  - particle: um
+    translations:
+      en: rename
+buchen:
+  - particle: um
+    translations:
+      en: re-book (travel plans)
+formen:
+  - particle: um
+    translations:
+      en: recast
+funktionieren:
+  - particle: um
+    translations:
+      en: change the function of
+hauen:
+  - particle: um
+    translations:
+      en: knock down, knock over
+kippen:
+  - particle: um
+    translations:
+      en: tip over
+kreisen:
+  - particle: um
+    translations:
+      en: orbit
+rahmen:
+  - particle: um
+    translations:
+      en: frame
+rühren:
+  - particle: um
+    translations:
+      en: stir
+schalten:
+  - particle: um
+    translations:
+      en: change, switch (gears, channels)
+schulen:
+  - particle: um
+    translations:
+      en: retrain, switch to another school
+spulen:
+  - particle: um
+    translations:
+      en: rewind
+tauschen:
+  - particle: um
+    translations:
+      en: exchange
+bereiten:
+  - particle: vor
+    translations:
+      en: prepare
+beugen:
+  - particle: vor
+    translations:
+      en:
+        - prevent
+        - bend forward
+herrschen:
+  - particle: vor
+    translations:
+      en: predominate
+neigen:
+  - particle: vor
+    translations:
+      en: lean forward
+programmieren:
+  - particle: vor
+    translations:
+      en: pre-program
+sorgen:
+  - particle: vor
+    translations:
+      en: make provisions
+berechnen:
+  - particle: voraus
+    translations:
+      en: calculate in advance
+eilen:
+  - particle: vorüber
+    translations:
+      en: hurry past
+blasen:
+  - particle: weg
+    translations:
+      en: blow away
+
+
+jagen:
+  - particle: weg
+    translations:
+      en: chase away
+beleben:
+  - particle: wieder
+    translations:
+      en: resuscitate
+entdecken:
+  - particle: wieder
+    translations:
+      en: rediscover
+herstellen:
+  - particle: wieder
+    translations:
+      en: restore, reestablish
+käuen:
+  - particle: wieder
+    translations:
+      en: ruminate
+vereinigen:
+  - particle: wieder
+    translations:
+      en: reunite
+billigen:
+  - particle: zu
+    translations:
+      en: grant, allow
+
+erobern:
+  - particle: zurück
+    translations:
+      en: recapture
+schrecken:
+  - particle: zurück
+    translations:
+      en: shrink back, shrink from, recoil
+klappen:
+  - particle: zusammen
+    translations:
+      en: fold up, shut
+
+sich dar|anmachen:
+  translations:
+    en: set about it, get down to it
