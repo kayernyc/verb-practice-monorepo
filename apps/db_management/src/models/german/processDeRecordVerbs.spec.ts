@@ -1,4 +1,4 @@
-import { LanguageMap } from 'global-types';
+import { LanguageMap, LanguageVerbCandidate } from 'global-types';
 import { processDeRecord } from './processDeRecord';
 import {
   bleibenGermanVerb,
@@ -33,75 +33,29 @@ import {
   ähnelnReturnObject,
 } from './spec_constants/newVerbsSpec';
 
-// TODO: next pass loop through dictionary
+const verbsToTest = [
+  ['brennen', brennenGermanVerb, brennenReturnObject],
+  ['haben', habenGermanVerb, habenReturnObject],
+  ['sein', seinGermanVerb, seinReturnObject],
+  ['werden', werdenGermanVerb, werdenReturnObject],
+  ['können', könnenGermanVerb, könnenReturnObject],
+  ['gehen', gehenGermanVerb, gehenReturnObject],
+  ['fliegen', fliegenGermanVerb, fliegenReturnObject],
+  ['bleiben', bleibenGermanVerb, bleibenReturnObject],
+  ['ähneln', ähnelnGermanVerb, ähnelnReturnObject],
+  ['bedürfen', bedürfenGermanVerb, bedürfenReturnObject],
+  ['widersprechen', widersprechenGermanVerb, widersprechenReturnObject],
+  ['gelingen', gelingenGermanVerb, gelingenReturnObject],
+  ['nehmen', nehmenGermanVerb, nehmenReturnObject],
+  ['blenden', blendenGermanVerb, blendenReturnObject],
+];
+
 describe('processDeRecord matches real conjugations:', () => {
-  it('returns brennen correctly', () => {
-    const result = processDeRecord(brennenGermanVerb);
-    expect(result).toEqual(brennenReturnObject);
-  });
-
-  it('returns haben correctly', () => {
-    const result = processDeRecord(habenGermanVerb);
-    expect(result).toEqual(habenReturnObject);
-  });
-
-  it('returns sein correctly', () => {
-    const result = processDeRecord(seinGermanVerb);
-    expect(result).toEqual(seinReturnObject);
-  });
-
-  it('returns werden correctly', () => {
-    const result = processDeRecord(werdenGermanVerb);
-    expect(result).toEqual(werdenReturnObject);
-  });
-
-  it('returns können correctly', () => {
-    const result = processDeRecord(könnenGermanVerb);
-    expect(result).toEqual(könnenReturnObject);
-  });
-
-  it('returns gehen correctly', () => {
-    const result = processDeRecord(gehenGermanVerb);
-    expect(result).toEqual(gehenReturnObject);
-  });
-
-  it('returns fliegen correctly', () => {
-    const result = processDeRecord(fliegenGermanVerb);
-    expect(result).toEqual(fliegenReturnObject);
-  });
-
-  it('returns bleiben correctly', () => {
-    const result = processDeRecord(bleibenGermanVerb);
-    expect(result).toEqual(bleibenReturnObject);
-  });
-
-  it('returns ähneln correctly', () => {
-    const result = processDeRecord(ähnelnGermanVerb);
-    expect(result).toEqual(ähnelnReturnObject);
-  });
-
-  it('returns bedürfen correctly', () => {
-    const result = processDeRecord(bedürfenGermanVerb);
-    expect(result).toEqual(bedürfenReturnObject);
-  });
-
-  it('returns widersprechen correctly', () => {
-    const result = processDeRecord(widersprechenGermanVerb);
-    expect(result).toEqual(widersprechenReturnObject);
-  });
-
-  it('returns gelingen correctly', () => {
-    const result = processDeRecord(gelingenGermanVerb);
-    expect(result).toEqual(gelingenReturnObject);
-  });
-
-  it('returns nehmen correctly', () => {
-    const result = processDeRecord(nehmenGermanVerb);
-    expect(result).toEqual(nehmenReturnObject);
-  });
-
-  it('returns blenden correctly', () => {
-    const result = processDeRecord(blendenGermanVerb);
-    expect(result).toEqual(blendenReturnObject);
-  });
+  test.each(verbsToTest)(
+    `'returns %s correctly'`,
+    (infinitive, input, output) => {
+      const result = processDeRecord(input as LanguageVerbCandidate);
+      expect(result).toEqual(output);
+    },
+  );
 });
