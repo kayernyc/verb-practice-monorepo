@@ -2078,11 +2078,11 @@ nehmen:
       translations:
         en: arrest
     - particle: entgegen
-        translations:
-          en: [accept, receive]
+      translations:
+        en: [accept, receive]
     - particle: ab
-        translations:
-          en: [remove, take away]
+      translations:
+        en: [remove, take away]
 
 sterben:
   language: de
@@ -3591,4 +3591,3 @@ drücken:
     - particle: vor
       translations:
         en: move forward
-
