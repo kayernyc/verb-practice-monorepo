@@ -517,6 +517,14 @@ export const blendenGermanVerb: LanguageVerbCandidate = {
     en: ['blind'],
   },
   hilfsverb: 'haben',
+  variations: [
+    {
+      particle: 'ab',
+      translations: {
+        en: ['fade'],
+      },
+    },
+  ],
 };
 
 export const blendenReturnObject: GermanVerbHydrated = {
@@ -556,6 +564,41 @@ export const blendenReturnObject: GermanVerbHydrated = {
       },
       translations: {
         en: ['blind'],
+      },
+    },
+    {
+      hilfsverb: 'haben',
+      partizip: 'abgeblendet',
+      präsens: {
+        [GermanPronounKeys.ich]: 'blende',
+        [GermanPronounKeys.wir]: 'blenden',
+        [GermanPronounKeys.du]: 'blendest',
+        [GermanPronounKeys.ihr]: 'blendet',
+        [GermanPronounKeys.es]: 'blendet',
+      },
+      präteritum: {
+        [GermanPronounKeys.ich]: 'blendete',
+        [GermanPronounKeys.wir]: 'blendeten',
+        [GermanPronounKeys.du]: 'blendetest',
+        [GermanPronounKeys.ihr]: 'blendetet',
+        [GermanPronounKeys.es]: 'blendete',
+      },
+      konjunktiv: {
+        [GermanPronounKeys.ich]: 'blende',
+        [GermanPronounKeys.wir]: 'blenden',
+        [GermanPronounKeys.du]: 'blendest',
+        [GermanPronounKeys.ihr]: 'blendet',
+        [GermanPronounKeys.es]: 'blende',
+      },
+      k2präsens: {
+        [GermanPronounKeys.ich]: 'blendete',
+        [GermanPronounKeys.wir]: 'blendeten',
+        [GermanPronounKeys.du]: 'blendetest',
+        [GermanPronounKeys.ihr]: 'blendetet',
+        [GermanPronounKeys.es]: 'blendete',
+      },
+      translations: {
+        en: ['fade'],
       },
     },
   ],
