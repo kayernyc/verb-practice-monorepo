@@ -8,7 +8,6 @@ export const createStandardConjugation = (
   particle = '',
 ): BaseGermanVerb => {
   const defaultEnding = kranton(stem) ? 'e' : '';
-  console.log('!!!!!', infinitive, defaultEnding);
 
   return {
     partizip: `ge${stem}${defaultEnding}t`,

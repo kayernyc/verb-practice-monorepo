@@ -19,9 +19,10 @@ export const processVariation = (
   record: any,
   infinitive: string,
 ) => {
-  const { dative, genitive, impersonal, translations, weakEndings } = record;
+  const { dative, genitive, impersonal, particle, translations, weakEndings } =
+    record;
 
-  const [infinitiveStem, particle] = generateStems(infinitive);
+  const [infinitiveStem, stemParticle] = generateStems(infinitive);
 
   const hilfsverb: string =
     'hilfsverb' in record && typeof record.hilfsverb === 'string'
@@ -39,10 +40,6 @@ export const processVariation = (
 
   if ('partizip' in record && record.partizip) {
     hydratedVerb.partizip = record.partizip;
-  }
-
-  if (particle in record) {
-    console.log('HURRAY');
   }
 
   if (verbIsIrregular(record, [...GERMAN_IRREGULAR_KEYS])) {
@@ -92,7 +89,7 @@ export const processVariation = (
           infinitiveStem,
           stems.präteritum,
           weakEndings || false,
-          particle,
+          stemParticle,
         );
       }
 
@@ -100,7 +97,7 @@ export const processVariation = (
         hydratedVerb.konjunktiv = konjunktivConjugation(
           infinitiveStem,
           stems.konjunktiv,
-          particle,
+          stemParticle,
         );
       }
 
@@ -109,7 +106,7 @@ export const processVariation = (
           infinitiveStem,
           stems.k2präsens || stems.präteritum || '',
           weakEndings || false,
-          particle,
+          stemParticle,
         );
       }
     }
@@ -154,6 +151,10 @@ export const processVariation = (
         delete tenseGroup[GermanPronounKeys.ihr];
       }
     });
+  }
+
+  if (particle) {
+    hydratedVerb.partizip = `${particle}${hydratedVerb.partizip}`;
   }
 
   return hydratedVerb;

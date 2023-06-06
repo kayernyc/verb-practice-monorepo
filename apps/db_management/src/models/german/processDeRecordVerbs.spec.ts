@@ -100,7 +100,7 @@ describe('processDeRecord matches real conjugations:', () => {
     expect(result).toEqual(nehmenReturnObject);
   });
 
-  it.skip('returns blenden correctly', () => {
+  it('returns blenden correctly', () => {
     const result = processDeRecord(blendenGermanVerb);
     expect(result).toEqual(blendenReturnObject);
   });
