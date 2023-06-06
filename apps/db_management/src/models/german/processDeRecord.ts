@@ -1,6 +1,10 @@
 import { LanguageVerbBase } from 'global-types';
 import { cloneDeep } from 'lodash';
-import { isGermanVerb, GermanVerbVariation } from 'german-types';
+import {
+  isGermanVerb,
+  GermanVerbVariation,
+  separableArray,
+} from 'german-types';
 import { generateStems } from '@germanUtilities/generateStems';
 import { processVariation } from './processVariation';
 import { createStandardConjugation } from './createStandardConjugation';
@@ -9,6 +13,13 @@ export type BaseGermanVerb = Omit<
   GermanVerbVariation,
   'translations' | 'hilfsverb' | 'infinitive' | 'stems'
 >;
+
+const particleIsInseperable = (particle?: string) => {
+  if (particle && !separableArray.includes(particle)) {
+    return particle;
+  }
+  return;
+};
 
 export const processDeRecord = (record: LanguageVerbBase) => {
   if (!isGermanVerb(record)) {
@@ -29,6 +40,7 @@ export const processDeRecord = (record: LanguageVerbBase) => {
     hilfsverb,
     language,
     partizip,
+    particle,
     stems,
     translations,
     weakEndings,
@@ -47,12 +59,14 @@ export const processDeRecord = (record: LanguageVerbBase) => {
     weakEndings,
   };
 
-  const [infinitiveStem, particle] = generateStems(infinitive);
+  const [infinitiveStem, _particle] = generateStems(infinitive);
+
+  const verbParticle = particleIsInseperable(particle) || _particle;
 
   const baseHydratedVerb = {
     hilfsverb,
     translations,
-    ...createStandardConjugation(infinitive, infinitiveStem, particle),
+    ...createStandardConjugation(infinitive, infinitiveStem, verbParticle),
   };
 
   let { variations: variationsSource = [] } = record;

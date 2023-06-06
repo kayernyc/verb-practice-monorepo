@@ -2,10 +2,7 @@ import {
   GERMAN_IRREGULAR_KEYS,
   GermanPronounKeys,
   GermanTenses,
-  GermanVerbHydrated,
-  isGermanVerb,
   GermanPronounCode,
-  GermanVerbVariation,
 } from 'german-types';
 import { BaseGermanVerb } from './processDeRecord';
 import verbIsIrregular from '@utilities/propertyTestFunctions/verbIsIrregular';
@@ -42,6 +39,10 @@ export const processVariation = (
 
   if ('partizip' in record && record.partizip) {
     hydratedVerb.partizip = record.partizip;
+  }
+
+  if (particle in record) {
+    console.log('HURRAY');
   }
 
   if (verbIsIrregular(record, [...GERMAN_IRREGULAR_KEYS])) {
