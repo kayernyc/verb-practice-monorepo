@@ -9,3 +9,63 @@ wählen:
 blasen: # https://www.coniuno.com/verbtables/german/blasen.html
 gießen: # https://www.germanveryeasy.com/giessen
 spalten: # https://www.coniuno.com/verbtables/german/spalten.html
+
+# what to do with verbs that need more particles?
+ab|hängen von:
+  language: de
+  translations:
+    en: be dependent on
+
+etwas mit|geben:
+  language: de
+  translations:
+    en: give something [for the purpose of taking it along]
+
+jemandem vor|greifen:
+  language: de
+  translations:
+    en: jump in ahead of someone
+
+jemanden hoch|bringen:
+  language: de
+  translations:
+    en: help someone up
+
+auf etwas hinaus|laufen:
+  language: de
+  translations:
+    en: lead to something
+
+kommen mit:
+  - particle: zurecht
+    translations:
+      en: cope with
+  - particle: über etwas hinweg
+    translations:
+      en: get over something
+
+denken:
+  - particle: etwas weg
+    translations:
+      en: imagine that something is not there
+
+leben:
+  - particle: vor sich hin
+    translations:
+      en: live passively, without purpose
+
+sehen [auf]:
+  - particle: herab
+    translations:
+      en: look down (on)
+
+setzen:
+    - particle: sich über etwas hinweg
+      translations:
+        en: disregard something
+    - particle: sich mit jemandem auseinander
+      translations:
+        en: have it out with someone
+    - particle: sich mit etwas auseinander
+      translations:
+        en: come to terms with something

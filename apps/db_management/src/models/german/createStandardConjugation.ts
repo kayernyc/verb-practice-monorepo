@@ -10,7 +10,7 @@ export const createStandardConjugation = (
   const defaultEnding = kranton(stem) ? 'e' : '';
 
   return {
-    partizip: `ge${stem}t`,
+    partizip: `ge${stem}${defaultEnding}t`,
     [GermanTenses.präsens]: {
       [GermanPronounKeys.ich]: `${particle}${stem}e`,
       [GermanPronounKeys.du]: `${particle}${stem}${defaultEnding}st`,
@@ -26,18 +26,18 @@ export const createStandardConjugation = (
       [GermanPronounKeys.ihr]: `${particle}${stem}et`,
     },
     [GermanTenses.präteritum]: {
-      [GermanPronounKeys.ich]: `${particle}${stem}te`,
-      [GermanPronounKeys.du]: `${particle}${stem}test`,
-      [GermanPronounKeys.es]: `${particle}${stem}te`,
-      [GermanPronounKeys.wir]: `${particle}${stem}ten`,
-      [GermanPronounKeys.ihr]: `${particle}${stem}tet`,
+      [GermanPronounKeys.ich]: `${particle}${stem}${defaultEnding}te`,
+      [GermanPronounKeys.du]: `${particle}${stem}${defaultEnding}test`,
+      [GermanPronounKeys.es]: `${particle}${stem}${defaultEnding}te`,
+      [GermanPronounKeys.wir]: `${particle}${stem}${defaultEnding}ten`,
+      [GermanPronounKeys.ihr]: `${particle}${stem}${defaultEnding}tet`,
     },
     [GermanTenses.k2präsens]: {
-      [GermanPronounKeys.ich]: `${particle}${stem}te`,
-      [GermanPronounKeys.du]: `${particle}${stem}test`,
-      [GermanPronounKeys.es]: `${particle}${stem}te`,
-      [GermanPronounKeys.wir]: `${particle}${stem}ten`,
-      [GermanPronounKeys.ihr]: `${particle}${stem}tet`,
+      [GermanPronounKeys.ich]: `${particle}${stem}${defaultEnding}te`,
+      [GermanPronounKeys.du]: `${particle}${stem}${defaultEnding}test`,
+      [GermanPronounKeys.es]: `${particle}${stem}${defaultEnding}te`,
+      [GermanPronounKeys.wir]: `${particle}${stem}${defaultEnding}ten`,
+      [GermanPronounKeys.ihr]: `${particle}${stem}${defaultEnding}tet`,
     },
   } as BaseGermanVerb;
 };

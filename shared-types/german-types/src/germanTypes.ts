@@ -191,9 +191,11 @@ export interface GermanVerb extends LanguageVerbBase {
   infinitive: string;
   irregular?: GermanIrregularObject;
   partizip?: string;
+  particle?: string;
   seperable?: boolean;
   stems?: { [key in GermanStem]?: string };
   strong?: boolean;
+  translations: TranslationSet;
   variations?: Array<Partial<GermanVerb> | { definition: string }>;
   weakEndings?: boolean;
 }

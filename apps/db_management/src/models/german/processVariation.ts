@@ -2,10 +2,7 @@ import {
   GERMAN_IRREGULAR_KEYS,
   GermanPronounKeys,
   GermanTenses,
-  GermanVerbHydrated,
-  isGermanVerb,
   GermanPronounCode,
-  GermanVerbVariation,
 } from 'german-types';
 import { BaseGermanVerb } from './processDeRecord';
 import verbIsIrregular from '@utilities/propertyTestFunctions/verbIsIrregular';
@@ -22,9 +19,10 @@ export const processVariation = (
   record: any,
   infinitive: string,
 ) => {
-  const { dative, genitive, impersonal, translations, weakEndings } = record;
+  const { dative, genitive, impersonal, particle, translations, weakEndings } =
+    record;
 
-  const [infinitiveStem, particle] = generateStems(infinitive);
+  const [infinitiveStem, stemParticle] = generateStems(infinitive);
 
   const hilfsverb: string =
     'hilfsverb' in record && typeof record.hilfsverb === 'string'
@@ -91,7 +89,7 @@ export const processVariation = (
           infinitiveStem,
           stems.präteritum,
           weakEndings || false,
-          particle,
+          stemParticle,
         );
       }
 
@@ -99,7 +97,7 @@ export const processVariation = (
         hydratedVerb.konjunktiv = konjunktivConjugation(
           infinitiveStem,
           stems.konjunktiv,
-          particle,
+          stemParticle,
         );
       }
 
@@ -108,7 +106,7 @@ export const processVariation = (
           infinitiveStem,
           stems.k2präsens || stems.präteritum || '',
           weakEndings || false,
-          particle,
+          stemParticle,
         );
       }
     }
@@ -153,6 +151,10 @@ export const processVariation = (
         delete tenseGroup[GermanPronounKeys.ihr];
       }
     });
+  }
+
+  if (particle) {
+    hydratedVerb.partizip = `${particle}${hydratedVerb.partizip}`;
   }
 
   return hydratedVerb;

@@ -179,7 +179,6 @@ export const gelingenGermanVerb: LanguageVerbCandidate = {
   impersonal: true,
   infinitive: 'gelingen',
   dative: true,
-  // weakEndings: true,
   language: LanguageMap.de,
   translations: {
     en: ['succeed (reverse, impersonal)'],
@@ -217,6 +216,62 @@ export const gelingenReturnObject: GermanVerbHydrated = {
       },
       translations: {
         en: ['succeed (reverse, impersonal)'],
+      },
+    },
+  ],
+};
+
+export const brennenGermanVerb: LanguageVerbCandidate = {
+  infinitive: 'brennen',
+  language: LanguageMap.de,
+  translations: {
+    en: ['burn', 'shine', 'distil'],
+  },
+  weakEndings: true,
+  stems: {
+    präteritum: 'a',
+    k2präsens: 'e',
+    partizip: 'a',
+  },
+};
+
+export const brennenReturnObject: GermanVerbHydrated = {
+  infinitive: 'brennen',
+  language: LanguageMap.de,
+  variations: [
+    {
+      hilfsverb: 'haben',
+      partizip: 'gebrannt',
+      translations: {
+        en: ['burn', 'shine', 'distil'],
+      },
+      k2präsens: {
+        '1033': 'brennte',
+        '1041': 'brennten',
+        '1098': 'brenntest',
+        '1106': 'brenntet',
+        '1548': 'brennte',
+      },
+      konjunktiv: {
+        '1033': 'brenne',
+        '1041': 'brennen',
+        '1098': 'brennest',
+        '1106': 'brennet',
+        '1548': 'brenne',
+      },
+      präsens: {
+        '1033': 'brenne',
+        '1041': 'brennen',
+        '1098': 'brennst',
+        '1106': 'brennt',
+        '1548': 'brennt',
+      },
+      präteritum: {
+        '1033': 'brannte',
+        '1041': 'brannten',
+        '1098': 'branntest',
+        '1106': 'branntet',
+        '1548': 'brannte',
       },
     },
   ],
