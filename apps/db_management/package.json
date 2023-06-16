@@ -9,8 +9,8 @@
     "test:e2e": "echo 0",
     "lint": "eslint",
     "build": "sh scripts/copy-data.sh && tsc && tsc-alias",
-    "run": "node ./dist/server.js",
-    "dev:server": "sh scripts/copy-data.sh && tsc -w && tsc-alias -w & node ./dist/server.js"
+    "serve": "node ./dist/server.js",
+    "dev:serve": "sh scripts/copy-data.sh && tsc -w && tsc-alias -w & node ./dist/server.js"
   },
   "keywords": [],
   "author": "",
