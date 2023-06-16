@@ -21,8 +21,6 @@ export const insertGermanVerbs = async (de: LanguageVerbBase[]) => {
     de[0] as GermanVerbHydrated,
   );
 
-  console.log(JSON.stringify(hydratedSchema, null, 2));
-  // INSERT WORKS
   const newVerb = new GermanModel(hydratedSchema);
   newVerb
     .save()

@@ -13,7 +13,6 @@ populateRouter.get('/', (_, res) => {
 
     const root = process.env.APP_ROOT;
     if (root && typeof root === 'string') {
-      console.log('GOT PEOPLE');
       const pathToPage = path.join(root, 'views', 'populate.ejs');
       res.render(pathToPage);
     } else {

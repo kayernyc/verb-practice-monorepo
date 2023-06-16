@@ -86,7 +86,7 @@ describe('convertGermanVerbToHydratedGermanVerb', () => {
     const result = convertGermanVerbToHydratedGermanVerb(
       abblenden as GermanVerbHydrated,
     );
-    console.log(JSON.stringify(result));
+    console.log(JSON.stringify(result, null, 2));
     expect(true).toBe(true);
   });
 });

@@ -1,30 +1,17 @@
 import { GermanTenses } from 'german-types';
 import { Schema } from 'mongoose';
 
-import {
-  TranslationDictionaryModel,
-  TranslationDictionaryModelSchema,
-} from './languageTranslations';
+import { TranslationDictionaryModel } from './languageTranslations';
 
 export interface GermanConjugationModel {
   person: string;
   conjugation: string;
 }
 
-export const GermanConjugationSchema = new Schema<GermanConjugationModel>({
-  person: Number,
-  conjugation: String,
-});
-
 export interface GermanVerbTenseModel {
   tenseName: GermanTenses;
   conjugations: GermanConjugationModel[];
 }
-
-export const GermanVerbTenseSchema = new Schema<GermanVerbTenseModel>({
-  tenseName: String,
-  conjugations: [GermanConjugationSchema],
-});
 
 export interface GermanVerbVariationModel {
   hilfsverb: string;
@@ -34,33 +21,38 @@ export interface GermanVerbVariationModel {
   translations: TranslationDictionaryModel[];
 }
 
-export const GermanVerbVariationModelSchema =
-  new Schema<GermanVerbVariationModel>({
-    hilfsverb: String,
-    partizip: String,
-    particle: String,
-    tenses: [GermanVerbTenseSchema],
-    translations: [TranslationDictionaryModelSchema],
-  });
-
-export const GermanVerbVariationSchema = new Schema<GermanVerbVariationModel>({
-  hilfsverb: String,
-  partizip: String,
-  particle: String,
-  tenses: [GermanConjugationSchema],
-  translations: [GermanVerbVariationModelSchema],
-});
-
 export interface GermanVerbHydratedModel {
   date: Date;
-  schema_version: number;
   infinitive: string;
+  schema_version: number;
   variations: GermanVerbVariationModel[];
 }
 
-export const GermanVerbHydratedSchema = new Schema<GermanVerbHydratedModel>({
-  date: Date,
-  infinitive: String,
-  schema_version: Number,
-  variations: [GermanVerbVariationSchema],
+const ConjugationSchema = new Schema({
+  person: { type: String, required: true },
+  conjugation: { type: String, required: true },
+});
+
+const TenseSchema = new Schema({
+  tenseName: { type: String, required: true },
+  conjugations: { type: [ConjugationSchema], required: true },
+});
+
+const GermanVariationSchema = new Schema({
+  hilfsverb: { type: String, required: true },
+  partizip: { type: String, required: true },
+  particle: { type: String, required: false },
+  tenses: { type: [TenseSchema], required: true },
+  translations: {
+    type: Schema.Types.Mixed,
+    of: { type: [String], required: true },
+    required: true,
+  },
+});
+
+export const GermanVerbHydratedSchema = new Schema({
+  date: { type: Date, required: true },
+  infinitive: { type: String, required: true },
+  schema_version: { type: Number, required: true },
+  variations: { type: [GermanVariationSchema], required: true },
 });
