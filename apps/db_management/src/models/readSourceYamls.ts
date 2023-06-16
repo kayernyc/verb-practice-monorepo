@@ -43,11 +43,11 @@ export const readYamls = (url: string[], dataPath: string) => {
         if (key !== 'dateKey') {
           try {
             const verb: LanguageVerbBase = dataSource[key as keyof JsonRecord] as LanguageVerbBase;
-            const langKey = verb.language;
+            const langKey = verb.language as LanguageMap;
             if (verb.infinitive === undefined) {
               verb.infinitive = key;
             }
-  
+            
             allRecords[langKey].push(verb);
           } catch (err) {
             const errorMessage = err instanceof Error ? err.message : `${err}`;
