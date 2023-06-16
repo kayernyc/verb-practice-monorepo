@@ -1,4 +1,5 @@
 import { convertGermanVerbToHydratedGermanVerb } from 'db-types/germanDBModel';
+import { GermanVerbHydratedSchema } from 'db-types/germanVerbHydratedModel';
 import { GermanVerbHydrated } from 'german-types';
 import { LanguageVerbBase } from 'global-types';
 
@@ -11,8 +12,24 @@ export const insertGermanVerbs = async (de: LanguageVerbBase[]) => {
     console.error('MongoDB connection error:', error);
   });
 
+  const GermanModel = mongoose.model(
+    'GermanVerbModel',
+    GermanVerbHydratedSchema,
+  );
+
   const hydratedSchema = convertGermanVerbToHydratedGermanVerb(
     de[0] as GermanVerbHydrated,
   );
-  console.table(hydratedSchema);
+
+  console.log(JSON.stringify(hydratedSchema, null, 2));
+  // INSERT WORKS
+  const newVerb = new GermanModel(hydratedSchema);
+  newVerb
+    .save()
+    .then(() => {
+      console.log(`New verb was successfully saved to the database.`);
+    })
+    .catch((err: Error) => {
+      console.log(` Error: ${err.message}`);
+    });
 };
