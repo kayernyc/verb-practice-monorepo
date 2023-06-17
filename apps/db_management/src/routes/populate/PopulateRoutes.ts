@@ -2,14 +2,14 @@ import { RequestHandler, Router } from 'express';
 import { buildAllSource } from '@controllers/PopulateController';
 import path from 'path';
 
-import { insertGermanVerbs } from '../services/insertGermanVerbs';
+import { insertGermanVerbs } from '../../services/insertGermanVerbs';
 
 export const populateRouter: Router = Router();
 
 populateRouter.get('/', (_, res) => {
   try {
     const result = buildAllSource();
-    insertGermanVerbs(result.de);
+    // insertGermanVerbs(result.de);
 
     const root = process.env.APP_ROOT;
     if (root && typeof root === 'string') {

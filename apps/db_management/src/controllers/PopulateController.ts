@@ -3,7 +3,7 @@ import { findRelativePathToData } from '@utilities/buildFromYml/readYaml';
 import { readYamls } from 'models/readSourceYamls';
 import { LanguageVerbBase } from 'global-types';
 
-type VerbDictionary = {
+export type VerbDictionary = {
   de: LanguageVerbBase[];
   en: LanguageVerbBase[];
   fr: LanguageVerbBase[];

@@ -25,8 +25,8 @@ export const createApp = async (): Promise<Application> => {
   });
 
   if (process.env.POPULATE) {
-    const { populateRouter } = await import('./routes/PopulateRoutes');
-    const { allVerbsRouter } = await import('./routes/AllVerbs');
+    const { populateRouter } = await import('./routes/populate/PopulateRoutes');
+    const { allVerbsRouter } = await import('./routes/populate/AllVerbs');
     app.use('/populate', populateRouter);
     app.use('/sources/allverbs', allVerbsRouter);
   }

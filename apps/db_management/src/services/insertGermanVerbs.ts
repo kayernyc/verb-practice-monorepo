@@ -5,7 +5,9 @@ import { LanguageVerbBase } from 'global-types';
 
 import mongoose from 'mongoose';
 
-export const insertGermanVerbs = async (de: LanguageVerbBase[]) => {
+export const insertGermanVerbs = async (
+  de: LanguageVerbBase[],
+): Promise<string> => {
   const db = mongoose.connection;
   db.on('error', (error) => {
     // eslint-disable-next-line no-console
@@ -22,12 +24,16 @@ export const insertGermanVerbs = async (de: LanguageVerbBase[]) => {
   );
 
   const newVerb = new GermanModel(hydratedSchema);
-  newVerb
-    .save()
-    .then(() => {
-      console.log(`New verb was successfully saved to the database.`);
-    })
-    .catch((err: Error) => {
-      console.log(` Error: ${err.message}`);
-    });
+
+  try {
+    const message = await newVerb.save();
+    console.log(message);
+    return `New verb was successfully saved to the database.`;
+  } catch (err: unknown) {
+    if (err instanceof Error) {
+      return ` Error: ${err.message}`;
+    }
+
+    return `Error: ${{ err }}`;
+  }
 };
