@@ -9,7 +9,9 @@ import {
 const germanTenses = Object.values(GermanTenses);
 
 // convert GermanVerbHydratedModel
-export const convertHydrationToModel = (verb: GermanVerbHydrated): GermanVerbHydratedModel => {
+export const convertHydrationToModel = (
+  verb: GermanVerbHydrated,
+): GermanVerbHydratedModel => {
   const tenses: GermanVerbTenseModel[] = [];
 
   Object.keys(verb).forEach((key: string) => {
@@ -23,7 +25,6 @@ export const convertHydrationToModel = (verb: GermanVerbHydrated): GermanVerbHyd
 
       conjugations = Object.entries(obj).map((entry) => {
         const [person, { verbConjugation }] = entry;
-        console.log({ person }, { verbConjugation });
         return { person, conjugation: verbConjugation };
       });
 

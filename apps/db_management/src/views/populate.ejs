@@ -1,9 +1,11 @@
 <%- include('./partials/header', {titleString: 'Data for population'}); %>
 <main>
  <div class="ui segment">
-   <h1>Welcome to populate.</h1>
-   <!-- Next step turn this button into a fetch -->
-   <button onclick="downloadAll()">Download</button>
+  <h1>Welcome to populate.</h1>
+   
+  <button onclick="populateGerman()">Populate haben in German</button>
+
+  <button onclick="downloadAll()">Download</button>
  </div>
 </main>
 
@@ -12,8 +14,14 @@
 </footer>
 
 <script>
+  const populateGerman = () => {
+    fetch("sources/allverbs/de", {method: "PUT"})
+      .then(response => {
+        console.log(response);
+      })
+  }
+
   const downloadAll = () => {
-    console.log('heard that')
     fetch("sources/allverbs")
       .then(response => response.json())
       .then(data => {
@@ -27,5 +35,6 @@
   }
 </script>
 
-</body></html>
+</body>
+</html>
 

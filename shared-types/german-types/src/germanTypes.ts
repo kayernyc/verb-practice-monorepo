@@ -95,6 +95,7 @@ export type GermanVerbVariation = {
   hilfsverb: string;
   impersonal?: boolean;
   partizip: string;
+  particle?: string;
   translations: TranslationSet;
 };
 

@@ -3,7 +3,10 @@
 import { Request, Response } from 'express';
 
 import mongoose from 'mongoose';
-import { GermanVerbHydratedModel, GermanVerbHydratedSchema } from '@german/germanVerbHydratedModel';
+import {
+  GermanVerbHydratedModel,
+  GermanVerbHydratedSchema,
+} from '@german/germanVerbHydratedModel';
 
 import { hydrateFromInfinitive } from '@german/hydrateGermanVerb';
 import germanAddPronounStringsToJson from '@german/germanHydrateResponseFunctions/GermanAddPronounStringsToJson';
@@ -13,7 +16,6 @@ import { convertHydrationToModel } from '@german/germanDBModel';
 const germanVerbHydration = async (req: Request, res: Response) => {
   const verb: string = req.params.verb?.toLowerCase();
   let message = `Verb ${verb} isn't fully hydrated.`;
-  console.log('i got here');
 
   // try from db first
   const db = mongoose.connection;
@@ -22,8 +24,13 @@ const germanVerbHydration = async (req: Request, res: Response) => {
     console.error('MongoDB connection error:', error);
   });
 
-  const GermanModel = mongoose.model('GermanVerbModel', GermanVerbHydratedSchema);
-  const dbResult: GermanVerbHydratedModel[] = await GermanModel.find({ infinitive: verb });
+  const GermanModel = mongoose.model(
+    'GermanVerbModel',
+    GermanVerbHydratedSchema,
+  );
+  const dbResult: GermanVerbHydratedModel[] = await GermanModel.find({
+    infinitive: verb,
+  });
   let status = 500;
 
   if (dbResult.length > 0) {
@@ -41,7 +48,6 @@ const germanVerbHydration = async (req: Request, res: Response) => {
   try {
     let hydratiedVerb = hydrateFromInfinitive(verb);
 
-    console.log('I got here');
     if (typeof hydratiedVerb !== 'string') {
       hydratiedVerb = germanAddPronounStringsToJson(hydratiedVerb);
       message = `Verb ${verb} is successfully hydrated.`;
@@ -50,7 +56,9 @@ const germanVerbHydration = async (req: Request, res: Response) => {
       newVerb
         .save()
         .then(() => {
-          console.log(`New verb ${verb} was successfully saved to the database.`);
+          console.log(
+            `New verb ${verb} was successfully saved to the database.`,
+          );
           status = 200;
         })
         .catch((err: Error) => {
@@ -58,7 +66,9 @@ const germanVerbHydration = async (req: Request, res: Response) => {
           res.status(500).json({ status, message: err.message });
         });
 
-      return res.status(status).json({ status, data: dataBaseReadyVerb, message });
+      return res
+        .status(status)
+        .json({ status, data: dataBaseReadyVerb, message });
     }
 
     throw Error('Verb is not hydrated');

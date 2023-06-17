@@ -8,7 +8,7 @@ export default {
     '@germanHydrationFunctions(.*)$':
       '<rootDir>/src/models/german/hydrationFunctions/$1',
     '@germanUtilities(.*)$': '<rootDir>/src/models/german/utilities/$1',
-    '@models(.*)$': '<rootDir>/src/models/models$1',
+    '@models(.*)$': '<rootDir>/src/models/$1',
     '@utilities(.*)$': '<rootDir>/src/utilities/$1',
   },
   preset: 'ts-jest',
