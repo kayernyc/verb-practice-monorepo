@@ -1,4 +1,4 @@
-import { LanguageMap, LanguageVerbCandidate } from 'global-types';
+import { LanguageVerbCandidate } from 'global-types';
 import { processDeRecord } from './processDeRecord';
 import {
   bleibenGermanVerb,

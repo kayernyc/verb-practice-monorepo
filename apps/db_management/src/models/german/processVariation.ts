@@ -33,9 +33,10 @@ export const processVariation = (
     ...baseHydratedVerb,
     dative,
     genitive,
-    impersonal,
-    translations,
     hilfsverb,
+    impersonal,
+    particle,
+    translations,
   };
 
   if ('partizip' in record && record.partizip) {
@@ -155,6 +156,7 @@ export const processVariation = (
 
   if (particle) {
     hydratedVerb.partizip = `${particle}${hydratedVerb.partizip}`;
+    console.log('      IS PARTICLE', { hydratedVerb }, { particle });
   }
 
   return hydratedVerb;

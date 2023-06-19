@@ -78,6 +78,16 @@ export const habenGermanVerb: LanguageVerbCandidate = {
     partizip: 'b',
   },
   weakEndings: true,
+  variations: [
+    {
+      particle: 'vor',
+      translations: { en: 'intend' },
+    },
+    {
+      particle: 'an',
+      translations: { en: ['have on', 'wear'] },
+    },
+  ],
 };
 
 export const habenReturnObject: GermanVerbHydrated = {
@@ -117,6 +127,74 @@ export const habenReturnObject: GermanVerbHydrated = {
       },
       translations: {
         en: ['have'],
+      },
+    },
+    {
+      hilfsverb: 'haben',
+      translations: { en: 'intend' },
+      partizip: 'vorgehabt',
+      particle: 'vor',
+      präsens: {
+        '1033': 'habe',
+        '1041': 'haben',
+        '1098': 'hast',
+        '1106': 'habt',
+        '1548': 'hat',
+      },
+      konjunktiv: {
+        '1033': 'habe',
+        '1041': 'haben',
+        '1098': 'habest',
+        '1106': 'habet',
+        '1548': 'habe',
+      },
+      präteritum: {
+        '1033': 'hatte',
+        '1041': 'hatten',
+        '1098': 'hattest',
+        '1106': 'hattet',
+        '1548': 'hatte',
+      },
+      k2präsens: {
+        '1033': 'hätte',
+        '1041': 'hätten',
+        '1098': 'hättest',
+        '1106': 'hättet',
+        '1548': 'hätte',
+      },
+    },
+    {
+      hilfsverb: 'haben',
+      translations: { en: ['have on', 'wear'] },
+      partizip: 'angehabt',
+      particle: 'an',
+      präsens: {
+        '1033': 'habe',
+        '1041': 'haben',
+        '1098': 'hast',
+        '1106': 'habt',
+        '1548': 'hat',
+      },
+      konjunktiv: {
+        '1033': 'habe',
+        '1041': 'haben',
+        '1098': 'habest',
+        '1106': 'habet',
+        '1548': 'habe',
+      },
+      präteritum: {
+        '1033': 'hatte',
+        '1041': 'hatten',
+        '1098': 'hattest',
+        '1106': 'hattet',
+        '1548': 'hatte',
+      },
+      k2präsens: {
+        '1033': 'hätte',
+        '1041': 'hätten',
+        '1098': 'hättest',
+        '1106': 'hättet',
+        '1548': 'hätte',
       },
     },
   ],
@@ -568,6 +646,7 @@ export const blendenReturnObject: GermanVerbHydrated = {
     },
     {
       hilfsverb: 'haben',
+      particle: 'ab',
       partizip: 'abgeblendet',
       präsens: {
         [GermanPronounKeys.ich]: 'blende',
