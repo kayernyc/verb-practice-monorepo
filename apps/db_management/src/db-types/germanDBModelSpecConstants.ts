@@ -45,9 +45,12 @@ export const expected = {
   schema_version: 1,
   variations: [
     {
+      dative: false,
+      genitive: false,
       hilfsverb: 'haben',
+      impersonal: false,
       partizip: 'geblendet',
-      particle: undefined,
+      particle: '',
       tenses: [
         {
           tenseName: 'präsens',
@@ -155,7 +158,10 @@ export const expected = {
       },
     },
     {
+      dative: false,
+      genitive: false,
       hilfsverb: 'haben',
+      impersonal: false,
       partizip: 'abgeblendet',
       particle: 'ab',
       tenses: [
@@ -265,7 +271,10 @@ export const expected = {
       },
     },
     {
+      dative: false,
+      genitive: false,
       hilfsverb: 'haben',
+      impersonal: false,
       particle: 'ab',
       partizip: 'geblendet',
       tenses: [
