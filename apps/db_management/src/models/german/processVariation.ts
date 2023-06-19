@@ -156,7 +156,6 @@ export const processVariation = (
 
   if (particle) {
     hydratedVerb.partizip = `${particle}${hydratedVerb.partizip}`;
-    console.log('      IS PARTICLE', { hydratedVerb }, { particle });
   }
 
   return hydratedVerb;
