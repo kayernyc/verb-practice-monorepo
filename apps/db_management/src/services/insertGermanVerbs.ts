@@ -27,7 +27,6 @@ export const insertGermanVerbs = async (
 
   try {
     const message = await newVerb.save();
-    console.log(message);
     return `New verb was successfully saved to the database.`;
   } catch (err: unknown) {
     if (err instanceof Error) {

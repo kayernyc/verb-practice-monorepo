@@ -16,7 +16,15 @@ export const convertGermanVerbToHydratedGermanVerb = (
 
   const germanVerbVariations = variations.map((variation) => {
     const tenses: GermanVerbTenseModel[] = [];
-    const { hilfsverb, partizip, particle, translations } = variation;
+    const {
+      dative = false,
+      genitive = false,
+      hilfsverb,
+      impersonal = false,
+      particle = '',
+      partizip,
+      translations,
+    } = variation;
 
     for (const [keyword, value] of Object.entries(variation)) {
       if (germanTenses.includes(keyword)) {
@@ -35,7 +43,10 @@ export const convertGermanVerbToHydratedGermanVerb = (
     }
 
     return {
+      dative,
+      genitive,
       hilfsverb,
+      impersonal,
       particle,
       partizip,
       tenses,

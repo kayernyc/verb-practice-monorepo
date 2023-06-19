@@ -14,9 +14,12 @@ export interface GermanVerbTenseModel {
 }
 
 export interface GermanVerbVariationModel {
+  dative: boolean;
+  genitive: boolean;
   hilfsverb: string;
-  partizip: string;
+  impersonal: boolean;
   particle: string;
+  partizip: string;
   tenses: GermanVerbTenseModel[];
   translations: TranslationDictionaryModel[];
 }
@@ -39,9 +42,12 @@ const TenseSchema = new Schema({
 });
 
 const GermanVariationSchema = new Schema({
+  dative: { type: Boolean, required: true },
+  genitive: { type: Boolean, required: true },
   hilfsverb: { type: String, required: true },
-  partizip: { type: String, required: true },
+  impersonal: { type: String, required: true },
   particle: { type: String, required: false },
+  partizip: { type: String, required: true },
   tenses: { type: [TenseSchema], required: true },
   translations: {
     type: Schema.Types.Mixed,
