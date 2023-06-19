@@ -58,7 +58,7 @@ const GermanVariationSchema = new Schema({
 
 export const GermanVerbHydratedSchema = new Schema({
   date: { type: Date, required: true },
-  infinitive: { type: String, required: true },
+  infinitive: { type: String, required: true, unique: true },
   schema_version: { type: Number, required: true },
   variations: { type: [GermanVariationSchema], required: true },
 });
