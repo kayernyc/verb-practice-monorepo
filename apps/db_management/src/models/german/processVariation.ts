@@ -33,9 +33,10 @@ export const processVariation = (
     ...baseHydratedVerb,
     dative,
     genitive,
-    impersonal,
-    translations,
     hilfsverb,
+    impersonal,
+    particle,
+    translations,
   };
 
   if ('partizip' in record && record.partizip) {
