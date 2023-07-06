@@ -1,0 +1,53 @@
+être:
+  auxiliary: true
+  language: fr
+  translations:
+    en: be
+
+avoir:
+  auxiliary: true
+  language: fr
+  translations:
+    en: have
+
+faire:
+  language: fr
+  translations:
+    en: [make, do]
+
+partir:
+  auxiliaire: être
+  language: fr
+  translations:
+    en: leave
+
+anéantir:
+  language: fr
+  translations:
+    en: annihilate
+
+secouer:
+  language: fr
+  translations:
+    en: shake
+
+baisser:
+  language: fr
+  translations:
+    en: lower
+
+obtempérer:
+  language: fr
+  translations:
+    en: comply
+
+degringoler:
+  language: fr
+  translations:
+    en: tumble down
+
+enfuire:
+  language: fr
+  reflexive: true
+  translations:
+    en: escape
