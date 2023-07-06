@@ -168,6 +168,9 @@ importers:
       '@types/node':
         specifier: ^18.15.11
         version: 18.16.16
+      db-types:
+        specifier: workspace:1.0.0-beta.1
+        version: link:../../shared-types/db-types
       english-types:
         specifier: workspace:*
         version: link:../../shared-types/english-types
@@ -300,6 +303,31 @@ importers:
       sum-one:
         specifier: workspace:*
         version: link:../sum-one
+
+  shared-types/db-types:
+    dependencies:
+      german-types:
+        specifier: workspace:1.0.0-beta.1
+        version: link:../german-types
+      global-types:
+        specifier: workspace:1.0.0-beta.1
+        version: link:../global-types
+    devDependencies:
+      '@types/node':
+        specifier: ^18.15.11
+        version: 18.16.16
+      ts-node:
+        specifier: ^10.9.1
+        version: 10.9.1(@types/node@18.16.16)(typescript@4.9.5)
+      tsc-alias:
+        specifier: ^1.8.5
+        version: 1.8.6
+      tsc-watch:
+        specifier: ^6.0.0
+        version: 6.0.4(typescript@4.9.5)
+      typescript:
+        specifier: ^4.4.2
+        version: 4.9.5
 
   shared-types/english-types:
     dependencies:

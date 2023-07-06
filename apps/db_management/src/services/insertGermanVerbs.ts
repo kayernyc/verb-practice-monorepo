@@ -1,8 +1,5 @@
-import { convertGermanVerbToHydratedGermanVerb } from 'db-types/germanDBModel';
-import {
-  GermanVerbHydratedModel,
-  GermanVerbHydratedSchema,
-} from 'db-types/germanVerbHydratedModel';
+import { convertGermanVerbToHydratedGermanVerb } from 'db-types';
+import { GermanVerbHydratedModel, GermanVerbHydratedSchema } from 'db-types';
 import { GermanVerbHydrated } from 'german-types';
 import { LanguageVerbBase } from 'global-types';
 

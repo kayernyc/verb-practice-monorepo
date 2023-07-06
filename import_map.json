@@ -3,6 +3,8 @@
     "@jsonTypes": "./shared-types/global-types/src/jsonTypes.ts",
     "@languageTypes": "./shared-types/global-types/src/languageTypes.ts",
     "@regExUtilities": "./shared-types/global-types/src/regExUtilities.ts",
-    "@verbTypes": "./shared-types/global-types/src/verbTypes.ts"
+    "@verbTypes": "./shared-types/global-types/src/verbTypes.ts",
+    "@germanDBTypes": "./shared-types/db-types/src/germanDBTypes",
+    "@germanDBHydratedModel": "./shared-types/db-types/src/germanDBHydratedModel"
   }
 }
