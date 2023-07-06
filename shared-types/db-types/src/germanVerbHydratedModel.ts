@@ -41,7 +41,7 @@ const TenseSchema = new Schema({
   conjugations: { type: [ConjugationSchema], required: true },
 });
 
-const GermanVariationSchema = new Schema({
+export const GermanVariationSchema = new Schema({
   dative: { type: Boolean, required: true },
   genitive: { type: Boolean, required: true },
   hilfsverb: { type: String, required: true },
@@ -60,5 +60,5 @@ export const GermanVerbHydratedSchema = new Schema({
   date: { type: Date, required: true },
   infinitive: { type: String, required: true, unique: true },
   schema_version: { type: Number, required: true },
-  variations: { type: [GermanVariationSchema], required: true },
+  variations: new Schema({ type: [GermanVariationSchema], required: true }),
 });

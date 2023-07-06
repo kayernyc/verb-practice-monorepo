@@ -1,5 +1,6 @@
-import { RequestHandler, Router } from 'express';
 import { buildAllSource } from '@controllers/PopulateController';
+import { RequestHandler, Router } from 'express';
+// import { buildAllSource } from '@controllers/PopulateController';
 import path from 'path';
 
 export const populateRouter: Router = Router();

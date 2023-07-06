@@ -16,7 +16,7 @@
     },
     "rootDir": "src"
   },
-  "include": ["./src", "../../shared-types/db-types"],
+  "include": ["./src"],
   "exclude": ["node_modules"],
   "tsc-alias": {
     "verbose": true,
