@@ -3,6 +3,25 @@
   language: fr
   translations:
     en: be
+  participle: été
+  present_participle: étant
+  present:
+    je: suis
+    tu: es
+    il: est
+    nous: sommes
+    vous: êtes
+    ils: sont
+  stems:
+    subjunctif:
+      base: soi
+      boot: soy
+    futur:
+      base: ser
+    simple:
+      base: fu
+    imperitive:
+      follows: subjunctif
   variations:
     préposition: à (nom)
     translations:
@@ -13,6 +32,16 @@ avoir:
   language: fr
   translations:
     en: have
+
+attendre:
+  language: fr
+  translations:
+    en: wait
+  variations:
+    prépostion: à (verbe)
+    reflexive: true
+    translations:
+      en: wait
 
 faire:
   language: fr

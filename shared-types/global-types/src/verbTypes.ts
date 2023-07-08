@@ -11,3 +11,7 @@ export interface LanguageVerbBase {
 export interface LanguageVerbCandidate extends LanguageVerbBase {
   [key: string]: unknown;
 }
+
+export type TranslationSet = {
+  [key in LanguageMap]?: string[] | string;
+};
