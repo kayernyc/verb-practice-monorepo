@@ -3,6 +3,10 @@
   language: fr
   translations:
     en: be
+  variations:
+    préposition: à (nom)
+    translations:
+      en: belong to
 
 avoir:
   auxiliary: true
@@ -51,3 +55,9 @@ enfuire:
   reflexive: true
   translations:
     en: escape
+
+jouer:
+  language: fr
+  préposition: à
+  translations:
+    en: to play (a game or sport)
