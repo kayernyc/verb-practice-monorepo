@@ -1,11 +1,29 @@
 import { createStandardConjugation } from "@models/french/createStandardConjugation";
-import { choisirReturnObject, parlerReturnObject, perdreReturnObject } from "@models/french/spec_constants/regularVerbs";
+import { bougerReturnObject, choisirReturnObject, copierReturnObject, effacerReturnObject, parlerReturnObject, perdreReturnObject } from "@models/french/spec_constants/regularVerbs";
 
 describe('simple french verb conjugation', () => {
   it('returns parler correctly', () => {
     const result = createStandardConjugation('parler');
 
     expect(result).toStrictEqual(parlerReturnObject);
+  });
+
+  it('returns copier correctly', () => {
+    const result = createStandardConjugation('copier');
+
+    expect(result).toStrictEqual(copierReturnObject);
+  });
+
+  it('returns effacer correctly', () => {
+    const result = createStandardConjugation('effacer');
+
+    expect(result).toStrictEqual(effacerReturnObject);
+  });
+
+  it('returns bouger correctly', () => {
+    const result = createStandardConjugation('bouger');
+
+    expect(result).toStrictEqual(bougerReturnObject);
   });
 
   it('returns choisir correctly', () => {

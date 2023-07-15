@@ -1,0 +1,573 @@
+parler:
+  language: fr
+  translations:
+    en: speak
+
+agacer:
+  language: fr
+  translations:
+    en: annoy
+
+amorcer:
+  language: fr
+  translations:
+    en: [initiate, energize]
+
+annoncer:
+  language: fr
+  translations:
+    en: announce
+
+avancer:
+  language: fr
+  translations:
+    en: advance
+
+balancer:
+  language: fr
+  translations:
+    en: swing
+
+bercer:
+  language: fr
+  translations:
+    en: [rock, cradle]
+
+coincer:
+  language: fr
+  translations:
+    en: [jam, wedge]
+
+commencer:
+  language: fr
+  translations:
+    en: begin
+
+dénoncer:
+  language: fr
+  translations:
+    en: denounce
+
+déplacer:
+  language: fr
+  translations:
+    en: [move, displace]
+
+divorcer:
+  language: fr
+  translations:
+    en: divorce
+
+effacer:
+  language: fr
+  translations:
+    en: erase
+
+épicer:
+  language: fr
+  translations:
+    en: spice
+
+forcer:
+  language: fr
+  translations:
+    en: [force, compel]
+
+grincer:
+  language: fr
+  translations:
+    en: [creak, squeak]
+
+lancer:
+  language: fr
+  translations:
+    en: throw
+
+menacer:
+  language: fr
+  translations:
+    en: threaten
+
+percer:
+  language: fr
+  translations:
+    en: pierce
+
+placer:
+  language: fr
+  translations:
+    en: put
+
+prononcer:
+  language: fr
+  translations:
+    en: pronounce
+
+remplacer:
+  language: fr
+  translations:
+    en: replace
+
+renforcer:
+  language: fr
+  translations:
+    en: reinforce
+
+renoncer:
+  language: fr
+  translations:
+    en: renounce
+
+sucer:
+  language: fr
+  translations:
+    en: suck
+
+tracer:
+  language: fr
+  translations:
+    en: [draw, mark out]
+
+
+affliger:
+  language: fr
+  translations:
+    en: afflict
+
+allonger:
+  language: fr
+  translations:
+    en: [lengthen, stretch]
+
+aménager:
+  language: fr
+  translations:
+    en: [fit, develop, adjust]
+
+arranger:
+  language: fr
+  translations:
+    en: arrange
+
+bouger:
+  language: fr
+  translations:
+    en: move
+
+changer:
+  language: fr
+  translations:
+    en: change
+
+corriger:
+  language: fr
+  translations:
+    en: correct
+
+décourager:
+  language: fr
+  translations:
+    en: discourage
+
+dégager:
+  language: fr
+  translations:
+    en: [release, clear]
+
+déménager:
+  language: fr
+  translations:
+    en: move
+
+déranger:
+  language: fr
+  translations:
+    en: disturb
+
+diriger:
+  language: fr
+  translations:
+    en: direct
+
+échanger:
+  language: fr
+  translations:
+    en: exchange
+
+encourager:
+  language: fr
+  translations:
+    en: encourage
+
+endommager:
+  language: fr
+  translations:
+    en: damage
+
+engager:
+  language: fr
+  translations:
+    en: [bind, hire, involve]
+
+envisager:
+  language: fr
+  translations:
+    en: imagine
+
+exiger:
+  language: fr
+  translations:
+    en: demand
+
+figer:
+  language: fr
+  translations:
+    en: [congeal, fix]
+
+héberger:
+  language: fr
+  translations:
+    en: [accommodate, harbor]
+
+infliger:
+  language: fr
+  translations:
+    en: inflict
+
+juger:
+  language: fr
+  translations:
+    en: judge
+
+loger:
+  language: fr
+  translations:
+    en: lodge
+
+longer:
+  language: fr
+  translations:
+    en: border
+
+manger:
+  language: fr
+  translations:
+    en: eat
+
+mélanger:
+  language: fr
+  translations:
+    en: mix
+
+nager:
+  language: fr
+  translations:
+    en: swim
+
+neiger:
+  language: fr
+  translations:
+    en: snow
+
+obliger:
+  language: fr
+  translations:
+    en: oblige
+
+partager:
+  language: fr
+  translations:
+    en: share
+
+plonger:
+  language: fr
+  translations:
+    en: dive
+
+ranger:
+  language: fr
+  translations:
+    en: [arrange, tidy up]
+
+rédiger:
+  language: fr
+  translations:
+    en: write
+
+ronger:
+  language: fr
+  translations:
+    en: gnaw
+
+songer:
+  language: fr
+  translations:
+    en: dream
+
+soulager:
+  language: fr
+  translations:
+    en: [soothe, relieve]
+
+télécharger:
+  language: fr
+  translations:
+    en: [download, upload]
+
+voyager:
+  language: fr
+  translations:
+    en: travel
+
+appeler:
+  language: fr
+  boot: true
+  translations:
+    en: call
+
+chanceler:
+  language: fr
+  boot: true
+  translations:
+    en: [totter, wobble]
+
+épeler:
+  language: fr
+  boot: true
+  translations:
+    en: spell
+
+rappeler:
+  language: fr
+  boot: true
+  translations:
+    en: [call back, recall]
+
+renouveler:
+  language: fr
+  boot: true
+  translations:
+    en: renew
+
+ruisseler:
+  language: fr
+  boot: true
+  translations:
+    en: [flow, stream]
+
+feuilleter:
+  language: fr
+  boot: true
+  translations:
+    en: [leaf through]
+
+hoqueter:
+  language: fr
+  boot: true
+  translations:
+    en: hiccup
+
+jeter:
+  language: fr
+  boot: true
+  translations:
+    en: throw
+
+projeter:
+  language: fr
+  boot: true
+  translations:
+    en: project
+
+rejeter:
+  language: fr
+  boot: true
+  translations:
+    en: reject
+
+piéger:
+  language: fr
+  boot: true
+  translations:
+    en: trap
+
+appeler:
+  language: fr
+  boot: true
+  translations:
+    en: call
+
+chanceler:
+  language: fr
+  boot: true
+  translations:
+    en: [totter, wobble]
+
+épeler:
+  language: fr
+  boot: true
+  translations:
+    en: spell
+
+rappeler:
+  language: fr
+  boot: true
+  translations:
+    en: [call back, recall]
+
+renouveler:
+  language: fr
+  boot: true
+  translations:
+    en: renew
+
+ruisseler:
+  language: fr
+  boot: true
+  translations:
+    en: [flow, stream]
+
+feuilleter:
+  language: fr
+  boot: true
+  translations:
+    en: [leaf through]
+
+hoqueter:
+  language: fr
+  boot: true
+  translations:
+    en: hiccup
+
+jeter:
+  language: fr
+  boot: true
+  translations:
+    en: throw
+
+projeter:
+  language: fr
+  boot: true
+  translations:
+    en: project
+
+rejeter:
+  language: fr
+  boot: true
+  translations:
+    en: reject
+
+abréger:
+  language: fr
+  boot: true
+  translations:
+    en: [shorten, abridge]
+
+protéger:
+  language: fr
+  boot: true
+  translations:
+    en: protect
+
+broyer:
+  language: fr
+  boot: true
+  translations:
+    en: grind
+
+employer:
+  language: fr
+  boot: true
+  translations:
+    en: employ
+
+envoyer:
+  language: fr
+  boot: true
+  translations:
+    en: send
+
+nettoyer:
+  language: fr
+  boot: true
+  translations:
+    en: clean
+
+se noyer:
+  language: fr
+  boot: true
+  translations:
+    en: drown
+
+renvoyer:
+  language: fr
+  boot: true
+  translations:
+    en: fire
+
+tutoyer:
+  language: fr
+  boot: true
+  translations:
+    en: use tu
+
+vouvoyer:
+  language: fr
+  boot: true
+  translations:
+    en: use vous
+
+appuyer:
+  language: fr
+  boot: true
+  translations:
+    en: [lean, press]
+
+ennuyer:
+  language: fr
+  boot: true
+  translations:
+    en: bore
+
+essuyer:
+  language: fr
+  boot: true
+  translations:
+    en: wipe
+
+balayer:
+  language: fr
+  boot: true
+  translations:
+    en: sweep
+
+effrayer:
+  language: fr
+  boot: true
+  translations:
+    en: frighten
+
+égayer:
+  language: fr
+  boot: true
+  translations:
+    en: cheer up
+
+essayer:
+  language: fr
+  boot: true
+  translations:
+    en: try
+
+payer:
+  language: fr
+  boot: true
+  translations:
+    en: pay
+
+rayer:
+  language: fr
+  boot: true
+  translations:
+    en: [draw a line (on/through), to cross out]
+

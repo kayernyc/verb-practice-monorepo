@@ -3,6 +3,7 @@ import { FrenchPronounCode } from "src/frenchConstants";
 
 const ALL_FRENCH_VALID_KEYS = [
   'auxiliary',
+  'boot',
   'definition',
   'helper_verb', // être/avoir
   'impersonal',
@@ -42,8 +43,8 @@ export type FrenchVerbVariation = {
 } & {
   auxiliary?: boolean;
   definition?: string;
-  genitive?: boolean;
   helper_verb: string;
+  infinitive: string;
   impersonal?: boolean;
   participe: string;
   préposition?: string;
