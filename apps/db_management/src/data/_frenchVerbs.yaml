@@ -23,9 +23,9 @@
     imperitive:
       follows: subjunctif
   variations:
-    préposition: à (nom)
-    translations:
-      en: belong to
+    - préposition: à (nom)
+      translations:
+        en: belong to
 
 avoir:
   auxiliary: true
@@ -38,10 +38,10 @@ attendre:
   translations:
     en: wait
   variations:
-    prépostion: à (verbe)
-    reflexive: true
-    translations:
-      en: wait
+    - prépostion: à (verbe)
+      reflexive: true
+      translations:
+        en: wait
 
 faire:
   language: fr

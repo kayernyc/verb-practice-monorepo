@@ -5,7 +5,7 @@ import { BaseFrenchVerb } from "@models/french/frenchTypes";
 
 type ConjugationFunction = (infinitive: string, stem: string) => BaseFrenchVerb;
 
-export const createStandardConjugation = (infinitive: string): BaseFrenchVerb => {
+export const createStandardConjugation = (infinitive: string, helper_verb?: string): BaseFrenchVerb => {
   const ending = infinitive.slice(-2);
   const stem = infinitive.slice(0, -2)
 
@@ -16,7 +16,11 @@ export const createStandardConjugation = (infinitive: string): BaseFrenchVerb =>
   }
 
   if (ending in strategy) {
-    return strategy[ending](infinitive, stem)
+    const verb = strategy[ending](infinitive, stem)
+    if (helper_verb) {
+      verb.helper_verb = helper_verb;
+    }
+    return verb;
   }
 
   throw Error(`${infinitive} does not fit French pattern.`)

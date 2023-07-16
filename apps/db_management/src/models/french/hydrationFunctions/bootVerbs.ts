@@ -1,4 +1,5 @@
 import { BaseFrenchVerb } from "@models/french/frenchTypes";
+import { TenseType, PronounType } from "@models/french/types/hydrationTypes";
 
 const doubleConsonant = ['appeler', 'chanceler', 'épeler', 'rappeler',
   'renouveler', 'ruisseler', 'feuilleter', 'hoqueter', 'jeter', 'projeter', 'rejeter'];
@@ -7,8 +8,7 @@ const doubleERegex: RegExp = /[e|é]\wer\b/; // e|é cons er
 
 const yer: RegExp = /(a|o|u)yer\b/;
 
-type PronounType = '1033' | '1041' | '1074' | '1098' | '1292' | '1300';
-type TenseType = Record<PronounType, string>
+
 
 const fullTenseConverter = (sourceConjugation: TenseType, regex: RegExp, substitution: string) => {
   return Object.entries({ ...sourceConjugation }).reduce((acc, entry) => {

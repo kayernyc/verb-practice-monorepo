@@ -571,3 +571,300 @@ rayer:
   translations:
     en: [draw a line (on/through), to cross out]
 
+dormir:
+  language: fr
+  translations:
+    en: sleep
+
+mentir:
+  language: fr
+  translations:
+    en: lie
+
+démentir:
+  language: fr
+  translations:
+    en: [deny, contradict]
+
+partir:
+  language: fr
+  helper_verb: être
+  translations:
+    en: leave
+
+départir:
+  language: fr
+  helper_verb: être
+  translations:
+    en:  [bestow, grant]
+
+repartir:
+  language: fr
+  helper_verb: être
+  translations:
+    en: [leave again, depart again]
+
+sentir:
+  language: fr
+  translations:
+    en: [feel, smell]
+
+compartir:
+  language: fr
+  translations:
+    en: share
+
+servir:
+  irregular:
+    présent:
+      je: sers
+      tu: sers
+      il: sert
+  language: fr
+  translations:
+    en: serve
+  variations:
+    - particle: de
+      translations: [serve as, act as]
+    - particle: de
+      reflexive: true
+      translations: [use, make use of]
+
+sortir:
+  language: fr
+  translations:
+    en: go out
+
+endormir:
+  language: fr
+  translations:
+    en: put to sleep
+  variations:
+    - reflexive: true
+      translations:
+        en: fall asleep
+
+rendormir:
+  language: fr
+  translations:
+    en: fall back asleep
+
+redormir:
+  language: fr
+  translations:
+    en: go back to sleep
+
+prédormir:
+  language: fr
+  translations:
+    en: doze off before falling asleep
+
+desservir:
+  language: fr
+  translations:
+    en: [clear, remove (from a table for example)]
+
+resservir:
+  language: fr
+  translations:
+    en: [serve again, refill]
+
+préservir:
+  language: fr
+  translations:
+    en: [preserve, safeguard]
+
+découvrir:
+  language: fr
+  translations:
+    en: [uncover, discover]
+
+recouvrir:
+  language: fr
+  translations:
+    en: [recover, cover again]
+
+dérecouvrir:
+  language: fr
+  translations:
+    en: [re-uncover, discover again (less common)]
+
+couvrir:
+  language: fr
+  translations:
+    en: cover
+
+cueillir:
+  language: fr
+  translations:
+    en: pick
+
+offrir:
+  language: fr
+  translations:
+    en: offer
+
+ouvrir:
+  language: fr
+  translations:
+    en: open
+
+souffrir:
+  language: fr
+  translations:
+    en: suffer
+
+recueillir:
+  language: fr
+  translations:
+    en: [collect, gather]
+
+accueillir:
+  language: fr
+  translations:
+    en: [welcome, receive]
+
+décueillir:
+  language: fr
+  translations:
+    en: [unpick, remove (less common)]
+
+présentoir:
+  language: fr
+  translations:
+    en: [present, display]
+
+récouvrir:
+  language: fr
+  translations:
+    en: [discover, uncover]
+
+recouvrir:
+  language: fr
+  translations:
+    en: [recover, cover again]
+
+ressouffrir:
+  language: fr
+  translations:
+    en: [suffer again, experience suffering once more]
+
+attendre:
+  language: fr
+  translations:
+    en: wait (for)
+
+confondre:
+  language: fr
+  translations:
+    en: confuse
+
+correspondre:
+  language: fr
+  translations:
+    en: correspond
+
+défendre:
+  language: fr
+  translations:
+    en: defend
+
+dépendre:
+  language: fr
+  translations:
+    en: depend
+
+descendre:
+  language: fr
+  translations:
+    en: descend
+
+entendre:
+  language: fr
+  translations:
+    en: [hear, understand]
+
+étendre:
+  language: fr
+  translations:
+    en: stretch
+
+fondre:
+  language: fr
+  translations:
+    en: melt
+
+mordre:
+  language: fr
+  translations:
+    en: bite
+
+pendre:
+  language: fr
+  translations:
+    en: [hang, suspend
+]
+perdre:
+  language: fr
+  translations:
+    en: lose
+
+prétendre:
+  language: fr
+  translations:
+    en: claim
+
+rendre:
+  language: fr
+  translations:
+    en: give back, to return
+
+répandre:
+  language: fr
+  translations:
+    en: spread, to scatter
+
+répondre:
+  language: fr
+  translations:
+    en: answer
+
+suspendre:
+  language: fr
+  translations:
+    en: suspend
+
+tordre:
+  language: fr
+  translations:
+    en: twist
+
+vendre:
+  language: fr
+  translations:
+    en: sell
+
+corrompre:
+  irregular:
+    présent:
+      il: corrompt
+  language: fr
+  translations:
+    en: corrupt
+
+interrompre:
+  irregular:
+    présent:
+      il: interrompt
+  language: fr
+  translations:
+    en: interrupt
+
+rompre:
+  irregular:
+    présent:
+      il: rompt
+  language: fr
+  translations:
+    en: break
+
