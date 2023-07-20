@@ -1,5 +1,7 @@
 import { GrammaticalPerson, GrammaticalNumber, GrammaticalFormal, GrammaticalGender } from "global-types";
 
+export const frenchVowels = ['æ', 'â', 'à', 'ë', 'ê', 'è', 'é', 'ï', 'î', 'œ', 'ô', 'ü', 'û', 'ù', 'ÿ', 'y', 'a', 'e', 'i', 'o', 'u'];
+
 export enum FrenchCase {
   Subject = 1 << 10, // 1024
   Object = 1 << 11, // 2048

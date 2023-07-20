@@ -802,8 +802,8 @@ mordre:
 pendre:
   language: fr
   translations:
-    en: [hang, suspend
-]
+    en: [hang, suspend]
+
 perdre:
   language: fr
   translations:
@@ -868,3 +868,168 @@ rompre:
   translations:
     en: break
 
+conduire:
+  language: fr
+  translations:
+    en: drive
+
+confire:
+  language: fr
+  translations:
+    en: [preserve, pickle, candy]
+
+construire:
+  language: fr
+  translations:
+    en: build
+
+contredire:
+  language: fr
+  translations:
+    en: contradict
+
+cuire:
+  language: fr
+  translations:
+    en: cook
+
+dédire:
+  language: fr
+  reflexive: true
+  translations:
+    en: go back on one’s word
+
+déduire:
+  language: fr
+  translations:
+    en: [deduce, deduct]
+détruire:
+  language: fr
+  translations:
+    en: destroy
+
+dire:
+  language: fr
+  irregular:
+    présent:
+      vous: dites
+  translations:
+    en: [say, tell]
+
+éconduire:
+  language: fr
+  translations:
+    en: dismiss
+
+élire:
+  language: fr
+  translations:
+    en: elect
+
+enduire:
+  language: fr
+  translations:
+    en: coat
+
+frire:
+  language: fr
+  translations:
+    en: fry
+
+induire:
+  language: fr
+  translations:
+    en: mislead
+
+instruire:
+  language: fr
+  translations:
+    en: instruct
+
+interdire:
+  language: fr
+  translations:
+    en: forbid
+
+introduire:
+  language: fr
+  translations:
+    en: [introduce, insert]
+
+lire:
+  language: fr
+  translations:
+    en: read
+
+luire:
+  language: fr
+  translations:
+    en: shine
+
+médire:
+  language: fr
+  translations:
+    en: malign
+
+nuire:
+  language: fr
+  translations:
+    en: harm
+
+prédire:
+  language: fr
+  translations:
+    en: predict
+
+produire:
+  language: fr
+  translations:
+    en: produce
+
+reconduire:
+  language: fr
+  translations:
+    en: renew
+
+reconstruire:
+  language: fr
+  translations:
+    en: rebuild
+
+redire:
+  language: fr
+  irregular:
+    présent:
+      vous: redites
+  translations:
+    en: [repeat, say again]
+
+réduire:
+  language: fr
+  translations:
+    en: reduce
+
+reluire:
+  language: fr
+  translations:
+    en: shine
+
+reproduire:
+  language: fr
+  translations:
+    en: reproduce
+
+séduire:
+  language: fr
+  translations:
+    en: seduce
+
+suffire:
+  language: fr
+  translations:
+    en: suffice
+
+traduire:
+  language: fr
+  translations:
+    en: translate
