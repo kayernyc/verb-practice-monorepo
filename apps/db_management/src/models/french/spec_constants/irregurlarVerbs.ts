@@ -397,3 +397,58 @@ export const boireReturnObject = {
     1300: 'boivent'
   }
 };
+
+export const avoirReturnObject = {
+  infinitive: 'avoir',
+  conditional: {
+    1033: 'aurais',
+    1041: 'aurions',
+    1074: 'auriez',
+    1098: 'aurais',
+    1292: 'aurait',
+    1300: 'auraient'
+  },
+  futur: {
+    1033: 'aurai',
+    1041: 'aurons',
+    1074: 'aurez',
+    1098: 'auras',
+    1292: 'aura',
+    1300: 'auront'
+  },
+  helper_verb: 'avoir',
+  imparfait: {
+    1033: 'avais',
+    1041: 'avions',
+    1074: 'aviez',
+    1098: 'avais',
+    1292: 'avait',
+    1300: 'avaient'
+  },
+  participe: 'eu',
+  present_participe: 'ayant',
+  présent: {
+    1033: 'ai',
+    1041: 'avons',
+    1074: 'avez',
+    1098: 'as',
+    1292: 'a',
+    1300: 'ont'
+  },
+  simple: {
+    1033: 'eus',
+    1041: 'eûmes',
+    1074: 'eûtes',
+    1098: 'eus',
+    1292: 'eut',
+    1300: 'eurent'
+  },
+  subjunctif: {
+    1033: 'aie',
+    1041: 'ayons',
+    1074: 'ayez',
+    1098: 'aies',
+    1292: 'ait',
+    1300: 'aient'
+  }
+};
