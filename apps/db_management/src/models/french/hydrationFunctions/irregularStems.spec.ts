@@ -2,6 +2,6 @@ import { createStandardConjugation } from "@models/french/createStandardConjugat
 import { irregularStems } from "@models/french/hydrationFunctions/irregularStems";
 import { IrregularStems } from "@models/french/types/hydrationTypes";
 
-describe('irregularStems', () => {
+describe.skip('irregularStems', () => {
 
 });
