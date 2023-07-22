@@ -3,7 +3,6 @@ import { FrenchTenses, FrenchPronounKeys, frenchVowels } from "french-types";
 
 const ecrirePattern = (infinitive: string, stem: string): BaseFrenchVerb => {
   const vStem = `${stem}v`;
-  const simpleStem = stem.slice(0, -1);
 
   return {
     infinitive,
@@ -48,7 +47,7 @@ const ecrirePattern = (infinitive: string, stem: string): BaseFrenchVerb => {
       [FrenchPronounKeys.il]: `${stem}ra`,
       [FrenchPronounKeys.nous]: `${stem}rons`,
       [FrenchPronounKeys.vous]: `${stem}rez`,
-      [FrenchPronounKeys.ils]: `${stem}rent`,
+      [FrenchPronounKeys.ils]: `${stem}ront`,
     },
     [FrenchTenses.conditional]: {
       [FrenchPronounKeys.je]: `${stem}rais`,
@@ -153,7 +152,7 @@ const vowelStem = (infinitive: string, stem: string): BaseFrenchVerb => {
 }
 
 export const reConjugation = (infinitive: string, stem: string): BaseFrenchVerb => {
-  console.log(infinitive.slice(-5))
+
   if (infinitive.slice(-5) === 'crire') {
     return ecrirePattern(infinitive, stem)
   }
@@ -161,7 +160,6 @@ export const reConjugation = (infinitive: string, stem: string): BaseFrenchVerb 
   if (frenchVowels.includes(stem.charAt(stem.length - 1))) {
     return vowelStem(infinitive, stem);
   }
-
 
   return {
     infinitive,
@@ -201,12 +199,12 @@ export const reConjugation = (infinitive: string, stem: string): BaseFrenchVerb 
       [FrenchPronounKeys.ils]: `${stem}ent`,
     },
     [FrenchTenses.futur]: {
-      [FrenchPronounKeys.je]: `${infinitive}ai`,
-      [FrenchPronounKeys.tu]: `${infinitive}as`,
-      [FrenchPronounKeys.il]: `${infinitive}a`,
-      [FrenchPronounKeys.nous]: `${infinitive}ons`,
-      [FrenchPronounKeys.vous]: `${infinitive}ez`,
-      [FrenchPronounKeys.ils]: `${infinitive}ent`,
+      [FrenchPronounKeys.je]: `${stem}rai`,
+      [FrenchPronounKeys.tu]: `${stem}ras`,
+      [FrenchPronounKeys.il]: `${stem}ra`,
+      [FrenchPronounKeys.nous]: `${stem}rons`,
+      [FrenchPronounKeys.vous]: `${stem}rez`,
+      [FrenchPronounKeys.ils]: `${stem}ront`,
     },
     [FrenchTenses.conditional]: {
       [FrenchPronounKeys.je]: `${stem}rais`,

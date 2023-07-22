@@ -8,8 +8,6 @@ const doubleERegex: RegExp = /[e|é]\wer\b/; // e|é cons er
 
 const yer: RegExp = /(a|o|u)yer\b/;
 
-
-
 const fullTenseConverter = (sourceConjugation: TenseType, regex: RegExp, substitution: string) => {
   return Object.entries({ ...sourceConjugation }).reduce((acc, entry) => {
     const [pronoun, verbString] = entry;

@@ -14,7 +14,7 @@ export const parlerReturnObject = {
     1074: 'parlerez',
     1098: 'parleras',
     1292: 'parlera',
-    1300: 'parlerent'
+    1300: 'parleront'
   },
   helper_verb: 'avoir',
   imparfait: {
@@ -69,7 +69,7 @@ export const effacerReturnObject = {
     1074: 'effacerez',
     1098: 'effaceras',
     1292: 'effacera',
-    1300: 'effacerent',
+    1300: 'effaceront',
   },
   helper_verb: 'avoir',
   imparfait: {
@@ -124,7 +124,7 @@ export const bougerReturnObject = {
     1074: 'bougerez',
     1098: 'bougeras',
     1292: 'bougera',
-    1300: 'bougerent',
+    1300: 'bougeront',
   },
   helper_verb: 'avoir',
   imparfait: {
@@ -179,7 +179,7 @@ export const copierReturnObject = {
     1074: 'copierez',
     1098: 'copieras',
     1292: 'copiera',
-    1300: 'copierent',
+    1300: 'copieront',
   },
   helper_verb: 'avoir',
   imparfait: {
@@ -234,7 +234,7 @@ export const choisirReturnObject = {
     1074: 'choisirez',
     1098: 'choisiras',
     1292: 'choisira',
-    1300: 'choisirent'
+    1300: 'choisiront'
   },
   helper_verb: 'avoir',
   imparfait: {
@@ -284,12 +284,12 @@ export const perdreReturnObject = {
     1300: 'perdraient'
   },
   futur: {
-    1033: 'perdreai',
-    1041: 'perdreons',
-    1074: 'perdreez',
-    1098: 'perdreas',
-    1292: 'perdrea',
-    1300: 'perdreent'
+    1033: 'perdrai',
+    1041: 'perdrons',
+    1074: 'perdrez',
+    1098: 'perdras',
+    1292: 'perdra',
+    1300: 'perdront'
   },
   helper_verb: 'avoir',
   imparfait: {
@@ -344,7 +344,7 @@ export const altérerReturnObject = {
     1074: 'altérerez',
     1098: 'altéreras',
     1292: 'altérera',
-    1300: 'altérerent'
+    1300: 'altéreront'
   },
   helper_verb: 'avoir',
   imparfait: {
@@ -399,7 +399,7 @@ export const broyerReturnObject = {
     1074: 'broierez',
     1098: 'broieras',
     1292: 'broiera',
-    1300: 'broierent'
+    1300: 'broieront'
   },
   helper_verb: 'avoir',
   imparfait: {
@@ -454,7 +454,7 @@ export const appelerReturnObject = {
     1074: 'appellerez',
     1098: 'appelleras',
     1292: 'appellera',
-    1300: 'appellerent'
+    1300: 'appelleront'
   },
   helper_verb: 'avoir',
   imparfait: {
@@ -509,7 +509,7 @@ export const piégerReturnObject = {
     1074: 'piégerez',
     1098: 'piégeras',
     1292: 'piégera',
-    1300: 'piégerent'
+    1300: 'piégeront'
   },
   helper_verb: 'avoir',
   imparfait: {

@@ -1,6 +1,7 @@
 import { createStandardConjugation } from "@models/french/createStandardConjugation";
 import { cuireReturnObject, lireReturnObject, suffireReturnObject, écrireReturnObject } from "@models/french/spec_constants/irregurlarVerbs";
 import { bougerReturnObject, choisirReturnObject, copierReturnObject, effacerReturnObject, parlerReturnObject, perdreReturnObject } from "@models/french/spec_constants/regularVerbs";
+import { craindreReturnObject } from "@models/french/spec_constants/regularVerbs2";
 
 describe('simple french verb conjugation', () => {
   it('returns parler correctly', () => {

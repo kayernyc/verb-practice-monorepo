@@ -79,12 +79,12 @@ export const rompreReturnObject = {
     1300: 'rompraient'
   },
   futur: {
-    1033: 'rompreai',
-    1041: 'rompreons',
-    1074: 'rompreez',
-    1098: 'rompreas',
-    1292: 'romprea',
-    1300: 'rompreent'
+    1033: 'romprai',
+    1041: 'romprons',
+    1074: 'romprez',
+    1098: 'rompras',
+    1292: 'rompra',
+    1300: 'rompront'
   },
   helper_verb: 'avoir',
   imparfait: {
@@ -304,7 +304,7 @@ export const écrireReturnObject = {
     1074: 'écrirez',
     1098: 'écriras',
     1292: 'écrira',
-    1300: 'écrirent'
+    1300: 'écriront'
   },
   helper_verb: 'avoir',
   imparfait: {

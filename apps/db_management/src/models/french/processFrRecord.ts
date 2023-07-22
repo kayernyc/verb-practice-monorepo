@@ -39,19 +39,19 @@ export const processFrRecord = (record: LanguageVerbBase) => {
 
   variationsSource.unshift(baseRecord);
 
-  const variations = variationsSource.map((record: any, index: number) => {
-    if (index > 0) {
-      record = { ...baseRecord, ...record };
-    }
-    const newBaseHydratedVerb = cloneDeep(baseHydratedVerb);
+  // const variations = variationsSource.map((record: any, index: number) => {
+  //   if (index > 0) {
+  //     record = { ...baseRecord, ...record };
+  //   }
+  //   const newBaseHydratedVerb = cloneDeep(baseHydratedVerb);
 
-    return processVariation(newBaseHydratedVerb, record, infinitive);
-  });
+  //   return processVariation(newBaseHydratedVerb, record, infinitive);
+  // });
 
   let hydratedVerb = {
     infinitive,
     language,
-    variations,
+    // variations,
   };
 
   return hydratedVerb;

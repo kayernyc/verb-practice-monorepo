@@ -1033,3 +1033,379 @@ traduire:
   language: fr
   translations:
     en: translate
+
+circonscrire:
+  language: fr
+  translations:
+    en: [contain, confine]
+
+décrire:
+  language: fr
+  translations:
+    en: describe
+
+écrire:
+  language: fr
+  translations:
+    en: write
+
+inscrire:
+  language: fr
+  translations:
+    en: [inscribe, write down]
+
+prescrire:
+  language: fr
+  translations:
+    en: prescribe
+
+proscrire:
+  language: fr
+  translations:
+    en: [prohibit, ban]
+
+récrire:
+  language: fr
+  translations:
+    en: rewrite
+
+souscrire:
+  language: fr
+  translations:
+    en: subscribe
+
+transcrire:
+  language: fr
+  translations:
+    en: transcribe
+
+adjoindre:
+  language: fr
+  indre: true
+  translations:
+    en: appoint
+
+astreindre:
+  language: fr
+  indre: true
+  translations:
+    en: [compel, force]
+
+atteindre:
+  language: fr
+  indre: true
+  translations:
+    en: [attain, reach]
+
+ceindre:
+  language: fr
+  indre: true
+  translations:
+    en: [don, put on]
+
+contraindre:
+  language: fr
+  indre: true
+  translations:
+    en: [force, compel]
+
+craindre:
+  language: fr
+  indre: true
+  translations:
+    en: fear
+
+dépeindre:
+  language: fr
+  indre: true
+  translations:
+    en: depict
+
+déteindre:
+  language: fr
+  indre: true
+  translations:
+    en: [bleach, leach]
+
+disjoindre:
+  language: fr
+  indre: true
+  translations:
+    en: [disconnect, separate]
+
+empreindre:
+  language: fr
+  indre: true
+  translations:
+    en: imprint
+
+enfreindre:
+  language: fr
+  indre: true
+  translations:
+    en: [infringe, break]
+  notes:
+    (formal)
+
+enjoindre:
+  language: fr
+  indre: true
+  translations:
+    en: enjoin (someone to do)
+  notes: formal
+
+épreindre:
+  language: fr
+  indre: true
+  translations:
+    en: juice
+  notes: old-fashioned
+
+éteindre:
+  language: fr
+  indre: true
+  translations:
+    en: [extinguish, snuff out]
+
+étreindre:
+  language: fr
+  indre: true
+  translations:
+    en: [embrace, clutch]
+  notes: formal
+
+feindre:
+  language: fr
+  indre: true
+  translations:
+    en: feign
+
+geindre:
+  language: fr
+  indre: true
+  translations:
+    en: [groan, whine]
+
+joindre:
+  language: fr
+  indre: true
+  translations:
+    en: join
+
+oindre:
+  language: fr
+  indre: true
+  translations:
+    en: anoint
+
+peindre:
+  language: fr
+  indre: true
+  translations:
+    en: paint
+
+plaindre:
+  language: fr
+  indre: true
+  translations:
+    en: [pity, feel sorry for]
+
+rejoindre:
+  language: fr
+  indre: true
+  translations:
+    en: [rejoin, get back to]
+
+repeindre:
+  language: fr
+  indre: true
+  translations:
+    en: repaint
+
+restreindre:
+  language: fr
+  indre: true
+  translations:
+    en: [restrict, limit]
+
+reteindre:
+  language: fr
+  indre: true
+  translations:
+    en: [dye again, redye]
+
+teindre:
+  language: fr
+  indre: true
+  translations:
+    en: dye
+
+abattre:
+  language: fr
+  ttre: true
+  translations:
+    en: [knock down, weaken]
+
+admettre:
+  language: fr
+  ttre: true
+  translations:
+    en: admit
+
+battre:
+  language: fr
+  ttre: true
+  translations:
+    en: beat
+
+combattre:
+  language: fr
+  ttre: true
+  translations:
+    en: [combat, fight]
+
+commettre:
+  language: fr
+  ttre: true
+  translations:
+    en: commit
+
+compromettre:
+  language: fr
+  ttre: true
+  translations:
+    en: compromise
+
+débattre:
+  language: fr
+  ttre: true
+  translations:
+    en: debate
+
+mettre:
+  language: fr
+  ttre: true
+  translations:
+    en: put
+
+permettre:
+  language: fr
+  ttre: true
+  translations:
+    en: permit
+
+promettre:
+  language: fr
+  ttre: true
+  translations:
+    en: promise
+
+soumettre:
+  language: fr
+  ttre: true
+  translations:
+    en: submit
+
+transmettre:
+  language: fr
+  ttre: true
+  translations:
+    en: transmit
+
+apprendre:
+  language: fr
+  rendre: true
+  translations:
+    en: learn
+
+comprendre:
+  language: fr
+  rendre: true
+  translations:
+    en: understand
+
+entreprendre:
+  language: fr
+  rendre: true
+  translations:
+    en: undertake
+
+méprendre:
+  language: fr
+  rendre: true
+  reflexive: true
+  translations:
+    en: be mistaken
+
+prendre:
+  language: fr
+  rendre: true
+  translations:
+    en: take
+
+reprendre:
+  language: fr
+  rendre: true
+  translations:
+    en: [take again, retake]
+
+surprendre:
+  language: fr
+  rendre: true
+  translations:
+    en: surprise
+
+
+apparaître:
+  language: fr
+  aitre: true
+  translations:
+    en: appear
+
+comparaître:
+  language: fr
+  aitre: true
+  translations:
+    en: appear in court
+
+connaître:
+  language: fr
+  aitre: true
+  translations:
+    en: [know, be familiar with]
+
+disparaître:
+  language: fr
+  aitre: true
+  translations:
+    en: disappear
+
+méconnaître:
+  language: fr
+  aitre: true
+  translations:
+    en: be unaware of
+
+paraître:
+  language: fr
+  aitre: true
+  translations:
+    en: seem
+
+reconnaître:
+  language: fr
+  aitre: true
+  translations:
+    en: recognize
+
+reparaître:
+  language: fr
+  aitre: true
+  translations:
+    en: reappear
+
+transparaître:
+  language: fr
+  aitre: true
+  translations:
+    en: show through

@@ -14,7 +14,7 @@ export const partirReturnObject = {
     1074: 'partirez',
     1098: 'partiras',
     1292: 'partira',
-    1300: 'partirent'
+    1300: 'partiront'
   },
   helper_verb: 'être',
   imparfait: {
@@ -69,7 +69,7 @@ export const sentirReturnObject = {
     1074: 'sentirez',
     1098: 'sentiras',
     1292: 'sentira',
-    1300: 'sentirent'
+    1300: 'sentiront'
   },
   helper_verb: 'avoir',
   imparfait: {
@@ -124,7 +124,7 @@ export const dormirReturnObject = {
     1074: 'dormirez',
     1098: 'dormiras',
     1292: 'dormira',
-    1300: 'dormirent'
+    1300: 'dormiront'
   },
   helper_verb: 'avoir',
   imparfait: {
@@ -179,7 +179,7 @@ export const couvrirReturnObject = {
     1074: 'couvrirez',
     1098: 'couvriras',
     1292: 'couvrira',
-    1300: 'couvrirent'
+    1300: 'couvriront'
   },
   helper_verb: 'avoir',
   imparfait: {
@@ -234,7 +234,7 @@ export const cueillirReturnObject = {
     1074: 'cueillirez',
     1098: 'cueilliras',
     1292: 'cueillira',
-    1300: 'cueillirent'
+    1300: 'cueilliront'
   },
   helper_verb: 'avoir',
   imparfait: {
@@ -289,7 +289,7 @@ export const offrirReturnObject = {
     1074: 'offrirez',
     1098: 'offriras',
     1292: 'offrira',
-    1300: 'offrirent'
+    1300: 'offriront'
   },
   helper_verb: 'avoir',
   imparfait: {
@@ -344,7 +344,7 @@ export const venirReturnObject = {
     1074: 'venirez',
     1098: 'veniras',
     1292: 'venira',
-    1300: 'venirent'
+    1300: 'veniront'
   },
   helper_verb: 'être',
   imparfait: {
@@ -399,7 +399,7 @@ export const tenirReturnObject = {
     1074: 'tenirez',
     1098: 'teniras',
     1292: 'tenira',
-    1300: 'tenirent'
+    1300: 'teniront'
   },
   helper_verb: 'avoir',
   imparfait: {
@@ -435,5 +435,335 @@ export const tenirReturnObject = {
     1098: 'tiennes',
     1292: 'tienne',
     1300: 'tiennent'
+  }
+};
+
+export const craindreReturnObject = {
+  infinitive: 'craindre',
+  conditional: {
+    1033: 'craindrais',
+    1041: 'craindrions',
+    1074: 'craindriez',
+    1098: 'craindrais',
+    1292: 'craindrait',
+    1300: 'craindraient'
+  },
+  futur: {
+    1033: 'craindrai',
+    1041: 'craindrons',
+    1074: 'craindrez',
+    1098: 'craindras',
+    1292: 'craindra',
+    1300: 'craindront'
+  },
+  helper_verb: 'avoir',
+  imparfait: {
+    1033: 'craignais',
+    1041: 'craignions',
+    1074: 'craigniez',
+    1098: 'craignais',
+    1292: 'craignait',
+    1300: 'craignaient'
+  },
+  participe: 'craint',
+  present_participe: 'craignant',
+  présent: {
+    1033: 'crains',
+    1041: 'craignons',
+    1074: 'craignez',
+    1098: 'crains',
+    1292: 'craint',
+    1300: 'craignent'
+  },
+  simple: {
+    1033: 'craignis',
+    1041: 'craignîmes',
+    1074: 'craignîtes',
+    1098: 'craignis',
+    1292: 'craignit',
+    1300: 'craignirent'
+  },
+  subjunctif: {
+    1033: 'craigne',
+    1041: 'craignions',
+    1074: 'craigniez',
+    1098: 'craignes',
+    1292: 'craigne',
+    1300: 'craignent'
+  }
+};
+
+export const mettreReturnObject = {
+  infinitive: 'mettre',
+  conditional: {
+    1033: 'mettrais',
+    1041: 'mettrions',
+    1074: 'mettriez',
+    1098: 'mettrais',
+    1292: 'mettrait',
+    1300: 'mettraient'
+  },
+  futur: {
+    1033: 'mettrai',
+    1041: 'mettrons',
+    1074: 'mettrez',
+    1098: 'mettras',
+    1292: 'mettra',
+    1300: 'mettront'
+  },
+  helper_verb: 'avoir',
+  imparfait: {
+    1033: 'mettais',
+    1041: 'mettions',
+    1074: 'mettiez',
+    1098: 'mettais',
+    1292: 'mettait',
+    1300: 'mettaient'
+  },
+  participe: 'mis',
+  present_participe: 'mettant',
+  présent: {
+    1033: 'mets',
+    1041: 'mettons',
+    1074: 'mettez',
+    1098: 'mets',
+    1292: 'met',
+    1300: 'mettent'
+  },
+  simple: {
+    1033: 'mis',
+    1041: 'mîmes',
+    1074: 'mîtes',
+    1098: 'mis',
+    1292: 'mit',
+    1300: 'mirent'
+  },
+  subjunctif: {
+    1033: 'mette',
+    1041: 'mettions',
+    1074: 'mettiez',
+    1098: 'mettes',
+    1292: 'mette',
+    1300: 'mettent'
+  }
+};
+
+export const commettreReturnObject = {
+  infinitive: 'commettre',
+  conditional: {
+    1033: 'commettrais',
+    1041: 'commettrions',
+    1074: 'commettriez',
+    1098: 'commettrais',
+    1292: 'commettrait',
+    1300: 'commettraient'
+  },
+  futur: {
+    1033: 'commettrai',
+    1041: 'commettrons',
+    1074: 'commettrez',
+    1098: 'commettras',
+    1292: 'commettra',
+    1300: 'commettront'
+  },
+  helper_verb: 'avoir',
+  imparfait: {
+    1033: 'commettais',
+    1041: 'commettions',
+    1074: 'commettiez',
+    1098: 'commettais',
+    1292: 'commettait',
+    1300: 'commettaient'
+  },
+  participe: 'commis',
+  present_participe: 'commettant',
+  présent: {
+    1033: 'commets',
+    1041: 'commettons',
+    1074: 'commettez',
+    1098: 'commets',
+    1292: 'commet',
+    1300: 'commettent'
+  },
+  simple: {
+    1033: 'commis',
+    1041: 'commîmes',
+    1074: 'commîtes',
+    1098: 'commis',
+    1292: 'commit',
+    1300: 'commirent'
+  },
+  subjunctif: {
+    1033: 'commette',
+    1041: 'commettions',
+    1074: 'commettiez',
+    1098: 'commettes',
+    1292: 'commette',
+    1300: 'commettent'
+  }
+};
+
+export const battreReturnObject = {
+  infinitive: 'battre',
+  conditional: {
+    1033: 'battrais',
+    1041: 'battrions',
+    1074: 'battriez',
+    1098: 'battrais',
+    1292: 'battrait',
+    1300: 'battraient'
+  },
+  futur: {
+    1033: 'battrai',
+    1041: 'battrons',
+    1074: 'battrez',
+    1098: 'battras',
+    1292: 'battra',
+    1300: 'battront'
+  },
+  helper_verb: 'avoir',
+  imparfait: {
+    1033: 'battais',
+    1041: 'battions',
+    1074: 'battiez',
+    1098: 'battais',
+    1292: 'battait',
+    1300: 'battaient'
+  },
+  participe: 'battu',
+  present_participe: 'battant',
+  présent: {
+    1033: 'bats',
+    1041: 'battons',
+    1074: 'battez',
+    1098: 'bats',
+    1292: 'bat',
+    1300: 'battent'
+  },
+  simple: {
+    1033: 'battis',
+    1041: 'battîmes',
+    1074: 'battîtes',
+    1098: 'battis',
+    1292: 'battit',
+    1300: 'battirent'
+  },
+  subjunctif: {
+    1033: 'batte',
+    1041: 'battions',
+    1074: 'battiez',
+    1098: 'battes',
+    1292: 'batte',
+    1300: 'battent'
+  }
+};
+
+export const paraîtreReturnObject = {
+  infinitive: 'paraître',
+  conditional: {
+    1033: 'paraîtrais',
+    1041: 'paraîtrions',
+    1074: 'paraîtriez',
+    1098: 'paraîtrais',
+    1292: 'paraîtrait',
+    1300: 'paraîtraient'
+  },
+  futur: {
+    1033: 'paraîtrai',
+    1041: 'paraîtrons',
+    1074: 'paraîtrez',
+    1098: 'paraîtras',
+    1292: 'paraîtra',
+    1300: 'paraîtront'
+  },
+  helper_verb: 'avoir',
+  imparfait: {
+    1033: 'paraissais',
+    1041: 'paraissions',
+    1074: 'paraissiez',
+    1098: 'paraissais',
+    1292: 'paraissait',
+    1300: 'paraissaient'
+  },
+  participe: 'paru',
+  present_participe: 'paraissant',
+  présent: {
+    1033: 'parais',
+    1041: 'paraissons',
+    1074: 'paraissez',
+    1098: 'parais',
+    1292: 'paraît',
+    1300: 'paraissent'
+  },
+  simple: {
+    1033: 'parus',
+    1041: 'parûmes',
+    1074: 'parûtes',
+    1098: 'parus',
+    1292: 'parut',
+    1300: 'parurent'
+  },
+  subjunctif: {
+    1033: 'paraisse',
+    1041: 'paraissions',
+    1074: 'paraissiez',
+    1098: 'paraisses',
+    1292: 'paraisse',
+    1300: 'paraissent'
+  }
+};
+
+export const prendreReturnObject = {
+  infinitive: 'prendre',
+  conditional: {
+    1033: 'prendrais',
+    1041: 'prendrions',
+    1074: 'prendriez',
+    1098: 'prendrais',
+    1292: 'prendrait',
+    1300: 'prendraient'
+  },
+  futur: {
+    1033: 'prendrai',
+    1041: 'prendrons',
+    1074: 'prendrez',
+    1098: 'prendras',
+    1292: 'prendra',
+    1300: 'prendront'
+  },
+  helper_verb: 'avoir',
+  imparfait: {
+    1033: 'prendais',
+    1041: 'prendions',
+    1074: 'prendiez',
+    1098: 'prendais',
+    1292: 'prendait',
+    1300: 'prendaient'
+  },
+  participe: 'pris',
+  present_participe: 'prennant',
+  présent: {
+    1033: 'prends',
+    1041: 'prenons',
+    1074: 'prenez',
+    1098: 'prends',
+    1292: 'prend',
+    1300: 'prennent'
+  },
+  simple: {
+    1033: 'pris',
+    1041: 'prîmes',
+    1074: 'prîtes',
+    1098: 'pris',
+    1292: 'prit',
+    1300: 'prirent'
+  },
+  subjunctif: {
+    1033: 'prenne',
+    1041: 'prenions',
+    1074: 'preniez',
+    1098: 'prennes',
+    1292: 'prenne',
+    1300: 'prennent'
   }
 };

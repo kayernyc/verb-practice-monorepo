@@ -45,7 +45,7 @@ export const irConjugation = (infinitive: string, stem: string): BaseFrenchVerb 
       [FrenchPronounKeys.il]: `${infinitive}a`,
       [FrenchPronounKeys.nous]: `${infinitive}ons`,
       [FrenchPronounKeys.vous]: `${infinitive}ez`,
-      [FrenchPronounKeys.ils]: `${infinitive}ent`,
+      [FrenchPronounKeys.ils]: `${infinitive}ont`,
     },
     [FrenchTenses.conditional]: {
       [FrenchPronounKeys.je]: `${infinitive}ais`,
