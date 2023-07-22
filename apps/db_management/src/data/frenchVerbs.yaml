@@ -321,253 +321,253 @@ voyager:
 
 appeler:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: call
 
 chanceler:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: [totter, wobble]
 
 épeler:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: spell
 
 rappeler:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: [call back, recall]
 
 renouveler:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: renew
 
 ruisseler:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: [flow, stream]
 
 feuilleter:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: [leaf through]
 
 hoqueter:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: hiccup
 
 jeter:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: throw
 
 projeter:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: project
 
 rejeter:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: reject
 
 piéger:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: trap
 
 appeler:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: call
 
 chanceler:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: [totter, wobble]
 
 épeler:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: spell
 
 rappeler:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: [call back, recall]
 
 renouveler:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: renew
 
 ruisseler:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: [flow, stream]
 
 feuilleter:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: [leaf through]
 
 hoqueter:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: hiccup
 
 jeter:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: throw
 
 projeter:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: project
 
 rejeter:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: reject
 
 abréger:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: [shorten, abridge]
 
 protéger:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: protect
 
 broyer:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: grind
 
 employer:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: employ
 
 envoyer:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: send
 
 nettoyer:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: clean
 
 se noyer:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: drown
 
 renvoyer:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: fire
 
 tutoyer:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: use tu
 
 vouvoyer:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: use vous
 
 appuyer:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: [lean, press]
 
 ennuyer:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: bore
 
 essuyer:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: wipe
 
 balayer:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: sweep
 
 effrayer:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: frighten
 
 égayer:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: cheer up
 
 essayer:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: try
 
 payer:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: pay
 
 rayer:
   language: fr
-  boot: true
+  pattern: boot
   translations:
     en: [draw a line (on/through), to cross out]
 
@@ -903,6 +903,7 @@ déduire:
   language: fr
   translations:
     en: [deduce, deduct]
+
 détruire:
   language: fr
   translations:
@@ -1081,67 +1082,67 @@ transcrire:
 
 adjoindre:
   language: fr
-  indre: true
+  pattern: indre
   translations:
     en: appoint
 
 astreindre:
   language: fr
-  indre: true
+  pattern: indre
   translations:
     en: [compel, force]
 
 atteindre:
   language: fr
-  indre: true
+  pattern: indre
   translations:
     en: [attain, reach]
 
 ceindre:
   language: fr
-  indre: true
+  pattern: indre
   translations:
     en: [don, put on]
 
 contraindre:
   language: fr
-  indre: true
+  pattern: indre
   translations:
     en: [force, compel]
 
 craindre:
   language: fr
-  indre: true
+  pattern: indre
   translations:
     en: fear
 
 dépeindre:
   language: fr
-  indre: true
+  pattern: indre
   translations:
     en: depict
 
 déteindre:
   language: fr
-  indre: true
+  pattern: indre
   translations:
     en: [bleach, leach]
 
 disjoindre:
   language: fr
-  indre: true
+  pattern: indre
   translations:
     en: [disconnect, separate]
 
 empreindre:
   language: fr
-  indre: true
+  pattern: indre
   translations:
     en: imprint
 
 enfreindre:
   language: fr
-  indre: true
+  pattern: indre
   translations:
     en: [infringe, break]
   notes:
@@ -1149,263 +1150,267 @@ enfreindre:
 
 enjoindre:
   language: fr
-  indre: true
+  pattern: indre
   translations:
     en: enjoin (someone to do)
   notes: formal
 
 épreindre:
   language: fr
-  indre: true
+  pattern: indre
   translations:
     en: juice
   notes: old-fashioned
 
 éteindre:
   language: fr
-  indre: true
+  pattern: indre
   translations:
     en: [extinguish, snuff out]
 
 étreindre:
   language: fr
-  indre: true
+  pattern: indre
   translations:
     en: [embrace, clutch]
   notes: formal
 
 feindre:
   language: fr
-  indre: true
+  pattern: indre
   translations:
     en: feign
 
 geindre:
   language: fr
-  indre: true
+  pattern: indre
   translations:
     en: [groan, whine]
 
 joindre:
   language: fr
-  indre: true
+  pattern: indre
   translations:
     en: join
 
 oindre:
   language: fr
-  indre: true
+  pattern: indre
   translations:
     en: anoint
 
 peindre:
   language: fr
-  indre: true
+  pattern: indre
   translations:
     en: paint
 
 plaindre:
   language: fr
-  indre: true
+  pattern: indre
   translations:
     en: [pity, feel sorry for]
 
 rejoindre:
   language: fr
-  indre: true
+  pattern: indre
   translations:
     en: [rejoin, get back to]
 
 repeindre:
   language: fr
-  indre: true
+  pattern: indre
   translations:
     en: repaint
 
 restreindre:
   language: fr
-  indre: true
+  pattern: indre
   translations:
     en: [restrict, limit]
 
 reteindre:
   language: fr
-  indre: true
+  pattern: indre
   translations:
     en: [dye again, redye]
 
 teindre:
   language: fr
-  indre: true
+  pattern: indre
   translations:
     en: dye
 
 abattre:
   language: fr
-  ttre: true
+  pattern: ttre
   translations:
     en: [knock down, weaken]
 
 admettre:
   language: fr
-  ttre: true
+  pattern: ttre
   translations:
     en: admit
 
 battre:
   language: fr
-  ttre: true
+  pattern: ttre
   translations:
     en: beat
 
 combattre:
   language: fr
-  ttre: true
+  pattern: ttre
   translations:
     en: [combat, fight]
 
 commettre:
   language: fr
-  ttre: true
+  pattern: ttre
   translations:
     en: commit
 
 compromettre:
   language: fr
-  ttre: true
+  pattern: ttre
   translations:
     en: compromise
 
 débattre:
   language: fr
-  ttre: true
+  pattern: ttre
   translations:
     en: debate
 
 mettre:
   language: fr
-  ttre: true
+  pattern: ttre
   translations:
     en: put
 
 permettre:
   language: fr
-  ttre: true
+  pattern: ttre
   translations:
     en: permit
 
 promettre:
   language: fr
-  ttre: true
+  pattern: ttre
   translations:
     en: promise
 
 soumettre:
   language: fr
-  ttre: true
+  pattern: ttre
   translations:
     en: submit
 
 transmettre:
   language: fr
-  ttre: true
+  pattern: ttre
   translations:
     en: transmit
 
 apprendre:
   language: fr
-  rendre: true
+  pattern: rendre
   translations:
     en: learn
 
 comprendre:
   language: fr
-  rendre: true
+  pattern: rendre
   translations:
     en: understand
 
 entreprendre:
   language: fr
-  rendre: true
+  pattern: rendre
   translations:
     en: undertake
 
 méprendre:
   language: fr
-  rendre: true
+  pattern: rendre
   reflexive: true
   translations:
     en: be mistaken
 
 prendre:
   language: fr
-  rendre: true
+  pattern: rendre
   translations:
     en: take
 
 reprendre:
   language: fr
-  rendre: true
+  pattern: rendre
   translations:
     en: [take again, retake]
 
 surprendre:
   language: fr
-  rendre: true
+  pattern: rendre
   translations:
     en: surprise
 
-
 apparaître:
   language: fr
-  aitre: true
+  pattern: aitre
   translations:
     en: appear
 
 comparaître:
   language: fr
-  aitre: true
+  pattern: aitre
   translations:
     en: appear in court
 
 connaître:
   language: fr
-  aitre: true
+  pattern: aitre
   translations:
     en: [know, be familiar with]
 
 disparaître:
   language: fr
-  aitre: true
+  pattern: aitre
   translations:
     en: disappear
 
 méconnaître:
   language: fr
-  aitre: true
+  pattern: aitre
   translations:
     en: be unaware of
 
 paraître:
   language: fr
-  aitre: true
+  pattern: aitre
   translations:
     en: seem
 
 reconnaître:
   language: fr
-  aitre: true
+  pattern: aitre
   translations:
     en: recognize
 
 reparaître:
   language: fr
-  aitre: true
+  pattern: aitre
   translations:
     en: reappear
 
 transparaître:
   language: fr
-  aitre: true
+  pattern: aitre
   translations:
     en: show through
+
+boire:
+  language: fr
+  translations:
+    en: drink

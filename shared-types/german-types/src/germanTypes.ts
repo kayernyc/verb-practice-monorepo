@@ -256,14 +256,6 @@ export interface GermanSeparableVerb extends LanguageVerbBase {
   particle: SeperableGermanParticles;
 }
 
-const validSeperableKeys = [
-  'base',
-  'hilfsverb',
-  'language',
-  'particle',
-  'translations',
-];
-
 export const isGermanSeparableVerb = (x: object): x is GermanSeparableVerb => {
   let returnValue = true;
 

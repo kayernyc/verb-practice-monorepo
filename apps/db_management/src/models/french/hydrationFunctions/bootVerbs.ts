@@ -1,5 +1,5 @@
-import { BaseFrenchVerb } from "@models/french/frenchTypes";
 import { TenseType, PronounType } from "@models/french/types/hydrationTypes";
+import { FrenchBaseVerbConjugation } from "french-types";
 
 const doubleConsonant = ['appeler', 'chanceler', 'épeler', 'rappeler',
   'renouveler', 'ruisseler', 'feuilleter', 'hoqueter', 'jeter', 'projeter', 'rejeter'];
@@ -32,7 +32,7 @@ const bootConverter = (sourceConjugation: TenseType, regex: RegExp, substitution
   }, {} as TenseType);
 }
 
-export const modifyBootVerb = (verb: BaseFrenchVerb): BaseFrenchVerb => {
+export const modifyBootVerb = (verb: FrenchBaseVerbConjugation): FrenchBaseVerbConjugation => {
   const { infinitive } = verb;
   const returnVerb = { ...verb };
 

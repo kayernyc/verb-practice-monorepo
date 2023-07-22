@@ -1,7 +1,6 @@
-import { BaseFrenchVerb } from "@models/french/frenchTypes";
-import { FrenchPronounKeys } from "french-types";
+import { FrenchBaseVerbConjugation, FrenchPronounKeys } from "french-types";
 
-export const modifyEnirVerbs = (verb: BaseFrenchVerb): BaseFrenchVerb => {
+export const modifyEnirVerbs = (verb: FrenchBaseVerbConjugation): FrenchBaseVerbConjugation => {
   const { infinitive } = verb;
   const returnVerb = { ...verb };
 
