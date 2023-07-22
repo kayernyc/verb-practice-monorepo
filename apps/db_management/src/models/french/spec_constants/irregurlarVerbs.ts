@@ -139,7 +139,7 @@ export const cuireReturnObject = {
     1074: 'cuirez',
     1098: 'cuiras',
     1292: 'cuira',
-    1300: 'cuirent'
+    1300: 'cuiront'
   },
   helper_verb: 'avoir',
   imparfait: {

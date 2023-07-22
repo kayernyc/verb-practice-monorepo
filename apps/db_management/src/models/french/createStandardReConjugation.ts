@@ -94,7 +94,6 @@ const vowelStem = (infinitive: string, stem: string): BaseFrenchVerb => {
     return `${newStem}${newVowel}${ending}`;
   }
 
-
   return {
     infinitive,
     helper_verb: 'avoir',
@@ -138,7 +137,7 @@ const vowelStem = (infinitive: string, stem: string): BaseFrenchVerb => {
       [FrenchPronounKeys.il]: `${stem}ra`,
       [FrenchPronounKeys.nous]: `${stem}rons`,
       [FrenchPronounKeys.vous]: `${stem}rez`,
-      [FrenchPronounKeys.ils]: `${stem}rent`,
+      [FrenchPronounKeys.ils]: `${stem}ront`,
     },
     [FrenchTenses.conditional]: {
       [FrenchPronounKeys.je]: `${stem}rais`,
@@ -152,7 +151,6 @@ const vowelStem = (infinitive: string, stem: string): BaseFrenchVerb => {
 }
 
 export const reConjugation = (infinitive: string, stem: string): BaseFrenchVerb => {
-
   if (infinitive.slice(-5) === 'crire') {
     return ecrirePattern(infinitive, stem)
   }
