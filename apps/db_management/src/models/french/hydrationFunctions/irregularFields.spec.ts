@@ -16,5 +16,4 @@ describe(('irregularFields'), () => {
     const result = irregularFields(sourceVerb, irregularFieldObject)
     expect(result).toStrictEqual(rompreReturnObject);
   });
-
 });

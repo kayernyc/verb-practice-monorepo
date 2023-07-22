@@ -4,4 +4,4 @@ import { IrregularStems } from "@models/french/types/hydrationTypes";
 
 describe('irregularStems', () => {
 
-})
+});

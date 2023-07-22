@@ -2,7 +2,7 @@ import { battreReturnObject, commettreReturnObject, mettreReturnObject } from '@
 import { modifyTtreVerb } from './ttreVerb';
 import { createStandardConjugation } from '@models/french/createStandardConjugation';
 
-describe('indre verb', () => {
+describe('modifyTtreVerb', () => {
   it('updates commettre correctly', () => {
     const sourceVerb = createStandardConjugation('commettre');
     const modifiedVerb = modifyTtreVerb(sourceVerb);

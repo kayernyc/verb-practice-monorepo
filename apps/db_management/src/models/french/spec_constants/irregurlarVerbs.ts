@@ -194,7 +194,7 @@ export const suffireReturnObject = {
     1074: 'suffirez',
     1098: 'suffiras',
     1292: 'suffira',
-    1300: 'suffirent'
+    1300: 'suffiront'
   },
   helper_verb: 'avoir',
   imparfait: {
@@ -249,7 +249,7 @@ export const lireReturnObject = {
     1074: 'lirez',
     1098: 'liras',
     1292: 'lira',
-    1300: 'lirent'
+    1300: 'liront'
   },
   helper_verb: 'avoir',
   imparfait: {

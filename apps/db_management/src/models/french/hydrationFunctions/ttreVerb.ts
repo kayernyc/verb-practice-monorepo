@@ -27,5 +27,4 @@ export const modifyTtreVerb = (verb: BaseFrenchVerb): BaseFrenchVerb => {
   }
 
   return newVerb;
-
 }

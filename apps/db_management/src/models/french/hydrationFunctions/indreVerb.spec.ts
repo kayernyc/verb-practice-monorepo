@@ -2,7 +2,7 @@ import { craindreReturnObject } from '@models/french/spec_constants/regularVerbs
 import { modifyIndreVerb } from './indreVerb';
 import { createStandardConjugation } from '@models/french/createStandardConjugation';
 
-describe('indre verb', () => {
+describe('modifyIndreVerb', () => {
   it('updates craindre correctly', () => {
     const sourceVerb = createStandardConjugation('craindre');
     const modifiedVerb = modifyIndreVerb(sourceVerb);

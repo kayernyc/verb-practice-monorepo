@@ -30,4 +30,4 @@ describe('modifyBootVerb', () => {
 
     expect(modifiedVerb).toStrictEqual(broyerReturnObject);
   });
-})
+});

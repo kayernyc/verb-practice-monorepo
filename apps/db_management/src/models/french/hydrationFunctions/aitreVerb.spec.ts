@@ -2,7 +2,7 @@ import { createStandardConjugation } from '@models/french/createStandardConjugat
 import { modifyAitreVerbs } from './aitreVerb';
 import { paraîtreReturnObject } from '@models/french/spec_constants/regularVerbs2';
 
-describe('modifyBootVerb', () => {
+describe('modifyAitreVerb', () => {
   it('updates paraître correctly', () => {
     const sourceVerb = createStandardConjugation('paraître');
     const modifiedVerb = modifyAitreVerbs(sourceVerb);

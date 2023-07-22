@@ -1,7 +1,7 @@
 import { BaseFrenchVerb } from "@models/french/frenchTypes";
 import { FrenchPronounKeys } from "french-types";
 
-export const mirtirVerbs = (verb: BaseFrenchVerb): BaseFrenchVerb => {
+export const modifyMirtirVerbs = (verb: BaseFrenchVerb): BaseFrenchVerb => {
   const { infinitive } = verb;
   const returnVerb = { ...verb };
 
