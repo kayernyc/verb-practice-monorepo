@@ -22,4 +22,5 @@ export enum GrammaticalGender {
   Feminine = 1 << 7, // 128
   Masculine = 1 << 8, // 256
   Neuter = 1 << 9, // 512
+  Indefinite = 1 << 10 // 1024
 }
