@@ -1,7 +1,6 @@
-import { BaseFrenchVerb } from "@models/french/frenchTypes";
-import { FrenchTenses, FrenchPronounKeys, frenchVowels } from "french-types";
+import { FrenchTenses, FrenchPronounKeys, frenchVowels, FrenchBaseVerbConjugation } from "french-types";
 
-const ecrirePattern = (infinitive: string, stem: string): BaseFrenchVerb => {
+const ecrirePattern = (infinitive: string, stem: string): FrenchBaseVerbConjugation => {
   const vStem = `${stem}v`;
 
   return {
@@ -65,7 +64,7 @@ const circomflexMap = {
   u: 'û',
 }
 
-const vowelStem = (infinitive: string, stem: string): BaseFrenchVerb => {
+const vowelStem = (infinitive: string, stem: string): FrenchBaseVerbConjugation => {
   const vowelS = `${stem}s`;
   let participStem = stem;
   let simpleStem = stem;
@@ -150,7 +149,7 @@ const vowelStem = (infinitive: string, stem: string): BaseFrenchVerb => {
   }
 }
 
-export const reConjugation = (infinitive: string, stem: string): BaseFrenchVerb => {
+export const reConjugation = (infinitive: string, stem: string): FrenchBaseVerbConjugation => {
   if (infinitive.slice(-5) === 'crire') {
     return ecrirePattern(infinitive, stem)
   }

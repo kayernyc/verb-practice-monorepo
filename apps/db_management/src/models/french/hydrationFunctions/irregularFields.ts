@@ -1,10 +1,9 @@
-import { BaseFrenchVerb } from "@models/french/frenchTypes";
 import { IrregularFields } from "@models/french/types/hydrationTypes";
-import { FrenchPronounCode, FrenchTenses } from "french-types";
+import { FrenchBaseVerbConjugation, FrenchPronounCode, FrenchTenses } from "french-types";
 
 type PronounRecord = { [key in FrenchPronounCode]: string | undefined; }
 
-export const irregularFields = (verb: BaseFrenchVerb, irregularFields: IrregularFields): BaseFrenchVerb => {
+export const irregularFields = (verb: FrenchBaseVerbConjugation, irregularFields: IrregularFields): FrenchBaseVerbConjugation => {
 
   Object.entries(irregularFields).forEach(([tense, value]: [string, PronounRecord]) => {
     Object.entries(value).forEach(([pronoun, word]: [string, string | undefined]) => {

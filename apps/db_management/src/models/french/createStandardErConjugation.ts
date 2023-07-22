@@ -1,7 +1,7 @@
 import { BaseFrenchVerb } from "@models/french/frenchTypes";
-import { FrenchTenses, FrenchPronounKeys } from "french-types";
+import { FrenchTenses, FrenchPronounKeys, FrenchBaseVerbConjugation } from "french-types";
 
-export const erConjugation = (infinitive: string, stem: string): BaseFrenchVerb => {
+export const erConjugation = (infinitive: string, stem: string): FrenchBaseVerbConjugation => {
   const lastCharOfStem = stem.charAt(stem.length - 1);
   let variantStem: String | undefined;
 

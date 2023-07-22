@@ -342,3 +342,58 @@ export const écrireReturnObject = {
     1300: 'écrivent'
   }
 };
+
+export const boireReturnObject = {
+  infinitive: 'boire',
+  conditional: {
+    1033: 'boirais',
+    1041: 'boirions',
+    1074: 'boiriez',
+    1098: 'boirais',
+    1292: 'boirait',
+    1300: 'boiraient'
+  },
+  futur: {
+    1033: 'boirai',
+    1041: 'boirons',
+    1074: 'boirez',
+    1098: 'boiras',
+    1292: 'boira',
+    1300: 'boiront'
+  },
+  helper_verb: 'avoir',
+  imparfait: {
+    1033: 'buvais',
+    1041: 'buvions',
+    1074: 'buviez',
+    1098: 'buvais',
+    1292: 'buvait',
+    1300: 'buvaient'
+  },
+  participe: 'bu',
+  present_participe: 'buvant',
+  présent: {
+    1033: 'bois',
+    1041: 'buvons',
+    1074: 'buvez',
+    1098: 'bois',
+    1292: 'boit',
+    1300: 'boivent'
+  },
+  simple: {
+    1033: 'buis',
+    1041: 'bûmes',
+    1074: 'bûtes',
+    1098: 'buis',
+    1292: 'buit',
+    1300: 'buirent'
+  },
+  subjunctif: {
+    1033: 'boive',
+    1041: 'boivions',
+    1074: 'boiviez',
+    1098: 'boives',
+    1292: 'boive',
+    1300: 'boivent'
+  }
+};
