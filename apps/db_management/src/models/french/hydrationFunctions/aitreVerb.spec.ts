@@ -1,0 +1,12 @@
+import { createStandardConjugation } from '@models/french/createStandardConjugation';
+import { modifyAitreVerbs } from './aitreVerb';
+import { paraîtreReturnObject } from '@models/french/spec_constants/regularVerbs2';
+
+describe('modifyAitreVerb', () => {
+  it('updates paraître correctly', () => {
+    const sourceVerb = createStandardConjugation('paraître');
+    const modifiedVerb = modifyAitreVerbs(sourceVerb);
+
+    expect(modifiedVerb).toStrictEqual(paraîtreReturnObject);
+  });
+});

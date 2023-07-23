@@ -42,7 +42,7 @@ pnpm nx build global-types --watch
 To build and watch multiple modules:
 
 ```sh
-pnpm nx run-many -t build -p  global-types german-types --watch
+pnpm nx run-many -t build -p global-types german-types --watch
 ```
 
 ### Contributing

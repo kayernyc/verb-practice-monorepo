@@ -1,0 +1,92 @@
+être:
+  auxiliary: true
+  language: fr
+  translations:
+    en: be
+  participle: été
+  present_participle: étant
+  present:
+    je: suis
+    tu: es
+    il: est
+    nous: sommes
+    vous: êtes
+    ils: sont
+  stems:
+    subjunctif:
+      base: soi
+      boot: soy
+    futur:
+      base: ser
+    simple:
+      base: fu
+    imperitive:
+      follows: subjunctif
+  variations:
+    - préposition: à (nom)
+      translations:
+        en: belong to
+
+avoir:
+  auxiliary: true
+  language: fr
+  translations:
+    en: have
+
+attendre:
+  language: fr
+  translations:
+    en: wait
+  variations:
+    - prépostion: à (verbe)
+      reflexive: true
+      translations:
+        en: wait
+
+faire:
+  language: fr
+  translations:
+    en: [make, do]
+
+partir:
+  auxiliaire: être
+  language: fr
+  translations:
+    en: leave
+
+anéantir:
+  language: fr
+  translations:
+    en: annihilate
+
+secouer:
+  language: fr
+  translations:
+    en: shake
+
+baisser:
+  language: fr
+  translations:
+    en: lower
+
+obtempérer:
+  language: fr
+  translations:
+    en: comply
+
+degringoler:
+  language: fr
+  translations:
+    en: tumble down
+
+enfuire:
+  language: fr
+  reflexive: true
+  translations:
+    en: escape
+
+jouer:
+  language: fr
+  préposition: à
+  translations:
+    en: to play (a game or sport)

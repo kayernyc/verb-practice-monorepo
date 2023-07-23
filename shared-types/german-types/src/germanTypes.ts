@@ -6,6 +6,7 @@ import {
   GrammaticalPerson,
   LanguageMap,
   LanguageVerbBase,
+  TranslationSet,
 } from 'global-types';
 
 const ALL_GERMAN_KEY_PRONOUNS = ['ich', 'du', 'es', 'wir', 'ihr'];
@@ -81,10 +82,6 @@ const ALL_GERMAN_STEMS = [
 ] as const;
 export type GermanStem = typeof ALL_GERMAN_STEMS[number];
 
-export type TranslationSet = {
-  [key in LanguageMap]?: string[] | string;
-};
-
 export type GermanVerbVariation = {
   [key in GermanTenses]?: { [key in GermanPronounCode]: string };
 } & {
@@ -123,23 +120,23 @@ export type GermanPronoun = {
 
 export enum GermanPronounCode {
   'ich' = GrammaticalPerson.First.valueOf() +
-    GrammaticalNumber.Singular.valueOf() +
-    GermanCase.Nominative.valueOf(),
+  GrammaticalNumber.Singular.valueOf() +
+  GermanCase.Nominative.valueOf(),
   'du' = GrammaticalPerson.Second.valueOf() +
-    GrammaticalNumber.Singular.valueOf() +
-    GrammaticalFormal.Informal.valueOf() +
-    GermanCase.Nominative.valueOf(),
+  GrammaticalNumber.Singular.valueOf() +
+  GrammaticalFormal.Informal.valueOf() +
+  GermanCase.Nominative.valueOf(),
   'es' = GrammaticalPerson.Third.valueOf() +
-    GrammaticalNumber.Singular.valueOf() +
-    GermanCase.Nominative.valueOf() +
-    GrammaticalGender.Neuter.valueOf(),
+  GrammaticalNumber.Singular.valueOf() +
+  GermanCase.Nominative.valueOf() +
+  GrammaticalGender.Neuter.valueOf(),
   'wir' = GrammaticalPerson.First.valueOf() +
-    GrammaticalNumber.Plural.valueOf() +
-    GermanCase.Nominative.valueOf(),
+  GrammaticalNumber.Plural.valueOf() +
+  GermanCase.Nominative.valueOf(),
   'ihr' = GrammaticalPerson.Second.valueOf() +
-    GrammaticalNumber.Plural.valueOf() +
-    GrammaticalFormal.Informal.valueOf() +
-    GermanCase.Nominative.valueOf(),
+  GrammaticalNumber.Plural.valueOf() +
+  GrammaticalFormal.Informal.valueOf() +
+  GermanCase.Nominative.valueOf(),
 }
 
 export const GermanPronounKeys: { [key in GermanKeyPronoun]: number } = {
@@ -258,14 +255,6 @@ export interface GermanSeparableVerb extends LanguageVerbBase {
   hilfsverb: string;
   particle: SeperableGermanParticles;
 }
-
-const validSeperableKeys = [
-  'base',
-  'hilfsverb',
-  'language',
-  'particle',
-  'translations',
-];
 
 export const isGermanSeparableVerb = (x: object): x is GermanSeparableVerb => {
   let returnValue = true;
