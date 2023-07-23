@@ -1,3 +1,4 @@
+import { simplePlural } from "@models/french/hydrationFunctions/atomicFunctions.ts/simplePlural";
 import { FrenchPronounKeys, FrenchTenses } from "french-types";
 
 const conditionalImparfait = (stem: string) => ({
@@ -14,8 +15,8 @@ const simpleReStem = (stem: string) => {
     [FrenchPronounKeys.je]: `${stem}s`,
     [FrenchPronounKeys.tu]: `${stem}s`,
     [FrenchPronounKeys.il]: `${stem}t`,
-    [FrenchPronounKeys.nous]: `${stem}mes`,
-    [FrenchPronounKeys.vous]: `${stem}tes`,
+    [FrenchPronounKeys.nous]: `${simplePlural(stem, 'mes')}`,
+    [FrenchPronounKeys.vous]: `${simplePlural(stem, 'tes')}`,
     [FrenchPronounKeys.ils]: `${stem}rent`,
   }
 }
@@ -23,7 +24,7 @@ const simpleReStem = (stem: string) => {
 const simpleTense = (stem: string, ending = 'er') => {
   switch (ending) {
     case 're':
-      simpleReStem(stem);
+      return simpleReStem(stem);
 
     case 'ir':
       return {
@@ -79,7 +80,7 @@ const tenseFactory = {
 
 export const irregularStems = (tense: FrenchTenses, stem: string, infinitive: string) => {
   if (tense === FrenchTenses.simple) {
-    return tenseFactory[tense](stem, infinitive.slice(-2))
+    return tenseFactory[tense](stem, infinitive.slice(-2));
   }
 
   return tenseFactory[tense](stem);

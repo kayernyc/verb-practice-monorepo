@@ -1,4 +1,4 @@
-import { avoirReturnObject, boireReturnObject, faireReturnObject } from '@models/french/spec_constants/irregurlarVerbs';
+import { avoirReturnObject, boireReturnObject, faireReturnObject, êtreReturnObject } from '@models/french/spec_constants/irregurlarVerbs';
 import { processFrRecord } from './processFrRecord';
 import { LanguageMap, LanguageVerbCandidate } from 'global-types';
 
@@ -23,7 +23,7 @@ describe('processFrRecord', () => {
       },
       stems: {
         imparfait: 'buv',
-        simple: 'bu',
+        simple: 'bui',
         subjunctif: 'boiv'
       },
       translations: {
@@ -96,7 +96,7 @@ describe('processFrRecord', () => {
       stems: {
         futur: 'fer',
         conditional: 'fer',
-        simple: 'f',
+        simple: 'fi',
         subjunctif: 'fass'
       },
       translations: {
@@ -107,5 +107,45 @@ describe('processFrRecord', () => {
     const result = processFrRecord(testObject);
 
     expect(result).toStrictEqual({ ...faireReturnObject, language: LanguageMap.fr });
+  });
+
+  it('returns correctly for être.', () => {
+    testObject = {
+      infinitive: 'être',
+      language: LanguageMap.fr,
+      irregular: {
+        participe: 'été',
+        present_participe: "étant",
+        présent: {
+          je: 'suis',
+          tu: 'es',
+          il: 'est',
+          nous: 'sommes',
+          vous: 'êtes',
+          ils: 'sont'
+        },
+        subjunctif: {
+          je: "sois",
+          nous: "soyons",
+          vous: "soyez",
+          tu: "sois",
+          il: "soit",
+          ils: "soient"
+        }
+      },
+      stems: {
+        futur: 'ser',
+        conditional: 'ser',
+        imparfait: 'ét',
+        simple: 'fu',
+      },
+      translations: {
+        en: 'be'
+      }
+    };
+
+    const result = processFrRecord(testObject);
+
+    expect(result).toStrictEqual({ ...êtreReturnObject, language: LanguageMap.fr });
   });
 })
