@@ -507,3 +507,58 @@ export const faireReturnObject = {
     1300: 'fassent'
   }
 };
+
+export const êtreReturnObject = {
+  infinitive: 'être',
+  conditional: {
+    1033: 'serais',
+    1041: 'serions',
+    1074: 'seriez',
+    1098: 'serais',
+    1292: 'serait',
+    1300: 'seraient'
+  },
+  futur: {
+    1033: 'serai',
+    1041: 'serons',
+    1074: 'serez',
+    1098: 'seras',
+    1292: 'sera',
+    1300: 'seront'
+  },
+  helper_verb: 'avoir',
+  imparfait: {
+    1033: 'étais',
+    1041: 'étions',
+    1074: 'étiez',
+    1098: 'étais',
+    1292: 'était',
+    1300: 'étaient'
+  },
+  participe: 'été',
+  present_participe: 'étant',
+  présent: {
+    1033: 'suis',
+    1041: 'sommes',
+    1074: 'êtes',
+    1098: 'es',
+    1292: 'est',
+    1300: 'sont'
+  },
+  simple: {
+    1033: 'fus',
+    1041: 'fûmes',
+    1074: 'fûtes',
+    1098: 'fus',
+    1292: 'fut',
+    1300: 'furent'
+  },
+  subjunctif: {
+    1033: 'sois',
+    1041: 'soyons',
+    1074: 'soyez',
+    1098: 'sois',
+    1292: 'soit',
+    1300: 'soient'
+  }
+};
