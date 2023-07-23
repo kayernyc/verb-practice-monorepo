@@ -562,3 +562,58 @@ export const êtreReturnObject = {
     1300: 'soient'
   }
 };
+
+export const allerReturnObject = {
+  infinitive: 'aller',
+  conditional: {
+    1033: 'irais',
+    1041: 'irions',
+    1074: 'iriez',
+    1098: 'irais',
+    1292: 'irait',
+    1300: 'iraient'
+  },
+  futur: {
+    1033: 'irai',
+    1041: 'irons',
+    1074: 'irez',
+    1098: 'iras',
+    1292: 'ira',
+    1300: 'iront'
+  },
+  helper_verb: 'avoir',
+  imparfait: {
+    1033: 'allais',
+    1041: 'allions',
+    1074: 'alliez',
+    1098: 'allais',
+    1292: 'allait',
+    1300: 'allaient'
+  },
+  participe: 'allé',
+  present_participe: 'allant',
+  présent: {
+    1033: 'vais',
+    1041: 'allons',
+    1074: 'allez',
+    1098: 'vas',
+    1292: 'va',
+    1300: 'vont'
+  },
+  simple: {
+    1033: 'allai',
+    1041: 'allâmes',
+    1074: 'allâtes',
+    1098: 'allas',
+    1292: 'alla',
+    1300: 'allèrent'
+  },
+  subjunctif: {
+    1033: 'aille',
+    1041: 'aillions',
+    1074: 'ailliez',
+    1098: 'ailles',
+    1292: 'aille',
+    1300: 'aillent'
+  }
+};
