@@ -9,17 +9,21 @@ const conditionalImparfait = (stem: string) => ({
   [FrenchPronounKeys.ils]: `${stem}aient`,
 })
 
+const simpleReStem = (stem: string) => {
+  return {
+    [FrenchPronounKeys.je]: `${stem}s`,
+    [FrenchPronounKeys.tu]: `${stem}s`,
+    [FrenchPronounKeys.il]: `${stem}t`,
+    [FrenchPronounKeys.nous]: `${stem}mes`,
+    [FrenchPronounKeys.vous]: `${stem}tes`,
+    [FrenchPronounKeys.ils]: `${stem}rent`,
+  }
+}
+
 const simpleTense = (stem: string, ending = 'er') => {
   switch (ending) {
     case 're':
-      return {
-        [FrenchPronounKeys.je]: `${stem}s`,
-        [FrenchPronounKeys.tu]: `${stem}s`,
-        [FrenchPronounKeys.il]: `${stem}t`,
-        [FrenchPronounKeys.nous]: `${stem}mes`,
-        [FrenchPronounKeys.vous]: `${stem}tes`,
-        [FrenchPronounKeys.ils]: `${stem}rent`,
-      }
+      simpleReStem(stem);
 
     case 'ir':
       return {

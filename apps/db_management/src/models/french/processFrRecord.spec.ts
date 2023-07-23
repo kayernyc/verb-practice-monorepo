@@ -1,4 +1,4 @@
-import { avoirReturnObject, boireReturnObject } from '@models/french/spec_constants/irregurlarVerbs';
+import { avoirReturnObject, boireReturnObject, faireReturnObject } from '@models/french/spec_constants/irregurlarVerbs';
 import { processFrRecord } from './processFrRecord';
 import { LanguageMap, LanguageVerbCandidate } from 'global-types';
 
@@ -23,7 +23,7 @@ describe('processFrRecord', () => {
       },
       stems: {
         imparfait: 'buv',
-        simple: 'bui',
+        simple: 'bu',
         subjunctif: 'boiv'
       },
       translations: {
@@ -79,5 +79,33 @@ describe('processFrRecord', () => {
     const result = processFrRecord(testObject);
 
     expect(result).toStrictEqual({ ...avoirReturnObject, language: LanguageMap.fr });
+  });
+
+  it('returns correctly for faire.', () => {
+    testObject = {
+      infinitive: 'faire',
+      language: LanguageMap.fr,
+      irregular: {
+        participe: 'fait',
+        //   present_participe: "ayant",
+        présent: {
+          vous: 'faites',
+          ils: 'font'
+        },
+      },
+      stems: {
+        futur: 'fer',
+        conditional: 'fer',
+        simple: 'f',
+        subjunctif: 'fass'
+      },
+      translations: {
+        en: ['make', 'do']
+      }
+    };
+
+    const result = processFrRecord(testObject);
+
+    expect(result).toStrictEqual({ ...faireReturnObject, language: LanguageMap.fr });
   });
 })

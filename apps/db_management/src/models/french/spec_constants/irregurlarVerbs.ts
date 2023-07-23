@@ -452,3 +452,58 @@ export const avoirReturnObject = {
     1300: 'aient'
   }
 };
+
+export const faireReturnObject = {
+  infinitive: 'faire',
+  conditional: {
+    1033: 'ferais',
+    1041: 'ferions',
+    1074: 'feriez',
+    1098: 'ferais',
+    1292: 'ferait',
+    1300: 'feraient'
+  },
+  futur: {
+    1033: 'ferai',
+    1041: 'ferons',
+    1074: 'ferez',
+    1098: 'feras',
+    1292: 'fera',
+    1300: 'feront'
+  },
+  helper_verb: 'avoir',
+  imparfait: {
+    1033: 'faisais',
+    1041: 'faisions',
+    1074: 'faisiez',
+    1098: 'faisais',
+    1292: 'faisait',
+    1300: 'faisaient'
+  },
+  participe: 'fait',
+  present_participe: 'faisant',
+  présent: {
+    1033: 'fais',
+    1041: 'faisons',
+    1074: 'faites',
+    1098: 'fais',
+    1292: 'fait',
+    1300: 'font'
+  },
+  simple: {
+    1033: 'fis',
+    1041: 'fîmes',
+    1074: 'fîtes',
+    1098: 'fis',
+    1292: 'fit',
+    1300: 'firent'
+  },
+  subjunctif: {
+    1033: 'fasse',
+    1041: 'fassions',
+    1074: 'fassiez',
+    1098: 'fasses',
+    1292: 'fasse',
+    1300: 'fassent'
+  }
+};
