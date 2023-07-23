@@ -1,12 +1,16 @@
-import { convertGermanVerbToHydratedGermanVerb } from 'db-types/germanDBModel';
-import {
-  GermanVerbHydratedModel,
-  GermanVerbHydratedSchema,
-} from 'db-types/germanVerbHydratedModel';
+// import { convertGermanVerbToHydratedGermanVerb } from './schemas/';
+// import { GermanVerbHydratedModel, GermanVerbHydratedSchema } from 'db-types';
 import { GermanVerbHydrated } from 'german-types';
 import { LanguageVerbBase } from 'global-types';
 
 import mongoose from 'mongoose';
+import {
+  GermanVerbHydratedModel,
+  GermanVerbHydratedSchema,
+} from './schemas/germanVerbHydratedModel';
+import { convertGermanVerbToHydratedGermanVerb } from 'db-types';
+
+const mongoDbCollectionName = 'germanVerbs';
 
 export const insertGermanVerbs = async (
   de: LanguageVerbBase[],
@@ -18,13 +22,14 @@ export const insertGermanVerbs = async (
   });
 
   const GermanModel = mongoose.model(
-    'GermanVerbModel',
+    mongoDbCollectionName,
     GermanVerbHydratedSchema,
   );
 
   // if de.length is over 100k, chunck the write
   const writeGroups: GermanVerbHydratedModel[][] = [];
   let source = [...de];
+
   do {
     const newGroup = source
       .splice(0, 999_999)
@@ -36,10 +41,13 @@ export const insertGermanVerbs = async (
   } while (source.length > 0);
 
   try {
-    const German = mongoose.model('GermanVerbModel', GermanVerbHydratedSchema);
+    const German = mongoose.model(
+      mongoDbCollectionName,
+      GermanVerbHydratedSchema,
+    );
     await Promise.all(
       writeGroups.map((writeGroup) => {
-        German.insertMany(writeGroup);
+        German.insertMany(writeGroup, { ordered: false });
       }),
     ).then(() => {
       console.log(`Operation complete`);

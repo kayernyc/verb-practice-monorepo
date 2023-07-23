@@ -1,0 +1,14 @@
+{
+  "deno.enablePaths": ["apps/verb-service"],
+  "deno.unstable": true,
+  "deno.importMap": "./import_map.json",
+  "deno.enable": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "eslint.format.enable": true,
+  "editor.detectIndentation": false,
+  "typescript.validate.enable": false,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}

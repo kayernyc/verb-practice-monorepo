@@ -1,29 +1,44 @@
 {
-  "extends": "nx/presets/npm.json",
-  "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "tasksRunnerOptions": {
     "default": {
       "runner": "nx/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["lint", "test", "e2e"]
+        "cacheableOperations": [
+          "lint",
+          "test",
+          "e2e"
+        ]
       }
     }
   },
+  "extends": "nx/presets/npm.json",
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "targetDefaults": {
     "build": {
       "executor": "@nrwl/js:tsc",
-      "dependsOn": ["^build"],
-      "outputs": ["dist"],
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "dist"
+      ],
       "options": {
         "packageJson": "./package.json",
         "externalDependencies": "all"
       }
     },
     "test:unit": {
-      "dependsOn": ["build"]
+      "dependsOn": [
+        "build"
+      ]
     },
     "test:e2e": {
-      "dependsOn": ["build"]
+      "dependsOn": [
+        "build"
+      ]
     }
-  }
+  },
+  "plugins": [
+    "@nx/deno"
+  ]
 }

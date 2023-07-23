@@ -1,7 +1,6 @@
+import { TranslationDictionaryModel } from 'db-types';
 import { GermanTenses } from 'german-types';
 import { Schema } from 'mongoose';
-
-import { TranslationDictionaryModel } from './languageTranslations';
 
 export interface GermanConjugationModel {
   person: string;
@@ -41,11 +40,11 @@ const TenseSchema = new Schema({
   conjugations: { type: [ConjugationSchema], required: true },
 });
 
-const GermanVariationSchema = new Schema({
+export const GermanVariationSchema = new Schema({
   dative: { type: Boolean, required: true },
   genitive: { type: Boolean, required: true },
   hilfsverb: { type: String, required: true },
-  impersonal: { type: String, required: true },
+  impersonal: { type: Boolean, required: true },
   particle: { type: String, required: false },
   partizip: { type: String, required: true },
   tenses: { type: [TenseSchema], required: true },
@@ -60,5 +59,5 @@ export const GermanVerbHydratedSchema = new Schema({
   date: { type: Date, required: true },
   infinitive: { type: String, required: true, unique: true },
   schema_version: { type: Number, required: true },
-  variations: { type: [GermanVariationSchema], required: true },
+  variations: { type: [new Schema(GermanVariationSchema)], required: true }, // Wrap with new Schema(),
 });
