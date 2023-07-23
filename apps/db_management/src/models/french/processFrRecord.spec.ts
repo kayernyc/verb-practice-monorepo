@@ -1,4 +1,4 @@
-import { avoirReturnObject, boireReturnObject, faireReturnObject, êtreReturnObject } from '@models/french/spec_constants/irregurlarVerbs';
+import { allerReturnObject, avoirReturnObject, boireReturnObject, faireReturnObject, êtreReturnObject } from '@models/french/spec_constants/irregurlarVerbs';
 import { processFrRecord } from './processFrRecord';
 import { LanguageMap, LanguageVerbCandidate } from 'global-types';
 
@@ -87,7 +87,6 @@ describe('processFrRecord', () => {
       language: LanguageMap.fr,
       irregular: {
         participe: 'fait',
-        //   present_participe: "ayant",
         présent: {
           vous: 'faites',
           ils: 'font'
@@ -147,5 +146,32 @@ describe('processFrRecord', () => {
     const result = processFrRecord(testObject);
 
     expect(result).toStrictEqual({ ...êtreReturnObject, language: LanguageMap.fr });
+  });
+
+  it('returns correctly for aller.', () => {
+    testObject = {
+      infinitive: 'aller',
+      language: LanguageMap.fr,
+      irregular: {
+        présent: {
+          je: 'vais',
+          tu: 'vas',
+          il: 'va',
+          ils: 'vont'
+        }
+      },
+      stems: {
+        futur: 'ir',
+        conditional: 'ir',
+        subjunctif: 'aill'
+      },
+      translations: {
+        en: 'go'
+      }
+    };
+
+    const result = processFrRecord(testObject);
+
+    expect(result).toStrictEqual({ ...allerReturnObject, language: LanguageMap.fr });
   });
 })
