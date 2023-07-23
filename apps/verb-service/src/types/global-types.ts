@@ -1,4 +1,1 @@
-export * from '@jsonTypes';
-export * from '@languageTypes';
-export * from '@regExUtilities';
-export * from '@verbTypes';
+export { LanguageMap } from '../../../../shared-types/global-types/src/index.ts';

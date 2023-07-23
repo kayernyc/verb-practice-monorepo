@@ -35,7 +35,7 @@ const englishResolver = ({
   language: LanguageMap;
   infinitive: string;
 }) => {
-  return `je viens de ${language} et ${infinitive}`;
+  return `I come from ${language} and ${infinitive}`;
 };
 
 const resolverDictionary: Record<LanguageMap, ResolverFunction> = {
@@ -48,6 +48,6 @@ export const verbResolver = (
   _: unknown,
   { language, infinitive }: { language: LanguageMap; infinitive: string },
 ): string => {
-  const result = resolverDictionary[language];
-  return `this is the lang is new: ${result} and infinitive: ${infinitive}`;
+  const result = resolverDictionary[language]({ language, infinitive });
+  return `result ${result} and infinitive: ${infinitive}`;
 };

@@ -3,7 +3,11 @@
     "default": {
       "runner": "nx/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["lint", "test", "e2e"]
+        "cacheableOperations": [
+          "lint",
+          "test",
+          "e2e"
+        ]
       }
     }
   },
@@ -12,19 +16,29 @@
   "targetDefaults": {
     "build": {
       "executor": "@nrwl/js:tsc",
-      "dependsOn": ["^build"],
-      "outputs": ["dist"],
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "dist"
+      ],
       "options": {
         "packageJson": "./package.json",
         "externalDependencies": "all"
       }
     },
     "test:unit": {
-      "dependsOn": ["build"]
+      "dependsOn": [
+        "build"
+      ]
     },
     "test:e2e": {
-      "dependsOn": ["build"]
+      "dependsOn": [
+        "build"
+      ]
     }
   },
-  "plugins": ["@nx/deno"]
+  "plugins": [
+    "@nx/deno"
+  ]
 }

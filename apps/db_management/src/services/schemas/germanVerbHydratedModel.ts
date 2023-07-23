@@ -1,7 +1,6 @@
+import { TranslationDictionaryModel } from 'db-types';
 import { GermanTenses } from 'german-types';
 import { Schema } from 'mongoose';
-
-import { TranslationDictionaryModel } from './languageTranslations';
 
 export interface GermanConjugationModel {
   person: string;

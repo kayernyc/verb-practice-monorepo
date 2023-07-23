@@ -1,4 +1,4 @@
-import { LanguageMap } from './jsonTypes';
+import { LanguageMap } from './jsonTypes.ts';
 
 export interface LanguageVerbBase {
   language: LanguageMap;
