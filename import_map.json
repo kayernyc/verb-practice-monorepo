@@ -1,6 +1,7 @@
 {
   "imports": {
     "@globalTypes": "./shared-types/global-types/src/index.ts",
+    "@jsonTypes": "./shared-types/global-types/src/jsonTypes.ts",
     "@germanDBTypes": "./shared-types/db-types/src/germanDBTypes",
     "@germanDBHydratedModel": "./shared-types/db-types/src/germanDBHydratedModel"
   }

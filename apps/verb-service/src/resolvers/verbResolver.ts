@@ -1,4 +1,4 @@
-import { LanguageMap } from '../types/global-types.ts';
+import { LanguageMap } from '@jsonTypes';
 
 type ResolverFunction = ({
   language,
