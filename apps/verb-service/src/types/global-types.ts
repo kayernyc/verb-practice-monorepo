@@ -1,1 +1,1 @@
-export { LanguageMap } from '../../../../shared-types/global-types/src/index.ts';
+export { LanguageMap } from '@jsonTypes';

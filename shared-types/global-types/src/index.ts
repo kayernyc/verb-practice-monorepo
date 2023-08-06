@@ -1,12 +1,9 @@
-export { LanguageMap } from './jsonTypes.ts';
+export { LanguageMap } from './jsonTypes';
 export {
   GrammaticalPerson,
   GrammaticalNumber,
   GrammaticalFormal,
   GrammaticalGender,
-} from './languageTypes.ts';
-export {
-  type LanguageVerbBase,
-  type LanguageVerbCandidate,
-} from './verbTypes.ts';
-export { type RegExpGroups } from './regExUtilities.ts';
+} from './languageTypes';
+export { LanguageVerbBase, LanguageVerbCandidate } from './verbTypes';
+export { RegExpGroups } from './regExUtilities';
