@@ -5,5 +5,5 @@ export {
   GrammaticalFormal,
   GrammaticalGender,
 } from './languageTypes';
-export { LanguageVerbBase, LanguageVerbCandidate } from './verbTypes';
+export { LanguageVerbBase, LanguageVerbCandidate, TranslationSet } from './verbTypes';
 export { RegExpGroups } from './regExUtilities';

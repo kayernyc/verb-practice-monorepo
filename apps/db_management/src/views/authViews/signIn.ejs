@@ -1,0 +1,25 @@
+<%- include('../partials/header'); %>
+  <main>
+    <div class="ui segment">
+      <h1>Welcome to db management Sign In.</h1>
+      <div>If you are new, please <a href="/auth/signup">sign up</a>.</div>
+      <form action="/auth/signin" method="post">
+        <label for="email">Email</label>
+        <input class="ui input" name="email" id="email" type="email"
+          pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/" placeholder="placeholder@mail.domain">
+        <br>
+        <label for="password">Password</label>
+        <input class="ui input" name="password" id="password" type="password" minlength="8" required
+          placeholder="password">
+        <br>
+        <button type="submit">SUBMIT</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <%- include ("../partials/footer") %>
+  </footer>
+  </body>
+
+  </html>

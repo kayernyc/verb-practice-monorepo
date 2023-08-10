@@ -2,6 +2,8 @@ import express, { Application } from 'express';
 import cors from 'cors';
 import path from 'path';
 
+import { authRouter } from './routes/auth/AuthRoutes';
+
 process.env.APP_ROOT = __dirname;
 
 export const createApp = async (): Promise<Application> => {
@@ -23,6 +25,8 @@ export const createApp = async (): Promise<Application> => {
     res.render(filePath);
     // res.send('Welcome to db management server');
   });
+
+  app.use('/auth', authRouter);
 
   if (process.env.POPULATE) {
     const { populateRouter } = await import('./routes/populate/PopulateRoutes');
