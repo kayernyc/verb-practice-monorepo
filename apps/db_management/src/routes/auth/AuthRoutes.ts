@@ -52,7 +52,7 @@ authRouter.get('/', verifyToken, async (req, res) => {
 
     if (root && typeof root === 'string') {
       const pathToPage = path.join(root, 'views', 'authViews', 'signIn.ejs');
-      res.render(pathToPage, { handlers: scripts, name: 'robin' });
+      res.render(pathToPage);
     } else {
       res.send('here');
     }
@@ -90,7 +90,7 @@ authRouter.post('/signup', async (req, res) => {
   }
 }) as RequestHandler;
 
-authRouter.post('/signin', async (req, res) => {
+authRouter.post('/signin', async (req: Request, res: Response) => {
   const { email, password } = req.body;
 
   if (email && password && email === 'me@test.com') {
@@ -112,8 +112,9 @@ authRouter.post('/signin', async (req, res) => {
       res.send(err).status(500);
     }
   }
-
-  res.send('Error: either the email or the password is incorrect').status(500);
+  const root = process.env.APP_ROOT;
+  const pathToPage = path.join(root, 'views', 'authViews', 'signInTryAgain.ejs');
+  res.render(pathToPage);
 }) as RequestHandler;
 
 // exports.signup = (req, res) => {
