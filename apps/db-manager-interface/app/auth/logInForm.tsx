@@ -1,26 +1,10 @@
-'use client';
-
 import styled from 'styled-components';
-import { useCallback, useState } from 'react';
+import { useCallback, useContext, useState } from 'react';
+import { EnvironmentContext } from '../../context/environment';
+import { StyledForm } from './formStyles';
 
-const SignInForm = styled.form`
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  padding: 2rem;
-
-  > * {
-    display: block;
-  }
-
-  > label {
-    margin-top: 1rem;
-  }
-
-  > input {
-    width: 100%;
-  }
-`;
-
-export const MainForm = (): JSX.Element => {
+export const LogInForm = () => {
+  const [token, setToken] = useContext(EnvironmentContext);
   const [userName, setUserName] = useState('');
   const [userEmail, setUserEmail] = useState('');
   const [userPassword, setUserPassword] = useState('');
@@ -28,6 +12,7 @@ export const MainForm = (): JSX.Element => {
   const submitHandler = useCallback(
     async (evt) => {
       evt.preventDefault();
+      console.log({ token }, 1);
 
       const body = {
         name: userName,
@@ -45,13 +30,13 @@ export const MainForm = (): JSX.Element => {
         })
       ).json();
 
-      console.log({ result });
+      setToken(result.accessToken || '');
     },
     [userName, userEmail, userPassword],
   );
 
   return (
-    <SignInForm onSubmit={submitHandler}>
+    <StyledForm onSubmit={submitHandler}>
       <label htmlFor="user-name" placeholder="Your account name">
         User name
       </label>
@@ -62,7 +47,6 @@ export const MainForm = (): JSX.Element => {
         value={userName}
         onChange={(evt) => {
           setUserName(evt.target.value);
-          console.log(userName);
         }}
       />
       <label htmlFor="user-email" placeholder="Your account email">
@@ -90,6 +74,6 @@ export const MainForm = (): JSX.Element => {
         }}
       />
       <button type="submit">Submit</button>
-    </SignInForm>
+    </StyledForm>
   );
 };

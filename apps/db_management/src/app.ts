@@ -2,7 +2,10 @@ import express, { Application } from 'express';
 import cors from 'cors';
 import path from 'path';
 
+import { verifyBearerToken } from './middleware/bearer-token';
+
 import { authRouter } from './routes/auth/AuthRoutes';
+import { dataRouter } from 'routes/data/dataRoutes';
 
 process.env.APP_ROOT = __dirname;
 
@@ -11,11 +14,14 @@ export const createApp = async (): Promise<Application> => {
   app.set('view engine', 'ejs');
 
   app.use(express.json()); // to support JSON-encoded bodies
-  app.use(cors({origin: "*"}));
+  app.use(cors({ origin: '*' }));
 
-  app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  app.use(function (req, res, next) {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header(
+      'Access-Control-Allow-Headers',
+      'Origin, X-Requested-With, Content-Type, Accept',
+    );
     next();
   });
 
@@ -40,6 +46,8 @@ export const createApp = async (): Promise<Application> => {
     app.use('/populate', populateRouter);
     app.use('/sources/allverbs', allVerbsRouter);
   }
+
+  app.use('/data', verifyBearerToken, dataRouter);
 
   app.use((_, res) => {
     res.status(404);

@@ -1,12 +1,13 @@
-import { MainForm } from './mainform'
+import { MainForm } from './auth/mainform';
 
 export const metadata = {
-  title: 'database management'
-}
+  title: 'database management',
+};
 
 export default async function Home() {
-  return <main>
-    Welcome to DB Management 
-    <MainForm />
-  </main>
+  return (
+    <main>
+      <MainForm />
+    </main>
+  );
 }

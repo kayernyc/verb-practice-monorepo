@@ -11,43 +11,8 @@ import scripts from '../../views/authViews/js/auth';
 
 export const authRouter: Router = Router();
 
-const verifyBearerToken = (req: Request, res: Response, next: NextFunction) => {
-  if (!req.headers.authorization) {
-    return res.status(403).json({ error: 'No credentials sent.' });
-  }
-  next();
-};
-
-const verifyToken = (req: Request, res: Response, next: NextFunction) => {
-  console.log('YAY _MIDDLE');
-  if (
-    req.headers &&
-    req.headers.authorization &&
-    req.headers.authorization.split(' ')[0] === 'JWT'
-  ) {
-    next();
-    // jwt.verify(req.headers.authorization.split(' ')[1], process.env.API_SECRET, function (err, decode) {
-    //   if (err) req.user = undefined;
-    //   User.findOne({
-    //       _id: decode.id
-    //     })
-    //     .exec((err, user) => {
-    //       if (err) {
-    //         res.status(500)
-    //           .send({
-    //             message: err
-    //           });
-    //       } else {
-    //         req.user = user;
-    //         next();
-    //       }
-    //     })
-    // });
-  } else {
-    // req.user = undefined;
-    next();
-  }
-};
+const fullday = 86_400; // 1 day
+const quarterHour = 900; // 15 minutes
 
 const successHandler = (): string => {
   try {
@@ -63,7 +28,7 @@ const successHandler = (): string => {
   }
 };
 
-authRouter.get('/', verifyToken, async (req, res) => {
+authRouter.get('/', async (req, res) => {
   try {
     const root = process.env.APP_ROOT;
 
@@ -108,9 +73,8 @@ authRouter.post('/signup', async (req, res) => {
 
 authRouter.post('/signin', async (req: Request, res: Response) => {
   const { email, password } = req.body;
-  console.log('aadflj>>>>>>>', { email });
 
-  if (email && password && email === 'me@test.com') {
+  if (process.env.AUTH_TOKEN && email && password && email === 'me@test.com') {
     // create token
     const token = jwt.sign(
       {
@@ -118,7 +82,7 @@ authRouter.post('/signin', async (req: Request, res: Response) => {
       },
       process.env.AUTH_TOKEN,
       {
-        expiresIn: 86_400, // 1 day
+        expiresIn: quarterHour,
       },
     );
 
