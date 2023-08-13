@@ -12,7 +12,8 @@ import scripts from '../../views/authViews/js/auth';
 export const authRouter: Router = Router();
 
 const fullday = 86_400; // 1 day
-const quarterHour = 900; // 15 minutes
+const quarterHour = 60 * 15 * 1000; // 15 minutes
+const second = 1000;
 
 const successHandler = (): string => {
   try {

@@ -3,6 +3,7 @@ import cors from 'cors';
 import path from 'path';
 
 import { verifyBearerToken } from './middleware/bearer-token';
+import { verifyToken } from './middleware/jwt-middleware';
 
 import { authRouter } from './routes/auth/AuthRoutes';
 import { dataRouter } from 'routes/data/dataRoutes';
@@ -47,7 +48,7 @@ export const createApp = async (): Promise<Application> => {
     app.use('/sources/allverbs', allVerbsRouter);
   }
 
-  app.use('/data', verifyBearerToken, dataRouter);
+  app.use('/data', verifyToken, dataRouter);
 
   app.use((_, res) => {
     res.status(404);

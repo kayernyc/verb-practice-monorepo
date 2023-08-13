@@ -6,35 +6,35 @@ import {
   Router,
 } from 'express';
 
+import jwt from 'jsonwebtoken';
+
 export const verifyToken = (
   req: Request,
   res: Response,
   next: NextFunction,
 ) => {
   console.log('YAY _MIDDLE');
+  const { headers } = req;
+  console.log({ headers }, '<<<');
   if (
     req.headers &&
     req.headers.authorization &&
-    req.headers.authorization.split(' ')[0] === 'JWT'
+    req.headers.authorization.split(' ')[0] === 'Bearer'
   ) {
-    next();
     jwt.verify(
       req.headers.authorization.split(' ')[1],
-      process.env.API_SECRET,
+      process.env.AUTH_TOKEN,
       function (err, decode) {
-        if (err) req.user = undefined;
-        User.findOne({
-          _id: decode.id,
-        }).exec((err, user) => {
-          if (err) {
-            res.status(500).send({
-              message: err,
-            });
-          } else {
-            req.user = user;
-            next();
+        if (typeof decode !== 'string') {
+          console.log({ decode });
+        }
+        console.table(err.message);
+        if (err) {
+          if (err.message === 'jwt expired') {
+            res.sendStatus(401).json('Error: Timelimit exceeded.');
           }
-        });
+        }
+        next();
       },
     );
   } else {
