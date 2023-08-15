@@ -15,7 +15,6 @@ export const verifyToken = (
 ) => {
   console.log('YAY _MIDDLE');
   const { headers } = req;
-  console.log({ headers }, '<<<');
   if (
     req.headers &&
     req.headers.authorization &&
@@ -24,21 +23,19 @@ export const verifyToken = (
     jwt.verify(
       req.headers.authorization.split(' ')[1],
       process.env.AUTH_TOKEN,
-      function (err, decode) {
-        if (typeof decode !== 'string') {
-          console.log({ decode });
-        }
-        console.table(err.message);
+      (err, decode) => {
         if (err) {
-          if (err.message === 'jwt expired') {
-            res.sendStatus(401).json('Error: Timelimit exceeded.');
-          }
+          console.log({ err });
+          res.status(401).json({
+            success: false,
+            status: 401,
+            message: err.message,
+          });
+        } else {
+          console.log('no err');
+          next();
         }
-        next();
       },
     );
-  } else {
-    // req.user = undefined;
-    next();
   }
 };

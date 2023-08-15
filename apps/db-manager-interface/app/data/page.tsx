@@ -6,20 +6,16 @@ import { redirect } from 'next/navigation';
 
 const DataPage = () => {
   const [token] = useContext(EnvironmentContext);
-
-  // if no token, user bounces out
-  if (token === '') {
-    redirect('/');
-  }
-
   const tryToHitTheService = async () => {
-    const result = await fetch('http://localhost:3030/data', {
-      method: 'post',
-      headers: {
-        'content-type': 'application/json',
-        authorization: `Bearer ${token}`,
-      },
-    });
+    const result = await (
+      await fetch('http://localhost:3030/data', {
+        method: 'post',
+        headers: {
+          'content-type': 'application/json',
+          authorization: `Bearer ${token}`,
+        },
+      })
+    ).json();
   };
 
   return (
