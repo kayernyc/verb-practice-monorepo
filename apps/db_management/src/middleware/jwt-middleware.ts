@@ -8,6 +8,37 @@ import {
 
 import jwt from 'jsonwebtoken';
 
+const handleTokenExpired = (res: Response) => {
+  res.status(401).json({
+    success: false,
+    status: 401,
+    message: 'Token expired.',
+  });
+};
+
+const handlePremature = (res: Response) => {
+  // 412 Precondition Failed
+  res.status(412).json({
+    success: false,
+    status: 412,
+    message: 'Precondition failed.',
+  });
+};
+
+const handleMalformed = (res: Response) => {
+  res.status(401).json({
+    success: false,
+    status: 401,
+    message: 'Error in token composition.',
+  });
+};
+
+const strategyMap = {
+  TokenExpiredError: handleTokenExpired,
+  JsonWebTokenError: handleMalformed,
+  NotBeforeError: handlePremature,
+};
+
 export const verifyToken = (
   req: Request,
   res: Response,
@@ -24,13 +55,17 @@ export const verifyToken = (
       req.headers.authorization.split(' ')[1],
       process.env.AUTH_TOKEN,
       (err, decode) => {
+        // TODO: Adding logging functions
         if (err) {
-          console.log({ err });
-          res.status(401).json({
-            success: false,
-            status: 401,
-            message: err.message,
-          });
+          try {
+            strategyMap[err.name](res);
+          } catch (err) {
+            res.status(401).json({
+              success: false,
+              status: 401,
+              message: 'Error: Unknown Error.',
+            });
+          }
         } else {
           console.log('no err');
           next();

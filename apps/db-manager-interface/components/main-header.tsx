@@ -6,7 +6,7 @@ export const MainHeader = () => {
   const [token, setToken] = useContext(EnvironmentContext);
   return (
     <header>
-      DB Management
+      <Link href={'/'}>DB Management</Link>
       {token && (
         <nav>
           <Link href={'/data'}>Data Management Interface</Link>
