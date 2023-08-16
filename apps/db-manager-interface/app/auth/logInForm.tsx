@@ -30,6 +30,8 @@ export const LogInForm = () => {
         })
       ).json();
 
+      console.log({ result });
+
       setToken(result.accessToken || '');
     },
     [userName, userEmail, userPassword],
@@ -69,6 +71,7 @@ export const LogInForm = () => {
         type="password"
         value={userPassword}
         required
+        autoComplete="off"
         onChange={(evt) => {
           setUserPassword(evt.target.value);
         }}

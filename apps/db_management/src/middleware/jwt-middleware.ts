@@ -56,6 +56,7 @@ export const verifyToken = (
       (err, decode) => {
         // TODO: Adding logging functions
         if (err) {
+          console.log('error', { err });
           try {
             strategyMap[err.name](res);
           } catch (err) {
@@ -66,6 +67,7 @@ export const verifyToken = (
             });
           }
         } else {
+          console.log('no error');
           next();
         }
       },

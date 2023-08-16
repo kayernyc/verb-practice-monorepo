@@ -6,7 +6,11 @@ import { redirect } from 'next/navigation';
 
 const DataPage = () => {
   const [token] = useContext(EnvironmentContext);
-  console.log({ token });
+
+  if (!token) {
+    redirect('/');
+  }
+
   const tryToHitTheService = async () => {
     const result = await (
       await fetch('http://localhost:3030/data', {
@@ -18,6 +22,8 @@ const DataPage = () => {
         },
       })
     ).json();
+
+    console.log({ result });
   };
 
   return (
