@@ -6,10 +6,12 @@ import { redirect } from 'next/navigation';
 
 const DataPage = () => {
   const [token] = useContext(EnvironmentContext);
+  console.log({ token });
   const tryToHitTheService = async () => {
     const result = await (
       await fetch('http://localhost:3030/data', {
         method: 'post',
+        credentials: 'include',
         headers: {
           'content-type': 'application/json',
           authorization: `Bearer ${token}`,

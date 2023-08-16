@@ -6,7 +6,9 @@ import { verifyBearerToken } from './middleware/bearer-token';
 import { verifyToken } from './middleware/jwt-middleware';
 
 import { authRouter } from './routes/auth/AuthRoutes';
-import { dataRouter } from 'routes/data/dataRoutes';
+import { dataRouter } from './routes/data/DataRoutes';
+
+import cookieParser from 'cookie-parser';
 
 process.env.APP_ROOT = __dirname;
 
@@ -15,14 +17,20 @@ export const createApp = async (): Promise<Application> => {
   app.set('view engine', 'ejs');
 
   app.use(express.json()); // to support JSON-encoded bodies
-  app.use(cors({ origin: '*' }));
+  app.use(
+    cors({
+      origin: 'http://localhost:3000',
+      credentials: true,
+    }),
+  );
 
   app.use(function (req, res, next) {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header(
-      'Access-Control-Allow-Headers',
-      'Origin, X-Requested-With, Content-Type, Accept',
-    );
+    res.header({
+      'Access-Control-Allow-Origin': ['http://localhost:3000'],
+      'Access-Control-Allow-Headers': 'Content-Type',
+      allowCredentials: true,
+    });
+
     next();
   });
 
@@ -32,6 +40,8 @@ export const createApp = async (): Promise<Application> => {
       extended: true,
     }),
   );
+
+  app.use(cookieParser());
 
   app.get('/', (req, res) => {
     const filePath = path.join(__dirname, 'views/index');

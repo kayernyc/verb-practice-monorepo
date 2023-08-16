@@ -44,7 +44,6 @@ export const verifyToken = (
   res: Response,
   next: NextFunction,
 ) => {
-  console.log('YAY _MIDDLE');
   const { headers } = req;
   if (
     req.headers &&
@@ -67,7 +66,6 @@ export const verifyToken = (
             });
           }
         } else {
-          console.log('no err');
           next();
         }
       },

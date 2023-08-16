@@ -13,7 +13,7 @@ const quarterHour = 900; // 1 day
 
 dataRouter.post('/', async (req, res) => {
   try {
-    res.send('here it got through').status(201);
+    res.send({ message: 'here it got through' }).status(201);
   } catch (err) {
     console.log(`ERROR: ${err}`);
     res.send('Read the data');

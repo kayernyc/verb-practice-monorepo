@@ -76,6 +76,22 @@ authRouter.post('/signin', async (req: Request, res: Response) => {
   const { email, password } = req.body;
 
   if (process.env.AUTH_TOKEN && email && password && email === 'me@test.com') {
+    let cookie = req.cookies.cookieName;
+    if (cookie === undefined) {
+      // no: set a new cookie
+      var randomNumber = Math.random().toString();
+      randomNumber = randomNumber.substring(2, randomNumber.length);
+      res.cookie('dbm_site', randomNumber, {
+        maxAge: 900000,
+        httpOnly: true,
+        secure: true,
+        sameSite: true,
+      });
+      console.log('cookie created successfully');
+    } else {
+      // yes, cookie was already present
+      console.log('cookie exists', cookie);
+    }
     // create token
     const token = jwt.sign(
       {
@@ -110,27 +126,3 @@ authRouter.post('/signin', async (req: Request, res: Response) => {
   );
   res.render(pathToPage);
 }) as RequestHandler;
-
-// exports.signup = (req, res) => {
-//   const user = new User({
-//     fullName: req.body.fullName,
-//     email: req.body.email,
-//     role: req.body.role,
-//     password: bcrypt.hashSync(req.body.password, 8)
-//   });
-
-//   user.save((err, user) => {
-//     if (err) {
-//       res.status(500)
-//         .send({
-//           message: err
-//         });
-//       return;
-//     } else {
-//       res.status(200)
-//         .send({
-//           message: "User Registered successfully"
-//         })
-//     }
-//   });
-// };
