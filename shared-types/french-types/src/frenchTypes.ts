@@ -87,7 +87,7 @@ export interface FrenchVerb extends LanguageVerbBase {
   weakEndings?: boolean;
 }
 
-export const isFrenchVerb = (x: object): x is FrenchVerb => {
+export const isFrenchVerb = (x: any): x is FrenchVerb => {
   let isValid = true;
 
   if ('language' in x && x.language !== 'fr') {

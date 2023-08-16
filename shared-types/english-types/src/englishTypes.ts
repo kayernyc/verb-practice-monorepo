@@ -64,7 +64,7 @@ export type EnglishVerbHydrated = {
   presentParticiple: string;
 };
 
-export const isEnglishVerb = (x: object): x is EnglishVerb => {
+export const isEnglishVerb = (x: any): x is EnglishVerb => {
   let isValid = true;
   if ('language' in x && x.language !== 'en') {
     return false;

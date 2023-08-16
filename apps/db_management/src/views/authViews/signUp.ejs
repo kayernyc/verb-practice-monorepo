@@ -1,0 +1,40 @@
+<%- include('../partials/header'); %>
+  <main>
+    <div class="ui segment">
+      <h1>Welcome to db management Sign Up.</h1>
+      <p>
+        Sign up here and your request for access will be reviewed soon! Once you are confirmed you will have access to
+        view data.
+      </p>
+      <p>
+        If you're requesting `user` access, once approved you'll have access to pair verbs.
+      </p>
+      <form action="/auth/signup" method="post">
+        <select name="role" id="role-select" required>
+          <option>Select one</option>
+          <option value="guest">Guest</option>
+          <option value="user">User</option>
+        </select>
+
+        <label for="full-name">Full Name</label>
+        <input class="ui input" name="fullname" id="full-name" type="text" placeholder="First name and last">
+        <br>
+        <label for="email">Email</label>
+        <input class="ui input" name="email" id="email" type="text" placeholder="placeholder@mail.domain">
+        <br>
+        <label for="password">Password</label>
+        <input class="ui input" name="password" id="password" type="password" minlength="8" required
+          placeholder="password">
+        <br>
+        <button type="submit">I'm a button</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <%- include ("../partials/footer") %>
+  </footer>
+
+  </body>
+
+  </html>

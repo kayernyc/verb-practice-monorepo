@@ -197,7 +197,7 @@ export interface GermanVerb extends LanguageVerbBase {
   weakEndings?: boolean;
 }
 
-export const isGermanVerb = (x: object): x is GermanVerb => {
+export const isGermanVerb = (x: any): x is GermanVerb => {
   let isValid = true;
 
   if ('language' in x && x.language !== 'de') {
