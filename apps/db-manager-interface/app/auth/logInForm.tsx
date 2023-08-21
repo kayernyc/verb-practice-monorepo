@@ -23,7 +23,10 @@ export const LogInForm = () => {
       const result = await (
         await fetch('http://localhost:3030/auth/signin', {
           method: 'post',
+<<<<<<< HEAD
           credentials: 'include',
+=======
+>>>>>>> main
           headers: {
             'content-type': 'application/json',
           },
